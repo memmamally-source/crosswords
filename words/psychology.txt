@@ -37,3 +37,441 @@ SCHEMA | Mental framework for organising knowledge
 RORSCHACH | Inkblot test
 NEUROPLASTICITY | Brain's ability to rewire itself
 ANXIETY | Persistent worry or unease
+PSYCHOLOGY | Scientific study of mind and behaviour
+PSYCHE | The mind or soul
+PSYCHOLOGIST | Scientist of the mind
+PSYCHIATRIST | Medical doctor of mental illness
+THERAPIST | Practitioner of talking treatments
+COUNSELLOR | Professional who offers guidance
+WUNDT | Founder of the first psychology laboratory
+JAMES | William ___, author of The Principles of Psychology
+WATSON | John B. ___, founder of behaviourism
+THORNDIKE | Psychologist of the law of effect
+BANDURA | Psychologist of the Bobo doll experiment
+ZIMBARDO | Psychologist of the Stanford prison experiment
+ASCH | Psychologist of conformity experiments
+HARLOW | Psychologist of monkeys and surrogate mothers
+BOWLBY | Psychologist of attachment theory
+AINSWORTH | Psychologist of the Strange Situation
+ERIKSON | Psychologist of eight psychosocial stages
+VYGOTSKY | Psychologist of the zone of proximal development
+ROGERS | Carl ___, founder of person-centred therapy
+ADLER | Alfred ___, psychologist of the inferiority complex
+KLEIN | Melanie ___, pioneer of child analysis
+HORNEY | Karen ___, critic of Freud's view of women
+LACAN | French psychoanalyst of the mirror stage
+BECK | Aaron ___, founder of cognitive therapy
+ELLIS | Albert ___, founder of rational emotive behaviour therapy
+SELIGMAN | Psychologist of learned helplessness
+FESTINGER | Psychologist of cognitive dissonance
+LOFTUS | Elizabeth ___, researcher of false memories
+EBBINGHAUS | Psychologist of the forgetting curve
+MILLER | George ___, of the magical number seven
+TVERSKY | Psychologist who studied biases with Kahneman
+KAHNEMAN | Nobel-winning psychologist of judgement
+PINKER | Steven ___, author of The Language Instinct
+GARDNER | Psychologist of multiple intelligences
+GOLEMAN | Popularizer of emotional intelligence
+FLOW | State of complete absorption
+MINDFULNESS | Non-judgemental awareness of the present
+WELLBEING | State of being comfortable and happy
+HAPPINESS | Positive emotional state
+RESILIENCE | Ability to bounce back
+GRIT | Perseverance and passion
+INTRINSIC | Motivated from within
+EXTRINSIC | Motivated by outside rewards
+REWARD | Positive consequence
+PUNISHMENT | Negative consequence
+REINFORCEMENT | Strengthening of a behaviour
+OPERANT | ___ conditioning, by consequences
+CLASSICAL | ___ conditioning, by association
+EXTINCTION | Fading of a learned response
+GENERALISATION | Responding to similar stimuli
+HABITUATION | Decreased response to repetition
+SENSITISATION | Increased response to repetition
+SHAPING | Reinforcing steps towards a behaviour
+MODELLING | Learning by imitation
+OBSERVATIONAL | ___ learning, by watching others
+COGNITIVE | Relating to thinking
+METACOGNITION | Thinking about thinking
+ATTENTION | Focusing of awareness
+MEMORY | Ability to store and recall
+ENCODING | Getting information into memory
+STORAGE | Retaining information over time
+RETRIEVAL | Getting information out of memory
+RECALL | Retrieving without cues
+RECOGNITION | Identifying something previously encountered
+SHORTTERM | ___ memory, holding a few items briefly
+LONGTERM | ___ memory, of lasting storage
+EPISODIC | Memory of personal events
+SEMANTIC | Memory of facts
+PROCEDURAL | Memory of how to do things
+IMPLICIT | Unconscious memory
+EXPLICIT | Conscious memory
+CHUNKING | Grouping items to remember them
+MNEMONIC | Memory aid
+FORGETTING | Loss of memory
+INTERFERENCE | Disruption of memory by other memories
+REPRESSED | Pushed out of awareness
+PERCEPTUAL | Relating to perception
+SENSATION | Detection of stimuli
+GESTALT | School holding that the whole exceeds the parts
+ILLUSION | Misperception of a stimulus
+DEPTH | ___ perception, of distance
+BINOCULAR | Using both eyes
+THRESHOLD | Minimum detectable stimulus
+SUBLIMINAL | Below conscious awareness
+PRIMING | Exposure that influences later responses
+CONCEPT | Mental category
+PROTOTYPE | Best example of a category
+REASONING | Drawing conclusions
+INSIGHT | Sudden realisation of a solution
+CREATIVITY | Generation of novel ideas
+INTELLIGENCE | Capacity to learn and reason
+GENIUS | Exceptional intellectual ability
+APTITUDE | Natural ability
+CONFIRMATION | ___ bias, favouring evidence that agrees
+ANCHORING | Bias towards the first number seen
+AVAILABILITY | ___ heuristic, judging by what comes to mind
+HINDSIGHT | ___ bias: "I knew it all along"
+OVERCONFIDENCE | Excessive belief in one's judgement
+FRAMING | Effect of how options are presented
+GAMBLERS | ___ fallacy about random events
+BYSTANDER | ___ effect, of inaction in groups
+CONFORMITY | Matching others' behaviour
+OBEDIENCE | Following orders
+GROUPTHINK | Faulty consensus in a group
+DEINDIVIDUATION | Loss of self-awareness in crowds
+STEREOTYPE | Oversimplified belief about a group
+PREJUDICE | Unjustified negative attitude
+DISCRIMINATION | Unfair treatment of a group
+ATTITUDE | Evaluation of something
+PERSUASION | Changing attitudes
+ATTRIBUTION | Explaining the causes of behaviour
+FUNDAMENTAL | ___ attribution error
+IDENTITY | Sense of who one is
+PERSONALITY | Characteristic patterns of thought and behaviour
+TRAIT | Stable personality characteristic
+BIGFIVE | Model of five personality traits (3,4)
+OPENNESS | Big Five trait of curiosity
+EXTRAVERSION | Big Five trait of sociability
+AGREEABLENESS | Big Five trait of kindness
+NEUROTICISM | Big Five trait of emotional instability
+TEMPERAMENT | Inborn personality style
+INTROVERSION | Preference for inner focus
+EMOTION | Complex feeling state
+AFFECT | Experience of feeling
+MOOD | Lasting emotional state
+FEAR | Emotion of danger
+ANGER | Emotion of hostility
+JOY | Emotion of happiness
+SADNESS | Emotion of loss
+DISGUST | Emotion of revulsion
+SURPRISE | Emotion of the unexpected
+SHAME | Painful self-conscious emotion
+GUILT | Feeling of having done wrong
+ENVY | Wanting what another has
+JEALOUSY | Fear of losing to a rival
+LOVE | Deep affection
+SECURE | ___ attachment, of trust
+AVOIDANT | ___ attachment, of distance
+STRESS | Response to pressure
+COPING | Managing stress
+BURNOUT | Exhaustion from prolonged stress
+TRAUMA | Deeply distressing experience
+DEPRESSION | Persistent low mood
+BIPOLAR | Disorder of mood swings
+SCHIZOPHRENIA | Disorder of psychosis
+PSYCHOSIS | Loss of contact with reality
+HALLUCINATION | Perception without a stimulus
+DELUSION | Fixed false belief
+PARANOIA | Unfounded suspicion
+COMPULSION | Irresistible urge
+OBSESSION | Intrusive persistent thought
+PANIC | Sudden intense fear
+AGORAPHOBIA | Fear of open or crowded places
+CLAUSTROPHOBIA | Fear of enclosed spaces
+ARACHNOPHOBIA | Fear of spiders
+ACROPHOBIA | Fear of heights
+AUTISM | Neurodevelopmental condition affecting social interaction
+DYSLEXIA | Difficulty with reading
+ANOREXIA | Eating disorder of self-starvation
+BULIMIA | Eating disorder of bingeing and purging
+ADDICTION | Compulsive dependence
+DEPENDENCE | Reliance on a substance
+WITHDRAWAL | Symptoms after stopping a substance
+TOLERANCE | Reduced response with repeated use
+PSYCHOTHERAPY | Talking treatment
+COUNSELLING | Supportive talk therapy
+PSYCHODYNAMIC | Therapy exploring the unconscious
+HUMANISTIC | Therapy focused on growth
+EXPOSURE | ___ therapy for phobias
+DESENSITISATION | Gradual reduction of fear
+HYPNOTHERAPY | Therapy using hypnosis
+ANTIDEPRESSANT | Medication for depression
+LITHIUM | Mood stabiliser for bipolar disorder
+UNCONSCIOUS | Mental processes outside awareness
+SUBCONSCIOUS | Just below awareness
+LIBIDO | Psychic energy of desire
+OEDIPUS | ___ complex, in Freud
+DEFENCE | ___ mechanism, protecting the ego
+DENIAL | Refusing to accept reality
+PROJECTION | Attributing one's feelings to others
+SUBLIMATION | Channelling urges into acceptable activity
+RATIONALISATION | Justifying with false reasons
+REGRESSION | Reverting to childish behaviour
+DISPLACEMENT | Redirecting feelings to a safer target
+DREAM | Sequence of images during sleep
+SLEEP | Natural state of rest
+NIGHTMARE | Frightening dream
+LUCID | ___ dream, where one knows one is dreaming
+SLEEPWALKING | Walking while asleep
+NARCOLEPSY | Sudden uncontrollable sleep
+DEVELOPMENTAL | Relating to growth across life
+INFANCY | Earliest stage of life
+CHILDHOOD | Stage before adolescence
+ADOLESCENCE | Teenage years
+PUBERTY | Onset of sexual maturity
+MATURATION | Biological growth process
+EGOCENTRISM | Inability to see another's viewpoint
+SCAFFOLDING | Support that helps learning
+EXPERIMENT | Controlled study
+VARIABLE | Measured or manipulated factor
+INDEPENDENT | Variable that is manipulated
+DEPENDENT | Variable that is measured
+PARTICIPANT | Subject in a study
+QUESTIONNAIRE | Set of written questions
+SURVEY | Collection of responses
+INTERVIEW | Spoken questioning
+LONGITUDINAL | Following people over time
+CORRELATIONAL | Studying relationships between variables
+RELIABILITY | Consistency of a measure
+VALIDITY | Accuracy of a measure
+REPLICATION | Repeating a study
+ETHICS | Moral rules for research
+CONSENT | Agreement to take part
+DEBRIEFING | Explaining a study afterwards
+NEUROSCIENCE | Study of the nervous system
+BRAIN | Organ of the mind
+CORTEX | Outer layer of the brain
+PREFRONTAL | ___ cortex, for planning and self-control
+AMYGDALA | Brain region of fear
+HIPPOCAMPUS | Brain region for forming memories
+HYPOTHALAMUS | Brain region regulating drives
+THALAMUS | Brain's sensory relay
+CEREBELLUM | Brain region of coordination
+BROCA | ___'s area, for speech production
+WERNICKE | ___'s area, for language comprehension
+HEMISPHERE | Half of the brain
+LATERALISATION | Specialisation of brain halves
+PLASTICITY | Brain's ability to change
+GLUTAMATE | Excitatory neurotransmitter
+NOREPINEPHRINE | Neurotransmitter of arousal
+ENDORPHINS | Natural painkillers
+OXYTOCIN | Bonding hormone
+CORTISOL | Stress hormone
+MELATONIN | Sleep hormone
+LOBOTOMY | Discredited brain operation
+PHINEAS | ___ Gage, survivor of a rod through the skull
+BLINDSIGHT | Responding to unseen stimuli
+PROSOPAGNOSIA | Face blindness
+SYNAESTHESIA | Blending of senses
+APHASIA | Loss of language ability
+AMNESIAC | Person with memory loss
+ANTEROGRADE | Amnesia for new memories
+RETROGRADE | Amnesia for old memories
+CONFABULATION | Unintentional invention of memories
+JAMAISVU | Feeling that the familiar is new (6,2)
+CAPGRAS | ___ delusion, that loved ones are impostors
+PAREIDOLIA | Seeing faces in random patterns
+APOPHENIA | Seeing patterns in randomness
+NOCEBO | Harmful effect from a belief in harm
+HAWTHORNE | ___ effect, behaving differently when observed
+IMPOSTOR | ___ syndrome, feeling like a fraud
+SPOTLIGHT | ___ effect, overestimating how noticed we are
+BARNUM | ___ effect, believing vague descriptions fit
+FORER | ___ effect, another name for the Barnum effect
+MCGURK | ___ effect, where sight changes what we hear
+STROOP | ___ effect, naming colours of colour words
+SERIAL | ___ position effect in memory
+PRIMACY | Better recall of first items
+RECENCY | Better recall of last items
+ZEIGARNIK | ___ effect, remembering unfinished tasks
+OSTRICH | ___ effect, ignoring bad news
+NEGATIVITY | ___ bias, weighting bad over good
+SELFSERVING | ___ bias, credit for success, blame for failure
+INGROUP | Group one identifies with
+OUTGROUP | Group one doesn't identify with
+SCAPEGOAT | Person unfairly blamed
+POLARISATION | Groups becoming more extreme
+FACILITATION | Better performance in front of others
+NORM | Unwritten rule of a group
+ROLE | Expected behaviour in a position
+STATUS | Social standing
+LEADERSHIP | Guiding a group
+CHARISMA | Compelling attractiveness
+INFLUENCE | Power to affect others
+COMPLIANCE | Doing what others ask
+RECIPROCITY | Returning favours
+ALTRUISM | Selfless helping
+SYMPATHY | Feeling sorry for another
+AGGRESSION | Hostile behaviour
+FRUSTRATION | Feeling of being blocked
+ATTRACTION | Liking another person
+INTIMACY | Close personal connection
+LONELINESS | Feeling of isolation
+BELONGING | Need to be part of a group
+HIERARCHY | ___ of needs, Maslow's pyramid
+AUTONOMY | Need for self-direction
+COMPETENCE | Need for mastery
+RELATEDNESS | Need for connection
+LOCUS | ___ of control, internal or external
+OPTIMIST | One who expects the best
+PESSIMIST | One who expects the worst
+RUMINATION | Repetitive negative thinking
+CATASTROPHISING | Imagining the worst outcome
+PROCRASTINATION | Putting things off
+WILLPOWER | Self-control
+DELAYED | ___ gratification, waiting for a reward
+MARSHMALLOW | ___ test of delayed gratification
+IMPULSIVITY | Acting without thinking
+HABIT | Automatic behaviour
+ROUTINE | Regular sequence of actions
+CUE | Trigger for a habit
+CRAVING | Strong desire
+GORILLA | Invisible ___ experiment of inattentional blindness
+INATTENTIONAL | ___ blindness, missing the obvious
+MULTITASKING | Doing several things at once
+VIGILANCE | Sustained attention
+AROUSAL | State of alertness
+YERKES | ___-Dodson law, of arousal and performance
+WORRY | Anxious thinking about the future
+PHOBIC | Having an irrational fear
+TRIGGER | Stimulus causing a reaction
+FLASHBACK | Vivid re-experiencing of trauma
+DISSOCIATION | Detachment from reality
+CATATONIA | State of unresponsiveness
+MANIA | State of elevated mood and energy
+HYPOMANIA | Milder form of mania
+DYSTHYMIA | Persistent mild depression
+SEASONAL | ___ affective disorder
+ANHEDONIA | Inability to feel pleasure
+INSOMNIAC | Person unable to sleep
+HYPOCHONDRIA | Excessive worry about illness
+SOMATIC | Relating to the body
+PSYCHOSOMATIC | Physical symptoms caused by the mind
+TOURETTE | ___ syndrome, of involuntary tics
+STUTTER | Speech disruption
+DYSPRAXIA | Difficulty with coordination
+DYSCALCULIA | Difficulty with numbers
+NEURODIVERSITY | Natural variation in brain function
+GIFTED | Having exceptional ability
+PRODIGY | Child with exceptional talent
+SAVANT | Person with an extraordinary specific skill
+FORENSIC | ___ psychology, applied to law
+CLINICAL | ___ psychology, of mental health treatment
+EDUCATIONAL | ___ psychology, of learning in schools
+OCCUPATIONAL | ___ psychology, of the workplace
+EVOLUTIONARY | ___ psychology, of adaptive minds
+POSITIVE | ___ psychology, of strengths and wellbeing
+SOCIAL | ___ psychology, of how people affect one another
+COMPARATIVE | ___ psychology, comparing species
+PSYCHOMETRICS | Science of psychological measurement
+PSYCHOMETRIC | Relating to mental testing
+INKBLOT | Rorschach test image
+POLYGRAPH | Lie detector
+PROFILING | Inferring traits of an offender
+EYEWITNESS | ___ testimony, often unreliable
+INTERROGATION | Questioning of a suspect
+BRAINWASHING | Coercive persuasion
+STOCKHOLM | ___ syndrome, sympathy for captors
+GASLIGHTING | Manipulation into doubting reality
+NARCISSIST | Person with excessive self-regard
+PSYCHOPATH | Person lacking empathy and remorse
+SOCIOPATH | Person with antisocial personality
+CODEPENDENCY | Excessive reliance on a partner
+BOUNDARIES | Personal limits in relationships
+ASSERTIVENESS | Confident expression of needs
+GRATITUDE | Thankfulness
+FORGIVENESS | Letting go of resentment
+MEANING | Sense of purpose
+PURPOSE | Reason for living
+FLOURISHING | Thriving
+SAVOURING | Prolonging positive experiences
+PERCEIVE | Become aware through the senses
+SENSE | Faculty such as sight or hearing
+VISION | Sense of sight
+HEARING | Sense of sound
+TOUCH | Sense of contact
+TASTE | Sense of flavour
+SMELL | Sense of odour
+PROPRIOCEPTION | Sense of body position
+INTEROCEPTION | Sense of the body's internal state
+PAIN | Unpleasant sensory experience
+CLOSURE | Gestalt tendency to complete shapes
+PROXIMITY | Gestalt grouping by nearness
+CONTINUITY | Gestalt grouping along lines
+TOPDOWN | ___ processing, driven by expectations (3-4)
+BOTTOMUP | ___ processing, driven by sensory data (6-2)
+EXPECTATION | Anticipated outcome
+SET | Readiness to perceive in a certain way
+CONTEXT | Surrounding information
+AMBIGUOUS | ___ figure, like the duck-rabbit
+NECKER | ___ cube, a reversible figure
+PONZO | ___ illusion, of converging lines
+AMES | ___ room, a distorted space illusion
+KANIZSA | ___ triangle, an illusory contour
+STIMULI | Things that provoke responses
+RESPONSE | Reaction to a stimulus
+ASSOCIATION | Link between ideas
+LEARNING | Change in behaviour through experience
+ACQUISITION | Initial stage of learning
+SCHEDULE | ___ of reinforcement
+INTERMITTENT | Partial reinforcement
+MAZE | Puzzle used with rats in learning studies
+LATENT | ___ learning, hidden until needed
+TOLMAN | Psychologist of rats' cognitive maps
+KOHLER | Gestalt psychologist of chimpanzee insight
+WERTHEIMER | Founder of Gestalt psychology
+TITCHENER | Founder of structuralism
+INTROSPECTION | Examining one's own thoughts
+NATIVISM | View that some knowledge is innate
+TABULA | ___ rasa, the blank slate
+EXISTENTIAL | ___ therapy, focused on meaning
+LOGOTHERAPY | Viktor Frankl's meaning-centred therapy
+FRANKL | Author of Man's Search for Meaning
+ROGERIAN | Relating to person-centred therapy
+UNCONDITIONAL | ___ positive regard
+CONGRUENCE | Match between self-image and experience
+EMPATHIC | Showing understanding of feelings
+RAPPORT | Harmonious connection
+TRANSFERENCE | Redirecting feelings onto a therapist
+SLIP | Freudian ___, a revealing mistake
+COUCH | Psychoanalyst's piece of furniture
+SESSION | Therapy appointment
+RELAPSE | Return of symptoms
+RECOVERY | Return to health
+SUPPORT | ___ group, for shared help
+JOURNALING | Writing to process thoughts
+BREATHWORK | Breathing exercises for calm
+RELAXATION | State free from tension
+BIOFEEDBACK | Learning to control body signals
+JETLAG | Disruption of the body clock (3,3)
+CHRONOTYPE | Morning or evening preference
+LARK | Morning person
+FATIGUE | Tiredness
+BOREDOM | Lack of interest
+CURIOSITY | Desire to know
+AWE | Wonder at something vast
+NOSTALGIA | Sentimental longing for the past
+REGRET | Sorrow over past actions
+HOPE | Expectation of good things
+PRIDE | Satisfaction in achievement
+CONTEMPT | Feeling that another is beneath one
+EMBARRASSMENT | Self-conscious discomfort
+ANXIOUS | Feeling worried
+EUPHORIC | Intensely happy
+MELANCHOLY | Pensive sadness
+IRRITABLE | Easily annoyed
+COMPLACENT | Smugly satisfied
+DEFENSIVE | Quick to protect oneself
