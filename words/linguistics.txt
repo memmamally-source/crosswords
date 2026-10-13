@@ -39,3 +39,572 @@ PREFIX | Element added to the start of a word
 SUFFIX | Element added to the end of a word
 TENSE | Grammatical marking of past, present or future
 CLAUSE | Group of words with a subject and predicate
+LANGUAGE | System of communication by words
+LINGUISTICS | Scientific study of language
+LINGUIST | Scholar of language
+POLYGLOT | Speaker of many languages
+BILINGUAL | Speaking two languages
+MULTILINGUAL | Speaking several languages
+MONOLINGUAL | Speaking one language
+NATIVE | ___ speaker, from birth
+MOTHERTONGUE | First language learned (6,6)
+LINGUAFRANCA | Common language between groups (6,6)
+ENGLISH | Language of Shakespeare
+FRENCH | Language of Molière
+SPANISH | Language of Cervantes
+GERMAN | Language of Goethe
+ITALIAN | Language of Dante
+PORTUGUESE | Language of Camões
+DUTCH | Language of the Netherlands
+SWEDISH | Language of Sweden
+NORWEGIAN | Language of Norway
+DANISH | Language of Denmark
+FINNISH | Uralic language of Finland
+ICELANDIC | Language closest to Old Norse
+RUSSIAN | Language written in Cyrillic, spoken in Moscow
+POLISH | Language of Warsaw
+CZECH | Language of Prague
+UKRAINIAN | Language of Kyiv
+GREEK | Language of Homer and modern Athens
+TURKISH | Language of Istanbul
+ARABIC | Language of the Quran
+PERSIAN | Language also called Farsi
+FARSI | Language of Iran
+URDU | National language of Pakistan
+HINDI | Most widely spoken language of India
+BENGALI | Language of Bangladesh
+PUNJABI | Language of the Punjab
+TAMIL | Dravidian language of southern India
+TELUGU | Dravidian language of Andhra Pradesh
+MANDARIN | Most spoken Chinese language
+CANTONESE | Chinese language of Hong Kong
+JAPANESE | Language of Tokyo
+KOREAN | Language written in Hangul
+VIETNAMESE | Tonal language of Hanoi
+THAI | Language of Bangkok
+MALAY | Language spoken in Kuala Lumpur
+INDONESIAN | National language of Indonesia
+TAGALOG | Basis of Filipino
+SWAHILI | Bantu lingua franca of East Africa
+YORUBA | Language of southwest Nigeria
+ZULU | Bantu language of South Africa
+XHOSA | Click language of South Africa
+AMHARIC | Official language of Ethiopia
+HAUSA | Chadic language of West Africa
+SOMALI | Cushitic language of the Horn of Africa
+BERBER | Language family of North Africa
+AFRIKAANS | Language derived from Dutch in South Africa
+WELSH | Celtic language of Cymru
+GAELIC | Celtic language of Ireland and Scotland
+BRETON | Celtic language of Brittany
+CORNISH | Revived Celtic language of Cornwall
+BASQUE | Language isolate of the Pyrenees
+CATALAN | Language of Barcelona
+GALICIAN | Language of northwest Spain
+ROMANIAN | Romance language of Bucharest
+HUNGARIAN | Uralic language of Budapest
+ESTONIAN | Uralic language of Tallinn
+LATVIAN | Baltic language of Riga
+LITHUANIAN | Conservative Baltic language
+ALBANIAN | Independent branch of Indo-European
+ARMENIAN | Language with its own unique alphabet
+GEORGIAN | Kartvelian language of Tbilisi
+QUECHUA | Language of the Inca
+NAHUATL | Language of the Aztecs
+MAYAN | Language family of Mesoamerica
+GUARANI | Official language of Paraguay
+CHEROKEE | Language with Sequoyah's syllabary
+NAVAJO | Language of wartime code talkers
+INUKTITUT | Inuit language of Canada
+MAORI | Polynesian language of New Zealand
+HAWAIIAN | Polynesian language with a thirteen-letter alphabet
+PALI | Language of Theravada Buddhist texts
+ARAMAIC | Language of Jesus
+SUMERIAN | Earliest written language
+AKKADIAN | Semitic language of Babylon
+HITTITE | Oldest attested Indo-European language
+ETRUSCAN | Undeciphered language of early Italy
+LINEARB | Script of Mycenaean Greek (6,1)
+LINEARA | Undeciphered script of Minoan Crete (6,1)
+OLDENGLISH | Language of Beowulf (3,7)
+MIDDLEENGLISH | Language of Chaucer (6,7)
+OLDNORSE | Language of the sagas (3,5)
+INDOEUROPEAN | Largest language family (4-8)
+ROMANCE | Language family descended from Latin
+GERMANIC | Language family of English and German
+SLAVIC | Language family of Russian and Polish
+CELTIC | Language family of Welsh and Irish
+SEMITIC | Language family of Arabic and Hebrew
+BANTU | Language family of Swahili and Zulu
+DRAVIDIAN | Language family of southern India
+URALIC | Language family of Finnish and Hungarian
+TURKIC | Language family of Turkish and Kazakh
+AUSTRONESIAN | Language family of the Pacific and Southeast Asia
+ISOLATE | Language with no known relatives
+PROTOLANGUAGE | Reconstructed ancestor language
+COGNATE | Word sharing an origin with another
+LOANWORD | Word borrowed from another language
+CALQUE | Word-for-word translation of a phrase
+STEM | Base of a word
+AFFIX | Prefix or suffix
+INFIX | Element inserted within a word
+INFLECTION | Change in word form for grammar
+DECLENSION | Inflection of nouns
+CONJUGATION | Inflection of verbs
+CASE | Grammatical role of a noun
+NOMINATIVE | Case of the subject
+ACCUSATIVE | Case of the direct object
+GENITIVE | Possessive case
+DATIVE | Case of the indirect object
+VOCATIVE | Case of address
+ABLATIVE | Latin case of separation
+GENDER | Grammatical class such as masculine
+MASCULINE | Grammatical gender of "le"
+FEMININE | Grammatical gender of "la"
+NEUTER | Neither masculine nor feminine
+PLURAL | More than one
+SINGULAR | Just one
+PERSON | First, second or third
+MOOD | Grammatical mode such as subjunctive
+SUBJUNCTIVE | Mood of wishes and doubts
+IMPERATIVE | Mood of commands
+INDICATIVE | Mood of statements
+ASPECT | How an action unfolds in time
+PERFECT | Tense of completed action
+PROGRESSIVE | Ongoing aspect
+PAST | Tense of what has happened
+PRESENT | Tense of now
+FUTURE | Tense of what will happen
+PARTICIPLE | Verb form used as an adjective
+GERUND | Verb form used as a noun
+INFINITIVE | Base form of a verb, like "to go"
+AUXILIARY | Helping verb
+MODAL | Verb like "can" or "must"
+TRANSITIVE | Verb taking a direct object
+INTRANSITIVE | Verb with no object
+ACTIVE | Voice where the subject acts
+PASSIVE | Voice where the subject is acted upon
+ARTICLE | Word like "the" or "a"
+DETERMINER | Word like "this" or "some"
+INTERJECTION | Exclamation like "wow"
+SUBJECT | Doer in a sentence
+OBJECT | Receiver of an action
+PREDICATE | Part of a sentence about the subject
+PHRASE | Group of words without a full clause
+SENTENCE | Complete grammatical unit
+PARAGRAPH | Group of sentences
+PUNCTUATION | Marks that clarify writing
+COMMA | Mark for a short pause
+COLON | Mark introducing a list
+APOSTROPHE | Mark of possession or omission
+HYPHEN | Mark joining words
+DASH | Longer line used as a break
+ELLIPSIS | Three dots of omission
+QUOTATION | ___ marks around speech
+EXCLAMATION | ___ mark for surprise
+PARENTHESIS | Bracketed aside
+SLASH | Oblique stroke
+AMPERSAND | Symbol for "and"
+ASTERISK | Star-shaped symbol
+UMLAUT | Two dots over a vowel
+CEDILLA | Hook under a c
+TILDE | Wavy mark over an n
+DIACRITIC | Mark added to a letter
+ACCENT | Mark showing stress or pronunciation
+PHONETICS | Study of speech sounds
+PHONOLOGY | Study of sound systems
+MORPHOLOGY | Study of word structure
+SYNTAX | Study of sentence structure
+LEXICOGRAPHY | Dictionary writing
+LEXICOGRAPHER | Dictionary writer
+DICTIONARY | Book of word definitions
+THESAURUS | Book of synonyms
+CONCORDANCE | Index of words in a text
+CORPUS | Body of texts for study
+DISCOURSE | Language beyond the sentence
+REGISTER | Style suited to a situation
+FORMAL | Polite and correct in style
+INFORMAL | Casual in style
+SLANG | Very informal vocabulary
+JARGON | Specialist vocabulary
+ARGOT | Secret jargon of a group
+COLLOQUIAL | Conversational
+IDIOLECT | Individual's unique speech
+VOWEL | Sound made with an open vocal tract
+CONSONANT | Sound made with obstruction
+PLOSIVE | Consonant made by a burst of air
+FRICATIVE | Consonant made by friction
+NASAL | Sound made through the nose
+GLOTTAL | ___ stop, as in "uh-oh"
+SCHWA | Unstressed vowel sound
+STRESS | Emphasis on a syllable
+INTONATION | Rise and fall of the voice
+TONE | Pitch that changes meaning
+TONAL | Using pitch to distinguish words
+CLICK | Consonant sound of Xhosa
+TRANSCRIPTION | Writing speech in symbols
+SCRIPT | Writing system
+ABJAD | Script of consonants only
+ABUGIDA | Script of consonant-vowel units
+SYLLABARY | Script of syllable symbols
+LOGOGRAM | Symbol for a word
+PICTOGRAM | Symbol picturing an object
+IDEOGRAM | Symbol representing an idea
+RUNE | Letter of the Germanic alphabet
+OGHAM | Early Irish script of notches
+CYRILLIC | Alphabet of Russian
+DEVANAGARI | Script of Hindi and Sanskrit
+HANGUL | Korean alphabet
+HIRAGANA | Japanese syllabary for native words
+KATAKANA | Japanese syllabary for loanwords
+KANJI | Chinese characters used in Japanese
+HANZI | Chinese characters
+BRAILLE | Tactile writing system
+SEMAPHORE | Signalling with flags
+MORSE | Code of dots and dashes
+SAUSSURE | Swiss founder of structural linguistics
+SAPIR | ___-Whorf hypothesis on language and thought
+WHORF | Benjamin Lee ___, who studied Hopi time words
+BLOOMFIELD | American structuralist author of 1933's "Language"
+JAKOBSON | Russian-born linguist of the six functions of language
+LABOV | Sociolinguist famed for New York department-store study
+PINKER | "The Language Instinct" author Steven
+GRIMM | Jacob of the consonant-shift "law"
+VERNER | Danish linguist whose law fixed an exception to Grimm's
+PANINI | Ancient grammarian of Sanskrit
+CHAMPOLLION | Decipherer of Egyptian writing in 1822
+VENTRIS | Architect who cracked a Mycenaean script
+KOBER | Alice who laid groundwork for Linear B's decipherment
+JOHNSON | Samuel, compiler of a 1755 dictionary
+WEBSTER | Noah who Americanised spelling
+MURRAY | James, first great editor of the OED
+ROGET | Peter Mark of the 1852 synonym book
+FOWLER | "Modern English Usage" author Henry
+ZAMENHOF | Creator of a hopeful universal tongue
+TOLKIEN | Philologist who invented Elvish
+VOLAPUK | Schleyer's 1879 constructed language
+KLINGON | Okrand's Star Trek tongue
+DOTHRAKI | Horse lords' language crafted by David Peterson
+CONLANG | Invented language, in short
+NEOLOGISM | Newly coined word
+COINAGE | Freshly minted term
+PORTMANTEAU | Blend like "brunch" or "smog"
+BLEND | Word like "motel", formed by fusing two
+ACRONYM | Pronounceable abbreviation such as NASA
+INITIALISM | Letter-by-letter abbreviation like FBI
+BACKRONYM | Phrase invented to fit existing letters
+EPONYM | Word derived from a person's name
+TOPONYM | Place name
+HYDRONYM | Name of a river or lake
+ANTHROPONYM | Personal name, to an onomastician
+ONOMASTICS | Study of proper names
+PATRONYMIC | Name derived from one's father
+MATRONYMIC | Name derived from one's mother
+PSEUDONYM | Pen name
+MONIKER | Informal name
+SOBRIQUET | Nickname, more grandly
+HYPERNYM | "Colour" relative to "red"
+HYPONYM | "Oak" relative to "tree"
+MERONYM | "Finger" relative to "hand"
+HOMONYM | Word sharing form with another of different meaning
+HOMOGRAPH | Same spelling, different meaning
+HETERONYM | "Lead" or "lead", say
+CAPTONYM | Word changing meaning with a capital, like "polish"
+CONTRONYM | Word that is its own opposite, like "cleave"
+RETRONYM | "Acoustic guitar" or "snail mail", say
+EXONYM | Outsiders' name for a place, like Germany for Deutschland
+ENDONYM | Locals' own name for a place
+DOUBLET | Pair of words from one root, like "shirt" and "skirt"
+ROOT | Core of a word
+RADICAL | Semantic component of a Chinese character
+ETYMON | Word from which another derives
+REFLEX | Later form descended from an older word
+DERIVATION | Forming new words with affixes
+COMPOUND | "Blackbird", morphologically
+CLIPPING | Shortening, like "flu" from influenza
+BACKFORMATION | "Edit" from "editor", say
+ABLAUT | Vowel gradation in sing, sang, sung
+SANDHI | Sound changes at word boundaries
+ASSIMILATION | Sound becoming more like its neighbour
+ELISION | Omission of a sound, as in "o'er"
+EPENTHESIS | Insertion of a sound, as in "athalete"
+METATHESIS | Sound swap, as in "aks" for "ask"
+APOCOPE | Loss of a final sound
+SYNCOPE | Loss of a medial sound, as in "fam'ly"
+APHAERESIS | Loss of an initial sound, as in "'cause"
+LENITION | Consonant weakening
+RHOTIC | Pronouncing the R in "car"
+ALLOPHONE | Variant of a phoneme
+MINIMALPAIR | "Ship" and "sheep", for a phonologist
+GRAPHEME | Smallest unit of writing
+DIGRAPH | Two letters for one sound, like "sh"
+TRIGRAPH | Three letters for one sound, like "tch"
+LIGATURE | Joined letters such as æ
+GLYPH | Single written symbol
+SERIF | Small stroke on a letter's end
+LOWERCASE | Minuscule letters
+UPPERCASE | Majuscule letters
+MAJUSCULE | Capital letter
+MINUSCULE | Small letter
+UNCIAL | Rounded capital script of early manuscripts
+CURSIVE | Joined-up handwriting
+CALLIGRAPHY | Art of beautiful writing
+PALEOGRAPHY | Study of ancient handwriting
+EPIGRAPHY | Study of inscriptions
+ORTHOGRAPHY | Spelling system
+SPELLING | Bee subject
+ALVEOLAR | Sound made at the tooth ridge
+BILABIAL | Sound made with both lips, like P
+LABIODENTAL | Sound like F or V
+DENTAL | Sound made against the teeth
+VELAR | Sound made at the soft palate, like K
+PALATAL | Sound made at the hard palate
+UVULAR | French R's articulation
+PHARYNGEAL | Sound made deep in the throat
+AFFRICATE | Stop-plus-fricative like "ch"
+APPROXIMANT | Sound like W or Y
+LIQUID | L or R, phonetically
+SIBILANT | Hissing sound like S
+VOICED | Like B, not P
+VOICELESS | Like P, not B
+ASPIRATED | With a puff of air
+LARYNX | Voice box
+GLOTTIS | Opening between the vocal folds
+UVULA | Dangling bit at the back of the mouth
+IPA | Phonetic alphabet, briefly
+MONOPHTHONG | Pure vowel
+TRIPHTHONG | Three-part vowel glide
+LAXVOWEL | Vowel in "bit", as opposed to "beat"
+RHYME | Syllable's nucleus plus coda
+ONSET | Consonants before a syllable's vowel
+CODA | Consonants after a syllable's vowel
+NUCLEUS | Vowel at a syllable's heart
+MORA | Unit of syllable weight
+PROSODY | Rhythm and melody of speech
+CADENCE | Falling rhythm at a sentence's end
+DRAWL | Slow, lengthened speech
+LISP | Sibilant speech impediment
+STUTTER | Speech with repeated sounds
+APHASIA | Language loss from brain damage
+BROCA | Area of the brain for speech production
+WERNICKE | Area of the brain for comprehension
+DYSLEXIA | Reading difficulty
+ACQUISITION | Children's picking-up of language
+BABBLING | Infant's "bababa" stage
+CRITICAL | ___ period hypothesis of language learning
+UNIVERSAL | ___ grammar, Chomsky's innate faculty
+GENERATIVE | ___ grammar, rule-based model of syntax
+PARSING | Analysing a sentence's structure
+PARSE | Diagram, in a sense
+TREE | Syntax diagram shape
+CONSTITUENT | Unit in a phrase-structure tree
+HEAD | Key word of a phrase
+COMPLEMENT | What completes a verb's meaning
+ADJUNCT | Optional modifier
+MODIFIER | Word qualifying another
+ANTECEDENT | Noun a pronoun refers back to
+ANAPHORA | Reference back in discourse
+DEIXIS | Words like "here" and "now" that need context
+VALENCY | Number of arguments a verb takes
+ERGATIVE | Case marking a transitive subject, in Basque
+AGGLUTINATIVE | Building words from strings of affixes, like Turkish
+ISOLATING | Language type with little inflection, like Vietnamese
+FUSIONAL | Inflecting with affixes that combine meanings
+POLYSYNTHETIC | Language with sentence-long words
+WORDORDER | SVO or SOV, say
+SVO | English's basic word order
+SOV | Japanese's basic word order
+EVIDENTIAL | Grammatical marking of information source
+HONORIFIC | Respectful form, as in Japanese keigo
+DIMINUTIVE | "Doggie" relative to "dog"
+AUGMENTATIVE | Suffix denoting bigness
+AGENT | Doer of an action
+PATIENT | Undergoer of an action
+SEMANTIC | Relating to meaning
+LEXEME | Abstract dictionary unit
+LEMMA | Headword form in a dictionary
+HEADWORD | Entry title in a dictionary
+GLOSS | Brief translation or note
+GLOSSARY | Word list with definitions
+VOCABULARY | Stock of words
+DENOTATION | Literal meaning
+CONNOTATION | Associated feeling of a word
+POLYSEMY | Multiple related meanings
+AMBIGUITY | More than one possible reading
+IMPLICATURE | Grice's implied meaning
+GRICE | Philosopher of conversational maxims
+AUSTIN | "How to Do Things with Words" author
+SEARLE | Speech-act theorist John
+SPEECHACT | Promise or apology, for Austin
+PERFORMATIVE | Utterance like "I now pronounce you..."
+PRESUPPOSITION | Background assumption of an utterance
+SEMIOTICS | Study of signs
+SIGNIFIER | Saussure's sound-image
+SIGNIFIED | Saussure's concept
+PEIRCE | American semiotician of icon, index, symbol
+DIACHRONIC | Studying language over time
+SYNCHRONIC | Studying language at one moment
+PHILOLOGY | Historical study of texts and languages
+PHILOLOGIST | Scholar of old texts
+SOUNDSHIFT | Systematic change like the Great Vowel one
+VOWELSHIFT | Great ___, which changed English pronunciation
+CHAUCER | "Canterbury Tales" poet in Middle English
+BEOWULF | Old English epic
+NORMAN | Conquest that flooded English with French
+ANGLOSAXON | Old English, by another name
+JUTES | Germanic tribe that settled Kent
+VIKINGS | Norse raiders who lent "sky" and "egg"
+DANELAW | Area of Norse influence in England
+KOINE | Common Greek of the New Testament
+VULGAR | ___ Latin, the spoken ancestor of Romance
+OCCITAN | Language of the troubadours
+PROVENCAL | Southern French tongue of Mistral
+SARDINIAN | Romance language closest to Latin
+ROMANSH | Fourth national language of Switzerland
+LADINO | Judaeo-Spanish
+YIDDISH | Language of Sholem Aleichem
+HEBREW | Revived language of Ben-Yehuda
+MALTESE | Semitic language written in Latin letters
+COPTIC | Last stage of Egyptian
+GEEZ | Liturgical language of Ethiopia
+TIGRINYA | Language of Eritrea
+TWI | Akan language of Ghana
+IGBO | Language of Chinua Achebe's people
+WOLOF | Lingua franca of Senegal
+FULA | West African language of herders
+LINGALA | Congolese language of soukous lyrics
+SHONA | Main language of Zimbabwe
+SESOTHO | Language of Lesotho
+SETSWANA | Language of Botswana
+MALAGASY | Austronesian language of Madagascar
+KHMER | Language of Cambodia
+LAO | Language of Vientiane
+BURMESE | Language of Myanmar
+TIBETAN | Language of Lhasa
+MONGOLIAN | Language of Genghis Khan's descendants
+UZBEK | Language of Samarkand
+KAZAKH | Language of the steppes switching to Latin script
+PASHTO | Language of Kabul and Kandahar
+DARI | Afghan Persian
+KURDISH | Language spoken in Erbil
+SINHALA | Language of Sri Lanka
+NEPALI | Language of Kathmandu
+MARATHI | Language of Mumbai's state
+GUJARATI | Gandhi's mother tongue
+KANNADA | Language of Bengaluru
+MALAYALAM | Palindromic language of Kerala
+ODIA | Language of Odisha
+ASSAMESE | Language of the tea state
+JAVANESE | Most spoken language of Indonesia's main island
+SAMOAN | Polynesian language of Apia
+TONGAN | Language of Nuku'alofa
+FIJIAN | Language of Suva
+TAHITIAN | Language of Papeete
+AINU | Indigenous language of Hokkaido
+SAMI | Language of Lapland's reindeer herders
+FRISIAN | English's closest continental relative
+FAROESE | Language of Tórshavn
+LUXEMBOURGISH | National tongue of a Grand Duchy
+SCOTS | Language of Burns
+MANX | Revived Celtic language of an Irish Sea isle
+SORBIAN | Slavic language of eastern Germany
+SLOVAK | Language of Bratislava
+SLOVENE | Language of Ljubljana
+CROATIAN | Language of Zagreb
+SERBIAN | Language written in both alphabets
+BULGARIAN | First Slavic language to be written
+MACEDONIAN | Language of Skopje
+BELARUSIAN | Language of Minsk
+YUPIK | Language of western Alaska
+CREE | Algonquian language of Canada
+OJIBWE | Language of the Anishinaabe
+LAKOTA | Sioux language
+HOPI | Language Whorf claimed lacked tenses
+AYMARA | Andean language of Lake Titicaca
+MAPUDUNGUN | Language of Chile's Mapuche
+TUPI | Brazilian language that gave us "jaguar"
+PIRAHA | Amazonian language at the centre of a recursion debate
+WARLPIRI | Australian Aboriginal language with free word order
+KRIOL | Creole of northern Australia
+PATOIS | Jamaican vernacular
+HAITIAN | ___ Creole
+TOKPISIN | Creole of Papua New Guinea
+SPANGLISH | Mix of two American languages
+FRANGLAIS | English-laced French
+HINGLISH | English-laced Hindi
+CODESWITCHING | Alternating between languages mid-talk
+DIGLOSSIA | Use of high and low varieties in one community
+SOCIOLECT | Variety tied to a social group
+ETHNOLECT | Variety tied to an ethnic group
+BROGUE | Irish accent
+TWANG | Nasal Southern accent
+COCKNEY | East London dialect with rhyming slang
+GEORDIE | Newcastle dialect
+SCOUSE | Liverpool dialect
+BRUMMIE | Birmingham dialect
+YINZER | Pittsburgh dialect speaker
+ISOGLOSS | Line on a dialect map
+SHIBBOLETH | Pronunciation that betrays outsiders
+MALAPROPISM | Comic misuse of a similar-sounding word
+SPOONERISM | "Tease my ears" for "ease my tears"
+MONDEGREEN | Misheard lyric
+EGGCORN | "Old-timers' disease" for Alzheimer's, say
+PANGRAM | Sentence using every letter
+LIPOGRAM | Text avoiding a letter
+TAUTOGRAM | Text with every word starting alike
+ALLITERATION | Peter Piper's device
+ASSONANCE | Vowel echo
+CONSONANCE | Consonant echo
+PLEONASM | Redundancy like "free gift"
+TAUTOLOGY | Saying the same thing twice
+LITOTES | "Not bad" for "good"
+HYPERBOLE | Wild exaggeration
+METONYMY | "The Crown" for the monarchy
+SYNECDOCHE | "Hands" for workers
+CHIASMUS | "Ask not what your country can do..." structure
+ZEUGMA | "She lost her keys and her temper"
+APHORISM | Pithy truth
+MAXIM | General rule in few words
+EPIGRAM | Witty short saying
+PROVERB | "A stitch in time saves nine", e.g.
+CLICHE | Overused phrase
+DYSPHEMISM | Harsh term chosen over a neutral one
+EUPHONY | Pleasant sound in words
+CACOPHONY | Harsh sound in words
+SEMORDNILAP | Word spelling another backwards, like "stressed"
+PALINDROMIC | Like "racecar"
+RIDDLE | Puzzle in words
+PUN | Wordplay groaner
+DOUBLEENTENDRE | Phrase with a risqué second sense
+WORDPLAY | Punning, broadly
+LOGOPHILE | Lover of words
+VERBOSE | Wordy
+LACONIC | Using few words
+SESQUIPEDALIAN | Fond of long words
+LOQUACIOUS | Talkative
+ELOQUENCE | Fluent persuasive speech
+RHETORIC | Art of persuasion
+ORATORY | Art of public speaking
+DICTION | Choice of words
+LOCUTION | Particular phrase or style of speech
+ELOCUTION | Art of clear speech
+ENUNCIATE | Speak clearly
+ARTICULATE | Fluent and clear
+GLOSSOLALIA | Speaking in tongues
+ECHOLALIA | Repetition of others' words
+TRANSLATION | Rendering in another tongue
+TRANSLATOR | Literary go-between
+INTERPRETER | UN booth worker
+DRAGOMAN | Old Ottoman interpreter
+TRANSLITERATE | Convert to another script
+ROMANIZATION | Writing in Latin letters
+PINYIN | Romanisation for Mandarin
+BABEL | Biblical tower of confused tongues
+LEXICAL | Relating to words
+DIALECTAL | Regional, linguistically
+VERNACULAR | Everyday spoken language
+STANDARD | Prestige variety
+PRESCRIPTIVE | Laying down rules of usage
+DESCRIPTIVE | Recording usage as it is
+ACADEMIE | ___ française, guardian of French
+OED | Big British dictionary, briefly
