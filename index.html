@@ -2,128 +2,223 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Crossword Hub</title>
-  <meta name="description" content="Play free themed crosswords online: everyday themes, pop culture, movies, video games, holidays and academic subjects from philosophy to economics." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231f2a44'/><rect x='5' y='5' width='10' height='10' fill='%23fff'/><rect x='17' y='5' width='10' height='10' fill='%23f2b544'/><rect x='5' y='17' width='10' height='10' fill='%23f2b544'/><rect x='17' y='17' width='10' height='10' fill='%23fff'/></svg>" />
+  <meta name="description" content="A daily academic crossword, a quick daily Mini, and themed puzzles in 33 genres from pop culture to philosophy." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%23121212'/><rect x='5' y='5' width='10' height='10' fill='%23fff'/><rect x='17' y='5' width='10' height='10' fill='%23fff'/><rect x='5' y='17' width='10' height='10' fill='%23fff'/><rect x='17' y='17' width='10' height='10' fill='%23f2c230'/></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#" data-action="home">
-      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      Crossword Hub
-    </a>
-    <div class="header-stats" id="header-stats"></div>
-  </header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Home: pick a genre -->
-  <main id="home-view" class="view">
-    <section class="hero">
-      <h1>Pick a theme. Fill the grid.</h1>
-      <p>Every puzzle is freshly built from the genre's word bank, so you can play each theme again and again.</p>
-      <div class="difficulty" role="radiogroup" aria-label="Difficulty">
-        <button role="radio" data-difficulty="easy">Easy <small>8 words</small></button>
-        <button role="radio" data-difficulty="medium">Medium <small>12 words</small></button>
-        <button role="radio" data-difficulty="hard">Hard <small>16 words</small></button>
-      </div>
-    </section>
-
-    <section class="daily" id="daily-card"></section>
-
-    <div id="genre-sections"></div>
-  </main>
-
-  <!-- Game -->
-  <main id="game-view" class="view" hidden>
-    <div class="game-bar">
-      <button class="btn ghost" data-action="home" aria-label="Back to genres">← Genres</button>
-      <div class="game-title">
-        <span id="game-icon"></span>
-        <div>
-          <h1 id="game-name"></h1>
-          <span id="game-sub" class="muted"></span>
-        </div>
-      </div>
-      <div class="timer" id="timer" aria-live="off">0:00</div>
-    </div>
-
-    <div class="toolbar">
-      <div class="menu">
-        <button class="btn" data-menu="check">Check ▾</button>
-        <div class="menu-list" data-menu-list="check" hidden>
-          <button data-action="check-cell">Letter</button>
-          <button data-action="check-word">Word</button>
-          <button data-action="check-all">Puzzle</button>
-        </div>
-      </div>
-      <div class="menu">
-        <button class="btn" data-menu="reveal">Reveal ▾</button>
-        <div class="menu-list" data-menu-list="reveal" hidden>
-          <button data-action="reveal-cell">Letter</button>
-          <button data-action="reveal-word">Word</button>
-          <button data-action="reveal-all">Puzzle</button>
-        </div>
-      </div>
-      <button class="btn" data-action="clear">Clear</button>
-      <label class="toggle" title="After typing, jump past squares that already have a letter"><input type="checkbox" id="skipfilled" checked /> Skip filled</label>
-      <label class="toggle"><input type="checkbox" id="autocheck" /> Auto-check</label>
-      <button class="btn primary" data-action="new">New puzzle</button>
-    </div>
-
-    <div class="game-layout">
-      <div class="board-col">
-        <div class="clue-bar" id="clue-bar">
-          <button class="clue-nav" data-action="prev-word" aria-label="Previous clue">‹</button>
-          <div><strong id="clue-bar-num"></strong> <span id="clue-bar-text"></span></div>
-          <button class="clue-nav" data-action="next-word" aria-label="Next clue">›</button>
-        </div>
-        <div class="board-wrap" id="board-wrap">
-          <div class="board" id="board" role="grid" aria-label="Crossword grid"></div>
-        </div>
-        <div class="progress"><div class="progress-fill" id="progress-fill"></div></div>
-        <div class="done-bar" id="done-bar" hidden>
-          <span id="done-text">Puzzle complete</span>
-          <div class="done-actions">
-            <button class="btn primary" data-action="new">Play another</button>
-            <button class="btn" data-action="home">Back to genres</button>
+  <header class="masthead">
+    <div class="masthead-bar">
+      <nav class="masthead-nav" aria-label="Sections">
+        <button data-nav="home">Today</button>
+        <button data-nav="archive">Archive</button>
+        <button data-nav="genres">Genres</button>
+      </nav>
+      <a class="wordmark" href="#/" data-nav="home">Crossword Hub</a>
+      <div class="masthead-tools">
+        <button class="icon-btn" data-action="stats" aria-label="Statistics" title="Statistics">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V4M19 20v-6" /></svg>
+        </button>
+        <div class="menu menu-right">
+          <button class="icon-btn" data-menu="settings" aria-label="Settings" title="Settings">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" /></svg>
+          </button>
+          <div class="menu-list settings-panel" data-menu-list="settings" hidden>
+            <p class="panel-label">Theme</p>
+            <div class="segmented" role="radiogroup" aria-label="Theme">
+              <button role="radio" data-theme-choice="system">System</button>
+              <button role="radio" data-theme-choice="light">Light</button>
+              <button role="radio" data-theme-choice="dark">Dark</button>
+            </div>
+            <p class="panel-label">Solving</p>
+            <label class="switch"><input type="checkbox" id="set-skip" /><span>Skip filled squares</span></label>
+            <label class="switch"><input type="checkbox" id="set-autocheck" /><span>Auto-check letters</span></label>
+            <label class="switch"><input type="checkbox" id="set-tags" /><span>Show subject labels on clues</span></label>
+            <label class="switch"><input type="checkbox" id="set-timer" /><span>Show timer</span></label>
           </div>
         </div>
-        <div class="keyboard" id="keyboard" aria-label="On-screen keyboard"></div>
       </div>
-      <aside class="clues">
-        <section>
-          <h2>Across</h2>
-          <ol id="clues-across"></ol>
-        </section>
-        <section>
-          <h2>Down</h2>
-          <ol id="clues-down"></ol>
-        </section>
-      </aside>
+    </div>
+    <p class="dateline" id="dateline"></p>
+  </header>
+
+  <main id="main">
+    <!-- ================= Home ================= -->
+    <div id="home-view" class="view" hidden>
+      <section class="today" aria-label="Today's puzzles">
+        <article class="feature feature-daily" id="daily-feature"></article>
+        <article class="feature feature-mini" id="mini-feature"></article>
+      </section>
+
+      <section class="home-section" aria-labelledby="week-title">
+        <div class="section-head">
+          <h2 class="section-title" id="week-title">This week's Daily</h2>
+          <button class="link-btn" data-nav="archive">Browse the archive →</button>
+        </div>
+        <p class="section-deck">Difficulty climbs from Monday to Saturday. Sunday brings the largest grid of the week.</p>
+        <ol class="week-strip" id="week-strip"></ol>
+      </section>
+
+      <section class="home-section" id="genres" aria-labelledby="genres-title">
+        <div class="section-head">
+          <h2 class="section-title" id="genres-title">Genre puzzles</h2>
+          <div class="segmented" role="radiogroup" aria-label="Difficulty" id="difficulty">
+            <button role="radio" data-difficulty="easy">Easy</button>
+            <button role="radio" data-difficulty="medium">Medium</button>
+            <button role="radio" data-difficulty="hard">Hard</button>
+          </div>
+        </div>
+        <p class="section-deck">A fresh grid every time. You won't meet the same clue twice in a genre until you've worked through its whole word bank.</p>
+        <div class="category-tabs" role="tablist" aria-label="Genre groups" id="category-tabs"></div>
+        <div class="genre-grid" id="genre-grid"></div>
+      </section>
+    </div>
+
+    <!-- ================= Archive ================= -->
+    <div id="archive-view" class="view" hidden>
+      <div class="page-head">
+        <p class="kicker">Archive</p>
+        <h1 class="page-title">Past puzzles</h1>
+        <p class="section-deck">Every Daily and Mini since launch. Puzzles in progress pick up where you left off.</p>
+      </div>
+      <div class="archive-controls">
+        <div class="segmented" role="radiogroup" aria-label="Puzzle type" id="archive-kind">
+          <button role="radio" data-kind="daily">The Daily</button>
+          <button role="radio" data-kind="mini">The Mini</button>
+        </div>
+        <div class="month-nav">
+          <button class="icon-btn" data-action="month-prev" aria-label="Previous month">‹</button>
+          <h2 id="archive-month"></h2>
+          <button class="icon-btn" data-action="month-next" aria-label="Next month">›</button>
+        </div>
+      </div>
+      <div class="calendar" id="calendar"></div>
+      <ul class="legend">
+        <li><span class="dot solved"></span>Solved</li>
+        <li><span class="dot assisted"></span>Finished with help</li>
+        <li><span class="dot progress"></span>In progress</li>
+        <li><span class="dot"></span>Not started</li>
+      </ul>
+    </div>
+
+    <!-- ================= Game ================= -->
+    <div id="game-view" class="view" hidden>
+      <div class="puzzle-head">
+        <p class="kicker" id="game-kicker"></p>
+        <h1 class="puzzle-title" id="game-title"></h1>
+        <p class="puzzle-meta" id="game-meta"></p>
+      </div>
+
+      <div class="toolbar" role="toolbar" aria-label="Puzzle tools">
+        <button class="timer" id="timer" data-action="pause" aria-label="Pause puzzle">
+          <span id="timer-text">0:00</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12" /></svg>
+        </button>
+        <div class="toolbar-group">
+          <button class="tool" id="pencil-btn" data-action="pencil" aria-pressed="false" title="Pencil mode: enter tentative letters in grey">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16l-1 4zM14 6l3 3" /></svg>
+            <span>Pencil</span>
+          </button>
+          <div class="menu">
+            <button class="tool" data-menu="clear">Clear</button>
+            <div class="menu-list" data-menu-list="clear" hidden>
+              <button data-action="clear-incorrect">Incorrect squares</button>
+              <button data-action="clear-word">Word</button>
+              <button data-action="clear-all">Puzzle</button>
+            </div>
+          </div>
+          <div class="menu">
+            <button class="tool" data-menu="reveal">Reveal</button>
+            <div class="menu-list" data-menu-list="reveal" hidden>
+              <button data-action="reveal-cell">Square</button>
+              <button data-action="reveal-word">Word</button>
+              <button data-action="reveal-all">Puzzle</button>
+            </div>
+          </div>
+          <div class="menu menu-right">
+            <button class="tool" data-menu="check">Check</button>
+            <div class="menu-list" data-menu-list="check" hidden>
+              <button data-action="check-cell">Square</button>
+              <button data-action="check-word">Word</button>
+              <button data-action="check-all">Puzzle</button>
+            </div>
+          </div>
+          <button class="tool tool-primary" data-action="new" id="new-btn">New puzzle</button>
+        </div>
+      </div>
+
+      <div class="game-layout">
+        <div class="board-col">
+          <div class="clue-bar" id="clue-bar">
+            <button class="clue-nav" data-action="prev-word" aria-label="Previous clue">‹</button>
+            <p aria-live="polite"><strong id="clue-bar-num"></strong><span id="clue-bar-text"></span></p>
+            <button class="clue-nav" data-action="next-word" aria-label="Next clue">›</button>
+          </div>
+          <div class="board-wrap" id="board-wrap">
+            <div class="board" id="board" role="grid" aria-label="Crossword grid"></div>
+            <div class="pause-overlay" id="pause-overlay" hidden>
+              <p class="kicker">Paused</p>
+              <p class="pause-title">Your puzzle is waiting.</p>
+              <button class="btn btn-primary" data-action="resume">Resume</button>
+            </div>
+          </div>
+          <div class="done-bar" id="done-bar" hidden>
+            <span id="done-text"></span>
+            <div class="done-actions" id="done-actions"></div>
+          </div>
+          <div class="keyboard" id="keyboard" aria-label="On-screen keyboard"></div>
+        </div>
+        <aside class="clues" id="clues" aria-label="Clues">
+          <section class="clue-list">
+            <h2>Across</h2>
+            <ol id="clues-across"></ol>
+          </section>
+          <section class="clue-list">
+            <h2>Down</h2>
+            <ol id="clues-down"></ol>
+          </section>
+        </aside>
+      </div>
     </div>
   </main>
 
-  <dialog id="win-dialog">
-    <button class="dialog-close" data-action="close-dialog" aria-label="Close and view the grid">✕</button>
+  <footer class="site-footer">
+    <p class="footer-keys">Type to fill · Arrow keys move · Space switches direction · Tab jumps to the next clue</p>
+    <p>New Daily and Mini puzzles at midnight, your local time.</p>
+  </footer>
+
+  <dialog id="win-dialog" aria-labelledby="win-title">
     <div class="win">
-      <div class="win-icon" id="win-icon">🎉</div>
-      <h2 id="win-title">Solved!</h2>
-      <p id="win-text"></p>
-      <div class="win-actions">
-        <button class="btn primary" data-action="new">Play another</button>
-        <button class="btn" data-action="home">Back to genres</button>
-        <button class="btn ghost" data-action="close-dialog">View the grid</button>
-      </div>
+      <p class="kicker" id="win-kicker"></p>
+      <h2 id="win-title"></h2>
+      <p class="win-time" id="win-time"></p>
+      <p class="win-text" id="win-text"></p>
+      <div class="win-stats" id="win-stats"></div>
+      <div class="win-actions" id="win-actions"></div>
+      <button class="link-btn" data-action="close-dialog">View the completed grid</button>
     </div>
+    <button class="dialog-close" data-action="close-dialog" aria-label="Close and view the grid">✕</button>
   </dialog>
 
-  <footer class="site-footer">
-    Keyboard: type to fill · arrows to move · Space to switch direction · Tab for next clue
-  </footer>
+  <dialog id="stats-dialog" aria-labelledby="stats-title">
+    <div class="stats">
+      <p class="kicker">Your record</p>
+      <h2 id="stats-title">Statistics</h2>
+      <div class="stat-tiles" id="stat-tiles"></div>
+      <h3>The Daily by day of the week</h3>
+      <div class="weekday-table" id="weekday-table"></div>
+    </div>
+    <button class="dialog-close" data-action="close-dialog" aria-label="Close">✕</button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" hidden></div>
 
   <script src="js/generator.js"></script>
   <script src="js/genres.js"></script>

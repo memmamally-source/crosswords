@@ -196,6 +196,7 @@
     const words = board.placed.map((p) => ({
       answer: p.entry.answer,
       clue: p.entry.clue,
+      tag: p.entry.tag,
       dir: p.dir,
       row: p.r - offR,
       col: p.c - offC,
@@ -239,6 +240,7 @@
         answer: e.answer.toUpperCase().replace(/[^A-Z]/g, ''),
         // An entry may carry several clues; the seed picks one.
         clue: Array.isArray(e.clue) ? e.clue[Math.floor(rng() * e.clue.length)] : e.clue,
+        tag: e.tag,
       }))
       .filter((e) => e.answer.length >= 3);
 
@@ -266,7 +268,20 @@
     return puzzle;
   }
 
-  const api = { generate, mulberry32 };
+  /**
+   * rotatingPool(bank, day, size, salt): the slice of a shuffled bank used on a
+   * given day number. Consecutive days get disjoint slices until the bank is
+   * used up, then a new shuffle begins, so answers don't recur for a while.
+   */
+  function rotatingPool(bank, day, size, salt) {
+    const per = Math.max(1, Math.floor(bank.length / size));
+    const cycle = Math.floor(day / per);
+    const slot = day % per;
+    const order = shuffle(bank.map((_, i) => i), mulberry32(cycle * 7919 + salt));
+    return order.slice(slot * size, slot * size + size).map((i) => bank[i]);
+  }
+
+  const api = { generate, mulberry32, rotatingPool };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CrosswordGenerator = api;
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -1,11 +1,15 @@
-/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES */
+/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG */
 (function () {
   'use strict';
 
   const $ = (sel, el = document) => el.querySelector(sel);
   const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-  // ---------- Persistence (best effort: works without storage too) ----------
+  // Puzzles before this date are not offered in the archive.
+  const LAUNCH = '2026-09-01';
+
+  // ---------- Storage (best effort: the site works without it) ----------
   const STORE_KEY = 'crosswordhub:v1';
   function loadStore() {
     try {
@@ -14,101 +18,114 @@
       return {};
     }
   }
-  const store = Object.assign({ difficulty: 'medium', best: {}, solved: 0, daily: {}, saved: null, skipFilled: true }, loadStore());
+  function migrate(old) {
+    if (old.v === 2) return old;
+    const s = {
+      v: 2,
+      settings: { theme: 'system', skipFilled: old.skipFilled !== false, autocheck: !!old.autocheck, showTags: true, showTimer: true },
+      difficulty: old.difficulty || 'medium',
+      category: 'academic',
+      saves: {},
+      solves: {},
+      best: old.best || {},
+      seen: old.seen || {},
+      lastWords: old.lastWords || {},
+      solvedCount: old.solved || 0,
+    };
+    const sv = old.saved;
+    if (sv && !sv.daily && sv.genre) {
+      s.saves[`play:${sv.genre}/${sv.difficulty}/${sv.seed}/${sv.pool || ''}`] = {
+        entries: sv.entries, revealed: sv.revealed, elapsed: sv.elapsed || 0, reveals: sv.reveals || 0, checks: sv.checks || 0, updated: Date.now(),
+      };
+    }
+    return s;
+  }
+  const store = migrate(loadStore());
+  store.settings = Object.assign({ theme: 'system', skipFilled: true, autocheck: false, showTags: true, showTimer: true }, store.settings);
   function saveStore() {
     try {
       localStorage.setItem(STORE_KEY, JSON.stringify(store));
     } catch (e) {
-      /* storage unavailable: progress just won't persist */
+      /* storage unavailable or full: progress just won't persist */
     }
   }
+
+  // ---------- Dates ----------
+  const pad = (n) => String(n).padStart(2, '0');
+  const keyOf = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  const todayKey = () => keyOf(new Date());
+  function parseKey(k) {
+    const [y, m, d] = k.split('-').map(Number);
+    return new Date(y, m - 1, d);
+  }
+  function addDays(k, n) {
+    const d = parseKey(k);
+    d.setDate(d.getDate() + n);
+    return keyOf(d);
+  }
+  const dayNumber = (k) => {
+    const [y, m, d] = k.split('-').map(Number);
+    return Math.floor(Date.UTC(y, m - 1, d) / 86400000);
+  };
+  const validDate = (k) => /^\d{4}-\d{2}-\d{2}$/.test(k) && k >= LAUNCH && k <= todayKey() && keyOf(parseKey(k)) === k;
+  const longDate = (k) => parseKey(k).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+  const shortDate = (k) => parseKey(k).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
 
   function formatTime(s) {
-    const m = Math.floor(s / 60);
-    const sec = String(s % 60).padStart(2, '0');
-    return m >= 60 ? `${Math.floor(m / 60)}:${String(m % 60).padStart(2, '0')}:${sec}` : `${m}:${sec}`;
+    s = Math.max(0, Math.round(s));
+    const h = Math.floor(s / 3600);
+    const m = Math.floor((s % 3600) / 60);
+    const sec = pad(s % 60);
+    return h ? `${h}:${pad(m)}:${sec}` : `${m}:${sec}`;
   }
+  const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 
-  function todayKey() {
-    const d = new Date();
-    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-  }
-
-  function dailyInfo() {
-    const key = todayKey();
-    const seed = Number(key.replace(/-/g, ''));
-    const dayNumber = Math.floor(Date.UTC(...key.split('-').map((n, i) => (i === 1 ? n - 1 : +n))) / 86400000);
-    return { key, seed, genre: GENRES[dayNumber % GENRES.length], difficulty: 'medium' };
-  }
+  // ---------- Puzzle definitions ----------
+  // Each day's Daily and Mini draw from their own slice of a shuffled bank,
+  // so no answer comes back for a couple of weeks.
+  const rotatingPool = CrosswordGenerator.rotatingPool;
 
   const genreById = (id) => GENRES.find((g) => g.id === id);
+  const categoryById = (id) => CATEGORIES.find((c) => c.id === id);
+  const DAILY_SUBJECTS = new Set(DAILY_BANK.map((w) => w.tag)).size;
 
-  // ---------- Home view ----------
-  function renderHome() {
-    $$('.difficulty button').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.difficulty === store.difficulty)));
-
-    const sections = $('#genre-sections');
-    sections.innerHTML = '';
-    for (const cat of CATEGORIES) {
-      const section = document.createElement('section');
-      section.className = 'genre-section';
-      section.innerHTML = '<div class="section-head"><h2 class="section-title"></h2><p class="muted"></p></div><div class="genre-grid"></div>';
-      $('h2', section).textContent = cat.name;
-      $('p', section).textContent = cat.blurb;
-      const grid = $('.genre-grid', section);
-      for (const g of GENRES.filter((x) => x.category === cat.id)) {
-        const best = store.best[`${g.id}:${store.difficulty}`];
-        const card = document.createElement('button');
-        card.className = 'genre-card';
-        card.innerHTML = `
-          <span class="icon" aria-hidden="true">${g.icon}</span>
-          <h3></h3>
-          <p></p>
-          <span class="meta">
-            <span>${g.words.length} words in bank</span>
-            ${best ? `<span class="best">Best ${formatTime(best)}</span>` : ''}
-          </span>`;
-        $('h3', card).textContent = g.name;
-        $('p', card).textContent = g.blurb;
-        card.addEventListener('click', () => play(g.id, store.difficulty));
-        grid.appendChild(card);
-      }
-      sections.appendChild(section);
-    }
-
-    const daily = dailyInfo();
-    const doneTime = store.daily[daily.key];
-    $('#daily-card').innerHTML = `
-      <span class="daily-icon" aria-hidden="true">${daily.genre.icon}</span>
-      <div>
-        <h2>Daily Challenge</h2>
-        <p>Today's theme: <strong>${daily.genre.name}</strong> · ${doneTime ? `solved in ${formatTime(doneTime)} ✓` : 'same puzzle for everyone today'}</p>
-      </div>
-      <button class="btn primary" data-action="daily">${doneTime ? 'Play again' : 'Play today’s puzzle'}</button>`;
-
-    $('#header-stats').innerHTML = store.solved ? `<strong>${store.solved}</strong> puzzle${store.solved === 1 ? '' : 's'} solved` : '';
+  function dailySpec(date) {
+    const sched = DAILY_SCHEDULE[parseKey(date).getDay()];
+    const day = dayNumber(date);
+    return {
+      kind: 'daily',
+      key: `daily:${date}`,
+      url: `#/daily/${date}`,
+      date,
+      sched,
+      kicker: `The Daily · ${sched.level}`,
+      title: longDate(date),
+      meta: `${sched.count} clues · drawn from ${DAILY_SUBJECTS} academic subjects`,
+      bank: rotatingPool(DAILY_BANK, day, 80, 1).filter((w) => w.answer.length <= sched.maxLen),
+      count: sched.count,
+      maxSize: sched.maxSize,
+      seed: day * 31 + 7,
+      tags: true,
+    };
   }
 
-  $$('.difficulty button').forEach((b) =>
-    b.addEventListener('click', () => {
-      store.difficulty = b.dataset.difficulty;
-      saveStore();
-      renderHome();
-    })
-  );
-
-  function play(genreId, difficulty) {
-    const genre = genreById(genreId);
-    const { seed, pool } = freshPuzzle(genre, difficulty);
-    navigate(`#/play/${genreId}/${difficulty}/${seed}${pool ? '/' + pool : ''}`);
+  function miniSpec(date) {
+    const day = dayNumber(date);
+    return {
+      kind: 'mini',
+      key: `mini:${date}`,
+      url: `#/mini/${date}`,
+      date,
+      kicker: 'The Mini',
+      title: longDate(date),
+      meta: `${MINI_CONFIG.count} clues · a quick warm-up`,
+      bank: rotatingPool(MINI_BANK, day, 30, 2),
+      count: MINI_CONFIG.count,
+      maxSize: MINI_CONFIG.maxSize,
+      seed: day * 17 + 3,
+      tags: true,
+    };
   }
-
-  // ---------- Word rotation ----------
-  // Each new puzzle is built only from words the player hasn't seen in this
-  // genre yet. Once the bank runs low a new cycle starts, which still leaves
-  // out the puzzle just played. The chosen word pool is written into the URL
-  // (as indices into the bank), so a puzzle link always rebuilds the same grid.
-  let pregenerated = null;
 
   const encodePool = (indices) => indices.slice().sort((a, b) => a - b).map((i) => i.toString(36)).join('.');
   function decodePool(genre, code) {
@@ -117,144 +134,446 @@
     return words.length ? words : null;
   }
 
-  function generateFor(genre, difficulty, seed, pool) {
-    const key = `${genre.id}/${difficulty}/${seed}/${pool || ''}`;
-    if (pregenerated && pregenerated.key === key) return pregenerated.puzzle;
+  function genreSpec(genre, difficulty, seed, pool) {
     const cfg = DIFFICULTIES[difficulty];
-    const bank = decodePool(genre, pool) || genre.words;
-    const puzzle = CrosswordGenerator.generate(bank, { count: cfg.count, maxSize: cfg.maxSize, seed });
-    pregenerated = { key, puzzle };
-    return puzzle;
+    const cat = categoryById(genre.category);
+    return {
+      kind: 'genre',
+      key: `play:${genre.id}/${difficulty}/${seed}/${pool || ''}`,
+      url: `#/play/${genre.id}/${difficulty}/${seed}${pool ? '/' + pool : ''}`,
+      genre,
+      difficulty,
+      pool,
+      kicker: cat ? cat.name : 'Genre puzzle',
+      title: genre.name,
+      meta: `${cfg.label} · ${cfg.count} clues`,
+      bank: decodePool(genre, pool) || genre.words,
+      count: cfg.count,
+      maxSize: cfg.maxSize,
+      seed,
+      tags: genre.category === 'mixed',
+    };
   }
 
-  function sample(list, n) {
+  const puzzleCache = new Map();
+  function puzzleFor(spec) {
+    if (!puzzleCache.has(spec.key)) {
+      puzzleCache.set(spec.key, CrosswordGenerator.generate(spec.bank, { count: spec.count, maxSize: spec.maxSize, seed: spec.seed }));
+    }
+    return puzzleCache.get(spec.key);
+  }
+
+  // ---------- Genre word rotation ----------
+  // New genre puzzles use only words the player hasn't seen in that genre.
+  // When the bank runs low a new cycle starts, still skipping the last
+  // puzzle. The pool goes into the URL so a link always rebuilds the grid.
+  function shuffled(list) {
     const a = list.slice();
     for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [a[i], a[j]] = [a[j], a[i]];
     }
-    return a.slice(0, n);
+    return a;
   }
 
-  function freshPuzzle(genre, difficulty) {
+  function freshGenreSpec(genre, difficulty) {
     const cfg = DIFFICULTIES[difficulty];
-    store.seen = store.seen || {};
-    store.lastWords = store.lastWords || {};
     const all = genre.words.map((_, i) => i);
     let seen = new Set(store.seen[genre.id] || []);
     let unseen = all.filter((i) => !seen.has(genre.words[i].answer));
     if (unseen.length < cfg.count + 6) {
-      // Bank used up: start a new cycle, still skipping the last puzzle.
       seen = new Set(store.lastWords[genre.id] || []);
       store.seen[genre.id] = [...seen];
-      saveStore();
       unseen = all.filter((i) => !seen.has(genre.words[i].answer));
     }
-    let pool = sample(unseen, 80);
-    const spare = sample(all.filter((i) => !pool.includes(i)), all.length);
+    let pool = shuffled(unseen).slice(0, 80);
+    const spare = shuffled(all.filter((i) => !pool.includes(i)));
     let best = null;
     for (let attempt = 0; attempt < 8; attempt++) {
-      const seed = Math.floor(Math.random() * 1e9);
-      const code = encodePool(pool);
-      const puzzle = generateFor(genre, difficulty, seed, code);
-      if (!best || puzzle.words.length > best.puzzle.words.length) best = { seed, code, puzzle };
-      if (puzzle.words.length >= cfg.count) break;
-      // Not enough unseen words fit together: let a few seen ones back in.
-      pool = pool.concat(spare.splice(0, 4));
+      const spec = genreSpec(genre, difficulty, Math.floor(Math.random() * 1e9), encodePool(pool));
+      const placed = puzzleFor(spec).words.length;
+      if (!best || placed > best.placed) best = { spec, placed };
+      if (placed >= cfg.count) break;
+      pool = pool.concat(spare.splice(0, 4)); // let a few seen words back in so the grid fills
     }
-    pregenerated = { key: `${genre.id}/${difficulty}/${best.seed}/${best.code}`, puzzle: best.puzzle };
-    return { seed: best.seed, pool: best.code };
+    return best.spec;
   }
 
   function rememberWords(genre, puzzle) {
-    store.seen = store.seen || {};
-    store.lastWords = store.lastWords || {};
     const answers = puzzle.words.map((w) => w.answer);
     store.seen[genre.id] = [...new Set((store.seen[genre.id] || []).concat(answers))];
     store.lastWords[genre.id] = answers;
-    delete store.recent;
-    saveStore();
+  }
+
+  // ---------- Progress & stats ----------
+  function statusOf(key) {
+    const solve = store.solves[key];
+    if (solve) return solve.clean ? 'solved' : 'assisted';
+    const save = store.saves[key];
+    if (save && save.entries && save.entries.some((row) => row.some(Boolean))) return 'progress';
+    return 'none';
+  }
+
+  function dailyStreaks() {
+    const solved = (k) => {
+      const s = store.solves[`daily:${k}`];
+      return s && s.clean;
+    };
+    let day = todayKey();
+    if (!solved(day)) day = addDays(day, -1);
+    let current = 0;
+    while (day >= LAUNCH && solved(day)) {
+      current++;
+      day = addDays(day, -1);
+    }
+    const keys = Object.keys(store.solves).filter((k) => k.startsWith('daily:') && store.solves[k].clean).map((k) => k.slice(6)).sort();
+    let longest = 0;
+    let run = 0;
+    let prev = null;
+    for (const k of keys) {
+      run = prev && addDays(prev, 1) === k ? run + 1 : 1;
+      longest = Math.max(longest, run);
+      prev = k;
+    }
+    return { current, longest };
+  }
+
+  // ---------- Settings & theme ----------
+  function applyTheme() {
+    const t = store.settings.theme;
+    if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    else delete document.documentElement.dataset.theme;
+    $$('[data-theme-choice]').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.themeChoice === t)));
+  }
+
+  function syncSettingsUI() {
+    $('#set-skip').checked = store.settings.skipFilled;
+    $('#set-autocheck').checked = store.settings.autocheck;
+    $('#set-tags').checked = store.settings.showTags;
+    $('#set-timer').checked = store.settings.showTimer;
+    $('#timer').classList.toggle('hidden-time', !store.settings.showTimer);
+    applyTheme();
+  }
+
+  // ---------- Grid thumbnails ----------
+  const thumbQueue = [];
+  let thumbTimer = null;
+  function queueThumb(canvas, getPuzzle) {
+    thumbQueue.push({ canvas, getPuzzle });
+    if (!thumbTimer) thumbTimer = setTimeout(runThumbs, 30);
+  }
+  function runThumbs() {
+    thumbTimer = null;
+    const job = thumbQueue.shift();
+    if (!job) return;
+    if (job.canvas.isConnected) drawThumb(job.canvas, job.getPuzzle());
+    if (thumbQueue.length) thumbTimer = setTimeout(runThumbs, 16);
+  }
+  function drawThumb(canvas, puzzle) {
+    const css = getComputedStyle(document.documentElement);
+    const block = css.getPropertyValue('--thumb-bg').trim() || '#121212';
+    const cell = css.getPropertyValue('--thumb-cell').trim() || '#fff';
+    const size = canvas.clientWidth || 64;
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = size * dpr;
+    canvas.height = size * dpr;
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+    ctx.fillStyle = block;
+    ctx.fillRect(0, 0, size, size);
+    const n = Math.max(puzzle.rows, puzzle.cols);
+    const unit = size / n;
+    const ox = ((n - puzzle.cols) * unit) / 2;
+    const oy = ((n - puzzle.rows) * unit) / 2;
+    ctx.fillStyle = cell;
+    const gap = Math.max(0.5, unit * 0.08);
+    for (let r = 0; r < puzzle.rows; r++) {
+      for (let c = 0; c < puzzle.cols; c++) {
+        if (puzzle.solution[r][c]) ctx.fillRect(ox + c * unit + gap / 2, oy + r * unit + gap / 2, unit - gap, unit - gap);
+      }
+    }
+  }
+
+  // ---------- Home ----------
+  function statusLine(key, playLabel) {
+    const st = statusOf(key);
+    const solve = store.solves[key];
+    if (st === 'solved') return { label: 'View puzzle', text: `Solved in ${formatTime(solve.time)}`, cls: 'solved' };
+    if (st === 'assisted') return { label: 'View puzzle', text: `Finished with help in ${formatTime(solve.time)}`, cls: '' };
+    if (st === 'progress') return { label: 'Resume', text: `In progress · ${formatTime(store.saves[key].elapsed || 0)}`, cls: '' };
+    return { label: playLabel, text: '', cls: '' };
+  }
+
+  function renderHome() {
+    const today = todayKey();
+    const daily = dailySpec(today);
+    const mini = miniSpec(today);
+
+    const ds = statusLine(daily.key, 'Play');
+    $('#daily-feature').innerHTML = `
+      <div>
+        <p class="kicker">${esc(daily.kicker)}</p>
+        <h2>${esc(daily.sched.day)}'s Crossword</h2>
+        <p class="deck" id="daily-deck">An academic crossword drawn from ${DAILY_SUBJECTS} subjects, from chemistry and classics to law, linguistics and philosophy.</p>
+        <ul class="facts">
+          <li><b>${daily.count}</b> clues</li>
+          <li><b>${esc(daily.sched.level)}</b> difficulty</li>
+          <li>New every day at midnight</li>
+        </ul>
+        <button class="btn btn-primary" data-open="${daily.url}">${ds.label}</button>
+        ${ds.text ? `<p class="status ${ds.cls}">${esc(ds.text)}</p>` : ''}
+      </div>
+      <canvas class="thumb" aria-hidden="true"></canvas>`;
+    queueThumb($('#daily-feature canvas'), () => {
+      const p = puzzleFor(daily);
+      const subjects = [...new Set(p.words.map((w) => w.tag).filter(Boolean))];
+      const deck = $('#daily-deck');
+      if (deck && subjects.length > 3) {
+        deck.textContent = `Today's grid spans ${subjects.slice(0, 4).join(', ')} and ${plural(subjects.length - 4, 'more subject')}.`;
+      }
+      return p;
+    });
+
+    const ms = statusLine(mini.key, 'Play');
+    $('#mini-feature').innerHTML = `
+      <div>
+        <p class="kicker">The Mini</p>
+        <h2>A six-clue warm-up</h2>
+        <p class="deck">Short everyday and pop-culture answers. A good start before the Daily.</p>
+        <ul class="facts"><li><b>${mini.count}</b> clues</li><li>Small grid</li></ul>
+        <button class="btn" data-open="${mini.url}">${ms.label}</button>
+        ${ms.text ? `<p class="status ${ms.cls}">${esc(ms.text)}</p>` : ''}
+      </div>
+      <canvas class="thumb" aria-hidden="true"></canvas>`;
+    queueThumb($('#mini-feature canvas'), () => puzzleFor(mini));
+
+    // The week runs Monday to Sunday.
+    const dow = parseKey(today).getDay();
+    const monday = addDays(today, -((dow + 6) % 7));
+    const strip = $('#week-strip');
+    strip.innerHTML = '';
+    for (let i = 0; i < 7; i++) {
+      const k = addDays(monday, i);
+      const sched = DAILY_SCHEDULE[parseKey(k).getDay()];
+      const key = `daily:${k}`;
+      const st = statusOf(key);
+      const future = k > today || k < LAUNCH;
+      const mark = future ? (k > today ? 'Coming soon' : 'Before launch')
+        : st === 'solved' ? `Solved · ${formatTime(store.solves[key].time)}`
+          : st === 'assisted' ? 'Finished with help'
+            : st === 'progress' ? 'In progress' : 'Not started';
+      const li = document.createElement('li');
+      if (k === today) li.className = 'is-today';
+      li.innerHTML = `<button ${future ? 'disabled' : `data-open="#/daily/${k}"`} aria-label="${esc(sched.day)}, ${esc(sched.level)}, ${esc(mark)}">
+        <span class="day">${sched.day.slice(0, 3)}${k === today ? ' · Today' : ''}</span>
+        <span class="level">${esc(sched.level)}</span>
+        <span class="mark ${st}">${esc(mark)}</span></button>`;
+      strip.appendChild(li);
+    }
+
+    $$('#difficulty button').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.difficulty === store.difficulty)));
+    renderGenreTabs();
+    renderGenreGrid();
+  }
+
+  function renderGenreTabs() {
+    const tabs = $('#category-tabs');
+    tabs.innerHTML = '';
+    for (const cat of CATEGORIES) {
+      const n = GENRES.filter((g) => g.category === cat.id).length;
+      const b = document.createElement('button');
+      b.setAttribute('role', 'tab');
+      b.dataset.category = cat.id;
+      b.setAttribute('aria-selected', String(store.category === cat.id));
+      b.innerHTML = `${esc(cat.name)}<span class="count">${n}</span>`;
+      tabs.appendChild(b);
+    }
+  }
+
+  function renderGenreGrid() {
+    const grid = $('#genre-grid');
+    grid.innerHTML = '';
+    const cfg = DIFFICULTIES[store.difficulty];
+    for (const g of GENRES.filter((x) => x.category === store.category)) {
+      const best = store.best[`${g.id}:${store.difficulty}`];
+      const card = document.createElement('button');
+      card.className = 'genre-card';
+      card.dataset.genre = g.id;
+      card.innerHTML = `
+        <canvas class="thumb" aria-hidden="true"></canvas>
+        <span>
+          <h3>${esc(g.name)}</h3>
+          <p>${esc(g.blurb)}</p>
+          <span class="meta"><span>${g.words.length} words</span>${best ? `<span class="best">Best ${formatTime(best)}</span>` : ''}</span>
+        </span>`;
+      card.setAttribute('aria-label', `${g.name}. ${g.blurb} ${cfg.label}, ${cfg.count} clues.`);
+      grid.appendChild(card);
+      queueThumb($('canvas', card), () => puzzleFor(genreSpec(g, 'easy', 1, '')));
+    }
+  }
+
+  // ---------- Archive ----------
+  const archive = { kind: 'daily', month: todayKey().slice(0, 7) };
+  function renderArchive() {
+    $$('#archive-kind button').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.kind === archive.kind)));
+    const [y, m] = archive.month.split('-').map(Number);
+    const first = new Date(y, m - 1, 1);
+    $('#archive-month').textContent = first.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+    $('[data-action="month-prev"]').disabled = archive.month <= LAUNCH.slice(0, 7);
+    $('[data-action="month-next"]').disabled = archive.month >= todayKey().slice(0, 7);
+
+    const cal = $('#calendar');
+    cal.innerHTML = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((d) => `<div class="dow">${d}</div>`).join('');
+    for (let i = 0; i < first.getDay(); i++) cal.appendChild(document.createElement('span'));
+    const days = new Date(y, m, 0).getDate();
+    const today = todayKey();
+    for (let d = 1; d <= days; d++) {
+      const k = `${archive.month}-${pad(d)}`;
+      const key = `${archive.kind}:${k}`;
+      const st = statusOf(key);
+      const available = k >= LAUNCH && k <= today;
+      const b = document.createElement('button');
+      if (k === today) b.className = 'today';
+      b.disabled = !available;
+      if (available) b.dataset.open = `#/${archive.kind}/${k}`;
+      const label = { solved: 'solved', assisted: 'finished with help', progress: 'in progress', none: 'not started' }[st];
+      b.setAttribute('aria-label', `${longDate(k)}${available ? ', ' + label : ', unavailable'}`);
+      b.innerHTML = `<span class="num">${d}</span>${available ? `<span class="dot ${st === 'none' ? '' : st}"></span>` : ''}`;
+      cal.appendChild(b);
+    }
+  }
+
+  // ---------- Stats ----------
+  function openStats() {
+    const dailies = Object.entries(store.solves).filter(([k]) => k.startsWith('daily:'));
+    const clean = dailies.filter(([, s]) => s.clean);
+    const { current, longest } = dailyStreaks();
+    const avg = clean.length ? clean.reduce((t, [, s]) => t + s.time, 0) / clean.length : 0;
+    $('#stat-tiles').innerHTML = [
+      [store.solvedCount || 0, 'Puzzles solved'],
+      [dailies.length, 'Dailies finished'],
+      [current, 'Current streak'],
+      [longest, 'Longest streak'],
+      [clean.length ? formatTime(avg) : '—', 'Average Daily'],
+    ].map(([v, l]) => `<div><b>${v}</b><span>${l}</span></div>`).join('');
+
+    const order = [1, 2, 3, 4, 5, 6, 0];
+    const byDay = order.map((d) => {
+      const times = clean.filter(([k]) => parseKey(k.slice(6)).getDay() === d).map(([, s]) => s.time);
+      return { d, n: times.length, avg: times.length ? times.reduce((a, b) => a + b, 0) / times.length : 0 };
+    });
+    const max = Math.max(1, ...byDay.map((x) => x.avg));
+    $('#weekday-table').innerHTML = byDay.map((x) => `
+      <div class="weekday-row">
+        <span>${DAILY_SCHEDULE[x.d].day}</span>
+        <span class="bar"><i style="width:${(x.avg / max) * 100}%"></i></span>
+        <span class="t">${x.n ? formatTime(x.avg) : '—'}</span>
+      </div>`).join('');
+    $('#stats-dialog').showModal();
   }
 
   // ---------- Game state ----------
   let game = null;
+  let cellEls = [];
+  const grid2 = (rows, cols, v) => Array.from({ length: rows }, () => Array(cols).fill(v));
 
-  function newGame({ genre, difficulty, seed, pool, daily }) {
-    const puzzle = generateFor(genre, difficulty, seed, pool);
-    if (!daily) rememberWords(genre, puzzle);
-    const blank = () => Array.from({ length: puzzle.rows }, () => Array(puzzle.cols).fill(''));
-    const flags = () => Array.from({ length: puzzle.rows }, () => Array(puzzle.cols).fill(false));
-
-    const wordAt = Array.from({ length: puzzle.rows }, () => Array.from({ length: puzzle.cols }, () => ({})));
+  function startGame(spec) {
+    leaveGame();
+    const puzzle = puzzleFor(spec);
+    const { rows, cols } = puzzle;
+    const wordAt = Array.from({ length: rows }, () => Array.from({ length: cols }, () => ({})));
     puzzle.words.forEach((w, i) => w.cells.forEach(([r, c]) => (wordAt[r][c][w.dir] = i)));
 
     game = {
-      genre, difficulty, seed, pool, daily, puzzle, wordAt,
-      entries: blank(),
-      revealed: flags(),
-      wrong: flags(),
-      sel: null,
+      spec, puzzle, wordAt,
+      entries: grid2(rows, cols, ''),
+      revealed: grid2(rows, cols, false),
+      pencil: grid2(rows, cols, false),
+      wrong: grid2(rows, cols, false),
+      sel: { r: puzzle.words[0].row, c: puzzle.words[0].col, dir: puzzle.words[0].dir },
       elapsed: 0,
       startedAt: null,
+      paused: false,
+      pencilMode: false,
       solved: false,
       reveals: 0,
       checks: 0,
     };
 
-    // Resume a saved game if it is this exact puzzle.
-    const saved = store.saved;
-    if (saved && saved.genre === genre.id && saved.difficulty === difficulty && saved.seed === seed && (saved.pool || '') === (pool || '') && !!saved.daily === !!daily) {
-      game.entries = saved.entries;
-      game.revealed = saved.revealed;
-      game.elapsed = saved.elapsed || 0;
-      game.reveals = saved.reveals || 0;
-      game.checks = saved.checks || 0;
+    const save = store.saves[spec.key];
+    const solve = store.solves[spec.key];
+    if (save && save.entries && save.entries.length === rows) {
+      game.entries = save.entries;
+      game.revealed = save.revealed || game.revealed;
+      game.pencil = save.pencil || game.pencil;
+      game.elapsed = save.elapsed || 0;
+      game.reveals = save.reveals || 0;
+      game.checks = save.checks || 0;
+    } else if (solve) {
+      // Already solved and no work in progress: show the finished grid.
+      game.entries = puzzle.solution.map((row) => row.map((ch) => ch || ''));
+      game.elapsed = solve.time;
+      game.reveals = solve.clean ? 0 : 1;
     }
+    if (spec.kind === 'genre') rememberWords(spec.genre, puzzle);
+    saveStore();
 
-    const first = puzzle.words[0];
-    game.sel = { r: first.row, c: first.col, dir: first.dir };
     renderGame();
     if (isSolved()) {
       game.solved = true;
-      $('#board').classList.add('solved');
-      $('#timer').textContent = formatTime(game.elapsed);
+      $('#board').classList.remove('solved');
     } else {
       startTimer();
     }
+    refresh();
+  }
+
+  function leaveGame() {
+    if (!game) return;
+    stopTimer();
+    persist();
+    $('#win-dialog').open && $('#win-dialog').close();
   }
 
   function persist() {
     if (!game) return;
     if (game.solved) {
-      store.saved = null;
-    } else {
-      store.saved = {
-        genre: game.genre.id,
-        difficulty: game.difficulty,
-        seed: game.seed,
-        pool: game.pool,
-        daily: game.daily,
+      delete store.saves[game.spec.key];
+    } else if (game.entries.some((row) => row.some(Boolean)) || store.saves[game.spec.key]) {
+      store.saves[game.spec.key] = {
         entries: game.entries,
         revealed: game.revealed,
+        pencil: game.pencil,
         elapsed: currentElapsed(),
         reveals: game.reveals,
         checks: game.checks,
+        updated: Date.now(),
       };
+      // Keep storage small: hold on to the 40 most recent unfinished puzzles.
+      const keys = Object.keys(store.saves);
+      if (keys.length > 40) {
+        keys.sort((a, b) => (store.saves[a].updated || 0) - (store.saves[b].updated || 0));
+        keys.slice(0, keys.length - 40).forEach((k) => delete store.saves[k]);
+      }
     }
     saveStore();
   }
 
-  // ---------- Timer ----------
+  // ---------- Timer & pause ----------
   let tick = null;
   function currentElapsed() {
     if (!game) return 0;
     return game.elapsed + (game.startedAt ? Math.floor((Date.now() - game.startedAt) / 1000) : 0);
   }
+  function showTime() {
+    $('#timer-text').textContent = formatTime(currentElapsed());
+  }
   function startTimer() {
-    stopTimer();
+    if (!game || game.solved || game.paused) return;
+    clearInterval(tick);
     game.startedAt = Date.now();
-    tick = setInterval(() => ($('#timer').textContent = formatTime(currentElapsed())), 500);
-    $('#timer').textContent = formatTime(currentElapsed());
+    tick = setInterval(showTime, 500);
+    showTime();
   }
   function stopTimer() {
     if (game && game.startedAt) {
@@ -264,27 +583,42 @@
     clearInterval(tick);
     tick = null;
   }
+  function setPaused(paused) {
+    if (!game || game.solved) return;
+    game.paused = paused;
+    if (paused) {
+      stopTimer();
+      persist();
+    } else {
+      startTimer();
+    }
+    $('#pause-overlay').hidden = !paused;
+    $('.game-layout').classList.toggle('paused', paused);
+    $('#timer').setAttribute('aria-label', paused ? 'Resume puzzle' : 'Pause puzzle');
+    showTime();
+  }
   document.addEventListener('visibilitychange', () => {
     if (!game || game.solved || $('#game-view').hidden) return;
     if (document.hidden) {
       stopTimer();
       persist();
-    } else {
+    } else if (!game.paused) {
       startTimer();
     }
   });
   window.addEventListener('pagehide', persist);
 
   // ---------- Rendering ----------
-  let cellEls = [];
-
   function renderGame() {
-    const { puzzle, genre, difficulty, daily } = game;
-    $('#game-icon').textContent = genre.icon;
-    $('#game-name').textContent = daily ? 'Daily Challenge' : genre.name;
-    $('#game-sub').textContent = `${daily ? genre.name + ' · ' : ''}${DIFFICULTIES[difficulty].label} · ${puzzle.words.length} clues`;
-    $('#autocheck').checked = !!store.autocheck;
-    $('#skipfilled').checked = !!store.skipFilled;
+    const { spec, puzzle } = game;
+    $('#game-kicker').textContent = spec.kicker;
+    $('#game-title').textContent = spec.title;
+    $('#game-meta').textContent = spec.meta;
+    $('#new-btn').hidden = spec.kind !== 'genre';
+    $('#pause-overlay').hidden = true;
+    $('.game-layout').classList.remove('paused');
+    $('#pencil-btn').setAttribute('aria-pressed', 'false');
+    document.title = `${spec.kind === 'genre' ? spec.title : spec.kicker.split(' · ')[0] + ', ' + shortDate(spec.date)} · Crossword Hub`;
 
     const board = $('#board');
     board.classList.remove('solved');
@@ -311,6 +645,7 @@
       }
     }
 
+    const showTags = spec.tags && store.settings.showTags;
     for (const dir of ['across', 'down']) {
       const list = $(`#clues-${dir}`);
       list.innerHTML = '';
@@ -318,8 +653,8 @@
         if (w.dir !== dir) return;
         const li = document.createElement('li');
         li.dataset.index = i;
-        li.innerHTML = `<strong>${w.number}</strong><span></span>`;
-        $('span', li).textContent = `${w.clue} (${w.answer.length})`;
+        li.innerHTML = `<strong>${w.number}</strong><span><span class="text"></span>${showTags && w.tag ? `<span class="tag">${esc(w.tag)}</span>` : ''}</span>`;
+        $('.text', li).textContent = `${w.clue} (${w.answer.length})`;
         li.addEventListener('click', () => {
           game.sel = { ...firstEmptyCell(i), dir: w.dir };
           refresh();
@@ -327,75 +662,79 @@
         list.appendChild(li);
       });
     }
-
     sizeBoard();
-    refresh();
   }
 
   function sizeBoard() {
     if (!game) return;
-    const wrap = $('#board-wrap');
-    const avail = wrap.clientWidth - 4;
-    const vh = window.innerHeight * (matchMedia('(pointer: coarse)').matches ? 0.48 : 0.72);
-    const size = Math.max(20, Math.min(46, Math.floor(avail / game.puzzle.cols), Math.floor(vh / game.puzzle.rows)));
+    const { rows, cols } = game.puzzle;
+    const view = $('#game-view');
+    const inner = view.clientWidth - 32;
+    const wide = window.innerWidth > 900;
+    const availW = wide ? Math.min(inner - Math.min(460, inner * 0.4) - 28, 720) : inner;
+    // Fit the grid (and the on-screen keyboard, when shown) in the window.
+    const top = $('#board-wrap').getBoundingClientRect().top + window.scrollY;
+    const kb = $('#keyboard').offsetHeight ? $('#keyboard').offsetHeight + 24 : 0;
+    const availH = Math.max(wide ? 360 : 240, window.innerHeight - top - kb - 24);
+    const cap = game.spec.kind === 'mini' ? 72 : 52;
+    const size = Math.max(18, Math.min(cap, Math.floor((availW - 4) / cols), Math.floor(availH / rows)));
     $('#board').style.setProperty('--size', size + 'px');
   }
   window.addEventListener('resize', sizeBoard);
 
-  function currentWordIndex() {
-    const { r, c, dir } = game.sel;
-    return game.wordAt[r][c][dir];
-  }
+  const currentWordIndex = () => game.wordAt[game.sel.r][game.sel.c][game.sel.dir];
 
   function refresh() {
-    const { puzzle, sel, entries, revealed, wrong } = game;
+    if (!game) return;
+    const { puzzle, sel, entries, revealed, wrong, pencil } = game;
     const wi = currentWordIndex();
     const word = puzzle.words[wi];
     const inWord = new Set(word.cells.map(([r, c]) => r + ',' + c));
     const crossDir = sel.dir === 'across' ? 'down' : 'across';
     const crossIndex = game.wordAt[sel.r][sel.c][crossDir];
 
-    let filled = 0;
-    let total = 0;
     for (let r = 0; r < puzzle.rows; r++) {
       for (let c = 0; c < puzzle.cols; c++) {
         if (!puzzle.solution[r][c]) continue;
-        total++;
-        if (entries[r][c]) filled++;
         const el = cellEls[r][c];
         $('.letter', el).textContent = entries[r][c];
-        el.classList.toggle('in-word', inWord.has(r + ',' + c));
-        el.classList.toggle('active', r === sel.r && c === sel.c);
+        el.classList.toggle('in-word', !game.solved && inWord.has(r + ',' + c));
+        el.classList.toggle('active', !game.solved && r === sel.r && c === sel.c);
         el.classList.toggle('revealed', revealed[r][c]);
+        el.classList.toggle('pencil', pencil[r][c] && !revealed[r][c]);
         el.classList.toggle('wrong', wrong[r][c] && !!entries[r][c]);
       }
     }
 
-    $$('.clues li').forEach((li) => {
+    $$('.clue-list li').forEach((li) => {
       const i = Number(li.dataset.index);
       const w = puzzle.words[i];
       li.classList.toggle('current', i === wi);
       li.classList.toggle('cross', i === crossIndex);
       li.classList.toggle('done', w.cells.every(([r, c]) => entries[r][c]));
     });
-    const currentLi = $(`.clues li[data-index="${wi}"]`);
-    if (currentLi && !matchMedia('(max-width: 900px)').matches) currentLi.scrollIntoView({ block: 'nearest' });
+    const li = $(`.clue-list li[data-index="${wi}"]`);
+    if (li && window.innerWidth > 900) {
+      const ol = li.parentElement;
+      if (li.offsetTop < ol.scrollTop || li.offsetTop + li.offsetHeight > ol.scrollTop + ol.clientHeight) {
+        ol.scrollTop = li.offsetTop - ol.clientHeight / 3;
+      }
+    }
 
     $('#clue-bar-num').textContent = `${word.number}${word.dir === 'across' ? 'A' : 'D'}`;
     $('#clue-bar-text').textContent = word.clue;
-    $('#progress-fill').style.width = `${(filled / total) * 100}%`;
+
     $('#done-bar').hidden = !game.solved;
     if (game.solved) {
-      $('#done-text').textContent = game.reveals
-        ? `Finished in ${formatTime(game.elapsed)} · ${game.reveals} letter${game.reveals === 1 ? '' : 's'} revealed`
-        : `Solved in ${formatTime(game.elapsed)}`;
+      $('#done-text').textContent = game.reveals ? `Finished with help · ${formatTime(game.elapsed)}` : `Solved in ${formatTime(game.elapsed)}`;
+      $('#done-actions').innerHTML = nextActions().map((a) => `<button class="btn ${a.primary ? 'btn-primary' : ''}" ${a.attr}>${esc(a.label)}</button>`).join('');
     }
+    $('#timer').disabled = game.solved;
+    showTime();
   }
 
-  // ---------- Navigation ----------
-  function hasLetter(r, c) {
-    return !!(game.puzzle.solution[r] && game.puzzle.solution[r][c]);
-  }
+  // ---------- Selection & typing ----------
+  const hasLetter = (r, c) => !!(game.puzzle.solution[r] && game.puzzle.solution[r][c]);
 
   function firstEmptyCell(wi) {
     const w = game.puzzle.words[wi];
@@ -404,6 +743,7 @@
   }
 
   function onCellClick(r, c) {
+    if (game.paused) return;
     const { sel, wordAt } = game;
     if (sel.r === r && sel.c === c) {
       toggleDir();
@@ -432,7 +772,8 @@
     let c = sel.c + dc;
     while (r >= 0 && c >= 0 && r < game.puzzle.rows && c < game.puzzle.cols) {
       if (hasLetter(r, c)) {
-        game.sel = { r, c, dir: wordAt[r][c][axis] != null ? axis : sel.dir === axis ? (axis === 'across' ? 'down' : 'across') : sel.dir };
+        const dir = wordAt[r][c][axis] != null ? axis : axis === 'across' ? 'down' : 'across';
+        game.sel = { r, c, dir };
         return;
       }
       r += dr;
@@ -453,27 +794,27 @@
     }
   }
 
+  function setCell(r, c, ch) {
+    if (game.revealed[r][c]) return;
+    game.entries[r][c] = ch;
+    game.pencil[r][c] = !!ch && game.pencilMode;
+    game.wrong[r][c] = !!ch && !game.pencilMode && store.settings.autocheck && ch !== game.puzzle.solution[r][c];
+  }
+
   function typeLetter(ch) {
-    if (game.solved) return;
-    const { sel, entries, revealed } = game;
-    if (!revealed[sel.r][sel.c]) {
-      entries[sel.r][sel.c] = ch;
-      game.wrong[sel.r][sel.c] = store.autocheck ? ch !== game.puzzle.solution[sel.r][sel.c] : false;
-    }
+    if (game.solved || game.paused) return;
+    const { sel, entries } = game;
+    setCell(sel.r, sel.c, ch);
 
     const word = game.puzzle.words[currentWordIndex()];
     const pos = word.cells.findIndex(([r, c]) => r === sel.r && c === sel.c);
     const isEmpty = ([r, c]) => !entries[r][c];
-    if (store.skipFilled) {
-      // Hop over squares that are already filled (e.g. by crossing words).
+    if (store.settings.skipFilled) {
+      // Hop over squares that already hold a letter (for example from crossing words).
       const next = word.cells.slice(pos + 1).find(isEmpty) || word.cells.slice(0, pos).find(isEmpty);
-      if (next) {
-        [sel.r, sel.c] = next;
-      } else if (game.puzzle.words.some((w) => w.cells.some(isEmpty))) {
-        jumpWord(1, true);
-      } else if (pos < word.cells.length - 1) {
-        [sel.r, sel.c] = word.cells[pos + 1];
-      }
+      if (next) [sel.r, sel.c] = next;
+      else if (game.puzzle.words.some((w) => w.cells.some(isEmpty))) jumpWord(1, true);
+      else if (pos < word.cells.length - 1) [sel.r, sel.c] = word.cells[pos + 1];
     } else if (pos < word.cells.length - 1) {
       [sel.r, sel.c] = word.cells[pos + 1];
     } else if (!word.cells.some(isEmpty)) {
@@ -483,11 +824,10 @@
   }
 
   function backspace() {
-    if (game.solved) return;
+    if (game.solved || game.paused) return;
     const { sel, entries, revealed } = game;
     if (entries[sel.r][sel.c] && !revealed[sel.r][sel.c]) {
-      entries[sel.r][sel.c] = '';
-      game.wrong[sel.r][sel.c] = false;
+      setCell(sel.r, sel.c, '');
     } else {
       const word = game.puzzle.words[currentWordIndex()];
       const pos = word.cells.findIndex(([r, c]) => r === sel.r && c === sel.c);
@@ -498,16 +838,12 @@
         const prev = game.puzzle.words[currentWordIndex()];
         [game.sel.r, game.sel.c] = prev.cells[prev.cells.length - 1];
       }
-      const { r, c } = game.sel;
-      if (!revealed[r][c]) {
-        entries[r][c] = '';
-        game.wrong[r][c] = false;
-      }
+      setCell(game.sel.r, game.sel.c, '');
     }
     afterChange();
   }
 
-  // ---------- Check / reveal ----------
+  // ---------- Check, reveal, clear ----------
   function targetCells(scope) {
     if (scope === 'cell') return [[game.sel.r, game.sel.c]];
     if (scope === 'word') return game.puzzle.words[currentWordIndex()].cells;
@@ -517,49 +853,63 @@
   }
 
   function check(scope) {
+    if (game.solved) return;
     game.checks++;
-    let wrongCount = 0;
+    let bad = 0;
+    let empty = 0;
     for (const [r, c] of targetCells(scope)) {
-      const bad = !!game.entries[r][c] && game.entries[r][c] !== game.puzzle.solution[r][c];
-      game.wrong[r][c] = bad;
-      if (bad) wrongCount++;
+      const e = game.entries[r][c];
+      if (!e) empty++;
+      game.wrong[r][c] = !!e && e !== game.puzzle.solution[r][c];
+      if (game.wrong[r][c]) bad++;
+      if (e && !game.wrong[r][c]) game.pencil[r][c] = false;
     }
-    toast(wrongCount ? `${wrongCount} incorrect letter${wrongCount === 1 ? '' : 's'}` : 'Looking good so far!');
+    toast(bad ? `${plural(bad, 'square')} incorrect` : empty ? 'No mistakes so far' : 'All correct');
     afterChange();
   }
 
+  let revealArmed = 0;
   function reveal(scope) {
-    if (scope === 'all' && !armReveal()) return;
+    if (game.solved) return;
+    if (scope === 'all' && Date.now() - revealArmed > 4000) {
+      revealArmed = Date.now();
+      toast('Choose Reveal → Puzzle again to show every answer');
+      return;
+    }
+    revealArmed = 0;
     for (const [r, c] of targetCells(scope)) {
       if (game.entries[r][c] !== game.puzzle.solution[r][c]) {
         game.entries[r][c] = game.puzzle.solution[r][c];
         game.revealed[r][c] = true;
         game.reveals++;
       }
+      game.pencil[r][c] = false;
       game.wrong[r][c] = false;
     }
     afterChange();
   }
 
-  // Two-step confirmation for revealing everything (no browser dialogs).
-  let revealArmed = 0;
-  function armReveal() {
-    if (Date.now() - revealArmed < 4000) {
-      revealArmed = 0;
-      return true;
+  function clear(scope) {
+    if (game.solved) {
+      if (scope !== 'all') return;
+      // Start a solved puzzle over. The original solve stays in your record.
+      const { rows, cols } = game.puzzle;
+      Object.assign(game, {
+        entries: grid2(rows, cols, ''), revealed: grid2(rows, cols, false), pencil: grid2(rows, cols, false),
+        wrong: grid2(rows, cols, false), elapsed: 0, reveals: 0, checks: 0, solved: false,
+      });
+      $('#board').classList.remove('solved');
+      startTimer();
+      afterChange();
+      return;
     }
-    revealArmed = Date.now();
-    toast('Choose Reveal → Puzzle again to show every answer');
-    return false;
-  }
-
-  function clearBoard() {
-    game.puzzle.solution.forEach((row, r) =>
-      row.forEach((ch, c) => {
-        if (ch && !game.revealed[r][c]) game.entries[r][c] = '';
-        game.wrong[r][c] = false;
-      })
-    );
+    const cells = scope === 'incorrect' ? targetCells('all').filter(([r, c]) => game.entries[r][c] && game.entries[r][c] !== game.puzzle.solution[r][c]) : targetCells(scope === 'word' ? 'word' : 'all');
+    for (const [r, c] of cells) {
+      if (game.revealed[r][c]) continue;
+      game.entries[r][c] = '';
+      game.pencil[r][c] = false;
+      game.wrong[r][c] = false;
+    }
     afterChange();
   }
 
@@ -576,84 +926,140 @@
       const snapshot = JSON.stringify(game.entries);
       if (full && snapshot !== lastFullWarning) {
         lastFullWarning = snapshot;
-        toast('Grid is full, but something’s not right yet. Try Check.');
+        toast('The grid is full, but something isn’t right yet');
       }
     }
     refresh();
     persist();
   }
 
-  function win() {
-    game.solved = true;
-    stopTimer();
-    const time = game.elapsed;
-    const clean = game.reveals === 0;
-    const bestKey = `${game.genre.id}:${game.difficulty}`;
-    let newBest = false;
-    store.solved = (store.solved || 0) + 1;
-    if (clean && (!store.best[bestKey] || time < store.best[bestKey])) {
-      store.best[bestKey] = time;
-      newBest = true;
+  // ---------- Finishing ----------
+  function nextActions() {
+    const { spec } = game;
+    const today = todayKey();
+    const actions = [];
+    if (spec.kind === 'genre') {
+      actions.push({ label: 'Play another', primary: true, attr: 'data-action="new"' });
+      actions.push({ label: 'Back to genres', attr: 'data-nav="genres"' });
+    } else {
+      const otherKind = spec.kind === 'daily' ? 'mini' : 'daily';
+      const otherKey = `${otherKind}:${spec.date}`;
+      if (!store.solves[otherKey]) {
+        actions.push({ label: otherKind === 'mini' ? 'Play the Mini' : 'Play the Daily', primary: true, attr: `data-open="#/${otherKind}/${spec.date}"` });
+      }
+      actions.push({ label: spec.date === today ? 'Back to today' : 'Back to the archive', attr: `data-nav="${spec.date === today ? 'home' : 'archive'}"` });
     }
-    if (game.daily) {
-      const key = dailyInfo().key;
-      if (!store.daily[key] || time < store.daily[key]) store.daily[key] = time;
-    }
-    store.saved = null;
-    saveStore();
-
-    $('#timer').textContent = formatTime(time);
-    $('#board').classList.add('solved');
-    $('#win-icon').textContent = clean ? (newBest ? '🏆' : '🎉') : '👍';
-    $('#win-title').textContent = clean ? 'Solved!' : 'Finished!';
-    $('#win-text').textContent = clean
-      ? `You completed ${game.genre.name} (${DIFFICULTIES[game.difficulty].label}) in ${formatTime(time)}.${newBest ? ' New personal best!' : ''}`
-      : `Completed in ${formatTime(time)} with ${game.reveals} revealed letter${game.reveals === 1 ? '' : 's'}. Solve one without reveals to set a best time.`;
-    refresh();
-    setTimeout(() => {
-      if (game && game.solved && !$('#game-view').hidden) $('#win-dialog').showModal();
-    }, 650);
+    actions.push({ label: 'Share result', attr: 'data-action="share"' });
+    return actions;
   }
 
-  // Clicking the dimmed backdrop also closes the dialog.
-  $('#win-dialog').addEventListener('click', (e) => {
-    if (e.target === e.currentTarget) e.currentTarget.close();
-  });
+  function win() {
+    stopTimer();
+    game.solved = true;
+    const { spec } = game;
+    const time = game.elapsed;
+    const clean = game.reveals === 0;
+    let newBest = false;
+    store.solvedCount = (store.solvedCount || 0) + 1;
+    const prev = store.solves[spec.key];
+    if (!prev || (clean && (!prev.clean || time < prev.time))) store.solves[spec.key] = { time, clean, at: Date.now() };
+    if (spec.kind === 'genre' && clean) {
+      const k = `${spec.genre.id}:${spec.difficulty}`;
+      if (!store.best[k] || time < store.best[k]) {
+        store.best[k] = time;
+        newBest = true;
+      }
+    }
+    delete store.saves[spec.key];
+    saveStore();
+
+    $('#board').classList.add('solved');
+    $('#win-kicker').textContent = spec.kicker;
+    $('#win-title').textContent = clean ? 'Solved' : 'Puzzle complete';
+    $('#win-time').textContent = formatTime(time);
+    $('#win-text').textContent = clean
+      ? newBest ? 'A new personal best for this genre and level.' : game.checks ? 'Finished without reveals.' : 'Finished without checks or reveals.'
+      : `${plural(game.reveals, 'square')} revealed, so this one doesn't count toward streaks or best times.`;
+    let stats = '';
+    if (spec.kind === 'daily') {
+      const { current, longest } = dailyStreaks();
+      stats = `<div><b>${current}</b><span>Current streak</span></div><div><b>${longest}</b><span>Longest streak</span></div>`;
+    } else if (spec.kind === 'genre' && store.best[`${spec.genre.id}:${spec.difficulty}`]) {
+      stats = `<div><b>${formatTime(store.best[`${spec.genre.id}:${spec.difficulty}`])}</b><span>Best ${esc(DIFFICULTIES[spec.difficulty].label)} time</span></div>`;
+    }
+    $('#win-stats').innerHTML = stats;
+    $('#win-actions').innerHTML = nextActions().map((a) => `<button class="btn ${a.primary ? 'btn-primary' : ''}" ${a.attr}>${esc(a.label)}</button>`).join('');
+    refresh();
+    setTimeout(() => {
+      if (game && game.solved && !$('#game-view').hidden && !$('#win-dialog').open) $('#win-dialog').showModal();
+    }, 700);
+  }
+
+  function shareText() {
+    const { spec } = game;
+    const name = spec.kind === 'genre' ? `${spec.title} (${DIFFICULTIES[spec.difficulty].label})` : `${spec.kicker.split(' · ')[0]}, ${shortDate(spec.date)}`;
+    const how = game.reveals ? `finished with ${plural(game.reveals, 'reveal')}` : 'solved with no reveals';
+    let text = `Crossword Hub · ${name}\n${formatTime(game.elapsed)}, ${how}`;
+    let framed = true;
+    try {
+      framed = window.top !== window.self;
+    } catch (e) {
+      framed = true;
+    }
+    // Only link to the puzzle when the site is opened directly (not embedded).
+    if (!framed && /^https?:/.test(location.protocol)) text += `\n${location.origin}${location.pathname}${spec.url}`;
+    return text;
+  }
+
+  function share() {
+    const text = shareText();
+    const done = () => toast('Result copied to your clipboard');
+    const fallback = () => {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      let ok = false;
+      try {
+        ok = document.execCommand('copy');
+      } catch (e) {
+        ok = false;
+      }
+      ta.remove();
+      ok ? done() : toast('Copying isn’t available here');
+    };
+    try {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } catch (e) {
+      fallback();
+    }
+  }
 
   // ---------- Toast ----------
   let toastTimer = null;
   function toast(msg) {
-    let el = $('#toast');
-    if (!el) {
-      el = document.createElement('div');
-      el.id = 'toast';
-      el.setAttribute('role', 'status');
-      Object.assign(el.style, {
-        position: 'fixed', left: '50%', bottom: '24px', transform: 'translateX(-50%)',
-        background: 'var(--ink)', color: 'var(--surface)', padding: '10px 18px',
-        borderRadius: '999px', fontWeight: '600', fontSize: '0.92rem', zIndex: 50,
-        boxShadow: 'var(--shadow)', transition: 'opacity 0.2s', maxWidth: 'calc(100vw - 32px)', textAlign: 'center',
-      });
-      document.body.appendChild(el);
-    }
+    const el = $('#toast');
     el.textContent = msg;
-    el.style.opacity = '1';
+    el.hidden = false;
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => (el.style.opacity = '0'), 2200);
+    toastTimer = setTimeout(() => (el.hidden = true), 2400);
   }
 
-  // ---------- Input ----------
+  // ---------- Keyboard input ----------
   document.addEventListener('keydown', (e) => {
-    if (!game || $('#game-view').hidden || $('#win-dialog').open) return;
+    if (e.key === 'Escape') closeMenus();
+    if (!game || $('#game-view').hidden || $('#win-dialog').open || $('#stats-dialog').open) return;
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     if (e.target.matches && e.target.matches('input, textarea')) return;
+    if (game.paused) return;
     const k = e.key;
-    if (/^[a-z]$/i.test(k)) {
-      typeLetter(k.toUpperCase());
-    } else if (k === 'Backspace') {
-      backspace();
-    } else if (k === 'Delete') {
-      if (!game.revealed[game.sel.r][game.sel.c]) game.entries[game.sel.r][game.sel.c] = '';
+    if (/^[a-z]$/i.test(k)) typeLetter(k.toUpperCase());
+    else if (k === 'Backspace') backspace();
+    else if (k === 'Delete') {
+      setCell(game.sel.r, game.sel.c, '');
       afterChange();
     } else if (k === 'ArrowLeft') { moveSelection(0, -1); refresh(); }
     else if (k === 'ArrowRight') { moveSelection(0, 1); refresh(); }
@@ -667,8 +1073,7 @@
 
   function buildKeyboard() {
     const kb = $('#keyboard');
-    const rows = ['QWERTYUIOP', 'ASDFGHJKL', '⇄ZXCVBNM⌫'];
-    for (const row of rows) {
+    for (const row of ['QWERTYUIOP', 'ASDFGHJKL', '⇄ZXCVBNM⌫']) {
       const div = document.createElement('div');
       div.className = 'row';
       for (const ch of row) {
@@ -679,7 +1084,7 @@
         if (ch === '⌫') { b.className = 'wide'; b.setAttribute('aria-label', 'Backspace'); }
         b.addEventListener('pointerdown', (e) => {
           e.preventDefault();
-          if (!game) return;
+          if (!game || game.paused) return;
           if (ch === '⌫') backspace();
           else if (ch === '⇄') { toggleDir(); refresh(); }
           else typeLetter(ch);
@@ -690,76 +1095,154 @@
     }
   }
 
-  // ---------- Buttons ----------
-  function closeMenus() {
-    $$('.menu-list').forEach((m) => (m.hidden = true));
+  // ---------- Clicks ----------
+  function closeMenus(except) {
+    $$('.menu-list').forEach((m) => {
+      if (m !== except) m.hidden = true;
+    });
   }
+
   document.addEventListener('click', (e) => {
     const menuBtn = e.target.closest('[data-menu]');
     if (menuBtn) {
       const list = $(`[data-menu-list="${menuBtn.dataset.menu}"]`);
-      const wasHidden = list.hidden;
-      closeMenus();
-      list.hidden = !wasHidden;
+      closeMenus(list);
+      list.hidden = !list.hidden;
       return;
     }
+    if (!e.target.closest('.settings-panel')) closeMenus();
+
+    const theme = e.target.closest('[data-theme-choice]');
+    if (theme) {
+      store.settings.theme = theme.dataset.themeChoice;
+      saveStore();
+      applyTheme();
+      if (!$('#home-view').hidden) renderHome();
+      return;
+    }
+
+    const open = e.target.closest('[data-open]');
+    if (open) {
+      e.preventDefault();
+      closeDialogs();
+      navigate(open.dataset.open);
+      return;
+    }
+    const nav = e.target.closest('[data-nav]');
+    if (nav) {
+      e.preventDefault();
+      closeDialogs();
+      navigate({ home: '#/', archive: '#/archive', genres: '#/genres' }[nav.dataset.nav]);
+      return;
+    }
+    const genreCard = e.target.closest('[data-genre]');
+    if (genreCard) {
+      navigate(freshGenreSpec(genreById(genreCard.dataset.genre), store.difficulty).url);
+      return;
+    }
+    const diff = e.target.closest('[data-difficulty]');
+    if (diff) {
+      store.difficulty = diff.dataset.difficulty;
+      saveStore();
+      $$('#difficulty button').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.difficulty === store.difficulty)));
+      renderGenreGrid();
+      return;
+    }
+    const cat = e.target.closest('[data-category]');
+    if (cat) {
+      store.category = cat.dataset.category;
+      saveStore();
+      renderGenreTabs();
+      renderGenreGrid();
+      return;
+    }
+    const kind = e.target.closest('[data-kind]');
+    if (kind) {
+      archive.kind = kind.dataset.kind;
+      renderArchive();
+      return;
+    }
+
     const actionEl = e.target.closest('[data-action]');
-    closeMenus();
     if (!actionEl) return;
     const action = actionEl.dataset.action;
-    if (action === 'home') {
-      e.preventDefault();
-      $('#win-dialog').close();
-      navigate('#/');
-      return;
-    }
-    if (action === 'close-dialog') {
-      $('#win-dialog').close();
-      return;
-    }
-    if (action === 'daily') {
-      navigate('#/daily');
-      return;
+    switch (action) {
+      case 'close-dialog': closeDialogs(); return;
+      case 'stats': openStats(); return;
+      case 'month-prev':
+      case 'month-next': {
+        const [y, m] = archive.month.split('-').map(Number);
+        const d = new Date(y, m - 1 + (action === 'month-next' ? 1 : -1), 1);
+        archive.month = `${d.getFullYear()}-${pad(d.getMonth() + 1)}`;
+        renderArchive();
+        return;
+      }
     }
     if (!game) return;
     switch (action) {
+      case 'pause': setPaused(!game.paused); break;
+      case 'resume': setPaused(false); break;
+      case 'pencil':
+        game.pencilMode = !game.pencilMode;
+        actionEl.setAttribute('aria-pressed', String(game.pencilMode));
+        toast(game.pencilMode ? 'Pencil on: new letters are tentative' : 'Pencil off');
+        break;
       case 'check-cell': check('cell'); break;
       case 'check-word': check('word'); break;
       case 'check-all': check('all'); break;
       case 'reveal-cell': reveal('cell'); break;
       case 'reveal-word': reveal('word'); break;
       case 'reveal-all': reveal('all'); break;
-      case 'clear': clearBoard(); break;
-      case 'next-word': jumpWord(1, false); refresh(); break;
-      case 'prev-word': jumpWord(-1, false); refresh(); break;
+      case 'clear-incorrect': clear('incorrect'); break;
+      case 'clear-word': clear('word'); break;
+      case 'clear-all': clear('all'); break;
+      case 'next-word': if (!game.paused) { jumpWord(1, false); refresh(); } break;
+      case 'prev-word': if (!game.paused) { jumpWord(-1, false); refresh(); } break;
+      case 'share': share(); break;
       case 'new':
-        $('#win-dialog').close();
-        play(game.genre.id, game.difficulty);
+        if (game.spec.kind === 'genre') {
+          closeDialogs();
+          navigate(freshGenreSpec(game.spec.genre, game.spec.difficulty).url);
+        }
         break;
     }
   });
 
-  $('#skipfilled').addEventListener('change', (e) => {
-    store.skipFilled = e.target.checked;
-    saveStore();
-  });
+  function closeDialogs() {
+    $$('dialog').forEach((d) => d.open && d.close());
+  }
+  $$('dialog').forEach((d) =>
+    d.addEventListener('click', (e) => {
+      if (e.target === d) d.close();
+    })
+  );
 
-  $('#autocheck').addEventListener('change', (e) => {
-    store.autocheck = e.target.checked;
-    if (game) {
-      game.puzzle.solution.forEach((row, r) =>
-        row.forEach((ch, c) => {
-          game.wrong[r][c] = store.autocheck && !!ch && !!game.entries[r][c] && game.entries[r][c] !== ch;
-        })
-      );
+  // Settings toggles
+  $('#set-skip').addEventListener('change', (e) => { store.settings.skipFilled = e.target.checked; saveStore(); });
+  $('#set-autocheck').addEventListener('change', (e) => {
+    store.settings.autocheck = e.target.checked;
+    saveStore();
+    if (game && !game.solved) {
+      game.puzzle.solution.forEach((row, r) => row.forEach((ch, c) => {
+        game.wrong[r][c] = store.settings.autocheck && !!ch && !!game.entries[r][c] && !game.pencil[r][c] && game.entries[r][c] !== ch;
+      }));
       refresh();
     }
+  });
+  $('#set-tags').addEventListener('change', (e) => {
+    store.settings.showTags = e.target.checked;
     saveStore();
+    if (game && !$('#game-view').hidden) { renderGame(); refresh(); }
+  });
+  $('#set-timer').addEventListener('change', (e) => {
+    store.settings.showTimer = e.target.checked;
+    saveStore();
+    $('#timer').classList.toggle('hidden-time', !store.settings.showTimer);
   });
 
   // ---------- Routing ----------
   // The route lives in memory and is mirrored to the URL hash when the host
-  // allows it, so puzzle links are shareable on a normal web host.
+  // allows it, so puzzle links can be shared on a normal web host.
   let currentRoute = location.hash || '#/';
   function navigate(hash) {
     currentRoute = hash;
@@ -770,26 +1253,31 @@
     }
     route();
   }
-  function onUrlChange() {
+  window.addEventListener('popstate', () => {
     currentRoute = location.hash || '#/';
     route();
-  }
+  });
+
   function showView(name) {
-    $('#home-view').hidden = name !== 'home';
-    $('#game-view').hidden = name !== 'game';
-    window.scrollTo(0, 0);
+    for (const v of ['home', 'archive', 'game']) $(`#${v}-view`).hidden = v !== name;
+    document.body.classList.toggle('in-game', name === 'game');
+    $$('.masthead-nav button').forEach((b) => b.removeAttribute('aria-current'));
+    const navName = name === 'game' ? null : name;
+    if (navName) $(`.masthead-nav [data-nav="${navName}"]`).setAttribute('aria-current', 'page');
+    if (name !== 'game') document.title = 'Crossword Hub';
   }
 
   function route() {
     const parts = currentRoute.replace(/^#\/?/, '').split('/');
-    if (game && !game.solved) {
-      stopTimer();
-      persist();
-    }
-    if (parts[0] === 'daily') {
-      const d = dailyInfo();
+    leaveGame();
+    const today = todayKey();
+    $('#dateline').textContent = `${longDate(today)} · Today's Daily: ${DAILY_SCHEDULE[parseKey(today).getDay()].level}`;
+
+    if (parts[0] === 'daily' || parts[0] === 'mini') {
+      const date = parts[1] && validDate(parts[1]) ? parts[1] : today;
       showView('game');
-      newGame({ genre: d.genre, difficulty: d.difficulty, seed: d.seed, daily: true });
+      window.scrollTo(0, 0);
+      startGame(parts[0] === 'daily' ? dailySpec(date) : miniSpec(date));
       return;
     }
     if (parts[0] === 'play') {
@@ -798,16 +1286,26 @@
       const seed = Number(parts[3]);
       if (genre && Number.isFinite(seed)) {
         showView('game');
-        newGame({ genre, difficulty, seed, pool: parts[4] || null, daily: false });
+        window.scrollTo(0, 0);
+        startGame(genreSpec(genre, difficulty, seed, parts[4] || ''));
         return;
       }
     }
     game = null;
+    if (parts[0] === 'archive') {
+      if (parts[1] === 'daily' || parts[1] === 'mini') archive.kind = parts[1];
+      showView('archive');
+      window.scrollTo(0, 0);
+      renderArchive();
+      return;
+    }
     showView('home');
     renderHome();
+    if (parts[0] === 'genres') $('#genres').scrollIntoView();
+    else window.scrollTo(0, 0);
   }
 
+  syncSettingsUI();
   buildKeyboard();
-  window.addEventListener('popstate', onUrlChange);
   route();
 })();
