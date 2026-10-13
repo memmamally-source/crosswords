@@ -44,3 +44,475 @@ BANSHEE | Wailing spirit of Irish folklore
 GOLEM | Clay figure brought to life in Jewish folklore
 JASON | Leader of the Argonauts
 MIDAS | King whose touch turned things to gold
+HERA | Queen of the Greek gods
+DEMETER | Greek goddess of the harvest
+PERSEPHONE | Queen of the underworld who returns each spring
+HESTIA | Greek goddess of the hearth
+HEPHAESTUS | Greek god of the forge
+DIONYSUS | Greek god of wine and revelry
+APOLLO | Greek god of music, prophecy and the sun
+EROS | Greek god of love, son of Aphrodite
+NIKE | Greek goddess of victory
+GAIA | Primordial Greek goddess of the earth
+URANUS | Primordial Greek god of the sky
+CRONUS | Titan who swallowed his children
+RHEA | Titaness, mother of Zeus
+ATLAS | Titan condemned to hold up the sky
+OCEANUS | Titan of the encircling river
+HYPERION | Titan of heavenly light
+SELENE | Greek goddess of the moon
+HELIOS | Greek god of the sun who drove a chariot
+EOS | Greek goddess of the dawn
+NYX | Greek goddess of the night
+HECATE | Greek goddess of witchcraft and crossroads
+NEMESIS | Greek goddess of retribution
+TYCHE | Greek goddess of fortune
+IRIS | Greek messenger goddess of the rainbow
+PAN | Goat-legged Greek god of the wild
+MORPHEUS | Greek god of dreams
+HYPNOS | Greek god of sleep
+THANATOS | Greek personification of death
+CHARON | Ferryman of the dead across the Styx
+CERBERUS | Three-headed hound of the underworld
+STYX | River of the underworld
+LETHE | River of forgetfulness
+TARTARUS | Abyss where the Titans were imprisoned
+ELYSIUM | Paradise for heroes in Greek myth
+UNDERWORLD | Realm of the dead
+AMBROSIA | Food of the Greek gods
+NECTAR | Drink of the Greek gods
+OLYMPIAN | One of the twelve chief Greek gods
+THESEUS | Hero who slew the Minotaur
+ARGONAUTS | Crew of the Argo
+ARGO | Ship of Jason
+GOLDENFLEECE | Prize sought by Jason (6,6)
+MEDEA | Sorceress who helped Jason
+ORPHEUS | Musician who descended to the underworld for Eurydice
+EURYDICE | Wife of Orpheus
+BELLEROPHON | Hero who rode Pegasus against the Chimera
+CHIMERA | Fire-breathing hybrid of lion, goat and serpent
+HELEN | Beauty whose abduction started the Trojan War
+PARIS | Trojan prince who judged the fairest goddess
+HECTOR | Greatest Trojan warrior
+AGAMEMNON | Greek king who led the attack on Troy
+MENELAUS | Spartan king, husband of Helen
+PRIAM | King of Troy
+CASSANDRA | Prophetess no one believed
+AJAX | Mighty Greek warrior at Troy
+PATROCLUS | Companion of Achilles killed by Hector
+AENEAS | Trojan hero who founded Rome's line
+PENELOPE | Faithful wife of Odysseus
+TELEMACHUS | Son of Odysseus
+CIRCE | Sorceress who turned men into pigs
+CALYPSO | Nymph who kept Odysseus for seven years
+SIRENS | Singers who lured sailors to their doom
+SCYLLA | Six-headed monster opposite Charybdis
+CHARYBDIS | Whirlpool monster of the strait
+POLYPHEMUS | Cyclops blinded by Odysseus
+ITHACA | Island home of Odysseus
+TROJANHORSE | Wooden ruse that ended a war (6,5)
+NARCISSUS | Youth who fell in love with his reflection
+ECHO | Nymph who could only repeat others' words
+DAEDALUS | Inventor who built the Labyrinth
+LABYRINTH | Maze built for the Minotaur
+ARIADNE | Princess who gave Theseus a thread
+SISYPHUS | King doomed to roll a boulder uphill forever
+TANTALUS | King tormented by fruit and water out of reach
+ATALANTA | Huntress who raced suitors
+ARACHNE | Weaver turned into a spider
+PYGMALION | Sculptor who fell in love with his statue
+GALATEA | Statue brought to life
+EPIMETHEUS | Titan who married Pandora
+OEDIPUS | King who unknowingly married his mother
+ANTIGONE | Daughter of Oedipus who buried her brother
+ELECTRA | Daughter of Agamemnon who sought revenge
+ORESTES | Son of Agamemnon who avenged his father
+CLYTEMNESTRA | Queen who murdered Agamemnon
+ADONIS | Handsome youth loved by Aphrodite
+ENDYMION | Shepherd in eternal sleep, loved by the Moon
+GANYMEDE | Trojan youth who became cupbearer to the gods
+LEDA | Queen seduced by Zeus as a swan
+EUROPA | Princess carried off by Zeus as a bull
+DANAE | Mother of Perseus
+ANDROMEDA | Princess rescued by Perseus
+GORGON | Snake-haired monster such as Medusa
+HARPY | Winged female monster
+SATYR | Goat-legged woodland spirit
+DRYAD | Tree nymph
+NAIAD | Water nymph
+NEREID | Sea nymph
+MUSE | One of nine goddesses of the arts
+CALLIOPE | Muse of epic poetry
+CLIO | Muse of history
+TERPSICHORE | Muse of dance
+FATES | Three goddesses who spin, measure and cut life's thread
+FURIES | Avengers of wrongs in Greek myth
+GRACES | Three goddesses of charm and beauty
+TITANOMACHY | War of the Titans against the Olympians
+DELPHI | Site of Apollo's oracle
+OMPHALOS | Navel stone at Delphi
+JUPITER | Roman king of the gods
+JUNO | Roman queen of the gods
+NEPTUNE | Roman god of the sea
+PLUTO | Roman god of the underworld
+MARS | Roman god of war
+VENUS | Roman goddess of love
+MINERVA | Roman goddess of wisdom
+DIANA | Roman goddess of the hunt
+MERCURY | Roman messenger god
+VULCAN | Roman god of fire and the forge
+CUPID | Roman god of love with a bow
+BACCHUS | Roman god of wine
+SATURN | Roman god of agriculture
+CERES | Roman goddess of grain
+VESTA | Roman goddess of the hearth
+JANUS | Two-faced Roman god of doorways
+FAUNUS | Roman god of the forest
+ROMULUS | Founder of Rome, raised by a she-wolf
+REMUS | Twin brother of Romulus
+AURORA | Roman goddess of the dawn
+FORTUNA | Roman goddess of luck
+FREYR | Norse god of fertility and sunshine
+FRIGG | Norse queen of the gods, wife of Odin
+BALDUR | Beloved Norse god killed by mistletoe
+TYR | Norse god of war who lost a hand
+HEIMDALL | Norse watchman of the rainbow bridge
+BRAGI | Norse god of poetry
+IDUNN | Norse goddess of the apples of youth
+SIF | Golden-haired wife of Thor
+HEL | Norse goddess of the dead
+FENRIR | Giant wolf of Norse myth
+JORMUNGANDR | Midgard Serpent that encircles the world
+SLEIPNIR | Odin's eight-legged horse
+HUGINN | One of Odin's two ravens
+MUNINN | Odin's raven of memory
+MJOLNIR | Thor's hammer
+GUNGNIR | Odin's spear
+YGGDRASIL | World Tree of Norse myth
+ASGARD | Realm of the Norse gods
+MIDGARD | Realm of humans in Norse myth
+JOTUNHEIM | Realm of the giants
+BIFROST | Rainbow bridge to Asgard
+RAGNAROK | Norse end of the world
+VALKYRIE | Chooser of the slain
+EINHERJAR | Fallen warriors in Odin's hall
+YMIR | Primordial giant whose body formed the world
+SURTR | Fire giant of Muspelheim
+NIDHOGG | Dragon gnawing at the roots of the World Tree
+NORNS | Norse spinners of destiny
+BERSERKER | Frenzied Norse warrior
+RUNES | Letters of the Norse alphabet
+EDDA | Old Norse collection of myths
+SAGA | Norse prose tale
+HORUS | Falcon-headed Egyptian sky god
+SET | Egyptian god of chaos who killed Osiris
+THOTH | Ibis-headed Egyptian god of writing
+BASTET | Cat-headed Egyptian goddess
+SEKHMET | Lion-headed Egyptian goddess of war
+HATHOR | Cow-horned Egyptian goddess of love
+PTAH | Egyptian creator god of Memphis
+AMUN | Hidden god of Thebes
+ATEN | Sun disc worshipped by Akhenaten
+NUT | Egyptian sky goddess
+GEB | Egyptian earth god
+MAAT | Egyptian goddess of truth and order
+SOBEK | Crocodile-headed Egyptian god
+KHEPRI | Scarab-headed god of the rising sun
+APEP | Serpent of chaos in Egyptian myth
+AMMIT | Devourer of the dead in Egyptian myth
+DUAT | Egyptian underworld
+ANKH | Egyptian symbol of life
+EYEOFHORUS | Egyptian protective symbol (3,2,5)
+BRAHMA | Hindu god of creation
+VISHNU | Hindu god of preservation
+SHIVA | Hindu god of destruction and renewal
+GANESHA | Elephant-headed Hindu god
+LAKSHMI | Hindu goddess of wealth
+SARASWATI | Hindu goddess of knowledge
+PARVATI | Hindu goddess, wife of Shiva
+DURGA | Warrior goddess riding a lion
+KALI | Fierce Hindu goddess of time
+KRISHNA | Avatar of Vishnu in the Bhagavad Gita
+RAMA | Prince of Ayodhya who rescued Sita
+SITA | Wife of Rama
+HANUMAN | Monkey god who serves Rama
+RAVANA | Ten-headed demon king of Lanka
+INDRA | Vedic king of the gods
+AGNI | Vedic god of fire
+GARUDA | Bird mount of Vishnu
+NAGA | Serpent being in Hindu and Buddhist myth
+AVATAR | Earthly incarnation of a deity
+RAMAYANA | Epic of Rama
+MAHABHARATA | Longest Indian epic
+GILGAMESH | Hero-king of the oldest surviving epic
+ENKIDU | Wild companion of Gilgamesh
+ISHTAR | Mesopotamian goddess of love and war
+MARDUK | Chief god of Babylon
+TIAMAT | Primordial sea dragon of Babylon
+ENLIL | Sumerian god of wind
+ANU | Mesopotamian sky god
+QUETZALCOATL | Feathered Serpent of Mesoamerica
+HUITZILOPOCHTLI | Aztec god of sun and war
+TLALOC | Aztec god of rain
+TEZCATLIPOCA | Aztec god of the smoking mirror
+KUKULKAN | Maya feathered serpent god
+INTI | Inca sun god
+VIRACOCHA | Inca creator god
+PACHAMAMA | Andean earth mother
+SUSANOO | Japanese storm god
+IZANAGI | Japanese creator god
+KITSUNE | Japanese fox spirit
+TANUKI | Japanese shape-shifting raccoon dog
+KAPPA | Japanese water imp
+ONI | Japanese ogre
+TENGU | Japanese long-nosed mountain spirit
+YOKAI | Japanese supernatural creatures
+JADEEMPEROR | Ruler of heaven in Chinese myth (4,7)
+SUNWUKONG | Monkey King of Journey to the West (3,6)
+NUWA | Chinese goddess who created humanity
+PANGU | Giant who formed the world in Chinese myth
+QILIN | Chinese unicorn-like creature
+FENGHUANG | Chinese phoenix
+DAGDA | Father god of the Irish
+LUGH | Irish god of skill and light
+MORRIGAN | Irish goddess of war and fate
+BRIGID | Irish goddess of poetry and healing
+CUCHULAINN | Irish hero of Ulster
+FIONN | Irish hero who tasted the Salmon of Knowledge
+LEPRECHAUN | Irish fairy shoemaker with a pot of gold
+SELKIE | Seal that becomes human on land
+KELPIE | Scottish water horse
+PUCA | Irish shape-shifting spirit
+TIRNANOG | Irish land of eternal youth (3,2,3)
+AVALON | Isle where Arthur was taken
+ARTHUR | Legendary king of Camelot
+MERLIN | Wizard of Arthurian legend
+CAMELOT | Arthur's castle
+GUINEVERE | Arthur's queen
+LANCELOT | Knight who loved Guinevere
+GAWAIN | Knight who faced the Green Knight
+GALAHAD | Purest knight, who found the Grail
+PERCIVAL | Grail knight raised in the forest
+MORGANA | Arthur's sorceress half-sister
+MORDRED | Traitor who fought Arthur at Camlann
+HOLYGRAIL | Sacred cup of Arthurian quest (4,5)
+ROUNDTABLE | Arthur's table of equal knights (5,5)
+BEOWULF | Geatish hero who slew Grendel
+GRENDEL | Monster defeated by Beowulf
+SIEGFRIED | Dragon-slaying hero of the Nibelungs
+NIBELUNG | Dwarf race of a cursed treasure
+ROBINHOOD | Outlaw of Sherwood (5,4)
+WILLIAMTELL | Swiss archer hero (7,4)
+UNICORN | Horse with a single horn
+BASILISK | Serpent whose gaze kills
+COCKATRICE | Rooster-headed serpent
+MANTICORE | Lion with a human face and scorpion tail
+WYVERN | Two-legged dragon
+LEVIATHAN | Sea monster of the Hebrew Bible
+BEHEMOTH | Huge land beast of the Bible
+GOLIATH | Giant slain by David
+TROLL | Cave-dwelling creature of Scandinavian folklore
+OGRE | Man-eating giant
+GOBLIN | Mischievous small creature
+DWARF | Short miner of Norse and Germanic lore
+GNOME | Small earth spirit of folklore
+FAIRY | Small winged magical being
+PIXIE | Mischievous sprite
+SPRITE | Elf or fairy
+GENIE | Spirit of the lamp
+DJINN | Spirit of Arabian lore
+VAMPIRE | Undead blood-drinker
+WEREWOLF | Man who turns into a wolf
+ZOMBIE | Reanimated corpse
+GHOUL | Grave-robbing demon
+WRAITH | Ghostly apparition
+POLTERGEIST | Noisy ghost
+YETI | Abominable Snowman
+BIGFOOT | Sasquatch
+NESSIE | Monster of a Scottish loch
+CHUPACABRA | Goat-sucker of Latin American folklore
+WENDIGO | Cannibal spirit of Algonquian folklore
+THUNDERBIRD | Great bird of Native American legend
+ANANSI | Spider trickster of West African tales
+TRICKSTER | Mischief-making figure of myth
+DEMIGOD | Child of a god and a mortal
+PANTHEON | All the gods of a people
+DEITY | God or goddess
+PROPHECY | Prediction of the future
+MYTH | Traditional story of gods and heroes
+LEGEND | Traditional story believed by some to be historical
+FOLKLORE | Traditional beliefs and stories of a people
+EPIC | Long poem of heroic deeds
+QUEST | Hero's long search
+TALISMAN | Object thought to have magic powers
+AMULET | Charm against evil
+ELIXIR | Magical potion
+AEGIS | Shield of Zeus and Athena
+TRIDENT | Three-pronged spear of the sea god
+CADUCEUS | Hermes' winged staff with serpents
+THYRSUS | Pine-cone-tipped staff of Dionysus
+CORNUCOPIA | Horn of plenty
+BABAYAGA | Slavic witch whose hut stands on chicken legs (4,4)
+PERUN | Slavic god of thunder
+VELES | Slavic god of the underworld and cattle
+DOMOVOI | Slavic household spirit
+RUSALKA | Slavic water nymph
+KOSCHEI | Slavic villain known as the Deathless
+FIREBIRD | Glowing bird of Russian folklore
+MAUI | Polynesian demigod who slowed the sun
+PELE | Hawaiian goddess of volcanoes
+TANGAROA | Maori god of the sea
+TANE | Maori god of forests
+RANGI | Maori sky father
+PAPA | Maori earth mother
+RAINBOWSERPENT | Creator being of Aboriginal Australian stories (7,7)
+DREAMTIME | Aboriginal Australian era of creation
+KALEVALA | Finnish national epic
+VAINAMOINEN | Wise singer-hero of the Kalevala
+SAMPO | Magical mill of the Kalevala
+SIMURGH | Giant benevolent bird of Persian myth
+AHRIMAN | Destructive spirit of Zoroastrian belief
+AHURAMAZDA | Wise Lord of Zoroastrianism (5,5)
+RUSTAM | Hero of the Persian Book of Kings
+SHAHNAMEH | Persian Book of Kings
+OLORUN | Yoruba sky god
+OSHUN | Yoruba goddess of rivers and love
+SHANGO | Yoruba god of thunder
+YEMOJA | Yoruba mother goddess of the sea
+ESHU | Yoruba trickster messenger
+ORISHA | Spirit of Yoruba religion
+MAMIWATA | African water spirit (4,4)
+NYAME | Akan sky god
+RAVEN | Trickster creator of the Pacific Northwest
+NANABOZHO | Ojibwe trickster hero
+KOKOPELLI | Humpbacked flute player of the Southwest
+KACHINA | Spirit of Pueblo belief
+SKINWALKER | Shape-shifter of Navajo lore
+MICTLAN | Aztec underworld
+XIBALBA | Maya underworld
+HUNAHPU | One of the Maya Hero Twins
+CHAC | Maya rain god
+ITZAMNA | Maya creator god
+COATLICUE | Aztec mother goddess with a serpent skirt
+XIPETOTEC | Aztec god of renewal
+AZTLAN | Mythical Aztec homeland
+ELDORADO | Legendary city of gold (2,6)
+ATLANTIS | Sunken island of Plato's tale
+LEMURIA | Legendary lost continent
+SHANGRILA | Hidden paradise of Lost Horizon
+ARCADIA | Greek region idealised as a rural paradise
+HYPERBOREA | Land beyond the north wind
+AEOLUS | Keeper of the winds
+BOREAS | Greek god of the north wind
+ZEPHYRUS | Greek god of the west wind
+PROTEUS | Shape-shifting old man of the sea
+NEREUS | Old man of the sea, father of the Nereids
+AMPHITRITE | Sea queen, wife of Poseidon
+THETIS | Sea nymph, mother of Achilles
+PELEUS | Mortal father of Achilles
+ASCLEPIUS | Greek god of medicine
+HYGIEIA | Greek goddess of health
+PRIAPUS | Rustic Greek fertility god
+ASTRAEA | Star maiden of justice
+ASTERIA | Titaness of falling stars
+METIS | Titaness of wisdom, first wife of Zeus
+THEMIS | Titaness of law, holding scales
+MNEMOSYNE | Titaness of memory, mother of the Muses
+TETHYS | Titaness of fresh water
+LETO | Mother of Apollo and Artemis
+MAIA | Mother of Hermes
+SEMELE | Mortal mother of Dionysus
+ALCMENE | Mortal mother of Heracles
+HERACLES | Greek name of the hero of twelve labours
+NEMEAN | ___ lion, slain by Heracles
+STYMPHALIAN | ___ birds, slain by Heracles
+AUGEAN | ___ stables, cleaned in a day
+GERYON | Three-bodied giant robbed of his cattle
+HIPPOLYTA | Amazon queen whose girdle Heracles took
+AMAZON | Warrior woman of Greek myth
+CHIRON | Wise centaur who taught heroes
+LAPITH | Tribe that fought the centaurs
+TYPHON | Monster father of monsters
+LADON | Dragon guarding the golden apples
+HESPERIDES | Nymphs of the golden apples
+ORTHRUS | Two-headed dog of Geryon
+EMPUSA | Shape-shifting demon of Greek lore
+LAMIA | Child-eating monster of Greek lore
+GRAEAE | Three sisters sharing one eye
+STHENO | Gorgon sister of Medusa
+EURYALE | Gorgon sister of Medusa
+GIGANTES | Giants who battled the Olympians
+HECATONCHEIRES | Hundred-handed giants
+ARGUS | Hundred-eyed giant
+TALOS | Bronze giant guarding Crete
+PHAETHON | Son of Helios who crashed the sun chariot
+TIRESIAS | Blind prophet of Thebes
+LAOCOON | Trojan priest killed by sea serpents
+DIDO | Queen of Carthage abandoned by Aeneas
+LAVINIA | Italian princess who married Aeneas
+PSYCHE | Mortal who married Eros
+ALCESTIS | Wife who died in her husband's place
+BAUCIS | Old wife who welcomed disguised gods with Philemon
+PHILEMON | Old husband who welcomed disguised gods
+HYACINTH | Youth loved by Apollo, turned into a flower
+DAPHNE | Nymph turned into a laurel tree
+SYRINX | Nymph turned into reeds
+ACTAEON | Hunter turned into a stag by Artemis
+NIOBE | Mother who boasted and wept to stone
+ARETHUSA | Nymph turned into a spring
+GOLDENAPPLE | Prize marked "for the fairest" (6,5)
+SPARTOI | Warriors who sprang from dragon's teeth
+CADMUS | Founder of Thebes
+MINOS | King of Crete
+PASIPHAE | Queen of Crete, mother of the Minotaur
+PHAEDRA | Wife of Theseus
+HIPPOLYTUS | Son of Theseus cursed by Poseidon
+KNOSSOS | Palace of King Minos
+NJORD | Norse god of the sea and wind
+SKADI | Norse goddess of winter and skiing
+ULLR | Norse god of archery and skiing
+FORSETI | Norse god of justice
+VIDAR | Silent Norse god of vengeance
+HODUR | Blind Norse god tricked into killing Baldur
+GERD | Giantess wife of Freyr
+SIGURD | Dragon-slayer of Norse legend
+FAFNIR | Dragon slain by Sigurd
+BRUNHILD | Valkyrie of the Volsunga saga
+ANDVARI | Dwarf whose cursed ring caused ruin
+DRAUGR | Undead Norse revenant
+NIFLHEIM | Norse realm of ice and mist
+MUSPELHEIM | Norse realm of fire
+ALFHEIM | Norse realm of the light elves
+VANAHEIM | Norse realm of the Vanir
+VANIR | Norse family of fertility gods
+AESIR | Main family of Norse gods
+BUNYIP | Swamp monster of Aboriginal Australian folklore
+TANIWHA | Maori water guardian
+MENEHUNE | Little people of Hawaiian legend
+RAKSHASA | Shape-shifting demon of Hindu myth
+ASURA | Power-seeking demigod of Hindu myth
+DEVA | Benevolent deity in Hindu belief
+APSARA | Celestial dancer of Hindu and Buddhist myth
+GANDHARVA | Celestial musician of Hindu myth
+SOMA | Sacred ritual drink of the Vedas
+AIRAVATA | White elephant ridden by Indra
+NANDI | Bull mount of Shiva
+VAHANA | Animal mount of a Hindu deity
+SURYA | Hindu sun god
+YAMA | Hindu god of death
+VARUNA | Vedic god of the cosmic waters
+KAMA | Hindu god of desire
+SHESHA | Serpent on which Vishnu rests
+LILITH | Night demon of Jewish folklore
+DYBBUK | Possessing spirit of Jewish folklore
+SAMSON | Biblical strongman shorn by Delilah
+BABEL | Tower that confused the languages
+EDEN | Garden of the first humans
+SERAPH | Six-winged angel
+CHERUB | Winged angelic being
+GARGOYLE | Grotesque stone spout on a cathedral
+BOGEYMAN | Imaginary monster used to scare children
+HOBGOBLIN | Mischievous household goblin
+CHANGELING | Fairy child swapped for a human baby
+BROWNIE | Helpful household spirit of Scottish folklore
+REDCAP | Murderous goblin of Border folklore
