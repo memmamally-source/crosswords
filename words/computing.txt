@@ -39,3 +39,458 @@ HACKER | Skilled programmer, or one who breaks into systems
 INTERNET | Global network of networks
 PASSWORD | Secret string that guards an account
 ALGORITHMIC | Following a step-by-step procedure
+COMPUTER | Programmable electronic machine
+PROGRAM | Set of instructions for a computer
+PROGRAMMER | Writer of code
+CODE | Instructions written in a programming language
+CODER | Programmer, informally
+SOFTWARE | Programs and data
+HARDWARE | Physical parts of a computer
+FIRMWARE | Software embedded in hardware
+WINDOWS | Microsoft's operating system
+MACOS | Apple's desktop operating system
+ANDROID | Google's mobile operating system
+SHELL | Command-line interface
+TERMINAL | Text window for commands
+COMMANDLINE | Text-based interface (7,4)
+DESKTOP | Main screen of a computer
+ICON | Small clickable image
+CURSOR | On-screen pointer
+MOUSE | Pointing device
+KEYBOARD | Device for typing
+MONITOR | Display screen
+TOUCHSCREEN | Screen that responds to touch
+CORE | Independent processing unit
+CLOCK | ___ speed, of a processor
+REGISTER | Fast storage inside a CPU
+MEMORY | Storage for data in use
+MOTHERBOARD | Main circuit board
+CHIP | Integrated circuit
+STORAGE | Long-term data keeping
+PORT | Connection point
+CABLE | Wire connection
+PERIPHERAL | External device such as a printer
+PRINTER | Device that puts output on paper
+SCANNER | Device that digitises documents
+WEBCAM | Camera for video calls
+LAPTOP | Portable computer
+TABLET | Flat touchscreen computer
+SMARTPHONE | Mobile phone with computing power
+MAINFRAME | Large central computer
+SUPERCOMPUTER | Extremely powerful computer
+DATACENTRE | Facility housing servers (4,6)
+KILOBYTE | About a thousand bytes
+MEGABYTE | About a million bytes
+GIGABYTE | About a billion bytes
+TERABYTE | About a trillion bytes
+HEX | Base-16 notation
+ASCII | Early character encoding standard
+UNICODE | Universal character encoding
+PIXEL | Smallest picture element
+RESOLUTION | Number of pixels in an image
+BITMAP | Image stored as pixels
+JPEG | Common compressed image format
+MPEG | Video compression standard
+CODEC | Encoder and decoder of media
+COMPRESSION | Reducing data size
+ZIP | Compressed file format
+FILE | Named collection of data
+FOLDER | Container for files
+DIRECTORY | Folder in a file system
+PATH | Location of a file
+EXTENSION | File-type suffix like .txt
+BACKUP | Copy of data for safety
+DOWNLOAD | Copy from the internet
+UPLOAD | Send to the internet
+INSTALL | Set up software
+UPDATE | Newer version of software
+VERSION | Release of software
+BUG | Error in a program
+DEBUGGER | Tool for finding errors
+CRASH | Sudden failure of a program
+FREEZE | Program stops responding
+REBOOT | Restart a computer
+LANGUAGE | Programming notation
+JAVA | Language of "write once, run anywhere"
+RUBY | Language of the Rails framework
+PERL | Scripting language known for text processing
+SWIFT | Apple's programming language
+KOTLIN | Language for Android apps
+RUST | Memory-safe systems language
+SCALA | Language blending functional and object-oriented styles
+HASKELL | Purely functional language
+LISP | Old language of nested parentheses
+FORTRAN | Early language for scientific computing
+COBOL | Old language of business computing
+PASCAL | Teaching language named after a mathematician
+BASIC | Beginner's language of early home computers
+ASSEMBLY | Low-level language of mnemonics
+TYPESCRIPT | Typed superset of JavaScript
+JSON | Lightweight data format
+MARKDOWN | Simple text formatting syntax
+COMPILE | Translate code to machine language
+INTERPRETER | Program that runs code line by line
+RUNTIME | Period when a program is running
+LIBRARY | Collection of reusable code
+FRAMEWORK | Structure for building software
+EDITOR | Program for writing code
+REPOSITORY | Storage for code and its history
+GIT | Version control system
+GITHUB | Code hosting platform
+COMMIT | Saved change in version control
+BRANCH | Separate line of development
+MERGE | Combine branches
+FORK | Copy of a project to develop separately
+CLONE | Copy a repository
+CONSTANT | Value that cannot change
+INTEGER | Whole-number data type
+FLOAT | Decimal number data type
+STRING | Text data type
+ARRAY | Ordered collection of elements
+LIST | Ordered sequence
+DICTIONARY | Key-value data structure
+HASH | Fixed-size digest of data
+STACK | Last-in, first-out structure
+QUEUE | First-in, first-out structure
+TREE | Hierarchical data structure
+GRAPH | Network of nodes and edges
+NODE | Element of a linked structure
+POINTER | Variable storing a memory address
+HEAP | Tree-based priority structure
+LOOP | Repeated block of code
+WHILE | Loop keyword that repeats as long as a condition holds
+CONDITIONAL | If-then statement
+ELSE | Alternative branch in code
+FUNCTION | Reusable block of code
+METHOD | Function belonging to an object
+PARAMETER | Input to a function
+ARGUMENT | Value passed to a function
+RETURN | Send a value back from a function
+OBJECT | Instance of a class
+CLASS | Blueprint for objects
+INHERITANCE | Class acquiring another's properties
+POLYMORPHISM | One interface, many forms
+ENCAPSULATION | Hiding internal details
+ABSTRACTION | Simplifying by hiding complexity
+MODULE | Self-contained unit of code
+SCRIPT | Short program
+MACRO | Recorded sequence of commands
+SORTING | Arranging in order
+SEARCHING | Finding an item
+QUICKSORT | Fast divide-and-conquer sort
+MERGESORT | Sort by splitting and merging
+COMPLEXITY | Measure of resources an algorithm needs
+EFFICIENT | Using few resources
+OPTIMISE | Make faster or smaller
+ITERATE | Repeat a process
+RECURSIVE | Calling itself
+TABLE | Grid of rows and columns in a database
+QUERY | Request for data
+RECORD | Row in a database
+FIELD | Column in a database
+SCHEMA | Structure of a database
+ANALYTICS | Analysis of data
+SPREADSHEET | Grid program for calculations
+NETWORK | Connected computers
+WEB | System of linked pages
+WEBSITE | Collection of web pages
+WEBPAGE | Single document on the web
+DOMAIN | Name of a website
+PACKET | Unit of data sent over a network
+ETHERNET | Wired networking standard
+BLUETOOTH | Short-range wireless technology
+MODEM | Device linking to an internet provider
+LATENCY | Delay in a network
+EMAIL | Electronic mail
+SPAM | Unwanted bulk email
+HYPERLINK | Clickable link
+BOOKMARK | Saved web address
+COOKIE | Small data file stored by a website
+STREAM | Continuous flow of data
+CYBERSECURITY | Protection of computer systems
+HACKING | Breaking into systems
+WORM | Self-replicating malware
+TROJAN | Malware disguised as legitimate software
+RANSOMWARE | Malware that demands payment
+SPYWARE | Malware that secretly monitors
+ADWARE | Software that shows unwanted ads
+BOTNET | Network of hijacked computers
+EXPLOIT | Attack using a vulnerability
+VULNERABILITY | Weakness in a system
+ANTIVIRUS | Software that detects malware
+AUTHENTICATION | Verifying identity
+PASSCODE | Numeric password
+BIOMETRIC | Based on fingerprints or faces
+ENCRYPT | Scramble data
+DECRYPT | Unscramble data
+CIPHER | Method of encryption
+KEY | Value used in encryption
+PROXY | Intermediary server
+MODEL | Trained AI system
+CHATBOT | Program that converses
+PROMPT | Input given to an AI model
+TOKEN | Unit of text for a language model
+ROBOT | Programmable machine
+AUTOMATON | Self-operating machine
+TURINGTEST | Test of machine intelligence (6,4)
+ENIAC | Early general-purpose electronic computer
+COLOSSUS | Wartime codebreaking computer
+MOORE | ___'s law of doubling transistors
+HOPPER | Grace ___, pioneer of compilers
+KNUTH | Donald ___, author of The Art of Computer Programming
+DIJKSTRA | Computer scientist of shortest paths
+CERF | Vint ___, father of the internet
+TORVALDS | Creator of Linux
+WOZNIAK | Apple co-founder who built the first Apple computer
+JOBS | Apple co-founder and CEO
+GATES | Microsoft co-founder
+ALLEN | Paul ___, Microsoft co-founder
+PAGE | Larry ___, Google co-founder
+BRIN | Sergey ___, Google co-founder
+ZUCKERBERG | Facebook founder
+HAMILTON | Margaret ___, Apollo software engineer
+SHANNON | Claude ___, father of information theory
+MINSKY | Marvin ___, AI pioneer
+MCCARTHY | John ___, who coined "artificial intelligence"
+GOOGLE | Search giant
+MICROSOFT | Maker of Windows
+APPLE | Maker of the Mac
+INTEL | Chipmaker of the Pentium
+NVIDIA | Graphics chipmaker
+ORACLE | Database software company
+CISCO | Networking equipment company
+AGILE | Iterative software development approach
+SCRUM | Agile framework of sprints
+SPRINT | Short development cycle
+KANBAN | Board-based workflow method
+WATERFALL | Sequential development model
+DEVOPS | Merging development and operations
+DEPLOY | Release software to users
+DEPLOYMENT | Release of software
+TESTING | Checking software for errors
+REFACTOR | Restructure code without changing behaviour
+DOCUMENTATION | Written explanation of software
+COMMENT | Note in code ignored by the computer
+INDENT | Space at the start of a line
+SEMICOLON | Statement terminator in many languages
+OPERATOR | Symbol that performs an operation
+EXPRESSION | Code that produces a value
+STATEMENT | Single instruction
+EXCEPTION | Error raised during execution
+NULL | Absence of a value
+UNDEFINED | Variable without a value
+DEADLOCK | Processes waiting on each other forever
+THREAD | Sequence of execution
+CONCURRENCY | Doing several tasks at once
+PARALLEL | Running simultaneously
+CALLBACK | Function passed to be called later
+PROMISE | Object representing a future value
+EVENT | Action that triggers code
+LISTENER | Code that waits for an event
+FRONTEND | User-facing side of software (5,3)
+BACKEND | Server side of software (4,3)
+FULLSTACK | Both front end and back end (4,5)
+RESPONSIVE | Adapting to screen size
+CHROME | Google's web browser
+FIREFOX | Mozilla's web browser
+SAFARI | Apple's web browser
+EDGE | Microsoft's web browser
+TAB | Separate page in a browser
+HOMEPAGE | Main page of a website
+FORM | Set of input fields on a page
+BUTTON | Clickable control
+DROPDOWN | Menu that expands when clicked
+CHECKBOX | Tickable square in a form
+SLIDER | Control moved along a track
+TOOLTIP | Popup hint on hover
+POPUP | Window that appears suddenly
+MODAL | Dialog that blocks the page
+LAYOUT | Arrangement of elements
+WIREFRAME | Basic layout sketch
+PROTOTYPE | Early working model
+USABILITY | Ease of use
+ACCESSIBILITY | Usability for people with disabilities
+LOCALISATION | Adapting for other languages
+LICENCE | Terms of software use
+FREEWARE | Free software
+SHAREWARE | Try-before-you-buy software
+SUBSCRIPTION | Recurring payment for software
+APP | Program on a phone or tablet
+PLUGIN | Add-on extending a program
+WIDGET | Small interactive component
+EMULATOR | Software imitating another system
+CONTAINER | Packaged environment such as Docker
+DOCKER | Container platform
+KUBERNETES | Container orchestration system
+AZURE | Microsoft's cloud platform
+SERVERLESS | Cloud model without managing servers
+SCALABILITY | Ability to handle growth
+UPTIME | Time a system is running
+DOWNTIME | Time a system is unavailable
+OUTAGE | Service failure
+REDUNDANCY | Duplication for reliability
+FAILOVER | Switching to a backup system
+LOG | Record of events
+MONITORING | Watching system health
+DASHBOARD | Display of key information
+METRIC | Measured value
+ALERT | Notification of a problem
+HELPDESK | Technical support service
+SYSADMIN | System administrator
+ENGINEER | Builder of systems
+DEVELOPER | Software maker
+TESTER | Person who checks software
+ARCHITECTURE | Overall structure of a system
+MICROSERVICE | Small independent service
+MONOLITH | Single large application
+ENDPOINT | URL that an API exposes
+REQUEST | Message asking for data
+PAYLOAD | Data carried in a message
+WEBHOOK | Automatic HTTP callback
+WEBSOCKET | Two-way connection protocol
+ROUTING | Directing requests or packets
+GATEWAY | Node connecting networks
+SWITCH | Device connecting devices in a network
+HUB | Simple network connector
+SUBNET | Subdivision of a network
+INTRANET | Private internal network
+EXTRANET | Network shared with partners
+TOPOLOGY | Arrangement of a network
+TORRENT | File shared peer to peer
+STREAMING | Playing media as it downloads
+BUFFERING | Loading ahead to avoid interruptions
+PING | Network echo test
+TRACEROUTE | Tool tracing a packet's path
+HACKATHON | Event of intensive coding
+DEEPMIND | AI lab behind AlphaGo
+ALPHAGO | AI that beat a Go champion
+DEEPBLUE | Chess computer that beat Kasparov (4,4)
+SIRI | Apple's voice assistant
+ALEXA | Amazon's voice assistant
+CORTANA | Microsoft's voice assistant
+ELIZA | Early chatbot therapist
+TRANSFORMER | Neural network architecture behind modern AI
+BIAS | Unfair skew in data or models
+OVERFITTING | Learning noise instead of patterns
+DATASET | Collection of data
+LABEL | Tag for training data
+CLASSIFIER | Model that sorts into categories
+REGRESSION | Predicting a number
+CLUSTERING | Grouping similar data
+REINFORCEMENT | Learning by rewards
+GENERATIVE | Creating new content, of AI
+DEEPFAKE | AI-faked video
+HALLUCINATION | Confident false output from an AI
+WEARABLE | Device worn on the body
+SMARTWATCH | Computer on the wrist
+DRONE | Unmanned aircraft
+METAVERSE | Shared virtual world
+BLOCKCHAIN | Distributed ledger
+CRYPTO | Digital currency, for short
+DIGITAL | Using binary data
+ANALOG | Continuous, not digital
+ONLINE | Connected to the internet
+OFFLINE | Not connected
+LOGIN | Sign in to a system (3,2)
+LOGOUT | Sign out of a system
+ACCOUNT | User profile on a system
+PROFILE | User's personal page
+AVATAR | Picture representing a user
+HANDLE | Online username
+CAPTCHA | Test to tell humans from bots
+BOT | Automated program
+SCRAPER | Program extracting web data
+CRAWLER | Program that indexes the web
+INDEXING | Organising data for search
+RANKING | Order of search results
+CLICK | Press a mouse button
+SCROLLING | Moving through content
+SWIPE | Slide a finger across a screen
+TAP | Touch a screen briefly
+DRAG | Move an item with the mouse
+DROP | Release a dragged item
+COPY | Duplicate content
+PASTE | Insert copied content
+UNDO | Reverse the last action
+REDO | Repeat an undone action
+SHORTCUT | Quick key combination
+HOTKEY | Keyboard shortcut
+ESCAPE | Key to cancel
+ENTER | Key to confirm
+SPACEBAR | Long key at the bottom of a keyboard
+QWERTY | Standard keyboard layout
+TOUCHPAD | Laptop pointing surface
+STYLUS | Pen for a touchscreen
+MICROPHONE | Device for capturing sound
+FLOPPY | ___ disk, early removable storage
+DISKETTE | Small floppy disk
+BLURAY | High-capacity optical disc (3-3)
+HARDDISK | Magnetic storage drive (4,4)
+SECTOR | Subdivision of a disk track
+PARTITION | Division of a storage drive
+FORMAT | Prepare a disk for use
+DEFRAGMENT | Reorganise files on a disk
+PAGING | Swapping memory to disk
+BOOT | Start a computer
+BOOTLOADER | Program that loads the operating system
+DRIVER | Software controlling hardware
+INTERRUPT | Signal demanding processor attention
+PROCESS | Running instance of a program
+SCHEDULER | Part of an OS that allocates CPU time
+MULTITHREADING | Running several threads at once
+PERMISSIONS | Rights to access files
+ROOT | Superuser account in Unix
+ADMIN | Account with full control of a system
+USERNAME | Name used to log in
+PASSPHRASE | Long password of words
+CAPSLOCK | Key for capital letters (4,4)
+BACKSPACE | Key that deletes leftwards
+DELETE | Remove
+NUMPAD | Number keys on a keyboard
+SCREENSAVER | Animation shown when idle
+WALLPAPER | Desktop background image
+SCREENSHOT | Image of the screen
+TRASH | Bin for deleted files
+MULTIMEDIA | Combined text, sound and video
+ANIMATION | Moving images
+RENDERING | Generating an image from a model
+FRAMERATE | Frames per second
+OVERCLOCKING | Running a processor faster than rated
+HEATSINK | Metal part that cools a chip
+FAN | Device that cools a computer
+CASE | Housing of a computer
+SURGE | Sudden spike in voltage
+GLITCH | Brief malfunction
+LAGGY | Slow to respond
+SEGFAULT | Crash from accessing invalid memory
+OVERFLOW | Value too large to store
+UNDERFLOW | Value too small to represent
+ROUNDING | Approximation of a number
+ENDIAN | Byte order, big or little
+CHECKSUM | Value for detecting errors
+PARITY | Bit for error detection
+REDUNDANT | Duplicated for safety
+RAID | Array of disks for reliability
+MIRRORING | Copying data to two drives
+ARCHIVE | Long-term store of old data
+MIGRATION | Moving data between systems
+WORDPROCESSOR | Program for writing documents
+PRESENTATION | Slideshow program output
+SLIDESHOW | Sequence of slides
+TEMPLATE | Reusable layout
+FORMULA | Spreadsheet calculation
+PIVOT | ___ table, summarising spreadsheet data
+EXPORT | Save in another format
+IMPORT | Bring data in from elsewhere
+CONVERTER | Tool that changes formats
+EBOOK | Digital book
+INBOX | Folder of received email
+ATTACHMENT | File sent with an email
+PHISH | Fraudulent attempt to steal logins
+SPOOFING | Faking a sender's identity
+EAVESDROPPING | Secretly intercepting communication
+KEYLOGGER | Malware that records keystrokes
+ROOTKIT | Malware that hides deep in a system
+ZERODAY | Unpatched vulnerability (4-3)
+WHITEHAT | Ethical hacker (5,3)
+BLACKHAT | Malicious hacker (5,3)
