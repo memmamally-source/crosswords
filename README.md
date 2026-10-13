@@ -6,11 +6,20 @@ dependencies: open `index.html` or host the folder on any static host
 
 ## Features
 
-- **8 genres:** Animal Kingdom, Food & Drink, World Geography, Science Lab,
-  Sports Arena, Music Hall, Outer Space, Myths & Legends. Each has 30 words
-  and clues.
+- **23 genres in four groups:**
+  - *Mixed puzzles:* Mixed Bag (every genre), Pop & Fun Mix, Academic Mix.
+  - *Everyday themes:* Animal Kingdom, Food & Drink, World Geography, Science
+    Lab, Sports Arena, Music Hall, Outer Space, Myths & Legends.
+  - *Pop culture & fun:* Pop Culture, Movies & TV, Video Games, Holidays &
+    Festivals.
+  - *Academic:* Philosophy, Literature, Mathematics, Advanced Vocabulary, World
+    History, Economics, Human Anatomy, Art & Architecture.
 - **Fresh puzzles every time.** A built-in generator lays out a new, valid
   crossword from the genre's word bank on each play.
+- **Fewer repeats.** The game remembers the words you've seen in each genre
+  and picks new puzzles that use mostly unseen ones.
+- **Skip filled squares.** After you type a letter, the cursor jumps past
+  squares that are already filled. Turn this off with the "Skip filled" toggle.
 - **3 difficulty levels:** Easy (8 words), Medium (12), Hard (16).
 - **Daily Challenge.** Everyone gets the same puzzle each day, and the theme
   rotates daily.
@@ -41,16 +50,20 @@ Edit `js/genres.js`. Add an entry like this to the `GENRES` array:
 
 ```js
 {
-  id: 'movies',
-  name: 'At the Movies',
-  icon: '🎬',
-  blurb: 'Films, stars and cinema lingo.',
+  id: 'cars',
+  category: 'fun', // one of: classic, fun, academic
+  name: 'Cars & Racing',
+  icon: '🏎️',
+  blurb: 'Motors, makers and motorsport.',
   words: [
-    ['DIRECTOR', 'Person who calls "Action!"'],
-    // ...aim for 25+ words, 3–10 letters, letters only
+    ['PITSTOP', 'Quick halt for fresh tyres during a race'],
+    // ...aim for 30+ words, mostly 4–10 letters, letters only
   ],
 },
 ```
+
+The mixed genres pick up new words automatically. The test also fails if a
+clue gives away another answer in the same genre.
 
 Then run the generator test to make sure every difficulty can still be built:
 

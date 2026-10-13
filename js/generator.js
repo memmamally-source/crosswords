@@ -135,8 +135,10 @@
   function buildAttempt(bank, count, maxSize, rng) {
     // Favour longer words first (they give later words more to hook onto),
     // with some randomness so each puzzle feels different.
+    // Large banks (the mixed genres) are sampled so each attempt stays fast.
     const pool = shuffle(bank, rng)
-      .map((e) => ({ e, w: e.answer.length + rng() * 4 }))
+      .slice(0, Math.max(count * 4, 48))
+      .map((e) => ({ e, w: Math.min(e.answer.length, 8) + rng() * 4 }))
       .sort((a, b) => b.w - a.w)
       .map((x) => x.e);
 
@@ -233,7 +235,11 @@
     const seed = opts.seed != null ? opts.seed : Math.floor(Math.random() * 2 ** 31);
     const rng = mulberry32(seed);
     const clean = bank
-      .map((e) => ({ answer: e.answer.toUpperCase().replace(/[^A-Z]/g, ''), clue: e.clue }))
+      .map((e) => ({
+        answer: e.answer.toUpperCase().replace(/[^A-Z]/g, ''),
+        // An entry may carry several clues; the seed picks one.
+        clue: Array.isArray(e.clue) ? e.clue[Math.floor(rng() * e.clue.length)] : e.clue,
+      }))
       .filter((e) => e.answer.length >= 3);
 
     let best = null;
@@ -247,6 +253,13 @@
         best = board;
       }
       if (board.placed.length >= opts.count && i >= opts.attempts / 3) break;
+    }
+    // Banks of long words sometimes can't all fit; allow a slightly larger grid.
+    if (best.placed.length < opts.count && !opts.grown) {
+      for (const extra of [2, 4]) {
+        const bigger = generate(bank, Object.assign({}, opts, { seed, maxSize: opts.maxSize + extra, grown: true }));
+        if (bigger.words.length >= opts.count) return bigger;
+      }
     }
     const puzzle = finalize(best);
     puzzle.seed = seed;

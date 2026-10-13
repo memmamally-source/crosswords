@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, GENRES, DIFFICULTIES */
+/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES */
 (function () {
   'use strict';
 
@@ -14,7 +14,7 @@
       return {};
     }
   }
-  const store = Object.assign({ difficulty: 'medium', best: {}, solved: 0, daily: {}, saved: null }, loadStore());
+  const store = Object.assign({ difficulty: 'medium', best: {}, solved: 0, daily: {}, saved: null, skipFilled: true }, loadStore());
   function saveStore() {
     try {
       localStorage.setItem(STORE_KEY, JSON.stringify(store));
@@ -47,24 +47,33 @@
   function renderHome() {
     $$('.difficulty button').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.difficulty === store.difficulty)));
 
-    const grid = $('#genre-grid');
-    grid.innerHTML = '';
-    for (const g of GENRES) {
-      const best = store.best[`${g.id}:${store.difficulty}`];
-      const card = document.createElement('button');
-      card.className = 'genre-card';
-      card.innerHTML = `
-        <span class="icon" aria-hidden="true">${g.icon}</span>
-        <h3></h3>
-        <p></p>
-        <span class="meta">
-          <span>${g.words.length} words in bank</span>
-          ${best ? `<span class="best">Best ${formatTime(best)}</span>` : ''}
-        </span>`;
-      $('h3', card).textContent = g.name;
-      $('p', card).textContent = g.blurb;
-      card.addEventListener('click', () => play(g.id, store.difficulty));
-      grid.appendChild(card);
+    const sections = $('#genre-sections');
+    sections.innerHTML = '';
+    for (const cat of CATEGORIES) {
+      const section = document.createElement('section');
+      section.className = 'genre-section';
+      section.innerHTML = '<div class="section-head"><h2 class="section-title"></h2><p class="muted"></p></div><div class="genre-grid"></div>';
+      $('h2', section).textContent = cat.name;
+      $('p', section).textContent = cat.blurb;
+      const grid = $('.genre-grid', section);
+      for (const g of GENRES.filter((x) => x.category === cat.id)) {
+        const best = store.best[`${g.id}:${store.difficulty}`];
+        const card = document.createElement('button');
+        card.className = 'genre-card';
+        card.innerHTML = `
+          <span class="icon" aria-hidden="true">${g.icon}</span>
+          <h3></h3>
+          <p></p>
+          <span class="meta">
+            <span>${g.words.length} words in bank</span>
+            ${best ? `<span class="best">Best ${formatTime(best)}</span>` : ''}
+          </span>`;
+        $('h3', card).textContent = g.name;
+        $('p', card).textContent = g.blurb;
+        card.addEventListener('click', () => play(g.id, store.difficulty));
+        grid.appendChild(card);
+      }
+      sections.appendChild(section);
     }
 
     const daily = dailyInfo();
@@ -89,16 +98,56 @@
   );
 
   function play(genreId, difficulty, seed) {
-    const s = seed != null ? seed : Math.floor(Math.random() * 1e9);
+    const s = seed != null ? seed : freshSeed(genreById(genreId), difficulty);
     navigate(`#/play/${genreId}/${difficulty}/${s}`);
+  }
+
+  // ---------- Word rotation ----------
+  // Remember which answers a player has seen per genre, and when starting a
+  // new puzzle try a few seeds to find the layout with the fewest repeats.
+  // The puzzle is still fully determined by its seed, so links stay shareable.
+  let pregenerated = null;
+
+  function generateFor(genre, difficulty, seed) {
+    const key = `${genre.id}/${difficulty}/${seed}`;
+    if (pregenerated && pregenerated.key === key) return pregenerated.puzzle;
+    const cfg = DIFFICULTIES[difficulty];
+    const puzzle = CrosswordGenerator.generate(genre.words, { count: cfg.count, maxSize: cfg.maxSize, seed });
+    pregenerated = { key, puzzle };
+    return puzzle;
+  }
+
+  function freshSeed(genre, difficulty) {
+    const recent = new Set((store.recent && store.recent[genre.id]) || []);
+    // Big mixed banks rarely repeat anyway, and each try costs more there.
+    const tries = !recent.size ? 1 : genre.words.length > 100 ? 2 : 10;
+    let best = null;
+    for (let i = 0; i < tries; i++) {
+      const seed = Math.floor(Math.random() * 1e9);
+      const puzzle = generateFor(genre, difficulty, seed);
+      const repeats = puzzle.words.filter((w) => recent.has(w.answer)).length;
+      if (!best || repeats < best.repeats) best = { seed, repeats, puzzle };
+      if (repeats === 0) break;
+    }
+    pregenerated = { key: `${genre.id}/${difficulty}/${best.seed}`, puzzle: best.puzzle };
+    return best.seed;
+  }
+
+  function rememberWords(genre, difficulty, puzzle) {
+    store.recent = store.recent || {};
+    const keep = Math.min(300, Math.max(0, genre.words.length - DIFFICULTIES[difficulty].count));
+    const answers = puzzle.words.map((w) => w.answer);
+    const older = (store.recent[genre.id] || []).filter((a) => !answers.includes(a));
+    store.recent[genre.id] = answers.concat(older).slice(0, keep);
+    saveStore();
   }
 
   // ---------- Game state ----------
   let game = null;
 
   function newGame({ genre, difficulty, seed, daily }) {
-    const cfg = DIFFICULTIES[difficulty];
-    const puzzle = CrosswordGenerator.generate(genre.words, { count: cfg.count, maxSize: cfg.maxSize, seed });
+    const puzzle = generateFor(genre, difficulty, seed);
+    if (!daily) rememberWords(genre, difficulty, puzzle);
     const blank = () => Array.from({ length: puzzle.rows }, () => Array(puzzle.cols).fill(''));
     const flags = () => Array.from({ length: puzzle.rows }, () => Array(puzzle.cols).fill(false));
 
@@ -200,6 +249,7 @@
     $('#game-name').textContent = daily ? 'Daily Challenge' : genre.name;
     $('#game-sub').textContent = `${daily ? genre.name + ' · ' : ''}${DIFFICULTIES[difficulty].label} · ${puzzle.words.length} clues`;
     $('#autocheck').checked = !!store.autocheck;
+    $('#skipfilled').checked = !!store.skipFilled;
 
     const board = $('#board');
     board.classList.remove('solved');
@@ -372,9 +422,20 @@
 
     const word = game.puzzle.words[currentWordIndex()];
     const pos = word.cells.findIndex(([r, c]) => r === sel.r && c === sel.c);
-    if (pos < word.cells.length - 1) {
+    const isEmpty = ([r, c]) => !entries[r][c];
+    if (store.skipFilled) {
+      // Hop over squares that are already filled (e.g. by crossing words).
+      const next = word.cells.slice(pos + 1).find(isEmpty) || word.cells.slice(0, pos).find(isEmpty);
+      if (next) {
+        [sel.r, sel.c] = next;
+      } else if (game.puzzle.words.some((w) => w.cells.some(isEmpty))) {
+        jumpWord(1, true);
+      } else if (pos < word.cells.length - 1) {
+        [sel.r, sel.c] = word.cells[pos + 1];
+      }
+    } else if (pos < word.cells.length - 1) {
       [sel.r, sel.c] = word.cells[pos + 1];
-    } else if (word.cells.every(([r, c]) => entries[r][c])) {
+    } else if (!word.cells.some(isEmpty)) {
       jumpWord(1, true);
     }
     afterChange();
@@ -623,6 +684,11 @@
         play(game.genre.id, game.difficulty);
         break;
     }
+  });
+
+  $('#skipfilled').addEventListener('change', (e) => {
+    store.skipFilled = e.target.checked;
+    saveStore();
   });
 
   $('#autocheck').addEventListener('change', (e) => {

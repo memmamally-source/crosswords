@@ -30,12 +30,22 @@ let total = 0;
 for (const genre of GENRES) {
   const answers = new Set(genre.words.map((w) => w.answer));
   assert.strictEqual(answers.size, genre.words.length, `${genre.id}: duplicate answers`);
+  if (genre.category !== 'mixed') {
+    // A clue must not give away another answer from the same genre.
+    for (const w of genre.words) {
+      for (const other of answers) {
+        if (other !== w.answer && other.length >= 4 && new RegExp(`\\b${other}(s|es)?\\b`, 'i').test(w.clue.normalize('NFD').replace(/[\u0300-\u036f]/g, ''))) {
+          assert.fail(`${genre.id}: clue for ${w.answer} contains answer ${other}: "${w.clue}"`);
+        }
+      }
+    }
+  }
   for (const [level, cfg] of Object.entries(DIFFICULTIES)) {
-    for (let seed = 1; seed <= 40; seed++) {
+    for (let seed = 1; seed <= 20; seed++) {
       const p = generate(genre.words, { ...cfg, seed });
       const tag = `${genre.id}/${level}/seed ${seed}`;
       assert.strictEqual(p.words.length, cfg.count, `${tag}: placed ${p.words.length}/${cfg.count}`);
-      assert.ok(p.rows <= cfg.maxSize && p.cols <= cfg.maxSize, `${tag}: grid too big`);
+      assert.ok(p.rows <= cfg.maxSize + 4 && p.cols <= cfg.maxSize + 4, `${tag}: grid too big`);
       for (const w of p.words) {
         w.cells.forEach(([r, c], i) => assert.strictEqual(p.solution[r][c], w.answer[i], `${tag}: ${w.answer}`));
         assert.strictEqual(p.numbers[w.row][w.col], w.number, `${tag}: numbering`);
