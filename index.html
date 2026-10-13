@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crossword Hub</title>
+  <meta name="description" content="Play free themed crosswords online: animals, food, geography, science, sports, music, space and mythology." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231f2a44'/><rect x='5' y='5' width='10' height='10' fill='%23fff'/><rect x='17' y='5' width='10' height='10' fill='%23f2b544'/><rect x='5' y='17' width='10' height='10' fill='%23f2b544'/><rect x='17' y='17' width='10' height='10' fill='%23fff'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" data-action="home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      Crossword Hub
+    </a>
+    <div class="header-stats" id="header-stats"></div>
+  </header>
+
+  <!-- Home: pick a genre -->
+  <main id="home-view" class="view">
+    <section class="hero">
+      <h1>Pick a theme. Fill the grid.</h1>
+      <p>Every puzzle is freshly built from the genre's word bank, so you can play each theme again and again.</p>
+      <div class="difficulty" role="radiogroup" aria-label="Difficulty">
+        <button role="radio" data-difficulty="easy">Easy <small>8 words</small></button>
+        <button role="radio" data-difficulty="medium">Medium <small>12 words</small></button>
+        <button role="radio" data-difficulty="hard">Hard <small>16 words</small></button>
+      </div>
+    </section>
+
+    <section class="daily" id="daily-card"></section>
+
+    <section>
+      <h2 class="section-title">Genres</h2>
+      <div class="genre-grid" id="genre-grid"></div>
+    </section>
+  </main>
+
+  <!-- Game -->
+  <main id="game-view" class="view" hidden>
+    <div class="game-bar">
+      <button class="btn ghost" data-action="home" aria-label="Back to genres">← Genres</button>
+      <div class="game-title">
+        <span id="game-icon"></span>
+        <div>
+          <h1 id="game-name"></h1>
+          <span id="game-sub" class="muted"></span>
+        </div>
+      </div>
+      <div class="timer" id="timer" aria-live="off">0:00</div>
+    </div>
+
+    <div class="toolbar">
+      <div class="menu">
+        <button class="btn" data-menu="check">Check ▾</button>
+        <div class="menu-list" data-menu-list="check" hidden>
+          <button data-action="check-cell">Letter</button>
+          <button data-action="check-word">Word</button>
+          <button data-action="check-all">Puzzle</button>
+        </div>
+      </div>
+      <div class="menu">
+        <button class="btn" data-menu="reveal">Reveal ▾</button>
+        <div class="menu-list" data-menu-list="reveal" hidden>
+          <button data-action="reveal-cell">Letter</button>
+          <button data-action="reveal-word">Word</button>
+          <button data-action="reveal-all">Puzzle</button>
+        </div>
+      </div>
+      <button class="btn" data-action="clear">Clear</button>
+      <label class="toggle"><input type="checkbox" id="autocheck" /> Auto-check</label>
+      <button class="btn primary" data-action="new">New puzzle</button>
+    </div>
+
+    <div class="game-layout">
+      <div class="board-col">
+        <div class="clue-bar" id="clue-bar">
+          <button class="clue-nav" data-action="prev-word" aria-label="Previous clue">‹</button>
+          <div><strong id="clue-bar-num"></strong> <span id="clue-bar-text"></span></div>
+          <button class="clue-nav" data-action="next-word" aria-label="Next clue">›</button>
+        </div>
+        <div class="board-wrap" id="board-wrap">
+          <div class="board" id="board" role="grid" aria-label="Crossword grid"></div>
+        </div>
+        <div class="progress"><div class="progress-fill" id="progress-fill"></div></div>
+        <div class="keyboard" id="keyboard" aria-label="On-screen keyboard"></div>
+      </div>
+      <aside class="clues">
+        <section>
+          <h2>Across</h2>
+          <ol id="clues-across"></ol>
+        </section>
+        <section>
+          <h2>Down</h2>
+          <ol id="clues-down"></ol>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <dialog id="win-dialog">
+    <div class="win">
+      <div class="win-icon" id="win-icon">🎉</div>
+      <h2 id="win-title">Solved!</h2>
+      <p id="win-text"></p>
+      <div class="win-actions">
+        <button class="btn primary" data-action="new">Play another</button>
+        <button class="btn" data-action="home">Choose genre</button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    Keyboard: type to fill · arrows to move · Space to switch direction · Tab for next clue
+  </footer>
+
+  <script src="js/generator.js"></script>
+  <script src="js/genres.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
