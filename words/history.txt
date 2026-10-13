@@ -44,3 +44,462 @@ APARTHEID | South Africa's system of racial segregation
 ZIGGURAT | Stepped temple tower of ancient Iraq
 PERICLES | Athenian statesman of the golden age
 MAYA | Civilisation of Tikal and Chichén Itzá
+SUMER | Early civilisation of southern Mesopotamia
+BABYLON | Ancient city of Hammurabi and hanging gardens
+HAMMURABI | Babylonian king of an early law code
+ASSYRIA | Ancient empire of Nineveh
+NINEVEH | Capital of the Assyrian Empire
+PERSIA | Ancient empire of Cyrus and Darius
+CYRUS | Persian king called the Great
+DARIUS | Persian king defeated at Marathon
+XERXES | Persian king who invaded Greece in 480 BC
+THERMOPYLAE | Pass held by 300 Spartans
+LEONIDAS | Spartan king at Thermopylae
+SALAMIS | Naval battle that saved Greece in 480 BC
+PELOPONNESIAN | War between Athens and Sparta
+ALEXANDRIA | City founded by Alexander in Egypt
+MACEDON | Kingdom of Philip and Alexander
+PHILIP | Father of Alexander the Great
+HELLENISTIC | Era after Alexander's conquests
+PTOLEMAIC | Greek dynasty of Egypt
+TUTANKHAMUN | Boy king whose tomb was found in 1922
+RAMESSES | Great pharaoh of the New Kingdom
+AKHENATEN | Pharaoh who worshipped one sun god
+NEFERTITI | Queen famous for her painted bust
+HATSHEPSUT | Female pharaoh of the eighteenth dynasty
+KHUFU | Pharaoh of the Great Pyramid
+GIZA | Plateau of the Great Pyramid
+SPHINX | Great statue at Giza
+HIEROGLYPHS | Egyptian writing
+PAPYRUS | Ancient Egyptian writing material
+CARTER | Howard ___, who opened Tutankhamun's tomb
+CARTHAGE | Rome's great rival in the Punic Wars
+PUNIC | ___ Wars between Rome and Carthage
+HANNIBAL | General who crossed the Alps with elephants
+SCIPIO | Roman general who defeated Hannibal at Zama
+REPUBLIC | Rome before the emperors
+SENATE | Governing council of Rome
+CONSUL | Chief magistrate of the Roman Republic
+TRIBUNE | Roman official protecting the plebeians
+PLEBEIAN | Common citizen of Rome
+PATRICIAN | Aristocrat of Rome
+AUGUSTUS | First Roman emperor
+NERO | Roman emperor during the great fire of AD 64
+CALIGULA | Roman emperor said to have made his horse a consul
+HADRIAN | Emperor of a wall across northern England
+TRAJAN | Emperor under whom Rome reached its greatest extent
+CONSTANTINE | First Christian Roman emperor
+CONSTANTINOPLE | City that fell to the Ottomans in 1453
+JUSTINIAN | Byzantine emperor who codified Roman law
+VISIGOTHS | Germanic people who sacked Rome in 410
+VANDALS | Germanic people who sacked Rome in 455
+HUNS | Nomadic people led by Attila
+FRANKS | Germanic people of Charlemagne
+ANGLOSAXON | People of early medieval England (5-5)
+ALFRED | King of Wessex called the Great
+CANUTE | Danish king of England who couldn't stop the tide
+HASTINGS | Battle of 1066
+CONQUEROR | William the ___
+DOMESDAY | ___ Book, survey of 1086
+BAYEUX | ___ Tapestry, depicting the Norman Conquest
+NORMANS | Conquerors of England in 1066
+PLANTAGENET | Royal house of Henry II
+BLACKDEATH | Plague of the 1340s (5,5)
+JOANOFARC | French heroine burned in 1431 (4,2,3)
+AGINCOURT | English victory of 1415
+TUDOR | Royal house of Henry VIII
+HENRY | Name of eight English kings
+ELIZABETH | Virgin Queen of the Armada era
+ARMADA | Spanish fleet defeated in 1588
+BOLEYN | Anne ___, beheaded queen
+STUART | Royal house of James I
+GUNPOWDER | ___ Plot of 1605
+CROMWELL | Oliver ___, Lord Protector
+ROUNDHEAD | Parliamentarian in the English Civil War
+CAVALIER | Royalist in the English Civil War
+RESTORATION | Return of the monarchy in 1660
+GLORIOUS | ___ Revolution of 1688
+VICTORIA | British queen who reigned for 63 years
+VICTORIAN | Era of 1837 to 1901
+EMPRESS | Female ruler of an empire
+EASTINDIA | ___ Company, British trading giant
+COLONIALISM | Rule over overseas territories
+IMPERIALISM | Policy of extending power by conquest
+SCRAMBLE | ___ for Africa
+DECOLONISATION | Withdrawal from colonies
+COLUMBUS | Explorer who reached the Americas in 1492
+DAGAMA | Vasco ___, who reached India by sea (2,4)
+CORTES | Conquistador who toppled the Aztecs
+PIZARRO | Conquistador who conquered the Incas
+CONQUISTADOR | Spanish conqueror of the Americas
+MONTEZUMA | Aztec emperor at the Spanish conquest
+ATAHUALPA | Last Inca emperor
+TENOCHTITLAN | Aztec capital on a lake
+MACHUPICCHU | Inca citadel in the Andes (5,6)
+CHICHENITZA | Maya city of El Castillo (6,4)
+OLMEC | Early Mesoamerican civilisation of colossal heads
+VESPUCCI | Amerigo ___, who gave America its name
+MAGELLAN | Explorer whose expedition first circled the globe
+COOK | Captain ___, who charted the Pacific
+DRAKE | Francis ___, Elizabethan circumnavigator
+RALEIGH | Walter ___, Elizabethan explorer
+CABOT | John ___, explorer of Newfoundland
+HUDSON | Henry ___, explorer of a bay and a river
+POLO | Marco ___, Venetian traveller to China
+BATTUTA | Ibn ___, Moroccan traveller
+ZHENGHE | Admiral of Ming treasure fleets (5,2)
+SHACKLETON | Antarctic explorer of the Endurance
+AMUNDSEN | First to reach the South Pole
+SCOTT | Antarctic explorer who died in 1912
+HILLARY | Edmund ___, first up Everest with Tenzing
+TENZING | Sherpa who reached the top of Everest in 1953
+MEDICI | Florentine banking dynasty
+BORGIA | Notorious Renaissance papal family
+GUTENBERG | Inventor of movable-type printing in Europe
+LUTHER | Martin ___, who posted 95 theses
+CALVIN | John ___, Protestant reformer of Geneva
+INQUISITION | Church tribunal against heresy
+ENLIGHTENMENT | Age of Reason of the 18th century
+ROBESPIERRE | Leader of the Reign of Terror
+DANTON | French revolutionary guillotined in 1794
+LOUIS | Name of many French kings
+VERSAILLES | Palace of Louis XIV
+SUNKING | Louis XIV's nickname (3,4)
+WATERLOO | Napoleon's final defeat
+WELLINGTON | Duke who defeated Napoleon
+NELSON | Admiral killed at Trafalgar
+TRAFALGAR | Naval battle of 1805
+ELBA | Island of Napoleon's first exile
+HELENA | St ___, island of Napoleon's last exile
+BONAPARTE | Napoleon's surname
+LUDDITE | Machine-breaking textile worker
+WATT | James ___, improver of the steam engine
+STEPHENSON | George ___, father of railways
+BRUNEL | Isambard Kingdom ___, engineer
+JEFFERSON | Author of the Declaration of Independence
+REVOLUTIONARY | ___ War, American war of independence
+DECLARATION | ___ of Independence, 1776
+CONSTITUTION | US founding document of 1787
+CIVILWAR | War between the Union and the Confederacy (5,3)
+CONFEDERACY | Southern states of the American Civil War
+UNION | Northern side of the American Civil War
+GETTYSBURG | Battle of 1863
+APPOMATTOX | Site of Lee's surrender
+GRANT | Union general and US president
+ABOLITION | Ending of slavery
+EMANCIPATION | ___ Proclamation of 1863
+UNDERGROUND | ___ Railroad, escape network for enslaved people
+TUBMAN | Harriet ___, conductor on the Underground Railroad
+DOUGLASS | Frederick ___, abolitionist orator
+RECONSTRUCTION | Post-Civil War era in the US
+GOLDRUSH | Stampede to California in 1849 (4,4)
+FRONTIER | Edge of settlement in the American West
+ALAMO | Texas mission besieged in 1836
+TRENCH | Dugout of the Western Front
+SOMME | Battle of 1916
+VERDUN | Longest battle of the First World War
+GALLIPOLI | Ill-fated campaign of 1915
+PASSCHENDAELE | Muddy battle of 1917
+DEPRESSION | Economic slump of the 1930s
+DUSTBOWL | Drought of the 1930s Great Plains (4,4)
+NEWDEAL | Roosevelt's programme of recovery (3,4)
+ROOSEVELT | President who led the US through the Second World War
+TRUMAN | President who ordered the atomic bombings
+HITLER | Nazi dictator
+NAZI | National Socialist
+STALIN | Soviet dictator
+MUSSOLINI | Italian Fascist dictator
+FASCISM | Authoritarian nationalist ideology
+BLITZ | German bombing of Britain
+BLITZKRIEG | Lightning war
+NORMANDY | Beaches of the D-Day landings
+STALINGRAD | Turning-point battle of 1942–43
+MIDWAY | Pacific naval battle of 1942
+PEARL | ___ Harbor, attacked in 1941
+HOLOCAUST | Genocide of six million Jews
+AUSCHWITZ | Largest Nazi death camp
+DEGAULLE | Leader of the Free French
+EISENHOWER | Supreme Allied Commander in Europe
+MONTGOMERY | Victor of El Alamein
+ROMMEL | Desert Fox of the Afrika Korps
+ALAMEIN | Desert battle of 1942
+NUREMBERG | City of postwar trials
+IRONCURTAIN | Divide across postwar Europe (4,7)
+KENNEDY | President assassinated in 1963
+KHRUSHCHEV | Soviet leader during the Cuban Missile Crisis
+GORBACHEV | Soviet leader of glasnost
+GLASNOST | Soviet policy of openness
+PERESTROIKA | Soviet policy of restructuring
+REAGAN | President who said "Tear down this wall"
+THATCHER | Iron Lady of British politics
+HOCHIMINH | Vietnamese revolutionary leader (2,3,4)
+LONGMARCH | Communist retreat of 1934–35 (4,5)
+QING | Last imperial dynasty of China
+MING | Chinese dynasty of the Forbidden City
+TANG | Golden age dynasty of China
+TERRACOTTA | ___ Army, guardians of the first emperor
+GREATWALL | Barrier across northern China (5,4)
+BOXER | ___ Rebellion of 1900
+MEIJI | Japanese restoration of 1868
+SHOGUN | Military ruler of Japan
+TOKUGAWA | Shogunate that ruled Japan from 1603
+HIROHITO | Japanese emperor during the Second World War
+MUGHAL | Empire of Akbar and Shah Jahan
+AKBAR | Great Mughal emperor
+SHAHJAHAN | Builder of the Taj Mahal (4,5)
+TAJMAHAL | Mausoleum in Agra (3,5)
+ASHOKA | Mauryan emperor who embraced Buddhism
+MAURYA | Ancient Indian empire of Chandragupta
+NEHRU | First prime minister of India
+PARTITION | Division of British India in 1947
+JINNAH | Founder of Pakistan
+SULEIMAN | Ottoman sultan called the Magnificent
+ATATURK | Founder of modern Turkey
+SULTAN | Ruler of a Muslim state
+CALIPH | Successor of the Prophet as leader of Muslims
+CALIPHATE | State ruled by a caliph
+ABBASID | Caliphate of Baghdad's golden age
+UMAYYAD | Caliphate based in Damascus
+SALADIN | Sultan who retook Jerusalem in 1187
+RICHARD | ___ the Lionheart, crusader king
+TEMPLAR | Knight of a crusading military order
+GENGHIS | ___ Khan, Mongol conqueror
+KUBLAI | ___ Khan, Mongol emperor of China
+TAMERLANE | Turco-Mongol conqueror Timur
+LONGSHIP | Viking vessel
+BYZANTINE | Eastern Roman
+TSAR | Russian emperor
+ROMANOV | Last Russian imperial dynasty
+RASPUTIN | Mystic adviser to the last tsarina
+BOLSHEVIK | Lenin's revolutionary faction
+LENIN | Leader of the October Revolution
+TROTSKY | Founder of the Red Army
+GULAG | Soviet labour camp system
+CATHERINE | ___ the Great, empress of Russia
+IVAN | ___ the Terrible
+SOWETO | Township of the 1976 uprising
+KENYATTA | First president of Kenya
+NKRUMAH | First prime minister of Ghana
+LUMUMBA | First prime minister of Congo
+SELASSIE | Haile ___, emperor of Ethiopia
+BOLIVAR | Simón ___, liberator of South America
+SANMARTIN | José de ___, liberator of Argentina (3,6)
+ZAPATA | Emiliano ___, Mexican revolutionary
+VILLA | Pancho ___, Mexican revolutionary
+CASTRO | Fidel ___, Cuban revolutionary leader
+PERON | Juan ___, Argentine president
+EVITA | Eva Perón's nickname
+PINOCHET | Chilean dictator
+ATTLEE | Postwar British prime minister
+PANKHURST | Emmeline ___, suffragette leader
+NIGHTINGALE | Florence ___, nurse of the Crimean War
+CRIMEAN | War of the Charge of the Light Brigade
+SEACOLE | Mary ___, Crimean War nurse
+PARKS | Rosa ___, who refused to give up her bus seat
+KING | Martin Luther ___ Jr
+SELMA | Alabama city of the 1965 marches
+DETENTE | Easing of Cold War tension
+SOLIDARITY | Polish trade union of Lech Wałęsa
+WALESA | Lech ___, Polish leader
+VELVET | ___ Revolution of Czechoslovakia
+HAVEL | Václav ___, Czech playwright-president
+ARABSPRING | Uprisings of 2011 (4,6)
+CHERNOBYL | Nuclear disaster of 1986
+TIANANMEN | Square of 1989 protests
+HISTORIAN | Scholar of the past
+ARCHAEOLOGY | Study of the past through remains
+ARTEFACT | Object made by humans long ago
+PRIMARY | ___ source, from the time studied
+CHRONICLE | Record of events in order
+ANNALS | Year-by-year records
+ARCHIVE | Collection of historical records
+ANTIQUITY | Ancient past
+MEDIEVAL | Of the Middle Ages
+PREHISTORY | Time before written records
+STONEAGE | Earliest period of tool use (5,3)
+BRONZEAGE | Age of copper-tin tools (6,3)
+IRONAGE | Age of iron tools (4,3)
+NEOLITHIC | New Stone Age
+PALEOLITHIC | Old Stone Age
+DYNASTIC | Relating to ruling families
+MONARCH | Sovereign ruler
+REGENT | Ruler on behalf of a monarch
+USURPER | One who seizes a throne
+ABDICATION | Giving up a throne
+COUP | Sudden seizure of power
+REBELLION | Armed uprising
+REVOLT | Uprising
+MUTINY | Rebellion by soldiers or sailors
+SIEGE | Surrounding of a city to force surrender
+CRUSADER | Medieval soldier of a holy war
+KNIGHT | Mounted medieval warrior
+SERF | Medieval peasant bound to the land
+VASSAL | Holder of land from a lord
+MANOR | Medieval estate
+CASTLE | Fortified residence
+MOAT | Water-filled ditch around a castle
+CHIVALRY | Knightly code of honour
+HERALDRY | System of coats of arms
+PHOENICIANS | Seafaring traders who spread the alphabet
+HITTITES | Bronze Age empire of Anatolia
+MINOANS | Bronze Age civilisation of Crete
+MYCENAE | Citadel of Agamemnon
+ETRUSCANS | People of Italy before Rome
+CELTS | Iron Age peoples of Europe
+GAULS | Celtic people conquered by Caesar
+BRITONS | Ancient inhabitants of Britain
+BOUDICCA | Iceni queen who revolted against Rome
+VERCINGETORIX | Gallic chief defeated at Alesia
+THEODORA | Empress of Byzantium, wife of Justinian
+POPE | Bishop of Rome
+INVESTITURE | Controversy between popes and emperors
+FEUDAL | Relating to lords and vassals
+GUILD | Medieval association of craftsmen
+HANSEATIC | ___ League of trading cities
+VENETIAN | Of the trading republic of Venice
+DOGE | Elected ruler of Venice
+FLORENTINE | Of the Medici city
+RECONQUISTA | Christian reconquest of Iberia
+GRANADA | Last Moorish kingdom in Spain
+ALHAMBRA | Moorish palace of Granada
+MOORS | Muslim rulers of medieval Iberia
+FERDINAND | Spanish king who funded Columbus with Isabella
+ISABELLA | Spanish queen who funded Columbus
+HABSBURG | Austrian dynasty
+BOURBON | French royal house
+HOHENZOLLERN | Prussian royal house
+WINDSOR | British royal house since 1917
+ELIZABETHAN | Of the reign of Elizabeth I
+JACOBEAN | Of the reign of James I
+GEORGIAN | Of the reigns of the four Georges
+EDWARDIAN | Of the reign of Edward VII
+REGENCY | British era of 1811 to 1820
+BELLEEPOQUE | French era before the First World War (5,6)
+JAZZAGE | The 1920s in America (4,3)
+ROARING | ___ Twenties
+PROHIBITION | US ban on alcohol from 1920 to 1933
+BOOTLEGGER | Illegal alcohol dealer
+CAPONE | Al ___, Chicago gangster
+SPEAKEASY | Illegal bar
+SUFFRAGE | Right to vote
+SUFFRAGIST | Campaigner for the vote
+CHARTISTS | Campaigners for the People's Charter
+TOLPUDDLE | ___ Martyrs, early trade unionists
+PETERLOO | Massacre of 1819 in Manchester
+CORNLAWS | Tariffs repealed in 1846 (4,4)
+FAMINE | Great ___, Irish disaster of the 1840s
+EMIGRATION | Leaving one's country
+HOMESTEAD | Free land granted to settlers
+SACAGAWEA | Shoshone guide of Lewis and Clark
+LITTLEBIGHORN | Battle of Custer's Last Stand
+CUSTER | Cavalry commander killed in 1876
+SITTINGBULL | Lakota chief (7,4)
+GERONIMO | Apache leader
+BOOTH | John Wilkes ___, Lincoln's assassin
+WASHINGTON | First US president
+ADAMS | Second US president
+MADISON | Father of the US Constitution
+MONROE | President of a doctrine for the Americas
+JACKSON | Andrew ___, president of the Trail of Tears
+TEDDY | Nickname of the first President Roosevelt
+WILSON | President of the Fourteen Points
+NIXON | President who resigned after Watergate
+WATERGATE | Scandal of 1972–74
+OBAMA | First African American president
+SALTMARCH | Gandhi's protest of 1930 (4,5)
+AMRITSAR | City of a 1919 massacre
+SEPOY | Indian soldier in British service
+COMMONWEALTH | Association of former British territories
+DOMINION | Self-governing British territory
+PROTECTORATE | State controlled by another
+MANDATE | Territory administered under the League of Nations
+BALFOUR | ___ Declaration of 1917
+ZIONISM | Movement for a Jewish homeland
+INTIFADA | Palestinian uprising
+NASSER | Egyptian president of the Suez Crisis
+SADAT | Egyptian president of the Camp David Accords
+SHAH | King of Iran until 1979
+KHOMEINI | Leader of the Iranian Revolution
+SADDAM | Iraqi dictator
+BREXIT | UK departure from the EU
+MAASTRICHT | Treaty that created the European Union
+EURO | Currency launched in 1999
+SCHUMAN | Robert ___, founder of European integration
+MARSHALL | George ___, of a recovery plan
+TITO | Yugoslav leader
+YUGOSLAVIA | Former Balkan federation
+SARAJEVO | City of the 1914 assassination
+KAISER | German emperor
+WILHELM | Last German kaiser
+BISMARCK | Iron Chancellor of Germany
+GARIBALDI | Unifier of Italy
+RISORGIMENTO | Italian unification movement
+CAVOUR | Piedmontese statesman of Italian unification
+METTERNICH | Austrian statesman of the Congress of Vienna
+CONGRESS | ___ of Vienna, 1815
+TALLEYRAND | French diplomat who served many regimes
+JACOBIN | Radical of the French Revolution
+SANSCULOTTES | Working-class radicals of revolutionary Paris
+TERROR | Reign of ___, 1793–94
+DIRECTORY | French government of 1795 to 1799
+CONSULATE | Napoleon's government after 1799
+JOSEPHINE | Napoleon's first empress
+AUSTERLITZ | Napoleon's greatest victory
+BORODINO | Bloody battle of 1812
+CRIMEA | Peninsula of an 1850s war
+BALACLAVA | Battle of the Charge of the Light Brigade
+BOER | ___ War, fought in South Africa
+ZULU | Kingdom of Shaka
+SHAKA | Zulu king and military innovator
+MAHDI | Sudanese leader who besieged Khartoum
+GORDON | General killed at Khartoum
+LIVINGSTONE | Missionary explorer of Africa
+STANLEY | Explorer who found Livingstone
+MUSA | Mansa ___, wealthy emperor of Mali
+TIMBUKTU | Malian city of learning
+SONGHAI | West African empire of the 15th century
+AKSUM | Ancient Ethiopian kingdom
+KUSH | Ancient Nubian kingdom
+NUBIA | Region of the upper Nile
+CARTHAGINIAN | Of Hannibal's city
+MUMMIFICATION | Ancient Egyptian preservation of the dead
+SARCOPHAGUS | Stone coffin
+OBELISK | Tall stone pillar
+STELE | Inscribed stone slab
+CODEX | Ancient bound manuscript
+QUMRAN | Site of the Dead Sea Scrolls
+HERCULANEUM | Town buried by Vesuvius with Pompeii
+WONDERS | Seven ___ of the Ancient World
+LIGHTHOUSE | ___ of Alexandria, an ancient wonder
+MAUSOLEUM | ___ at Halicarnassus, an ancient wonder
+PARTHENON | Temple on the Athenian Acropolis
+AGORA | Marketplace of a Greek city
+OSTRACISM | Athenian vote to exile a citizen
+HELOT | Serf of Sparta
+HOPLITE | Greek infantryman
+PHALANX | Formation of Greek spearmen
+TRIREME | Greek warship with three banks of oars
+LEGIONARY | Roman soldier
+FORUM | Public square of Rome
+TOGA | Garment of Roman citizens
+LATIN | Language of Rome
+VULGATE | Latin Bible of Jerome
+MONASTERY | Community of monks
+MONK | Member of a religious community
+SCRIPTORIUM | Room for copying manuscripts
+ILLUMINATION | Decoration of manuscripts
+HERESY | Belief contrary to church doctrine
+EXCOMMUNICATION | Expulsion from the church
+SCHISM | Split in a church
+PAPACY | Office of the pope
+AVIGNON | City of the 14th-century popes
+REFORMER | Campaigner for change
+DICTATOR | Ruler with absolute power
+EMPEROR | Ruler of an empire
+CZARINA | Wife of a Russian emperor
+KAMIKAZE | Japanese suicide pilot
+ENIGMA | German cipher machine broken at Bletchley Park
+BLETCHLEY | ___ Park, home of wartime codebreakers
+SPITFIRE | British fighter plane of the Battle of Britain
+EVACUEE | Child sent away from cities in wartime
+RATIONING | Wartime limits on food
