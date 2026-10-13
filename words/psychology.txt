@@ -475,3 +475,24 @@ MELANCHOLY | Pensive sadness
 IRRITABLE | Easily annoyed
 COMPLACENT | Smugly satisfied
 DEFENSIVE | Quick to protect oneself
+CONFIDENCE | Belief in oneself
+SHYNESS | Discomfort in social situations
+EXTROVERTED | Outgoing and sociable
+INTROVERTED | Reserved and inward-looking
+AMBIVERT | Person balanced between introvert and extrovert
+DECISION | Choice made after thought
+SATISFICER | Person who settles for good enough
+MAXIMISER | Person who seeks the best option
+PERFECTIONISM | Demanding flawlessness
+WORKAHOLIC | Person addicted to work
+COMPASSION | Concern for others' suffering
+KINDNESS | Quality of being friendly and caring
+TRUST | Belief in another's reliability
+BETRAYAL | Violation of trust
+GRIEF | Deep sorrow after loss
+MOURNING | Expression of grief
+BEREAVEMENT | Loss through death
+ACCEPTANCE | Final stage of grief
+KUBLERROSS | Psychiatrist of the five stages of grief (7-4)
+AFFIRMATION | Positive self-statement
+VISUALISATION | Mental rehearsal of success
