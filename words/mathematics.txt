@@ -1,0 +1,47 @@
+# Mathematics — one entry per line: ANSWER | clue
+ALGEBRA | Branch of maths using letters for unknowns
+CALCULUS | Mathematics of change developed by Newton and Leibniz
+INTEGRAL | Area under a curve
+DERIVATIVE | Instantaneous rate of change
+THEOREM | Statement proved from axioms
+PRIME | Number divisible only by 1 and itself
+FIBONACCI | Sequence 1, 1, 2, 3, 5, 8…
+HYPOTENUSE | Longest side of a right-angled triangle
+PYTHAGORAS | Greek mathematician of a² + b² = c²
+EUCLID | Greek mathematician who wrote the Elements
+VECTOR | Quantity with magnitude and direction
+MATRIX | Rectangular array of numbers
+LOGARITHM | Inverse of exponentiation
+POLYNOMIAL | Expression such as x² + 3x + 2
+TANGENT | Line touching a curve at exactly one point
+RADIUS | Distance from a circle's centre to its edge
+FACTORIAL | n!, as in 5! = 120
+INFINITY | Endless quantity, symbol ∞
+FRACTAL | Self-similar pattern like the Mandelbrot set
+TOPOLOGY | Study of properties preserved under stretching
+PARABOLA | U-shaped curve of y = x²
+ASYMPTOTE | Line a curve approaches but never reaches
+VARIANCE | Square of the standard deviation
+MEDIAN | Middle value of an ordered data set
+COSINE | Trig ratio: adjacent side over the longest side
+ALGORITHM | Step-by-step procedure for solving a problem
+GEOMETRY | Study of shapes, sizes and space
+SCALAR | Quantity with magnitude but no direction
+EULER | Swiss mathematician whose number e ≈ 2.718 is named for him
+PROOF | Rigorous demonstration that a statement is true
+SINE | Trig function that starts at zero and peaks at 90°
+ANGLE | Figure formed by two rays meeting at a point
+DIAMETER | Chord through the centre of a circle
+PERIMETER | Distance around a shape
+QUOTIENT | Result of a division
+PRODUCT | Result of a multiplication
+INTEGER | Whole number, positive, negative or zero
+FRACTION | Number such as ¾
+EXPONENT | Power to which a number is raised
+SYMMETRY | Balanced correspondence of parts across a line
+GAUSS | German "prince of mathematicians"
+MOBIUS | ___ strip, a surface with only one side
+HEXAGON | Six-sided polygon
+ABACUS | Ancient counting frame with beads
+STATISTICS | Science of collecting and analysing data
+PROBABILITY | Likelihood of an event, from 0 to 1

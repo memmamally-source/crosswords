@@ -1,0 +1,503 @@
+# Music Hall — one entry per line: ANSWER | clue
+PIANO | Keyboard instrument with 88 keys
+GUITAR | Six-stringed instrument, acoustic or electric
+VIOLIN | Highest-pitched member of the orchestral string family
+TEMPO | Speed of a piece of music
+MELODY | The tune of a song
+CHORUS | Repeated section of a song
+OPERA | Drama set to music, such as Carmen
+SYMPHONY | Large orchestral work, often in four movements
+DRUM | Percussion instrument you strike with sticks
+TRUMPET | Brass instrument with three valves
+BEETHOVEN | Composer who kept writing masterpieces after going deaf
+MOZART | Austrian prodigy who composed Don Giovanni
+HARMONY | Pleasing combination of notes sounded together
+RHYTHM | Pattern of beats in music
+JAZZ | Genre born in New Orleans, known for improvisation
+CONDUCTOR | Person who leads musicians with a baton
+OCTAVE | Interval spanning eight notes of a scale
+SAXOPHONE | Woodwind instrument invented by Adolphe Sax
+CELLO | Large string instrument played while seated
+FLUTE | Woodwind instrument held sideways
+LYRICS | The words of a song
+BALLAD | Slow, sentimental song
+ORCHESTRA | Large ensemble of instrumentalists
+REGGAE | Jamaican genre popularised by Bob Marley
+HARP | Large plucked instrument with many strings
+TUBA | Largest and lowest brass instrument
+ENCORE | Audience's call for one more song
+SOPRANO | Highest female singing voice
+ALBUM | Collection of recorded tracks
+BANJO | Twangy stringed instrument of bluegrass
+ACCORDION | Squeezebox
+CLARINET | Single-reed woodwind with a dark, mellow tone
+XYLOPHONE | Instrument of wooden bars struck with mallets
+BACH | Baroque composer of the Brandenburg Concertos
+CHOPIN | Polish Romantic composer of nocturnes and mazurkas
+VIVALDI | Composer of The Four Seasons
+METRONOME | Device that ticks to keep time
+FALSETTO | Singing voice above the normal range
+CRESCENDO | Gradual increase in volume
+STACCATO | Played with short, detached notes
+UKULELE | Small four-stringed Hawaiian instrument
+DUET | Piece for two performers
+BLUES | Genre born in the Mississippi Delta
+ARIA | Solo showpiece for a singer, such as "Nessun dorma"
+HIPHOP | Genre born in the Bronx in the 1970s (3,3)
+VIOLA | String instrument slightly larger than a violin
+DOUBLEBASS | Largest bowed string instrument (6,4)
+FIDDLE | Violin played in folk music
+MANDOLIN | Small lute-like instrument with paired strings
+LUTE | Pear-shaped Renaissance string instrument
+SITAR | Long-necked Indian string instrument
+ZITHER | Flat stringed instrument played on the lap
+DULCIMER | Stringed instrument struck with hammers
+LYRE | Ancient Greek harp-like instrument
+BALALAIKA | Russian triangular-bodied instrument
+BOUZOUKI | Greek long-necked lute
+BASSGUITAR | Four-string electric instrument (4,6)
+OBOE | Double-reed woodwind that tunes the orchestra
+BASSOON | Low double-reed woodwind
+PICCOLO | Small, high-pitched flute
+RECORDER | Simple woodwind learned at school
+PANPIPES | Row of pipes of different lengths
+BAGPIPES | Scottish instrument with a bag and drones
+HARMONICA | Mouth organ
+OCARINA | Egg-shaped wind instrument
+DIDGERIDOO | Long Aboriginal Australian wind instrument
+TROMBONE | Brass instrument with a slide
+FRENCHHORN | Coiled brass instrument (6,4)
+CORNET | Compact brass instrument used in brass bands
+BUGLE | Simple brass instrument for military calls
+SOUSAPHONE | Marching tuba that wraps around the player
+EUPHONIUM | Tenor tuba
+TIMPANI | Kettle drums
+SNARE | Drum with rattling wires underneath
+CYMBAL | Brass plate that crashes
+TRIANGLE | Percussion instrument struck with a metal beater
+TAMBOURINE | Hand drum with jingles
+GLOCKENSPIEL | Instrument of tuned metal bars
+MARIMBA | Large wooden-barred percussion instrument
+VIBRAPHONE | Metal-barred instrument with motorised vibrato
+CASTANETS | Clicking shells used in flamenco
+MARACAS | Pair of shakers
+BONGOS | Pair of small hand drums
+CONGA | Tall Cuban hand drum
+DJEMBE | Goblet-shaped West African drum
+TABLA | Pair of Indian hand drums
+GONG | Large metal disc that resounds when struck
+CELESTA | Keyboard instrument of the Sugar Plum Fairy
+HARPSICHORD | Keyboard instrument that plucks its strings
+ORGAN | Keyboard instrument with pipes
+SYNTHESIZER | Electronic keyboard that creates sounds
+KEYBOARD | Set of keys on a piano
+THEREMIN | Electronic instrument played without touch
+TURNTABLE | Record player used by DJs
+HANDEL | Composer of Messiah
+HAYDN | Father of the symphony
+SCHUBERT | Composer of the Unfinished Symphony
+SCHUMANN | Composer Robert, husband of pianist Clara
+MENDELSSOHN | Composer of the Wedding March
+BRAHMS | Composer of a famous lullaby
+LISZT | Hungarian virtuoso pianist
+WAGNER | Composer of the Ring cycle
+VERDI | Composer of Aida and La Traviata
+PUCCINI | Composer of La Bohème and Tosca
+ROSSINI | Composer of The Barber of Seville
+TCHAIKOVSKY | Composer of Swan Lake
+RACHMANINOFF | Russian composer and piano virtuoso
+STRAVINSKY | Composer of The Rite of Spring
+DEBUSSY | Composer of Clair de Lune
+RAVEL | Composer of Boléro
+SATIE | French composer of the Gymnopédies
+DVORAK | Czech composer of the New World Symphony
+SIBELIUS | Finnish composer of Finlandia
+GRIEG | Norwegian composer of Peer Gynt
+ELGAR | Composer of the Enigma Variations
+HOLST | Composer of The Planets
+MAHLER | Austrian composer of vast symphonies
+PROKOFIEV | Composer of Peter and the Wolf
+SHOSTAKOVICH | Soviet composer of fifteen symphonies
+GERSHWIN | Composer of Rhapsody in Blue
+BERNSTEIN | Composer of West Side Story
+COPLAND | Composer of Appalachian Spring
+GLASS | Philip ___, minimalist composer
+MONTEVERDI | Early opera composer of L'Orfeo
+PURCELL | English Baroque composer of Dido and Aeneas
+PALESTRINA | Renaissance composer of sacred music
+ELVIS | The King of Rock and Roll
+BEATLES | Fab Four from Liverpool
+ROLLINGSTONES | Band of Mick Jagger and Keith Richards (7,6)
+QUEEN | Band of Freddie Mercury
+ABBA | Swedish group of Dancing Queen
+NIRVANA | Grunge band of Kurt Cobain
+OASIS | Mancunian band of Wonderwall
+RADIOHEAD | Band of OK Computer
+COLDPLAY | Band of Yellow and Viva la Vida
+METALLICA | Thrash metal band of Enter Sandman
+ACDC | Australian rock band of Highway to Hell
+LEDZEPPELIN | Band of Stairway to Heaven (3,8)
+PINKFLOYD | Band of The Dark Side of the Moon (4,5)
+BOWIE | David ___, creator of Ziggy Stardust
+PRINCE | Purple Rain star
+MADONNA | Queen of Pop
+DYLAN | Bob ___, Nobel-winning songwriter
+HENDRIX | Jimi ___, guitar pioneer
+SPRINGSTEEN | The Boss of rock
+SINATRA | Ol' Blue Eyes
+ARMSTRONG | Louis ___, trumpeter of What a Wonderful World
+ELLINGTON | Duke ___, jazz bandleader
+DAVIS | Miles ___, trumpeter of Kind of Blue
+COLTRANE | John ___, saxophonist of A Love Supreme
+PARKER | Charlie ___, bebop saxophonist nicknamed Bird
+FITZGERALD | Ella ___, First Lady of Song
+HOLIDAY | Billie ___, singer of Strange Fruit
+SIMONE | Nina ___, the High Priestess of Soul
+FRANKLIN | Aretha ___, the Queen of Soul
+WONDER | Stevie ___, Motown star
+GAYE | Marvin ___, singer of What's Going On
+JACKSON | Michael ___, the King of Pop
+WHITNEY | First name of the singer of I Will Always Love You
+BEYONCE | Singer of Single Ladies
+ADELE | Singer of Someone Like You
+RIHANNA | Singer of Umbrella
+SHAKIRA | Colombian singer of Hips Don't Lie
+DRAKE | Rapper of Hotline Bling
+EMINEM | Rapper of Lose Yourself
+JAYZ | Rapper of Empire State of Mind (3-1)
+KENDRICK | First name of the rapper of DAMN.
+TUPAC | West Coast rap icon Shakur
+BIGGIE | Notorious B.I.G.'s nickname
+MARLEY | Bob ___, reggae legend
+CASH | Johnny ___, the Man in Black
+PARTON | Dolly ___, country star of Jolene
+NELSON | Willie ___, country outlaw
+SWIFTIE | Taylor Swift fan
+ROCK | Genre of electric guitars and drums
+POP | Genre of catchy chart music
+PUNK | Raw, fast genre of the Sex Pistols
+GRUNGE | Seattle genre of the early 1990s
+METAL | Loud, heavy genre of distorted guitars
+FOLK | Traditional genre passed on by ear
+COUNTRY | Genre of Nashville
+BLUEGRASS | Genre of banjos and fiddles
+GOSPEL | Genre of Christian vocal music
+SOUL | Genre of Aretha and Otis
+FUNK | Groove-heavy genre of James Brown
+DISCO | Dance genre of the 1970s
+TECHNO | Electronic genre born in Detroit
+HOUSE | Electronic dance genre born in Chicago
+DUBSTEP | Bass-heavy electronic genre
+RAP | Rhythmic spoken lyrics
+SKA | Jamaican genre that preceded reggae
+SALSA | Latin dance music
+TANGO | Argentine dance music
+FLAMENCO | Andalusian music and dance
+BOSSANOVA | Brazilian genre of The Girl from Ipanema (5,4)
+SAMBA | Brazilian carnival music
+KPOP | Korean pop (1-3)
+OPERETTA | Light opera
+MUSICAL | Stage show with songs
+CLASSICAL | Genre of Mozart and Beethoven
+BAROQUE | Musical era of Bach
+ROMANTIC | Musical era of Chopin
+MINIMALISM | Repetitive style of Reich and Glass
+AMBIENT | Atmospheric genre of Brian Eno
+INDIE | Independent rock
+ACOUSTIC | Without electric amplification
+ALLEGRO | Fast and lively
+ADAGIO | Slow and stately
+ANDANTE | At a walking pace
+LARGO | Very slow and broad
+PRESTO | Very fast
+FORTE | Loud
+PIANISSIMO | Very soft
+FORTISSIMO | Very loud
+DIMINUENDO | Gradually getting softer
+LEGATO | Smoothly connected
+PIZZICATO | Plucking strings with the fingers
+VIBRATO | Rapid wavering of pitch
+TREMOLO | Rapid repetition of a note
+GLISSANDO | Glide from one pitch to another
+RUBATO | Flexible tempo
+CODA | Concluding passage
+OVERTURE | Orchestral introduction to an opera
+PRELUDE | Introductory piece
+FUGUE | Contrapuntal composition with a subject
+SONATA | Composition for one or two instruments
+CONCERTO | Work for soloist and orchestra
+SUITE | Set of instrumental pieces
+NOCTURNE | Night piece, often for piano
+ETUDE | Study piece
+REQUIEM | Mass for the dead
+ORATORIO | Large sacred work like Messiah
+CANTATA | Vocal work with instruments
+MOTET | Unaccompanied sacred choral piece
+MADRIGAL | Renaissance secular song for several voices
+LULLABY | Song to send a child to sleep
+ANTHEM | Song of praise or national pride
+HYMN | Religious song
+CAROL | Christmas song
+SERENADE | Evening love song
+RHAPSODY | Free-flowing, emotional piece
+WALTZ | Dance in triple time
+MINUET | Elegant dance in triple time
+MARCH | Music in strict time for walking
+POLKA | Lively Bohemian dance
+BOLERO | Spanish dance in triple time
+MAZURKA | Polish folk dance
+NOTE | Single musical sound
+SCALE | Series of notes in order
+KEY | Tonal centre of a piece
+MAJOR | Bright-sounding key
+MINOR | Melancholy-sounding key
+SHARP | Raised by a semitone
+FLAT | Lowered by a semitone
+NATURAL | Sign cancelling a sharp or flat
+CLEF | Symbol at the start of a stave
+TREBLE | Higher clef
+BASS | Lower clef or voice
+STAVE | Five lines on which music is written
+BAR | Measure of music
+TIMESIGNATURE | Fraction such as 3/4 (4,9)
+CROTCHET | Quarter note
+QUAVER | Eighth note
+MINIM | Half note
+SEMIBREVE | Whole note
+REST | Silence in music
+TRIPLET | Three notes in the time of two
+INTERVAL | Distance between two notes
+SEMITONE | Smallest interval in Western music
+FIFTH | Interval of seven semitones
+TONIC | First note of a scale
+DOMINANT | Fifth note of a scale
+CADENCE | Chord progression ending a phrase
+ARPEGGIO | Notes of a chord played in sequence
+COUNTERPOINT | Interweaving independent melodies
+POLYPHONY | Many simultaneous melodies
+UNISON | Everyone on the same note
+DISSONANCE | Clashing combination of notes
+TIMBRE | Tone colour of a sound
+PITCH | Highness or lowness of a sound
+DYNAMICS | Variations in loudness
+SYNCOPATION | Off-beat rhythm
+METRE | Pattern of beats in a bar
+BEAT | Basic pulse of music
+RIFF | Repeated musical phrase in rock
+SOLO | Passage for one performer
+TRIO | Group of three musicians
+QUARTET | Group of four musicians
+QUINTET | Group of five musicians
+ENSEMBLE | Group of performers
+CHOIR | Group of singers
+BAND | Group of musicians
+ALTO | Low female voice
+TENOR | High male voice
+BARITONE | Male voice between tenor and bass
+MEZZO | ___-soprano, a middle female voice
+CONTRALTO | Lowest female voice
+COUNTERTENOR | Male voice in the alto range
+DIVA | Celebrated female opera singer
+MAESTRO | Distinguished conductor
+VIRTUOSO | Exceptionally skilled performer
+COMPOSER | Writer of music
+LYRICIST | Writer of song words
+SONGWRITER | Writer of songs
+PRODUCER | Person who oversees a recording
+BUSKER | Street musician
+ROADIE | Touring band's technician
+GROUPIE | Devoted fan who follows a band
+SETLIST | List of songs in a concert
+GIG | Live performance
+CONCERT | Live musical performance
+FESTIVAL | Multi-day music event
+TOUR | Series of concerts in different places
+RECORD | Vinyl disc
+VINYL | Material of LPs
+SINGLE | One song released on its own
+CHARTS | Weekly ranking of hits
+PLATINUM | Record award for huge sales
+AUTOTUNE | Pitch-correcting software
+SAMPLE | Snippet reused in a new track
+MIXTAPE | Compilation of songs
+PLAYLIST | List of songs to play
+STREAMING | Listening online without downloading
+AMPLIFIER | Device that makes sound louder
+MICROPHONE | Device that picks up sound
+SPEAKER | Device that plays sound
+HEADPHONES | Speakers worn over the ears
+TUNINGFORK | Device that sounds a reference pitch (6,4)
+SHEETMUSIC | Printed notation (5,5)
+SCORE | Full written music of a work
+LIBRETTO | Text of an opera
+RECITATIVE | Speech-like singing in opera
+CARMEN | Bizet's opera of a Seville cigarette girl
+AIDA | Verdi's opera of an Ethiopian princess
+TOSCA | Puccini's opera of a Roman singer
+BOHEME | Puccini's opera of Parisian artists, "La ___"
+FIGARO | Barber of Seville in opera
+MAGICFLUTE | Mozart's opera of Tamino and Papageno (5,5)
+NUTCRACKER | Tchaikovsky ballet set on Christmas Eve
+SWANLAKE | Tchaikovsky ballet of Odette and Odile (4,4)
+FOURSEASONS | Vivaldi's set of violin concertos (4,7)
+MESSIAH | Handel's oratorio with the Hallelujah chorus
+NINTH | Beethoven symphony with Ode to Joy
+EROICA | Beethoven's Third Symphony
+PATHETIQUE | Name of a Beethoven sonata and a Tchaikovsky symphony
+MOONLIGHT | Beethoven's famous piano sonata nickname
+GOLDBERG | Bach's set of keyboard variations
+BRANDENBURG | Bach's set of six concertos
+GRAMOPHONE | Early record player
+JUKEBOX | Coin-operated music player
+KARAOKE | Singing along to backing tracks
+EUROVISION | Annual European song contest
+WOODSTOCK | 1969 festival of peace and music
+GLASTONBURY | Famous English music festival
+MOTOWN | Detroit record label of the Supremes
+ABBEYROAD | Beatles album and London studio (5,4)
+THRILLER | Best-selling album of all time
+NASHVILLE | Music City, home of country
+MEMPHIS | Tennessee city of Graceland
+NEWORLEANS | Birthplace of jazz (3,7)
+CARNEGIEHALL | New York concert venue (8,4)
+LASCALA | Milan opera house (2,5)
+BEACHBOYS | Band of Good Vibrations (5,4)
+SUPREMES | Motown girl group of Diana Ross
+TEMPTATIONS | Motown group of My Girl
+FLEETWOODMAC | Band of the album Rumours (9,3)
+EAGLES | Band of Hotel California
+DOORS | Band of Jim Morrison
+KINKS | Band of You Really Got Me
+WHO | Band of My Generation, "The ___"
+CLASH | Punk band of London Calling, "The ___"
+SEXPISTOLS | Punk band of Johnny Rotten (3,7)
+RAMONES | New York punk band of Blitzkrieg Bop
+BLONDIE | Band of Debbie Harry
+TALKINGHEADS | Band of David Byrne (7,5)
+SMITHS | Band of Morrissey and Johnny Marr
+CURE | Band of Robert Smith, "The ___"
+DEPECHEMODE | Synth-pop band of Enjoy the Silence (7,4)
+DURANDURAN | Band of Hungry Like the Wolf (5,5)
+BLUR | Britpop band of Parklife
+PULP | Britpop band of Common People
+SPICEGIRLS | Girl group of Wannabe (5,5)
+TAKETHAT | British boy band of Back for Good (4,4)
+ONEDIRECTION | British boy band formed on The X Factor (3,9)
+BTS | K-pop group of Dynamite
+BLACKPINK | K-pop girl group of Ddu-Du Ddu-Du
+DAFTPUNK | French duo of Get Lucky (4,4)
+GORILLAZ | Virtual band created by Damon Albarn
+ARCTICMONKEYS | Sheffield band of I Bet You Look Good on the Dancefloor
+FOOFIGHTERS | Band of Dave Grohl (3,8)
+GREENDAY | Band of American Idiot (5,3)
+LINKINPARK | Band of In the End (6,4)
+GUNSNROSES | Band of Sweet Child o' Mine
+BONJOVI | Band of Livin' on a Prayer (3,4)
+AEROSMITH | Band of Dream On
+KISS | Face-painted rock band
+JOURNEY | Band of Don't Stop Believin'
+TOTO | Band of Africa
+POLICE | Band of Sting, "The ___"
+STING | Singer of Englishman in New York
+ELTON | First name of the singer of Rocket Man
+BILLYJOEL | Piano Man singer (5,4)
+CLAPTON | Guitarist of Layla
+BERRY | Chuck ___, pioneer of Johnny B. Goode
+HOLLY | Buddy ___, singer of Peggy Sue
+ORBISON | Roy ___, singer of Oh, Pretty Woman
+REDDING | Otis ___, singer of Dock of the Bay
+CHARLES | Ray ___, the Genius of Soul
+BROWN | James ___, the Godfather of Soul
+TURNER | Tina ___, singer of Proud Mary
+ROSS | Diana ___, Supremes lead singer
+CHER | Singer of Believe
+MERCURY | Freddie ___, Queen frontman
+LENNON | Beatle who wrote Imagine
+MCCARTNEY | Beatle who wrote Yesterday
+HARRISON | Beatle who wrote Here Comes the Sun
+STARR | Ringo ___, Beatles drummer
+JAGGER | Rolling Stones frontman Mick
+COBAIN | Kurt ___, Nirvana frontman
+WINEHOUSE | Amy ___, singer of Rehab
+SHEERAN | Ed ___, singer of Shape of You
+BIEBER | Justin ___, singer of Sorry
+LIZZO | Singer of Truth Hurts
+BILLIE | First name of the singer of Bad Guy
+EILISH | Billie ___, singer of Bad Guy
+DUALIPA | Singer of Levitating (4,4)
+GAGA | Lady ___, singer of Bad Romance
+PERRY | Katy ___, singer of Roar
+MARS | Bruno ___, singer of Uptown Funk
+WEEKND | Singer of Blinding Lights, "The ___"
+STYLES | Harry ___, singer of As It Was
+BJORK | Icelandic singer of Army of Me
+ENYA | Irish singer of Orinoco Flow
+SADE | Singer of Smooth Operator
+KYLIE | First name of the Australian pop princess
+CELINE | First name of the singer of My Heart Will Go On
+MARIAH | First name of the singer of All I Want for Christmas Is You
+PAVAROTTI | Italian tenor of Nessun dorma
+DOMINGO | Spanish tenor Plácido
+CARUSO | Enrico ___, early recording star tenor
+CALLAS | Maria ___, legendary soprano
+BOCELLI | Andrea ___, Italian tenor
+YOYOMA | Celebrated cellist (2-2,2)
+MENUHIN | Yehudi ___, violin virtuoso
+PERLMAN | Itzhak ___, violin virtuoso
+LANGLANG | Chinese concert pianist (4,4)
+KARAJAN | Herbert von ___, Berlin Philharmonic conductor
+TOSCANINI | Arturo ___, Italian conductor
+MONK | Thelonious ___, jazz pianist
+BRUBECK | Dave ___, pianist of Take Five
+BASIE | Count ___, swing bandleader
+GOODMAN | Benny ___, King of Swing
+GILLESPIE | Dizzy ___, bebop trumpeter
+MINGUS | Charles ___, jazz bassist
+BAEZ | Joan ___, folk singer
+MITCHELL | Joni ___, singer of Big Yellow Taxi
+COHEN | Leonard ___, writer of Hallelujah
+YESTERDAY | Most-covered Beatles song
+IMAGINE | Lennon's song of a world without borders
+BOHEMIAN | ___ Rhapsody, Queen epic
+HALLELUJAH | Leonard Cohen song, later covered by Jeff Buckley
+DESPACITO | Spanish-language hit of 2017
+GANGNAM | ___ Style, 2012 viral hit by Psy
+MACARENA | 1990s dance craze song
+TIMPANIST | Kettle-drum player
+CELLIST | Player of a seated string instrument
+VIOLINIST | Fiddler in an orchestra
+PIANIST | Keyboard performer
+GUITARIST | Six-string player
+DRUMMER | Percussionist in a band
+BASSIST | Player of the low strings in a band
+VOCALIST | Singer
+FRONTMAN | Lead singer of a band
+CROONER | Smooth-voiced ballad singer
+ACAPELLA | Sung without instruments
+CHORALE | Hymn tune or choir
+CANON | Piece in which a melody is imitated in overlapping parts
+OSTINATO | Persistently repeated phrase
+MOTIF | Short recurring musical idea
+THEME | Main melody of a piece
+VARIATION | Altered form of a theme
+CADENZA | Showy solo passage in a concerto
+INTERLUDE | Short piece between sections
+REFRAIN | Recurring lines of a song
+VERSE | Section of a song before the chorus
+BRIDGE | Contrasting section of a song
+JINGLE | Short tune used in advertising
+SHANTY | Sailors' work song
+SPIRITUAL | African American religious folk song
+YODEL | Alpine singing with quick register changes
+BEATBOX | Vocal percussion
+SCAT | Wordless jazz singing
+IMPROVISATION | Making music up on the spot
+OVATION | Enthusiastic applause
+BRAVO | Shout of approval at the opera
+CONSERVATORY | School of music
+REHEARSAL | Practice before a performance
+AUDITION | Trial performance for a role
+DEBUT | First public performance
+PREMIERE | First performance of a work
+PHILHARMONIC | Name of many symphony orchestras
+SYMPHONIC | Relating to a symphony

@@ -1,0 +1,46 @@
+# Holidays & Festivals — one entry per line: ANSWER | clue
+CHRISTMAS | Holiday celebrated on 25 December
+DIWALI | Hindu festival of lights
+HANUKKAH | Eight-night Jewish festival of lights
+EID | Muslim festival, as in ___ al-Fitr
+RAMADAN | Islamic holy month observed from dawn to sunset
+EASTER | Spring holiday with egg hunts
+HALLOWEEN | October 31 night of trick-or-treating
+THANKSGIVING | North American holiday held in October or November
+VALENTINE | Card sent on 14 February
+LANTERN | Paper light hung at Lunar New Year
+FIREWORKS | Night-sky display at midnight on 31 December
+CARNIVAL | Festive season before Lent, famous in Rio
+TURKEY | Bird roasted for many US dinners in November
+PUMPKIN | Orange gourd carved into a spooky face
+MISTLETOE | Plant you might be kissed under
+SANTA | Gift-bringer from the North Pole
+REINDEER | Antlered animals that pull a famous sleigh
+CANDLE | Wax light you blow out on a cake
+CONFETTI | Paper bits thrown at celebrations
+HOLI | Hindu spring festival of colours
+PASSOVER | Jewish festival marking the Exodus from Egypt
+KWANZAA | African American cultural holiday from 26 December to 1 January
+PINATA | Decorated container smashed open for sweets
+TINSEL | Sparkly strands draped on a tree
+PARADE | Procession through the streets
+HARVEST | Gathering of crops, celebrated at many festivals
+BONFIRE | Large outdoor fire lit on Guy Fawkes Night
+STOCKING | Sock hung by the chimney
+EGGNOG | Creamy, spiced holiday drink
+FEAST | Large celebratory meal
+NOWRUZ | Persian New Year, at the spring equinox
+HOGMANAY | Scottish New Year's Eve celebration
+OKTOBERFEST | Munich beer festival
+MARDIGRAS | "Fat Tuesday" festival in New Orleans (5,4)
+SOLSTICE | Longest or shortest day of the year
+VESAK | Buddhist festival marking the Buddha's birth and enlightenment
+BIRTHDAY | Yearly celebration of the day you were born
+WREATH | Ring of evergreens hung on a door
+DREIDEL | Four-sided spinning top with Hebrew letters
+MENORAH | Branched candelabrum lit over eight nights
+GINGERBREAD | Spiced biscuit shaped into houses and men
+CAROL | Festive song sung door to door
+COSTUME | Outfit worn to a fancy-dress party
+HANAMI | Japanese custom of viewing cherry blossoms
+FASTING | Going without food for religious reasons

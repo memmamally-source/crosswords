@@ -1,0 +1,511 @@
+# Food & Drink — one entry per line: ANSWER | clue
+PIZZA | Italian flatbread topped with tomato and cheese
+SUSHI | Japanese dish of vinegared rice, often with raw fish
+CROISSANT | Flaky crescent-shaped French pastry
+AVOCADO | Green fruit mashed to make guacamole
+PANCAKE | Flat breakfast cake often served with syrup
+LASAGNA | Layered Italian pasta bake
+CHOCOLATE | Sweet treat made from cacao beans
+CINNAMON | Spice made from the inner bark of a tree
+BROCCOLI | Green vegetable that looks like a tiny tree
+TACO | Folded tortilla with a filling
+ESPRESSO | Small, strong shot of coffee
+BAGEL | Ring-shaped bread roll, boiled before baking
+PAELLA | Rice dish from Valencia, Spain
+NOODLE | Long, thin strip of dough
+HONEY | Sweet, sticky food made by bees
+CURRY | Spiced dish central to South Asian cooking
+PRETZEL | Knotted baked snack
+WAFFLE | Grid-patterned breakfast treat
+MANGO | Tropical stone fruit and national fruit of India
+GARLIC | Pungent bulb said to ward off vampires
+OMELETTE | Beaten eggs cooked in a pan and folded
+DUMPLING | Parcel of dough with a filling, steamed or fried
+SALSA | Mexican sauce of tomato, onion and chilli
+CHEDDAR | Cheese named after a village in Somerset
+YOGURT | Fermented milk product
+SAFFRON | Costly spice taken from crocus flowers
+BURRITO | Large wrapped and filled tortilla
+TOFU | Bean curd
+LEMONADE | Sweet-and-sour citrus drink
+HUMMUS | Dip made from chickpeas and tahini
+RISOTTO | Creamy Italian rice dish stirred with stock
+BAKLAVA | Layered pastry of filo, nuts and syrup
+RAMEN | Japanese soup often topped with a soft-boiled egg
+FALAFEL | Fried balls of ground chickpeas
+KIMCHI | Spicy Korean fermented cabbage
+TIRAMISU | Italian dessert of coffee-soaked ladyfingers
+GOULASH | Hungarian paprika stew
+NACHOS | Tortilla chips topped with melted cheese
+QUICHE | Savoury egg tart
+SORBET | Frozen fruit dessert made without dairy
+BRIOCHE | Rich, buttery French bread
+PESTO | Basil sauce from Genoa
+MACARON | Colourful French meringue sandwich cookie
+VANILLA | Flavouring from an orchid pod
+KETCHUP | Tomato sauce squeezed onto chips
+APPLE | Fruit that keeps the doctor away, in the saying
+BANANA | Curved yellow fruit that grows in bunches
+ORANGE | Citrus fruit named for its colour
+LEMON | Sour yellow citrus fruit
+LIME | Small green citrus fruit used in margaritas
+GRAPEFRUIT | Large citrus fruit, often pink inside
+TANGERINE | Small, easily peeled citrus fruit
+CLEMENTINE | Seedless mandarin hybrid, a Christmas favourite
+KUMQUAT | Tiny citrus fruit eaten whole, peel and all
+PEAR | Fruit shaped like a teardrop
+PEACH | Fuzzy-skinned stone fruit
+NECTARINE | Smooth-skinned variety of peach
+APRICOT | Small orange stone fruit, often dried
+PLUM | Purple stone fruit that becomes a prune
+PRUNE | Dried plum
+CHERRY | Small red stone fruit on a stalk
+GRAPE | Fruit that grows in clusters on vines
+RAISIN | Dried grape
+SULTANA | Golden dried grape
+STRAWBERRY | Red berry with seeds on the outside
+RASPBERRY | Red berry that comes away hollow from its core
+BLUEBERRY | Small blue berry of muffins
+BLACKBERRY | Dark bramble fruit
+CRANBERRY | Tart red berry served with turkey
+GOOSEBERRY | Tart green berry used in fools
+ELDERBERRY | Dark berry used in cordials
+REDCURRANT | Tart red berry used in jelly
+WATERMELON | Large green fruit with red flesh and black seeds
+CANTALOUPE | Melon with orange flesh
+HONEYDEW | Melon with pale green flesh
+PINEAPPLE | Spiky tropical fruit
+PAPAYA | Tropical fruit with orange flesh and black seeds
+GUAVA | Tropical fruit with pink or white flesh
+LYCHEE | Fruit with a rough red shell and white flesh
+RAMBUTAN | Hairy red tropical fruit
+DURIAN | Spiky fruit famous for its smell
+JACKFRUIT | Largest tree-borne fruit, used as a meat substitute
+PASSIONFRUIT | Wrinkly purple fruit with seedy pulp
+POMEGRANATE | Fruit packed with juicy red seeds
+FIG | Soft fruit full of tiny seeds
+DATE | Sweet fruit of a palm tree
+KIWIFRUIT | Fuzzy brown fruit with green flesh
+COCONUT | Hairy tropical fruit with milk inside
+QUINCE | Hard golden fruit cooked into paste
+PERSIMMON | Orange fruit also called a sharon fruit
+STARFRUIT | Fruit that is star-shaped when sliced
+PLANTAIN | Starchy cooking banana
+OLIVE | Small fruit pressed for oil
+TOMATO | Red fruit used as a vegetable in salads
+CARROT | Orange root vegetable
+POTATO | Starchy tuber eaten mashed or fried
+ONION | Bulb that can make you cry
+SHALLOT | Small, mild member of the onion family
+LEEK | Long vegetable of the onion family, a Welsh emblem
+SCALLION | Spring onion
+CABBAGE | Leafy head used in coleslaw
+LETTUCE | Salad leaf such as iceberg or romaine
+SPINACH | Leafy green said to strengthen Popeye
+KALE | Curly leafy green
+CHARD | Leafy green with colourful stems
+ROCKET | Peppery salad leaf, also called arugula
+WATERCRESS | Peppery leaf that grows in streams
+CELERY | Crunchy stalk vegetable
+ASPARAGUS | Spear-shaped spring vegetable
+ARTICHOKE | Thistle-like vegetable with edible leaves and a heart
+AUBERGINE | Purple vegetable also called an eggplant
+COURGETTE | Green summer squash, also called a zucchini
+CUCUMBER | Cool green vegetable for salads
+PUMPKIN | Orange squash carved at Halloween
+SQUASH | Gourd such as butternut or acorn
+PEPPER | Bell-shaped vegetable in red, green or yellow
+CHILLI | Hot pepper used to spice dishes
+JALAPENO | Medium-hot Mexican chilli
+HABANERO | Extremely hot chilli
+PAPRIKA | Red spice made from dried peppers
+CAULIFLOWER | White-headed brassica
+SPROUT | Brussels ___, a mini cabbage
+BEETROOT | Deep red root vegetable
+RADISH | Small, peppery red root
+TURNIP | White root vegetable
+PARSNIP | Pale, sweet root vegetable
+SWEDE | Root vegetable called rutabaga in the US
+YAM | Starchy tropical tuber
+CASSAVA | Root used to make tapioca
+GINGER | Spicy root used in biscuits and stir-fries
+MUSHROOM | Edible fungus such as a button or portobello
+TRUFFLE | Prized underground fungus sniffed out by pigs
+SWEETCORN | Yellow kernels on a cob
+PEA | Small round green legume
+BEAN | Legume such as a kidney or pinto
+LENTIL | Small legume used in dal
+CHICKPEA | Legume used in hummus
+EDAMAME | Young soybeans in the pod
+OKRA | Green pod vegetable used in gumbo
+FENNEL | Bulb vegetable with an aniseed flavour
+BASIL | Herb at the heart of pesto
+OREGANO | Herb sprinkled on pizza
+THYME | Small-leaved herb used in stews
+ROSEMARY | Needle-leaved herb paired with lamb
+SAGE | Grey-green herb used in stuffing
+PARSLEY | Common garnish herb
+CORIANDER | Herb also called cilantro
+DILL | Feathery herb paired with fish
+MINT | Cool herb used in mojitos
+CHIVES | Thin onion-flavoured herb
+TARRAGON | Aniseed-flavoured herb in béarnaise
+BAYLEAF | Aromatic leaf removed before serving (3,4)
+LEMONGRASS | Citrusy stalk used in Thai cooking
+NUTMEG | Spice grated over custard
+CLOVE | Nail-shaped spice
+CARDAMOM | Aromatic pod spice used in chai
+CUMIN | Earthy spice used in curries
+TURMERIC | Yellow spice that colours curry
+STARANISE | Star-shaped spice (4,5)
+ALLSPICE | Jamaican spice that tastes of several others
+PEPPERCORN | Dried berry ground for black pepper
+MUSTARD | Yellow condiment made from seeds
+HORSERADISH | Pungent root served with roast beef
+WASABI | Green Japanese condiment served with sushi
+SOYSAUCE | Salty fermented condiment (3,5)
+VINEGAR | Sour liquid used in pickling
+MAYONNAISE | Creamy emulsion of egg yolk and oil
+AIOLI | Garlic mayonnaise
+TAHINI | Sesame paste
+GUACAMOLE | Mexican avocado dip
+TZATZIKI | Greek yogurt and cucumber dip
+CHUTNEY | Spiced fruit relish
+RELISH | Chopped pickle condiment
+GRAVY | Sauce made from meat juices
+BECHAMEL | White sauce of milk, butter and flour
+HOLLANDAISE | Butter sauce served on eggs Benedict
+MARINARA | Simple tomato sauce
+BOLOGNESE | Meat sauce served with spaghetti
+CARBONARA | Pasta with egg, cheese and cured pork
+SPAGHETTI | Long thin pasta strands
+PENNE | Tube-shaped pasta cut on the diagonal
+FUSILLI | Spiral pasta
+FARFALLE | Bow-tie pasta
+RIGATONI | Large ridged pasta tubes
+TAGLIATELLE | Flat ribbon pasta
+LINGUINE | Flat, narrow pasta
+RAVIOLI | Stuffed pasta squares
+TORTELLINI | Ring-shaped stuffed pasta
+MACARONI | Short curved pasta used with cheese
+ORZO | Rice-shaped pasta
+GNOCCHI | Small potato dumplings
+CANNELLONI | Large pasta tubes filled and baked
+BREAD | Staple baked from flour, water and yeast
+BAGUETTE | Long French loaf
+CIABATTA | Italian slipper-shaped bread
+FOCACCIA | Flat Italian oven bread with olive oil
+SOURDOUGH | Bread leavened with a natural starter
+RYE | Grain used in dark bread
+PUMPERNICKEL | Dense dark German rye bread
+NAAN | Leavened Indian flatbread
+PITTA | Pocket flatbread
+TORTILLA | Thin Mexican flatbread
+CHAPATI | Unleavened Indian flatbread
+CRUMPET | Spongy griddle cake with holes
+MUFFIN | Small cake baked in a cup
+SCONE | Small British cake served with jam and cream
+DOUGHNUT | Fried ring of sweet dough
+CHURRO | Fried Spanish dough stick dusted with sugar
+BEIGNET | New Orleans fried pastry
+ECLAIR | Long choux pastry with chocolate icing
+PROFITEROLE | Cream-filled choux bun
+CANNOLI | Sicilian tube pastry filled with ricotta
+STRUDEL | Layered pastry, often filled with apple
+DANISH | Sweet pastry with fruit or custard
+MERINGUE | Baked whipped egg white and sugar
+PAVLOVA | Meringue dessert named after a ballerina
+TRIFLE | Layered dessert of sponge, custard and cream
+CUSTARD | Sweet sauce of milk and egg yolks
+CREMEBRULEE | Custard with a burnt sugar top (5,6)
+FLAN | Caramel custard
+MOUSSE | Light, airy dessert
+CHEESECAKE | Dessert with a biscuit base and creamy filling
+BROWNIE | Dense chocolate square
+COOKIE | Biscuit, in the US
+SHORTBREAD | Buttery Scottish biscuit
+GINGERBREAD | Spiced cake shaped into houses and men
+FUDGE | Soft sugary confection
+TOFFEE | Chewy confection of caramelised sugar
+CARAMEL | Cooked sugar with a golden colour
+MARZIPAN | Almond paste
+NOUGAT | Chewy sweet with nuts
+PRALINE | Nut and caramel confection
+GELATO | Italian ice cream
+SUNDAE | Ice cream with toppings
+MILKSHAKE | Blended drink of milk and ice cream
+SMOOTHIE | Blended fruit drink
+POPSICLE | Ice lolly, in the US
+JELLY | Wobbly set dessert
+CRUMBLE | Baked fruit with a crumbly topping
+COBBLER | Fruit dessert with a biscuit topping
+TART | Open pastry case with filling
+PIE | Baked dish with a pastry crust
+CREPE | Thin French pancake
+BLINI | Small Russian pancake served with caviar
+OATMEAL | Porridge, in the US
+PORRIDGE | Hot cereal of oats
+GRANOLA | Toasted oat and nut breakfast
+MUESLI | Swiss breakfast of oats and fruit
+CORNFLAKES | Breakfast cereal invented by the Kellogg brothers
+BACON | Cured strips of pork
+SAUSAGE | Minced meat in a casing
+HAM | Cured leg of pork
+SALAMI | Cured Italian sausage
+PEPPERONI | Spicy sausage on pizza
+CHORIZO | Spanish paprika sausage
+PROSCIUTTO | Italian dry-cured ham
+PANCETTA | Italian cured pork belly
+STEAK | Thick slice of beef
+SIRLOIN | Cut of beef from the loin
+BRISKET | Cut of beef often smoked
+MEATBALL | Ball of minced meat
+BURGER | Patty in a bun
+HOTDOG | Frankfurter in a bun (3,3)
+KEBAB | Skewered meat
+SHAWARMA | Spit-roasted meat wrapped in flatbread
+GYRO | Greek wrap of meat from a vertical spit
+SCHNITZEL | Breaded fried cutlet
+MEATLOAF | Baked loaf of minced meat
+STEW | Slow-cooked dish of meat and vegetables
+CASSEROLE | Dish baked slowly in the oven
+CHILLICONCARNE | Spicy dish of beef and beans
+LAMB | Meat of a young sheep
+VENISON | Deer meat
+VEAL | Meat from a calf
+POULTRY | Chickens, ducks and turkeys as food
+PRAWN | Shellfish served in cocktails
+OYSTER | Shellfish eaten raw
+MUSSELS | Shellfish of moules marinières
+CALAMARI | Fried squid rings
+CAVIAR | Salted sturgeon eggs
+SASHIMI | Sliced raw fish
+TEMPURA | Japanese battered fried food
+TERIYAKI | Japanese glazed grilling style
+UDON | Thick Japanese wheat noodle
+SOBA | Japanese buckwheat noodle
+MISO | Fermented soybean paste
+GYOZA | Japanese pan-fried dumpling
+BENTO | Japanese boxed lunch
+ONIGIRI | Japanese rice ball
+DIMSUM | Cantonese small dishes (3,3)
+WONTON | Chinese dumpling in soup
+CHOWMEIN | Stir-fried noodles (4,4)
+PADTHAI | Thai stir-fried rice noodles (3,4)
+SATAY | Skewered meat with peanut sauce
+PHO | Vietnamese noodle soup
+BANHMI | Vietnamese baguette sandwich (4,2)
+LAKSA | Spicy noodle soup of Malaysia
+RENDANG | Slow-cooked spicy Indonesian beef
+BIRYANI | Layered spiced rice dish
+TANDOORI | Cooked in a clay oven
+TIKKA | Marinated chunks cooked on skewers
+KORMA | Mild, creamy curry
+VINDALOO | Fiery curry of Goan origin
+DAL | Indian lentil dish
+SAMOSA | Fried triangular pastry
+PAKORA | Indian vegetable fritter
+PANEER | Indian fresh cheese
+CHAI | Spiced Indian tea
+LASSI | Indian yogurt drink
+GHEE | Clarified butter
+SHAKSHUKA | Eggs poached in spiced tomato sauce
+TABBOULEH | Bulgur and parsley salad
+COUSCOUS | Tiny steamed semolina grains
+TAGINE | Moroccan stew, or its conical pot
+MOUSSAKA | Greek layered aubergine bake
+SOUVLAKI | Greek grilled skewers
+FETA | Greek brined cheese
+HALLOUMI | Squeaky grilling cheese from Cyprus
+MOZZARELLA | Soft cheese on pizza
+PARMESAN | Hard Italian grating cheese
+RICOTTA | Soft Italian whey cheese
+GORGONZOLA | Italian blue cheese
+MASCARPONE | Creamy cheese in tiramisu
+BRIE | Soft French cheese with a white rind
+CAMEMBERT | Soft cheese from Normandy
+ROQUEFORT | French blue cheese from sheep's milk
+GRUYERE | Swiss cheese used in fondue
+EMMENTAL | Swiss cheese with holes
+GOUDA | Dutch cheese with a waxy rind
+EDAM | Dutch cheese in a red coat
+STILTON | English blue cheese
+MANCHEGO | Spanish sheep's cheese
+FONDUE | Melted cheese for dipping
+RACLETTE | Swiss melted cheese scraped onto potatoes
+TAPAS | Spanish small plates
+GAZPACHO | Cold Spanish tomato soup
+EMPANADA | Stuffed pastry turnover
+ENCHILADA | Rolled tortilla baked in sauce
+QUESADILLA | Grilled tortilla with cheese
+TAMALE | Corn dough steamed in a husk
+FAJITA | Sizzling strips of meat in a tortilla
+CEVICHE | Raw fish cured in citrus juice
+MOLE | Rich Mexican sauce that can contain chocolate
+POUTINE | Canadian chips with gravy and cheese curds
+JAMBALAYA | Louisiana rice dish
+GUMBO | Louisiana stew thickened with okra
+CHOWDER | Thick seafood soup
+BORSCHT | Beetroot soup of Eastern Europe
+PIEROGI | Polish filled dumplings
+SAUERKRAUT | Fermented cabbage
+BRATWURST | German sausage
+STROGANOFF | Beef in a sour cream sauce
+HAGGIS | Scottish dish of offal and oats
+YORKSHIRE | ___ pudding, served with roast beef
+SHEPHERDS | ___ pie, made with lamb mince
+CRISPS | Thin fried potato slices, in the UK
+FRIES | Chips, in the US
+HASHBROWN | Fried grated potato cake
+RAREBIT | Welsh cheese on toast
+KEDGEREE | Rice dish with smoked fish and egg
+RATATOUILLE | Provençal vegetable stew
+BOUILLABAISSE | Fish stew from Marseille
+CASSOULET | French bean and meat stew
+COQAUVIN | Chicken braised in red wine (3,2,3)
+ESCARGOT | Snails, French style
+SOUFFLE | Puffed baked egg dish
+TERRINE | Coarse pâté set in a dish
+PATE | Spreadable paste of meat or fish
+QUINOA | Protein-rich seed eaten as a grain
+BARLEY | Grain used in soups and beer
+OATS | Grain used for porridge
+WHEAT | Grain milled into most flour
+RICE | Staple grain of much of Asia
+BASMATI | Fragrant long-grain rice
+ARBORIO | Short-grain rice for risotto
+POLENTA | Italian cornmeal dish
+SEMOLINA | Coarse durum wheat flour
+FLOUR | Powder milled from grain
+YEAST | Fungus that makes bread rise
+SUGAR | Sweetener from cane or beet
+SALT | Seasoning of sodium chloride
+BUTTER | Dairy spread churned from cream
+CREAM | Fatty part of milk
+MILK | White drink from cows
+EGG | Breakfast item laid by a hen
+CHEESE | Food made from curdled milk
+MARGARINE | Butter substitute
+LARD | Rendered pork fat
+SYRUP | Thick sweet liquid
+TREACLE | Dark syrup used in tarts
+MOLASSES | Dark syrup from sugar refining
+MAPLE | Tree whose sap makes a famous syrup
+ALMOND | Nut used in marzipan
+CASHEW | Kidney-shaped nut
+PEANUT | Legume eaten as a nut
+PISTACHIO | Green nut in a split shell
+WALNUT | Wrinkly nut
+HAZELNUT | Nut in Nutella
+PECAN | Nut in a classic American pie
+MACADAMIA | Rich Australian nut
+CHESTNUT | Nut roasted on an open fire
+COFFEE | Drink brewed from roasted beans
+LATTE | Coffee with steamed milk
+CAPPUCCINO | Espresso topped with foamed milk
+MOCHA | Coffee with chocolate
+AMERICANO | Espresso diluted with hot water
+MACCHIATO | Espresso marked with milk foam
+TEA | Drink brewed from leaves
+MATCHA | Powdered Japanese green tea
+EARLGREY | Tea flavoured with bergamot (4,4)
+CHAMOMILE | Herbal tea for sleep
+COCOA | Hot chocolate drink
+JUICE | Squeezed fruit drink
+SODA | Fizzy soft drink
+COLA | Caramel-coloured fizzy drink
+KOMBUCHA | Fermented tea drink
+WINE | Drink made from fermented grapes
+CHAMPAGNE | French sparkling wine
+PROSECCO | Italian sparkling wine
+MERLOT | Soft red wine grape
+SHIRAZ | Spicy red grape, also called syrah
+RIESLING | Aromatic white grape of Germany
+CHARDONNAY | Popular white wine grape
+SHERRY | Fortified wine from Jerez
+PORT | Fortified wine from the Douro valley
+BEER | Brewed drink of malt and hops
+ALE | Top-fermented beer
+LAGER | Pale bottom-fermented beer
+STOUT | Dark beer such as Guinness
+CIDER | Drink made from fermented apples
+SAKE | Japanese rice wine
+WHISKY | Spirit distilled from malted grain
+VODKA | Clear spirit from Russia and Poland
+GIN | Spirit flavoured with juniper
+RUM | Spirit made from sugar cane
+TEQUILA | Mexican spirit from agave
+BRANDY | Spirit distilled from wine
+MOJITO | Cuban cocktail with mint and rum
+MARGARITA | Tequila cocktail with lime
+MARTINI | Cocktail of gin and vermouth
+NEGRONI | Bitter Italian cocktail
+SANGRIA | Spanish wine punch with fruit
+ROAST | Cook in the oven with dry heat
+BAKE | Cook bread or cakes in an oven
+GRILL | Cook under or over direct heat
+FRY | Cook in hot oil
+SAUTE | Fry quickly in a little fat
+BOIL | Cook in bubbling water
+SIMMER | Cook just below boiling
+POACH | Cook gently in liquid
+STEAM | Cook with water vapour
+BRAISE | Brown then cook slowly in liquid
+BLANCH | Plunge briefly into boiling water
+MARINATE | Soak in a flavourful liquid
+KNEAD | Work dough with the hands
+WHISK | Beat air into eggs or cream
+FLAMBE | Set alight with alcohol
+SOUSVIDE | Cooking vacuum-sealed food in a water bath (4,4)
+SPATULA | Flat utensil for flipping
+LADLE | Deep spoon for serving soup
+COLANDER | Bowl with holes for draining
+GRATER | Tool for shredding cheese
+ROLLINGPIN | Tool for flattening pastry (7,3)
+SKILLET | Frying pan
+WOK | Bowl-shaped pan for stir-frying
+CAULDRON | Large cooking pot
+OVEN | Appliance for baking
+CHEF | Professional cook
+SOMMELIER | Wine waiter
+MENU | List of dishes
+APPETISER | Starter
+ENTREE | Main course, in the US
+DESSERT | Sweet course
+BRUNCH | Late morning meal
+PICNIC | Meal eaten outdoors
+BUFFET | Self-service spread
+UMAMI | Savoury fifth taste
+GOURMET | Connoisseur of good food
+VEGAN | Eating no animal products
+VEGETARIAN | Eating no meat
+GLUTEN | Protein in wheat
+CROUTON | Cube of fried bread in soup or salad
+BRUSCHETTA | Toasted bread topped with tomato and basil
+ANTIPASTO | Italian starter of cured meats and pickles
+MINESTRONE | Italian vegetable soup
+OSSOBUCO | Braised veal shanks from Milan
+PANNACOTTA | Italian set cream dessert (5,5)
+AFFOGATO | Ice cream drowned in espresso
+SCAMPI | Breaded langoustine tails
+KIPPER | Smoked herring
+ANGELCAKE | Light sponge made with egg whites (5,4)
+BATTENBERG | Chequered sponge wrapped in marzipan
+MADELEINE | Shell-shaped French sponge cake
+FINANCIER | Small French almond cake
+CLAFOUTIS | Baked French batter with cherries
+TARTETATIN | Upside-down caramelised apple tart (5,5)
+BAKEWELL | English almond tart named after a Derbyshire town
+CORNBREAD | Southern American bread made from maize
+GRITS | Ground corn porridge of the American South
+BISCOTTI | Twice-baked Italian almond biscuits
+AMARETTO | Almond-flavoured Italian liqueur
+LIMONCELLO | Lemon liqueur from southern Italy
+HORCHATA | Sweet drink of rice or tiger nuts
+TEMPEH | Fermented soybean cake from Indonesia
+SEITAN | Wheat gluten used as a meat substitute
+SPIRULINA | Blue-green algae sold as a supplement
+CHOCOLATIER | Maker of fine chocolates
+PATISSERIE | French pastry shop
+BOULANGERIE | French bakery
+DELICATESSEN | Shop selling cooked meats and cheeses

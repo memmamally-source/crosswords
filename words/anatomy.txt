@@ -1,0 +1,46 @@
+# Human Anatomy — one entry per line: ANSWER | clue
+FEMUR | Thigh bone, the body's longest
+CRANIUM | Part of the skull that encloses the brain
+AORTA | Body's largest artery
+CORTEX | Outer layer of the brain
+NEURON | Nerve cell
+TENDON | Tissue joining muscle to bone
+LIGAMENT | Tissue joining bone to bone
+PANCREAS | Gland behind the stomach that regulates blood sugar
+LIVER | Largest internal organ
+DIAPHRAGM | Dome-shaped muscle used in breathing
+RETINA | Light-sensitive layer at the back of the eye
+COCHLEA | Spiral cavity of the inner ear
+HEMOGLOBIN | Oxygen-carrying protein in red blood cells
+ALVEOLI | Tiny air sacs in the lungs
+SPLEEN | Blood-filtering organ beside the stomach
+THYROID | Gland in the neck that regulates metabolism
+CLAVICLE | Collarbone
+STERNUM | Breastbone
+PATELLA | Kneecap
+ESOPHAGUS | Tube that carries food to the stomach
+KIDNEY | Bean-shaped organ that makes urine
+CARTILAGE | Flexible tissue in the nose and ears
+VERTEBRA | Single bone of the spine
+PLATELET | Cell fragment that helps blood clot
+CAPILLARY | Smallest type of blood vessel
+INSULIN | Hormone that lowers blood sugar
+MITOCHONDRIA | The "powerhouse of the cell"
+RIBOSOME | Cell structure that builds proteins
+HIPPOCAMPUS | Brain region vital for forming memories
+TIBIA | Shinbone
+HUMERUS | Upper arm bone
+SCAPULA | Shoulder blade
+PELVIS | Basin-shaped ring of bones at the hips
+ULNA | Forearm bone on the little-finger side
+CEREBELLUM | Brain region that coordinates balance and movement
+APPENDIX | Small pouch off the large intestine
+GALLBLADDER | Organ that stores bile
+TRACHEA | Windpipe
+LARYNX | Voice box
+IRIS | Coloured part of the eye
+CORNEA | Clear front surface of the eye
+BICEPS | Muscle at the front of the upper arm
+MANDIBLE | Lower jawbone
+PITUITARY | Pea-sized "master gland" at the base of the brain
+ADRENALINE | Hormone behind the fight-or-flight response

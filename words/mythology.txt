@@ -1,0 +1,46 @@
+# Myths & Legends — one entry per line: ANSWER | clue
+ZEUS | King of the Greek gods
+THOR | Hammer-wielding Norse god of thunder
+ATHENA | Greek goddess of wisdom
+POSEIDON | Greek god of the sea
+HERCULES | Hero famed for his twelve labours (Roman name)
+MEDUSA | Gorgon whose gaze turned people to stone
+ODIN | One-eyed chief of the Norse gods
+PEGASUS | Winged horse of Greek myth
+MINOTAUR | Half-man, half-bull of the Labyrinth
+PHOENIX | Bird reborn from its own ashes
+OLYMPUS | Mountain home of the Greek gods
+ACHILLES | Hero whose only weak spot was his heel
+HADES | Greek ruler of the underworld
+LOKI | Shape-shifting Norse trickster
+CENTAUR | Half-human, half-horse
+ANUBIS | Jackal-headed Egyptian god of the dead
+ISIS | Egyptian goddess of magic and healing
+VALHALLA | Hall of slain warriors in Norse myth
+CYCLOPS | One-eyed giant
+SPHINX | Riddling creature with a lion's body
+TITAN | One of the elder gods who ruled before the Olympians
+HYDRA | Many-headed serpent: cut one off, two grow back
+ODYSSEUS | Wily Greek hero of the wooden horse and a ten-year voyage
+TROY | City besieged with the help of a wooden horse
+NYMPH | Nature spirit of Greek myth
+ARES | Greek god of war
+ARTEMIS | Greek goddess of the hunt, twin of Apollo
+MERMAID | Half-woman, half-fish of sea legend
+PROMETHEUS | Elder god who stole fire for humanity
+DRAGON | Fire-breathing winged reptile of legend
+AMATERASU | Sun goddess of Japanese Shinto
+OSIRIS | Egyptian god of the afterlife
+APHRODITE | Greek goddess of love
+HERMES | Messenger god with winged sandals
+PERSEUS | Hero who beheaded a gorgon
+ICARUS | Flew too close to the Sun on wings of wax
+PANDORA | Opened a jar that released the world's evils
+FREYA | Norse goddess of love and fertility
+GRIFFIN | Lion-eagle hybrid
+KRAKEN | Giant sea monster of Scandinavian legend
+EXCALIBUR | King Arthur's sword
+BANSHEE | Wailing spirit of Irish folklore
+GOLEM | Clay figure brought to life in Jewish folklore
+JASON | Leader of the Argonauts
+MIDAS | King whose touch turned things to gold

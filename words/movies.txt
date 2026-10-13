@@ -1,0 +1,47 @@
+# Movies & TV — one entry per line: ANSWER | clue
+TITANIC | 1997 film about a doomed ocean liner
+JAWS | Spielberg's 1975 shark thriller
+AVATAR | James Cameron film set on the moon Pandora
+FROZEN | Disney film featuring the song "Let It Go"
+GODFATHER | Coppola's mafia epic, "The ___"
+ROCKY | Boxer played by Sylvester Stallone
+MATRIX | Film in which Neo takes the red pill, "The ___"
+GOLLUM | Ring-obsessed creature who says "my precious"
+HOGWARTS | School of witchcraft attended by Harry Potter
+VADER | Darth ___, Sith lord in the black helmet
+YODA | Small green Jedi master
+SIMPSONS | Animated family from Springfield, "The ___"
+FRIENDS | TV comedy whose gang hangs out at Central Perk
+SITCOM | Situation comedy
+SEQUEL | Follow-up film
+TRAILER | Short preview of an upcoming film
+DIRECTOR | Person who calls "Action!"
+CAMEO | Brief appearance by a famous person
+SCREENPLAY | Script for a film
+PIXAR | Animation studio behind Toy Story
+NEMO | Lost clownfish of a 2003 animated film
+SHERLOCK | Baker Street detective played by Benedict Cumberbatch
+JOKER | Batman's grinning arch-enemy
+GANDALF | Wizard who says "You shall not pass!"
+WAKANDA | Hidden African nation in Black Panther
+MINIONS | Yellow henchmen from Despicable Me
+DORY | Forgetful blue tang voiced by Ellen DeGeneres
+PREMIERE | First public showing of a film
+BLOCKBUSTER | Huge box-office hit
+SPOILER | Plot reveal for someone who hasn't watched yet
+INCEPTION | Nolan film about stealing secrets through dreams
+JURASSIC | ___ Park, Spielberg's dinosaur adventure
+CASABLANCA | 1942 classic: "Here's looking at you, kid"
+GOONIES | 1985 kids' treasure-hunt film, "The ___"
+OPPENHEIMER | 2023 biopic of the physicist behind the atomic bomb
+ENCANTO | Disney film about the magical Madrigal family
+MOANA | Polynesian heroine who sails beyond the reef
+SKYWALKER | Surname of Luke and Anakin
+STUNTMAN | Performer who does dangerous scenes in place of a star
+BLOOPER | Funny mistake shown in an outtake reel
+REMAKE | New version of an older film
+DOCUMENTARY | Non-fiction film
+ANIME | Japanese style of animation
+SUBTITLES | On-screen translation of dialogue
+CINEMA | Place to watch films on a big screen
+POPCORN | Classic snack at the pictures

@@ -1,0 +1,48 @@
+# Philosophy — one entry per line: ANSWER | clue
+SOCRATES | Athenian philosopher sentenced to drink hemlock
+PLATO | Author of The Republic
+ARISTOTLE | Philosopher who tutored Alexander the Great
+DESCARTES | "I think, therefore I am" philosopher
+KANT | German philosopher of the categorical imperative
+NIETZSCHE | Philosopher who proclaimed "God is dead"
+ETHICS | Branch of philosophy concerned with right and wrong
+LOGIC | Study of valid reasoning
+METAPHYSICS | Study of the fundamental nature of reality
+EPISTEMOLOGY | Theory of knowledge
+STOICISM | School of Epictetus and Marcus Aurelius
+NIHILISM | Belief that life lacks inherent meaning
+EMPIRICISM | View that knowledge comes from sensory experience
+DIALECTIC | Reasoning through thesis, antithesis and synthesis
+SYLLOGISM | Argument with two premises and a conclusion
+PARADOX | Seemingly self-contradictory statement
+HUME | Scottish empiricist who questioned causation
+LOCKE | English thinker who called the newborn mind a "blank slate"
+HOBBES | Author of Leviathan: life is "nasty, brutish, and short"
+SARTRE | French existentialist who wrote Being and Nothingness
+CONFUCIUS | Chinese sage of the Analects
+AXIOM | Statement accepted as true without proof
+DUALISM | View that mind and body are distinct substances
+ONTOLOGY | Study of being and existence
+SOPHIST | Paid teacher of rhetoric in ancient Greece
+TELOS | Greek term for an ultimate purpose or end
+AESTHETICS | Branch of philosophy dealing with beauty and art
+RATIONALISM | View that reason is the chief source of knowledge
+UTOPIA | Thomas More's ideal island society
+EXISTENTIALISM | Philosophy that "existence precedes essence"
+ZENO | Greek thinker who argued that motion is impossible
+SPINOZA | Dutch philosopher who equated God with nature
+MACHIAVELLI | Florentine author of The Prince
+ROUSSEAU | Author of The Social Contract
+DIOGENES | Cynic said to have lived in a large jar in Athens
+EPICURUS | Greek who taught that pleasure is the absence of pain
+WITTGENSTEIN | Austrian author of the Tractatus Logico-Philosophicus
+HEGEL | German idealist who wrote Phenomenology of Spirit
+KIERKEGAARD | Danish author of Fear and Trembling
+MILL | John Stuart ___, author of On Liberty
+CAMUS | Author of The Myth of Sisyphus
+BEAUVOIR | Simone de ___, author of The Second Sex
+TAO | "The Way" in the teaching of Laozi
+KARMA | Moral law of cause and effect in Indian thought
+CATHARSIS | Emotional release through art, especially tragedy
+VIRTUE | Moral excellence
+SOLIPSISM | View that only one's own mind is sure to exist

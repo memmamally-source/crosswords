@@ -1,0 +1,42 @@
+# Chemistry — one entry per line: ANSWER | clue
+ELEMENT | Substance that can't be broken down chemically
+COMPOUND | Substance like water, made of bonded atoms of different kinds
+NOBLEGAS | Unreactive gas such as neon or argon (5,3)
+HALOGEN | Group 17 member such as chlorine
+ALKANE | Saturated hydrocarbon such as methane
+BENZENE | Six-carbon aromatic ring
+POLYMER | Long chain of repeating units, like nylon
+OXIDATION | Loss of electrons
+REDUCTION | Gain of electrons
+ELECTROLYSIS | Splitting a substance using an electric current
+MOLE | SI unit of amount of substance
+AVOGADRO | Italian whose constant is about 6.022 × 10²³
+MENDELEEV | Russian who arranged the periodic table in 1869
+VALENCE | Combining capacity of an atom
+COVALENT | Kind of bond formed by sharing electron pairs
+IONIC | Kind of bond formed by transferring electrons
+CATION | Positively charged ion
+ANION | Negatively charged ion
+ISOMER | Molecule with the same formula but a different structure
+SOLVENT | Liquid that dissolves a solute
+PRECIPITATE | Solid that falls out of a solution
+DISTILLATION | Separating liquids by their boiling points
+ENTHALPY | Heat content of a system
+ENTROPY | Measure of disorder
+EXOTHERMIC | Releasing heat
+BUFFER | Solution that resists changes in pH
+SODIUM | Na on the periodic table
+POTASSIUM | K on the periodic table
+MERCURY | Liquid metal with the symbol Hg
+TUNGSTEN | Metal with the highest melting point, symbol W
+HELIUM | Second-lightest gas on the periodic table
+NITROGEN | Gas that makes up about 78% of the air
+ALLOY | Mixture of metals, such as bronze
+CRYSTAL | Solid with a regular repeating lattice
+REAGENT | Substance used to bring about a reaction
+BUNSEN | ___ burner, a lab gas heater
+PIPETTE | Slim tube for measuring small volumes of liquid
+BEAKER | Lab glass with a lip for pouring
+ESTER | Fruity-smelling product of an acid and an alcohol
+CURIE | Marie ___, discoverer of polonium and radium
+LAVOISIER | Frenchman called the father of modern chemistry

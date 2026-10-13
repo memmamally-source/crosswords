@@ -1,0 +1,41 @@
+# Physics — one entry per line: ANSWER | clue
+QUANTUM | Discrete packet of energy
+RELATIVITY | Theory linking space and time, special or general
+EINSTEIN | Physicist of E = mc²
+MOMENTUM | Mass times velocity
+ACCELERATION | Rate of change of velocity
+TORQUE | Rotational force
+JOULE | SI unit of energy
+WATT | SI unit of power
+VOLT | Unit of electrical potential difference
+OHM | Unit of electrical resistance
+AMPERE | SI unit of electric current
+HERTZ | Unit equal to one cycle per second
+KELVIN | Temperature scale that starts at absolute zero
+FREQUENCY | Number of wave cycles per second
+AMPLITUDE | Height of a wave from its rest position
+REFRACTION | Bending of light as it passes between media
+DIFFRACTION | Spreading of waves around an obstacle
+DOPPLER | ___ effect: the changing pitch of a passing siren
+QUARK | Fundamental particle inside protons and neutrons
+BOSON | Force-carrying particle, such as the Higgs
+NEUTRINO | Nearly massless particle that rarely interacts
+FARADAY | Discoverer of electromagnetic induction
+MAXWELL | Scot whose equations unified electricity and magnetism
+BOHR | Dane who modelled the atom with electron shells
+FEYNMAN | American physicist famous for his diagrams
+HEISENBERG | Physicist of the uncertainty principle
+SCHRODINGER | Physicist whose thought experiment involves a cat in a box
+PENDULUM | Swinging weight used to keep time
+FULCRUM | Pivot point of a seesaw
+LEVER | Simple machine that turns on a pivot
+VACUUM | Space devoid of matter
+SPECTRUM | Band of colours produced by a prism
+RADIATION | Energy emitted as waves or particles
+INSULATOR | Material that resists the flow of heat or electricity
+CENTRIPETAL | Describing a force directed toward the centre of a circular path
+ENTANGLEMENT | Spooky link between distant particles
+HALFLIFE | Time for half of a radioactive sample to decay (4-4)
+FISSION | Splitting of a heavy nucleus
+GALVANOMETER | Instrument for detecting small electric currents
+INERTIAL | Describing a frame of reference that is not accelerating

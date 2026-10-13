@@ -1,0 +1,41 @@
+# Language & Linguistics — one entry per line: ANSWER | clue
+ETYMOLOGY | Study of word origins
+PHONEME | Smallest unit of sound that distinguishes meaning
+MORPHEME | Smallest meaningful unit of language
+SEMANTICS | Study of meaning
+PRAGMATICS | Study of meaning in context
+DIALECT | Regional variety of a language
+LEXICON | Vocabulary of a language
+GRAMMAR | Rules of how a language works
+VERB | Action word
+NOUN | Naming word
+ADJECTIVE | Describing word
+ADVERB | Word such as 'quickly' or 'very'
+PRONOUN | Word such as 'she', 'they' or 'it'
+CONJUNCTION | Joining word such as 'and' or 'but'
+PREPOSITION | Word such as 'under' or 'after'
+SYNONYM | Word with the same meaning as another
+ANTONYM | Word with the opposite meaning
+HOMOPHONE | Word that sounds like another but differs in meaning
+PALINDROME | Word that reads the same backwards
+ANAGRAM | Word made by rearranging letters
+ONOMATOPOEIA | Word that imitates a sound, like 'buzz'
+OXYMORON | Contradictory phrase such as 'deafening silence'
+EUPHEMISM | Mild word used in place of a harsh one
+IDIOM | Phrase whose meaning isn't literal
+SANSKRIT | Classical language of ancient India
+LATIN | Language of ancient Rome
+ESPERANTO | Constructed language created by Zamenhof
+CREOLE | Language that grew from a mix of others
+PIDGIN | Simplified contact language
+ALPHABET | Ordered set of letters
+CUNEIFORM | Wedge-shaped writing of Mesopotamia
+HIEROGLYPH | Egyptian picture symbol
+ROSETTA | ___ Stone, key to deciphering Egyptian writing
+CHOMSKY | Linguist who proposed a language acquisition device
+DIPHTHONG | Gliding vowel sound, as in 'coin'
+SYLLABLE | Unit of pronunciation with one vowel sound
+PREFIX | Element added to the start of a word
+SUFFIX | Element added to the end of a word
+TENSE | Grammatical marking of past, present or future
+CLAUSE | Group of words with a subject and predicate

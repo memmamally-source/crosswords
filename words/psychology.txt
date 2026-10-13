@@ -1,0 +1,39 @@
+# Psychology — one entry per line: ANSWER | clue
+FREUD | Austrian father of the "talking cure"
+JUNG | Swiss psychiatrist of the collective unconscious
+PAVLOV | Physiologist whose dogs drooled at a bell
+SKINNER | Behaviourist who trained pigeons in a box
+PIAGET | Swiss theorist of child cognitive development
+MASLOW | Psychologist of the hierarchy of needs
+EGO | Psychoanalytic mediator between the id and conscience
+SUPEREGO | Psychoanalytic seat of conscience
+PSYCHOANALYSIS | Therapy built on free association and dream interpretation
+CONDITIONING | Learning through association or reward
+COGNITION | Mental processes of knowing and thinking
+PHOBIA | Irrational, intense fear
+EMPATHY | Ability to share another's feelings
+INTROVERT | Person recharged by time alone
+EXTROVERT | Outgoing, sociable person
+PLACEBO | Inert treatment that can still make patients feel better
+STIMULUS | Something that provokes a response
+HEURISTIC | Mental shortcut for making decisions
+BIAS | Systematic tilt in judgement
+DISSONANCE | Cognitive ___: discomfort from conflicting beliefs
+AMNESIA | Loss of memory
+INSOMNIA | Inability to sleep
+DOPAMINE | Neurotransmitter linked to reward
+SEROTONIN | Neurotransmitter linked to mood
+HYPNOSIS | Trance-like state of heightened suggestibility
+NARCISSISM | Excessive self-love
+ARCHETYPE | Universal symbol or pattern, such as the trickster
+MILGRAM | Psychologist of the obedience experiments
+NATURE | ___ versus nurture
+DEJAVU | Feeling that you've lived a moment before (4,2)
+REPRESSION | Pushing painful memories out of awareness
+ATTACHMENT | Bowlby's theory of early emotional bonds
+MOTIVATION | Drive behind behaviour
+PERCEPTION | Interpretation of sensory information
+SCHEMA | Mental framework for organising knowledge
+RORSCHACH | Inkblot test
+NEUROPLASTICITY | Brain's ability to rewire itself
+ANXIETY | Persistent worry or unease

@@ -1,0 +1,46 @@
+# Advanced Vocabulary — one entry per line: ANSWER | clue
+EPHEMERAL | Lasting a very short time
+UBIQUITOUS | Found everywhere
+LOQUACIOUS | Very talkative
+SERENDIPITY | Happy accident
+OBFUSCATE | Make deliberately unclear
+PERFUNCTORY | Done with minimal effort or care
+SYCOPHANT | Servile flatterer
+MELLIFLUOUS | Sweet and smooth-sounding
+PERNICIOUS | Harmful in a gradual or subtle way
+LACONIC | Using very few words
+GREGARIOUS | Fond of company; sociable
+ESOTERIC | Understood only by a select few
+CACOPHONY | Harsh, jarring mixture of sounds
+QUIXOTIC | Idealistic to the point of impracticality
+PRAGMATIC | Practical rather than idealistic
+TACITURN | Reserved; saying little
+VERBOSE | Using more words than needed
+ALACRITY | Brisk and cheerful readiness
+ENIGMA | Puzzling person or thing
+ZEALOT | Fanatical supporter
+ERUDITE | Having great learning
+FASTIDIOUS | Very attentive to accuracy and detail
+NEFARIOUS | Wicked or criminal
+OSTENSIBLE | Stated or appearing to be true, but perhaps not
+PARADIGM | Typical model or pattern
+RECALCITRANT | Stubbornly uncooperative
+VERACITY | Truthfulness
+BENEVOLENT | Kindly and well-meaning
+DILIGENT | Hard-working and careful
+SANGUINE | Optimistic, especially in a difficult situation
+PITHY | Concise and full of meaning
+TERSE | Brief to the point of curtness
+QUELL | Put an end to, as a rebellion
+AUGUR | Foretell; or a Roman reader of omens
+ABATE | Become less intense
+CAJOLE | Persuade by gentle flattery
+DEARTH | Scarcity or lack
+EPOCH | Distinct period in history
+INANE | Silly and lacking sense
+MOROSE | Sullen and gloomy
+OPINE | State as a personal view
+PLACID | Calm and peaceful
+RUSE | Trick intended to deceive
+WANE | Gradually decrease, like the moon
+EGRESS | The act of going out; an exit

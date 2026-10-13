@@ -1,0 +1,505 @@
+# Sports Arena — one entry per line: ANSWER | clue
+SOCCER | Football, as it is called in the USA
+TENNIS | Sport played at Wimbledon
+MARATHON | Race of 26.2 miles
+BASKETBALL | Sport of hoops, layups and slam dunks
+CRICKET | Bat-and-ball game with wickets and overs
+GOLF | Sport of tees, fairways and birdies
+HOCKEY | Sport played with sticks and a puck on ice
+RUGBY | Sport with an oval ball, tries and scrums
+BOXING | Combat sport fought in a ring with gloves
+ARCHERY | Sport of shooting arrows at a target
+SURFING | Riding ocean waves on a board
+FENCING | Sport of swordplay with foils and sabres
+OLYMPICS | Global games held every four years
+VOLLEYBALL | Net sport of serves, sets and spikes
+REFEREE | Official who enforces the rules
+GOALIE | Player who guards the net
+SPRINT | Short, all-out race
+JUDO | Japanese martial art meaning "gentle way"
+TROPHY | Prize cup for the winner
+HURDLE | Barrier leapt in some track races
+ROWING | Racing a boat with oars
+BASEBALL | Sport played on a diamond with bases
+SKIING | Gliding downhill on snow
+BADMINTON | Racquet sport played with a shuttlecock
+DIVING | Plunging gracefully from a board into a pool
+CYCLING | Sport of the Tour de France
+MEDAL | Gold, silver or bronze award
+STADIUM | Large arena for sporting events
+KARATE | Martial art whose name means "empty hand"
+DRIBBLE | Move the ball along with short touches or bounces
+TRIATHLON | Endurance race in three disciplines
+JAVELIN | Spear thrown in athletics
+POLO | Sport played on horseback with mallets
+SNOOKER | Cue sport with fifteen reds
+WRESTLING | Grappling sport of pins and holds
+LACROSSE | Sport played with netted sticks
+DECATHLON | Ten-event athletics contest
+GYMNASTICS | Sport of vaults, beams and floor routines
+BOWLING | Knocking down ten pins
+SKATEBOARD | Wheeled board for tricks at a skate park
+PENALTY | Kick awarded for a foul in the box
+ESPORTS | Competitive video gaming
+SUMO | Japanese sport of heavyweight rikishi in a ring
+CAPTAIN | Leader of a team
+FOOTBALL | World's most popular team sport
+GOAL | Score in football or hockey
+STRIKER | Attacking football player
+MIDFIELDER | Football player linking defence and attack
+DEFENDER | Player who guards their own goal
+SWEEPER | Free defender behind the back line
+WINGER | Wide attacking player
+GOALKEEPER | Only player allowed to handle the ball in football
+OFFSIDE | Rule against loitering behind the defence
+CORNER | Kick taken from beside the flag
+THROWIN | Restart when the ball crosses the touchline (5-2)
+FREEKICK | Restart awarded for a foul (4,4)
+HEADER | Shot using the head
+VOLLEY | Strike before the ball touches the ground
+HATTRICK | Three goals by one player (3-5)
+NUTMEG | Pass the ball through an opponent's legs
+TACKLE | Challenge to win the ball
+REDCARD | Sending-off signal (3,4)
+YELLOWCARD | Caution shown by the referee (6,4)
+EXTRATIME | Thirty minutes added after a drawn knockout match (5,4)
+SHOOTOUT | Penalty ___, to decide a drawn match
+WORLDCUP | FIFA's four-yearly tournament (5,3)
+PREMIERLEAGUE | Top division of English football (7,6)
+WEMBLEY | London stadium of the FA Cup final
+MARACANA | Famous stadium in Rio de Janeiro
+PELE | Brazilian forward who won three World Cups
+MARADONA | Argentine star of the "Hand of God" goal
+MESSI | Argentine forward with a record eight Ballons d'Or
+RONALDO | Portuguese forward known as CR7
+CRUYFF | Dutch master of Total Football
+BECKHAM | English midfielder famed for free kicks
+ZIDANE | French playmaker of the 1998 World Cup final
+BATSMAN | Cricketer at the crease
+BOWLER | Cricketer who delivers the ball
+WICKET | Three stumps and two bails
+WICKETKEEPER | Fielder who stands behind the stumps
+STUMPS | Three upright sticks in cricket
+BAILS | Small pieces atop the stumps
+OVER | Six deliveries in cricket
+INNINGS | A team's turn to bat
+CENTURY | A hundred runs in cricket
+DUCK | Score of zero in cricket
+BOUNDARY | Hit that scores four or six
+YORKER | Ball aimed at the batter's feet
+GOOGLY | Leg-spinner's deceptive delivery
+SPINNER | Bowler who turns the ball
+LBW | Leg before wicket (abbr.)
+ASHES | Cricket series between England and Australia
+LORDS | London home of cricket
+TESTMATCH | Five-day international cricket fixture (4,5)
+BRADMAN | Australian batting legend with a 99.94 average
+TENDULKAR | Indian batting great nicknamed the Little Master
+SERVE | Shot that starts a tennis point
+ACE | Unreturnable serve
+DEUCE | Score of forty-all
+LOVE | Zero in tennis
+BACKHAND | Stroke played across the body
+FOREHAND | Stroke played on the racket-hand side
+LOB | High shot over the opponent
+SMASH | Overhead power shot
+DROPSHOT | Delicate shot that barely clears the net (4,4)
+TIEBREAK | Decider at six games all
+GRANDSLAM | Winning all four major titles (5,4)
+WIMBLEDON | Tennis championship on grass in London
+ROLANDGARROS | Paris clay-court Grand Slam (6,6)
+FEDERER | Swiss tennis star with eight Wimbledon titles
+NADAL | Spanish king of clay with fourteen French Open titles
+DJOKOVIC | Serbian with a record 24 Grand Slam singles titles
+SERENA | First name of a tennis great with 23 Grand Slam singles titles
+NAVRATILOVA | Tennis star with nine Wimbledon singles titles
+BORG | Swede who won five Wimbledons in a row
+FAIRWAY | Mown area between tee and green
+GREEN | Putting surface in golf
+BUNKER | Sand trap on a golf course
+TEE | Peg for a golf ball
+PUTT | Gentle stroke on the green
+PAR | Expected strokes for a golf hole
+BIRDIE | One under par
+BOGEY | One over par
+CADDIE | Golfer's bag carrier
+DRIVER | Golf club for long tee shots
+IRON | Golf club with a metal face
+WEDGE | Golf club for short lofted shots
+PUTTER | Golf club for the green
+HOLEINONE | Ace in golf (4,2,3)
+MASTERS | Golf major played at Augusta
+RYDERCUP | Golf contest between Europe and the US (5,3)
+WOODS | Tiger ___, winner of fifteen majors
+NICKLAUS | "Golden Bear" with eighteen majors
+HOMERUN | Hit that lets the batter circle the bases (4,3)
+PITCHER | Baseball player on the mound
+CATCHER | Baseball player behind home plate
+SHORTSTOP | Infielder between second and third base
+OUTFIELD | Area beyond the baseball infield
+DUGOUT | Team bench area in baseball
+STRIKEOUT | Three strikes and you're out
+BULLPEN | Warm-up area for relief pitchers
+INNING | Division of a baseball game
+WORLDSERIES | Championship of Major League Baseball (5,6)
+YANKEES | New York baseball team with the most titles
+BABERUTH | The Bambino, baseball's great slugger (4,4)
+DUNK | Slam the ball down through the hoop
+LAYUP | Close-range shot off the backboard
+REBOUND | Ball recovered after a missed shot
+ASSIST | Pass leading directly to a score
+THREEPOINTER | Shot from beyond the arc (5-7)
+FREETHROW | Unopposed shot after a foul (4,5)
+TRAVELLING | Taking too many steps with the ball
+LAKERS | Los Angeles basketball franchise
+CELTICS | Boston basketball franchise
+JORDAN | Michael ___, six-time NBA champion with the Bulls
+LEBRON | First name of the NBA's all-time leading scorer
+KOBE | First name of a Lakers legend nicknamed the Black Mamba
+TOUCHDOWN | Six-point score in American football
+QUARTERBACK | Player who calls plays and throws passes
+LINEBACKER | Defender behind the line of scrimmage
+FUMBLE | Dropped ball in American football
+ENDZONE | Scoring area in American football (3,4)
+SUPERBOWL | NFL championship game (5,4)
+HUDDLE | Team gathering before a play
+BRADY | Tom ___, quarterback with seven Super Bowl wins
+SCRUM | Rugby restart with packs bound together
+LINEOUT | Rugby throw-in between two lines of players
+TRY | Five-point score in rugby
+CONVERSION | Kick after a try
+HOOKER | Rugby forward in the middle of the front row
+FLYHALF | Rugby playmaker wearing number ten
+SIXNATIONS | Annual European rugby championship (3,7)
+ALLBLACKS | New Zealand's rugby team (3,6)
+HAKA | Maori challenge performed before matches
+KNOCKOUT | Win by flooring the opponent
+UPPERCUT | Upward punch
+JAB | Quick straight punch
+HOOK | Curved punch
+ROUND | Three-minute period in boxing
+RING | Square arena in boxing
+HEAVYWEIGHT | Top weight class in boxing
+ALI | "The Greatest", who could float like a butterfly
+TYSON | Mike ___, youngest heavyweight champion
+CORNERMAN | Boxer's assistant between rounds
+SPARRING | Practice fighting
+TAEKWONDO | Korean martial art of high kicks
+KUNGFU | Chinese martial arts (4,2)
+JUJITSU | Japanese grappling art
+AIKIDO | Japanese martial art that redirects force
+KENDO | Japanese sword fighting with bamboo
+DOJO | Martial arts training hall
+SENSEI | Martial arts teacher
+BLACKBELT | Highest rank in many martial arts (5,4)
+POOL | Cue sport on a table with six pockets
+BILLIARDS | Cue sport with three balls
+DARTS | Throwing sport with a bullseye
+BULLSEYE | Centre of a dartboard
+CHESS | Board game of kings and checkmates
+CHECKMATE | Winning move in chess
+GRANDMASTER | Highest chess title
+KASPAROV | Russian world chess champion who played Deep Blue
+CURLING | Sliding stones on ice toward a target
+BIATHLON | Skiing combined with rifle shooting
+BOBSLEIGH | Racing sled for teams
+LUGE | Feet-first sledding race
+SKELETON | Head-first sledding race
+SNOWBOARDING | Riding a single board down snowy slopes
+SLALOM | Ski race weaving between gates
+DOWNHILL | Fastest alpine ski race
+FIGURESKATING | Ice sport of jumps and spins (6,7)
+SPEEDSKATING | Racing on ice (5,7)
+AXEL | Skating jump with a forward takeoff
+ICEHOCKEY | Team sport with a puck (3,6)
+PUCK | Rubber disc in ice hockey
+STANLEYCUP | NHL championship trophy (7,3)
+GRETZKY | Canadian ice hockey's "Great One"
+POLEVAULT | Jump over a bar using a flexible pole (4,5)
+HIGHJUMP | Leap over a bar (4,4)
+LONGJUMP | Leap for distance into sand (4,4)
+TRIPLEJUMP | Hop, skip and jump (6,4)
+SHOTPUT | Throwing a heavy metal ball (4,3)
+DISCUS | Throwing event with a heavy disc
+HAMMER | Throwing event with a ball on a wire
+RELAY | Race in which team members pass a baton
+BATON | Stick passed in a relay
+STEEPLECHASE | Race over hurdles and a water jump
+HEPTATHLON | Seven-event women's athletics contest
+PENTATHLON | Five-event contest
+BOLT | Usain ___, world record holder at 100m
+OWENS | Jesse ___, four-time gold medallist in 1936
+FARAH | Mo ___, British long-distance champion
+FREESTYLE | Swimming stroke usually front crawl
+BUTTERFLY | Swimming stroke with a dolphin kick
+BACKSTROKE | Swimming stroke done on the back
+BREASTSTROKE | Swimming stroke with a frog kick
+MEDLEY | Race using all four strokes
+LANE | Swimmer's or runner's track
+PHELPS | Swimmer with 23 Olympic golds
+SYNCHRONISED | ___ swimming, now artistic swimming
+WATERPOLO | Team ball game in a pool (5,4)
+KAYAK | Narrow boat paddled with a double blade
+CANOE | Open boat paddled with a single blade
+SAILING | Racing boats powered by wind
+REGATTA | Series of boat races
+COXSWAIN | Person who steers a rowing boat
+OAR | Pole with a blade for rowing
+PEDAL | Foot lever on a bicycle
+PELOTON | Main pack of riders in a cycle race
+YELLOWJERSEY | Leader's shirt in the Tour de France (6,6)
+VELODROME | Banked track for cycling
+TOURDEFRANCE | Three-week cycle race (4,2,6)
+MOTORSPORT | Racing with engines
+FORMULAONE | Top class of single-seater racing (7,3)
+GRANDPRIX | Formula One race (5,4)
+PITLANE | Where cars stop for tyres (3,4)
+CHEQUEREDFLAG | Flag that ends a race (9,4)
+POLEPOSITION | First place on the starting grid (4,8)
+SCHUMACHER | Michael ___, seven-time F1 champion
+HAMILTON | Lewis ___, seven-time F1 champion
+SENNA | Brazilian F1 legend Ayrton
+NASCAR | American stock car racing body
+RALLY | Motor race on public or off-road stages
+JOCKEY | Rider in horse racing
+DERBY | Famous horse race at Epsom
+GRANDNATIONAL | Steeplechase at Aintree (5,8)
+FURLONG | Racing distance of an eighth of a mile
+DRESSAGE | Equestrian event of precise movements
+SHOWJUMPING | Equestrian event over fences
+EQUESTRIAN | Relating to horse riding
+GYMNAST | Athlete on beam and floor
+VAULT | Apparatus for springing over
+BEAM | Narrow apparatus in gymnastics
+RINGS | Hanging apparatus in men's gymnastics
+POMMELHORSE | Apparatus with two handles (6,5)
+TRAMPOLINE | Springy mat for bouncing
+BILES | Simone ___, most decorated gymnast
+COMANECI | First gymnast to score a perfect ten
+WEIGHTLIFTING | Sport of the snatch and the clean and jerk
+POWERLIFTING | Sport of squat, bench press and deadlift
+BODYBUILDING | Sport of muscular physique
+CLIMBING | Scaling walls or rocks
+BOULDERING | Climbing short routes without ropes
+SKYDIVING | Jumping from a plane
+PARAGLIDING | Flying with a fabric wing
+BUNGEE | Jump with an elastic cord
+WAKEBOARDING | Riding a board towed behind a boat
+WINDSURFING | Riding a board with a sail
+KITESURFING | Riding a board pulled by a kite
+SNORKELLING | Swimming with a breathing tube
+SCUBA | Diving with breathing apparatus
+ORIENTEERING | Navigating a course with map and compass
+PARKOUR | Moving through urban spaces by running and vaulting
+HANDBALL | Team sport of throwing into a goal
+NETBALL | Team sport with a high ring and no dribbling
+SOFTBALL | Game like baseball with a larger ball
+DODGEBALL | Game of throwing balls at opponents
+ULTIMATE | Team game with a flying disc
+FRISBEE | Flying disc
+TABLETENNIS | Ping-pong (5,6)
+SQUASH | Racket sport played in a walled court
+RACQUETBALL | Fast indoor racket sport
+PICKLEBALL | Paddle sport played with a perforated ball
+SHUTTLECOCK | Feathered projectile in badminton
+CROQUET | Lawn game with mallets and hoops
+BOCCE | Italian bowls
+PETANQUE | French game of throwing metal balls
+ATHLETE | Person who competes in sport
+COACH | Trainer of a team
+MANAGER | Boss of a football club
+UMPIRE | Official in cricket or baseball
+LINESMAN | Official watching the touchline
+SCOREBOARD | Display of the score
+TIMEOUT | Pause requested by a team (4,3)
+HALFTIME | Interval between halves (4,4)
+OVERTIME | Extra period in a drawn game
+SUDDENDEATH | Extra time ending at the next score (6,5)
+CHAMPION | Winner of a competition
+RUNNERUP | Second place (6-2)
+SILVER | Medal for second place
+BRONZE | Medal for third place
+GOLD | Medal for first place
+PODIUM | Platform for medal winners
+RECORD | Best performance ever
+PERSONALBEST | An athlete's own best performance (8,4)
+LEAGUE | Group of teams that play each other
+TOURNAMENT | Competition of many matches
+FIXTURE | Scheduled match
+FINAL | Deciding match
+SEMIFINAL | Round before the final
+QUARTERFINAL | Round before the semis
+SEEDING | Ranking of players before a tournament
+UNDERDOG | Competitor expected to lose
+FAVOURITE | Competitor expected to win
+RIVALRY | Long-standing competition
+DRAFT | System for picking new players in US leagues
+TRANSFER | Move of a player to another club
+CONTRACT | Player's agreement with a club
+MASCOT | Costumed character supporting a team
+CHEERLEADER | Supporter who leads chants
+FAN | Supporter
+HOOLIGAN | Violent football fan
+TURF | Grass playing surface
+PITCH | Field for football or cricket
+COURT | Playing area for tennis or basketball
+TRACK | Running oval
+ARENA | Indoor sports venue
+GYM | Place for workouts
+LOCKERROOM | Where teams change (6,4)
+WARMUP | Exercise before competing (4-2)
+STAMINA | Ability to keep going
+AGILITY | Ability to move quickly and easily
+TRAINING | Practice to improve fitness
+DOPING | Use of banned substances
+PARALYMPICS | Games for athletes with disabilities
+COMMONWEALTH | ___ Games, held every four years for former British territories
+MARATHONER | Long-distance runner
+JOG | Run at a gentle pace
+TREADMILL | Running machine
+SPRINTER | Short-distance runner
+PHOTOFINISH | Result decided by camera (5,6)
+LAP | One circuit of the track
+HEAT | Preliminary race
+HURLING | Fast Irish stick-and-ball game
+GAELIC | ___ football, Ireland's most popular sport
+SHINTY | Scottish game similar to hurling
+KABADDI | South Asian contact sport played on a single breath
+SEPAKTAKRAW | Southeast Asian kick volleyball (5,6)
+JAIALAI | Basque court game with a curved wicker basket (3,4)
+KORFBALL | Dutch mixed-team sport played with a basket
+MOTOCROSS | Off-road motorcycle racing
+SPEEDWAY | Motorcycle racing on dirt ovals without brakes
+SCULLING | Rowing with two oars per rower
+AMERICASCUP | Oldest trophy in international sailing (8,3)
+FIELDHOCKEY | Hockey played on grass or turf (5,6)
+ROLLERDERBY | Contact sport on quad skates (6,5)
+SKATING | Gliding on blades or wheels
+SURFBOARD | Board for riding waves
+LONGBOARD | Long surfboard or skateboard
+REALMADRID | Spanish club with the most European Cups (4,6)
+JUVENTUS | Turin football club nicknamed the Old Lady
+BAYERN | Munich football giant
+ARSENAL | North London club nicknamed the Gunners
+CHELSEA | West London club nicknamed the Blues
+AJAX | Amsterdam club famous for its youth academy
+CELTIC | Glasgow club that won the 1967 European Cup
+RANGERS | Glasgow club, Celtic's great rivals
+DODGERS | Los Angeles baseball team
+REDSOX | Boston baseball team (3,3)
+PACKERS | Green Bay American football team
+COWBOYS | Dallas American football team
+PATRIOTS | New England American football team
+BULLS | Chicago basketball team of the 1990s dynasty
+WARRIORS | Golden State basketball team
+KIPCHOGE | Kenyan who ran the first sub-two-hour marathon
+RADCLIFFE | Paula ___, British marathon great
+LEWIS | Carl ___, nine-time Olympic champion sprinter and long jumper
+BUBKA | Ukrainian pole vault legend
+PALMER | Arnold ___, golf's "King"
+BALLESTEROS | Spanish golfer Seve
+MCILROY | Northern Irish golfer Rory
+HOGAN | Ben ___, golf legend famed for his swing
+MURRAY | Andy ___, two-time Wimbledon champion from Scotland
+AGASSI | American tennis star who won all four majors
+SAMPRAS | American with seven Wimbledon titles
+GRAF | Steffi ___, winner of the 1988 Golden Slam
+EVERT | Chris ___, rival of Navratilova
+LAVER | Rod ___, the only man to win two calendar Grand Slams
+OSAKA | Naomi ___, four-time Grand Slam champion
+FRAZIER | Joe ___, Ali's opponent in the Thrilla in Manila
+FOREMAN | George ___, heavyweight champion and grill salesman
+PACQUIAO | Filipino boxer who won titles in eight divisions
+MAYWEATHER | Floyd ___, unbeaten in fifty professional fights
+DEMPSEY | Jack ___, 1920s heavyweight champion
+CURRY | Stephen ___, three-point shooting star
+SHAQ | Nickname of a dominant Lakers centre
+KAREEM | First name of the master of the skyhook
+DUNCAN | Tim ___, San Antonio Spurs great
+MAGIC | Nickname of Lakers point guard Earvin Johnson
+MANNING | Peyton ___, record-setting NFL quarterback
+WARNE | Shane ___, Australian leg-spin wizard
+KOHLI | Virat ___, Indian batting star
+LARA | Brian ___, scorer of 400 not out in a Test
+SOBERS | Garfield ___, West Indian all-rounder
+BOTHAM | Ian ___, English all-rounder of 1981
+MBAPPE | French forward who scored a final hat-trick in 2022
+HAALAND | Norwegian goal machine Erling
+NEYMAR | Brazilian forward who joined PSG for a record fee
+SALAH | Egyptian forward of Liverpool
+PUSKAS | Hungarian forward of the Magical Magyars
+EUSEBIO | Portuguese star known as the Black Panther
+BEST | George ___, Northern Irish winger of Manchester United
+LEDECKY | Katie ___, distance swimming champion
+THORPE | Ian ___, Australian freestyle star of the 2000 Olympics
+SPITZ | Mark ___, winner of seven golds in 1972
+VERSTAPPEN | Dutch F1 champion Max
+PROST | Alain ___, four-time F1 champion
+LAUDA | Niki ___, F1 champion who returned after a fiery crash
+FANGIO | Argentine five-time F1 champion
+MERCKX | Belgian cyclist nicknamed the Cannibal
+VONN | Lindsey ___, American downhill skier
+SHIFFRIN | Mikaela ___, record-breaking slalom skier
+OVECHKIN | Russian NHL goal-scoring record holder
+LEMIEUX | Mario ___, Pittsburgh Penguins legend
+AARON | Hank ___, who broke Babe Ruth's home run record
+OHTANI | Japanese two-way baseball superstar
+JETER | Derek ___, longtime Yankees shortstop
+CARLSEN | Norwegian chess world champion Magnus
+FISCHER | American chess champion Bobby
+HENDRY | Stephen ___, seven-time world snooker champion
+OSULLIVAN | Ronnie ___, snooker's Rocket
+TAYLOR | Phil ___, sixteen-time darts world champion
+KORBUT | Olga ___, Soviet gymnast of 1972
+ZATOPEK | Czech runner who won three golds in 1952
+NURMI | Finnish runner who won nine Olympic golds
+FLYINGFINN | Nickname for Paavo Nurmi (6,4)
+GRIFFITHJOYNER | Florence ___, holder of the women's 100m record
+JOHNSON | Michael ___, American 200m and 400m champion
+POWELL | Mike ___, long jump world record holder since 1991
+BEAMON | Bob ___, of the long jump leap of 1968
+EDWARDS | Jonathan ___, triple jump world record holder since 1995
+DECATHLETE | Ten-event athlete
+OLYMPIAN | Competitor at the Games
+TORCH | Olympic flame carrier
+OLYMPIA | Greek site of the ancient Games
+COUBERTIN | Founder of the modern Olympics
+ULTRAMARATHON | Race longer than 26.2 miles
+IRONMAN | Long-distance triathlon
+FELL | ___ running, racing over hills
+CROSSCOUNTRY | Running over open terrain (5-7)
+STRETCH | Lengthen the muscles before exercise
+TEAMMATE | Fellow player
+SUBSTITUTE | Replacement player
+BENCH | Seat for substitutes
+FORMATION | Arrangement of players such as 4-4-2
+TACTICS | Plan for winning a match
+POSSESSION | Control of the ball
+COUNTERATTACK | Quick break after winning the ball
+CLEANSHEET | Match without conceding (5,5)
+OWNGOAL | Goal scored against one's own side (3,4)
+EQUALISER | Goal that levels the score
+WINNER | Decisive goal
+DRAW | Tied result
+STALEMATE | Chess position with no legal move
+GAMBIT | Chess opening sacrifice
+ROOK | Chess piece that moves in straight lines
+BISHOP | Chess piece that moves diagonally
+KNIGHT | Chess piece that moves in an L
+PAWN | Least valuable chess piece
+CASTLING | Chess move of king and rook
+STRIKE | Ten pins with one ball
+GUTTER | Channel beside a bowling lane
+JACK | Target ball in lawn bowls
+SKITTLES | Pub game of knocking down pins
+TUGOFWAR | Rope-pulling contest (3,2,3)
+MATCHPOINT | Point that could win the match (5,5)
+BREAKPOINT | Chance to win the opponent's service game (5,5)
+BASELINE | Back line of a tennis court
+NETCORD | Serve or shot that clips the net
+SLAMDUNK | Forceful shot in basketball (4,4)
+BACKBOARD | Board behind a basketball hoop
+HOOP | Basketball ring
+PADDLE | Bat used in table tennis
+GOLDENGOAL | Former sudden-death rule in football (6,4)
+PENALTYSPOT | Mark twelve yards from goal (7,4)

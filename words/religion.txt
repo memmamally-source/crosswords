@@ -1,0 +1,41 @@
+# World Religions — one entry per line: ANSWER | clue
+BUDDHISM | Faith founded by Siddhartha Gautama
+HINDUISM | Faith of the Upanishads and the Bhagavad Gita
+JUDAISM | Faith of Abraham, Moses and the Talmud
+ISLAM | Faith whose followers pray five times a day
+CHRISTIANITY | Faith centred on Jesus of Nazareth
+SIKHISM | Faith founded by Nanak in the Punjab
+TAOISM | Chinese tradition of Laozi
+SHINTO | Indigenous religion of Japan
+JAINISM | Indian faith of strict nonviolence
+ZOROASTRIANISM | Ancient Persian faith of Ahura Mazda
+TORAH | Five books of Moses
+QURAN | Holy book revealed to the Prophet Muhammad
+BIBLE | Scripture of the Old and New Testaments
+VEDAS | Oldest Hindu scriptures
+NIRVANA | Buddhist release from the cycle of rebirth
+REINCARNATION | Rebirth of the soul in a new body
+PILGRIMAGE | Sacred journey to a holy site
+HAJJ | Annual journey to Mecca
+VATICAN | Papal city-state in Rome
+POPE | Bishop of Rome
+RABBI | Jewish teacher and leader
+IMAM | Leader of Muslim prayers
+LAMA | Tibetan Buddhist teacher
+GURU | Spiritual teacher in Indian traditions
+MONASTERY | Home of a community of monks
+SYNAGOGUE | Jewish house of worship
+MOSQUE | Muslim house of worship
+CATHEDRAL | Church that is a bishop's seat
+SABBATH | Weekly day of rest
+MONOTHEISM | Belief in a single God
+DHARMA | Cosmic law and duty in Indian religions
+MANTRA | Sacred word or phrase repeated in chant
+MEDITATION | Practice of focused, calm attention
+PSALM | Sacred song, 150 of them in one biblical book
+GENESIS | Opening book of scripture, with Creation and Noah
+EXODUS | Departure from Egypt led by Moses
+APOSTLE | One of Jesus' twelve disciples
+CONFUCIANISM | Chinese ethical system rooted in the Analects
+PAGODA | Tiered tower of an East Asian temple
+SUTRA | Buddhist or Hindu scripture of aphorisms

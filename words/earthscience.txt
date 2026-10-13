@@ -1,0 +1,41 @@
+# Earth Science — one entry per line: ANSWER | clue
+TECTONICS | Study of the movement of Earth's plates
+MAGMA | Molten rock beneath the surface
+LAVA | Molten rock that reaches the surface
+IGNEOUS | Describing rock formed from cooled molten material
+SEDIMENTARY | Describing rock formed from compressed layers
+METAMORPHIC | Describing rock changed by heat and pressure
+BASALT | Dark volcanic rock
+GRANITE | Coarse-grained rock used for countertops
+LIMESTONE | Rock made largely of calcium carbonate
+MANTLE | Hot, thick layer beneath the surface rock
+CRUST | Earth's outermost rocky layer
+CORE | Earth's iron-rich centre
+EARTHQUAKE | Sudden shaking of the ground
+EPICENTER | Surface point directly above a quake's origin (US spelling)
+RICHTER | Old scale of quake magnitude
+TSUNAMI | Giant sea wave triggered by an undersea quake
+GEYSER | Hot spring that erupts in jets, like Old Faithful
+STALACTITE | Cave formation that hangs from the ceiling
+STALAGMITE | Cave formation that rises from the floor
+EROSION | Wearing away of land by wind or water
+AQUIFER | Underground layer that holds water
+HUMIDITY | Amount of water vapour in the air
+CUMULUS | Puffy, cotton-like cloud
+CIRRUS | Wispy high-altitude cloud
+OZONE | Form of oxygen that shields Earth from UV
+TROPOSPHERE | Lowest layer of the atmosphere, where weather happens
+STRATOSPHERE | Atmospheric layer from about 10 to 50 km up
+HURRICANE | Atlantic tropical cyclone
+TORNADO | Violently rotating column of air
+BAROMETER | Instrument that measures air pressure
+PANGAEA | Supercontinent of about 300 million years ago
+FAULT | Fracture where rocks slip past each other
+MINERAL | Naturally occurring crystalline solid
+DIAMOND | Hardest natural substance, pure carbon
+PERMAFROST | Ground that stays frozen all year
+JETSTREAM | Fast high-altitude wind current (3,6)
+ELNINO | Pacific warming that disrupts global weather (2,4)
+DROUGHT | Long period with little rain
+SEISMOGRAPH | Instrument that records ground motion
+OBSIDIAN | Black volcanic glass

@@ -1,0 +1,41 @@
+# Biology — one entry per line: ANSWER | clue
+PHOTOSYNTHESIS | Process by which plants turn light into food
+CHLOROPHYLL | Green pigment in plants
+MEIOSIS | Cell division that produces gametes
+MITOSIS | Cell division that produces two identical cells
+DARWIN | Naturalist who sailed on HMS Beagle
+MENDEL | Monk whose pea plants revealed the rules of heredity
+ALLELE | Variant form of a gene
+GENOME | Complete set of an organism's DNA
+PROTEIN | Molecule built from amino acids
+OSMOSIS | Movement of water toward a higher solute concentration
+MEMBRANE | Thin layer that encloses a cell
+CYTOPLASM | Jelly-like fluid inside a cell
+NUCLEUS | Control centre of a cell
+ORGANELLE | Specialised structure within a cell
+SPECIES | Group of organisms that can interbreed
+TAXONOMY | Science of classifying living things
+PREDATOR | Animal that hunts others
+SYMBIOSIS | Close, long-term partnership between different organisms
+PARASITE | Organism that lives off a host
+FUNGUS | Organism such as a mushroom or mould
+ALGAE | Simple aquatic organisms such as seaweed
+HABITAT | Natural home of an organism
+POLLINATION | Transfer of pollen between flowers
+STAMEN | Pollen-producing part of a flower
+XYLEM | Plant tissue that carries water up from the roots
+PHLOEM | Plant tissue that carries sugars
+CARNIVORE | Meat eater
+HERBIVORE | Plant eater
+METABOLISM | All the chemical reactions in an organism
+HOMEOSTASIS | Maintenance of a stable internal environment
+ANTIBODY | Y-shaped defender made by the immune system
+PATHOGEN | Disease-causing microbe
+EMBRYO | Early stage of a developing organism
+LARVA | Immature form of an insect, such as a caterpillar
+METAMORPHOSIS | Dramatic change of body form, as in a butterfly
+CLONE | Genetically identical copy
+HYBRID | Offspring of two different kinds, such as a mule
+BIOME | Large ecological community such as a rainforest
+FOODCHAIN | Sequence of who eats whom (4,5)
+VACCINATION | Jab that primes the body against a disease

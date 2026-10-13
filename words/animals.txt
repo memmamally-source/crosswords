@@ -1,0 +1,518 @@
+# Animal Kingdom — one entry per line: ANSWER | clue
+ELEPHANT | Largest land mammal, famous for its trunk
+GIRAFFE | Tallest animal on Earth, with a very long neck
+PENGUIN | Flightless bird that waddles across Antarctic ice
+DOLPHIN | Intelligent marine mammal that uses echolocation
+KANGAROO | Hopping Australian marsupial with a pouch
+OCTOPUS | Eight-armed sea creature that can change colour
+CHEETAH | Fastest land animal
+TORTOISE | Slow-moving land reptile with a domed shell
+ZEBRA | Striped African relative of the horse
+OWL | Nocturnal bird that can swivel its head
+BEAVER | Rodent that builds dams
+CAMEL | Desert animal with one or two humps
+SLOTH | Famously slow tree-dweller of the rainforest
+PANDA | Black-and-white bear that feeds on bamboo
+FLAMINGO | Pink wading bird that often stands on one leg
+HEDGEHOG | Small spiny mammal that rolls into a ball
+WOLF | Wild ancestor of the domestic dog
+SHARK | Fish with a skeleton of cartilage and rows of teeth
+EAGLE | Large bird of prey; the bald one is a US symbol
+KOALA | Eucalyptus-munching Australian marsupial
+LOBSTER | Clawed crustacean that turns red when cooked
+PARROT | Colourful bird that can mimic speech
+CHAMELEON | Lizard known for colour changes and swivelling eyes
+OTTER | Playful aquatic mammal that floats on its back
+SQUIRREL | Bushy-tailed rodent that buries nuts
+JELLYFISH | Boneless sea drifter with stinging tentacles
+BAT | The only mammal capable of true flight
+HIPPO | "River horse", for short
+WALRUS | Tusked Arctic marine mammal
+RACCOON | Masked bandit that raids bins at night
+ARMADILLO | Armour-plated mammal of the Americas
+PORCUPINE | Rodent covered in sharp quills
+GORILLA | Largest of the great apes
+MEERKAT | Desert mongoose that stands sentry on its hind legs
+PLATYPUS | Egg-laying mammal with a duck-like bill
+SEAHORSE | Fish whose males carry the young
+CROCODILE | Large river reptile with a crushing bite
+MOOSE | Largest member of the deer family
+TOUCAN | Tropical bird with an enormous colourful bill
+SALAMANDER | Amphibian that can regrow lost limbs
+BUTTERFLY | Insect that emerges from a chrysalis
+ORCA | Killer whale
+PELICAN | Bird with a throat pouch for scooping fish
+LEMUR | Ring-tailed primate of Madagascar
+VULTURE | Bald-headed scavenging bird
+LION | Big cat known as the king of the jungle
+TIGER | Largest of the big cats, with a striped coat
+LEOPARD | Spotted big cat that hauls its prey up trees
+JAGUAR | Powerful spotted big cat of the Americas
+PUMA | Big American cat also called a cougar or mountain lion
+LYNX | Wild cat with tufted ears and a short tail
+BOBCAT | Short-tailed North American wild cat
+OCELOT | Small spotted wild cat of Central and South America
+SERVAL | Long-legged African cat with large ears
+CARACAL | Wild cat with long black ear tufts
+HYENA | African scavenger known for its laugh-like call
+JACKAL | Wild dog of Africa and Asia, often a scavenger
+COYOTE | Wild canine of North American prairies
+DINGO | Wild dog of Australia
+FENNEC | Desert fox with huge ears
+BADGER | Burrowing black-and-white striped mammal
+WEASEL | Slender, short-legged predator related to the stoat
+STOAT | Mustelid whose winter coat is called ermine
+FERRET | Domesticated polecat used for hunting rabbits
+MINK | Mustelid prized for its fur
+WOLVERINE | Fierce, stocky member of the weasel family
+SKUNK | Animal that sprays a foul smell when threatened
+MONGOOSE | Small carnivore famous for fighting cobras
+OPOSSUM | North American marsupial that plays dead
+WOMBAT | Burrowing Australian marsupial with cube-shaped droppings
+WALLABY | Small relative of the kangaroo
+QUOKKA | Smiling marsupial of Rottnest Island
+TASMANIANDEVIL | Snarling marsupial carnivore of an Australian island (9,5)
+NUMBAT | Termite-eating striped marsupial of Western Australia
+ECHIDNA | Spiny egg-laying anteater of Australia
+BANDICOOT | Small Australian marsupial with a long snout
+POSSUM | Tree-dwelling Australian marsupial
+ANTEATER | Toothless mammal with a long sticky tongue
+AARDVARK | African burrowing mammal whose name means "earth pig"
+PANGOLIN | Scaly mammal that rolls into a ball
+TAPIR | Hoofed mammal with a short, flexible snout
+OKAPI | Forest giraffe relative with zebra-striped legs
+BISON | Massive shaggy bovine of the North American plains
+BUFFALO | Water ___, a large Asian bovine
+YAK | Long-haired ox of the Himalayas
+GAZELLE | Graceful, swift African antelope
+IMPALA | Leaping antelope of African savannas
+ANTELOPE | Fleet-footed hoofed grazer such as the eland
+GNU | Another name for a wildebeest
+WILDEBEEST | Bearded antelope of the great East African migration
+ORYX | Antelope with long, straight horns
+ELAND | Largest species of antelope
+KUDU | Antelope with spiral horns
+SPRINGBOK | South African antelope known for pronking
+IBEX | Wild mountain goat with long curved horns
+CHAMOIS | Goat-antelope of the Alps
+REINDEER | Antlered deer of the Arctic, called caribou in North America
+ELK | Large deer also known as the wapiti
+DEER | Antlered animal such as a stag or doe
+FAWN | Young deer
+STAG | Adult male deer
+DOE | Female deer
+LLAMA | South American pack animal related to the camel
+ALPACA | Andean camelid prized for its soft wool
+VICUNA | Wild Andean camelid with very fine wool
+GUANACO | Wild ancestor of the llama
+DROMEDARY | One-humped camel
+RHINOCEROS | Horned heavyweight of Africa and Asia
+WARTHOG | Wild pig with facial warts and tusks
+BOAR | Wild pig with tusks
+PIG | Farm animal that oinks
+HORSE | Animal ridden by jockeys
+PONY | Small horse, such as a Shetland
+DONKEY | Long-eared beast of burden that brays
+MULE | Offspring of a male donkey and a female horse
+COW | Dairy animal that moos
+BULL | Uncastrated male bovine
+GOAT | Animal with a beard that bleats
+SHEEP | Woolly farm animal
+LAMB | Young sheep
+RAM | Male sheep
+EWE | Female sheep
+RABBIT | Long-eared burrowing mammal
+HARE | Fast long-eared mammal, larger than a rabbit
+MOUSE | Small rodent that squeaks
+RAT | Rodent with a long, scaly tail
+HAMSTER | Small rodent pet that stores food in its cheeks
+GERBIL | Desert rodent popular as a pet
+GUINEAPIG | South American rodent pet, or a test subject (6,3)
+CHINCHILLA | Andean rodent with extremely dense fur
+CAPYBARA | World's largest rodent
+PORPOISE | Small toothed whale with a blunt snout
+MARMOT | Large ground squirrel of mountain meadows
+CHIPMUNK | Small striped squirrel
+GROUNDHOG | Burrowing rodent also called a woodchuck
+PRAIRIEDOG | Burrowing rodent of the North American grasslands (7,3)
+LEMMING | Arctic rodent of mass-suicide myth
+VOLE | Small rodent similar to a mouse
+SHREW | Tiny insect-eating mammal with a pointed snout
+MOLE | Burrowing mammal with large digging paws
+DORMOUSE | Rodent famous for long hibernation
+JERBOA | Hopping desert rodent with long hind legs
+PORCUPINEFISH | Spiny fish that inflates when threatened
+CHIMPANZEE | Great ape closely related to humans
+BONOBO | Great ape of the Congo, a close cousin of the chimpanzee
+ORANGUTAN | Red-haired great ape of Borneo and Sumatra
+GIBBON | Small ape that swings through trees
+BABOON | Large monkey with a dog-like muzzle
+MANDRILL | Monkey with a vivid red and blue face
+MACAQUE | Monkey genus including the rhesus
+MARMOSET | Tiny South American monkey
+TAMARIN | Small monkey such as the golden lion ___
+CAPUCHIN | Clever monkey named after an order of friars
+HOWLER | ___ monkey, loudest land animal of the Americas
+LORIS | Slow-moving nocturnal primate with huge eyes
+AYEAYE | Madagascan lemur with a long tapping finger (3-3)
+TARSIER | Tiny primate with enormous eyes
+BEAR | Large mammal such as a grizzly or polar
+GRIZZLY | Brown bear of North America
+POLARBEAR | White bear of the Arctic (5,4)
+SEAL | Flippered marine mammal that barks
+SEALION | Eared seal with external ears (3,4)
+MANATEE | Gentle aquatic mammal called a sea cow
+DUGONG | Sea cow of the Indian and Pacific oceans
+WHALE | Largest marine mammal
+NARWHAL | Arctic whale with a long spiral tusk
+BELUGA | White Arctic whale
+HUMPBACK | Whale famous for its songs
+SPERMWHALE | Toothed whale hunted in Moby-Dick (5,5)
+BLUEWHALE | Largest animal ever known (4,5)
+DOG | Domestic animal that barks
+CAT | Domestic animal that purrs
+PUPPY | Young dog
+KITTEN | Young cat
+BEAGLE | Hound breed of Snoopy
+POODLE | Curly-coated dog breed
+DALMATIAN | Spotted dog breed associated with firehouses
+GREYHOUND | Fastest dog breed
+LABRADOR | Popular retriever breed
+DACHSHUND | Long-bodied "sausage dog"
+CHIHUAHUA | Tiny dog breed named after a Mexican state
+COLLIE | Herding dog breed such as Lassie
+HUSKY | Sled dog of the far north
+BULLDOG | Stocky breed with a wrinkled face
+TERRIER | Small dog breed group bred to hunt vermin
+SPANIEL | Floppy-eared gundog
+SIAMESE | Blue-eyed cat breed from Thailand
+PERSIAN | Long-haired cat breed with a flat face
+TABBY | Cat with a striped coat
+SPARROW | Small brown songbird common in cities
+ROBIN | Songbird with a red breast
+CROW | Black bird of the corvid family
+RAVEN | Largest all-black corvid
+MAGPIE | Black-and-white corvid said to love shiny things
+JAY | Colourful corvid such as the blue one
+FINCH | Seed-eating songbird studied by Darwin
+CANARY | Yellow songbird once used in coal mines
+PIGEON | City bird descended from the rock dove
+DOVE | Bird symbolising peace
+SWAN | Long-necked white waterbird
+GOOSE | Waterbird that honks
+DUCK | Waterbird that quacks
+MALLARD | Common wild duck with a green head
+HERON | Long-legged wading bird that spears fish
+STORK | Bird said to deliver babies
+CRANE | Tall wading bird known for its dancing displays
+IBIS | Wading bird with a long curved bill
+EGRET | White heron
+KINGFISHER | Brightly coloured bird that dives for fish
+WOODPECKER | Bird that drums on tree trunks
+HUMMINGBIRD | Tiny bird that can fly backwards
+SWALLOW | Fork-tailed bird of summer
+SWIFT | Bird that can stay airborne for months
+LARK | Songbird known for singing in flight
+NIGHTINGALE | Songbird famed for its nocturnal song
+THRUSH | Songbird family that includes the blackbird
+WREN | Tiny brown songbird with a cocked tail
+STARLING | Bird that gathers in huge murmurations
+BLACKBIRD | Thrush whose males are black with an orange bill
+CARDINAL | Bright red North American songbird
+ORIOLE | Songbird with bright yellow or orange plumage
+TOUCANET | Small relative of a big-billed tropical bird
+MACAW | Large, brightly coloured parrot
+COCKATOO | Crested parrot of Australia
+COCKATIEL | Small crested parrot kept as a pet
+BUDGERIGAR | Small Australian parakeet
+LOVEBIRD | Small parrot known for pair bonding
+KAKAPO | Flightless nocturnal parrot of New Zealand
+KIWI | Flightless bird and national symbol of New Zealand
+EMU | Large flightless bird of Australia
+OSTRICH | Largest living bird
+RHEA | Flightless bird of South America
+CASSOWARY | Flightless bird with a helmet-like casque
+DODO | Extinct flightless bird of Mauritius
+PEACOCK | Male peafowl with a spectacular tail
+PHEASANT | Long-tailed game bird
+QUAIL | Small plump game bird
+GROUSE | Game bird of moorland
+PARTRIDGE | Game bird of a Christmas carol
+TURKEY | Large game bird with a wattle
+CHICKEN | Farm bird that lays eggs
+ROOSTER | Male chicken
+HEN | Female chicken
+CHICK | Young bird
+FALCON | Bird of prey that dives at great speed
+PEREGRINE | Fastest falcon
+HAWK | Sharp-eyed bird of prey
+KESTREL | Small falcon that hovers
+OSPREY | Fish-eating bird of prey
+CONDOR | Huge vulture of the Andes
+BUZZARD | Broad-winged hawk
+HARRIER | Low-flying hawk of marshes
+KITE | Bird of prey with a forked tail
+SECRETARYBIRD | Long-legged African raptor that stomps on snakes
+ALBATROSS | Seabird with the largest wingspan
+GULL | Seabird often seen at the beach
+TERN | Seabird with a forked tail
+PUFFIN | Seabird with a colourful bill
+CORMORANT | Diving seabird that dries its wings
+GANNET | Seabird that plunges into the sea
+PETREL | Seabird of the open ocean
+PELICANEEL | Deep-sea fish with a huge hinged mouth
+LOON | Diving bird with an eerie call
+GREBE | Diving bird with lobed toes
+COOT | Black waterbird with a white forehead
+MOORHEN | Waterbird with a red forehead shield
+SANDPIPER | Small wading shorebird
+PLOVER | Small shorebird
+CURLEW | Wader with a long down-curved bill
+AVOCET | Wader with an upturned bill
+ROADRUNNER | Fast-running cuckoo of the desert
+CUCKOO | Bird that lays eggs in other birds' nests
+NIGHTJAR | Nocturnal bird with a churring call
+HORNBILL | Bird with a large casque on its bill
+LYREBIRD | Australian bird that mimics sounds
+BOWERBIRD | Bird that decorates its courtship structure
+COBRA | Hooded venomous snake
+PYTHON | Large constricting snake
+BOA | Constrictor snake of the Americas
+ANACONDA | Heaviest snake in the world
+VIPER | Venomous snake with long fangs
+RATTLESNAKE | Snake with a warning tail
+MAMBA | Fast, highly venomous African snake
+ADDER | Britain's only venomous snake
+ASP | Snake associated with Cleopatra
+IGUANA | Large herbivorous lizard
+GECKO | Lizard that can climb glass
+KOMODO | ___ dragon, largest living lizard
+MONITOR | Large lizard such as the Nile ___
+SKINK | Smooth-scaled lizard
+GILAMONSTER | Venomous lizard of the American Southwest (4,7)
+ALLIGATOR | Broad-snouted crocodilian of the Americas
+CAIMAN | Crocodilian of Central and South America
+GHARIAL | Crocodilian with a long, thin snout
+TURTLE | Reptile with a shell that lives in water
+TERRAPIN | Small freshwater turtle
+TUATARA | Lizard-like reptile of New Zealand
+FROG | Amphibian that croaks
+TOAD | Warty amphibian
+TADPOLE | Larval frog
+NEWT | Small amphibian related to the salamander
+AXOLOTL | Mexican salamander that keeps its gills
+CAECILIAN | Legless burrowing amphibian
+SALMON | Fish that swims upstream to spawn
+TROUT | Freshwater fish of the salmon family
+COD | Fish of fish and chips
+TUNA | Large fast fish, often canned
+MACKEREL | Oily striped fish
+HERRING | Silvery fish often pickled
+SARDINE | Small fish packed in tins
+ANCHOVY | Small salty fish on pizza
+HALIBUT | Large flatfish
+FLOUNDER | Flatfish that lies on the seabed
+SOLE | Flatfish such as Dover ___
+CARP | Freshwater fish, including the koi
+GOLDFISH | Orange pet fish
+PIRANHA | Sharp-toothed fish of South American rivers
+CATFISH | Fish with whisker-like barbels
+EEL | Snake-like fish
+MORAY | Eel of coral reefs
+STINGRAY | Flat fish with a venomous tail barb
+MANTARAY | Giant gentle ray (5,3)
+SWORDFISH | Fish with a long flat bill
+MARLIN | Billfish prized by sport fishers
+BARRACUDA | Toothy predatory fish
+GROUPER | Large stocky reef fish
+CLOWNFISH | Orange-and-white fish that lives in anemones
+ANGELFISH | Colourful tropical fish
+PUFFERFISH | Fish that inflates and contains a deadly toxin
+LIONFISH | Venomous fish with showy spines
+SEADRAGON | Leafy relative of the seahorse (3,6)
+HAMMERHEAD | Shark with a T-shaped head
+GREATWHITE | Shark of Jaws (5,5)
+WHALESHARK | Largest fish in the sea (5,5)
+STURGEON | Fish whose eggs become caviar
+GUPPY | Small colourful aquarium fish
+MINNOW | Tiny freshwater fish
+PIKE | Predatory freshwater fish with a long snout
+PERCH | Freshwater fish with spiny fins
+BASS | Fish such as the largemouth or sea ___
+COELACANTH | "Living fossil" fish rediscovered in 1938
+ANGLERFISH | Deep-sea fish with a glowing lure
+SQUID | Ten-armed cephalopod
+CUTTLEFISH | Cephalopod with an internal shell
+NAUTILUS | Shelled cephalopod with many tentacles
+CRAB | Crustacean that walks sideways
+SHRIMP | Small crustacean often eaten
+PRAWN | Shrimp-like crustacean
+KRILL | Tiny crustacean eaten by whales
+BARNACLE | Crustacean that cements itself to rocks
+CRAYFISH | Freshwater lobster-like crustacean
+HERMITCRAB | Crab that lives in a borrowed shell (6,4)
+STARFISH | Five-armed sea creature, also called a sea star
+URCHIN | Spiny sea creature
+SEACUCUMBER | Sausage-shaped seabed animal (3,8)
+ANEMONE | Stinging, flower-like sea animal
+CORAL | Animal that builds reefs
+SPONGE | Simple filter-feeding sea animal
+CLAM | Bivalve with a hinged shell
+OYSTER | Bivalve that can produce pearls
+MUSSEL | Dark-shelled bivalve
+SCALLOP | Fan-shaped bivalve
+SNAIL | Slow mollusc with a coiled shell
+SLUG | Shell-less land mollusc
+LIMPET | Cone-shelled mollusc that clings to rocks
+WHELK | Sea snail sold at the seaside
+BEE | Insect that makes honey
+WASP | Stinging insect with a narrow waist
+HORNET | Large wasp
+ANT | Social insect that lives in colonies
+TERMITE | Insect that eats wood
+BEETLE | Insect with hard wing cases
+LADYBIRD | Red spotted beetle (UK name)
+SCARAB | Beetle sacred in ancient Egypt
+FIREFLY | Beetle that glows at night
+MOTH | Nocturnal relative of the butterfly
+CATERPILLAR | Larva of a butterfly or moth
+DRAGONFLY | Insect with two pairs of transparent wings
+DAMSELFLY | Slender relative of the dragonfly
+GRASSHOPPER | Jumping insect that chirps
+CRICKET | Insect that chirps at night
+LOCUST | Swarming grasshopper
+MANTIS | Praying ___, an insect predator
+COCKROACH | Hardy insect pest
+FLY | Insect such as the housefly
+MOSQUITO | Insect whose bite can spread malaria
+GNAT | Tiny flying insect
+FLEA | Jumping parasite
+LOUSE | Tiny parasite of hair
+TICK | Blood-sucking parasite related to spiders
+APHID | Sap-sucking garden pest
+CICADA | Insect famous for its loud buzzing
+EARWIG | Insect with pincers at its tail
+SILKWORM | Caterpillar that spins silk
+SPIDER | Eight-legged web-spinner
+TARANTULA | Large hairy spider
+SCORPION | Arachnid with a venomous tail
+CENTIPEDE | Many-legged predator
+MILLIPEDE | Many-legged plant-eating arthropod
+WORM | Earth-dwelling invertebrate
+LEECH | Blood-sucking worm
+HORSESHOE | ___ crab, a living fossil
+PLANKTON | Tiny drifting sea organisms
+MAMMAL | Warm-blooded animal that feeds its young milk
+REPTILE | Cold-blooded scaly animal
+AMPHIBIAN | Animal that lives both in water and on land
+MARSUPIAL | Mammal that carries its young in a pouch
+RODENT | Gnawing mammal such as a rat
+PRIMATE | Order including apes and monkeys
+CARNIVORE | Meat-eating animal
+HERBIVORE | Plant-eating animal
+OMNIVORE | Animal that eats both plants and meat
+PREDATOR | Animal that hunts others
+PREY | Animal hunted for food
+SCAVENGER | Animal that eats carrion
+NOCTURNAL | Active at night
+DIURNAL | Active by day
+HIBERNATE | Spend the winter in a deep sleep
+MIGRATE | Travel seasonally, like many birds
+CAMOUFLAGE | Colouring that helps an animal blend in
+MIMICRY | Resemblance to another species for protection
+TUSK | Long tooth of an elephant or walrus
+ANTLER | Branched bone on a deer's head
+HOOF | Hard foot of a horse
+PAW | Foot of a cat or dog
+CLAW | Sharp nail of a bird or cat
+FIN | Fish's swimming limb
+GILL | Breathing organ of a fish
+FEATHER | Plume of a bird
+BEAK | Bird's bill
+TALON | Claw of a bird of prey
+SNOUT | Nose of a pig
+MANE | Long neck hair of a lion or horse
+WHISKERS | Sensitive facial hairs of a cat
+UDDER | Milk gland of a cow
+PLUMAGE | A bird's feathers collectively
+QUILL | Spine of a porcupine
+CUB | Young lion or bear
+JOEY | Young kangaroo
+FOAL | Young horse
+CALF | Young cow or whale
+KID | Young goat
+PIGLET | Young pig
+DUCKLING | Young duck
+GOSLING | Young goose
+CYGNET | Young swan
+OWLET | Young owl
+EAGLET | Young eagle
+FRY | Young fish
+KIT | Young fox or ferret
+LEVERET | Young hare
+PRIDE | Group of lions
+PACK | Group of wolves
+HERD | Group of cattle or elephants
+FLOCK | Group of sheep or birds
+SWARM | Group of bees or insects
+SHOAL | Group of fish
+SCHOOL | Group of fish or dolphins
+POD | Group of whales
+GAGGLE | Group of geese on the ground
+MURDER | Group of crows
+PARLIAMENT | Group of owls
+TROOP | Group of monkeys
+COLONY | Group of ants or bats
+LITTER | Group of puppies born together
+DEN | Lair of a fox or bear
+BURROW | Underground home of a rabbit
+WARREN | Network of rabbit burrows
+NEST | Bird's home made of twigs
+HIVE | Home of a bee colony
+SETT | Badger's den
+LODGE | Beaver's home
+EYRIE | Eagle's nest on a high ledge
+SAVANNA | African grassland of lions and zebras
+RAINFOREST | Hot, wet forest of greatest biodiversity
+ZOOLOGY | Scientific study of animals
+VET | Animal doctor
+SAFARI | Expedition to see wild animals
+ZOO | Park where animals are displayed
+AQUARIUM | Tank or building for fish
+EXTINCT | No longer existing as a species
+ENDANGERED | At risk of extinction
+POACHING | Illegal hunting
+HABITAT | Natural home of an animal
+GIANTPANDA | Bamboo-eating bear of China (5,5)
+REDPANDA | Small reddish tree-dweller of the Himalayas (3,5)
+SNOWLEOPARD | Elusive grey cat of Central Asian mountains (4,7)
+ARCTICFOX | White-coated fox of the tundra (6,3)
+FOX | Bushy-tailed canine known for cunning
+VIXEN | Female fox
+SEAOTTER | Marine mammal that uses rocks as tools (3,5)
+BLOWFISH | Another name for a pufferfish
+LUNGFISH | Fish that can breathe air
+MUDSKIPPER | Fish that walks on mudflats
+FLYINGFISH | Fish that glides above the waves (6,4)
+BINTURONG | Asian "bearcat" that smells of popcorn
+CIVET | Cat-like mammal of Asia and Africa
+GENET | Slender spotted relative of the civet
+KINKAJOU | Rainforest mammal with a prehensile tail
+COATI | Raccoon relative with a long snout
+SUGARGLIDER | Small gliding marsupial (5,6)
+FLYINGSQUIRREL | Rodent that glides between trees (6,8)
+KOI | Ornamental carp
+TETRA | Small colourful aquarium fish, such as the neon ___
+ZEBU | Humped cattle of India
+WATERBUCK | African antelope with a white ring on its rump
+HARTEBEEST | African antelope with a long face
+DIKDIK | Tiny African antelope (3-3)
+DUIKER | Small African antelope that dives into cover
+SAIGA | Antelope with a bulbous nose
+TAKIN | Goat-antelope of the Himalayas
+MUSKOX | Shaggy Arctic bovine (4,2)
+GAUR | Indian bison, largest wild cattle
+BANTENG | Wild cattle of Southeast Asia
+PECCARY | Pig-like animal of the Americas
+HIPPOPOTAMUS | Huge African river mammal
+ELEPHANTSEAL | Largest seal, with a trunk-like nose (8,4)

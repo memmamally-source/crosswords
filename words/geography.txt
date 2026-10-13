@@ -1,0 +1,511 @@
+# World Geography — one entry per line: ANSWER | clue
+SAHARA | Largest hot desert in the world
+AMAZON | South American river and rainforest
+EVEREST | Earth's highest mountain
+PACIFIC | Earth's largest ocean
+NILE | African river long ranked the longest in the world
+TOKYO | Capital of Japan
+CANADA | Country with the longest coastline
+ICELAND | Nordic country whose capital is Reykjavik
+AUSTRALIA | Both a country and a continent
+VOLCANO | Mountain that can erupt
+ANDES | Longest continental mountain range
+EGYPT | Home of the Great Pyramid of Giza
+PARIS | The "City of Light"
+GLACIER | Slow-moving river of ice
+PENINSULA | Land surrounded by water on three sides
+VENICE | Italian city built on canals
+DELTA | Triangular landform at a river mouth
+BRAZIL | Largest country in South America
+ATLAS | Book of maps
+EQUATOR | Imaginary line dividing the Northern and Southern Hemispheres
+KENYA | East African country whose capital is Nairobi
+TUNDRA | Cold, treeless biome
+MONSOON | Seasonal wind that brings heavy rain
+NEPAL | Himalayan country, birthplace of the Buddha
+FJORD | Narrow sea inlet between cliffs, common in Norway
+MEXICO | Country directly south of the United States
+ARCTIC | Ocean around the North Pole
+ISLAND | Land entirely surrounded by water
+CANYON | Deep gorge, like the Grand one in Arizona
+SIBERIA | Vast, cold region of northern Russia
+HIMALAYAS | Range containing the world's highest peaks
+MISSISSIPPI | Great river of the central United States
+BALTIC | Sea bordered by Sweden, Finland and Estonia
+ISTANBUL | Turkish city that straddles Europe and Asia
+SINGAPORE | Southeast Asian city-state famous for Marina Bay Sands
+MADAGASCAR | Indian Ocean nation that is home to lemurs
+PLATEAU | Area of high, flat land
+OASIS | Fertile spot in a desert
+ESTUARY | Tidal mouth of a river
+LATITUDE | Angular distance, from 0° to 90° north or south
+ARGENTINA | Country whose capital is Buenos Aires
+VIETNAM | Southeast Asian country whose capital is Hanoi
+DANUBE | River that flows through Vienna and Budapest
+MOROCCO | North African kingdom whose capital is Rabat
+FRANCE | Country of the Eiffel Tower and the Loire
+GERMANY | Country whose capital is Berlin
+ITALY | Boot-shaped European country
+SPAIN | Iberian country whose capital is Madrid
+PORTUGAL | Country whose capital is Lisbon
+GREECE | Country whose capital is Athens
+TURKEY | Country spanning Europe and Asia, capital Ankara
+RUSSIA | Largest country by area
+CHINA | Most populous country for much of history, capital Beijing
+JAPAN | Island nation whose capital is Tokyo
+INDIA | South Asian country whose capital is New Delhi
+PAKISTAN | Country whose capital is Islamabad
+BANGLADESH | Country whose capital is Dhaka
+SRILANKA | Island nation formerly called Ceylon (3,5)
+INDONESIA | World's largest archipelago nation
+PHILIPPINES | Archipelago nation whose capital is Manila
+MALAYSIA | Country whose capital is Kuala Lumpur
+THAILAND | Country formerly called Siam
+CAMBODIA | Country of Angkor Wat
+LAOS | Landlocked country whose capital is Vientiane
+MYANMAR | Country formerly called Burma
+MONGOLIA | Landlocked country whose capital is Ulaanbaatar
+KOREA | Peninsula divided at the 38th parallel
+TAIWAN | Island whose capital is Taipei
+IRAN | Country formerly called Persia
+IRAQ | Country of the Tigris and Euphrates, capital Baghdad
+SYRIA | Country whose capital is Damascus
+LEBANON | Mediterranean country whose capital is Beirut
+JORDAN | Country of Petra, capital Amman
+ISRAEL | Country whose largest city is Jerusalem
+SAUDIARABIA | Kingdom whose capital is Riyadh (5,6)
+YEMEN | Country on the southern Arabian Peninsula
+OMAN | Sultanate whose capital is Muscat
+QATAR | Gulf state whose capital is Doha
+KUWAIT | Small Gulf state at the head of the Persian Gulf
+BAHRAIN | Island kingdom in the Persian Gulf
+AFGHANISTAN | Landlocked country whose capital is Kabul
+KAZAKHSTAN | World's largest landlocked country
+UZBEKISTAN | Central Asian country of Samarkand
+GEORGIA | Caucasus country whose capital is Tbilisi
+ARMENIA | Caucasus country whose capital is Yerevan
+AZERBAIJAN | Caspian country whose capital is Baku
+UKRAINE | Country whose capital is Kyiv
+POLAND | Country whose capital is Warsaw
+CZECHIA | Country whose capital is Prague
+SLOVAKIA | Country whose capital is Bratislava
+HUNGARY | Country whose capital is Budapest
+AUSTRIA | Country whose capital is Vienna
+SWITZERLAND | Alpine country with four national languages
+BELGIUM | Country whose capital is Brussels
+NETHERLANDS | Country whose capital is Amsterdam
+LUXEMBOURG | Grand duchy between France, Germany and Belgium
+DENMARK | Scandinavian country whose capital is Copenhagen
+NORWAY | Scandinavian country famous for fjords
+SWEDEN | Scandinavian country whose capital is Stockholm
+FINLAND | Nordic country of a thousand lakes
+ESTONIA | Baltic country whose capital is Tallinn
+LATVIA | Baltic country whose capital is Riga
+LITHUANIA | Baltic country whose capital is Vilnius
+BELARUS | Country whose capital is Minsk
+ROMANIA | Country of Transylvania, capital Bucharest
+BULGARIA | Country whose capital is Sofia
+SERBIA | Balkan country whose capital is Belgrade
+CROATIA | Adriatic country whose capital is Zagreb
+SLOVENIA | Country whose capital is Ljubljana
+BOSNIA | Balkan country whose capital is Sarajevo
+ALBANIA | Balkan country whose capital is Tirana
+MONTENEGRO | Small Adriatic country whose capital is Podgorica
+MALTA | Mediterranean island nation whose capital is Valletta
+CYPRUS | Mediterranean island divided since 1974
+IRELAND | Emerald Isle, capital Dublin
+SCOTLAND | Nation of the UK whose capital is Edinburgh
+WALES | Nation of the UK whose capital is Cardiff
+ENGLAND | Largest nation of the UK
+MONACO | Tiny principality on the French Riviera
+ANDORRA | Pyrenean microstate
+LIECHTENSTEIN | Alpine microstate between Switzerland and Austria
+SANMARINO | Microstate enclosed by Italy (3,6)
+NIGERIA | Most populous African country
+ETHIOPIA | African country whose capital is Addis Ababa
+TANZANIA | Country of Kilimanjaro and the Serengeti
+UGANDA | Country whose capital is Kampala
+RWANDA | Land of a thousand hills, capital Kigali
+SOMALIA | Horn of Africa country whose capital is Mogadishu
+SUDAN | Country where the Blue and White Nile meet
+LIBYA | North African country whose capital is Tripoli
+TUNISIA | North African country whose capital is Tunis
+ALGERIA | Largest country in Africa
+GHANA | West African country formerly the Gold Coast
+SENEGAL | West African country whose capital is Dakar
+MALI | Country of Timbuktu
+NIGER | Landlocked Saharan country named after a river
+CHAD | Landlocked country named after a lake
+CAMEROON | Central African country whose capital is Yaoundé
+CONGO | Great river of Central Africa, and two countries
+ANGOLA | Country whose capital is Luanda
+ZAMBIA | Country of Victoria Falls, capital Lusaka
+ZIMBABWE | Country formerly called Rhodesia
+BOTSWANA | Country of the Okavango Delta
+NAMIBIA | Country of the Namib Desert
+SOUTHAFRICA | Country with three capital cities (5,6)
+MOZAMBIQUE | Southeast African country whose capital is Maputo
+MAURITIUS | Indian Ocean island nation, former home of the dodo
+SEYCHELLES | Archipelago nation in the Indian Ocean
+CHILE | Long, narrow South American country
+PERU | Country of Machu Picchu
+BOLIVIA | Landlocked country with two capitals
+ECUADOR | Country named after the equator line
+COLOMBIA | Country whose capital is Bogotá
+VENEZUELA | Country of Angel Falls
+URUGUAY | Country whose capital is Montevideo
+PARAGUAY | Landlocked country whose capital is Asunción
+GUYANA | English-speaking South American country
+CUBA | Caribbean island whose capital is Havana
+JAMAICA | Caribbean island whose capital is Kingston
+HAITI | Country on the western part of Hispaniola
+BAHAMAS | Archipelago nation whose capital is Nassau
+BARBADOS | Easternmost Caribbean island
+PANAMA | Country of a famous canal
+COSTARICA | Central American country with no army (5,4)
+GUATEMALA | Central American country of Mayan ruins
+HONDURAS | Central American country whose capital is Tegucigalpa
+NICARAGUA | Largest country in Central America
+ELSALVADOR | Smallest Central American country (2,8)
+BELIZE | Central American country of the Great Blue Hole
+NEWZEALAND | Country of the Kiwi and the Southern Alps (3,7)
+FIJI | Pacific island nation whose capital is Suva
+SAMOA | Pacific island nation whose capital is Apia
+TONGA | Pacific kingdom of the Friendly Islands
+PAPUANEWGUINEA | Nation with over 800 languages (5,3,6)
+LONDON | Capital of the United Kingdom
+BERLIN | Capital of Germany
+MADRID | Capital of Spain
+ROME | Capital of Italy
+ATHENS | Capital of Greece
+LISBON | Capital of Portugal
+DUBLIN | Capital of Ireland
+VIENNA | Capital of Austria
+PRAGUE | Capital of Czechia
+BUDAPEST | Capital of Hungary
+WARSAW | Capital of Poland
+STOCKHOLM | Capital of Sweden
+OSLO | Capital of Norway
+COPENHAGEN | Capital of Denmark
+HELSINKI | Capital of Finland
+REYKJAVIK | Capital of Iceland
+AMSTERDAM | Capital of the Netherlands
+BRUSSELS | Capital of Belgium
+BERN | Capital of Switzerland
+MOSCOW | Capital of Russia
+KYIV | Capital of Ukraine
+ANKARA | Capital of Turkey
+CAIRO | Capital of Egypt
+NAIROBI | Capital of Kenya
+ADDISABABA | Capital of Ethiopia (5,5)
+LAGOS | Nigeria's largest city
+ABUJA | Capital of Nigeria
+ACCRA | Capital of Ghana
+DAKAR | Capital of Senegal
+RABAT | Capital of Morocco
+MARRAKESH | Moroccan city of the Jemaa el-Fnaa square
+CASABLANCA | Morocco's largest city
+TUNIS | North African capital near the ruins of Carthage
+KHARTOUM | Capital of Sudan
+PRETORIA | Administrative capital of South Africa
+CAPETOWN | South African city below Table Mountain (4,4)
+JOHANNESBURG | South Africa's largest city
+BEIJING | Capital of China
+SHANGHAI | China's largest city
+HONGKONG | Former British territory returned to China in 1997 (4,4)
+SEOUL | Capital of South Korea
+PYONGYANG | Capital of North Korea
+TAIPEI | Capital of Taiwan
+MANILA | Capital of the Philippines
+JAKARTA | Capital of Indonesia
+BANGKOK | Capital of Thailand
+HANOI | Capital of Vietnam
+KUALALUMPUR | Capital of Malaysia (5,6)
+DELHI | Indian city that contains the capital
+MUMBAI | India's financial capital, formerly Bombay
+KOLKATA | Indian city formerly called Calcutta
+KARACHI | Pakistan's largest city
+DHAKA | Capital of Bangladesh
+KATHMANDU | Capital of Nepal
+TEHRAN | Capital of Iran
+BAGHDAD | Capital of Iraq
+DAMASCUS | Capital of Syria
+BEIRUT | Capital of Lebanon
+AMMAN | Capital of Jordan
+JERUSALEM | Holy city of three faiths
+RIYADH | Capital of Saudi Arabia
+MECCA | Holiest city of Islam
+DUBAI | Emirate city of the Burj Khalifa
+DOHA | Capital of Qatar
+SYDNEY | Australian city of a famous opera house
+MELBOURNE | Australian city of the Australian Open
+CANBERRA | Capital of Australia
+PERTH | Capital of Western Australia
+AUCKLAND | New Zealand's largest city
+WELLINGTON | Capital of New Zealand
+OTTAWA | Capital of Canada
+TORONTO | Canada's largest city
+MONTREAL | French-speaking city on the St Lawrence
+VANCOUVER | Pacific port city of Canada
+WASHINGTON | US capital, or a north-western state
+NEWYORK | US city of the Statue of Liberty (3,4)
+CHICAGO | Windy City on Lake Michigan
+BOSTON | Massachusetts city of a 1773 tea party
+SEATTLE | Washington city of the Space Needle
+LOSANGELES | Californian city of Hollywood (3,7)
+SANFRANCISCO | City of the Golden Gate Bridge (3,9)
+MIAMI | Florida city of South Beach
+HOUSTON | Texan city of NASA mission control
+DENVER | Mile High City of Colorado
+LASVEGAS | Nevada's gambling city (3,5)
+HONOLULU | Capital of Hawaii
+HAVANA | Capital of Cuba
+LIMA | Capital of Peru
+BOGOTA | Capital of Colombia
+QUITO | Capital of Ecuador
+SANTIAGO | Capital of Chile
+BUENOSAIRES | Capital of Argentina (6,5)
+MONTEVIDEO | Capital of Uruguay
+CARACAS | Capital of Venezuela
+BRASILIA | Purpose-built capital of Brazil
+RIODEJANEIRO | Brazilian city of Christ the Redeemer
+SAOPAULO | Brazil's largest city (3,5)
+EDINBURGH | Scottish capital with a castle on a volcanic rock
+CARDIFF | Capital of Wales
+BELFAST | Capital of Northern Ireland
+MANCHESTER | English city of two famous football clubs
+LIVERPOOL | English port city of the Beatles
+BARCELONA | Catalan city of the Sagrada Família
+SEVILLE | Andalusian city of flamenco
+FLORENCE | Tuscan city of the Renaissance
+MILAN | Italian fashion capital
+NAPLES | Italian city near Vesuvius
+MUNICH | Bavarian city of Oktoberfest
+HAMBURG | Germany's largest port
+GENEVA | Swiss city of the Red Cross and UN offices
+ZURICH | Switzerland's largest city
+KRAKOW | Historic Polish city of Wawel Castle
+STPETERSBURG | Russian city founded by Peter the Great (2,10)
+THAMES | River that flows through London
+SEINE | River that flows through Paris
+RHINE | River flowing from the Alps to the North Sea
+LOIRE | France's longest river, lined with châteaux
+RHONE | River flowing through Lyon
+VOLGA | Europe's longest river
+TIBER | River of Rome
+YANGTZE | Asia's longest river
+GANGES | Sacred river of India
+INDUS | River of Pakistan and an ancient civilisation
+MEKONG | Great river of Southeast Asia
+EUPHRATES | River of Mesopotamia paired with the Tigris
+TIGRIS | River flowing through Baghdad
+JORDANRIVER | River where Jesus was baptised (6,5)
+ZAMBEZI | River of Victoria Falls
+MISSOURI | Longest river in the United States
+COLORADO | River that carved the Grand Canyon
+YUKON | River and territory of north-western Canada
+STLAWRENCE | River linking the Great Lakes to the Atlantic (2,8)
+ORINOCO | River of Venezuela
+PARANA | South American river that joins the Uruguay to form the Plate
+ALPS | Europe's great mountain range
+PYRENEES | Mountains between France and Spain
+CARPATHIANS | Mountain arc of Central and Eastern Europe
+APENNINES | Mountain spine of Italy
+URALS | Mountains dividing Europe from Asia
+CAUCASUS | Mountains between the Black and Caspian seas
+ROCKIES | Mountain range of western North America
+APPALACHIANS | Old mountain range of eastern North America
+KILIMANJARO | Africa's highest mountain
+MATTERHORN | Pyramid-shaped Alpine peak
+MONTBLANC | Highest peak of the Alps (4,5)
+FUJI | Japan's sacred volcano
+DENALI | North America's highest peak
+ACONCAGUA | Highest peak in the Americas
+ELBRUS | Europe's highest peak, in the Caucasus
+VESUVIUS | Volcano that buried Pompeii
+ETNA | Active volcano on Sicily
+KRAKATOA | Indonesian volcano of a cataclysmic 1883 eruption
+ATLANTIC | Ocean between the Americas and Europe
+INDIAN | Ocean south of Asia
+SOUTHERN | Ocean surrounding Antarctica
+MEDITERRANEAN | Sea between Europe and Africa
+CARIBBEAN | Sea of tropical islands
+CASPIAN | World's largest lake, called a sea
+DEADSEA | Salt lake at the lowest point on land (4,3)
+REDSEA | Sea between Africa and Arabia (3,3)
+BLACKSEA | Sea north of Turkey (5,3)
+NORTHSEA | Sea between Britain and Scandinavia (5,3)
+ADRIATIC | Sea between Italy and the Balkans
+AEGEAN | Sea between Greece and Turkey
+ARABIAN | Sea west of India
+BERING | Strait between Russia and Alaska
+GIBRALTAR | Strait at the mouth of the Mediterranean
+BOSPORUS | Strait that divides Istanbul
+SUEZ | Canal linking the Mediterranean and Red seas
+SUPERIOR | Largest of the Great Lakes
+MICHIGAN | Great Lake entirely within the United States
+ONTARIO | Smallest Great Lake by area
+VICTORIA | Africa's largest lake
+TITICACA | High lake on the border of Peru and Bolivia
+BAIKAL | World's deepest lake, in Siberia
+TANGANYIKA | Long, deep lake of East Africa
+NIAGARA | Falls on the US–Canada border
+ANGELFALLS | World's highest waterfall (5,5)
+GOBI | Desert of Mongolia and China
+KALAHARI | Desert of southern Africa
+ATACAMA | Driest non-polar desert, in Chile
+MOJAVE | Desert of Death Valley
+NAMIB | Ancient coastal desert of southwest Africa
+SONORAN | Desert of the saguaro cactus
+GREENLAND | World's largest island
+BORNEO | Island shared by three countries
+SUMATRA | Large Indonesian island
+JAVA | Indonesian island of Jakarta
+HAWAII | US state made of Pacific islands
+SICILY | Largest Mediterranean island
+SARDINIA | Italian island west of Rome
+CORSICA | French island, birthplace of Napoleon
+CRETE | Largest Greek island
+TASMANIA | Island state of Australia
+GALAPAGOS | Islands that inspired Darwin
+CANARY | ___ Islands, Spanish archipelago off Africa
+AZORES | Portuguese islands in the mid-Atlantic
+BERMUDA | British territory of a notorious triangle
+HEBRIDES | Islands off the west coast of Scotland
+ANTARCTICA | Coldest continent
+AFRICA | Continent of the Sahara
+ASIA | Largest continent
+EUROPE | Continent of the Alps
+AMERICA | Continent named after Amerigo Vespucci
+OCEANIA | Region of Australia and the Pacific islands
+CONTINENT | Large landmass such as Asia
+ARCHIPELAGO | Chain or group of islands
+ATOLL | Ring-shaped coral island
+ISTHMUS | Narrow strip of land joining two larger areas
+STRAIT | Narrow channel between two seas
+BAY | Wide coastal inlet
+GULF | Large arm of the sea, such as Mexico's
+LAGOON | Shallow water cut off from the sea
+CAPE | Headland, such as Horn or Good Hope
+COVE | Small sheltered bay
+CLIFF | Steep rock face
+DUNE | Hill of sand
+MESA | Flat-topped hill of the American Southwest
+BUTTE | Isolated steep-sided hill
+GORGE | Deep narrow valley
+VALLEY | Low land between hills
+RAVINE | Small, deep, narrow valley
+PRAIRIE | North American grassland
+STEPPE | Grassland of Eurasia
+PAMPAS | Grassland of Argentina
+SAVANNAH | Tropical grassland with scattered trees
+MARSH | Wetland of grasses and reeds
+SWAMP | Forested wetland
+BAYOU | Marshy outlet of Louisiana
+TRIBUTARY | River flowing into a larger one
+WATERFALL | Water falling over a cliff
+SPRING | Natural source of water
+RAPIDS | Fast, turbulent part of a river
+MEANDER | Winding bend of a river
+OXBOW | Lake formed by a cut-off river bend
+SUMMIT | Top of a mountain
+RIDGE | Long narrow hilltop
+PASS | Route through mountains
+FOOTHILLS | Low hills at the base of mountains
+HEMISPHERE | Half of the Earth
+LONGITUDE | Position east or west of the prime meridian
+MERIDIAN | Line of longitude
+TROPIC | ___ of Cancer or Capricorn
+PRIME | ___ meridian, through Greenwich
+GREENWICH | London district of the prime meridian
+TIMEZONE | Region sharing a standard clock time (4,4)
+COMPASS | Instrument that points north
+MAP | Drawing of an area
+GLOBE | Spherical model of the Earth
+CARTOGRAPHY | Science of map-making
+TOPOGRAPHY | Shape and features of the land
+BORDER | Line separating countries
+ENCLAVE | Territory surrounded by another country
+CAPITAL | City that is the seat of government
+METROPOLIS | Very large city
+POPULATION | Number of people living in a place
+CENSUS | Official count of a population
+NOMAD | Person who moves from place to place
+DIASPORA | Scattered population away from its homeland
+BRITAIN | Island of England, Scotland and Wales
+SAHEL | Semi-arid belt south of the Sahara
+RIFTVALLEY | Great ___, East African trough (4,6)
+SERENGETI | Tanzanian plain of the great migration
+OUTBACK | Remote interior of Australia
+ULURU | Red monolith of central Australia
+PATAGONIA | Southern region of Argentina and Chile
+AMAZONIA | Rainforest region of South America
+SCANDINAVIA | Region of Norway, Sweden and Denmark
+BALKANS | Peninsula of southeastern Europe
+IBERIA | Peninsula of Spain and Portugal
+ANATOLIA | Asian part of Turkey
+ARABIA | Peninsula between the Red Sea and the Persian Gulf
+BENGAL | Region and bay in the northeast of the Indian subcontinent
+KASHMIR | Disputed Himalayan region
+TIBET | High plateau called the roof of the world
+MANCHURIA | Region of northeastern China
+ALASKA | Largest US state
+TEXAS | Lone Star State
+CALIFORNIA | Golden State of the US
+FLORIDA | Sunshine State of the US
+NEVADA | Silver State of Las Vegas
+ARIZONA | State of the Grand Canyon
+OREGON | Pacific state of the Willamette Valley
+MONTANA | Big Sky Country
+VERMONT | Green Mountain State
+MAINE | Northeasternmost US state
+LOUISIANA | Pelican State of New Orleans
+TENNESSEE | State of Nashville and Memphis
+KENTUCKY | Bluegrass State
+OHIO | Buckeye State
+IDAHO | Gem State famed for potatoes
+UTAH | Beehive State of Salt Lake City
+QUEBEC | French-speaking Canadian province
+ALBERTA | Canadian province of Banff and Calgary
+NUNAVUT | Canada's largest and newest territory
+BAVARIA | Southern German state of Neuschwanstein
+TUSCANY | Italian region of Florence and Siena
+PROVENCE | Region of lavender fields in southern France
+CATALONIA | Spanish region of Barcelona
+ANDALUSIA | Spanish region of Seville and Granada
+TRANSYLVANIA | Romanian region of Dracula legend
+CORNWALL | Southwesternmost county of England
+YORKSHIRE | Largest historic county of England
+HIGHLANDS | Mountainous region of northern Scotland
+LESOTHO | Kingdom entirely surrounded by South Africa
+ESWATINI | African kingdom formerly called Swaziland
+ERITREA | Red Sea country whose capital is Asmara
+DJIBOUTI | Small Horn of Africa nation on the Gulf of Aden
+MALAWI | Country of a lake that covers a fifth of its area
+BURUNDI | Small landlocked country whose capital is Gitega
+GABON | Equatorial African country whose capital is Libreville
+TOGO | Narrow West African country whose capital is Lomé
+BENIN | West African country, once the Kingdom of Dahomey
+LIBERIA | West African nation founded by freed American slaves
+SIERRALEONE | West African country whose capital is Freetown (6,5)
+GUINEA | West African country whose capital is Conakry
+MAURITANIA | Saharan country whose capital is Nouakchott
+TURKMENISTAN | Central Asian country of the Darvaza gas crater
+TAJIKISTAN | Mountainous Central Asian country whose capital is Dushanbe
+KYRGYZSTAN | Central Asian country of Lake Issyk-Kul
+BHUTAN | Himalayan kingdom that measures Gross National Happiness
+MALDIVES | Lowest-lying country, an Indian Ocean archipelago
+BRUNEI | Oil-rich sultanate on Borneo
+TIMORLESTE | Southeast Asian nation, independent since 2002 (5,5)
+MOLDOVA | Landlocked country whose capital is Chisinau
+MACEDONIA | Balkan region, and the north of it a country
+KOSOVO | Balkan state that declared independence in 2008
+SURINAME | Smallest country in South America
+TRINIDAD | Larger island of a Caribbean twin-island nation
+DOMINICA | Volcanic Caribbean island called the Nature Isle
+GRENADA | Caribbean island known as the Spice Isle
+VANUATU | Pacific nation of over 80 islands
+KIRIBATI | Pacific nation spanning all four hemispheres
+TUVALU | Tiny Pacific nation whose web domain is .tv
+NAURU | World's smallest island nation
+PALAU | Western Pacific nation of the Rock Islands

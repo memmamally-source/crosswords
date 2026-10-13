@@ -1,0 +1,41 @@
+# Computer Science — one entry per line: ANSWER | clue
+COMPILER | Program that turns source code into machine code
+PYTHON | Programming language named after a comedy troupe
+JAVASCRIPT | Language that makes web pages interactive
+BINARY | Base-two number system
+BIT | Smallest unit of data
+BYTE | Eight bits
+RECURSION | Technique of a function calling itself
+DATABASE | Organised collection of stored data
+FIREWALL | Barrier that filters network traffic
+ENCRYPTION | Scrambling data so only key holders can read it
+TURING | Codebreaker who imagined a universal computing machine
+LOVELACE | Ada ___, first published computer programmer
+BOOLEAN | True-or-false data type
+VARIABLE | Named storage for a value in code
+SERVER | Machine that delivers data to clients
+ROUTER | Device that directs network packets
+PROTOCOL | Agreed rules for communication, such as HTTP
+BANDWIDTH | Data capacity of a connection
+CACHE | Fast storage for recently used data
+KERNEL | Core of an operating system
+LINUX | Open-source OS family begun by Linus Torvalds
+UNIX | Bell Labs operating system of 1969
+SILICON | ___ Valley, California tech hub
+TRANSISTOR | Semiconductor switch at the heart of every chip
+MALWARE | Malicious software
+PHISHING | Fraudulent emails that fish for logins
+BROWSER | App for viewing web pages
+HTML | Markup language of the web (abbr.)
+DEBUGGING | Finding and fixing errors in code
+SYNTAX | Rules of a language's structure
+PROCESSOR | Chip that executes instructions
+CLOUD | Online storage and computing you rent rather than own
+ROBOTICS | Engineering of autonomous machines
+NEURALNETWORK | Layered model loosely inspired by the brain (6,7)
+OPENSOURCE | Describing software whose code anyone may inspect (4,6)
+QUBIT | Basic unit of quantum information
+HACKER | Skilled programmer, or one who breaks into systems
+INTERNET | Global network of networks
+PASSWORD | Secret string that guards an account
+ALGORITHMIC | Following a step-by-step procedure

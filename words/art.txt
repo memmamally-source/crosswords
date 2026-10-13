@@ -1,0 +1,47 @@
+# Art & Architecture — one entry per line: ANSWER | clue
+PICASSO | Spanish painter of Guernica
+MONET | French Impressionist of the Water Lilies series
+REMBRANDT | Dutch master of The Night Watch
+FRESCO | Painting made on wet plaster
+MOSAIC | Picture made from small tiles
+BAROQUE | Ornate, dramatic 17th-century European style
+CUBISM | Movement of fragmented, geometric forms
+IMPRESSIONISM | Movement that captured fleeting light with loose brushwork
+SURREALISM | Dreamlike 1920s movement led by André Breton
+DALI | Painter of The Persistence of Memory
+VERMEER | Painter of Girl with a Pearl Earring
+MICHELANGELO | Painter of the Sistine Chapel ceiling
+DAVINCI | Leonardo ___, painter of the Mona Lisa (2,5)
+GOTHIC | Medieval style of flying buttresses and rose windows
+PALETTE | Board for mixing paints
+EASEL | Stand that holds a painting
+CANVAS | Fabric surface for painting
+SCULPTURE | Three-dimensional artwork
+KAHLO | Frida ___, Mexican painter of The Two Fridas
+VANGOGH | Painter of The Starry Night (3,4)
+WARHOL | Artist of the Campbell's Soup Cans
+POPART | Movement that borrowed from comics and advertising (3,3)
+CHIAROSCURO | Strong contrast of light and dark in painting
+PERSPECTIVE | Technique for showing depth on a flat surface
+COLUMN | Upright pillar, such as a Doric or Ionic one
+GALLERY | Room or building for displaying art
+ROCOCO | Light, playful 18th-century style
+ABSTRACT | Art that doesn't depict things realistically
+PORTRAIT | Picture of a person
+LOUVRE | Paris museum that houses the Mona Lisa
+MURAL | Large painting on a wall
+WATERCOLOUR | Translucent paint thinned with water
+SKETCH | Quick, rough drawing
+GRAFFITI | Art sprayed onto public walls
+BANKSY | Anonymous British street artist
+RODIN | Sculptor of The Thinker
+KLIMT | Austrian painter of The Kiss
+MATISSE | French Fauvist famous for paper cut-outs
+HOKUSAI | Japanese artist of The Great Wave off Kanagawa
+ACROPOLIS | Hilltop citadel in Athens crowned by the Parthenon
+DOME | Hemispherical roof, as on St Peter's Basilica
+ARCH | Curved structure spanning an opening
+GAUDI | Architect of Barcelona's Sagrada Família
+ETCHING | Print made from a plate bitten by acid
+PASTEL | Soft, chalky stick of colour
+STILLLIFE | Painting of fruit, flowers or objects (5,4)

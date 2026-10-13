@@ -1,0 +1,47 @@
+# Economics — one entry per line: ANSWER | clue
+INFLATION | General rise in prices over time
+RECESSION | Significant, widespread decline in economic activity
+SUPPLY | Amount of a good available for sale
+DEMAND | Desire for a good backed by the ability to pay
+MONOPOLY | Market with a single seller
+TARIFF | Tax on imported goods
+CAPITAL | Wealth used to produce more wealth
+DIVIDEND | Payout made to a company's shareholders
+LIQUIDITY | Ease of turning an asset into cash
+KEYNES | Economist who urged government spending in downturns
+SMITH | Adam ___, author of The Wealth of Nations
+EQUITY | Ownership stake in a company
+BOND | Debt security that pays interest
+SUBSIDY | Government payment to support an industry
+DEFICIT | Shortfall when spending exceeds income
+SURPLUS | Amount left over when income exceeds spending
+ELASTICITY | How strongly buyers respond to a price change
+OLIGOPOLY | Market dominated by a few large firms
+AUSTERITY | Policy of deep government spending cuts
+BARTER | Trade goods directly without using money
+CURRENCY | Money in circulation, such as the euro or yen
+ARBITRAGE | Profiting from price differences between markets
+LEDGER | Book of financial accounts
+MARGINAL | ___ cost: the cost of producing one more unit
+SCARCITY | The basic economic problem of limited resources
+COMMODITY | Raw material like oil or wheat, traded in bulk
+FISCAL | Relating to a government's treasury
+MONETARY | ___ policy, set by central banks
+GDP | Measure of a nation's total output (abbr.)
+STAGFLATION | Rising prices combined with economic stagnation
+STOCK | Share in a company traded on an exchange
+BULL | ___ market: one with rising prices
+BEAR | ___ market: one with falling prices
+MORTGAGE | Loan used to buy a home
+INVESTMENT | Putting money into something for future return
+PROFIT | What remains after costs are paid
+REVENUE | Total income from sales
+BUDGET | Plan for income and spending
+TAXATION | Government levies on income and goods
+ENTREPRENEUR | Person who starts a business
+CARTEL | Group of firms that collude to fix prices
+PRODUCTIVITY | Output per worker or per hour
+INCENTIVE | Something that motivates a choice
+UTILITY | Economists' term for satisfaction from consumption
+MERCANTILISM | Early doctrine that a nation should export more than it imports
+EMBARGO | Ban on trade with a country

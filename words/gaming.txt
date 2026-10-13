@@ -1,0 +1,47 @@
+# Video Games — one entry per line: ANSWER | clue
+MARIO | Moustachioed plumber who rescues Princess Peach
+ZELDA | Princess of Hyrule in Link's adventures
+SONIC | Sega's speedy blue hedgehog
+PACMAN | Yellow dot-gobbler chased by ghosts (3-3)
+TETRIS | Falling-block puzzle game created in the Soviet Union
+MINECRAFT | Block-building game created by Markus Persson
+FORTNITE | Battle royale game famous for its dance emotes
+PIKACHU | Electric yellow mascot of a monster-catching series
+CONSOLE | Gaming machine that plugs into a TV
+JOYSTICK | Lever used to steer in flight simulators
+ARCADE | Venue full of coin-operated games
+PIXEL | Tiny dot that makes up a screen image
+LEVEL | Stage of a game
+BOSS | Tough enemy waiting at the end of a stage
+RESPAWN | Come back to life after being defeated
+QUEST | Mission in a role-playing game
+SPEEDRUN | Attempt to finish a game as fast as possible
+CONTROLLER | Handheld device with buttons and thumbsticks
+NINTENDO | Japanese company behind the Switch
+PLAYSTATION | Sony's gaming system
+XBOX | Microsoft's gaming system
+KIRBY | Pink puffball who inhales enemies
+LUIGI | Taller, green-clad brother of a famous plumber
+YOSHI | Green dinosaur sidekick with a long tongue
+GLITCH | Bug that makes a game behave strangely
+MULTIPLAYER | Game mode for many people at once
+LOOT | Items collected from defeated enemies
+STEALTH | Gameplay style built on sneaking past enemies
+ROBLOX | Online platform where players build their own games
+CREEPER | Green mob that explodes in a block-building game
+CROFT | Lara ___, tomb-raiding adventurer
+HALO | Sci-fi shooter starring Master Chief
+POKEBALL | Red-and-white capsule for catching monsters
+HITPOINTS | Health total in many games, abbreviated HP (3,6)
+ACHIEVEMENT | Badge earned for completing an in-game challenge
+CHECKPOINT | Saved spot where you restart after losing a life
+SANDBOX | Open-ended genre with no set path
+POWERUP | Item that temporarily boosts your abilities (5-2)
+AMONGUS | Social deduction game about finding the impostor (5,2)
+DONKEYKONG | Barrel-throwing ape who debuted in 1981 (6,4)
+NPC | Character controlled by the computer (abbr.)
+TUTORIAL | Opening section that teaches the controls
+LOBBY | Waiting area before an online match begins
+CRAFTING | Combining items to make new ones
+HEADSHOT | Precise hit in a shooter
+MODS | Fan-made changes to a game

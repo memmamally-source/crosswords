@@ -1,0 +1,47 @@
+# Literature — one entry per line: ANSWER | clue
+SHAKESPEARE | The Bard of Avon
+HAMLET | Prince of Denmark who asks "To be, or not to be"
+ODYSSEY | Epic of a ten-year voyage home from Troy
+ILIAD | Ancient Greek epic of the Trojan War
+SONNET | Fourteen-line poem
+HAIKU | Japanese poem of 5-7-5 syllables
+METAPHOR | Figure of speech saying one thing is another
+SIMILE | Comparison using "like" or "as"
+ALLITERATION | Repetition of initial consonant sounds
+PROTAGONIST | Main character of a story
+ORWELL | Author of Nineteen Eighty-Four
+AUSTEN | Author of Pride and Prejudice
+DICKENS | Author of Great Expectations and Oliver Twist
+TOLSTOY | Author of War and Peace
+DANTE | Poet who described the nine circles of Hell
+QUIXOTE | Cervantes' would-be knight who tilts at windmills
+GATSBY | Fitzgerald's "Great" title character
+MACBETH | Scottish king driven by ambition in a tragedy
+SATIRE | Use of humour or mockery to criticise
+ALLEGORY | Story with a hidden moral or political meaning
+ELEGY | Mournful poem for the dead
+NARRATOR | Voice that tells the story
+EPILOGUE | Concluding section of a work
+IRONY | Contrast between what is expected and what happens
+CHAUCER | Author of The Canterbury Tales
+HOMER | Ancient Greek poet traditionally credited with two great epics
+MORRISON | Toni ___, Nobel laureate who wrote Beloved
+BRONTE | Surname of the sisters behind Jane Eyre and Wuthering Heights
+SOLILOQUY | Speech a character makes alone on stage
+FABLE | Short moral tale with talking animals, like those of Aesop
+TOLKIEN | Author of The Lord of the Rings
+BEOWULF | Old English epic hero who slays Grendel
+HEMINGWAY | Author of The Old Man and the Sea
+KAFKA | Author of The Metamorphosis
+MOBYDICK | Melville's white whale (4,4)
+FRANKENSTEIN | Mary Shelley's scientist who builds a creature
+ACHEBE | Nigerian author of Things Fall Apart
+WOOLF | Virginia ___, author of Mrs Dalloway
+POE | Author of "The Raven"
+STANZA | Group of lines forming a unit of a poem
+PROLOGUE | Opening section of a play or book
+GENRE | Category such as mystery or romance
+LIMERICK | Five-line comic poem rhymed AABBA
+ANTAGONIST | Character who opposes the hero
+FORESHADOWING | Hints of what's to come in a story
+DYSTOPIA | Imagined society of oppression and fear

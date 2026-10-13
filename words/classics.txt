@@ -1,0 +1,41 @@
+# Latin & the Ancient World — one entry per line: ANSWER | clue
+CARPEDIEM | "Seize the day" (5,4)
+ETTU | "___, Brute?" (2,2)
+ALMAMATER | Your old school, literally "nourishing mother" (4,5)
+BONAFIDE | Genuine, literally "in good faith" (4,4)
+PERSE | "By itself" (3,2)
+QUIDPROQUO | Something for something (4,3,3)
+ADHOC | Improvised, literally "for this" (2,3)
+STATUSQUO | Existing state of affairs (6,3)
+MAGNUMOPUS | Artist's greatest work (6,4)
+TABULARASA | Blank slate (6,4)
+FORUM | Public square of a Roman city
+LEGION | Roman army unit of several thousand men
+CENTURION | Commander of about eighty Roman soldiers
+GLADIATOR | Arena fighter of ancient Rome
+TOGA | Draped garment of a Roman citizen
+AQUEDUCT | Channel that carried water to Roman cities
+PANTHEON | Domed temple in Rome
+PARTHENON | Temple to Athena on the Acropolis
+VIRGIL | Poet of the Aeneid
+OVID | Poet of the Metamorphoses
+CICERO | Roman orator who denounced Catiline
+SENECA | Stoic philosopher and tragedian of first-century Rome
+AUGUSTUS | First Roman emperor
+NERO | Emperor said to have fiddled while Rome burned
+HADRIAN | Emperor who built a wall across Britain
+POMPEII | City buried by Vesuvius in AD 79
+CARTHAGE | Phoenician city destroyed by Rome in 146 BC
+HANNIBAL | General who crossed the Alps with elephants
+SPARTACUS | Thracian who led a slave revolt against Rome
+HERODOTUS | Greek known as the "father of history"
+THUCYDIDES | Historian of the Peloponnesian War
+AMPHORA | Two-handled ancient jar
+OLYMPIA | Site of the ancient Games held in honour of Zeus
+ORACLE | Priestess who spoke for the gods at Delphi
+SPQR | "The Senate and People of Rome" (abbr.)
+RUBICON | River Caesar crossed in 49 BC
+EUREKA | "I have found it!", a famous cry from the bath
+ARCHIMEDES | Syracusan who discovered the principle of buoyancy
+PHALANX | Tight block of Greek spearmen
+DEUSEXMACHINA | Contrived plot rescue, "god from the machine" (4,2,7)
