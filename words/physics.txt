@@ -39,3 +39,465 @@ HALFLIFE | Time for half of a radioactive sample to decay (4-4)
 FISSION | Splitting of a heavy nucleus
 GALVANOMETER | Instrument for detecting small electric currents
 INERTIAL | Describing a frame of reference that is not accelerating
+MECHANICS | Branch of physics dealing with motion and forces
+KINEMATICS | Description of motion without forces
+DYNAMICS | Study of forces and motion
+STATICS | Study of forces in equilibrium
+DISPLACEMENT | Change in position with direction
+VELOCITY | Speed in a given direction
+SPEED | Distance per unit time
+INERTIA | Resistance to change in motion
+MASS | Quantity of matter
+WEIGHT | Gravitational force on a mass
+NEWTON | SI unit of force
+FORCE | Push or pull
+FRICTION | Force opposing sliding
+DRAG | Air resistance
+FREEFALL | Falling under gravity alone (4,4)
+GRAVITY | Attraction between masses
+GRAVITATIONAL | ___ constant, G
+PROJECTILE | Object thrown through the air
+TRAJECTORY | Path of a projectile
+PARABOLIC | Curved like a thrown ball's path
+IMPULSE | Force multiplied by time
+COLLISION | Impact between objects
+ELASTIC | Collision conserving kinetic energy
+INELASTIC | Collision losing kinetic energy
+CONSERVATION | ___ of energy or momentum
+ENERGY | Capacity to do work
+KINETIC | Energy of motion
+POTENTIAL | Stored energy of position
+WORK | Force times distance moved
+POWER | Rate of doing work
+HORSEPOWER | Old unit of engine power
+CIRCULAR | ___ motion, around a centre
+CENTRIFUGAL | Apparent outward force in rotation
+ANGULAR | ___ momentum, of rotation
+ROTATIONAL | Relating to spinning
+MOMENT | Turning effect of a force
+EQUILIBRIUM | Balanced state
+OSCILLATOR | System that vibrates
+HARMONIC | Simple ___ motion, like a spring
+HOOKE | ___'s law, of springs
+ELASTICITY | Ability to return to shape
+STRESS | Force per unit area in a material
+STRAIN | Deformation per unit length
+YOUNG | ___'s modulus of stiffness
+MODULUS | Measure of stiffness
+PRESSURE | Force per unit area
+PASCAL | SI unit of pressure
+ATMOSPHERE | Unit of pressure at sea level
+BAROMETRIC | Relating to air pressure
+HYDRAULICS | Use of liquids under pressure
+BUOYANCY | Upward force in a fluid
+ARCHIMEDES | ___' principle, of displaced fluid
+FLUID | Liquid or gas
+VISCOSITY | Resistance of a fluid to flow
+LAMINAR | Smooth, layered flow
+TURBULENT | Chaotic flow
+BERNOULLI | ___'s principle, of pressure and fluid speed
+AERODYNAMICS | Study of air flow over objects
+LIFT | Upward force on a wing
+THRUST | Forward force from an engine
+THERMODYNAMICS | Physics of heat and work
+HEAT | Energy transferred by temperature difference
+TEMPERATURE | Measure of average kinetic energy
+CELSIUS | Temperature scale with water freezing at zero
+FAHRENHEIT | Temperature scale with water boiling at 212
+ABSOLUTEZERO | Zero kelvin (8,4)
+THERMAL | Relating to heat
+CONDUCTION | Heat transfer through contact
+CONVECTION | Heat transfer by fluid movement
+LATENT | ___ heat, absorbed during a change of state
+ENTROPY | Measure of disorder
+ADIABATIC | Without heat exchange
+ISOTHERMAL | At constant temperature
+CARNOT | ___ cycle, the ideal heat engine
+REFRIGERATOR | Heat pump that keeps food cold
+LONGITUDINAL | Wave vibrating along its direction of travel
+CREST | High point of a wave
+TROUGH | Low point of a wave
+WAVELENGTH | Distance between crests
+PERIOD | Time for one oscillation
+PHASE | Position within a cycle
+INTERFERENCE | Combination of overlapping waves
+CONSTRUCTIVE | Interference that reinforces
+DESTRUCTIVE | Interference that cancels
+NODE | Point of no vibration in a standing wave
+ANTINODE | Point of maximum vibration
+RESONANCE | Vibration at a natural frequency
+HARMONICS | Integer multiples of a fundamental frequency
+ACOUSTICS | Physics of sound
+DECIBEL | Unit of sound intensity
+ULTRASONIC | Above human hearing
+INFRASONIC | Below human hearing
+SUPERSONIC | Faster than sound
+SONICBOOM | Shock wave of a supersonic object (5,4)
+MACH | Ratio of speed to the speed of sound
+ECHOLOCATION | Locating by reflected sound
+OPTICS | Physics of light
+LIGHT | Visible electromagnetic radiation
+REFLECTION | Bouncing of light
+REFRACTIVE | ___ index, measure of light bending
+SNELL | ___'s law of refraction
+FIBREOPTIC | Cable carrying light (5,5)
+CONVEX | Lens that converges light
+CONCAVE | Lens that diverges light
+MAGNIFICATION | Enlargement of an image
+POLARISATION | Restricting light to one plane
+DISPERSION | Splitting of light into colours
+PRISM | Glass that splits white light
+LASER | Coherent light source
+COHERENT | Having a constant phase relationship
+HOLOGRAM | Three-dimensional image made with lasers
+ELECTROMAGNETIC | ___ spectrum
+INFRARED | Radiation felt as heat
+ULTRAVIOLET | Radiation causing sunburn
+ELECTRICITY | Flow of electric charge
+CHARGE | Property of particles that causes electric force
+COULOMB | SI unit of charge
+CURRENT | Rate of flow of charge
+VOLTAGE | Potential difference
+RESISTANCE | Opposition to current
+CAPACITOR | Component that stores charge
+CAPACITANCE | Ability to store charge
+FARAD | Unit of capacitance
+INDUCTOR | Coil that resists changes in current
+INDUCTANCE | Property of a coil opposing current change
+HENRY | Unit of inductance
+TRANSFORMER | Device that changes voltage
+DIODE | Component allowing current one way
+TRANSISTOR | Semiconductor switch
+SEMICONDUCTOR | Material like silicon
+CONDUCTOR | Material that lets current flow
+FUSE | Wire that melts to protect a circuit
+EARTH | Safety connection to the ground
+ALTERNATING | ___ current, which changes direction
+DIRECT | ___ current, flowing one way
+DYNAMO | Generator of direct current
+GENERATOR | Converts motion into electricity
+MOTOR | Converts electricity into motion
+ELECTRON | Negatively charged particle
+MAGNETISM | Force from magnets
+MAGNETIC | ___ field
+TESLA | SI unit of magnetic flux density
+WEBER | SI unit of magnetic flux
+GAUSS | Unit of magnetic field
+SOLENOID | Coil that acts as a magnet
+INDUCTION | Generating current by changing magnetic fields
+LENZ | ___'s law, of opposing induced current
+FLEMING | ___'s left-hand rule
+NUCLEUS | Centre of an atom
+PROTON | Positive nuclear particle
+NEUTRON | Neutral nuclear particle
+NUCLEON | Proton or neutron
+ISOTOPE | Variant of an element
+RADIOACTIVE | Emitting radiation
+ALPHA | Helium nucleus radiation
+BETA | Electron radiation
+DECAY | Spontaneous nuclear transformation
+FUSION | Joining of nuclei
+REACTOR | Device for controlled fission
+MODERATOR | Material slowing neutrons in a reactor
+CRITICALITY | State of a self-sustaining chain reaction
+LEPTON | Particle such as an electron
+HADRON | Particle made of quarks
+BARYON | Hadron of three quarks
+MESON | Hadron of a quark and antiquark
+FERMION | Particle with half-integer spin
+GLUON | Particle that binds quarks
+PHOTON | Particle of light
+GRAVITON | Hypothetical particle of gravity
+POSITRON | Antimatter electron
+ANTIPARTICLE | Particle with opposite charge
+MUON | Heavy cousin of the electron
+HIGGS | Boson that gives particles mass
+SPIN | Intrinsic angular momentum of a particle
+CHARM | Type of quark
+STRANGE | Type of quark
+BOTTOM | Type of quark
+DOWN | Type of quark
+WAVEFUNCTION | Mathematical description of a quantum state
+SUPERPOSITION | Being in multiple states at once
+UNCERTAINTY | Heisenberg's principle
+TUNNELLING | Passing through a classically forbidden barrier
+PLANCK | Max ___, father of quantum theory
+QUANTA | Discrete packets of energy
+DUALITY | Wave-particle ___
+PHOTOELECTRIC | ___ effect, explained by Einstein
+DEBROGLIE | Physicist of matter waves (2,6)
+DIRAC | Physicist who predicted antimatter
+COPENHAGEN | Interpretation of quantum mechanics
+DECOHERENCE | Loss of quantum behaviour
+TIMEDILATION | Slowing of time at high speed (4,8)
+LENGTH | ___ contraction at high speed
+LORENTZ | ___ transformation of relativity
+EVENTHORIZON | Boundary of a black hole (5,7)
+COSMOLOGICAL | ___ constant, Einstein's addition
+STRINGTHEORY | Theory of vibrating strings (6,6)
+UNIFIED | ___ field theory
+GALILEO | Physicist who studied falling bodies and pendulums
+KEPLER | Astronomer of three laws of planetary motion
+HUYGENS | Dutch physicist of the wave theory of light
+BOYLE | Robert ___, of a gas law
+FRESNEL | French physicist of wave optics
+OERSTED | Danish physicist who linked electricity and magnetism
+CLAUSIUS | German physicist of entropy
+BOLTZMANN | Physicist of statistical mechanics
+GIBBS | American pioneer of thermodynamics
+ROENTGEN | Discoverer of X-rays
+BECQUEREL | Discoverer of radioactivity
+CURIE | Marie ___, pioneer of radioactivity
+THOMSON | J. J. ___, discoverer of the electron
+RUTHERFORD | Physicist who discovered the nucleus
+CHADWICK | Discoverer of the neutron
+MILLIKAN | Measurer of the electron's charge with oil drops
+POINCARE | French physicist of early relativity
+MICHELSON | Physicist of an experiment that found no ether
+MORLEY | Michelson's collaborator
+FERMI | Builder of the first nuclear reactor
+OPPENHEIMER | Leader of the Manhattan Project
+TELLER | Father of the hydrogen bomb
+BETHE | Physicist who explained how stars shine
+PAULI | Physicist of the exclusion principle
+BORN | Max ___, of the probability interpretation
+SOMMERFELD | German physicist of fine structure
+RAMAN | Indian physicist of light scattering
+BOSE | Indian physicist of a particle class
+CHANDRASEKHAR | Astrophysicist of white dwarf limits
+HAWKING | Physicist of black hole radiation
+PENROSE | Roger ___, Nobel laureate for black hole theory
+WEINBERG | Physicist of electroweak unification
+YUKAWA | Japanese physicist who predicted the meson
+TOMONAGA | Japanese co-founder of quantum electrodynamics
+MEITNER | Lise ___, co-discoverer of fission
+FRANKLIN | Benjamin ___, who flew a kite in a storm
+EDISON | Inventor of the phonograph
+MARCONI | Pioneer of radio
+BELL | Inventor of the telephone
+CAVENDISH | Physicist who weighed the Earth
+FOUCAULT | ___ pendulum, proving Earth's rotation
+TORRICELLI | Inventor of the barometer
+CHERENKOV | ___ radiation, blue glow in reactors
+COMPTON | ___ scattering of X-rays
+RYDBERG | ___ constant of atomic spectra
+BRAGG | Father-and-son X-ray crystallographers
+GEIGER | Co-inventor of a radiation counter
+WILSON | Inventor of the cloud chamber
+CYCLOTRON | Circular particle accelerator
+SYNCHROTRON | Accelerator with synchronised fields
+ACCELERATOR | Machine that speeds up particles
+COLLIDER | Machine that smashes particles
+DETECTOR | Device that registers particles
+SPECTROMETER | Device that measures spectra
+INTERFEROMETER | Device using interference to measure
+OSCILLOSCOPE | Device that displays waveforms
+AMMETER | Measures current
+VOLTMETER | Measures voltage
+MULTIMETER | Measures current, voltage and resistance
+BALANCE | Instrument for weighing
+MICROMETER | Instrument measuring small lengths
+VERNIER | ___ scale, for precise readings
+THERMOCOUPLE | Temperature sensor of two metals
+BOLOMETER | Instrument that measures radiant heat
+PHOTOMETER | Instrument that measures light
+GYROSCOPE | Spinning device that keeps orientation
+ACCELEROMETER | Device that measures acceleration
+CANDELA | SI unit of luminous intensity
+MOLE | SI unit of amount of substance
+LUMEN | Unit of luminous flux
+LUX | Unit of illuminance
+ELECTRONVOLT | Unit of energy in particle physics
+ANGSTROM | Unit of a ten-billionth of a metre
+PARSEC | Astronomical unit of distance
+LIGHTYEAR | Distance light travels in a year (5,4)
+BAR | Unit of pressure
+CALORIE | Unit of heat energy
+DYNE | Old unit of force
+GRAY | Unit of absorbed radiation dose
+SIEVERT | Unit of radiation dose equivalent
+NANOMETRE | Billionth of a metre
+FEMTOSECOND | Quadrillionth of a second
+ETHER | Discredited medium thought to carry light
+CAUSALITY | Principle that causes precede effects
+DETERMINISM | View that the future is fixed by the present
+CHAOS | Sensitive dependence on initial conditions
+BUTTERFLY | ___ effect of chaos theory
+FRACTAL | Self-similar pattern
+SYMMETRY | Invariance under transformation
+INVARIANCE | Unchanging under transformation
+FIELD | Region where a force acts
+FLUX | Flow through a surface
+GRADIENT | Rate of change in space
+DIVERGENCE | Measure of outflow from a point
+CURL | Measure of rotation in a field
+VECTOR | Quantity with direction
+SCALAR | Quantity without direction
+TENSOR | Generalised multi-index quantity
+DIMENSIONAL | ___ analysis, checking units
+APPROXIMATION | Simplified estimate
+MODEL | Simplified representation
+SIMULATION | Computer modelling
+EXPERIMENTAL | Based on experiments
+THEORETICAL | Based on theory
+EMPIRICAL | Based on observation
+HYPOTHESIS | Testable proposal
+PLASMA | Ionised gas
+CONDENSATE | Bose-Einstein ___, a state near absolute zero
+SUPERFLUID | Liquid flowing without friction
+CRYOGENICS | Physics of very low temperatures
+SUPERCOOLED | Cooled below freezing without solidifying
+EVAPORATION | Liquid becoming gas at the surface
+BOILING | Rapid vaporisation throughout a liquid
+CONDENSATION | Gas becoming liquid
+FREEZING | Liquid becoming solid
+MELTING | Solid becoming liquid
+SUBLIMATION | Solid becoming gas directly
+EXPANSION | Increase in size when heated
+CONTRACTION | Decrease in size when cooled
+BIMETALLIC | ___ strip, which bends with heat
+THERMOSTAT | Temperature control device
+INSULATION | Material reducing heat flow
+RADIATOR | Device that emits heat
+BLACKBODY | Ideal absorber and emitter of radiation
+EMISSIVITY | Efficiency of emitting radiation
+ALBEDO | Reflectivity of a surface
+GREENHOUSE | ___ effect, trapping heat
+PHOTOVOLTAIC | Converting light to electricity
+HYDROPOWER | Electricity from flowing water
+BATTERY | Store of electrical energy
+CELL | Single unit of a battery
+ANODE | Positive electrode
+CATHODE | Negative electrode
+ELECTROLYTE | Conducting solution in a battery
+CHARGER | Device that recharges batteries
+GRID | Network distributing electricity
+PYLON | Tower carrying power lines
+SUBSTATION | Facility that transforms voltage
+EARTHING | Connecting to the ground for safety
+RESISTOR | Component limiting current
+POTENTIOMETER | Variable resistor
+RHEOSTAT | Adjustable resistor
+THERMISTOR | Temperature-sensitive resistor
+PHOTODIODE | Light-sensitive diode
+MICROCHIP | Integrated circuit
+AMPLIFICATION | Increasing signal strength
+SIGNAL | Varying quantity carrying information
+ANALOGUE | Continuously varying signal
+DIGITAL | Signal of discrete values
+MODULATION | Varying a wave to carry information
+ANTENNA | Device for sending or receiving radio waves
+WAVEGUIDE | Structure that directs waves
+RADAR | System detecting objects with radio waves
+SONAR | System detecting objects with sound
+ULTRASOUND | High-frequency sound for imaging
+RADIOTHERAPY | Treatment with radiation
+MOTION | Change of position
+ROTATION | Spinning about an axis
+REVOLUTION | Orbit around a body
+ORBIT | Path around a massive body
+SATELLITE | Body orbiting another
+WEIGHTLESSNESS | State of free fall
+TIDES | Effect of the Moon's gravity on oceans
+SWING | Back-and-forth motion
+SEESAW | Lever on a pivot
+PULLEY | Wheel for lifting loads
+GEAR | Toothed wheel transmitting motion
+WHEEL | Round frame turning on an axle
+AXLE | Rod on which a wheel turns
+WEDGE | Simple machine for splitting
+SCREW | Simple machine of a helical ramp
+FLYWHEEL | Heavy wheel storing rotational energy
+SUSPENSION | System cushioning a vehicle
+BRAKE | Device slowing motion
+SLINGSHOT | Gravity assist
+ROCKETRY | Science of rockets
+PROPULSION | Driving force
+JET | Engine expelling gas for thrust
+NOZZLE | Narrowing tube that speeds up flow
+VENTURI | Narrow tube where speed rises and pressure falls
+SIPHON | Tube moving liquid over a barrier
+CAPILLARY | ___ action, rise in narrow tubes
+MENISCUS | Curved surface of a liquid in a tube
+COHESION | Attraction between like molecules
+ADHESION | Attraction between unlike molecules
+DENSITY | Mass per unit volume
+HYDROMETER | Instrument measuring liquid density
+RAINBOW | Arc of colours from refraction in droplets
+MIRAGE | Optical illusion caused by hot air
+HALO | Ring of light around the Sun or Moon
+AURORA | Glowing lights near the poles
+LIGHTNING | Electrical discharge in a storm
+THUNDER | Sound of lightning
+SPARK | Brief electrical discharge
+STATIC | Built-up surface charge
+ECHO | Reflected sound
+REVERBERATION | Persistence of sound in a room
+BEATS | Pulsing from two close frequencies
+TIMBRE | Quality of a sound
+PITCH | Perceived frequency of a sound
+LOUDNESS | Perceived intensity of a sound
+SHADOW | Dark area where light is blocked
+UMBRA | Darkest part of a shadow
+PENUMBRA | Partial shadow
+ECLIPSE | Shadowing of one body by another
+SLIT | Narrow opening in a double-slit experiment
+CAMERAOBSCURA | Dark room projecting an outside image (6,7)
+PINHOLE | ___ camera, with no lens
+TELESCOPE | Instrument for distant viewing
+MICROSCOPE | Instrument for tiny objects
+PERISCOPE | Tube with mirrors for seeing over obstacles
+KALEIDOSCOPE | Tube of mirrors making patterns
+SPECTACLES | Lenses worn to correct vision
+LUMINESCENCE | Emission of light not from heat
+INCANDESCENCE | Emission of light from heat
+FLUORESCENT | Glowing under ultraviolet
+PHOSPHOR | Substance that glows when struck by radiation
+OPACITY | Degree of blocking light
+TRANSPARENT | Letting light through
+TRANSLUCENT | Letting light through diffusely
+REFLECTIVITY | Fraction of light reflected
+CRYSTALLINE | Having an ordered atomic structure
+AMORPHOUS | Lacking crystal structure
+DUCTILE | Able to be drawn into wire
+MALLEABLE | Able to be hammered into shape
+BRITTLE | Breaking easily
+HARDNESS | Resistance to scratching
+TOUGHNESS | Resistance to fracture
+TENSILE | ___ strength, resistance to pulling
+COMPRESSION | Squeezing force
+TENSION | Pulling force
+SHEAR | Sliding force
+TORSION | Twisting force
+FATIGUE | Weakening from repeated stress
+CREEP | Slow deformation under stress
+COMPOSITE | Material made of combined materials
+KEVLAR | Strong aramid fibre in body armour
+GRAPHENE | Single layer of carbon atoms
+NANOSCALE | Scale of billionths of a metre
+QUBIT | Quantum bit
+ENTANGLED | Linked in a quantum way
+TELEPORTATION | Transfer of a quantum state
+SPINTRONICS | Electronics using electron spin
+METAMATERIAL | Engineered material with unusual properties
+INVISIBILITY | ___ cloak of metamaterials
+DARKMATTER | Unseen mass in galaxies (4,6)
+DARKENERGY | Force accelerating cosmic expansion (4,6)
+ICECUBE | Neutrino observatory at the South Pole
+FERMILAB | US particle physics laboratory
+MANHATTAN | ___ Project, wartime atomic bomb programme
+TRINITY | First nuclear test, in 1945
+ITER | Fusion experiment being built in France
+TOKAMAK | Doughnut-shaped fusion reactor
+STELLARATOR | Twisted fusion reactor design
+CRADLE | Newton's ___, of swinging balls
+VANDEGRAAFF | Generator of high static voltage (3,2,5)
+LEYDEN | ___ jar, early capacitor
+PHYSICIST | Scientist of matter and energy
+ASTROPHYSICIST | Physicist of the stars
+LABORATORY | Place for experiments
+APPARATUS | Equipment for an experiment
+CALIBRATION | Adjusting an instrument for accuracy
+SYSTEMATIC | ___ error, a consistent bias
+PRECISION | Closeness of repeated measurements
+ACCURACY | Closeness to the true value
