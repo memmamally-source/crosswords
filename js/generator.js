@@ -41,6 +41,7 @@
   class Board {
     constructor(maxSize) {
       this.cells = new Map(); // key -> { ch, across, down }
+      this.byLetter = new Map(); // letter -> [[r, c], ...]
       this.placed = [];
       this.maxSize = maxSize;
       this.minR = 0; this.maxR = -1; this.minC = 0; this.maxC = -1;
@@ -90,9 +91,14 @@
         const rr = r + dr * i;
         const cc = c + dc * i;
         const k = key(rr, cc);
-        const cell = this.cells.get(k) || { ch: word[i], across: false, down: false };
+        let cell = this.cells.get(k);
+        if (!cell) {
+          cell = { ch: word[i], across: false, down: false };
+          this.cells.set(k, cell);
+          if (!this.byLetter.has(cell.ch)) this.byLetter.set(cell.ch, []);
+          this.byLetter.get(cell.ch).push([rr, cc]);
+        }
         cell[dir] = true;
-        this.cells.set(k, cell);
       }
       const endR = r + dr * (word.length - 1);
       const endC = c + dc * (word.length - 1);
@@ -114,10 +120,9 @@
     // All legal positions for a word that cross an existing letter.
     candidates(word) {
       const out = [];
-      for (const [k, cell] of this.cells) {
-        const [r, c] = k.split(',').map(Number);
-        for (let i = 0; i < word.length; i++) {
-          if (word[i] !== cell.ch) continue;
+      for (let i = 0; i < word.length; i++) {
+        for (const [r, c] of this.byLetter.get(word[i]) || []) {
+          const cell = this.get(r, c);
           for (const dir of ['across', 'down']) {
             if (cell[dir]) continue;
             const { dr, dc } = DIRS[dir];

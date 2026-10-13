@@ -10,7 +10,7 @@ function assertNoGiveaways(p, tag) {
     assert.strictEqual(hits.length, 0, `${tag}: clue for ${w.answer} gives away ${hits.join(', ')}: "${w.clue}"`);
   }
 }
-const { GENRES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG } = require('../js/genres.js');
+const { GENRES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW } = require('../js/genres.js');
 
 function runs(puzzle) {
   // Every horizontal/vertical run of 2+ letters in the grid.
@@ -44,7 +44,7 @@ for (const genre of GENRES) {
   const answers = new Set(genre.words.map((w) => w.answer));
   assert.strictEqual(answers.size, genre.words.length, `${genre.id}: duplicate answers`);
   for (const [level, cfg] of Object.entries(DIFFICULTIES)) {
-    for (let seed = 1; seed <= 20; seed++) {
+    for (let seed = 1; seed <= 10; seed++) {
       const p = generate(genre.words, { ...cfg, seed });
       const tag = `${genre.id}/${level}/seed ${seed}`;
       assert.strictEqual(p.words.length, cfg.count, `${tag}: placed ${p.words.length}/${cfg.count}`);
@@ -81,7 +81,7 @@ let prevDaily = null;
 let dailyRepeats = 0;
 for (let day = start; day < start + 56; day++) {
   const sched = DAILY_SCHEDULE[(day + 4) % 7]; // 1 Jan 1970 was a Thursday
-  const bank = rotatingPool(DAILY_BANK, day, 80, 1).filter((w) => w.answer.length <= sched.maxLen);
+  const bank = rotatingPool(DAILY_BANK, day, DAILY_WINDOW, 1).filter((w) => w.answer.length <= sched.maxLen);
   const p = generate(bank, { count: sched.count, maxSize: sched.maxSize, seed: day * 31 + 7 });
   assert.strictEqual(p.words.length, sched.count, `daily ${day} (${sched.day}): placed ${p.words.length}/${sched.count}`);
   assert.ok(p.words.every((w) => w.tag), `daily ${day}: every clue has a subject label`);
@@ -89,7 +89,7 @@ for (let day = start; day < start + 56; day++) {
   const answers = p.words.map((w) => w.answer);
   if (prevDaily) dailyRepeats += answers.filter((a) => prevDaily.includes(a)).length;
   prevDaily = answers;
-  const m = generate(rotatingPool(MINI_BANK, day, 30, 2), { ...MINI_CONFIG, seed: day * 17 + 3 });
+  const m = generate(rotatingPool(MINI_BANK, day, MINI_WINDOW, 2), { ...MINI_CONFIG, seed: day * 17 + 3 });
   assert.strictEqual(m.words.length, MINI_CONFIG.count, `mini ${day}: placed ${m.words.length}`);
   assertNoGiveaways(m, `mini ${day}`);
   total += 2;

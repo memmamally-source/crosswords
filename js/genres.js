@@ -272,9 +272,9 @@ const CATEGORIES = [
 ];
 
 const DIFFICULTIES = {
-  easy: { label: 'Easy', count: 8, maxSize: 11 },
-  medium: { label: 'Medium', count: 12, maxSize: 13 },
-  hard: { label: 'Hard', count: 16, maxSize: 15 },
+  easy: { label: 'Easy', count: 12, maxSize: 13 },
+  medium: { label: 'Medium', count: 20, maxSize: 17 },
+  hard: { label: 'Hard', count: 30, maxSize: 21 },
 };
 
 // ---------- Daily puzzles ----------
@@ -288,13 +288,13 @@ const DAILY_BANK = mixGenre('daily', 'The Daily', '', '', DAILY_SOURCES).words;
 
 // Indexed by Date.getDay(): 0 = Sunday.
 const DAILY_SCHEDULE = [
-  { day: 'Sunday', level: 'Grand', count: 22, maxSize: 17, maxLen: 15 },
-  { day: 'Monday', level: 'Gentle', count: 14, maxSize: 13, maxLen: 8 },
-  { day: 'Tuesday', level: 'Moderate', count: 15, maxSize: 13, maxLen: 9 },
-  { day: 'Wednesday', level: 'Moderate', count: 16, maxSize: 15, maxLen: 10 },
-  { day: 'Thursday', level: 'Tricky', count: 17, maxSize: 15, maxLen: 15 },
-  { day: 'Friday', level: 'Challenging', count: 18, maxSize: 15, maxLen: 15 },
-  { day: 'Saturday', level: 'Fiendish', count: 20, maxSize: 15, maxLen: 15 },
+  { day: 'Sunday', level: 'Grand', count: 40, maxSize: 23, maxLen: 15 },
+  { day: 'Monday', level: 'Gentle', count: 22, maxSize: 17, maxLen: 8 },
+  { day: 'Tuesday', level: 'Moderate', count: 25, maxSize: 17, maxLen: 9 },
+  { day: 'Wednesday', level: 'Moderate', count: 28, maxSize: 19, maxLen: 10 },
+  { day: 'Thursday', level: 'Tricky', count: 30, maxSize: 21, maxLen: 15 },
+  { day: 'Friday', level: 'Challenging', count: 32, maxSize: 21, maxLen: 15 },
+  { day: 'Saturday', level: 'Fiendish', count: 34, maxSize: 21, maxLen: 15 },
 ];
 
 // The Mini is a quick warm-up of short everyday and pop-culture answers.
@@ -304,6 +304,10 @@ const MINI_BANK = mixGenre(
 ).words.filter((w) => w.answer.length >= 3 && w.answer.length <= 6);
 const MINI_CONFIG = { count: 6, maxSize: 7 };
 
+// How many answers each day's Daily and Mini may choose from.
+const DAILY_WINDOW = 240;
+const MINI_WINDOW = 30;
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG };
+  module.exports = { GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW };
 }
