@@ -49,3 +49,454 @@ HEADLINER | Top act on a festival bill
 COACHELLA | Music festival held in the California desert
 MOONWALK | Backward-gliding dance move made famous in 1983
 GOSSIP | Idle talk about other people
+KARDASHIAN | Surname of a famous reality TV family
+KANYE | Rapper who later went by Ye
+BRITNEY | First name of the singer of ...Baby One More Time
+ELLEN | Talk-show host DeGeneres
+LETTERMAN | Late-night host Dave
+FALLON | Late-night host Jimmy
+KIMMEL | Late-night host Jimmy
+CORDEN | British host of The Late Late Show
+OLIVER | John ___, host of Last Week Tonight
+GORDONRAMSAY | Fiery chef of Hell's Kitchen (6,6)
+ATTENBOROUGH | Naturalist narrator of Planet Earth
+MRBEAN | Rowan Atkinson's silent clown (2,4)
+SIMONCOWELL | Notoriously blunt talent show judge (5,6)
+XFACTOR | Talent show created by Simon Cowell (1,6)
+IDOL | American ___, singing competition
+SURVIVOR | Reality show where contestants are voted off the island
+BIGBROTHER | Reality show of housemates under surveillance (3,7)
+LOVEISLAND | Dating show set in a villa (4,6)
+BAKEOFF | The Great British ___, tent-based baking show
+DRAGRACE | RuPaul's ___, competition for drag queens
+RUPAUL | Host of a drag competition show
+STRICTLY | ___ Come Dancing, British ballroom show
+JEOPARDY | Quiz show where answers are given as questions
+MILLIONAIRE | Who Wants to Be a ___?
+SEINFELD | Show about nothing
+OFFICE | Workplace mockumentary, "The ___"
+CHEERS | Boston bar where everybody knows your name
+FRASIER | Radio psychiatrist spin-off of Cheers
+SOPRANOS | HBO mob drama, "The ___"
+BREAKINGBAD | Drama of a chemistry teacher turned drug lord (8,3)
+GAMEOFTHRONES | Fantasy drama of the Iron Throne
+SQUIDGAME | Korean survival drama of 2021 (5,4)
+WEDNESDAY | Netflix series about Addams family's daughter
+BRIDGERTON | Regency romance series from Netflix
+CROWN | Netflix drama about Elizabeth II, "The ___"
+DOWNTON | ___ Abbey, period drama
+DOCTORWHO | Time Lord of a long-running BBC series (6,3)
+TARDIS | Police-box time machine
+DALEK | Doctor Who villain that cries "Exterminate!"
+SIMPSON | Homer ___, of Springfield
+HOMER | Simpson patriarch who says "D'oh!"
+BART | Simpsons troublemaker
+SPONGEBOB | Cartoon sponge who lives in a pineapple
+PATRICK | SpongeBob's starfish best friend
+SCOOBYDOO | Cartoon Great Dane who solves mysteries (6-3)
+BUGSBUNNY | Cartoon rabbit who asks "What's up, Doc?" (4,5)
+MICKEY | Disney's famous mouse
+MINNIE | Mickey's girlfriend
+DONALD | Disney's short-tempered duck
+GOOFY | Disney's lanky dog
+SNOOPY | Charlie Brown's beagle
+GARFIELD | Lasagne-loving cartoon cat
+PEPPAPIG | Cartoon pig loved by preschoolers (5,3)
+BLUEY | Australian cartoon heeler pup
+HELLOKITTY | Japanese character with a red bow (5,5)
+LEGO | Danish interlocking bricks
+RUBIKS | ___ Cube, 1980s puzzle craze
+TAMAGOTCHI | Digital pet of the 1990s
+FURBY | Talking furry toy of 1998
+FIDGETSPINNER | Spinning toy craze of 2017 (6,7)
+YOYO | Toy that goes up and down on a string (2-2)
+HULAHOOP | Hoop spun around the waist (4,4)
+SLINKY | Toy spring that walks downstairs
+MONOPOLY | Board game of buying properties
+SCRABBLE | Board game of letter tiles
+CLUEDO | Board game of a murder at a mansion
+JENGA | Game of a tumbling block tower
+TWISTER | Party game of coloured spots
+POKEMONGO | Augmented reality game of 2016 (7,2)
+WORDLE | Five-letter word game that went viral in 2022
+SUPERMAN | Man of Steel
+BATMAN | Caped Crusader of Gotham
+SPIDERMAN | Web-slinging Marvel hero (6-3)
+WONDERWOMAN | Amazon warrior of DC Comics (6,5)
+IRONMAN | Tony Stark's armoured alter ego
+HULK | Green giant of Marvel Comics
+THOR | Marvel's hammer-wielding Avenger
+BLACKPANTHER | King of Wakanda (5,7)
+AVENGERS | Marvel superhero team
+DEADPOOL | Wisecracking Marvel antihero
+WOLVERINE | Clawed X-Men member
+GOTHAM | Batman's city
+METROPOLIS | Superman's city
+KRYPTONITE | Superman's weakness
+STANLEE | Co-creator of Spider-Man (4,3)
+COMICCON | Fan convention in San Diego (5,3)
+COSPLAY | Dressing as a fictional character
+FANFICTION | Stories written by fans
+MANGA | Japanese comics
+YOUTUBER | Video creator on a Google-owned site
+TIKTOKER | Creator on a short-video app
+VLOGGER | Video blogger
+PODCASTER | Host of an audio show
+TWITCH | Live-streaming site popular with gamers
+TWITTER | Social network renamed X in 2023
+FACEBOOK | Social network founded by Mark Zuckerberg
+SNAPCHAT | App of disappearing messages
+WHATSAPP | Messaging app owned by Meta
+REDDIT | "Front page of the internet"
+LINKEDIN | Professional networking site
+PINTEREST | Site of digital pinboards
+GOOGLE | Search engine giant
+AMAZON | Online retail giant founded by Jeff Bezos
+APPLE | Maker of the iPhone
+IPHONE | Smartphone launched in 2007
+IPOD | Apple music player of 2001
+WALKMAN | Sony's portable cassette player
+GAMEBOY | Nintendo's 1989 handheld (4,3)
+CLICKBAIT | Sensational headline that lures clicks
+TROLL | Online provocateur
+FOMO | Fear of missing out (abbr.)
+YOLO | "You only live once" (abbr.)
+SLAY | Gen Z slang for doing brilliantly
+RIZZ | Slang for charm, Oxford's word of 2023
+VIBE | Feeling or atmosphere, in slang
+GHOSTING | Suddenly cutting off all contact
+UNBOXING | Video of opening new products
+ASMR | Videos of tingly whispers (abbr.)
+ICEBUCKET | ___ Challenge of 2014
+RICKROLL | Prank linking to Never Gonna Give You Up
+GRUMPYCAT | Internet-famous frowning cat (6,3)
+DOGE | Shiba Inu meme
+NYANCAT | Pop-Tart cat meme (4,3)
+CATFISH | Fake online identity used to deceive
+STREAM | Watch online
+BOXSET | Complete series in one package (3,3)
+HULU | US streaming service
+TONY | Theatre award
+BAFTA | British film award
+REDCARPET | Where stars pose at premieres (3,6)
+PAPARAZZO | Celebrity photographer
+TABLOID | Gossip newspaper
+CELEB | Famous person, informally
+SUPERSTAR | Hugely famous performer
+ICON | Revered celebrity
+DIVA | Demanding star
+HEARTTHROB | Idol with many admirers
+FANBASE | Body of supporters
+STAN | Obsessive fan, from an Eminem song
+BEYHIVE | Beyoncé's fans
+ARMY | BTS fans
+SWIFTIES | Taylor Swift's fans
+BEATLEMANIA | Frenzy of the 1960s
+BOYBAND | Group of young male singers (3,4)
+POPSTAR | Famous chart singer
+SUPERMODEL | Top fashion model of the 1990s
+MODEL | Person who poses for fashion
+CATWALK | Runway at a fashion show
+VOGUE | Fashion magazine edited by Anna Wintour
+WINTOUR | Anna ___, Vogue editor
+CHANEL | Fashion house of the little black dress
+GUCCI | Italian fashion house of Florence
+PRADA | The Devil Wears ___
+VERSACE | Italian fashion house with a Medusa logo
+DIOR | Fashion house of the New Look
+NIKE | Sportswear brand with a swoosh
+ADIDAS | Three-stripes sportswear brand
+SNEAKERHEAD | Collector of trainers
+STREETWEAR | Casual fashion of hoodies and sneakers
+MINISKIRT | Short skirt of the 1960s
+BELLBOTTOMS | Flared trousers of the 1970s
+LEGWARMERS | 1980s aerobics fashion
+SCRUNCHIE | Fabric hair tie
+CROPTOP | Short top showing the midriff (4,3)
+TATTOO | Ink art on skin
+PIERCING | Body jewellery hole
+MULLET | Business in front, party in the back
+MOHAWK | Strip of hair down the middle of the head
+AFRO | Rounded natural hairstyle
+DISCOBALL | Mirrored sphere above a dance floor (5,4)
+FLOSS | Arm-swinging dance craze
+MARILYN | First name of Monroe
+MONROE | Marilyn ___, 1950s screen icon
+AUDREY | First name of the star of Breakfast at Tiffany's
+HEPBURN | Audrey ___, style icon
+DEAN | James ___, rebel without a cause
+BRANDO | Marlon ___, star of The Godfather
+STREEP | Meryl ___, Oscar record-holder for nominations
+HANKS | Tom ___, star of Forrest Gump
+DICAPRIO | Leonardo ___, star of Titanic
+PITT | Brad ___, star of Fight Club
+JOLIE | Angelina ___, star of Maleficent
+CLOONEY | George ___, star of Ocean's Eleven
+DEPP | Johnny ___, Captain Jack Sparrow
+CRUISE | Tom ___, star of Top Gun
+SMITH | Will ___, Fresh Prince of Bel-Air
+ROCK | Dwayne Johnson's nickname, "The ___"
+SCHWARZENEGGER | Terminator star and California governor
+STALLONE | Rocky and Rambo star
+REEVES | Keanu ___, star of The Matrix
+ROBERTS | Julia ___, star of Pretty Woman
+BULLOCK | Sandra ___, star of Gravity
+KIDMAN | Nicole ___, star of Moulin Rouge!
+WINFREY | Oprah ___, talk-show queen
+CHAPLIN | Charlie ___, silent comedy's Little Tramp
+SPIELBERG | Director of E.T. and Jaws
+TARANTINO | Director of Pulp Fiction
+NOLAN | Christopher ___, director of Inception
+HITCHCOCK | Master of suspense
+KUBRICK | Director of 2001: A Space Odyssey
+SCORSESE | Director of Goodfellas
+DISNEY | Walt ___, founder of a media empire
+JOBS | Steve ___, Apple co-founder
+GATES | Bill ___, Microsoft co-founder
+MUSK | Elon ___, Tesla and SpaceX boss
+ZUCKERBERG | Facebook founder Mark
+BEZOS | Amazon founder Jeff
+ROWLING | Author of Harry Potter
+POTTERHEAD | Harry Potter fan
+QUIDDITCH | Broomstick sport of Harry Potter
+MUGGLE | Non-magical person in Harry Potter
+TWILIGHT | Vampire romance saga
+JEDI | Lightsaber-wielding knight
+LIGHTSABER | Jedi weapon
+WOOKIEE | Chewbacca's species
+STARTREK | Franchise of the Starship Enterprise (4,4)
+SPOCK | Vulcan science officer
+TREKKIE | Star Trek fan
+WHOVIAN | Doctor Who fan
+BROADWAY | New York theatre district
+HAMILTON | Hip-hop musical about a Founding Father
+WICKED | Musical about the witches of Oz
+CATS | Andrew Lloyd Webber musical about felines
+LESMIS | Musical nickname of Les Misérables (3,3)
+PHANTOM | ___ of the Opera, long-running musical
+GLEE | TV musical series about a show choir
+CENTRALPERK | Coffee shop in Friends (7,4)
+CHANDLER | Friends character played by Matthew Perry
+RACHEL | Friends character with a famous haircut
+JOEY | Friends character who asks "How you doin'?"
+PHOEBE | Friends character who sang Smelly Cat
+AIRBNB | Home-sharing platform
+UBER | Ride-hailing app
+CHATGPT | AI chatbot launched in 2022
+EMOTICON | Face made of punctuation, like :-)
+AVATAR | Online profile image
+USERNAME | Online handle
+FOLLOWERS | Social media audience
+LIKES | Thumbs-up reactions online
+SHARE | Pass on a post
+SCROLL | Move through a feed
+FEED | Stream of social media posts
+STORY | Disappearing social media post
+REEL | Short Instagram video
+FILTER | Photo effect
+PHOTOBOMB | Sneak into someone's photo
+DRONE | Flying camera
+SMARTWATCH | Wrist-worn computer
+EARBUDS | Small in-ear headphones
+MCDONALDS | Fast-food chain of the golden arches
+BIGMAC | McDonald's signature burger (3,3)
+STARBUCKS | Coffee chain with a green siren logo
+COKE | Fizzy drink in a red can
+PEPSI | Cola rival of Coca-Cola
+SUBWAY | Sandwich chain, "Eat Fresh"
+IKEA | Swedish flat-pack furniture store
+TESLA | Electric car maker
+WALMART | US retail giant
+TARGET | US retailer with a bullseye logo
+COSTCO | Warehouse club store
+ATARI | Early video game company of Pong
+PONG | Early arcade tennis game
+SEGA | Japanese company of Sonic
+MARIOKART | Racing game with banana skins (5,4)
+ANGRYBIRDS | Mobile game of catapulted birds (5,5)
+CANDYCRUSH | Match-three mobile game (5,5)
+FARMVILLE | Facebook farming game
+NEOPETS | Virtual pet website of 2000
+MYSPACE | Social network where Tom was everyone's first friend
+NAPSTER | File-sharing service of 1999
+CASSETTE | Tape of the 1980s
+DISCMAN | Portable CD player
+PAGER | Beeper of the 1990s
+FLIPPHONE | Phone that folds shut (4,5)
+BLACKBERRY | Smartphone with a physical keyboard
+DIALUP | Slow early internet connection (4-2)
+CHATROOM | Online group conversation
+FRESHPRINCE | Will Smith's sitcom of Bel-Air (5,6)
+FULLHOUSE | Sitcom of the Tanner family (4,5)
+BAYWATCH | Lifeguard drama starring David Hasselhoff
+HASSELHOFF | David ___, star of Knight Rider
+KNIGHTRIDER | Show with a talking car, KITT (6,5)
+MACGYVER | Resourceful hero with a Swiss Army knife
+MULDER | X-Files agent who wants to believe
+SCULLY | Sceptical X-Files agent
+BUFFY | Vampire slayer of Sunnydale
+CHARMED | Series about three witch sisters
+LOST | Drama of plane crash survivors on an island
+HEROES | Series with the catchphrase "Save the cheerleader"
+DEXTER | Series about a blood-spatter analyst and killer
+MADMEN | Drama of 1960s advertising (3,3)
+SUCCESSION | HBO drama of the Roy family
+EUPHORIA | HBO teen drama starring Zendaya
+TEDLASSO | Comedy about an American coaching English football (3,5)
+FLEABAG | Comedy by Phoebe Waller-Bridge
+PEAKYBLINDERS | Drama of a Birmingham gang (5,8)
+LUTHER | Detective drama starring Idris Elba
+BLACKMIRROR | Anthology of dark tech tales (5,6)
+WESTWORLD | Drama of a robotic theme park
+MANDALORIAN | Star Wars bounty hunter series, "The ___"
+GROGU | Baby Yoda's real name
+WANDAVISION | Marvel sitcom-style series
+ONEPIECE | Long-running pirate manga (3,5)
+NARUTO | Ninja manga and anime
+DRAGONBALL | Anime of Goku (6,4)
+SAILORMOON | Magical girl anime (6,4)
+TOTORO | Forest spirit of a Ghibli film
+SPIRITEDAWAY | Ghibli film of a girl in a spirit world (8,4)
+GODZILLA | Giant monster of Japanese cinema
+KINGKONG | Giant ape atop the Empire State Building (4,4)
+TERMINATOR | Cyborg who says "I'll be back"
+ROBOCOP | Cyborg police officer of Detroit
+DELOREAN | Time-travelling car
+GHOSTBUSTERS | Paranormal exterminators of 1984
+GREMLINS | Creatures not to be fed after midnight
+RAMBO | Stallone's war veteran character
+BOND | Agent 007
+TOPGUN | Tom Cruise fighter pilot film (3,3)
+MAVERICK | Tom Cruise's call sign in Top Gun
+BARBENHEIMER | 2023 double-bill phenomenon
+CATCHPHRASE | Signature saying of a character
+COWABUNGA | Teenage Mutant Ninja Turtles' cry
+BAZINGA | Sheldon Cooper's catchphrase
+SHELDON | Physicist of The Big Bang Theory
+HAKUNAMATATA | Lion King motto meaning "no worries" (6,6)
+BUZZ | ___ Lightyear, space ranger toy
+WOODY | Cowboy toy of Toy Story
+SIMBA | Lion King cub
+ELSA | Snow queen of Frozen
+OLAF | Snowman of Frozen
+STITCH | Blue alien of a Hawaiian Disney film
+WALLE | Pixar robot who cleans up Earth (4-1)
+MINION | Yellow henchman of Despicable Me
+POPEYE | Spinach-eating sailor
+FLINTSTONES | Modern Stone Age family, "The ___"
+JETSONS | Space-age cartoon family, "The ___"
+SMURFS | Little blue cartoon creatures
+TRANSFORMERS | Robots in disguise
+THUNDERCATS | 1980s cartoon heroes of Thundera
+HEMAN | Master of the Universe (2-3)
+POWERRANGERS | Teen heroes who morph into suits (5,7)
+TELETUBBIES | Children's characters with screens on their bellies
+BARNEY | Purple dinosaur of children's TV
+ELMO | Red Muppet who refers to himself in the third person
+KERMIT | Muppet frog
+MISSPIGGY | Muppet diva (4,5)
+BIGBIRD | Yellow Sesame Street character (3,4)
+MUPPETS | Puppets created by Jim Henson
+HENSON | Jim ___, Muppets creator
+DISNEYLAND | Theme park opened in 1955
+THEMEPARK | Amusement park built around a theme
+ROLLERCOASTER | Thrill ride of loops and drops
+TIMESSQUARE | New York intersection of the New Year ball drop (5,6)
+GLASTO | Nickname of a famous Somerset festival
+BURNINGMAN | Desert festival in Nevada (7,3)
+MEGHAN | Duchess of Sussex
+HARRY | Prince who wrote Spare
+DIANA | People's Princess
+CORONATION | Crowning ceremony, as in 2023
+ROYALS | Members of a royal family
+SCANDAL | Disgraceful event that grabs headlines
+GOSSIPGIRL | Teen drama narrated by an anonymous blogger (6,4)
+CARRIE | Columnist of Sex and the City
+CLUELESS | 1995 teen comedy starring Alicia Silverstone
+MEANGIRLS | 2004 comedy of the Plastics (4,5)
+FETCH | Mean Girls word that never happened
+NOTEBOOK | Romantic drama with Ryan Gosling, "The ___"
+GOSLING | Ryan ___, star of La La Land
+TIMOTHEE | First name of the star of Dune
+CHALAMET | Timothée ___, star of Dune
+MARGOT | First name of Barbie star Robbie
+ROBBIE | Margot ___, star of Barbie
+GRETA | ___ Gerwig, director of Barbie
+LAWRENCE | Jennifer ___, star of The Hunger Games
+WATSON | Emma ___, Hermione actor
+RADCLIFFE | Daniel ___, Harry Potter actor
+GRINT | Rupert ___, Ron Weasley actor
+HOLLAND | Tom ___, Spider-Man actor
+DOWNEY | Robert ___ Jr, Iron Man actor
+HEMSWORTH | Chris ___, Thor actor
+JOHANSSON | Scarlett ___, Black Widow actor
+MOMOA | Jason ___, Aquaman actor
+GADOT | Gal ___, Wonder Woman actor
+MILEY | First name of the singer of Wrecking Ball
+CYRUS | Miley ___, former Hannah Montana star
+HANNAHMONTANA | Disney pop star alter ego (6,7)
+SELENA | First name of Gomez, former Disney star
+GOMEZ | Selena ___, star of Only Murders in the Building
+ARIANA | First name of Grande
+GRANDE | Ariana ___, singer of 7 Rings
+OLIVIA | First name of Rodrigo
+RODRIGO | Olivia ___, singer of Drivers License
+DOJACAT | Rapper of Say So (3,3)
+CARDIB | Rapper of Bodak Yellow (4,1)
+POSTMALONE | Singer of Circles (4,6)
+BADBUNNY | Puerto Rican reggaeton superstar (3,5)
+LILNASX | Rapper of Old Town Road (3,4,1)
+SABRINA | First name of Carpenter, singer of Espresso
+CARPENTER | Sabrina ___, singer of Espresso
+CHAPPELL | ___ Roan, singer of Good Luck, Babe!
+ROAN | Chappell ___, singer of Pink Pony Club
+CHARLI | First name of the singer of Brat
+BRAT | Charli XCX album and summer aesthetic of 2024
+JUNGKOOK | BTS member who sang at the 2022 World Cup
+LISA | Blackpink member from Thailand
+JENNIE | Blackpink member who released Mantra
+ROSE | Blackpink singer of APT.
+EMOTE | Character animation in an online game
+SPEEDRUNNER | Gamer racing to finish
+PEWDIEPIE | Swedish YouTuber who once had the most subscribers
+MRBEAST | YouTuber famous for extravagant stunts (2,5)
+MARKIPLIER | YouTuber famous for horror game videos
+NINJA | Fortnite streamer Tyler Blevins's handle
+SPONSORED | Paid for by a brand
+HAUL | Video showing off a shopping spree
+OOTD | Outfit of the day (abbr.)
+PHOTODUMP | Instagram post of many loosely linked pictures
+CANCELLED | Boycotted after controversy, in internet slang
+WOKE | Alert to social injustice
+BOOMER | Older generation, dismissively
+GENZ | Generation born from the late 1990s (3,1)
+MILLENNIAL | Person born in the 1980s or 90s
+ZOOMER | Member of Gen Z
+AESTHETIC | Visual style, in internet slang
+COTTAGECORE | Aesthetic of rural romance
+YASSIFY | Glam up an image with filters
+SHEESH | Gen Z exclamation of amazement
+BUSSIN | Slang for very tasty
+NOCAP | Slang for "no lie" (2,3)
+GOAT | Greatest of all time
+SALTY | Bitter or upset, in slang
+SHADE | Subtle insult
+TEA | Gossip, in slang
+SIMP | Someone too eager to please a crush
+STANNING | Fervently supporting
+LOWKEY | Slightly or secretly, in slang (3,3)
+HIGHKEY | Openly, in slang (4,3)
+SLIME | Gooey toy craze
+SQUISHMALLOW | Plush toy craze of the 2020s
+LABUBU | Toothy monster doll craze of 2025
+BOBA | Bubble tea pearls
+AVOCADOTOAST | Brunch dish linked to millennials (7,5)
+PUMPKINSPICE | Autumn latte flavour (7,5)
+CRONUT | Croissant-doughnut hybrid
+CUPCAKE | Small iced cake that had a 2000s boom
+FROYO | Frozen yogurt, for short
+POPTART | Toaster pastry (3,4)
+OREO | Sandwich cookie with a cream filling
+SKITTLES | Fruity candy: "Taste the rainbow"
+NUTELLA | Hazelnut chocolate spread
+SRIRACHA | Hot chilli sauce in a rooster bottle
