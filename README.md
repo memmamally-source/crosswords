@@ -1,36 +1,58 @@
 # Crossword Hub
 
-A free, browser-based crossword game with themed puzzles. No build step, no
-dependencies: open `index.html` or host the folder on any static host
-(GitHub Pages, Netlify, Vercel, S3…).
+A browser-based crossword site with an academic daily puzzle, a quick daily
+Mini, and themed puzzles in 33 genres. Everything is static HTML, CSS and
+JavaScript with no build step, so it can be hosted anywhere (it runs on GitHub
+Pages from the repository root).
 
-## Features
+## What's on the site
 
-- **23 genres in four groups:**
-  - *Mixed puzzles:* Mixed Bag (every genre), Pop & Fun Mix, Academic Mix.
-  - *Everyday themes:* Animal Kingdom, Food & Drink, World Geography, Science
-    Lab, Sports Arena, Music Hall, Outer Space, Myths & Legends.
+- **The Daily:** an academic crossword drawn from 23 subjects and about 980
+  answers. Like a newspaper crossword it gets harder through the week: Monday
+  is gentle, with fewer clues and shorter answers; Saturday is the toughest;
+  Sunday has the largest grid. Each clue shows its subject (this can be
+  switched off in settings).
+- **The Mini:** six quick clues of everyday and pop-culture answers.
+- **Archive:** a calendar of every Daily and Mini since launch
+  (1 September 2026), with solved, in-progress and finished-with-help marks.
+- **Genre puzzles:** 33 genres in four groups.
+  - *Mixed:* Mixed Bag, Pop & Fun Mix, Academic Mix.
+  - *Everyday:* Animal Kingdom, Food & Drink, World Geography, Science Lab,
+    Sports Arena, Music Hall, Outer Space, Myths & Legends.
   - *Pop culture & fun:* Pop Culture, Movies & TV, Video Games, Holidays &
     Festivals.
   - *Academic:* Philosophy, Literature, Mathematics, Advanced Vocabulary, World
-    History, Economics, Human Anatomy, Art & Architecture.
-- **Fresh puzzles every time.** A built-in generator lays out a new, valid
-  crossword from the genre's word bank on each play.
-- **Fewer repeats.** The game remembers the words you've seen in each genre
-  and picks new puzzles that use mostly unseen ones.
-- **Skip filled squares.** After you type a letter, the cursor jumps past
-  squares that are already filled. Turn this off with the "Skip filled" toggle.
-- **3 difficulty levels:** Easy (8 words), Medium (12), Hard (16).
-- **Daily Challenge.** Everyone gets the same puzzle each day, and the theme
-  rotates daily.
-- **Shareable puzzles.** Each puzzle has its own URL
-  (`#/play/<genre>/<difficulty>/<seed>`), so friends can play the same grid.
-- Check or reveal a letter, word or the whole puzzle, plus an auto-check option.
-- Timer, personal best times, a solved counter, and auto-save so a refresh
-  doesn't lose your progress (all stored in `localStorage`).
-- Keyboard controls (type, arrows, Space/Enter to switch direction, Tab for the
-  next clue), plus an on-screen keyboard on phones and tablets.
-- Light and dark themes that follow the system setting.
+    History, Economics, Human Anatomy, Art & Architecture, Chemistry, Physics,
+    Biology, Psychology, Computer Science, Law & Government, World Religions,
+    Language & Linguistics, Earth Science, Latin & the Ancient World.
+- **Statistics:** puzzles solved, Daily streaks, and average Daily time by
+  day of the week.
+
+## Solving
+
+- Type to fill. Arrow keys move, Space or Enter switches direction, Tab jumps
+  to the next clue, Backspace erases. Phones and tablets get an on-screen
+  keyboard.
+- **Pencil** enters tentative letters in grey.
+- **Check** and **Reveal** work on a square, a word or the whole puzzle.
+  **Clear** removes incorrect squares, a word or everything.
+- **Pause** (click the timer) hides the grid and stops the clock.
+- **Settings** (the sun icon): light, dark or system theme; skip filled
+  squares; auto-check; subject labels; show or hide the timer.
+- Finishing shows your time, your streak for the Daily, and a **Share
+  result** button that copies a summary.
+
+Progress, times and streaks are stored in the browser's `localStorage`.
+
+## Freshness
+
+- **Genre puzzles** are built only from words you haven't seen in that genre.
+  When the bank runs low a new cycle starts, still skipping the puzzle you just
+  played. The chosen words are encoded in the puzzle's URL, so a shared link
+  always rebuilds the same grid.
+- **The Daily and the Mini** each use their own slice of a shuffled word bank
+  each day, so answers don't come back for about twelve days. Everyone gets
+  the same puzzle on a given date.
 
 ## Run locally
 
@@ -41,12 +63,12 @@ python3 -m http.server 8000
 
 ## Deploy to GitHub Pages
 
-Repository **Settings → Pages → Build and deployment**: set the source to
-"Deploy from a branch", then pick the branch and `/ (root)`.
+Go to **Settings → Pages → Build and deployment**, choose "Deploy from a
+branch", then pick the branch and `/ (root)`.
 
 ## Adding a genre or words
 
-Edit `js/genres.js`. Add an entry like this to the `GENRES` array:
+Edit `js/genres.js` and add an entry to the `BASE_GENRES` array:
 
 ```js
 {
@@ -57,27 +79,29 @@ Edit `js/genres.js`. Add an entry like this to the `GENRES` array:
   blurb: 'Motors, makers and motorsport.',
   words: [
     ['PITSTOP', 'Quick halt for fresh tyres during a race'],
-    // ...aim for 30+ words, mostly 4–10 letters, letters only
+    // ...aim for 40 words, mostly 4–10 letters, letters only
   ],
 },
 ```
 
-The mixed genres pick up new words automatically. The test also fails if a
-clue gives away another answer in the same genre.
-
-Then run the generator test to make sure every difficulty can still be built:
+Academic genres feed the Daily automatically, and the mixed genres pick up
+new words too. Then run the tests:
 
 ```sh
 node tests/generator.test.js
 ```
 
+The tests build every genre at every difficulty and eight weeks of Dailies
+and Minis. They check that every grid is valid, connected and repeatable, and
+that no clue gives away another answer in the same genre.
+
 ## Project layout
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Page markup |
-| `css/styles.css` | Styles (light and dark) |
-| `js/genres.js` | Genre word banks and difficulty settings |
-| `js/generator.js` | Crossword layout generator (seeded, deterministic) |
-| `js/app.js` | Game UI, input, checking, timer, storage, routing |
-| `tests/generator.test.js` | Validates generated grids for every genre and difficulty |
+| `index.html` | Page structure: masthead, home, archive, solving view, dialogs |
+| `css/styles.css` | Styles, light and dark themes |
+| `js/genres.js` | Word banks, genre groups, difficulty levels, Daily and Mini settings |
+| `js/generator.js` | Seeded crossword layout generator and the daily word rotation |
+| `js/app.js` | Game logic, solving tools, storage, stats, archive and routing |
+| `tests/generator.test.js` | Grid and clue validation |

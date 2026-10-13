@@ -1,7 +1,7 @@
 // Run with: node tests/generator.test.js
 const assert = require('assert');
-const { generate } = require('../js/generator.js');
-const { GENRES, DIFFICULTIES } = require('../js/genres.js');
+const { generate, rotatingPool } = require('../js/generator.js');
+const { GENRES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG } = require('../js/genres.js');
 
 function runs(puzzle) {
   // Every horizontal/vertical run of 2+ letters in the grid.
@@ -71,4 +71,22 @@ for (const genre of GENRES) {
     }
   }
 }
-console.log(`OK: ${total} puzzles across ${GENRES.length} genres validated`);
+// The Daily and the Mini: 8 weeks of each, built exactly as the site builds them.
+const start = Math.floor(Date.UTC(2026, 8, 1) / 86400000);
+let prevDaily = null;
+let dailyRepeats = 0;
+for (let day = start; day < start + 56; day++) {
+  const sched = DAILY_SCHEDULE[(day + 4) % 7]; // 1 Jan 1970 was a Thursday
+  const bank = rotatingPool(DAILY_BANK, day, 80, 1).filter((w) => w.answer.length <= sched.maxLen);
+  const p = generate(bank, { count: sched.count, maxSize: sched.maxSize, seed: day * 31 + 7 });
+  assert.strictEqual(p.words.length, sched.count, `daily ${day} (${sched.day}): placed ${p.words.length}/${sched.count}`);
+  assert.ok(p.words.every((w) => w.tag), `daily ${day}: every clue has a subject label`);
+  const answers = p.words.map((w) => w.answer);
+  if (prevDaily) dailyRepeats += answers.filter((a) => prevDaily.includes(a)).length;
+  prevDaily = answers;
+  const m = generate(rotatingPool(MINI_BANK, day, 30, 2), { ...MINI_CONFIG, seed: day * 17 + 3 });
+  assert.strictEqual(m.words.length, MINI_CONFIG.count, `mini ${day}: placed ${m.words.length}`);
+  total += 2;
+}
+assert.ok(dailyRepeats <= 4, `too many answers repeated on consecutive days: ${dailyRepeats}`);
+console.log(`OK: ${total} puzzles across ${GENRES.length} genres, the Daily and the Mini validated`);
