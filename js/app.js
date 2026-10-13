@@ -75,7 +75,7 @@
         <h2>Daily Challenge</h2>
         <p>Today's theme: <strong>${daily.genre.name}</strong> · ${doneTime ? `solved in ${formatTime(doneTime)} ✓` : 'same puzzle for everyone today'}</p>
       </div>
-      <a class="btn primary" href="#/daily">${doneTime ? 'Play again' : 'Play today’s puzzle'}</a>`;
+      <button class="btn primary" data-action="daily">${doneTime ? 'Play again' : 'Play today’s puzzle'}</button>`;
 
     $('#header-stats').innerHTML = store.solved ? `<strong>${store.solved}</strong> puzzle${store.solved === 1 ? '' : 's'} solved` : '';
   }
@@ -90,7 +90,7 @@
 
   function play(genreId, difficulty, seed) {
     const s = seed != null ? seed : Math.floor(Math.random() * 1e9);
-    location.hash = `#/play/${genreId}/${difficulty}/${s}`;
+    navigate(`#/play/${genreId}/${difficulty}/${s}`);
   }
 
   // ---------- Game state ----------
@@ -427,7 +427,7 @@
   }
 
   function reveal(scope) {
-    if (scope === 'all' && !confirm('Reveal the whole puzzle?')) return;
+    if (scope === 'all' && !armReveal()) return;
     for (const [r, c] of targetCells(scope)) {
       if (game.entries[r][c] !== game.puzzle.solution[r][c]) {
         game.entries[r][c] = game.puzzle.solution[r][c];
@@ -437,6 +437,18 @@
       game.wrong[r][c] = false;
     }
     afterChange();
+  }
+
+  // Two-step confirmation for revealing everything (no browser dialogs).
+  let revealArmed = 0;
+  function armReveal() {
+    if (Date.now() - revealArmed < 4000) {
+      revealArmed = 0;
+      return true;
+    }
+    revealArmed = Date.now();
+    toast('Choose Reveal → Puzzle again to show every answer');
+    return false;
   }
 
   function clearBoard() {
@@ -588,7 +600,11 @@
     if (action === 'home') {
       e.preventDefault();
       $('#win-dialog').close();
-      location.hash = '#/';
+      navigate('#/');
+      return;
+    }
+    if (action === 'daily') {
+      navigate('#/daily');
       return;
     }
     if (!game) return;
@@ -623,6 +639,22 @@
   });
 
   // ---------- Routing ----------
+  // The route lives in memory and is mirrored to the URL hash when the host
+  // allows it, so puzzle links are shareable on a normal web host.
+  let currentRoute = location.hash || '#/';
+  function navigate(hash) {
+    currentRoute = hash;
+    try {
+      if (location.hash !== hash) history.pushState(null, '', hash);
+    } catch (e) {
+      /* sandboxed frame: keep the route in memory only */
+    }
+    route();
+  }
+  function onUrlChange() {
+    currentRoute = location.hash || '#/';
+    route();
+  }
   function showView(name) {
     $('#home-view').hidden = name !== 'home';
     $('#game-view').hidden = name !== 'game';
@@ -630,7 +662,7 @@
   }
 
   function route() {
-    const parts = location.hash.replace(/^#\/?/, '').split('/');
+    const parts = currentRoute.replace(/^#\/?/, '').split('/');
     if (game && !game.solved) {
       stopTimer();
       persist();
@@ -657,6 +689,6 @@
   }
 
   buildKeyboard();
-  window.addEventListener('hashchange', route);
+  window.addEventListener('popstate', onUrlChange);
   route();
 })();
