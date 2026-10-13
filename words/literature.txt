@@ -45,3 +45,460 @@ LIMERICK | Five-line comic poem rhymed AABBA
 ANTAGONIST | Character who opposes the hero
 FORESHADOWING | Hints of what's to come in a story
 DYSTOPIA | Imagined society of oppression and fear
+MILTON | Author of Paradise Lost
+SPENSER | Author of The Faerie Queene
+DONNE | Metaphysical poet of "No man is an island"
+MARLOWE | Author of Doctor Faustus
+JONSON | Ben ___, author of Volpone
+WORDSWORTH | Poet of daffodils and The Prelude
+COLERIDGE | Poet of The Rime of the Ancient Mariner
+KEATS | Poet of Ode to a Nightingale
+SHELLEY | Poet of Ozymandias
+BYRON | Romantic poet of Don Juan
+BLAKE | Poet of The Tyger
+BURNS | Robert ___, Scotland's national poet
+TENNYSON | Poet of The Charge of the Light Brigade
+BROWNING | Robert ___, poet of My Last Duchess
+HOPKINS | Gerard Manley ___, poet of sprung rhythm
+HARDY | Thomas ___, author of Tess of the d'Urbervilles
+ELIOT | George ___, author of Middlemarch
+THACKERAY | Author of Vanity Fair
+TROLLOPE | Author of the Barsetshire novels
+GASKELL | Elizabeth ___, author of North and South
+STEVENSON | Author of Treasure Island
+CONRAD | Author of Heart of Darkness
+KIPLING | Author of The Jungle Book
+WILDE | Oscar ___, author of The Picture of Dorian Gray
+SHAW | George Bernard ___, author of Pygmalion
+YEATS | Irish poet of The Second Coming
+JOYCE | James ___, author of Ulysses
+BECKETT | Author of Waiting for Godot
+HEANEY | Seamus ___, Irish Nobel poet
+FORSTER | E. M. ___, author of A Passage to India
+LAWRENCE | D. H. ___, author of Sons and Lovers
+HUXLEY | Aldous ___, author of Brave New World
+WAUGH | Evelyn ___, author of Brideshead Revisited
+GREENE | Graham ___, author of Brighton Rock
+GOLDING | William ___, author of Lord of the Flies
+LESSING | Doris ___, author of The Golden Notebook
+RUSHDIE | Salman ___, author of Midnight's Children
+ISHIGURO | Kazuo ___, author of The Remains of the Day
+MCEWAN | Ian ___, author of Atonement
+MANTEL | Hilary ___, author of Wolf Hall
+ATWOOD | Margaret ___, author of The Handmaid's Tale
+MUNRO | Alice ___, Canadian Nobel short-story writer
+TWAIN | Mark ___, author of Huckleberry Finn
+MELVILLE | Author of Moby-Dick
+HAWTHORNE | Author of The Scarlet Letter
+WHITMAN | Poet of Leaves of Grass
+DICKINSON | Emily ___, reclusive poet of Amherst
+FROST | Robert ___, poet of The Road Not Taken
+FITZGERALD | F. Scott ___, author of The Great Gatsby
+FAULKNER | Author of The Sound and the Fury
+STEINBECK | Author of The Grapes of Wrath
+SALINGER | Author of The Catcher in the Rye
+KEROUAC | Beat author of On the Road
+GINSBERG | Beat poet of Howl
+PLATH | Sylvia ___, author of The Bell Jar
+ANGELOU | Maya ___, author of I Know Why the Caged Bird Sings
+BALDWIN | James ___, author of Go Tell It on the Mountain
+ELLISON | Ralph ___, author of Invisible Man
+HURSTON | Zora Neale ___, author of Their Eyes Were Watching God
+WALKER | Alice ___, author of The Color Purple
+LEE | Harper ___, author of To Kill a Mockingbird
+MCCARTHY | Cormac ___, author of The Road
+ROTH | Philip ___, author of American Pastoral
+VONNEGUT | Kurt ___, author of Slaughterhouse-Five
+HELLER | Joseph ___, author of Catch-22
+BRADBURY | Ray ___, author of Fahrenheit 451
+ASIMOV | Isaac ___, author of I, Robot
+LEGUIN | Ursula ___, author of A Wizard of Earthsea (2,4)
+KING | Stephen ___, author of The Shining
+CHRISTIE | Agatha ___, creator of Poirot
+DOYLE | Arthur Conan ___, creator of Sherlock Holmes
+SAYERS | Dorothy L. ___, creator of Lord Peter Wimsey
+CHANDLER | Raymond ___, creator of Philip Marlowe
+LECARRE | John ___, author of Tinker Tailor Soldier Spy (2,5)
+FLEMING | Ian ___, creator of James Bond
+LEWIS | C. S. ___, author of The Chronicles of Narnia
+CARROLL | Lewis ___, author of Alice's Adventures in Wonderland
+DAHL | Roald ___, author of Matilda
+POTTER | Beatrix ___, creator of Peter Rabbit
+MILNE | A. A. ___, creator of Winnie-the-Pooh
+BARRIE | J. M. ___, creator of Peter Pan
+GRAHAME | Kenneth ___, author of The Wind in the Willows
+PULLMAN | Philip ___, author of His Dark Materials
+CERVANTES | Author of Don Quixote
+LORCA | Federico García ___, Spanish poet and dramatist
+NERUDA | Pablo ___, Chilean poet of love
+BORGES | Jorge Luis ___, author of Ficciones
+MARQUEZ | Gabriel García ___, author of One Hundred Years of Solitude
+ALLENDE | Isabel ___, author of The House of the Spirits
+CORTAZAR | Julio ___, author of Hopscotch
+COELHO | Paulo ___, author of The Alchemist
+GOETHE | Author of Faust
+SCHILLER | German dramatist of William Tell
+MANN | Thomas ___, author of The Magic Mountain
+HESSE | Hermann ___, author of Siddhartha
+RILKE | Rainer Maria ___, author of the Duino Elegies
+BRECHT | Bertolt ___, author of Mother Courage
+GRASS | Günter ___, author of The Tin Drum
+HUGO | Victor ___, author of Les Misérables
+DUMAS | Alexandre ___, author of The Three Musketeers
+FLAUBERT | Author of Madame Bovary
+BALZAC | Author of La Comédie humaine
+ZOLA | Émile ___, author of Germinal
+PROUST | Author of In Search of Lost Time
+STENDHAL | Author of The Red and the Black
+MOLIERE | French comic playwright of Tartuffe
+RACINE | French tragedian of Phèdre
+BAUDELAIRE | Poet of Les Fleurs du mal
+RIMBAUD | Teenage poet of A Season in Hell
+VERNE | Jules ___, author of Twenty Thousand Leagues Under the Seas
+DOSTOEVSKY | Author of Crime and Punishment
+CHEKHOV | Author of The Cherry Orchard
+PUSHKIN | Author of Eugene Onegin
+GOGOL | Author of Dead Souls
+TURGENEV | Author of Fathers and Sons
+NABOKOV | Author of Lolita
+PASTERNAK | Author of Doctor Zhivago
+SOLZHENITSYN | Author of The Gulag Archipelago
+BULGAKOV | Author of The Master and Margarita
+IBSEN | Henrik ___, author of A Doll's House
+STRINDBERG | Swedish dramatist of Miss Julie
+ANDERSEN | Hans Christian ___, Danish teller of fairy tales
+LINDGREN | Astrid ___, creator of Pippi Longstocking
+PETRARCH | Italian poet of sonnets to Laura
+BOCCACCIO | Author of The Decameron
+SAPPHO | Ancient Greek lyric poet of Lesbos
+AESCHYLUS | Greek tragedian of the Oresteia
+SOPHOCLES | Greek tragedian of Oedipus Rex
+EURIPIDES | Greek tragedian of Medea
+ARISTOPHANES | Greek comic playwright of The Frogs
+MURASAKI | Lady ___, author of The Tale of Genji
+BASHO | Japanese haiku master
+MISHIMA | Yukio ___, author of The Sea of Fertility
+MURAKAMI | Haruki ___, author of Norwegian Wood
+KAWABATA | Japanese Nobel author of Snow Country
+LUXUN | Chinese author of The True Story of Ah Q (2,3)
+RUMI | Persian Sufi poet
+HAFEZ | Persian poet of the Divan
+KHAYYAM | Omar ___, poet of the Rubaiyat
+MAHFOUZ | Naguib ___, Egyptian Nobel author
+SOYINKA | Wole ___, first African Nobel laureate in literature
+NGUGI | ___ wa Thiong'o, Kenyan author
+ADICHIE | Chimamanda Ngozi ___, author of Half of a Yellow Sun
+COETZEE | J. M. ___, author of Disgrace
+GORDIMER | Nadine ___, South African Nobel author
+WALCOTT | Derek ___, Saint Lucian poet of Omeros
+NAIPAUL | V. S. ___, author of A House for Mr Biswas
+OTHELLO | Moor of Venice
+KINGLEAR | Shakespeare king with three daughters (4,4)
+ROMEO | Montague who loved Juliet
+JULIET | Capulet who loved Romeo
+OPHELIA | Hamlet's tragic love
+PROSPERO | Magician of The Tempest
+CALIBAN | Monster of The Tempest
+PUCK | Mischievous sprite of A Midsummer Night's Dream
+FALSTAFF | Fat knight of Henry IV
+SHYLOCK | Moneylender of The Merchant of Venice
+IAGO | Villain of Othello
+YORICK | Jester whose skull Hamlet holds
+TEMPEST | Shakespeare's late play, "The ___"
+GLOBE | London theatre of Shakespeare
+FOLIO | First collected edition of Shakespeare's plays
+PENTAMETER | Line of five metrical feet
+IAMB | Unstressed then stressed syllable
+TROCHEE | Stressed then unstressed syllable
+DACTYL | Stressed then two unstressed syllables
+ANAPAEST | Two unstressed then stressed syllables
+SPONDEE | Two stressed syllables
+METRE | Rhythmic pattern of verse
+RHYME | Matching sounds at line ends
+COUPLET | Pair of rhyming lines
+QUATRAIN | Four-line stanza
+TERCET | Three-line stanza
+SESTET | Six-line stanza
+OCTAVE | Eight-line stanza of a sonnet
+VILLANELLE | Nineteen-line poem with two refrains
+SESTINA | Poem of six stanzas repeating end words
+ODE | Lyric poem of praise
+BALLAD | Narrative poem or song
+EPIC | Long narrative poem
+FREEVERSE | Poetry without regular metre (4,5)
+BLANKVERSE | Unrhymed iambic pentameter (5,5)
+ENJAMBMENT | Running a sentence over a line break
+CAESURA | Pause within a line of verse
+ASSONANCE | Repetition of vowel sounds
+CONSONANCE | Repetition of consonant sounds
+ONOMATOPOEIA | Word that imitates a sound
+HYPERBOLE | Deliberate exaggeration
+LITOTES | Understatement by denying the opposite
+APOSTROPHE | Address to an absent person or thing
+METONYMY | Substitution of an associated term
+SYNECDOCHE | Part standing for the whole
+OXYMORON | Contradictory phrase such as "cruel kindness"
+PARADOX | Seemingly absurd but true statement
+ANTITHESIS | Contrast of ideas in parallel phrases
+ANAPHORA | Repetition at the start of lines
+CHIASMUS | Reversed parallel structure
+EPITHET | Descriptive phrase such as "rosy-fingered dawn"
+KENNING | Compound metaphor like "whale-road"
+IMAGERY | Vivid sensory description
+SYMBOLISM | Use of objects to represent ideas
+MOTIF | Recurring element in a work
+THEME | Central idea of a work
+TONE | Author's attitude
+MOOD | Atmosphere created for the reader
+FORESHADOW | Hint at what's to come
+DENOUEMENT | Final resolution of a plot
+CLIMAX | Turning point of greatest tension
+EXPOSITION | Introduction of background
+CATHARSIS | Emotional release of tragedy
+HAMARTIA | Tragic flaw
+HUBRIS | Excessive pride leading to downfall
+PERIPETEIA | Reversal of fortune
+ANAGNORISIS | Moment of recognition in tragedy
+DEUSEXMACHINA | Contrived resolution, "god from the machine"
+CHORUS | Commenting group in Greek drama
+BILDUNGSROMAN | Coming-of-age novel
+PICARESQUE | Episodic tale of a roguish hero
+EPISTOLARY | Told in letters
+GOTHIC | Genre of gloomy castles and dread
+ROMANTICISM | Movement of emotion and nature
+REALISM | Movement depicting everyday life
+MODERNISM | Experimental movement of Joyce and Woolf
+POSTMODERN | Self-aware, ironic style
+SURREALIST | Dreamlike in style
+MAGICALREALISM | Genre blending the fantastic and the everyday
+UNRELIABLE | ___ narrator, not to be trusted
+OMNISCIENT | All-knowing narrator
+NOVELLA | Short novel
+NOVEL | Long work of prose fiction
+SHORTSTORY | Brief fiction (5,5)
+FICTION | Imaginative prose
+NONFICTION | Factual writing
+MEMOIR | Personal account of one's life
+BIOGRAPHY | Account of someone's life
+AUTOBIOGRAPHY | Account of one's own life
+ESSAY | Short prose piece on a subject
+DIARY | Daily personal record
+JOURNAL | Record of experiences
+ANTHOLOGY | Collection of works
+TRILOGY | Series of three books
+SAGA | Long family or heroic story
+PARABLE | Simple story with a moral
+FAIRYTALE | Story of magic for children (5,4)
+DRAMA | Play for performance
+TRAGEDY | Play ending in catastrophe
+COMEDY | Play ending happily
+FARCE | Comedy of improbable situations
+MELODRAMA | Sensational, exaggerated drama
+ACT | Major division of a play
+PLAYWRIGHT | Writer of plays
+POET | Writer of verse
+NOVELIST | Writer of novels
+LAUREATE | Honoured poet of a nation
+QUILL | Feather pen
+MANUSCRIPT | Handwritten or original text
+PUBLISHER | Company that issues books
+BESTSELLER | Book with huge sales
+BOOKER | Prestigious prize for fiction in English
+PULITZER | American prize for literature and journalism
+LIBRARY | Collection of books
+BIBLIOPHILE | Lover of books
+BOOKWORM | Avid reader
+HERO | Main admirable character
+HEROINE | Female main character
+VILLAIN | Antagonist of evil intent
+ANTIHERO | Flawed central character
+FOIL | Character who contrasts with another
+SIDEKICK | Hero's companion
+DARCY | Proud hero of Pride and Prejudice
+ELIZABETH | Bennet sister of Pride and Prejudice
+EMMA | Austen's matchmaking heroine
+HEATHCLIFF | Brooding hero of Wuthering Heights
+ROCHESTER | Jane Eyre's employer and love
+PIP | Hero of Great Expectations
+HAVISHAM | Miss ___, jilted bride in a decaying dress
+FAGIN | Leader of child pickpockets in Oliver Twist
+OLIVER | Orphan who asked for more
+MICAWBER | Optimistic debtor of David Copperfield
+COPPERFIELD | David ___, Dickens's autobiographical hero
+DAISY | Gatsby's lost love
+HOLDEN | ___ Caulfield, narrator of The Catcher in the Rye
+ATTICUS | ___ Finch, lawyer in To Kill a Mockingbird
+SCOUT | Narrator of To Kill a Mockingbird
+AHAB | Captain hunting the white whale
+ISHMAEL | "Call me ___"
+HUCK | ___ Finn, Twain's river adventurer
+SAWYER | Tom ___, Twain's mischievous boy
+WINSTON | ___ Smith, hero of Nineteen Eighty-Four
+BIGBROTHER | Watcher of Nineteen Eighty-Four (3,7)
+NEWSPEAK | Language of Nineteen Eighty-Four
+DOUBLETHINK | Holding two contradictory beliefs
+SNOWBALL | Exiled pig of Animal Farm
+GREGOR | ___ Samsa, who became an insect
+RASKOLNIKOV | Murderer of Crime and Punishment
+KARENINA | Anna ___, Tolstoy's tragic heroine
+VALJEAN | Jean ___, convict hero of Les Misérables
+JAVERT | Relentless inspector of Les Misérables
+QUASIMODO | Hunchback of Notre-Dame
+DANTES | Edmond ___, the Count of Monte Cristo
+DARTAGNAN | Gascon hero of The Three Musketeers
+SANCHO | ___ Panza, Don Quixote's squire
+DULCINEA | Don Quixote's idealised lady
+BEATRICE | Dante's guide to Paradise
+FAUST | Scholar who sells his soul
+MEPHISTOPHELES | Devil of the Faust legend
+DORIAN | ___ Gray, whose portrait ages
+GULLIVER | Traveller to Lilliput
+LILLIPUT | Land of tiny people
+CRUSOE | Robinson ___, castaway
+FRIDAY | Crusoe's companion
+ALICE | Girl who fell down a rabbit hole
+CHESHIRE | ___ Cat, which grins and vanishes
+JABBERWOCKY | Carroll's nonsense poem
+NARNIA | Land beyond the wardrobe
+ASLAN | Lion of Narnia
+JEKYLL | Doctor whose potion releases Mr Hyde
+HYDE | Mr ___, evil alter ego
+MORIARTY | Holmes's arch-enemy
+HASTINGS | Poirot's friend and chronicler
+CANTERBURY | ___ Tales, Chaucer's pilgrims' stories
+DECAMERON | Boccaccio's hundred tales
+INFERNO | First part of Dante's Divine Comedy
+PURGATORIO | Second part of Dante's Divine Comedy
+PARADISO | Third part of Dante's Divine Comedy
+AENEID | Virgil's epic of Aeneas
+METAMORPHOSES | Ovid's poem of transformations
+SCHEHERAZADE | Storyteller of the Thousand and One Nights
+SINBAD | Sailor of the Thousand and One Nights
+ULYSSES | Joyce's novel of a Dublin day
+BLOOMSDAY | Annual celebration of Ulysses on 16 June
+DUBLINERS | Joyce's collection of stories
+MIDDLEMARCH | George Eliot's novel of provincial life
+JANE | First name of Eyre and Austen
+PERSUASION | Austen novel of Anne Elliot
+SENSE | ___ and Sensibility
+MANSFIELD | ___ Park, Austen novel
+NORTHANGER | ___ Abbey, Austen's Gothic parody
+WUTHERING | ___ Heights
+REBECCA | Du Maurier novel of Manderley
+MANDERLEY | Estate of Rebecca
+DUMAURIER | Daphne ___, author of Rebecca
+SILMARILLION | Tolkien's mythology of Middle-earth
+EARTHSEA | Le Guin's archipelago world
+FOUNDATION | Asimov's galactic series
+NEUROMANCER | Gibson's cyberpunk novel
+BELOVED | Toni Morrison's novel of a haunted house
+MOCKINGBIRD | To Kill a ___
+CATCHER | ___ in the Rye
+GRAPES | The ___ of Wrath
+LENNIE | Gentle giant of Of Mice and Men
+GEORGE | Lennie's companion in Of Mice and Men
+SANTIAGO | Fisherman of The Old Man and the Sea
+WALDEN | Thoreau's account of living by a pond
+LEAVES | ___ of Grass
+HOWL | Ginsberg's Beat poem
+WASTELAND | Eliot's poem "The ___" (5,4)
+PRUFROCK | J. Alfred ___, Eliot's hesitant lover
+LOLITA | Nabokov novel
+ROBINSON | ___ Crusoe
+EMILY | First name of the author of Wuthering Heights
+CHARLOTTE | First name of the author of Jane Eyre
+ANNE | First name of the youngest Brontë sister
+LITTLEWOMEN | Alcott's novel of the March sisters (6,5)
+ALCOTT | Louisa May ___, author of Little Women
+MARCH | Surname of the sisters of Little Women
+MONTGOMERY | L. M. ___, author of Anne of Green Gables
+HEIDI | Swiss orphan of the Alps
+BLACKBEAUTY | Sewell's horse autobiography (5,6)
+LONGJOHN | ___ Silver, one-legged pirate
+KIDNAPPED | Stevenson's Scottish adventure
+IVANHOE | Scott's medieval romance
+SCOTT | Walter ___, author of Ivanhoe
+WAVERLEY | Scott's first novel
+STOKER | Bram ___, author of Dracula
+POLIDORI | Author of The Vampyre
+OTRANTO | The Castle of ___, first Gothic novel
+RADCLIFFE | Ann ___, author of The Mysteries of Udolpho
+HESTER | ___ Prynne, wearer of the scarlet A
+PEQUOD | Ahab's whaling ship
+BARTLEBY | Scrivener who would prefer not to
+RAVEN | Poe's bird that says "Nevermore"
+NEVERMORE | Word repeated by Poe's raven
+USHER | The Fall of the House of ___
+TELLTALE | The ___ Heart, Poe story
+ANNABEL | ___ Lee, Poe poem
+OZYMANDIAS | Shelley's sonnet of a ruined statue
+KUBLAKHAN | Coleridge's unfinished visionary poem (5,4)
+XANADU | Kubla Khan's pleasure dome site
+MARINER | Ancient ___ of Coleridge
+TYGER | Blake's burning beast
+JERUSALEM | Blake's poem of England's green and pleasant land
+DAFFODILS | Wordsworth's host of golden flowers
+GRECIAN | Keats's Ode on a ___ Urn
+SHALOTT | Tennyson's Lady of ___
+INVICTUS | Henley's poem: "I am the master of my fate"
+DULCE | ___ et Decorum Est, Owen's war poem
+OWEN | Wilfred ___, First World War poet
+SASSOON | Siegfried ___, war poet
+BROOKE | Rupert ___, poet of The Soldier
+AUDEN | W. H. ___, poet of Funeral Blues
+LARKIN | Philip ___, poet of This Be The Verse
+HUGHES | Ted ___, poet of Crow
+THOMAS | Dylan ___, poet of Do Not Go Gentle
+CUMMINGS | e. e. ___, lower-case poet
+POUND | Ezra ___, Imagist poet
+STEVENS | Wallace ___, poet of The Emperor of Ice-Cream
+WILLIAMS | William Carlos ___, poet of The Red Wheelbarrow
+BISHOP | Elizabeth ___, poet of One Art
+LANGSTON | First name of Harlem Renaissance poet Hughes
+DUFFY | Carol Ann ___, first female UK Poet Laureate
+ARMITAGE | Simon ___, Poet Laureate from 2019
+GORMAN | Amanda ___, inaugural poet of 2021
+SONNETEER | Writer of sonnets
+BARD | Poet
+TROUBADOUR | Medieval lyric poet
+MINSTREL | Medieval singer of tales
+SKALD | Old Norse court poet
+GRIOT | West African storyteller and historian
+SCRIBE | Copyist of manuscripts
+ILLUMINATED | Decorated, as a medieval manuscript
+CODEX | Ancient bound book
+SCROLL | Rolled manuscript
+QUARTO | Book size of folded sheets
+PAPERBACK | Softcover book
+HARDBACK | Hardcover book
+PREFACE | Introductory note by the author
+FOREWORD | Introduction by another writer
+CHAPTER | Division of a book
+APPENDIX | Supplementary section
+FOOTNOTE | Note at the bottom of a page
+GLOSSARY | List of terms with definitions
+INDEX | Alphabetical list of topics
+EPIGRAPH | Quotation at the start of a book
+DEDICATION | Inscription honouring someone
+PSEUDONYM | Pen name
+PENNAME | Pseudonym (3,4)
+GHOSTWRITER | Uncredited author
+PLAGIARISM | Passing off another's work as one's own
+CANON | Body of works considered great
+CLASSIC | Work of enduring excellence
+PAGETURNER | Gripping book (4-6)
+WHODUNNIT | Murder mystery
+DETECTIVE | Investigator of a mystery
+SPECULATIVE | Fiction of imagined worlds
+SATIRIST | Writer who mocks folly
+SWIFT | Jonathan ___, author of Gulliver's Travels
+DEFOE | Daniel ___, author of Robinson Crusoe
+FIELDING | Henry ___, author of Tom Jones
+RICHARDSON | Samuel ___, author of Pamela
+STERNE | Laurence ___, author of Tristram Shandy
+JOHNSON | Samuel ___, compiler of a dictionary
+BOSWELL | Johnson's biographer
+POPE | Alexander ___, poet of The Rape of the Lock
+DRYDEN | First official Poet Laureate
+PEPYS | Samuel ___, diarist of the Great Fire
+GUN | Chekhov's ___, a detail that must pay off

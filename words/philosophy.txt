@@ -46,3 +46,462 @@ KARMA | Moral law of cause and effect in Indian thought
 CATHARSIS | Emotional release through art, especially tragedy
 VIRTUE | Moral excellence
 SOLIPSISM | View that only one's own mind is sure to exist
+THALES | First Greek philosopher, who thought everything was water
+ANAXIMANDER | Milesian who proposed the boundless as the first principle
+PARMENIDES | Eleatic who argued that change is an illusion
+HERACLITUS | Thinker who said you can't step in the same river twice
+EMPEDOCLES | Thinker of the four elements, said to have leapt into Etna
+ANAXAGORAS | Pre-Socratic who said mind set the cosmos in motion
+DEMOCRITUS | Laughing philosopher of atoms and void
+LEUCIPPUS | Founder of atomism with Democritus
+PROTAGORAS | Sophist who said man is the measure of all things
+GORGIAS | Sophist famed for rhetoric
+XENOPHANES | Poet-philosopher who mocked gods made in human image
+PLOTINUS | Founder of Neoplatonism
+HYPATIA | Alexandrian Neoplatonist and mathematician
+EPICTETUS | Stoic slave-philosopher of the Discourses
+AURELIUS | Marcus ___, Stoic emperor of the Meditations
+LUCRETIUS | Roman poet of On the Nature of Things
+AUGUSTINE | Bishop of Hippo who wrote the Confessions
+BOETHIUS | Author of The Consolation of Philosophy
+ANSELM | Archbishop of the ontological argument
+ABELARD | Medieval logician famed for his love of Héloïse
+AQUINAS | Author of the Summa Theologica
+OCKHAM | Friar of the razor
+SCOTUS | Duns ___, medieval subtle doctor
+AVICENNA | Persian polymath of the Book of Healing
+AVERROES | Andalusian commentator on Aristotle
+MAIMONIDES | Author of The Guide for the Perplexed
+MONTAIGNE | French inventor of the essay
+ERASMUS | Humanist author of In Praise of Folly
+BACON | Francis ___, champion of empirical method
+PASCAL | Thinker of a famous wager on God
+LEIBNIZ | Philosopher of monads and the best of all possible worlds
+BERKELEY | Bishop who said to be is to be perceived
+VOLTAIRE | Author of Candide
+DIDEROT | Editor of the Encyclopédie
+FICHTE | German idealist of the self-positing I
+SCHELLING | German idealist of nature philosophy
+SCHOPENHAUER | Pessimist author of The World as Will and Representation
+MARX | Author of Das Kapital
+ENGELS | Co-author of The Communist Manifesto
+COMTE | Founder of positivism
+PEIRCE | Founder of pragmatism
+JAMES | William ___, pragmatist and psychologist
+DEWEY | John ___, pragmatist philosopher of education
+HUSSERL | Founder of phenomenology
+HEIDEGGER | Author of Being and Time
+ARENDT | Hannah ___, who wrote of the banality of evil
+RUSSELL | Bertrand ___, co-author of Principia Mathematica
+FREGE | Founder of modern logic
+MOORE | G. E. ___, author of Principia Ethica
+CARNAP | Leading logical positivist of the Vienna Circle
+POPPER | Philosopher of falsifiability
+KUHN | Thomas ___, who described paradigm shifts
+QUINE | Critic of the two dogmas of empiricism
+RAWLS | Author of A Theory of Justice
+NOZICK | Author of Anarchy, State, and Utopia
+SINGER | Peter ___, author of Animal Liberation
+NUSSBAUM | Martha ___, philosopher of capabilities
+FOUCAULT | Author of Discipline and Punish
+DERRIDA | Father of deconstruction
+DELEUZE | Co-author of Anti-Oedipus
+LEVINAS | Philosopher of the face of the Other
+ADORNO | Frankfurt School critic of the culture industry
+HABERMAS | Philosopher of communicative action
+BUTLER | Judith ___, theorist of gender performativity
+WOLLSTONECRAFT | Author of A Vindication of the Rights of Woman
+LAOZI | Founder of Taoism
+ZHUANGZI | Taoist who dreamed he was a butterfly
+MENCIUS | Confucian who believed human nature is good
+MOZI | Chinese philosopher of universal love
+XUNZI | Confucian who believed human nature is bad
+NAGARJUNA | Buddhist philosopher of emptiness
+SHANKARA | Founder of Advaita Vedanta
+APRIORI | Known independently of experience (1,6)
+APOSTERIORI | Known through experience (1,10)
+TAUTOLOGY | Statement true by its form alone
+FALLACY | Error in reasoning
+STRAWMAN | Misrepresenting an argument to attack it (5,3)
+ADHOMINEM | Attacking the person, not the argument (2,7)
+SLIPPERYSLOPE | Fallacy that one step leads to disaster (8,5)
+SOPHISTRY | Clever but false reasoning
+MAXIM | Principle of action in Kant's ethics
+IMPERATIVE | Kantian command, categorical or hypothetical
+DEONTOLOGY | Ethics of duty
+UTILITARIAN | Seeking the greatest good for the greatest number
+EUDAIMONIA | Aristotle's flourishing life
+ATARAXIA | Epicurean tranquillity
+APATHEIA | Stoic freedom from passion
+LOGOS | Greek word for reason or rational order
+NOUS | Greek word for mind or intellect
+ARETE | Greek word for virtue or excellence
+PHRONESIS | Aristotle's practical wisdom
+PRAXIS | Practice, as opposed to theory
+TECHNE | Greek word for craft or art
+EPISTEME | Greek word for knowledge
+DOXA | Greek word for opinion or belief
+APORIA | State of puzzlement in a dialogue
+ELENCHUS | Socratic method of refutation
+SYNTHESIS | Hegelian union of thesis and antithesis
+ANTITHESIS | Opposing proposition in Hegelian dialectic
+THESIS | Proposition to be argued
+MONISM | View that reality is one substance
+PLURALISM | View that reality is many things
+MATERIALISM | View that only matter exists
+IDEALISM | View that reality is fundamentally mental
+REALISM | View that the world exists independently of minds
+NOMINALISM | View that universals are mere names
+POSITIVISM | View that knowledge comes only from science
+PRAGMATISM | View that truth is what works
+ABSURDISM | Camus's response to a meaningless universe
+HEDONISM | View that pleasure is the highest good
+CYNICISM | School of Diogenes that rejected convention
+SCEPTICISM | Doubt about the possibility of knowledge
+DETERMINISM | View that every event is causally fixed
+FREEWILL | Ability to choose otherwise (4,4)
+COMPATIBILISM | View that free will fits with determinism
+FATALISM | View that events are fixed and unavoidable
+QUALIA | Subjective qualities of experience
+CONSCIOUSNESS | Awareness of oneself and the world
+MIND | Seat of thought and feeling
+SOUL | Immaterial essence of a person
+ESSENCE | What makes a thing what it is
+EXISTENCE | The fact of being
+BEING | Subject of ontology
+NOTHINGNESS | Absence of being
+BECOMING | Process of change, opposed to being
+SUBSTANCE | Fundamental thing that underlies properties
+ACCIDENT | Non-essential property
+FORM | Platonic ideal pattern
+MATTER | Aristotle's stuff given shape by form
+CAUSE | That which brings something about
+ENTELECHY | Actualisation of potential
+MONAD | Leibniz's simple substance
+NOUMENON | Thing-in-itself, in Kant
+PHENOMENON | Thing as it appears
+PHENOMENOLOGY | Study of the structures of experience
+HERMENEUTICS | Theory of interpretation
+SEMIOTICS | Study of signs
+STRUCTURALISM | Theory that culture is a system of signs
+POSTMODERNISM | Scepticism towards grand narratives
+DECONSTRUCTION | Derrida's method of reading
+RELATIVISM | View that truth varies with perspective
+ABSOLUTISM | View that some truths hold universally
+UNIVERSALS | Properties shared by many things
+PARTICULARS | Individual things
+PREMISE | Statement an argument starts from
+INFERENCE | Drawing a conclusion
+INDUCTION | Reasoning from cases to a generalisation
+DEDUCTION | Reasoning from general to particular
+ABDUCTION | Inference to the best explanation
+DILEMMA | Choice between two bad options
+TROLLEYPROBLEM | Thought experiment of a runaway tram (7,7)
+OCCAMSRAZOR | Principle of preferring the simplest explanation (6,5)
+CATEGORICAL | Kind of imperative that applies unconditionally
+SOCIALCONTRACT | Agreement that founds society (6,8)
+STATEOFNATURE | Condition before government (5,2,6)
+VEILOFIGNORANCE | Rawls's device for choosing fair principles (4,2,9)
+GOLDENMEAN | Aristotle's virtue between extremes (6,4)
+CAVE | Plato's allegory of shadows on a wall
+DEMIURGE | Craftsman god of Plato's Timaeus
+TABULARASA | Blank slate (6,4)
+COGITO | Descartes's "I think"
+ZEITGEIST | Spirit of the age
+WELTANSCHAUUNG | Worldview
+ANGST | Existential dread
+DASEIN | Heidegger's term for human existence
+UBERMENSCH | Nietzsche's overman
+RESSENTIMENT | Nietzsche's term for resentful morality
+WILLTOPOWER | Nietzsche's driving force (4,2,5)
+BADFAITH | Sartre's term for self-deception (3,5)
+AUTHENTICITY | Being true to oneself
+ALIENATION | Estrangement, in Marx
+HEGEMONY | Gramsci's cultural dominance
+IDEOLOGY | System of beliefs
+TELEOLOGY | Explanation by purpose
+THEODICY | Defence of God despite evil
+THEISM | Belief in God
+ATHEISM | Disbelief in God
+AGNOSTICISM | View that God's existence is unknowable
+DEISM | Belief in a non-intervening creator
+PANTHEISM | View that God is everything
+MYSTICISM | Pursuit of union with the divine
+RATIONAL | Based on reason
+EMPIRICAL | Based on experience
+COHERENCE | ___ theory of truth
+CORRESPONDENCE | ___ theory of truth
+VALIDITY | Property of an argument whose conclusion follows
+SOUNDNESS | Validity plus true premises
+CONTRADICTION | Statement that is necessarily false
+NECESSITY | Being impossible to be otherwise
+CONTINGENCY | Being possible but not necessary
+MODAL | Concerning possibility and necessity
+PROPOSITION | Meaning expressed by a statement
+TRUTH | Correspondence with reality
+KNOWLEDGE | Justified true belief, traditionally
+BELIEF | Holding something to be true
+JUSTIFICATION | Grounds for belief
+GETTIER | Philosopher whose cases challenged justified true belief
+SKEPTIC | One who doubts
+CERTAINTY | Absence of doubt
+INTUITION | Immediate apprehension
+REASON | Faculty of logical thought
+PASSION | Emotion, in Hume's ethics
+VICE | Moral failing
+JUSTICE | Fairness, central topic of Plato's Republic
+LIBERTY | Freedom
+EQUALITY | Being equal in status or rights
+RIGHTS | Entitlements owed to a person
+DUTY | Moral obligation
+AUTONOMY | Self-governance
+DIGNITY | Inherent worth
+ALTRUISM | Selfless concern for others
+EGOISM | View that self-interest is the basis of morality
+NATURALLAW | Moral law discernible by reason (7,3)
+ACADEMY | School founded by Plato
+LYCEUM | School founded by Aristotle
+STOA | Porch where Zeno taught
+GARDEN | School of Epicurus
+SYMPOSIUM | Plato's dialogue on love
+REPUBLIC | Plato's dialogue on justice
+APOLOGY | Socrates's defence speech
+PHAEDO | Dialogue of Socrates's last day
+MEDITATIONS | Work of Descartes and of Marcus Aurelius
+CRITIQUE | ___ of Pure Reason, Kant's masterwork
+ZARATHUSTRA | Prophet of Nietzsche's Thus Spoke
+CANDIDE | Voltaire's satire of optimism
+EMILE | Rousseau's treatise on education
+TRACTATUS | Wittgenstein's early work
+PRINCE | Machiavelli's work, "The ___"
+ANALECTS | Sayings of Confucius
+DAODEJING | Classic text of Taoism
+DHAMMAPADA | Collection of the Buddha's sayings
+UPANISHADS | Philosophical Hindu scriptures
+BENTHAM | Founder of utilitarianism who designed the panopticon
+PANOPTICON | Prison design where all can be watched
+BURKE | Edmund ___, father of modern conservatism
+PAINE | Thomas ___, author of Rights of Man
+GROTIUS | Dutch jurist of natural law
+VICO | Italian philosopher of cyclical history
+HERDER | German thinker of language and national culture
+BERGSON | French philosopher of élan vital
+WHITEHEAD | Philosopher of process and co-author with Russell
+SANTAYANA | Philosopher who warned that those who forget the past repeat it
+GRAMSCI | Italian Marxist of cultural hegemony
+LUKACS | Hungarian Marxist of reification
+BENJAMIN | Walter ___, critic of the work of art in mechanical reproduction
+MARCUSE | Author of One-Dimensional Man
+HORKHEIMER | Co-founder of the Frankfurt School's critical theory
+FROMM | Erich ___, author of The Art of Loving
+MERLEAUPONTY | French phenomenologist of the body (7-5)
+RICOEUR | French philosopher of narrative and interpretation
+GADAMER | Author of Truth and Method
+LYOTARD | Author of The Postmodern Condition
+BAUDRILLARD | Philosopher of simulacra
+BADIOU | French philosopher of the event
+AGAMBEN | Italian philosopher of bare life
+ZIZEK | Slovenian provocateur of Lacanian philosophy
+RORTY | American neo-pragmatist
+PUTNAM | Philosopher of the brain in a vat and Twin Earth
+KRIPKE | Author of Naming and Necessity
+DAVIDSON | Donald ___, philosopher of action and interpretation
+SEARLE | Philosopher of the Chinese Room
+DENNETT | Philosopher of consciousness explained
+CHALMERS | Philosopher of the hard problem of consciousness
+NAGEL | Thomas ___, who asked what it is like to be a bat
+PARFIT | Author of Reasons and Persons
+ANSCOMBE | Author of Intention
+FOOT | Philippa ___, inventor of the trolley problem
+MURDOCH | Iris ___, philosopher and novelist
+MACINTYRE | Author of After Virtue
+SANDEL | Michael ___, Harvard lecturer on justice
+RAND | Ayn ___, novelist of objectivism
+OBJECTIVISM | Ayn Rand's philosophy of rational self-interest
+ARISTIPPUS | Founder of the Cyrenaic school of pleasure
+PYRRHO | Founder of Greek scepticism
+CHRYSIPPUS | Stoic logician
+PORPHYRY | Neoplatonist author of the Isagoge
+PROCLUS | Late Neoplatonist of Athens
+ERIUGENA | Irish philosopher of the ninth century
+ECKHART | Meister ___, German mystic
+FICINO | Florentine translator of Plato
+BRUNO | Giordano ___, burned for heresy in 1600
+MALEBRANCHE | French philosopher of occasionalism
+REID | Thomas ___, philosopher of common sense
+CONDORCET | French philosopher of progress and voting
+BAUMGARTEN | German who coined the term aesthetics
+LESSING | German Enlightenment dramatist and critic
+FEUERBACH | Critic of religion who influenced Marx
+STIRNER | Egoist author of The Ego and Its Own
+PROUDHON | Anarchist who said property is theft
+BAKUNIN | Russian anarchist
+KROPOTKIN | Anarchist of mutual aid
+EMERSON | Transcendentalist author of Self-Reliance
+THOREAU | Author of Walden
+DUBOIS | W. E. B. ___, philosopher of double consciousness
+FANON | Author of The Wretched of the Earth
+SAID | Edward ___, author of Orientalism
+TAGORE | Bengali poet and philosopher
+NISHIDA | Founder of the Kyoto School
+DOGEN | Founder of Soto Zen
+ZHUXI | Neo-Confucian synthesiser (3,2)
+HANFEI | Legalist philosopher of ancient China (3,3)
+KAUTILYA | Author of the Arthashastra
+PATANJALI | Compiler of the Yoga Sutras
+GHAZALI | Al-___, author of The Incoherence of the Philosophers
+KHALDUN | Ibn ___, historian of the rise and fall of dynasties
+ANALYTIC | True by meaning alone
+SYNTHETIC | True by how the world is
+ANTINOMY | Contradiction between two reasonable claims
+TRANSCENDENTAL | Concerning the conditions of experience
+IMMANENCE | Existing within
+TRANSCENDENCE | Existing beyond
+EMANATION | Flowing forth from a source, in Neoplatonism
+MIMESIS | Imitation, in Plato and Aristotle
+SUBLIME | Awe-inspiring greatness, in aesthetics
+TASTE | Faculty of aesthetic judgement
+GENIUS | Kant's talent that gives the rule to art
+NATURALISM | View that only natural laws operate
+PHYSICALISM | View that everything is physical
+FUNCTIONALISM | View that mental states are defined by their roles
+BEHAVIOURISM | View that the mind is behaviour
+PANPSYCHISM | View that mind is everywhere
+EMERGENCE | Arising of new properties from simpler parts
+REDUCTIONISM | Explaining wholes by their parts
+HOLISM | View that wholes are more than their parts
+VITALISM | Belief in a life force
+MECHANISM | View of nature as a machine
+CAUSALITY | Relation of cause and effect
+COUNTERFACTUAL | What would have happened otherwise
+SUPERVENIENCE | Dependence of one set of properties on another
+INTENTIONALITY | Aboutness of mental states
+REFERENCE | Relation between a word and what it picks out
+MEANING | What a word or sentence expresses
+DENOTATION | Literal reference of a term
+CONNOTATION | Associated meaning of a term
+PREDICATE | What is said about a subject
+QUANTIFIER | Logical "all" or "some"
+BIVALENCE | Principle that statements are true or false
+VAGUENESS | Lack of sharp boundaries
+SORITES | Paradox of the heap
+LIARPARADOX | "This sentence is false" (4,7)
+SHIPOFTHESEUS | Puzzle of a ship whose planks are all replaced
+CHINESEROOM | Searle's argument against strong AI (7,4)
+MARYSROOM | Thought experiment of a colour scientist (5,4)
+ZOMBIE | Philosophical being without consciousness
+TWINEARTH | Putnam's thought experiment about meaning (4,5)
+NEWCOMB | ___'s problem of a predictor and two boxes
+BURIDAN | Philosopher of the starving ass
+EUTHYPHRO | Dialogue posing a dilemma about piety
+GYGES | Ring of ___, which makes its wearer invisible
+LAPLACE | ___'s demon, which knows all future states
+EVILDEMON | Descartes's deceiving spirit (4,5)
+DIVIDEDLINE | Plato's analogy of levels of knowledge (7,4)
+VIRTUEETHICS | Ethics centred on character (6,6)
+CAREETHICS | Ethics centred on relationships of care (4,6)
+BIOETHICS | Ethics of medicine and biology
+METAETHICS | Study of the nature of moral claims
+NORMATIVE | Concerning what ought to be
+EMOTIVISM | View that moral claims express feelings
+INTUITIONISM | View that moral truths are known by intuition
+CONTRACTUALISM | View that morality is what no one could reasonably reject
+ASCETICISM | Self-denial for spiritual ends
+SUPEREROGATION | Going beyond the call of duty
+AKRASIA | Weakness of will
+CONSCIENCE | Inner sense of right and wrong
+RESPONSIBILITY | Accountability for actions
+AGENCY | Capacity to act
+PERSONHOOD | Status of being a person
+IDENTITY | Sameness over time
+SELF | The subject of experience
+ALTERITY | Otherness
+LIFEWORLD | Husserl's world of everyday experience
+EPOCHE | Phenomenological suspension of judgement
+NOEMA | Object as intended in consciousness
+THROWNNESS | Heidegger's term for being cast into the world
+FACTICITY | Given facts of one's existence
+FREEDOM | Absence of constraint
+ANGUISH | Sartre's dread at radical freedom
+DESPAIR | Kierkegaard's sickness unto death
+ABSURD | Camus's clash between longing and silence
+REVOLT | Camus's response to the absurd
+FLANEUR | Idle urban wanderer of Benjamin's writing
+SIMULACRUM | Copy without an original
+DIFFERANCE | Derrida's coined term for deferred meaning
+BIOPOWER | Foucault's power over life
+DISCOURSE | System of statements shaping knowledge
+GENEALOGY | Nietzschean history of values
+PERSPECTIVISM | Nietzsche's view that truth depends on perspective
+AMORFATI | Love of one's fate (4,4)
+MEMENTOMORI | Remember that you must die (7,4)
+STOIC | Calm in adversity
+EPICUREAN | Devoted to refined pleasure
+PLATONIC | Non-physical, as of love
+SOCRATIC | ___ method, teaching by questioning
+CARTESIAN | Relating to Descartes
+KANTIAN | Relating to Kant
+HEGELIAN | Relating to Hegel
+MACHIAVELLIAN | Cunning and unscrupulous
+UTOPIAN | Idealistically perfect
+DYSTOPIAN | Nightmarish
+LOGICIAN | Expert in reasoning
+PHILOSOPHER | Lover of wisdom
+SAGE | Wise person
+WISDOM | Sophia, in Greek
+SOPHIA | Greek word for wisdom
+DIALOGUE | Plato's literary form
+TREATISE | Formal written work on a subject
+APHORISM | Short, pithy observation
+ESSAYIST | Writer of short reflective pieces
+ARGUMENT | Reasons offered for a conclusion
+COUNTEREXAMPLE | Case that refutes a general claim
+REDUCTIO | ___ ad absurdum
+CIRCULAR | Reasoning that assumes its conclusion
+EQUIVOCATION | Fallacy of shifting meanings
+NONSEQUITUR | Conclusion that doesn't follow (3,7)
+REDHERRING | Distracting irrelevance (3,7)
+FALSEDILEMMA | Fallacy of only two options (5,7)
+BANDWAGON | Fallacy of appealing to popularity
+TUQUOQUE | "You too" fallacy (2,6)
+MODUSPONENS | Rule: if P then Q; P; so Q (5,6)
+MODUSTOLLENS | Rule: if P then Q; not Q; so not P (5,7)
+CONDITIONAL | If-then statement
+NEGATION | Logical "not"
+DISJUNCTION | Logical "or"
+BICONDITIONAL | "If and only if" statement
+TRUTHTABLE | Chart of logical values (5,5)
+COMPLETENESS | Property that every truth is provable
+INCOMPLETENESS | Gödel's theorems on unprovable truths
+GODEL | Logician of the incompleteness theorems
+TARSKI | Logician of the semantic theory of truth
+TURINGTEST | Test of machine intelligence (6,4)
+ARTIFICIAL | ___ intelligence, a topic in philosophy of mind
+MINDBODY | ___ problem (4-4)
+HARDPROBLEM | Explaining why experience feels like anything (4,7)
+OTHERMINDS | Problem of knowing others have experiences (5,5)
+TELEPORTATION | Thought experiment about personal identity
+SWAMPMAN | Davidson's thought experiment of a lightning-made double
+UTILITYMONSTER | Nozick's creature that gains enormous pleasure
+REPUGNANT | ___ conclusion, Parfit's population puzzle
+HARMPRINCIPLE | Mill's limit on interference (4,9)
+KINGDOMOFENDS | Kant's ideal community of rational agents
+GOODWILL | The only thing good without qualification, for Kant (4,4)
+HAPPINESS | Goal of life, for many ethicists
+PLEASURE | Hedonist's highest good
+PAIN | What utilitarians seek to minimise
+SUFFERING | Dukkha, in Buddhist thought
+DUKKHA | Buddhist term for suffering
+ANATTA | Buddhist doctrine of no-self
+IMPERMANENCE | Anicca, in Buddhist thought
+EMPTINESS | Sunyata, in Buddhist thought
+WUWEI | Taoist effortless action (2,3)
+YINYANG | Complementary opposites (3,4)
+REN | Confucian virtue of humaneness
+JUNZI | Confucian gentleman
+FILIALPIETY | Confucian respect for parents (6,5)
+AHIMSA | Principle of nonviolence
+MOKSHA | Liberation in Hindu philosophy
+MAYA | Illusion, in Vedanta
+BRAHMAN | Ultimate reality in Hindu philosophy
+ATMAN | Self, in Hindu philosophy
