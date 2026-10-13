@@ -39,3 +39,471 @@ EUREKA | "I have found it!", a famous cry from the bath
 ARCHIMEDES | Syracusan who discovered the principle of buoyancy
 PHALANX | Tight block of Greek spearmen
 DEUSEXMACHINA | Contrived plot rescue, "god from the machine" (4,2,7)
+ADNAUSEAM | To a sickening degree, in Latin
+ADINFINITUM | Endlessly, in Latin
+ADLIB | Improvise, from Latin "at pleasure"
+AGENDA | Things to be done, literally
+ALIBI | "Elsewhere", in Latin
+ALTEREGO | "Other self"
+ANNODOMINI | "In the year of the Lord"
+ANTEBELLUM | "Before the war"
+APRIORI | Known before experience
+APOSTERIORI | Known from experience
+BONAFIDES | Credentials, from "good faith"
+CAVEAT | Warning, from "let him beware"
+CAVEATEMPTOR | "Let the buyer beware"
+CIRCA | About, with dates
+COGITO | "___ ergo sum"
+CUMLAUDE | "With praise"
+CURRICULUMVITAE | Résumé, literally "course of life"
+DEFACTO | In fact, if not by law
+DEJURE | By law
+DEMORTUIS | "___ nil nisi bonum"
+ERGO | Therefore
+ERRATUM | Printing mistake
+ETCETERA | "And the rest"
+EXLIBRIS | Bookplate phrase
+EXOFFICIO | By virtue of office
+EXPOSTFACTO | After the fact
+HABEASCORPUS | Writ "that you have the body"
+IBID | In the same place, in footnotes
+IDEST | "That is", in full
+INEXTREMIS | In dire straits
+INMEMORIAM | In memory of
+INSITU | In its original place
+INTERALIA | Among other things
+INVITRO | In glass
+INVIVO | In the living
+IPSOFACTO | By that very fact
+LOCUM | Stand-in doctor
+MEACULPA | "My fault"
+MEMENTOMORI | "Remember you must die"
+MODUSOPERANDI | Method of working
+NOTABENE | "Note well"
+OPUS | Work
+PERCAPITA | "By heads"
+PERANNUM | Yearly
+PERSONANONGRATA | Unwelcome person
+POSTMORTEM | "After death"
+PROBONO | For the public good
+PROFORMA | As a matter of form
+PROTEM | For the time being
+QUORUM | Minimum for a vote, from "of whom"
+REDUCTIO | ___ ad absurdum
+SICTRANSIT | ___ gloria mundi
+SINEQUANON | Essential condition
+SUBPOENA | Writ, literally "under penalty"
+SUIGENERIS | Unique, "of its own kind"
+TEMPUSFUGIT | "Time flies"
+TERRAFIRMA | Solid ground
+TERRAINCOGNITA | Unknown land
+VADEMECUM | Handy reference book, "go with me"
+VERBATIM | Word for word
+VERSUS | Against
+VETO | "I forbid"
+VICEVERSA | The other way round
+VIDE | "See", in references
+VOXPOPULI | "Voice of the people"
+VENIVIDIVICI | Caesar's famous boast
+ALEAIACTAEST | "The die is cast"
+SEMPERFIDELIS | Marines' motto
+EPLURIBUSUNUM | "Out of many, one"
+FIATLUX | "Let there be light"
+INVINOVERITAS | "In wine, truth"
+PAXROMANA | Two centuries of Roman peace
+LATIN | Language of the Romans
+LATINIST | Scholar of the Romans' language
+CLASSICIST | Scholar of Greece and Rome
+CLASSICS | Greek and Roman studies
+ROME | City on seven hills
+ROMULUS | Founder of the city, with Remus
+REMUS | Twin slain by his brother
+SABINE | Women carried off by early Romans
+TIBER | River of Rome
+PALATINE | Hill of the emperors' palaces
+CAPITOLINE | Hill of Jupiter's temple
+AVENTINE | Hill of plebeian refuge
+QUIRINAL | Hill of today's presidential palace
+ESQUILINE | Largest of the seven hills
+VIMINAL | Smallest of the seven hills
+CAELIAN | Hill south-east of the Colosseum
+COLOSSEUM | Flavian amphitheatre
+CIRCUSMAXIMUS | Rome's chariot-racing stadium
+CATACOMBS | Underground burial passages
+APPIANWAY | Queen of roads, from Rome to Brindisi
+VIA | Roman road
+MILESTONE | Roman roadside marker
+SENATE | Assembly of patricians
+SENATOR | Member of Rome's council
+CONSUL | One of two annual chief magistrates
+PRAETOR | Roman judicial magistrate
+QUAESTOR | Roman treasury official
+AEDILE | Roman official over games and buildings
+TRIBUNE | Magistrate protecting the plebs
+CENSOR | Roman keeper of the citizen rolls
+DICTATOR | Emergency ruler for six months
+PROCONSUL | Governor of a province
+PROVINCE | Conquered territory
+PATRICIAN | Aristocratic Roman
+PLEBEIAN | Common Roman
+EQUITES | Knightly class of Rome
+PLEBS | Common people of Rome
+CLIENT | Roman dependent of a patron
+PATRON | Protector in Roman society
+PATERFAMILIAS | Head of a Roman household
+GENS | Roman clan
+LICTOR | Bodyguard carrying the fasces
+FASCES | Bundle of rods with an axe
+TOGAPRAETEXTA | Purple-bordered garment of magistrates
+STOLA | Roman matron's dress
+TUNIC | Basic garment under a toga
+SANDAL | Roman footwear
+LAUREL | Victor's wreath
+TRIUMPH | General's victory parade
+LEGIONARY | Roman foot soldier
+AUXILIA | Non-citizen Roman troops
+COHORT | Tenth of a legion
+CENTURY | Unit of about eighty soldiers
+MANIPLE | Unit of two centuries
+TESTUDO | Tortoise formation of shields
+GLADIUS | Short Roman sword
+PILUM | Roman javelin
+SCUTUM | Rectangular Roman shield
+AQUILA | Legion's eagle standard
+CASTRA | Roman camp
+PRAETORIAN | ___ Guard, imperial bodyguard
+LIMES | Fortified frontier
+HADRIANSWALL | Barrier across northern Britain
+ANTONINE | Wall north of Hadrian's
+VILLA | Roman country house
+DOMUS | Roman town house
+INSULA | Roman apartment block
+ATRIUM | Central hall of a Roman house
+IMPLUVIUM | Rain basin in an atrium
+PERISTYLE | Colonnaded garden
+TRICLINIUM | Roman dining room
+HYPOCAUST | Roman underfloor heating
+THERMAE | Public baths
+CALDARIUM | Hot room of a bath
+TEPIDARIUM | Warm room of a bath
+FRIGIDARIUM | Cold room of a bath
+STRIGIL | Scraper used at the baths
+LARARIUM | Household shrine
+LARES | Household gods
+PENATES | Gods of the storeroom
+VESTAL | Virgin keeper of the sacred flame
+PONTIFEX | Priest, literally "bridge-builder"
+AUGUR | Priest who read birds
+HARUSPEX | Priest who read entrails
+AUSPICES | Omens from birds
+SIBYL | Prophetess of Cumae
+SIBYLLINE | ___ Books, Rome's prophecies
+SATURNALIA | December festival of role reversal
+LUPERCALIA | February festival near Valentine's
+IDES | 15th of March, fatefully
+KALENDS | First day of a Roman month
+NONES | Ninth day before the Ides
+JULIAN | Calendar Caesar introduced
+DENARIUS | Roman silver coin
+SESTERCE | Roman brass coin
+AUREUS | Roman gold coin
+NUMERALS | I, V, X, L, C, D and M
+MOSAIC | Picture of small tiles
+TESSERA | Small mosaic tile
+FRESCO | Wall painting on wet plaster
+BASILICA | Roman hall of justice
+TRIUMPHALARCH | Titus's monument
+CONCRETE | Romans' building wonder
+DOME | Pantheon's crowning feature
+OCULUS | Pantheon's central opening
+COLUMN | Trajan's monument
+FORUMROMANUM | Rome's central square
+ROSTRA | Speakers' platform in the Forum
+CURIA | Senate house
+JULIUS | Caesar's first name
+CAESAR | Dictator assassinated in 44 BC
+BRUTUS | Conspirator who struck Caesar
+CASSIUS | Lean and hungry conspirator
+POMPEY | Caesar's rival "the Great"
+CRASSUS | Richest man in Rome
+TRIUMVIRATE | Rule of three men
+ANTONY | Lover of Cleopatra
+CLEOPATRA | Last Ptolemaic queen
+OCTAVIAN | Augustus's earlier name
+LIVIA | Augustus's formidable wife
+AGRIPPA | Augustus's general and builder
+TIBERIUS | Emperor who retired to Capri
+CALIGULA | "Little Boots"
+CLAUDIUS | Emperor who invaded Britain
+GALBA | First of four in AD 69
+OTHO | Second of four in AD 69
+VITELLIUS | Third of four in AD 69
+VESPASIAN | Founder of the Flavians
+TITUS | Emperor who finished the Colosseum
+DOMITIAN | Last Flavian emperor
+NERVA | First of the Five Good Emperors
+TRAJAN | Emperor of greatest expansion
+ANTONINUS | ___ Pius, peaceful emperor
+MARCUSAURELIUS | Stoic emperor of the "Meditations"
+COMMODUS | Gladiator emperor
+SEPTIMIUS | ___ Severus, African-born emperor
+CARACALLA | Emperor of grand baths
+ELAGABALUS | Notorious teen emperor
+AURELIAN | Emperor who walled Rome
+DIOCLETIAN | Emperor who split the empire
+TETRARCHY | Rule of four
+CONSTANTINE | First Christian emperor
+CONSTANTINOPLE | New Rome on the Bosporus
+THEODOSIUS | Emperor who made Christianity official
+JUSTINIAN | Emperor of the great law code
+ODOACER | Deposer of the last western emperor
+ALARIC | Visigoth who sacked Rome in 410
+ATTILA | "Scourge of God"
+GOTHS | Germanic invaders
+VANDALS | Sackers of Rome in 455
+HUNS | Attila's people
+GAUL | Land conquered by Caesar
+VERCINGETORIX | Gallic chief who surrendered at Alesia
+BOUDICCA | Iceni queen who revolted
+CARATACUS | British chief taken to Rome
+BRITANNIA | Roman Britain
+HISPANIA | Roman Spain
+GERMANIA | Land beyond the Rhine
+DACIA | Trajan's conquest north of the Danube
+ARMINIUS | Victor of the Teutoburg Forest
+TEUTOBURG | Forest of three lost legions
+CANNAE | Hannibal's greatest victory
+ZAMA | Hannibal's final defeat
+SCIPIO | ___ Africanus
+PUNIC | Wars with Carthage
+CATO | "Carthage must be destroyed" senator
+GRACCHI | Reforming brothers
+MARIUS | Seven-time consul
+SULLA | Dictator of the proscriptions
+CATILINE | Conspirator denounced by Cicero
+LIVY | Historian of Rome from its founding
+TACITUS | Historian of the "Annals"
+SUETONIUS | Biographer of twelve Caesars
+PLUTARCH | Writer of "Parallel Lives"
+POLYBIUS | Greek historian of Rome's rise
+SALLUST | Historian of the Jugurthine War
+PLINY | Elder or Younger
+HORACE | Poet of "carpe diem"
+CATULLUS | Poet of Lesbia
+PROPERTIUS | Elegist of Cynthia
+TIBULLUS | Elegist of Delia
+LUCRETIUS | Poet of "On the Nature of Things"
+JUVENAL | Satirist of "bread and circuses"
+MARTIAL | Writer of witty epigrams
+PLAUTUS | Comic playwright of "Miles Gloriosus"
+TERENCE | African-born comic playwright
+PETRONIUS | "Satyricon" author
+APULEIUS | "The Golden Ass" author
+QUINTILIAN | Teacher of rhetoric
+VITRUVIUS | Architect of "firmness, commodity, delight"
+GALEN | Physician to emperors
+PTOLEMY | Astronomer of Alexandria
+AENEID | Virgil's epic
+AENEAS | Trojan founder of the Roman race
+DIDO | Queen of Carthage who loved Aeneas
+METAMORPHOSES | Ovid's epic of transformations
+GEORGICS | Virgil's farming poem
+ECLOGUES | Virgil's pastoral poems
+ODES | Horace's lyric poems
+SATIRES | Juvenal's works
+MEDITATIONS | Marcus Aurelius's book
+STOIC | Follower of Zeno
+STOICISM | Philosophy of Epictetus
+EPICTETUS | Former slave turned Stoic teacher
+EPICUREAN | Pleasure-seeking philosopher
+EPICURUS | Philosopher of the Garden
+CYNIC | Follower of Diogenes
+DIOGENES | Philosopher in a barrel
+ZENO | Founder of Stoicism
+SOCRATES | Philosopher who drank hemlock
+PLATO | Author of "The Republic"
+ARISTOTLE | Tutor of Alexander
+ACADEMY | Plato's school
+LYCEUM | Aristotle's school
+STOA | Painted porch of philosophers
+HEMLOCK | Socrates's poison
+SOPHIST | Paid teacher of rhetoric
+PYTHAGORAS | Theorem-maker of Samos
+EUCLID | Geometer of the "Elements"
+HIPPOCRATES | Father of medicine
+HERACLITUS | "Everything flows" philosopher
+PARMENIDES | Philosopher of unchanging Being
+DEMOCRITUS | Philosopher of atoms
+THALES | First Greek philosopher
+ANAXIMANDER | Philosopher of the "boundless"
+EMPEDOCLES | Philosopher of four elements
+ERATOSTHENES | Measurer of the Earth's circumference
+ARISTARCHUS | Early proponent of a sun-centred cosmos
+HOMER | Blind bard of epics
+ILIAD | Epic of Achilles's wrath
+ODYSSEY | Epic of a long voyage home
+HESIOD | Poet of "Works and Days"
+SAPPHO | Poetess of Lesbos
+PINDAR | Poet of victory odes
+AESCHYLUS | Tragedian of the Oresteia
+SOPHOCLES | Tragedian of "Oedipus Rex"
+EURIPIDES | Tragedian of "Medea"
+ARISTOPHANES | Comic playwright of "The Clouds"
+MENANDER | New Comedy playwright
+AESOP | Fable-teller
+XENOPHON | Author of the "Anabasis"
+ANABASIS | March of the Ten Thousand
+TRAGEDY | Greek drama of downfall
+COMEDY | Greek drama of laughs
+CHORUS | Singing group in Greek drama
+AMPHITHEATRE | Oval arena
+THEATRE | Epidaurus has a famous one
+SKENE | Stage building in a Greek theatre
+ORCHESTRA | Dancing floor in a Greek theatre
+CATHARSIS | Purging of emotions in tragedy
+HUBRIS | Overweening pride
+NEMESIS | Retribution
+HAMARTIA | Tragic flaw
+ATHENS | City of Pericles
+SPARTA | Militaristic city of Leonidas
+THEBES | City of Oedipus
+CORINTH | City on the isthmus
+DELPHI | Site of Apollo's oracle
+PYTHIA | Priestess at Delphi
+OMPHALOS | Navel stone of the world
+OLYMPICS | Games held every four years
+OLYMPIAD | Four-year Greek period
+MARATHON | Battle of 490 BC
+THERMOPYLAE | Pass of the 300
+SALAMIS | Naval victory over Xerxes
+PLATAEA | Final land victory over Persia
+LEONIDAS | Spartan king of the 300
+XERXES | Persian king who bridged the Hellespont
+DARIUS | Persian king defeated at Marathon
+THEMISTOCLES | Architect of Athenian sea power
+PERICLES | Leader of Athens's golden age
+ASPASIA | Pericles's learned companion
+ALCIBIADES | Brilliant, treacherous Athenian
+PELOPONNESIAN | War between Athens and Sparta
+DELIAN | ___ League, Athens's alliance
+DEMOCRACY | Athenian rule by the people
+OSTRACISM | Exile by pottery-shard vote
+OSTRACON | Pottery shard used as a ballot
+ACROPOLIS | Citadel of Athens
+AGORA | Greek marketplace
+POLIS | Greek city-state
+HOPLITE | Greek heavy infantryman
+TRIREME | Greek warship with three banks of oars
+HELOT | Spartan serf
+ARCHON | Athenian magistrate
+TYRANT | Greek ruler who seized power
+SOLON | Athenian lawgiver
+DRACO | Lawgiver of harsh codes
+CLEISTHENES | Father of Athenian democracy
+PHIDIAS | Sculptor of the Parthenon's Athena
+PRAXITELES | Sculptor of the Aphrodite of Knidos
+MYRON | Sculptor of the Discobolus
+POLYCLITUS | Sculptor of the Doryphoros
+CARYATID | Column shaped like a woman
+ERECHTHEION | Temple of the Caryatids
+DORIC | Plainest Greek column
+IONIC | Scroll-topped Greek column
+CORINTHIAN | Leafy Greek column
+PEDIMENT | Triangular gable
+FRIEZE | Sculpted band on a temple
+METOPE | Panel in a Doric frieze
+KOUROS | Archaic statue of a youth
+KORE | Archaic statue of a maiden
+KRATER | Mixing bowl for wine
+KYLIX | Shallow drinking cup
+LEKYTHOS | Oil flask for funerals
+HYDRIA | Water jar
+SYMPOSIUM | Greek drinking party
+ALEXANDER | Macedonian conqueror
+PHILIP | Alexander's father
+MACEDON | Alexander's kingdom
+BUCEPHALUS | Alexander's horse
+GAUGAMELA | Alexander's victory over Darius III
+GORDIAN | Knot Alexander cut
+HELLENISTIC | Era after Alexander
+ALEXANDRIA | City of the great library
+PHAROS | Lighthouse of Alexandria
+PTOLEMIES | Greek dynasty in Egypt
+SELEUCIDS | Greek dynasty in Asia
+COLOSSUS | Giant statue of Rhodes
+MAUSOLEUM | Tomb at Halicarnassus
+TROY | City of Priam
+MYCENAE | City of Agamemnon
+KNOSSOS | Palace of Minos
+MINOAN | Bronze Age civilisation of Crete
+MYCENAEAN | Bronze Age Greek culture
+SCHLIEMANN | Excavator of Troy
+EVANS | Excavator of Knossos
+ATLANTIS | Plato's lost island
+PERSEPOLIS | Persian ceremonial capital
+BABYLON | City of hanging gardens
+NINEVEH | Assyrian capital
+GILGAMESH | Hero of the oldest epic
+HAMMURABI | Babylonian lawgiver
+PHARAOH | Egyptian king
+PYRAMID | Tomb at Giza
+SPHINX | Lion-bodied guardian at Giza
+MUMMY | Preserved Egyptian body
+PAPYRUS | Egyptian writing reed
+TUTANKHAMUN | Boy king of the famous tomb
+RAMESSES | Pharaoh "the Great"
+AKHENATEN | Pharaoh who worshipped the sun disc
+NEFERTITI | Akhenaten's queen
+HATSHEPSUT | Female pharaoh
+PHOENICIA | Seafaring land of Tyre
+TYRE | Phoenician port Alexander besieged
+ETRURIA | Land of the Etruscans
+SAMNITES | Italian rivals of Rome
+AMO | First word of a Latin conjugation drill
+AMAS | "You love", in Latin
+AMAT | "He loves", in Latin
+ESSE | "To be", in Latin
+SUM | "I am", in Latin
+EST | "Is", in Latin
+AQUA | Water, to Caesar
+IGNIS | Fire, to Caesar
+TERRA | Earth, to Caesar
+LUX | Light, to Cicero
+NOX | Night, to Cicero
+REX | King, in Latin
+REGINA | Queen, in Latin
+DEUS | God, in Latin
+DEA | Goddess, in Latin
+VITA | Life, in Latin
+MORS | Death, in Latin
+AMOR | Love, in Latin
+BELLUM | War, in Latin
+PAX | Peace, in Latin
+URBS | City, in Latin
+LIBER | Book, in Latin
+VERITAS | Harvard's motto word
+LIBERTAS | Freedom, as a Roman goddess
+VIRTUS | Manly excellence, to Romans
+PIETAS | Duty to gods and family
+GRAVITAS | Roman dignity
+DIGNITAS | Roman prestige
+OTIUM | Roman leisure
+NEGOTIUM | Roman business
+CURSUSHONORUM | Roman ladder of offices
+MANUMISSION | Freeing of a slave
+FREEDMAN | Former slave in Rome
+TWELVETABLES | Earliest Roman law code
+CIVITAS | Citizenship
+IMPERIUM | Power to command
+PRINCEPS | "First citizen"
+AUGUSTA | Title of an empress
+NOMEN | Clan name in a Roman's three
+COGNOMEN | Family nickname like Caesar
+PRAENOMEN | Roman first name
+DECLINE | Gibbon's "___ and Fall"
+GIBBON | Historian of Rome's decline
+BYZANTIUM | Greek city that became Constantinople
+HAGIASOPHIA | Justinian's great church
+RAVENNA | Last capital of the western empire
+HERCULANEUM | Town buried with Pompeii
+OSTIA | Port of ancient Rome
