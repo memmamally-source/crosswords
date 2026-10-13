@@ -85,6 +85,13 @@
           <div class="board" id="board" role="grid" aria-label="Crossword grid"></div>
         </div>
         <div class="progress"><div class="progress-fill" id="progress-fill"></div></div>
+        <div class="done-bar" id="done-bar" hidden>
+          <span id="done-text">Puzzle complete</span>
+          <div class="done-actions">
+            <button class="btn primary" data-action="new">Play another</button>
+            <button class="btn" data-action="home">Back to genres</button>
+          </div>
+        </div>
         <div class="keyboard" id="keyboard" aria-label="On-screen keyboard"></div>
       </div>
       <aside class="clues">
@@ -101,13 +108,15 @@
   </main>
 
   <dialog id="win-dialog">
+    <button class="dialog-close" data-action="close-dialog" aria-label="Close and view the grid">✕</button>
     <div class="win">
       <div class="win-icon" id="win-icon">🎉</div>
       <h2 id="win-title">Solved!</h2>
       <p id="win-text"></p>
       <div class="win-actions">
         <button class="btn primary" data-action="new">Play another</button>
-        <button class="btn" data-action="home">Choose genre</button>
+        <button class="btn" data-action="home">Back to genres</button>
+        <button class="btn ghost" data-action="close-dialog">View the grid</button>
       </div>
     </div>
   </dialog>

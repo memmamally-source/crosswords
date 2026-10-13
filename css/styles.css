@@ -414,6 +414,36 @@ dialog {
   width: 100%;
 }
 dialog::backdrop { background: rgba(15, 20, 30, 0.55); }
+.dialog-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+.dialog-close:hover, .dialog-close:focus-visible { background: var(--bg); color: var(--ink); }
+
+.done-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+  max-width: 560px;
+  margin: 14px auto 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  font-weight: 600;
+}
+.done-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .win { text-align: center; padding: 32px 24px 24px; }
 .win-icon { font-size: 3rem; }
 .win h2 { font-family: Fraunces, Georgia, serif; margin: 8px 0; font-size: 1.8rem; }

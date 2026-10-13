@@ -97,57 +97,91 @@
     })
   );
 
-  function play(genreId, difficulty, seed) {
-    const s = seed != null ? seed : freshSeed(genreById(genreId), difficulty);
-    navigate(`#/play/${genreId}/${difficulty}/${s}`);
+  function play(genreId, difficulty) {
+    const genre = genreById(genreId);
+    const { seed, pool } = freshPuzzle(genre, difficulty);
+    navigate(`#/play/${genreId}/${difficulty}/${seed}${pool ? '/' + pool : ''}`);
   }
 
   // ---------- Word rotation ----------
-  // Remember which answers a player has seen per genre, and when starting a
-  // new puzzle try a few seeds to find the layout with the fewest repeats.
-  // The puzzle is still fully determined by its seed, so links stay shareable.
+  // Each new puzzle is built only from words the player hasn't seen in this
+  // genre yet. Once the bank runs low a new cycle starts, which still leaves
+  // out the puzzle just played. The chosen word pool is written into the URL
+  // (as indices into the bank), so a puzzle link always rebuilds the same grid.
   let pregenerated = null;
 
-  function generateFor(genre, difficulty, seed) {
-    const key = `${genre.id}/${difficulty}/${seed}`;
+  const encodePool = (indices) => indices.slice().sort((a, b) => a - b).map((i) => i.toString(36)).join('.');
+  function decodePool(genre, code) {
+    if (!code) return null;
+    const words = code.split('.').map((x) => genre.words[parseInt(x, 36)]).filter(Boolean);
+    return words.length ? words : null;
+  }
+
+  function generateFor(genre, difficulty, seed, pool) {
+    const key = `${genre.id}/${difficulty}/${seed}/${pool || ''}`;
     if (pregenerated && pregenerated.key === key) return pregenerated.puzzle;
     const cfg = DIFFICULTIES[difficulty];
-    const puzzle = CrosswordGenerator.generate(genre.words, { count: cfg.count, maxSize: cfg.maxSize, seed });
+    const bank = decodePool(genre, pool) || genre.words;
+    const puzzle = CrosswordGenerator.generate(bank, { count: cfg.count, maxSize: cfg.maxSize, seed });
     pregenerated = { key, puzzle };
     return puzzle;
   }
 
-  function freshSeed(genre, difficulty) {
-    const recent = new Set((store.recent && store.recent[genre.id]) || []);
-    // Big mixed banks rarely repeat anyway, and each try costs more there.
-    const tries = !recent.size ? 1 : genre.words.length > 100 ? 2 : 10;
-    let best = null;
-    for (let i = 0; i < tries; i++) {
-      const seed = Math.floor(Math.random() * 1e9);
-      const puzzle = generateFor(genre, difficulty, seed);
-      const repeats = puzzle.words.filter((w) => recent.has(w.answer)).length;
-      if (!best || repeats < best.repeats) best = { seed, repeats, puzzle };
-      if (repeats === 0) break;
+  function sample(list, n) {
+    const a = list.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
     }
-    pregenerated = { key: `${genre.id}/${difficulty}/${best.seed}`, puzzle: best.puzzle };
-    return best.seed;
+    return a.slice(0, n);
   }
 
-  function rememberWords(genre, difficulty, puzzle) {
-    store.recent = store.recent || {};
-    const keep = Math.min(300, Math.max(0, genre.words.length - DIFFICULTIES[difficulty].count));
+  function freshPuzzle(genre, difficulty) {
+    const cfg = DIFFICULTIES[difficulty];
+    store.seen = store.seen || {};
+    store.lastWords = store.lastWords || {};
+    const all = genre.words.map((_, i) => i);
+    let seen = new Set(store.seen[genre.id] || []);
+    let unseen = all.filter((i) => !seen.has(genre.words[i].answer));
+    if (unseen.length < cfg.count + 6) {
+      // Bank used up: start a new cycle, still skipping the last puzzle.
+      seen = new Set(store.lastWords[genre.id] || []);
+      store.seen[genre.id] = [...seen];
+      saveStore();
+      unseen = all.filter((i) => !seen.has(genre.words[i].answer));
+    }
+    let pool = sample(unseen, 80);
+    const spare = sample(all.filter((i) => !pool.includes(i)), all.length);
+    let best = null;
+    for (let attempt = 0; attempt < 8; attempt++) {
+      const seed = Math.floor(Math.random() * 1e9);
+      const code = encodePool(pool);
+      const puzzle = generateFor(genre, difficulty, seed, code);
+      if (!best || puzzle.words.length > best.puzzle.words.length) best = { seed, code, puzzle };
+      if (puzzle.words.length >= cfg.count) break;
+      // Not enough unseen words fit together: let a few seen ones back in.
+      pool = pool.concat(spare.splice(0, 4));
+    }
+    pregenerated = { key: `${genre.id}/${difficulty}/${best.seed}/${best.code}`, puzzle: best.puzzle };
+    return { seed: best.seed, pool: best.code };
+  }
+
+  function rememberWords(genre, puzzle) {
+    store.seen = store.seen || {};
+    store.lastWords = store.lastWords || {};
     const answers = puzzle.words.map((w) => w.answer);
-    const older = (store.recent[genre.id] || []).filter((a) => !answers.includes(a));
-    store.recent[genre.id] = answers.concat(older).slice(0, keep);
+    store.seen[genre.id] = [...new Set((store.seen[genre.id] || []).concat(answers))];
+    store.lastWords[genre.id] = answers;
+    delete store.recent;
     saveStore();
   }
 
   // ---------- Game state ----------
   let game = null;
 
-  function newGame({ genre, difficulty, seed, daily }) {
-    const puzzle = generateFor(genre, difficulty, seed);
-    if (!daily) rememberWords(genre, difficulty, puzzle);
+  function newGame({ genre, difficulty, seed, pool, daily }) {
+    const puzzle = generateFor(genre, difficulty, seed, pool);
+    if (!daily) rememberWords(genre, puzzle);
     const blank = () => Array.from({ length: puzzle.rows }, () => Array(puzzle.cols).fill(''));
     const flags = () => Array.from({ length: puzzle.rows }, () => Array(puzzle.cols).fill(false));
 
@@ -155,7 +189,7 @@
     puzzle.words.forEach((w, i) => w.cells.forEach(([r, c]) => (wordAt[r][c][w.dir] = i)));
 
     game = {
-      genre, difficulty, seed, daily, puzzle, wordAt,
+      genre, difficulty, seed, pool, daily, puzzle, wordAt,
       entries: blank(),
       revealed: flags(),
       wrong: flags(),
@@ -169,7 +203,7 @@
 
     // Resume a saved game if it is this exact puzzle.
     const saved = store.saved;
-    if (saved && saved.genre === genre.id && saved.difficulty === difficulty && saved.seed === seed && !!saved.daily === !!daily) {
+    if (saved && saved.genre === genre.id && saved.difficulty === difficulty && saved.seed === seed && (saved.pool || '') === (pool || '') && !!saved.daily === !!daily) {
       game.entries = saved.entries;
       game.revealed = saved.revealed;
       game.elapsed = saved.elapsed || 0;
@@ -198,6 +232,7 @@
         genre: game.genre.id,
         difficulty: game.difficulty,
         seed: game.seed,
+        pool: game.pool,
         daily: game.daily,
         entries: game.entries,
         revealed: game.revealed,
@@ -349,6 +384,12 @@
     $('#clue-bar-num').textContent = `${word.number}${word.dir === 'across' ? 'A' : 'D'}`;
     $('#clue-bar-text').textContent = word.clue;
     $('#progress-fill').style.width = `${(filled / total) * 100}%`;
+    $('#done-bar').hidden = !game.solved;
+    if (game.solved) {
+      $('#done-text').textContent = game.reveals
+        ? `Finished in ${formatTime(game.elapsed)} · ${game.reveals} letter${game.reveals === 1 ? '' : 's'} revealed`
+        : `Solved in ${formatTime(game.elapsed)}`;
+    }
   }
 
   // ---------- Navigation ----------
@@ -568,8 +609,16 @@
     $('#win-text').textContent = clean
       ? `You completed ${game.genre.name} (${DIFFICULTIES[game.difficulty].label}) in ${formatTime(time)}.${newBest ? ' New personal best!' : ''}`
       : `Completed in ${formatTime(time)} with ${game.reveals} revealed letter${game.reveals === 1 ? '' : 's'}. Solve one without reveals to set a best time.`;
-    setTimeout(() => $('#win-dialog').showModal(), 650);
+    refresh();
+    setTimeout(() => {
+      if (game && game.solved && !$('#game-view').hidden) $('#win-dialog').showModal();
+    }, 650);
   }
+
+  // Clicking the dimmed backdrop also closes the dialog.
+  $('#win-dialog').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) e.currentTarget.close();
+  });
 
   // ---------- Toast ----------
   let toastTimer = null;
@@ -664,6 +713,10 @@
       navigate('#/');
       return;
     }
+    if (action === 'close-dialog') {
+      $('#win-dialog').close();
+      return;
+    }
     if (action === 'daily') {
       navigate('#/daily');
       return;
@@ -745,7 +798,7 @@
       const seed = Number(parts[3]);
       if (genre && Number.isFinite(seed)) {
         showView('game');
-        newGame({ genre, difficulty, seed, daily: false });
+        newGame({ genre, difficulty, seed, pool: parts[4] || null, daily: false });
         return;
       }
     }
