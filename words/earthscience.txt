@@ -39,3 +39,467 @@ ELNINO | Pacific warming that disrupts global weather (2,4)
 DROUGHT | Long period with little rain
 SEISMOGRAPH | Instrument that records ground motion
 OBSIDIAN | Black volcanic glass
+GEOLOGY | Study of the Earth's rocks and history
+GEOLOGIST | Rock scientist
+GEOPHYSICS | Physics of the planet's interior
+SEISMOLOGY | Study of earthquakes
+VOLCANOLOGY | Study of eruptions
+VOLCANO | Vesuvius or Etna
+CALDERA | Collapsed volcanic crater
+CRATER | Bowl at a volcano's summit
+VENT | Opening that releases lava
+FUMAROLE | Steam vent on a volcano
+SOLFATARA | Sulphurous volcanic vent
+STRATOVOLCANO | Steep cone like Fuji
+SHIELD | Broad, gently sloping kind of volcano
+CINDERCONE | Small steep volcano of loose fragments
+PYROCLASTIC | ___ flow, deadly avalanche of hot ash
+ASH | Fine volcanic fallout
+TEPHRA | Fragments ejected by an eruption
+PUMICE | Floating volcanic rock
+SCORIA | Bubbly reddish volcanic rock
+TUFF | Rock formed from compacted volcanic ash
+LAHAR | Volcanic mudflow
+PAHOEHOE | Smooth, ropy lava
+PILLOWLAVA | Rounded lava formed underwater
+HOTSPOT | Plume-fed volcanic area like Hawaii
+PLUME | Upwelling of hot mantle rock
+VESUVIUS | Volcano that buried Pompeii
+ETNA | Sicily's active volcano
+KRAKATOA | Indonesian volcano of 1883's blast
+TAMBORA | 1815 eruption causing a "year without a summer"
+PINATUBO | Philippine volcano of 1991
+STHELENS | Mount of 1980's Washington eruption
+KILAUEA | Hawaiian volcano with Pele's home
+MAUNALOA | World's largest active volcano, in Hawaii
+FUJI | Japan's sacred volcano
+ERUPTION | Volcanic outburst
+DORMANT | Sleeping, as a volcano
+EXTINCT | Never to erupt again
+PLATE | Huge slab of lithosphere
+LITHOSPHERE | Rigid outer shell of Earth
+ASTHENOSPHERE | Weak mantle layer below the plates
+MESOSPHERE | Atmospheric layer where meteors burn
+THERMOSPHERE | Atmospheric layer of the aurora
+EXOSPHERE | Outermost atmospheric layer
+IONOSPHERE | Charged upper layer that reflects radio
+TROPOPAUSE | Boundary above the weather layer
+SUBDUCTION | Plate diving under another
+RIFT | Valley where crust pulls apart
+RIDGE | Mid-ocean spreading zone
+TRENCH | Deep ocean trough like the Mariana
+MARIANA | Trench with Challenger Deep
+SPREADING | Seafloor ___, Hess's hypothesis
+DIVERGENT | Kind of boundary where plates separate
+CONVERGENT | Kind of boundary where plates meet
+TRANSFORM | Kind of boundary where plates slide past
+SANANDREAS | California's famous fault
+WEGENER | Alfred of continental drift
+HUTTON | Scot called the father of modern geology
+LYELL | "Principles of Geology" author Charles
+GONDWANA | Southern supercontinent
+LAURASIA | Northern supercontinent
+RODINIA | Supercontinent before Pangaea
+PANTHALASSA | Ocean surrounding Pangaea
+TETHYS | Ancient sea between continents
+CRATON | Old, stable continental core
+OROGENY | Mountain-building episode
+HIMALAYAS | Range raised by India's collision
+ANDES | Subduction-built South American range
+ALPS | Range of the Matterhorn
+APPALACHIANS | Ancient eroded US range
+URALS | Range dividing Europe and Asia
+FOLD | Bend in rock layers
+ANTICLINE | Arch-shaped fold
+SYNCLINE | Trough-shaped fold
+MONOCLINE | Step-like fold
+HORST | Raised fault block
+GRABEN | Dropped fault block
+THRUST | Low-angle reverse fault
+STRIKESLIP | Fault with horizontal motion
+NORMAL | Kind of fault from extension
+DIP | Angle of a rock layer
+STRIKE | Line of a tilted bed's horizontal
+OUTCROP | Exposed bedrock
+BEDROCK | Solid rock under soil
+STRATUM | Single rock layer
+STRATA | Rock layers
+STRATIGRAPHY | Study of rock layers
+UNCONFORMITY | Gap in the rock record
+SUPERPOSITION | Principle that lower layers are older
+STENO | Nicolaus who set out stratigraphy's laws
+FOSSIL | Preserved trace of ancient life
+TRILOBITE | Index fossil of the Paleozoic
+AMMONITE | Coiled fossil cephalopod
+BELEMNITE | Bullet-shaped fossil
+STROMATOLITE | Layered structure built by microbes
+PETRIFIED | Turned to stone, like some wood
+AMBER | Fossil resin
+COPROLITE | Fossil dung
+PALEONTOLOGY | Study of fossils
+PERIOD | Jurassic or Cretaceous
+EPOCH | Pleistocene or Holocene
+EON | Largest division of geologic time
+ERA | Mesozoic, for one
+PRECAMBRIAN | Time before abundant fossils
+CAMBRIAN | Period of a life "explosion"
+ORDOVICIAN | Period after the Cambrian
+SILURIAN | Period of the first land plants
+DEVONIAN | "Age of Fishes"
+CARBONIFEROUS | Period of coal swamps
+PERMIAN | Period ending in the "Great Dying"
+TRIASSIC | First period of the Mesozoic
+JURASSIC | Period of Stegosaurus
+CRETACEOUS | Period ending with an asteroid
+PALEOGENE | First period of the Cenozoic
+NEOGENE | Period of Miocene and Pliocene
+QUATERNARY | Current geologic period
+PLEISTOCENE | Ice-age epoch
+HOLOCENE | Epoch since the last ice age
+ANTHROPOCENE | Proposed age of human influence
+MESOZOIC | Age of reptiles
+PALEOZOIC | Era of ancient life
+CENOZOIC | Age of mammals
+ARCHEAN | Eon of the earliest crust
+HADEAN | Earth's hellish first eon
+EXTINCTION | Mass dying event
+CHICXULUB | Crater of the dinosaur-killing impact
+IRIDIUM | Element spike at the K–Pg boundary
+DATING | Radiometric ___, for ages
+HALFLIFE | Decay time used in dating
+ISOTOPE | Carbon-14, for one
+URANIUM | Element dated against lead
+RADIOCARBON | Dating method for organic remains
+VARVE | Annual sediment layer in a lake
+QUARTZ | Most common mineral in sandstone
+FELDSPAR | Most abundant mineral group in the crust
+MICA | Mineral that splits into thin sheets
+CALCITE | Mineral that fizzes in acid
+DOLOMITE | Magnesium carbonate rock of Italian peaks
+GYPSUM | Soft mineral used in plaster
+HALITE | Rock salt
+TALC | Softest mineral on Mohs' scale
+CORUNDUM | Mineral of rubies and sapphires
+TOPAZ | Hardness-8 gem
+FLUORITE | Hardness-4 mineral
+APATITE | Hardness-5 mineral
+ORTHOCLASE | Hardness-6 mineral
+MOHS | Scale of mineral hardness
+PYRITE | Fool's gold
+GALENA | Lead ore
+HEMATITE | Red iron ore
+MAGNETITE | Magnetic iron ore
+BAUXITE | Aluminium ore
+CINNABAR | Mercury ore
+MALACHITE | Green copper mineral
+AZURITE | Blue copper mineral
+OLIVINE | Green mantle mineral
+GARNET | January's mineral
+TOURMALINE | Many-coloured gem mineral
+BERYL | Mineral of emerald and aquamarine
+ZIRCON | Mineral that holds Earth's oldest dates
+AMPHIBOLE | Mineral group including hornblende
+PYROXENE | Silicate group in basalt
+SILICATE | Most common mineral class
+CARBONATE | Mineral class including calcite
+LUSTRE | Mineral's shine
+STREAK | Powder colour test for minerals
+CLEAVAGE | Mineral's tendency to split along planes
+CRYSTAL | Ordered mineral solid
+GEODE | Crystal-lined rock cavity
+AGATE | Banded chalcedony
+JASPER | Opaque red quartz
+ONYX | Black-and-white banded stone
+OPAL | Gem with play of colour
+SANDSTONE | Rock of cemented sand grains
+SHALE | Fissile mudrock
+MUDSTONE | Rock of hardened mud
+SILTSTONE | Rock finer than sandstone
+CONGLOMERATE | Rock of rounded pebbles
+BRECCIA | Rock of angular fragments
+CHALK | White Cliffs of Dover rock
+CHERT | Microcrystalline quartz rock
+FLINT | Stone for Stone Age tools
+COAL | Fossil fuel rock
+EVAPORITE | Rock left when seawater dries
+TRAVERTINE | Hot-spring limestone used by the Romans
+MARBLE | Metamorphosed limestone
+SLATE | Roofing rock
+SCHIST | Flaky, mica-rich rock
+GNEISS | Banded high-grade rock
+QUARTZITE | Metamorphosed sandstone
+HORNFELS | Rock baked by contact
+FOLIATION | Layering in metamorphic rock
+GABBRO | Coarse cousin of basalt
+DIORITE | Speckled intrusive rock
+ANDESITE | Volcanic rock named for a range
+RHYOLITE | Silica-rich volcanic rock
+PERIDOTITE | Mantle rock
+KIMBERLITE | Diamond-bearing rock
+PEGMATITE | Very coarse-grained granite
+PLUTON | Large intrusion
+BATHOLITH | Huge mass of intruded rock
+DIKE | Vertical sheet of intruded rock
+SILL | Horizontal sheet of intruded rock
+LACCOLITH | Mushroom-shaped intrusion
+INTRUSIVE | Cooled underground, as rock
+EXTRUSIVE | Cooled at the surface, as rock
+WEATHERING | Breakdown of rock in place
+SEDIMENT | Particles carried by water
+SILT | Fine river sediment
+CLAY | Finest sediment particle
+LOESS | Wind-blown silt deposit
+ALLUVIUM | River-laid deposit
+DELTA | River-mouth landform like the Nile's
+ESTUARY | Tidal river mouth
+MEANDER | River bend
+OXBOW | Lake left by a cut-off bend
+FLOODPLAIN | Flat land beside a river
+LEVEE | Natural or built riverbank ridge
+TRIBUTARY | Stream feeding a larger river
+WATERSHED | Drainage divide or basin
+CANYON | Deep gorge
+GORGE | Narrow steep valley
+MESA | Flat-topped hill
+BUTTE | Small isolated flat-topped hill
+ARROYO | Dry creek bed of the Southwest
+WADI | Dry valley in Arabia
+DUNE | Sand hill
+ERG | Sandy desert sea
+BARCHAN | Crescent-shaped dune
+DEFLATION | Wind removal of loose sediment
+VENTIFACT | Wind-polished stone
+KARST | Limestone landscape of sinkholes
+SINKHOLE | Sudden ground collapse
+CAVERN | Large cave
+SPELEOTHEM | Cave mineral deposit
+SPELEOLOGY | Study of caves
+GLACIER | River of ice
+GLACIATION | Ice age process
+MORAINE | Glacial rubble ridge
+DRUMLIN | Teardrop hill shaped by ice
+ESKER | Winding ridge of glacial gravel
+CIRQUE | Armchair hollow on a mountain
+TARN | Small mountain lake in a cirque
+ARETE | Knife-edge ridge between cirques
+FJORD | Drowned glacial valley
+CREVASSE | Deep crack in ice
+SERAC | Ice tower on a glacier
+ICEBERG | Floating ice chunk
+ICECAP | Dome of glacier ice
+ICESHEET | Antarctic or Greenland mass
+TILL | Unsorted glacial deposit
+ERRATIC | Boulder carried far by ice
+KETTLE | Pond left by melting ice
+COAST | Shoreline
+BEACH | Sandy shore
+SPIT | Sand ridge jutting into the sea
+TOMBOLO | Bar linking an island to land
+LAGOON | Shallow water behind a reef
+ATOLL | Ring-shaped coral island
+REEF | Coral ridge
+STACK | Isolated sea rock pillar
+ARCH | Natural rock bridge
+CLIFF | Steep rock face
+LONGSHORE | ___ drift, sand moving along a beach
+TIDE | Moon-driven sea rise
+TIDAL | Like some bores
+CURRENT | Ocean river
+GULFSTREAM | Warm Atlantic current
+UPWELLING | Rise of cold nutrient-rich water
+THERMOHALINE | Circulation driven by heat and salt
+SALINITY | Saltiness of seawater
+OCEANOGRAPHY | Study of the seas
+ABYSSAL | Of the deep ocean plain
+CONTINENTAL | ___ shelf, shallow sea margin
+SHELF | Shallow margin of a continent
+SEAMOUNT | Underwater mountain
+GUYOT | Flat-topped seamount
+BATHYMETRY | Measuring ocean depths
+SONAR | Echo-ranging used to map seabeds
+BLACKSMOKER | Hydrothermal vent belching minerals
+HYDROTHERMAL | Hot-water, geologically
+METEOROLOGY | Science of weather
+METEOROLOGIST | Forecaster
+FORECAST | Weather prediction
+CLIMATE | Long-term weather pattern
+CLIMATOLOGY | Study of climate
+WEATHER | Day-to-day atmospheric conditions
+ATMOSPHERE | Earth's envelope of gases
+NITROGEN | Main gas in air
+OXYGEN | Second most common gas in air
+ARGON | Third most common gas in air
+CARBONDIOXIDE | Main greenhouse gas
+METHANE | Potent greenhouse gas
+GREENHOUSE | Effect trapping heat
+ALBEDO | Reflectivity of a surface
+INSOLATION | Incoming solar radiation
+FRONT | Boundary between air masses
+COLDFRONT | Boundary bringing sharp showers
+WARMFRONT | Boundary bringing steady rain
+OCCLUDED | Kind of front where cold overtakes warm
+AIRMASS | Large body of uniform air
+ANTICYCLONE | High-pressure system
+CYCLONE | Low-pressure system
+DEPRESSION | Low, to a forecaster
+TYPHOON | Pacific tropical cyclone
+MONSOON | Seasonal wind and rains of South Asia
+TRADEWINDS | Steady tropical easterlies
+WESTERLIES | Mid-latitude prevailing winds
+DOLDRUMS | Calm equatorial belt
+HORSE | ___ latitudes, calm subtropical belt
+CORIOLIS | Effect deflecting winds
+CHINOOK | Warm dry wind off the Rockies
+FOEHN | Warm Alpine downslope wind
+MISTRAL | Cold wind of the Rhône valley
+SIROCCO | Hot wind from the Sahara
+HARMATTAN | Dusty West African trade wind
+SANTAANA | Hot wind of southern California
+BORA | Cold Adriatic wind
+SQUALL | Sudden violent gust
+GALE | Strong wind
+BREEZE | Gentle wind
+GUST | Brief burst of wind
+BEAUFORT | Wind-force scale
+ANEMOMETER | Wind-speed gauge
+HYGROMETER | Humidity gauge
+THERMOMETER | Temperature gauge
+RAINGAUGE | Precipitation gauge
+RADIOSONDE | Balloon-borne weather probe
+DOPPLER | Radar that tracks storm rotation
+ISOBAR | Line of equal pressure
+ISOTHERM | Line of equal temperature
+MILLIBAR | Pressure unit on weather maps
+DEWPOINT | Temperature at which air saturates
+CONDENSATION | Vapour turning to liquid
+EVAPORATION | Liquid turning to vapour
+PRECIPITATION | Rain, snow or hail
+HAIL | Icy balls from thunderstorms
+SLEET | Rain mixed with ice
+SNOW | Winter flakes
+DRIZZLE | Light fine rain
+FOG | Cloud at ground level
+MIST | Thin fog
+SMOG | Polluted fog
+HAZE | Dusty murk
+DEW | Morning droplets
+FROST | Icy coating on grass
+RIME | Feathery ice from freezing fog
+BLIZZARD | Snowstorm with high winds
+THUNDERSTORM | Storm with lightning
+LIGHTNING | Electric discharge in a storm
+THUNDER | Lightning's boom
+SUPERCELL | Rotating thunderstorm
+MESOCYCLONE | Rotation inside a supercell
+WATERSPOUT | Tornado over water
+DERECHO | Long-lived windstorm
+FUJITA | Tornado scale
+SAFFIRSIMPSON | Hurricane scale
+EYEWALL | Ring of storms around a hurricane's centre
+STORMSURGE | Coastal flooding from a hurricane
+STRATUS | Low grey sheet cloud
+NIMBUS | Rain cloud
+CUMULONIMBUS | Towering thunderhead
+ALTOSTRATUS | Mid-level grey sheet cloud
+ALTOCUMULUS | Mid-level puffy cloud
+CIRROSTRATUS | High veil cloud causing halos
+CIRROCUMULUS | Mackerel sky cloud
+ANVIL | Flat top of a thunderhead
+CONTRAIL | Jet's vapour trail
+RAINBOW | Arc of refracted sunlight
+HALO | Ring around the sun or moon
+AURORA | Polar light show
+INVERSION | Warm layer trapping cold air
+LANINA | Cool counterpart of El Niño
+ENSO | Pacific oscillation, briefly
+KOPPEN | Climate classification system
+TUNDRA | Treeless Arctic biome
+TAIGA | Boreal forest
+SAVANNA | Tropical grassland
+STEPPE | Semi-arid grassland
+DESERT | Very dry region
+RAINFOREST | Wet tropical forest
+BIOME | Major ecological community
+ICEAGE | Glacial period
+MILANKOVITCH | Orbital cycles behind ice ages
+PALEOCLIMATE | Climate of the distant past
+ICECORE | Cylinder drilled from a glacier for climate records
+WARMING | Global ___
+HYDROLOGY | Study of water movement
+WATERCYCLE | Evaporation-to-rain loop
+GROUNDWATER | Water beneath the surface
+WATERTABLE | Top of the saturated zone
+SPRING | Natural water outflow
+ARTESIAN | Well flowing under its own pressure
+RUNOFF | Water flowing over land
+INFILTRATION | Water soaking into soil
+TRANSPIRATION | Water loss through leaves
+PERMEABILITY | Ability to let water pass
+POROSITY | Fraction of rock that is pore space
+SOIL | Weathered surface layer
+HUMUS | Organic soil matter
+TOPSOIL | Fertile upper layer
+SUBSOIL | Layer below the topsoil
+HORIZON | Soil layer
+PEDOLOGY | Study of soils
+LOAM | Balanced garden soil
+PEAT | Partly decayed plant matter
+LATERITE | Iron-rich tropical soil
+LANDSLIDE | Slope failure
+AVALANCHE | Snow slide
+MUDSLIDE | Flow of wet earth
+CREEP | Slow downhill movement of soil
+ROCKFALL | Tumble of boulders
+SCREE | Loose rock at a cliff's base
+TALUS | Scree slope
+SEISMIC | Relating to earthquakes
+FOCUS | Underground origin of a quake
+HYPOCENTER | Underground origin of a quake (US spelling)
+MAGNITUDE | Quake size
+AFTERSHOCK | Smaller quake following a big one
+FORESHOCK | Smaller quake preceding a big one
+PWAVE | Primary seismic wave
+SWAVE | Secondary seismic wave
+LOVE | Wave named for a British mathematician
+RAYLEIGH | Rolling surface seismic wave
+MOHO | Crust-mantle boundary, briefly
+MOHOROVICIC | Croatian who found the crust's base
+LEHMANN | Danish discoverer of the inner core
+GUTENBERG | Boundary at the core-mantle edge
+OUTERCORE | Liquid layer making the magnetic field
+INNERCORE | Solid iron ball at Earth's centre
+GEODYNAMO | Process generating Earth's magnetic field
+MAGNETOSPHERE | Earth's magnetic shield
+PALEOMAGNETISM | Record of ancient magnetic fields
+REVERSAL | Flip of magnetic poles
+GEOID | Shape of mean sea level
+GEODESY | Science of Earth's shape
+GRAVIMETER | Gravity-measuring device
+ISOSTASY | Floating balance of crust on mantle
+REBOUND | Land rise after glaciers melt
+LANDFORM | Natural feature like a hill
+PLATEAU | High flat land
+VALLEY | Low land between hills
+PLAIN | Broad flat land
+DRAINAGE | ___ basin
+ORE | Rock mined for metal
+LODE | Vein of ore
+VEIN | Mineral-filled crack
+PLACER | Deposit of gold in gravel
+MINING | Extraction of minerals
+QUARRY | Open stone pit
+PETROLEUM | Crude oil
+NATURALGAS | Methane fuel from underground
+SHALEGAS | Fuel extracted by fracking
+FRACKING | Hydraulic fracturing
+RESERVOIR | Rock holding oil
+GEOTHERMAL | Energy from Earth's heat
+LIGNITE | Brown coal
+ANTHRACITE | Hardest coal
+BITUMEN | Tar-like petroleum
+HYDROCARBON | Oil's chemical class
+PETROLOGY | Study of rocks
+MINERALOGY | Study of minerals
+GEMOLOGY | Study of gemstones
+CRYSTALLOGRAPHY | Study of crystal structure
+GEOCHEMISTRY | Chemistry of rocks
