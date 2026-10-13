@@ -39,3 +39,461 @@ APOSTLE | One of Jesus' twelve disciples
 CONFUCIANISM | Chinese ethical system rooted in the Analects
 PAGODA | Tiered tower of an East Asian temple
 SUTRA | Buddhist or Hindu scripture of aphorisms
+RELIGION | System of faith and worship
+FAITH | Strong belief in God or doctrine
+BELIEF | Acceptance that something is true
+WORSHIP | Reverence shown to a deity
+PRAYER | Address to God or a deity
+DEVOTION | Religious dedication
+PIETY | Religious devoutness
+SPIRITUALITY | Concern with the spirit
+SACRED | Holy
+HOLY | Dedicated to God
+DIVINE | Of God
+GOD | Supreme being
+GODDESS | Female deity
+ALMIGHTY | All-powerful, of God
+CREATOR | Maker of the universe
+TRINITY | Father, Son and Holy Spirit
+MESSIAH | Promised deliverer
+PROPHET | Messenger of God
+SAINT | Holy person
+ANGEL | Messenger of God
+ARCHANGEL | Chief angel such as Gabriel
+DEVIL | Chief evil spirit
+SATAN | The Devil in Abrahamic faiths
+DEMON | Evil spirit
+HEAVEN | Abode of God and the blessed
+HELL | Place of punishment after death
+PARADISE | Heavenly realm
+PURGATORY | State of purification after death
+LIMBO | Border region of the afterlife
+AFTERLIFE | Existence after death
+SALVATION | Deliverance from sin
+REDEMPTION | Being saved from sin
+GRACE | Unearned divine favour
+SIN | Transgression against divine law
+REPENTANCE | Sincere regret for sin
+CONFESSION | Admission of sins
+PENANCE | Act showing repentance
+ABSOLUTION | Forgiveness of sins
+MIRACLE | Event attributed to divine power
+REVELATION | Disclosure of divine truth
+PROPHECY | Divinely inspired prediction
+APOCALYPSE | End of the world
+ARMAGEDDON | Final battle of good and evil
+RESURRECTION | Rising from the dead
+INCARNATION | God made flesh
+JESUS | Central figure of Christianity
+CHRIST | Title meaning "anointed one"
+MARY | Mother of Jesus
+JOSEPH | Husband of Mary
+PETER | Apostle and first pope
+PAUL | Apostle who wrote many epistles
+JOHN | Apostle and Gospel writer
+MATTHEW | Gospel writer and tax collector
+MARK | Shortest Gospel
+LUKE | Gospel writer and physician
+JUDAS | Apostle who betrayed Jesus
+THOMAS | Doubting apostle
+ANDREW | Apostle and patron saint of Scotland
+BAPTIST | John the ___
+MOSES | Prophet who received the Ten Commandments
+ABRAHAM | Patriarch of three faiths
+ISAAC | Son of Abraham
+JACOB | Patriarch renamed Israel
+NOAH | Builder of the ark
+ADAM | First man
+SOLOMON | Wise king of Israel
+ELIJAH | Prophet taken up in a whirlwind
+ISAIAH | Major Hebrew prophet
+JONAH | Prophet swallowed by a great fish
+DANIEL | Prophet in the lions' den
+RUTH | Moabite woman of a biblical book
+ESTHER | Queen who saved her people
+MUHAMMAD | Prophet of Islam
+FATIMA | Daughter of the Prophet Muhammad
+KHADIJA | First wife of the Prophet Muhammad
+BUDDHA | The Enlightened One
+SIDDHARTHA | Birth name of the Buddha
+BODHISATTVA | One who delays nirvana to help others
+DALAILAMA | Spiritual leader of Tibetan Buddhism (5,4)
+CONFUCIUS | Chinese sage
+LAOZI | Founder of Taoism
+ZOROASTER | Founder of Zoroastrianism
+MAHAVIRA | Great teacher of Jainism
+BAHAULLAH | Founder of the Bahá'í Faith
+BAHAI | Faith founded in 19th-century Persia
+SCRIPTURE | Sacred writings
+GOSPEL | Account of Jesus's life
+TESTAMENT | Division of the Bible
+PENTATEUCH | First five books of the Bible
+PSALMS | Book of sacred songs
+PROVERBS | Book of wise sayings
+EPISTLE | Letter in the New Testament
+ACTS | Book of the apostles' deeds
+TALMUD | Body of Jewish law and commentary
+MISHNAH | Written collection of Jewish oral law
+KABBALAH | Jewish mystical tradition
+HADITH | Sayings of the Prophet Muhammad
+SUNNAH | Practice of the Prophet
+SURAH | Chapter of the Quran
+AYAH | Verse of the Quran
+GITA | Bhagavad ___, Hindu scripture
+PURANAS | Hindu texts of myth and history
+TRIPITAKA | Buddhist canon
+CATECHISM | Summary of doctrine
+CREED | Statement of belief
+DOCTRINE | Set of beliefs
+DOGMA | Authoritative teaching
+CHURCH | Christian place of worship
+CHAPEL | Small place of worship
+BASILICA | Large important church
+ABBEY | Monastery or convent church
+CONVENT | Community of nuns
+PRIORY | Small monastery
+SHRINE | Holy place
+TEMPLE | House of worship
+GURDWARA | Sikh place of worship
+STUPA | Dome-shaped Buddhist shrine
+MANDIR | Hindu temple
+ALTAR | Table for offerings or communion
+PULPIT | Raised stand for preaching
+LECTERN | Reading stand
+PEW | Church bench
+FONT | Basin for baptism
+VESTRY | Room for vestments
+STEEPLE | Church tower
+BELFRY | Bell tower
+MIHRAB | Prayer niche in a mosque
+MINBAR | Pulpit in a mosque
+ARK | Cabinet holding Torah scrolls
+KAABA | Cube-shaped shrine in Mecca
+MECCA | Holiest city of Islam
+MEDINA | City of the Prophet's mosque
+VARANASI | Holy city on the Ganges
+BODHGAYA | Site of the Buddha's enlightenment (4,4)
+LUMBINI | Birthplace of the Buddha
+AMRITSAR | City of the Golden Temple
+LOURDES | French site of pilgrimage and healing
+SANTIAGO | ___ de Compostela, pilgrimage destination
+CANTERBURY | Seat of the Archbishop
+ROME | Seat of the Catholic Church
+CLERGY | Ordained religious leaders
+PRIEST | Ordained minister
+VICAR | Parish priest
+PASTOR | Minister of a congregation
+MINISTER | Protestant clergy member
+REVEREND | Title of a clergy member
+CHAPLAIN | Clergy of an institution
+DEACON | Assistant minister
+BISHOP | Senior member of clergy
+ARCHBISHOP | Chief bishop
+CARDINAL | Senior Catholic churchman
+FRIAR | Member of a mendicant order
+ABBOT | Head of an abbey
+ABBESS | Head of a convent
+MULLAH | Muslim religious scholar
+MUFTI | Expert in Islamic law
+AYATOLLAH | Senior Shia cleric
+CANTOR | Leader of synagogue singing
+GRANTHI | Reader of the Sikh scripture
+SWAMI | Hindu religious teacher
+YOGI | Practitioner of yoga
+SADHU | Hindu holy man
+BRAHMIN | Hindu priestly caste
+MONASTIC | Relating to monks
+HERMIT | Person living in solitude
+ASCETIC | Person practising self-denial
+MYSTIC | Seeker of union with the divine
+SUFI | Muslim mystic
+DERVISH | Sufi known for whirling
+MISSIONARY | Person spreading a religion
+CONVERT | Person who changes religion
+DISCIPLE | Follower of a teacher
+PILGRIM | Traveller to a holy place
+CONGREGATION | Members of a church
+PARISH | Local church district
+DIOCESE | District of a bishop
+DENOMINATION | Branch of a religion
+SECT | Small religious group
+CULT | Small devoted religious group
+ORTHODOX | Eastern Christian church
+CATHOLIC | Church headed by the pope
+PROTESTANT | Christian outside Catholic and Orthodox churches
+ANGLICAN | Of the Church of England
+LUTHERAN | Of Martin Luther's church
+METHODIST | Of John Wesley's church
+PRESBYTERIAN | Church governed by elders
+QUAKER | Member of the Society of Friends
+AMISH | Plain-living Anabaptist group
+MORMON | Member of the Church of Jesus Christ of Latter-day Saints
+EVANGELICAL | Emphasising conversion and scripture
+PENTECOSTAL | Emphasising the Holy Spirit
+SUNNI | Largest branch of Islam
+SHIA | Second-largest branch of Islam
+SHIITE | Member of the Shia branch
+HASIDIC | Ultra-Orthodox Jewish movement
+THERAVADA | Older school of Buddhism
+MAHAYANA | Great Vehicle school of Buddhism
+ZEN | Meditative school of Buddhism
+VAJRAYANA | Tibetan Buddhism
+VEDANTA | School of Hindu philosophy
+YOGA | Spiritual and physical discipline
+SACRAMENT | Sacred Christian rite
+BAPTISM | Rite of initiation with water
+CONFIRMATION | Rite affirming faith
+COMMUNION | Sharing of bread and wine
+EUCHARIST | Christian sacrament of thanksgiving
+MASS | Catholic Eucharist service
+LITURGY | Form of public worship
+SERVICE | Religious ceremony
+SERMON | Religious talk
+HOMILY | Short sermon
+BLESSING | Invocation of divine favour
+BENEDICTION | Blessing at the end of a service
+INVOCATION | Calling on God
+ORISON | A prayer
+LITANY | Series of prayers
+ROSARY | String of beads for prayer
+AMEN | Word ending a prayer
+HALLELUJAH | Exclamation of praise to God
+HOSANNA | Shout of praise
+VESPERS | Evening prayer service
+MATINS | Morning prayer service
+COMPLINE | Night prayer service
+ANGELUS | Devotion at the ringing of a bell
+NOVENA | Nine days of prayer
+FAST | Abstain from food for religious reasons
+FEAST | Religious festival with a meal
+TITHE | A tenth given to the church
+ALMS | Charity given to the poor
+OFFERING | Gift to God
+SACRIFICE | Offering to a deity
+OBLATION | Religious offering
+ANOINTING | Applying holy oil
+ORDINATION | Making someone a priest
+CONSECRATION | Making sacred
+CANONISATION | Declaring someone a saint
+BEATIFICATION | Step towards sainthood
+EXORCISM | Driving out evil spirits
+INCENSE | Fragrant smoke used in worship
+CENSER | Vessel for burning incense
+CHALICE | Communion cup
+PATEN | Plate for communion bread
+HOST | Consecrated communion wafer
+WAFER | Thin communion bread
+CRUCIFIX | Cross with the figure of Christ
+CROSS | Symbol of Christianity
+RELIC | Remains of a saint
+STATUE | Image of a holy figure
+CANDLE | Light used in worship
+VESTMENTS | Clergy garments
+CASSOCK | Long clerical garment
+SURPLICE | White liturgical gown
+STOLE | Clergy's scarf
+MITRE | Bishop's tall hat
+CROSIER | Bishop's crook
+HABIT | Garment of a monk or nun
+WIMPLE | Nun's head covering
+YARMULKE | Jewish skullcap
+KIPPAH | Jewish skullcap
+TALLIT | Jewish prayer shawl
+TEFILLIN | Jewish prayer boxes worn on the arm and head
+MEZUZAH | Scroll case on a Jewish doorpost
+HIJAB | Muslim headscarf
+NIQAB | Veil covering the face except the eyes
+TURBAN | Head wrap worn by Sikh men
+KIRPAN | Ceremonial Sikh dagger
+KARA | Steel bracelet worn by Sikhs
+KESH | Uncut hair of the Sikh faith
+BINDI | Dot worn on the forehead
+TILAK | Mark on the forehead in Hinduism
+MALA | String of prayer beads in Hinduism and Buddhism
+CHANT | Repetitive singing of prayers
+PSALMODY | Singing of psalms
+GREGORIAN | ___ chant
+ORGANIST | Church musician
+BELLS | Rung to call worshippers
+MUEZZIN | Caller to Muslim prayer
+ADHAN | Islamic call to prayer
+SALAH | Muslim ritual prayer
+SAWM | Fasting in Islam
+SHAHADA | Muslim declaration of faith
+PILLARS | Five ___ of Islam
+UMMAH | Global Muslim community
+JIHAD | Struggle in the way of God
+HALAL | Permissible in Islam
+HARAM | Forbidden in Islam
+KOSHER | Permitted by Jewish dietary law
+TREYF | Not kosher
+MITZVAH | Commandment or good deed
+SHABBAT | Jewish day of rest
+HEBREW | Language of the Torah
+YIDDISH | Language of Ashkenazi Jews
+ASHKENAZI | Jews of Central and Eastern Europe
+SEPHARDI | Jews of Iberian origin
+COVENANT | Agreement between God and people
+COMMANDMENT | Divine rule
+SINAI | Mountain where Moses received the law
+EXILE | Banishment, as to Babylon
+CANAAN | Promised Land of the Bible
+ZION | Hill of Jerusalem and symbol of the homeland
+GALILEE | Region where Jesus preached
+NAZARETH | Hometown of Jesus
+CALVARY | Hill of the crucifixion
+GOLGOTHA | Place of the skull
+GETHSEMANE | Garden where Jesus prayed before arrest
+CRUCIFIXION | Execution on a cross
+EASTER | Festival of the resurrection
+CHRISTMAS | Festival of Christ's birth
+VAISAKHI | Sikh new year festival
+KARMA | Moral law of cause and effect
+SAMSARA | Cycle of birth and rebirth
+REBIRTH | Being born again
+ENLIGHTENMENT | Awakening to ultimate truth
+MOKSHA | Liberation from rebirth
+ATMAN | Self or soul in Hinduism
+BRAHMAN | Ultimate reality in Hinduism
+PUJA | Hindu act of worship
+AARTI | Hindu ritual of waving lamps
+PRASAD | Food blessed by a deity
+DARSHAN | Seeing a deity or holy person
+GANGES | Sacred river of Hinduism
+CASTE | Hereditary social class in Hinduism
+EIGHTFOLD | ___ Path of Buddhism
+SANGHA | Buddhist community
+DHAMMA | Teaching of the Buddha
+KOAN | Zen riddle
+SATORI | Zen enlightenment
+TULKU | Reincarnated Tibetan teacher
+MANDALA | Symbolic circular diagram
+TAO | The Way
+KAMI | Spirits of Shinto
+TORII | Gateway of a Shinto shrine
+SHAMAN | Intermediary with the spirit world
+ANIMISM | Belief that nature has spirits
+TOTEM | Sacred emblem of a group
+FETISH | Object believed to have magic power
+TABOO | Sacred prohibition
+RITE | Ceremonial act
+CEREMONY | Formal religious occasion
+RETREAT | Period of prayer and reflection
+SABBATICAL | Rest period, originally religious
+FRANCIS | Saint of Assisi who loved animals
+BENEDICT | Founder of Western monasticism
+TERESA | Saint of Ávila or Calcutta
+JOAN | Saint of Orléans
+PATRICK | Patron saint of Ireland
+GEORGE | Patron saint of England
+NICHOLAS | Saint who became Santa Claus
+VALENTINE | Saint of 14 February
+CHRISTOPHER | Patron saint of travellers
+JUDE | Patron saint of lost causes
+MARTYR | Person killed for their faith
+HERETIC | Person holding unorthodox beliefs
+BLASPHEMY | Irreverence towards God
+APOSTASY | Abandonment of religious faith
+INFIDEL | Unbeliever
+HEATHEN | Person of no recognised religion
+POLYTHEISM | Belief in many gods
+ATHEIST | One who denies God's existence
+AGNOSTIC | One unsure if God exists
+SECULAR | Not religious
+SECULARISM | Separation of religion from state
+FUNDAMENTALISM | Strict adherence to basic beliefs
+ECUMENISM | Promotion of Christian unity
+INTERFAITH | Between different religions
+THEOLOGY | Study of God and religion
+THEOLOGIAN | Scholar of theology
+EXEGESIS | Interpretation of scripture
+APOLOGETICS | Defence of religious doctrine
+ESCHATOLOGY | Study of the end times
+SOTERIOLOGY | Doctrine of salvation
+COSMOGONY | Account of the origin of the universe
+CREATION | Making of the world by God
+FLOOD | Great deluge of Noah's time
+MANNA | Food from heaven in the wilderness
+GOLDENCALF | Idol made at Sinai (6,4)
+IDOL | Image worshipped as a god
+IDOLATRY | Worship of idols
+PROPHETESS | Female prophet
+ORACLE | Source of divine messages
+SIBYL | Prophetess of the ancient world
+VESTAL | ___ Virgins, priestesses of Rome
+DRUIDS | Priests of the ancient Celts
+MITHRAISM | Roman mystery cult
+GNOSTICISM | Ancient belief in secret knowledge
+MANICHAEISM | Dualist religion of Mani
+GABRIEL | Archangel of the Annunciation
+MICHAEL | Archangel who fights the dragon
+LUCIFER | Fallen angel
+BEELZEBUB | Prince of demons
+SERAPHIM | Highest order of angels
+CHERUBIM | Winged angelic beings
+ANNUNCIATION | Announcement to Mary of Jesus's birth
+MADONNA | Image of the Virgin Mary
+STATIONS | ___ of the Cross
+PASSION | Suffering of Jesus
+PALM | Branch waved on the Sunday before Easter
+ASHES | Marks on the forehead at the start of Lent
+EPISCOPAL | Relating to bishops
+PAPAL | Relating to the pope
+PONTIFF | The pope
+CONCLAVE | Meeting to elect a pope
+ENCYCLICAL | Papal letter
+BULL | Formal papal decree
+CURIA | Papal administration
+CONFESSIONAL | Booth for confession
+PARISHIONER | Member of a parish
+LAITY | Non-clergy members of a church
+LAYPERSON | Non-ordained believer
+ACOLYTE | Altar server
+VERGER | Church caretaker
+SEXTON | Church officer who rings bells
+CHURCHWARDEN | Lay officer of a parish
+SYNOD | Church council
+COUNCIL | ___ of Nicaea, early church gathering
+NICENE | ___ Creed of the early church
+PURITAN | Strict English Protestant
+CALVINISM | Doctrine of predestination
+PREDESTINATION | Belief that God has chosen the saved
+ANABAPTIST | Radical Reformation movement
+MENNONITE | Peace church from the Anabaptists
+SHAKERS | Celibate communal sect known for furniture
+UNITARIAN | Rejecting the Trinity
+JEHOVAH | Name for God derived from the Hebrew YHWH
+ADVENTIST | Expecting the Second Coming
+COPTIC | Egyptian Christian church
+MARONITE | Lebanese Catholic church
+NESTORIAN | Ancient Church of the East
+PATRIARCH | Head of an Orthodox church
+ICONOSTASIS | Screen of icons in an Orthodox church
+HESYCHASM | Orthodox tradition of silent prayer
+ISMAILI | Branch of Shia Islam led by the Aga Khan
+AHMADIYYA | Islamic revival movement founded in India
+WAHHABISM | Strict reform movement in Islam
+MADRASA | Islamic school
+UMRAH | Lesser pilgrimage to Mecca
+ARAFAT | Plain of the Hajj's standing day
+ZAMZAM | Sacred well in Mecca
+QIBLA | Direction of prayer towards Mecca
+WUDU | Ritual washing before prayer
+TAWHID | Oneness of God in Islam
+ALLAH | God, in Arabic
+INSHALLAH | "God willing"
+BISMILLAH | "In the name of God"
+SHALOM | Hebrew greeting of peace
+MAZELTOV | Jewish congratulations (5,3)
+RABBINIC | Relating to rabbis
+YESHIVA | Jewish religious school
+SEFER | Book, as in ___ Torah
+YAHWEH | Hebrew name of God
+ELOHIM | Hebrew word for God
+ADONAI | Hebrew title meaning "my Lord"
+ABBA | Aramaic word for father, used by Jesus
+PARABLES | Stories Jesus told to teach
+BEATITUDES | Blessings in the Sermon on the Mount
+PRODIGAL | ___ son of a parable
+SAMARITAN | Good ___ of a parable
+LOAVES | Bread multiplied for five thousand
