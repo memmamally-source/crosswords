@@ -45,3 +45,459 @@ HEXAGON | Six-sided polygon
 ABACUS | Ancient counting frame with beads
 STATISTICS | Science of collecting and analysing data
 PROBABILITY | Likelihood of an event, from 0 to 1
+ZERO | Number Indian mathematicians treated as a digit
+ONE | Multiplicative identity
+TWO | Only even prime
+THREE | Number of sides of a triangle
+FOUR | Number of sides of a square
+FIVE | Number of sides of a pentagon
+SIX | Smallest perfect number
+SEVEN | Number of sides of a heptagon
+EIGHT | Number of vertices of a cube
+NINE | Square of three
+TEN | Base of the decimal system
+TWELVE | A dozen
+HUNDRED | Ten squared
+THOUSAND | Ten cubed
+MILLION | Ten to the power of six
+BILLION | Ten to the power of nine
+GOOGOL | Ten to the power of a hundred
+DOZEN | Twelve
+SCORE | Twenty
+GROSS | A dozen dozen
+NUMBER | Quantity expressed with digits
+DIGIT | Single numeral from 0 to 9
+NUMERAL | Symbol for a number
+NATURAL | ___ numbers: 1, 2, 3...
+WHOLE | ___ number, without fractions
+RATIONAL | Expressible as a fraction
+IRRATIONAL | Not expressible as a fraction, like √2
+REAL | ___ numbers, all points on the number line
+IMAGINARY | Number whose square is negative
+COMPLEX | Number with real and imaginary parts
+NEGATIVE | Less than zero
+POSITIVE | Greater than zero
+EVEN | Divisible by two
+ODD | Not divisible by two
+COMPOSITE | Having more than two factors
+PERFECT | Number equal to the sum of its proper divisors
+SQUARE | Number times itself
+CUBE | Number raised to the power three
+ROOT | Value that gives a number when raised to a power
+SQUAREROOT | Number that multiplied by itself gives another (6,4)
+SURD | Irrational root such as √3
+GOLDENRATIO | About 1.618 (6,5)
+INFINITESIMAL | Infinitely small quantity
+DECIMAL | Number system based on ten
+HEXADECIMAL | Base-sixteen number system
+PERCENTAGE | Proportion out of a hundred
+PERCENT | Per hundred
+RATIO | Comparison of two quantities
+PROPORTION | Equality of two ratios
+NUMERATOR | Top number of a fraction
+DENOMINATOR | Bottom number of a fraction
+RECIPROCAL | One divided by a number
+FACTOR | Number that divides exactly
+MULTIPLE | Product of a number and an integer
+DIVISOR | Number that divides another
+DIVIDEND | Number being divided
+REMAINDER | Amount left after division
+MODULO | Operation giving a remainder
+SUM | Result of addition
+DIFFERENCE | Result of subtraction
+ADDITION | Combining numbers
+SUBTRACTION | Taking one number from another
+MULTIPLICATION | Repeated addition
+DIVISION | Splitting into equal parts
+POWER | Exponent
+INDEX | Small raised number showing a power
+ESTIMATE | Approximate calculation
+ROUNDING | Approximating to fewer digits
+SIGNIFICANT | ___ figures, meaningful digits
+STANDARDFORM | Scientific notation (8,4)
+CALCULATOR | Device for arithmetic
+SLIDERULE | Logarithmic calculating device (5,4)
+ARITHMETIC | Basic operations with numbers
+ALGEBRAIC | Using letters for numbers
+EXPRESSION | Combination of terms
+TERM | Part of an expression
+COEFFICIENT | Number multiplying a variable
+CONSTANT | Fixed value
+UNKNOWN | Value to be found, often x
+EQUATION | Statement that two expressions are equal
+INEQUALITY | Statement using < or >
+IDENTITY | Equation true for all values
+QUADRATIC | Equation with a squared term
+CUBIC | Polynomial of degree three
+LINEAR | Equation of a straight line
+SIMULTANEOUS | ___ equations, solved together
+SUBSTITUTION | Replacing a variable with a value
+FACTORISE | Write as a product
+EXPAND | Multiply out brackets
+SIMPLIFY | Reduce to the simplest form
+BRACKET | Symbol that groups terms
+SEQUENCE | Ordered list of numbers
+SERIES | Sum of a sequence
+GEOMETRIC | Sequence with a common ratio
+CONVERGENT | Approaching a limit
+DIVERGENT | Not approaching a limit
+LIMIT | Value approached by a function
+FUNCTION | Rule assigning outputs to inputs
+DOMAIN | Set of inputs
+RANGE | Set of outputs
+INVERSE | Function that undoes another
+GRAPH | Plot of a function
+AXES | X and Y lines
+ORIGIN | Point (0, 0)
+COORDINATE | Number giving a position
+GRADIENT | Slope of a line
+INTERCEPT | Where a graph crosses an axis
+QUADRANT | Quarter of the coordinate plane
+EXPONENTIAL | Growing by a constant factor
+LOGARITHMIC | Relating to logarithms
+TRIGONOMETRY | Study of triangles and angles
+RADIAN | Angle unit based on the radius
+DEGREE | Unit of angle
+ACUTE | Angle less than 90 degrees
+OBTUSE | Angle between 90 and 180 degrees
+REFLEX | Angle greater than 180 degrees
+RIGHTANGLE | Ninety degrees (5,5)
+PERPENDICULAR | At right angles
+PARALLEL | Never meeting
+VERTEX | Corner point
+EDGE | Line where two faces meet
+FACE | Flat surface of a solid
+EQUILATERAL | Triangle with all sides equal
+ISOSCELES | Triangle with two equal sides
+SCALENE | Triangle with no equal sides
+QUADRILATERAL | Four-sided shape
+RECTANGLE | Four right angles, opposite sides equal
+RHOMBUS | Four equal sides, slanted
+TRAPEZIUM | Quadrilateral with one pair of parallel sides
+PARALLELOGRAM | Quadrilateral with two pairs of parallel sides
+KITE | Quadrilateral with two pairs of adjacent equal sides
+PENTAGON | Five-sided polygon
+HEPTAGON | Seven-sided polygon
+OCTAGON | Eight-sided polygon
+NONAGON | Nine-sided polygon
+DECAGON | Ten-sided polygon
+CIRCLE | Set of points equidistant from a centre
+CIRCUMFERENCE | Distance around a circle
+CHORD | Line joining two points on a circle
+ARC | Part of a circle's circumference
+SECTOR | Pie-slice of a circle
+SEGMENT | Region between a chord and an arc
+ELLIPSE | Oval shape
+HYPERBOLA | Two-branched conic section
+CONIC | ___ section, a slice of a cone
+SPHERE | Perfectly round 3D shape
+CYLINDER | Solid with two circular ends
+CONE | Solid tapering to a point
+PYRAMID | Solid with a polygon base and triangular sides
+PRISM | Solid with identical ends
+CUBOID | Box shape
+TETRAHEDRON | Solid with four triangular faces
+OCTAHEDRON | Solid with eight faces
+DODECAHEDRON | Solid with twelve pentagonal faces
+ICOSAHEDRON | Solid with twenty triangular faces
+POLYHEDRON | Solid with flat faces
+PLATONIC | ___ solids, the five regular polyhedra
+TORUS | Doughnut shape
+AREA | Size of a surface
+VOLUME | Space inside a solid
+CONGRUENT | Identical in shape and size
+SIMILAR | Same shape, different size
+SYMMETRICAL | Mirror-balanced
+ROTATION | Turning about a point
+REFLECTION | Mirror image transformation
+TRANSLATION | Sliding transformation
+ENLARGEMENT | Scaling transformation
+TESSELLATION | Tiling without gaps
+BISECTOR | Line that cuts something in half
+MIDPOINT | Point halfway along a segment
+LOCUS | Set of points satisfying a condition
+COMPASSES | Instrument for drawing circles
+PROTRACTOR | Instrument for measuring angles
+INTEGRATION | Finding areas under curves
+STATIONARY | ___ point, where the gradient is zero
+MAXIMUM | Highest value
+MINIMUM | Lowest value
+INFLECTION | Point where curvature changes sign
+DIFFERENTIAL | ___ equation, involving derivatives
+PARTIAL | ___ derivative, with respect to one variable
+CONTINUOUS | Without breaks
+DISCRETE | Taking separate values
+DETERMINANT | Value computed from a square matrix
+EIGENVALUE | Scalar associated with a linear transformation
+TENSOR | Generalisation of vectors and matrices
+SET | Collection of objects
+ELEMENT | Member of a set
+SUBSET | Set contained in another
+UNION | Combination of sets
+INTERSECTION | Elements common to sets
+EMPTYSET | Set with no members (5,3)
+VENN | ___ diagram of overlapping circles
+CARDINALITY | Size of a set
+INFINITE | Without end
+COUNTABLE | Able to be listed one by one
+LOGIC | Study of valid reasoning
+LEMMA | Proposition used to prove a theorem
+COROLLARY | Result following from a theorem
+CONJECTURE | Unproven proposition
+INDUCTION | Proof method using a base case and step
+CONTRADICTION | Proof by showing the opposite is absurd
+MEAN | Average found by adding and dividing
+MODE | Most frequent value
+AVERAGE | Typical value
+DEVIATION | Distance from the mean
+OUTLIER | Value far from the rest
+QUARTILE | Value dividing data into quarters
+PERCENTILE | Value below which a percentage falls
+HISTOGRAM | Bar chart of frequencies
+PIECHART | Circular chart of proportions (3,5)
+SCATTER | ___ graph of paired data
+CORRELATION | Relationship between variables
+REGRESSION | Fitting a line to data
+SAMPLE | Subset of a population
+POPULATION | Entire group studied
+BIAS | Systematic error
+EVENT | Outcome or set of outcomes
+OUTCOME | Result of an experiment
+RANDOM | Without pattern
+ODDS | Ratio of chances
+DISTRIBUTION | Spread of values
+NORMAL | ___ distribution, the bell curve
+BELLCURVE | Shape of a normal distribution (4,5)
+PERMUTATION | Ordered arrangement
+COMBINATION | Unordered selection
+BINOMIAL | Expression with two terms
+PASCALS | ___ triangle of binomial coefficients
+NODE | Point in a network
+NETWORK | Set of connected points
+TOPOLOGICAL | Relating to topology
+KNOT | Closed loop studied in topology
+KLEINBOTTLE | One-sided closed surface (5,6)
+MANIFOLD | Space that looks flat up close
+GROUP | Set with an operation satisfying axioms
+RING | Algebraic structure with two operations
+FIELD | Ring where division works
+CRYPTOGRAPHY | Mathematics of codes
+GAMETHEORY | Study of strategic decisions (4,6)
+CHAOS | ___ theory of sensitive systems
+OPTIMISATION | Finding the best solution
+ARCHIMEDES | Greek who approximated pi with polygons
+FERMAT | Pierre de ___, of a famous last theorem
+DESCARTES | Inventor of coordinate geometry
+NEWTON | Co-inventor of calculus
+LEIBNIZ | Co-inventor of calculus and its notation
+RIEMANN | Mathematician of a famous unsolved hypothesis
+HILBERT | David ___, who posed 23 problems in 1900
+CANTOR | Georg ___, who showed some infinities are bigger
+GALOIS | Évariste ___, who died in a duel at twenty
+ABEL | Norwegian after whom a top maths prize is named
+LAGRANGE | Mathematician of multipliers and points in orbit
+LAPLACE | French mathematician of a transform and celestial mechanics
+FOURIER | Mathematician of series of sines and cosines
+CAUCHY | French pioneer of rigorous analysis
+POINCARE | French mathematician of a famous conjecture
+NOETHER | Emmy ___, pioneer of abstract algebra
+RAMANUJAN | Indian genius of infinite series
+HARDY | G. H. ___, Ramanujan's collaborator
+TURING | Founder of computer science
+NASH | John ___, game theorist of A Beautiful Mind
+ERDOS | Paul ___, prolific wandering mathematician
+CONWAY | John ___, creator of the Game of Life
+TAO | Terence ___, Australian prodigy and Fields medallist
+WILES | Andrew ___, who proved Fermat's Last Theorem
+PERELMAN | Grigori ___, who proved the Poincaré conjecture
+MIRZAKHANI | Maryam ___, first woman to win the Fields Medal
+LOVELACE | Ada ___, writer of the first published algorithm
+BOOLE | George ___, English pioneer of algebraic logic
+BABBAGE | Charles ___, designer of the Analytical Engine
+NAPIER | John ___, inventor of logarithms
+BRAHMAGUPTA | Indian who gave rules for zero
+ARYABHATA | Indian astronomer-mathematician of the fifth century
+KHWARIZMI | Al-___, whose name gave us "algorithm"
+HYPATIA | Alexandrian woman mathematician
+DIOPHANTUS | Father of algebra, of equations in integers
+APOLLONIUS | Greek geometer of conic sections
+ERATOSTHENES | Greek who measured Earth and sieved primes
+MANDELBROT | Benoit ___, father of fractal geometry
+KLEIN | Felix ___, of a one-sided bottle
+MINKOWSKI | Mathematician of four-dimensional spacetime
+BERNOULLI | Swiss family of mathematicians
+LEGENDRE | French number theorist of a symbol
+DEDEKIND | German of cuts that define real numbers
+WEIERSTRASS | Father of modern analysis
+KOLMOGOROV | Founder of modern probability axioms
+MARKOV | Russian of chains of random states
+BAYES | Thomas ___, of a theorem on conditional probability
+PASCAL | Blaise ___, of a triangle of numbers
+LOBACHEVSKY | Russian pioneer of non-Euclidean geometry
+GROTHENDIECK | Revolutionary of algebraic geometry
+FIELDS | ___ Medal, top prize for young mathematicians
+GOLDBACH | ___'s conjecture: every even number is a sum of two primes
+COLLATZ | ___ conjecture: halve or triple-plus-one
+PIGEONHOLE | ___ principle of boxes and objects
+KONIGSBERG | City of a famous bridges problem
+SIEVE | ___ of Eratosthenes, for finding primes
+PYTHAGOREAN | ___ triple, such as 3, 4, 5
+TRIPLE | Set of three, as in 3-4-5
+EUCLIDEAN | Geometry of flat space
+HYPERBOLIC | Geometry of negative curvature
+SPHERICAL | Geometry on a ball
+KOCH | ___ snowflake, a fractal curve
+SIERPINSKI | ___ triangle, a fractal of holes
+JULIA | ___ set, a fractal of complex dynamics
+ATTRACTOR | Set toward which a system evolves
+RECURSION | Definition in terms of itself
+ITERATION | Repeated application of a process
+INVARIANT | Quantity unchanged by a transformation
+ISOMORPHISM | Structure-preserving bijection
+BIJECTION | One-to-one correspondence
+INJECTIVE | One-to-one
+SURJECTIVE | Onto
+HOMOMORPHISM | Structure-preserving map
+ROOTS | Solutions of an equation
+DISCRIMINANT | B squared minus 4AC
+ABSOLUTE | ___ value, distance from zero
+MODULUS | Absolute value
+ARGUMENT | Angle of a complex number
+CONJUGATE | Complex number with the imaginary sign flipped
+AXIOMATIC | Built from axioms
+DEFINITION | Precise meaning of a term
+NOTATION | System of symbols
+SIGMA | Greek letter for summation
+DELTA | Greek letter for change
+EPSILON | Greek letter for a small quantity
+THETA | Greek letter for an angle
+LAMBDA | Greek letter for eigenvalues and wavelengths
+OMEGA | Last Greek letter
+LEMNISCATE | Figure-of-eight curve, the infinity symbol
+CARDIOID | Heart-shaped curve
+CYCLOID | Curve traced by a point on a rolling wheel
+SPIRAL | Curve winding around a point
+HELIX | Three-dimensional spiral
+CATENARY | Curve of a hanging chain
+SINUSOID | Wave-shaped curve
+SECANT | Line cutting a curve at two points
+COSECANT | Reciprocal of sine
+COTANGENT | Reciprocal of tangent
+ARCSINE | Inverse of sine
+OPPOSITE | Side across from an angle
+ADJACENT | Side next to an angle
+SOHCAHTOA | Mnemonic for trigonometric ratios
+BIDMAS | Order of operations acronym, in the UK
+PEMDAS | Order of operations acronym, in the US
+COUNTING | Finding how many
+TALLY | Count kept with marks
+SUMMATION | Adding a series
+CHAINRULE | Rule for differentiating composite functions (5,4)
+INTEGRAND | Function being integrated
+ANTIDERIVATIVE | Function whose derivative is given
+TAYLOR | ___ series, a polynomial approximation
+MACLAURIN | Series expanded about zero
+CONVERGENCE | Approach to a limit
+HARMONIC | ___ series, 1 + 1/2 + 1/3 + ...
+BASE | Number raised to a power
+MANTISSA | Fractional part of a logarithm
+CHARACTERISTIC | Integer part of a logarithm
+SCIENTIFIC | ___ notation, using powers of ten
+ORDERS | ___ of magnitude
+MAGNITUDE | Size of a quantity
+DOTPRODUCT | Scalar product of two vectors (3,7)
+CROSSPRODUCT | Vector product (5,7)
+TRANSPOSE | Matrix flipped over its diagonal
+INVERTIBLE | Having an inverse
+SINGULAR | Matrix with no inverse
+EIGENVECTOR | Vector unchanged in direction by a transformation
+SPAN | All combinations of a set of vectors
+BASIS | Minimal spanning set
+DIMENSION | Number of independent directions
+HYPERCUBE | Four-dimensional cube
+TESSERACT | Four-dimensional cube
+PLANE | Flat two-dimensional surface
+POINT | Location with no size
+LINE | Straight one-dimensional figure
+RAY | Line starting at a point
+POLYGON | Closed shape with straight sides
+REGULAR | Having equal sides and angles
+CONVEX | Bulging outward
+CONCAVE | Curving inward
+INSCRIBED | Drawn inside another shape
+CIRCUMSCRIBED | Drawn around another shape
+CENTROID | Centre of mass of a shape
+INCENTRE | Centre of a triangle's inscribed circle
+ALTITUDE | Height of a triangle
+APOTHEM | Distance from the centre to a side of a regular polygon
+DIAGONAL | Line joining non-adjacent vertices
+NETS | Flat patterns that fold into solids
+MATHEMATICIAN | Person who studies mathematics
+GEOMETER | Specialist in geometry
+STATISTICIAN | Specialist in data analysis
+ACTUARY | Calculator of insurance risk
+QUANT | Mathematical analyst in finance
+NUMERACY | Ability to work with numbers
+CALCULATION | Working out a result
+FORMULAE | General rules expressed in symbols
+SUDOKU | Number-placement puzzle on a nine-by-nine grid
+KAKURO | Cross-sum number puzzle
+KENKEN | Arithmetic grid puzzle
+MAGICSQUARE | Grid whose rows, columns and diagonals have equal sums (5,6)
+TANGRAM | Chinese dissection puzzle of seven pieces
+PLUS | Addition sign
+MINUS | Subtraction sign
+EQUALS | Sign of two lines
+TIMES | Multiplied by
+DIVIDED | ___ by, ÷
+SQUARED | Raised to the power two
+CUBED | Raised to the power three
+HALF | One of two equal parts
+THIRD | One of three equal parts
+QUARTER | One of four equal parts
+DOUBLE | Twice as much
+PLACEVALUE | Value of a digit by its position (5,5)
+UNITS | Ones column
+TENS | Column left of the units
+HUNDREDS | Third column from the right
+ROMAN | ___ numerals such as XIV
+MILE | Imperial unit of 1,760 yards
+YARD | Three feet
+FOOT | Twelve inches
+INCH | Unit of 2.54 centimetres
+METRIC | Decimal system of measurement
+IMPERIAL | Measurement system of feet and pounds
+CENTIMETRE | Hundredth of a metre
+KILOMETRE | Thousand metres
+HECTARE | Ten thousand square metres
+ACRE | Area of 4,840 square yards
+GALLON | Eight pints
+PINT | Imperial measure of liquid
+OUNCE | Sixteenth of a pound
+POUND | Unit of mass of sixteen ounces
+TONNE | Thousand kilograms
+CONVERSION | Changing from one unit to another
+DEPRECIATION | Loss of value over time
+BEARING | Angle measured clockwise from north
+DIAGRAM | Drawing to illustrate a problem
+TABLE | Grid of numbers
+CHART | Visual display of data
+BARCHART | Graph of rectangular bars (3,5)
+FREQUENCY | Number of times a value occurs
+CUMULATIVE | Running total
+INTERQUARTILE | ___ range, middle half of data
+BOXPLOT | Diagram of quartiles (3,4)
+INDEPENDENT | Not affecting each other's probability
+MUTUALLY | ___ exclusive events
+CONDITIONAL | Probability given another event
+TRIANGULAR | ___ numbers: 1, 3, 6, 10...
+FIGURATE | Number that forms a geometric pattern
+PALINDROMIC | Number that reads the same backwards
+AMICABLE | ___ numbers, each the sum of the other's divisors
+MERSENNE | ___ prime, one less than a power of two
+GOOGOLPLEX | Ten to the power of a googol
+INFINITUDE | Quality of being endless
+HEXAGRAM | Six-pointed star
+NUMBERLINE | Line marked with evenly spaced numbers (6,4)
+ESTIMATION | Rough calculation
+APPROXIMATION | Value close to the true one
