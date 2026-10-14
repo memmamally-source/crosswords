@@ -41,6 +41,8 @@
     return s;
   }
   const store = migrate(loadStore());
+  // Phones and tablets, which type with the device keyboard.
+  const touchScreen = window.matchMedia('(pointer: coarse)');
   store.settings = Object.assign({ theme: 'system', skipFilled: true, autocheck: false, showTags: true, showTimer: true }, store.settings);
   function saveStore() {
     try {
@@ -597,6 +599,7 @@
     if (!game || game.solved) return;
     game.paused = paused;
     if (paused) {
+      typeInput.blur();
       stopTimer();
       persist();
     } else {
@@ -649,6 +652,7 @@
             e.preventDefault();
             onCellClick(r, c);
           });
+          el.addEventListener('click', focusTyping);
         }
         board.appendChild(el);
         cellEls[r].push(el);
@@ -668,6 +672,7 @@
         li.addEventListener('click', () => {
           game.sel = { ...firstEmptyCell(i), dir: w.dir };
           refresh();
+          focusTyping();
         });
         list.appendChild(li);
       });
@@ -682,16 +687,20 @@
     const inner = view.clientWidth - 32;
     const wide = window.innerWidth > 900;
     const availW = wide ? Math.min(inner - Math.min(460, inner * 0.4) - 28, 720) : inner;
-    // Fit the grid (and the on-screen keyboard, when shown) in the window.
+    // Fit the grid in the window. On touch screens only the width counts, so
+    // the grid doesn't shrink each time the keyboard opens.
     const top = $('#board-wrap').getBoundingClientRect().top + window.scrollY;
-    const kb = $('#keyboard').offsetHeight ? $('#keyboard').offsetHeight + 24 : 0;
-    const availH = Math.max(wide ? 360 : 240, window.innerHeight - top - kb - 24);
+    const availH = touchScreen.matches ? Infinity : Math.max(wide ? 360 : 240, window.innerHeight - top - 24);
     const cap = game.spec.kind === 'mini' ? 72 : 52;
     // Big grids may run past the window's height rather than shrink below a
     // comfortable size; on narrow phones they scroll sideways if needed.
     const fitH = Math.max(Math.floor(availH / rows), Math.min(28, cap));
-    const size = Math.max(14, Math.min(cap, Math.floor((availW - 4) / cols), fitH));
-    $('#board').style.setProperty('--size', size + 'px');
+    const size = Math.max(14, Math.min(cap, Math.floor((availW - 5) / cols), fitH));
+    const board = $('#board');
+    board.style.setProperty('--size', size + 'px');
+    // Centre on a whole pixel: a half-pixel offset blurs the grid lines.
+    const free = $('#board-wrap').clientWidth - (cols * size + 1);
+    board.style.marginLeft = Math.max(0, Math.floor(free / 2)) + 'px';
   }
   window.addEventListener('resize', sizeBoard);
 
@@ -699,6 +708,7 @@
 
   function refresh() {
     if (!game) return;
+    placeTyping();
     const { puzzle, sel, entries, revealed, wrong, pencil } = game;
     const wi = currentWordIndex();
     const word = puzzle.words[wi];
@@ -1001,6 +1011,7 @@
       stats = `<div><b>${formatTime(store.best[`${spec.genre.id}:${spec.difficulty}`])}</b><span>Best ${esc(DIFFICULTIES[spec.difficulty].label)} time</span></div>`;
     }
     $('#win-stats').innerHTML = stats;
+    typeInput.blur(); // close the device keyboard so the result is visible
     $('#win-actions').innerHTML = nextActions().map((a) => `<button class="btn ${a.primary ? 'btn-primary' : ''}" ${a.attr}>${esc(a.label)}</button>`).join('');
     refresh();
     setTimeout(() => {
@@ -1066,9 +1077,13 @@
     if (e.key === 'Escape') closeMenus();
     if (!game || $('#game-view').hidden || $('#win-dialog').open || $('#stats-dialog').open) return;
     if (e.ctrlKey || e.metaKey || e.altKey) return;
-    if (e.target.matches && e.target.matches('input, textarea')) return;
+    const fromTyping = e.target === typeInput;
+    if (!fromTyping && e.target.matches && e.target.matches('input, textarea')) return;
     if (game.paused) return;
     const k = e.key;
+    // Letters and deletions from the device keyboard arrive as input events.
+    if (fromTyping && (/^[a-z]$/i.test(k) || k === 'Backspace' || k === 'Delete')) return;
+    if (fromTyping && k === 'Enter') { jumpWord(1, false); refresh(); e.preventDefault(); return; }
     if (/^[a-z]$/i.test(k)) typeLetter(k.toUpperCase());
     else if (k === 'Backspace') backspace();
     else if (k === 'Delete') {
@@ -1084,29 +1099,44 @@
     e.preventDefault();
   });
 
-  function buildKeyboard() {
-    const kb = $('#keyboard');
-    for (const row of ['QWERTYUIOP', 'ASDFGHJKL', '⇄ZXCVBNM⌫']) {
-      const div = document.createElement('div');
-      div.className = 'row';
-      for (const ch of row) {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.textContent = ch;
-        if (ch === '⇄') { b.className = 'wide'; b.setAttribute('aria-label', 'Switch direction'); }
-        if (ch === '⌫') { b.className = 'wide'; b.setAttribute('aria-label', 'Backspace'); }
-        b.addEventListener('pointerdown', (e) => {
-          e.preventDefault();
-          if (!game || game.paused) return;
-          if (ch === '⌫') backspace();
-          else if (ch === '⇄') { toggleDir(); refresh(); }
-          else typeLetter(ch);
-        });
-        div.appendChild(b);
-      }
-      kb.appendChild(div);
-    }
+  // Phones and tablets type with their own keyboard through a hidden text box.
+  // It always holds one placeholder character: deleting it means Backspace,
+  // and anything added after it is typed into the grid.
+  const typeInput = $('#type-input');
+  const PLACEHOLDER = '-';
+  let typed = PLACEHOLDER;
+  function resetTyping() {
+    typeInput.value = typed = PLACEHOLDER;
+    try { typeInput.setSelectionRange(1, 1); } catch (e) { /* not focused */ }
   }
+  function focusTyping() {
+    if (!touchScreen.matches || !game || game.solved || game.paused) return;
+    placeTyping();
+    resetTyping();
+    typeInput.focus();
+  }
+  function placeTyping() {
+    if (!game || !cellEls.length) return;
+    const el = cellEls[game.sel.r][game.sel.c];
+    typeInput.style.top = el.offsetTop + 'px';
+    typeInput.style.left = el.offsetLeft + 'px';
+  }
+  typeInput.addEventListener('input', (e) => {
+    const value = typeInput.value;
+    const before = typed;
+    typed = value;
+    if (!game || game.paused || game.solved) return resetTyping();
+    if (value.length < before.length && before.startsWith(value)) {
+      for (let i = value.length; i < before.length; i++) backspace();
+    } else {
+      const added = value.startsWith(before) ? value.slice(before.length) : (e.data || '');
+      if (added === ' ') { toggleDir(); refresh(); }
+      for (const ch of added.toUpperCase().replace(/[^A-Z]/g, '')) typeLetter(ch);
+    }
+    // Word suggestions build text up while composing; reset once they finish.
+    if (!e.isComposing) resetTyping();
+  });
+  typeInput.addEventListener('compositionend', () => setTimeout(resetTyping));
 
   // ---------- Clicks ----------
   function closeMenus(except) {
@@ -1272,6 +1302,7 @@
   });
 
   function showView(name) {
+    if (name !== 'game') typeInput.blur();
     for (const v of ['home', 'archive', 'game']) $(`#${v}-view`).hidden = v !== name;
     document.body.classList.toggle('in-game', name === 'game');
     $$('.masthead-nav button').forEach((b) => b.removeAttribute('aria-current'));
@@ -1319,6 +1350,5 @@
   }
 
   syncSettingsUI();
-  buildKeyboard();
   route();
 })();

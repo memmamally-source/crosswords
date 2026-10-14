@@ -32,8 +32,9 @@ Pages from the repository root).
 ## Solving
 
 - Type to fill. Arrow keys move, Space or Enter switches direction, Tab jumps
-  to the next clue, Backspace erases. Phones and tablets get an on-screen
-  keyboard.
+  to the next clue, Backspace erases. On phones and tablets, tap a square to
+  type with the device's own keyboard; tap the square again to switch
+  direction.
 - **Pencil** enters tentative letters in grey.
 - **Check** and **Reveal** work on a square, a word or the whole puzzle.
   **Clear** removes incorrect squares, a word or everything.

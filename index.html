@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <link rel="stylesheet" href="css/styles.css?v=6" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -163,6 +163,7 @@
           </div>
           <div class="board-wrap" id="board-wrap">
             <div class="board" id="board" role="grid" aria-label="Crossword grid"></div>
+            <input class="type-input" id="type-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" enterkeyhint="next" aria-label="Type letters into the grid" />
             <div class="pause-overlay" id="pause-overlay" hidden>
               <p class="kicker">Paused</p>
               <p class="pause-title">Your puzzle is waiting.</p>
@@ -173,7 +174,6 @@
             <span id="done-text"></span>
             <div class="done-actions" id="done-actions"></div>
           </div>
-          <div class="keyboard" id="keyboard" aria-label="On-screen keyboard"></div>
         </div>
         <aside class="clues" id="clues" aria-label="Clues">
           <section class="clue-list">
@@ -220,9 +220,9 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=5"></script>
-  <script src="js/words.js?v=5"></script>
-  <script src="js/genres.js?v=5"></script>
-  <script src="js/app.js?v=5"></script>
+  <script src="js/generator.js?v=6"></script>
+  <script src="js/words.js?v=6"></script>
+  <script src="js/genres.js?v=6"></script>
+  <script src="js/app.js?v=6"></script>
 </body>
 </html>
