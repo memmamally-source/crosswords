@@ -1,0 +1,496 @@
+# Law & Government — one entry per line: ANSWER | clue
+CONSTITUTION | Fundamental law of a state
+DEMOCRACY | Rule by the people
+MONARCHY | Rule by a king or queen
+OLIGARCHY | Rule by a small elite
+PARLIAMENT | Westminster's law-making body
+SENATE | Upper chamber of the US Congress
+VETO | Power to reject a bill
+FILIBUSTER | Delaying tactic of endless speechmaking
+AMENDMENT | Formal change to a founding document
+SUPREMECOURT | Highest US tribunal (7,5)
+JURY | Citizens sworn to decide a case
+VERDICT | Decision reached at the end of a trial
+PLAINTIFF | Party who brings a civil suit
+DEFENDANT | Person accused in court
+SUBPOENA | Order to appear in court
+AFFIDAVIT | Written statement made under oath
+HABEASCORPUS | Writ against unlawful detention (6,6)
+PRECEDENT | Earlier ruling that guides later cases
+TORT | Civil wrong, such as negligence
+LIBEL | Written defamation
+PERJURY | Lying under oath
+FELONY | Serious crime
+BAIL | Money paid to secure release before trial
+APPEAL | Request for a higher court to review a ruling
+SOVEREIGNTY | Supreme authority over a territory
+REFERENDUM | Direct public vote on a single question
+BALLOT | Paper or device used to cast a vote
+SUFFRAGE | Right to vote
+FEDERALISM | Division of power between national and state governments
+CABINET | Body of senior ministers
+LOBBYIST | Person paid to influence lawmakers
+MAGISTRATE | Judicial officer who hears minor cases
+ACQUITTAL | Formal finding of not guilty
+JUDICIARY | Branch of government made up of the courts
+LEGISLATURE | Law-making assembly
+EXECUTIVE | Branch that carries out the laws
+DIPLOMACY | Conduct of relations between nations
+GERRYMANDER | Redraw districts for partisan advantage
+MONTESQUIEU | French thinker who championed the separation of powers
+EXTRADITION | Handing a suspect over to another country
+LAW | System of rules enforced by a state
+LEGISLATION | Laws made by a legislature
+STATUTE | Written law passed by a legislature
+ACT | Law passed by parliament
+BILL | Draft law
+ORDINANCE | Local regulation
+BYLAW | Rule made by a local authority
+CONSTITUTIONAL | Relating to a constitution
+COMMONLAW | Law developed by judges (6,3)
+JURISPRUDENCE | Philosophy of law
+JURISDICTION | Authority to hear a case
+COURT | Place where justice is administered
+COURTROOM | Room where trials are held
+JUDGE | Official who presides over a trial
+JUSTICE | Fairness, or a senior judge
+JUROR | Member of a jury
+FOREMAN | Spokesperson of a jury
+BARRISTER | Advocate in the higher courts
+SOLICITOR | Lawyer who advises clients
+ATTORNEY | Lawyer, in the US
+LAWYER | Legal professional
+COUNSEL | Legal adviser in court
+ADVOCATE | Lawyer who pleads a case
+PROSECUTOR | Lawyer who brings criminal charges
+PROSECUTION | Side bringing a criminal case
+DEFENCE | Side defending the accused
+CLAIMANT | Person bringing a civil claim
+LITIGANT | Party to a lawsuit
+LITIGATION | Process of taking legal action
+LAWSUIT | Civil case brought to court
+CLAIM | Demand for compensation
+DAMAGES | Money awarded for loss
+SETTLEMENT | Agreement ending a dispute
+INJUNCTION | Court order to do or stop something
+WRIT | Formal order issued by a court
+SUMMONS | Order to appear in court
+WARRANT | Document authorising an arrest or search
+TESTIMONY | Evidence given by a witness
+WITNESS | Person who gives evidence
+EVIDENCE | Material presented to prove a case
+EXHIBIT | Item of evidence
+ALIBI | Claim of being elsewhere
+MOTIVE | Reason for a crime
+OATH | Solemn promise to tell the truth
+AFFIRMATION | Non-religious promise in court
+DEPOSITION | Sworn out-of-court testimony
+OBJECTION | Protest during questioning
+SUSTAINED | Objection upheld
+OVERRULED | Objection rejected
+HEARSAY | Second-hand evidence
+ADMISSIBLE | Allowed as evidence
+TRIAL | Examination of a case in court
+HEARING | Proceeding before a court
+ARRAIGNMENT | Formal reading of charges
+PLEA | Answer to a criminal charge
+GUILTY | Responsible for a crime
+INNOCENT | Not guilty
+ACQUIT | Find not guilty
+CONVICT | Find guilty
+CONVICTION | Formal finding of guilt
+SENTENCE | Punishment decided by a court
+PAROLE | Early release under supervision
+PROBATION | Supervised release instead of prison
+FINE | Money paid as punishment
+PRISON | Place of confinement
+JAIL | Place of detention
+CUSTODY | Being held by the authorities
+DETENTION | Holding in custody
+REMAND | Holding before trial
+PARDON | Official forgiveness of a crime
+AMNESTY | General pardon
+CLEMENCY | Mercy shown in sentencing
+COMMUTE | Reduce a sentence
+EXONERATION | Clearing of blame
+RETRIAL | New trial of a case
+MISTRIAL | Trial declared invalid
+DOUBLEJEOPARDY | Rule against being tried twice (6,8)
+PRESUMPTION | ___ of innocence
+MIRANDA | ___ rights, read on arrest in the US
+MAGNACARTA | Charter of 1215 (5,5)
+HABEAS | ___ corpus, against unlawful detention
+CRIME | Act punishable by law
+MISDEMEANOUR | Minor crime
+OFFENCE | Breach of law
+THEFT | Taking another's property
+LARCENY | Theft of personal property
+BURGLARY | Breaking in to steal
+ROBBERY | Theft with force
+FRAUD | Deception for gain
+EMBEZZLEMENT | Theft of entrusted funds
+BRIBERY | Offering money for influence
+CORRUPTION | Dishonest use of power
+EXTORTION | Obtaining by threats
+BLACKMAIL | Demanding payment by threat
+KIDNAPPING | Taking someone by force
+ASSAULT | Physical attack
+BATTERY | Unlawful physical contact
+HOMICIDE | Killing of a person
+MURDER | Unlawful premeditated killing
+MANSLAUGHTER | Unlawful killing without malice
+ARSON | Deliberately setting fire
+VANDALISM | Deliberate damage to property
+TRESPASS | Unlawful entry onto land
+SLANDER | Spoken defamation
+DEFAMATION | Damaging someone's reputation falsely
+CONSPIRACY | Agreement to commit a crime
+ACCOMPLICE | Partner in a crime
+ACCESSORY | Person who helps a crime
+TREASON | Betrayal of one's country
+SEDITION | Incitement against authority
+ESPIONAGE | Spying
+TRAFFICKING | Illegal trade in people or goods
+CYBERCRIME | Crime using computers
+NEGLIGENCE | Failure to take proper care
+LIABILITY | Legal responsibility
+NUISANCE | Interference with use of land
+CONTRACT | Legally binding agreement
+BREACH | Breaking of a contract or law
+CLAUSE | Section of a contract
+TERMS | Conditions of an agreement
+CONSIDERATION | Something of value exchanged in a contract
+OFFER | Proposal in a contract
+ACCEPTANCE | Agreement to an offer
+VOID | Having no legal effect
+VOIDABLE | Able to be cancelled
+DEED | Signed legal document
+WILL | Document directing property after death
+EXECUTOR | Person carrying out a will
+PROBATE | Legal validation of a will
+ESTATE | Property of a deceased person
+TRUST | Arrangement holding property for others
+TRUSTEE | Person managing a trust
+BENEFICIARY | Person who receives from a will or trust
+INHERITANCE | Property passed on at death
+NOTARY | Official who certifies documents
+LEASE | Contract for renting property
+TENANCY | Occupation under a lease
+EVICTION | Removal of a tenant
+FREEHOLD | Outright ownership of land
+LEASEHOLD | Ownership for a fixed term
+CONVEYANCING | Transfer of property ownership
+EASEMENT | Right over another's land
+DIVORCE | Legal ending of a marriage
+ALIMONY | Support paid to a former spouse
+ADOPTION | Legal taking of a child as one's own
+GUARDIAN | Person legally responsible for another
+MINOR | Person under legal age
+MAJORITY | Age of legal adulthood
+CITIZENSHIP | Status of being a citizen
+NATURALISATION | Becoming a citizen
+ASYLUM | Protection for refugees
+REFUGEE | Person fleeing persecution
+DEPORTATION | Expulsion from a country
+VISA | Permission to enter a country
+PASSPORT | Travel identity document
+GOVERNMENT | System ruling a state
+STATE | Political community
+NATION | People united by a country
+COUNTRY | Nation with its own government
+REPUBLIC | State with an elected head
+DICTATORSHIP | Rule by one with absolute power
+TYRANNY | Cruel and oppressive rule
+AUTOCRACY | Rule by one person
+THEOCRACY | Rule by religious authority
+ARISTOCRACY | Rule by nobility
+PLUTOCRACY | Rule by the wealthy
+MERITOCRACY | Rule by the able
+TECHNOCRACY | Rule by technical experts
+ANARCHY | Absence of government
+TOTALITARIAN | Controlling all aspects of life
+AUTHORITARIAN | Demanding obedience to authority
+LIBERAL | Favouring individual freedom
+CONSERVATIVE | Favouring tradition
+SOCIALIST | Favouring collective ownership
+COMMUNIST | Favouring a classless society
+LIBERTARIAN | Favouring minimal state
+POPULISM | Politics appealing to ordinary people against elites
+NATIONALISM | Devotion to one's nation
+LEFTWING | Progressive politics (4-4)
+RIGHTWING | Conservative politics (5-4)
+CENTRIST | Moderate in politics
+PARTY | Political organisation
+MANIFESTO | Published policy programme
+ELECTION | Choosing representatives by vote
+VOTE | Formal expression of choice
+VOTER | Person who votes
+POLLING | ___ station, where votes are cast
+CAMPAIGN | Organised effort to win an election
+CANDIDATE | Person standing for election
+CONSTITUENCY | Area represented by an MP
+DISTRICT | Electoral area in the US
+COALITION | Alliance of parties
+OPPOSITION | Parties not in government
+LANDSLIDE | Overwhelming election victory
+PRIMARY | Election to choose a party's candidate
+CAUCUS | Meeting of party members
+PROPORTIONAL | ___ representation
+PLEBISCITE | Direct vote on an issue
+FRANCHISE | Right to vote
+TURNOUT | Proportion of people who vote
+INCUMBENT | Current holder of an office
+IMPEACHMENT | Charging an official with misconduct
+RESIGNATION | Voluntary leaving of office
+SUCCESSION | Transfer of power
+INAUGURATION | Ceremony beginning a term
+PRESIDENT | Head of a republic
+PRIMEMINISTER | Head of a parliamentary government (5,8)
+PREMIER | Head of government
+MAYOR | Head of a city
+SPEAKER | Presiding officer of a chamber
+MINISTER | Head of a government department
+SECRETARY | Head of a US department
+SENATOR | Member of a senate
+CONGRESSMAN | Member of the US House
+PEER | Member of the House of Lords
+LORDS | Upper house of the UK Parliament
+COMMONS | Lower house of the UK Parliament
+HOUSE | Chamber of a legislature
+CONGRESS | US legislature
+CHAMBER | Assembly of a legislature
+BICAMERAL | Having two chambers
+UNICAMERAL | Having one chamber
+WHIP | Party enforcer of discipline
+BACKBENCHER | MP without a ministerial post
+FRONTBENCH | Government and opposition leaders
+SHADOW | ___ cabinet, of the opposition
+QUORUM | Minimum members for a valid meeting
+DEBATE | Formal discussion
+MOTION | Formal proposal
+READING | Stage of a bill in parliament
+LOBBY | Group seeking to influence politicians
+LOBBYING | Seeking to influence legislators
+PETITION | Formal written request
+CENSORSHIP | Suppression of speech
+PROPAGANDA | Biased information spread for a cause
+TRANSPARENCY | Openness in government
+ACCOUNTABILITY | Being answerable for actions
+OMBUDSMAN | Official who investigates complaints
+BUREAUCRAT | Government official
+DIPLOMAT | Representative abroad
+AMBASSADOR | Top diplomat in a foreign country
+EMBASSY | Ambassador's official residence
+TREATY | Agreement between nations
+ALLIANCE | Union of nations
+SANCTION | Penalty for breaking rules
+EMBARGO | Ban on trade
+ARMISTICE | Agreement to stop fighting
+CEASEFIRE | Temporary stop to fighting
+PEACEKEEPING | Keeping peace between parties
+INTERPOL | International police organisation
+HAGUE | City of the International Court of Justice
+GENOCIDE | Deliberate destruction of a people
+TRIBUNAL | Court for special cases
+SOVEREIGN | Having supreme power
+FEDERAL | Relating to a central government
+DEVOLUTION | Transfer of power to regions
+COUNCIL | Local governing body
+MUNICIPAL | Relating to a city
+POLICE | Law enforcement body
+CONSTABLE | Police officer
+DETECTIVE | Investigating officer
+SHERIFF | County law officer in the US
+MARSHAL | Federal law officer
+BAILIFF | Court officer
+CORONER | Official who investigates deaths
+FORENSICS | Scientific analysis of evidence
+SUBJUDICE | Under judicial consideration (3,6)
+PROBONO | Done without charge, for the public good (3,4)
+MENSREA | Guilty mind (4,3)
+ACTUSREUS | Guilty act (5,4)
+DEJURE | By law (2,4)
+DEFACTO | In fact, whether lawful or not (2,5)
+ULTRAVIRES | Beyond one's legal power (5,5)
+PRIMAFACIE | At first sight (5,5)
+STAREDECISIS | Principle of following precedent (5,7)
+RESJUDICATA | Matter already decided (3,8)
+ADLITEM | For the purposes of the lawsuit (2,5)
+INCAMERA | In private, of a hearing (2,6)
+AMICUS | ___ curiae, friend of the court
+CERTIORARI | Writ for review by a higher court
+MANDAMUS | Order compelling an official to act
+QUASH | Annul a decision
+OVERTURN | Reverse a ruling
+UPHOLD | Confirm a ruling
+RULING | Decision of a court
+JUDGMENT | Formal decision of a court
+DECREE | Official order
+OPINION | Judge's written reasoning
+DISSENT | Judge's disagreeing opinion
+LANDMARK | ___ case, setting an important precedent
+BROWN | ___ v. Board of Education
+ROE | ___ v. Wade, 1973 ruling
+MARBURY | ___ v. Madison, establishing judicial review
+GIDEON | ___ v. Wainwright, right to counsel
+DONOGHUE | ___ v Stevenson, the snail in the bottle case
+ARBITRATION | Settlement by an independent referee
+MEDIATION | Assisted negotiation of a dispute
+ARBITRATOR | Independent decider of a dispute
+MEDIATOR | Neutral helper in negotiations
+PARALEGAL | Legal assistant
+CLERK | Court administrative officer
+USHER | Court attendant
+STENOGRAPHER | Court reporter
+GAVEL | Judge's hammer
+WIG | Traditional headwear of British barristers
+ROBE | Judge's gown
+BENCH | Judges collectively
+BAR | The profession of courtroom advocates
+DOCK | Enclosure for the defendant
+LEGALAID | Public funding for legal help (5,3)
+RETAINER | Fee paid in advance to a lawyer
+FEE | Payment for legal services
+BRIEF | Summary of a case for a barrister
+DOCKET | List of cases to be heard
+LIMITATION | Time limit for bringing a claim
+ENTRAPMENT | Inducing someone to commit a crime
+DURESS | Coercion by threats
+INSANITY | Mental defence in criminal law
+DIMINISHED | ___ responsibility, a partial defence
+PROVOCATION | Partial defence to murder
+EXECUTION | Carrying out of a death sentence
+RESTITUTION | Repayment to a victim
+COMPENSATION | Payment for loss
+REHABILITATION | Restoring offenders to society
+RECIDIVISM | Tendency to reoffend
+DETERRENCE | Discouraging crime by punishment
+RETRIBUTION | Punishment as deserved
+VIGILANTE | Person taking the law into their own hands
+LYNCHING | Killing by a mob without trial
+MARTIALLAW | Military rule in an emergency (7,3)
+CURFEW | Order to stay indoors
+EDICT | Official proclamation
+PROCLAMATION | Public announcement
+CHARTER | Founding document
+CONVENTION | International agreement
+PROTOCOL | Supplementary agreement
+ACCORD | Formal agreement
+PACT | Agreement between parties
+RATIFY | Formally approve a treaty
+SIGNATORY | Party that signs an agreement
+EXTRADITE | Hand over to another country
+TERRITORY | Land under a jurisdiction
+IMMIGRATION | Coming to live in a country
+EMIGRATION | Leaving one's country
+CENSUS | Official count of a population
+REGISTRY | Official record office
+CERTIFICATE | Official document
+LICENSE | Permit, in the US
+PERMIT | Official authorisation
+PRIVACY | Right to be left alone
+WHISTLEBLOWER | Person exposing wrongdoing
+LEAK | Unauthorised release of information
+CLASSIFIED | Officially secret
+CONFIDENTIAL | Private and secret
+PRIVILEGE | Right protecting legal communications
+IMMUNITY | Protection from prosecution
+INDICTMENT | Formal charge of a serious crime
+CHARGE | Formal accusation
+ACCUSED | Person charged with a crime
+SUSPECT | Person thought to have committed a crime
+VICTIM | Person harmed by a crime
+OFFENDER | Person who commits an offence
+CRIMINAL | Person who commits a crime
+FELON | Person convicted of a serious crime
+INMATE | Prisoner
+GANG | Group of criminals
+MAFIA | Organised crime syndicate
+SYNDICATE | Group of organised criminals
+RACKETEERING | Running illegal businesses
+CONTRABAND | Smuggled goods
+LOOT | Stolen goods
+FENCE | Dealer in stolen goods
+HEIST | Robbery of a large sum
+PICKPOCKET | Thief who steals from pockets
+SHOPLIFTING | Stealing from shops
+JOYRIDING | Stealing a car for fun
+PIRACY | Copyright theft or robbery at sea
+COUNTERFEIT | Fake copy
+FORGER | Maker of fakes
+PERJURER | Person who lies under oath
+INFORMANT | Person giving information to police
+UNDERCOVER | Working in secret
+SURVEILLANCE | Close observation
+WIRETAP | Secret phone monitoring
+ARREST | Taking into custody
+HANDCUFFS | Restraints for the wrists
+CELL | Room in a prison
+SOLON | Athenian lawgiver
+NAPOLEONIC | ___ Code, French civil law
+SHARIA | Islamic law
+TALMUDIC | Relating to Jewish law
+DRACONIAN | Excessively harsh, after an Athenian lawgiver
+BLACKSTONE | Author of Commentaries on the Laws of England
+COKE | Edward ___, English jurist
+DENNING | Lord ___, influential English judge
+HOLMES | Oliver Wendell ___, US Supreme Court justice
+GINSBURG | Ruth Bader ___, US Supreme Court justice
+SCALIA | Antonin ___, US Supreme Court justice
+THURGOOD | ___ Marshall, first Black Supreme Court justice
+WARREN | Earl ___, Chief Justice of the 1950s and 60s
+ROBERTS | John ___, Chief Justice from 2005
+DARROW | Clarence ___, defender in the Scopes trial
+SCOPES | ___ Trial of 1925 over evolution
+SALEM | ___ witch trials of 1692
+LEGALESE | Jargon of lawyers
+FINEPRINT | Small print of a contract (4,5)
+TECHNICALITY | Minor point of law
+PRECEDENCE | Priority in importance
+STATUTORY | Required by statute
+CODIFY | Arrange laws into a code
+ENACT | Make into law
+REPEAL | Revoke a law
+AMEND | Change a law
+ENFORCE | Make sure a law is obeyed
+COMPLY | Act in accordance with a rule
+INFRINGE | Break a law or right
+VIOLATE | Break a rule
+LEGAL | Permitted by law
+ILLEGAL | Against the law
+LAWFUL | Allowed by law
+UNLAWFUL | Not allowed by law
+LEGITIMATE | Conforming to the law
+ILLICIT | Forbidden by law
+POLITICS | Activities of governing
+POLITICIAN | Person active in politics
+STATESMAN | Respected political leader
+POLICY | Course of action adopted by a government
+AGENDA | List of matters to address
+REFORM | Change to improve something
+LEGISLATOR | Lawmaker
+LAWMAKER | Member of a legislature
+REPRESENTATIVE | Elected delegate
+DELEGATE | Person sent to represent others
+ASSEMBLY | Gathering of representatives
+CONGRESSIONAL | Relating to the US Congress
+PARLIAMENTARY | Relating to parliament
+PRESIDENTIAL | Relating to a president
+MINISTRY | Government department
+DEPARTMENT | Division of government
+AGENCY | Government body
+QUANGO | Semi-independent public body
+WHITEHOUSE | US president's residence (5,5)
+CAPITOL | Building of the US Congress
+KREMLIN | Seat of Russian government
+ELYSEE | Palace of the French president
+BUNDESTAG | German parliament
+KNESSET | Israeli parliament
+DIET | Japanese parliament
+DUMA | Russian parliament
+DAIL | Lower house of the Irish parliament
+CORTES | Spanish parliament
+SEJM | Polish parliament
+STORTING | Norwegian parliament
+RIKSDAG | Swedish parliament
+LOKSABHA | Lower house of the Indian parliament (3,5)

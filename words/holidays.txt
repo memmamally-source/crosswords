@@ -1,0 +1,502 @@
+# Holidays & Festivals — one entry per line: ANSWER | clue
+CHRISTMAS | Holiday celebrated on 25 December
+DIWALI | Hindu festival of lights
+HANUKKAH | Eight-night Jewish festival of lights
+EID | Muslim festival, as in ___ al-Fitr
+RAMADAN | Islamic holy month observed from dawn to sunset
+EASTER | Spring holiday with egg hunts
+HALLOWEEN | October 31 night of trick-or-treating
+THANKSGIVING | North American holiday held in October or November
+VALENTINE | Card sent on 14 February
+LANTERN | Paper light hung at Lunar New Year
+FIREWORKS | Night-sky display at midnight on 31 December
+CARNIVAL | Festive season before Lent, famous in Rio
+TURKEY | Bird roasted for many US dinners in November
+PUMPKIN | Orange gourd carved into a spooky face
+MISTLETOE | Plant you might be kissed under
+SANTA | Gift-bringer from the North Pole
+REINDEER | Antlered animals that pull a famous sleigh
+CANDLE | Wax light you blow out on a cake
+CONFETTI | Paper bits thrown at celebrations
+HOLI | Hindu spring festival of colours
+PASSOVER | Jewish festival marking the Exodus from Egypt
+KWANZAA | African American cultural holiday from 26 December to 1 January
+PINATA | Decorated container smashed open for sweets
+TINSEL | Sparkly strands draped on a tree
+PARADE | Procession through the streets
+HARVEST | Gathering of crops, celebrated at many festivals
+BONFIRE | Large outdoor fire lit on Guy Fawkes Night
+STOCKING | Sock hung by the chimney
+EGGNOG | Creamy, spiced holiday drink
+FEAST | Large celebratory meal
+NOWRUZ | Persian New Year, at the spring equinox
+HOGMANAY | Scottish New Year's Eve celebration
+OKTOBERFEST | Munich beer festival
+MARDIGRAS | "Fat Tuesday" festival in New Orleans (5,4)
+SOLSTICE | Longest or shortest day of the year
+VESAK | Buddhist festival marking the Buddha's birth and enlightenment
+BIRTHDAY | Yearly celebration of the day you were born
+WREATH | Ring of evergreens hung on a door
+DREIDEL | Four-sided spinning top with Hebrew letters
+MENORAH | Branched candelabrum lit over eight nights
+GINGERBREAD | Spiced biscuit shaped into houses and men
+CAROL | Festive song sung door to door
+COSTUME | Outfit worn to a fancy-dress party
+HANAMI | Japanese custom of viewing cherry blossoms
+FASTING | Going without food for religious reasons
+ADVENT | Season of preparation before Christmas
+ADVENTCALENDAR | Calendar of little doors opened in December (6,8)
+BOXINGDAY | Holiday on 26 December (6,3)
+EPIPHANY | Feast of the Magi on 6 January
+TWELFTHNIGHT | Eve of the Epiphany (7,5)
+NATIVITY | Scene of the birth of Jesus
+MANGER | Feeding trough used as a crib
+BETHLEHEM | Birthplace of Jesus
+MAGI | Three wise men
+FRANKINCENSE | Gift of the Magi, an aromatic resin
+MYRRH | Gift of the Magi, a bitter resin
+SHEPHERD | Watcher of flocks in the Nativity story
+ANGEL | Messenger at the top of the tree
+STAR | Topper that guided the wise men
+STABLE | Where Jesus was born
+FIR | Evergreen used as a Christmas tree
+BAUBLE | Shiny tree ornament
+ORNAMENT | Decoration hung on a tree
+GARLAND | Decorative chain or wreath
+FAIRYLIGHTS | Strings of small decorative bulbs (5,6)
+HOLLY | Spiky evergreen with red berries
+IVY | Evergreen climber in a carol
+POINSETTIA | Red-leaved Christmas plant
+CANDYCANE | Striped peppermint stick (5,4)
+YULELOG | Chocolate log cake, or a log burned at Christmas (4,3)
+YULE | Old word for the midwinter festival
+MINCEPIE | Small festive pastry with dried fruit (5,3)
+STOLLEN | German Christmas fruit bread
+PANETTONE | Italian Christmas sweet bread
+GLUHWEIN | German mulled wine
+MULLEDWINE | Hot spiced wine (6,4)
+CRACKER | Party favour that bangs when pulled
+PAPERHAT | Crown from a Christmas cracker (5,3)
+STUFFING | Savoury filling for a roast bird
+CAROLLING | Singing door to door at Christmas
+SILENTNIGHT | Carol written in Austria in 1818 (6,5)
+JINGLEBELLS | Song of a one-horse open sleigh (6,5)
+RUDOLPH | Reindeer with a red nose
+DASHER | First reindeer named in the poem
+DANCER | Reindeer named after Dasher
+PRANCER | Reindeer named in A Visit from St. Nicholas
+VIXEN | Reindeer whose name means a female fox
+COMET | Reindeer named after a celestial body
+CUPID | Reindeer named after the god of love
+DONNER | Reindeer whose name means thunder
+BLITZEN | Reindeer whose name means lightning
+SLEIGH | Santa's vehicle
+NORTHPOLE | Santa's home (5,4)
+ELVES | Santa's workshop helpers
+WORKSHOP | Where toys are made at the North Pole
+CHIMNEY | Santa's way into the house
+FATHERCHRISTMAS | British name for Santa (6,9)
+SINTERKLAAS | Dutch gift-bringer on 5 December
+KRAMPUS | Horned companion who punishes naughty children
+BEFANA | Italian witch who brings gifts at Epiphany
+NAUGHTY | On the wrong one of Santa's lists
+NICE | On the good one of Santa's lists
+SCROOGE | Miser who hates Christmas
+TINYTIM | Crippled boy in A Christmas Carol (4,3)
+SNOWMAN | Winter figure with a carrot nose
+SNOWFLAKE | Six-sided ice crystal
+SNOWGLOBE | Shaken scene in a glass dome (4,5)
+GIFTWRAP | Paper for presents (4,4)
+RIBBON | Decorative strip tied on a present
+PRESENT | Gift
+SECRETSANTA | Anonymous office gift exchange (6,5)
+AULDLANGSYNE | Song sung at midnight on New Year (4,4,4)
+RESOLUTION | New Year promise
+TOAST | Raised glasses at midnight
+CHAMPAGNE | Bubbly for celebrations
+PARTYPOPPER | Small device that shoots streamers (5,6)
+NOISEMAKER | Rattle or horn for celebrations
+LUNARNEWYEAR | Spring festival of East Asia (5,3,4)
+SPRINGFESTIVAL | Chinese name for Lunar New Year (6,8)
+REDENVELOPE | Gift of money at Lunar New Year (3,8)
+DRAGONDANCE | Parade with a long puppet (6,5)
+LIONDANCE | Dance with two performers in one costume (4,5)
+FIRECRACKER | Small explosive set off to scare evil spirits
+ZODIAC | Twelve-animal Chinese cycle
+LANTERNFESTIVAL | Celebration ending Lunar New Year (7,8)
+MOONCAKE | Pastry of the Mid-Autumn Festival
+MIDAUTUMN | ___ Festival, celebrated with mooncakes (3-6)
+DRAGONBOAT | ___ Festival, with races in long boats (6,4)
+ZONGZI | Sticky rice parcel of the Dragon Boat Festival
+QINGMING | Tomb-Sweeping Day of China
+SEOLLAL | Korean Lunar New Year
+CHUSEOK | Korean harvest festival
+OBON | Japanese festival honouring ancestors
+TANABATA | Japanese star festival of wishes on paper
+SHICHIGOSAN | Japanese rite for children aged three, five and seven
+SONGKRAN | Thai New Year water festival
+LOYKRATHONG | Thai festival of floating baskets (3,8)
+DIYA | Clay oil lamp lit at Diwali
+RANGOLI | Coloured floor pattern made at Diwali
+NAVRATRI | Nine-night Hindu festival
+DUSSEHRA | Hindu festival of the victory of good over evil
+RAKHI | Thread tied by sisters on brothers' wrists
+JANMASHTAMI | Festival of Krishna's birth
+PONGAL | Tamil harvest festival
+ONAM | Harvest festival of Kerala
+LOHRI | Punjabi winter bonfire festival
+BAISAKHI | Sikh and Punjabi harvest and new year festival
+GURPURAB | Sikh celebration of a Guru's birth
+KUMBHMELA | Huge Hindu pilgrimage festival (5,4)
+EIDALFITR | Festival ending the month of fasting (3,2-4)
+EIDALADHA | Festival of the Sacrifice (3,2-4)
+IFTAR | Evening meal breaking the Ramadan fast
+SUHOOR | Pre-dawn meal during Ramadan
+ZAKAT | Charitable giving in Islam
+MAWLID | Celebration of the Prophet's birthday
+ASHURA | Day of remembrance on the tenth of Muharram
+ROSHHASHANAH | Jewish New Year (4,8)
+YOMKIPPUR | Jewish Day of Atonement (3,6)
+SUKKOT | Jewish harvest festival of booths
+SUKKAH | Temporary hut built for Sukkot
+PURIM | Jewish festival of Esther
+SHAVUOT | Jewish festival of the giving of the Torah
+SEDER | Passover meal
+MATZO | Unleavened bread of Passover
+LATKE | Potato pancake eaten at Hanukkah
+GELT | Chocolate coins of Hanukkah
+SHOFAR | Ram's horn blown at the Jewish New Year
+LENT | Forty days before Easter
+ASHWEDNESDAY | First day of Lent (3,9)
+SHROVETUESDAY | Pancake Day (6,7)
+PALMSUNDAY | Sunday before Easter (4,6)
+MAUNDYTHURSDAY | Thursday before Easter (6,8)
+GOODFRIDAY | Friday before Easter (4,6)
+HOTCROSSBUN | Spiced Easter bun (3,5,3)
+EASTEREGG | Chocolate treat of spring (6,3)
+EGGHUNT | Search for hidden Easter treats (3,4)
+BUNNY | Rabbit who brings Easter eggs
+BONNET | Decorated Easter hat
+SIMNEL | ___ cake, Easter fruitcake with marzipan balls
+LILY | White flower of Easter
+PENTECOST | Feast fifty days after Easter
+WHITSUN | British name for Pentecost
+ASCENSION | Feast forty days after Easter
+DAYOFTHEDEAD | Mexican festival honouring ancestors (3,2,3,4)
+OFRENDA | Altar for the departed on the Day of the Dead
+CALAVERA | Decorated sugar skull
+MARIGOLD | Orange flower of the Day of the Dead
+CATRINA | Elegant skeleton lady of the Day of the Dead
+SAMHAIN | Gaelic festival from which Halloween grew
+TRICKORTREAT | Halloween doorstep demand (5,2,5)
+JACKOLANTERN | Carved pumpkin with a candle (4-1'-7)
+WITCH | Broomstick rider of Halloween
+GHOST | Sheet-wearing spook
+SKELETON | Bony Halloween figure
+BAT | Winged creature of Halloween
+BLACKCAT | Unlucky animal of Halloween (5,3)
+SPIDERWEB | Cobweb decoration (6,3)
+CANDYCORN | Tricolour Halloween sweet (5,4)
+TOFFEEAPPLE | Sweet-coated fruit on a stick (6,5)
+BOBBING | ___ for apples, Halloween game
+HAUNTEDHOUSE | Spooky attraction (7,5)
+SCARECROW | Straw figure in a field
+BROOMSTICK | Witch's transport
+GUYFAWKES | Plotter remembered on 5 November (3,6)
+BONFIRENIGHT | British celebration on 5 November (7,5)
+SPARKLER | Hand-held firework
+ROSES | Red flowers of Valentine's Day
+CHOCOLATES | Sweet gift of love
+LOVEHEART | Message-printed sweet (4,5)
+SWEETHEART | Beloved
+SHAMROCK | Three-leaved emblem of Ireland
+LEPRECHAUN | Irish fairy with a pot of gold
+GREEN | Colour worn on 17 March
+BURNSNIGHT | Scottish celebration on 25 January (5,5)
+HAGGIS | Scottish dish addressed with a poem
+MAYPOLE | Pole for ribbon dancing on 1 May
+MAYQUEEN | Girl crowned on 1 May (3,5)
+MORRIS | ___ dancing, English folk dance with bells
+BELTANE | Gaelic May Day festival
+MIDSUMMER | Festival of the summer solstice
+MIDSOMMAR | Swedish summer solstice festival
+LAMMAS | Early harvest festival on 1 August
+MICHAELMAS | Feast of St Michael on 29 September
+HALLOWMAS | Old name for All Saints' Day
+MARTINMAS | Feast of St Martin on 11 November
+CANDLEMAS | Christian feast on 2 February
+GROUNDHOGDAY | US weather-forecasting tradition on 2 February (9,3)
+MEMORIALDAY | US day honouring fallen soldiers (8,3)
+LABORDAY | US holiday on the first Monday of September (5,3)
+JUNETEENTH | US holiday marking the end of slavery
+CINCODEMAYO | Mexican celebration of a battle victory (5,2,4)
+BASTILLEDAY | French national day on 14 July (8,3)
+CANADADAY | National day on 1 July (6,3)
+AUSTRALIADAY | National day on 26 January (9,3)
+ANZACDAY | Day of remembrance on 25 April (5,3)
+WAITANGI | ___ Day, New Zealand's national day
+KINGSDAY | Dutch national holiday of orange
+POPPY | Red flower of remembrance
+LEDERHOSEN | Leather shorts worn at beer festivals
+DIRNDL | Traditional Bavarian dress
+STEIN | Large beer mug
+SAMBADROME | Parade venue in Rio
+VENETIAN | ___ masks, carnival disguises
+MASQUERADE | Masked ball
+NOTTINGHILL | London carnival in August (7,4)
+FIESTA | Spanish festival
+LATOMATINA | Spanish tomato-throwing festival (2,7)
+SANFERMIN | Pamplona festival of the running of the bulls (3,6)
+LASFALLAS | Valencia festival of burning effigies (3,6)
+FERIA | Seville's April fair
+PALIO | Siena's horse race festival
+GUELAGUETZA | Oaxacan dance festival
+INTIRAYMI | Inca festival of the sun (4,5)
+JUNKANOO | Bahamian street parade
+CROPOVER | Barbadian harvest festival (4,4)
+HOMECOMING | Return celebration, often at a school
+POWWOW | Native American gathering of dance and song
+PILGRIMS | Mayflower settlers of the first Thanksgiving
+MAYFLOWER | Ship of the Pilgrims
+WISHBONE | Bone pulled for luck
+MACYS | New York store of a Thanksgiving parade
+BLACKFRIDAY | Shopping day after Thanksgiving (5,6)
+CYBERMONDAY | Online shopping day (5,6)
+EARTHDAY | Environmental day on 22 April (5,3)
+APRILFOOLS | Pranking day (5,5)
+PRANK | Practical joke
+LEAPDAY | 29 February (4,3)
+PARTY | Social celebration
+BALLOON | Inflated party decoration
+BUNTING | Strings of little flags
+STREAMER | Paper ribbon for decorating
+INVITATION | Request to attend a party
+GUEST | Person invited
+HOST | Person who throws the party
+PARTYBAG | Gift bag for young guests (5,3)
+CAKE | Celebration bake with candles
+WISH | Thought made when blowing out candles
+ANNIVERSARY | Yearly celebration of a wedding
+JUBILEE | Special anniversary such as a 25th or 50th
+WEDDING | Marriage ceremony
+BRIDE | Woman getting married
+GROOM | Man getting married
+BRIDESMAID | Bride's attendant
+BESTMAN | Groom's chief attendant (4,3)
+BOUQUET | Bunch of flowers thrown by the bride
+VEIL | Bride's face covering
+HONEYMOON | Holiday after a wedding
+RECEPTION | Party after a wedding
+ENGAGEMENT | Promise to marry
+CHRISTENING | Baptism ceremony
+BARMITZVAH | Jewish coming-of-age ceremony for boys (3,7)
+BATMITZVAH | Jewish coming-of-age ceremony for girls (3,7)
+QUINCEANERA | Latin American celebration of a fifteenth birthday
+GRADUATION | Ceremony for finishing school
+PROM | High school dance
+REUNION | Gathering after a long time apart
+HOUSEWARMING | Party in a new home
+RETIREMENT | Celebration of leaving work
+WAKE | Gathering after a funeral
+VIGIL | Night of watching or prayer
+SAINT | Holy person with a feast day
+HOLIDAY | Day off work or school
+VACATION | Holiday, in the US
+BANKHOLIDAY | British public holiday (4,7)
+LONGWEEKEND | Weekend with an extra day off (4,7)
+FESTIVE | Merry and celebratory
+CARD | Folded greeting sent at holidays
+TRADITION | Custom handed down
+RITUAL | Ceremonial act
+CUSTOM | Usual practice
+CELEBRATION | Joyful occasion
+FESTIVITY | Merrymaking
+GALA | Grand celebration
+JAMBOREE | Large lively gathering
+FUNFAIR | Fair with rides and games
+FERRISWHEEL | Big rotating fairground wheel (6,5)
+CANDYFLOSS | Spun sugar on a stick (5,5)
+YULETIDE | Christmas season
+NOEL | Christmas, in carols
+NAVIDAD | Christmas in Spanish
+WEIHNACHTEN | Christmas in German
+LASPOSADAS | Mexican Christmas procession re-enacting the search for lodging (3,8)
+WIGILIA | Polish Christmas Eve supper
+JULBORD | Swedish Christmas buffet
+LUCIA | Saint whose day brings candle-crowned processions in Sweden
+BUCHEDENOEL | French Yule log cake (5,2,4)
+REVEILLON | French Christmas Eve feast
+TOURTIERE | Québécois meat pie of the holidays
+TURRON | Spanish nougat of Christmas
+POLVORON | Crumbly Spanish Christmas biscuit
+LEBKUCHEN | German Christmas gingerbread
+SPECULAAS | Spiced Dutch biscuit of St Nicholas
+PFEFFERNUSSE | Spiced German Christmas cookies
+KULICH | Russian Easter bread
+PASKHA | Russian Easter cheese dessert
+PYSANKY | Ukrainian decorated Easter eggs
+COLOMBA | Dove-shaped Italian Easter cake
+EASTERMONDAY | Holiday after Easter Sunday (6,6)
+ASSUMPTION | Feast of Mary on 15 August
+CORPUSCHRISTI | Feast of the Body of Christ (6,7)
+WASSAIL | Spiced drink and toast of Christmas
+MUMMERS | Masked performers of seasonal plays
+PANTO | British Christmas theatre show
+PANTOMIME | Comic Christmas play with a dame
+DAME | Man in a dress in a pantomime
+FIRSTFOOTING | Scottish New Year visiting custom
+UPHELLYAA | Shetland fire festival (2,5,2)
+SETSUBUN | Japanese bean-throwing festival
+HINAMATSURI | Japanese Girls' Day doll festival
+KODOMONOHI | Japanese Children's Day (7,2,2)
+SHOGATSU | Japanese New Year
+OMISOKA | Japanese New Year's Eve
+OSECHI | Japanese New Year food boxes
+MOCHI | Rice cake eaten at New Year in Japan
+CHONGYANG | Chinese Double Ninth Festival
+QIXI | Chinese festival of the cowherd and the weaver girl
+HUNGRYGHOST | ___ Festival, for wandering spirits (6,5)
+LOSAR | Tibetan New Year
+BODHIDAY | Buddhist celebration of the Buddha's enlightenment (5,3)
+KATHINA | Buddhist robe-offering festival
+MAGHAPUJA | Buddhist full-moon festival (5,4)
+MAKARSANKRANTI | Hindu harvest festival of kites (5,9)
+KITE | Toy flown at many spring festivals
+KARVACHAUTH | Hindu fast kept by married women (5,6)
+CHHATH | Hindu festival honouring the sun
+HOLIKA | Bonfire on the eve of Holi
+GULAL | Coloured powder thrown at Holi
+PICHKARI | Water pistol used at Holi
+TUBISHVAT | Jewish New Year for trees (2,7)
+LAGBAOMER | Jewish bonfire festival (3,2,5)
+HANUKKIAH | Nine-branched Hanukkah candelabrum
+CHALLAH | Braided bread of the Sabbath
+HAMANTASCHEN | Triangular pastries of Purim
+SUFGANIYOT | Jelly doughnuts of Hanukkah
+YALDA | Persian winter solstice night
+SIZDAHBEDAR | Persian picnic day ending Nowruz
+HAFTSIN | Nowruz table of seven symbolic items (4,3)
+KINARA | Seven-branched candle holder of Kwanzaa
+UMOJA | Kwanzaa principle of unity
+TIMKAT | Ethiopian Epiphany festival
+MESKEL | Ethiopian festival of the True Cross
+HOMOWO | Ghanaian harvest festival of the Ga people
+SPRING | Season of Easter and Holi
+SUMMER | Season of Midsummer
+AUTUMN | Season of harvest festivals
+WINTER | Season of Christmas and Hanukkah
+VERNAL | ___ equinox, start of spring
+EQUINOX | Day of equal light and dark
+SUNRISE | Dawn, greeted at many solstice festivals
+STONEHENGE | Ancient monument where solstices are celebrated
+DRUID | Celtic priest of solstice ceremonies
+PAGAN | Pre-Christian religious tradition
+WICCA | Modern pagan religion with seasonal sabbats
+SABBAT | Wiccan seasonal festival
+OSTARA | Pagan spring equinox festival
+IMBOLC | Gaelic festival on 1 February
+LITHA | Pagan midsummer festival
+MABON | Pagan autumn equinox festival
+SATURNALIA | Roman midwinter festival
+LUPERCALIA | Roman festival in mid-February
+KALENDS | First day of a Roman month
+DECORATIONS | Festive trimmings
+LIGHTS | Strings of bulbs hung up for the holidays
+CRIB | Nativity scene
+PAGEANT | Festive procession or performance
+PROCESSION | Ceremonial parade
+FLOAT | Decorated parade vehicle
+MARCHINGBAND | Musicians on parade (8,4)
+DRUMLINE | Percussion section of a marching band
+TICKERTAPE | ___ parade, with paper thrown from windows
+BANQUET | Grand celebratory meal
+POTLUCK | Shared meal where everyone brings a dish
+BARBECUE | Outdoor grilled meal
+PICNIC | Meal eaten outdoors
+CLAMBAKE | New England seaside feast
+LUAU | Hawaiian feast
+HANGI | Maori earth-oven feast
+BRAAI | South African barbecue
+PECANPIE | Southern pie of nuts and syrup (5,3)
+FRUITCAKE | Dense cake of dried fruit
+CORNUCOPIA | Horn of plenty, symbol of harvest
+SHEAF | Bundle of harvested wheat
+CORNDOLLY | Figure woven from straw at harvest (4,5)
+HAYRIDE | Autumn ride on a hay-filled wagon
+CORNMAZE | Puzzle cut through a field (4,4)
+GOURD | Decorative autumn squash
+HAUNT | Visit as a ghost
+SPOOKY | Eerie, as at Halloween
+GHOULISH | Grotesquely macabre
+COBWEB | Spider's web, real or fake
+MUMMY | Bandaged Halloween costume
+BROOM | Witch's ride
+TREATS | Sweets handed out on 31 October
+TRICKS | Pranks threatened on Halloween
+DRESSUP | Wear a costume (5,2)
+FANCYDRESS | Costume party (5,5)
+MASK | Face covering at a masquerade
+GLITTER | Sparkly party decoration
+SEQUINS | Shiny discs on party clothes
+TIARA | Jewelled headband for a celebration
+CROWN | Headpiece for a birthday king or queen
+SASH | Band worn across the body at celebrations
+CORSAGE | Flower worn to a prom
+BOUTONNIERE | Flower worn in a lapel
+RICE | Grain once thrown at weddings
+HORSESHOE | Lucky charm at weddings
+GARTER | Band worn by a bride
+TIERS | Layers of a wedding cake
+TOPPER | Figure on top of a cake
+FAVOURS | Small gifts for wedding guests
+SPEECH | Toast given at a wedding
+DISCO | Party with dance music
+SLEEPOVER | Children's overnight party
+CHARADES | Miming party game
+FAMILY | Relatives gathered at the holidays
+RELATIVES | Family members visiting for the holidays
+HOMESICK | Missing home during the holidays
+NOSTALGIA | Fond longing for past holidays
+MEMORIES | Recollections of celebrations
+SNAPSHOT | Quick photo of a celebration
+SOUVENIR | Keepsake of a trip or event
+POSTCARD | Picture card sent from a holiday
+TRAVEL | Journey taken in the holidays
+ROADTRIP | Holiday by car (4,4)
+GETAWAY | Short holiday
+STAYCATION | Holiday spent at home
+CRUISE | Holiday on a ship
+RESORT | Holiday destination with amenities
+BEACH | Sandy summer holiday spot
+SUNSCREEN | Lotion for sunny holidays
+SANDCASTLE | Summer beach creation
+CAMPFIRE | Outdoor fire for toasting marshmallows
+MARSHMALLOW | Soft sweet toasted on a stick
+SMORES | Campfire treat of chocolate and marshmallow
+LABOURDAY | International workers' holiday on 1 May (6,3)
+PIDAY | Maths celebration on 14 March (2,3)
+CHEESEROLLING | English race chasing a wheel down a hill
+WELLDRESSING | Derbyshire custom of decorating wells
+GURNING | Face-pulling contest at a Cumbrian fair
+HIGHLANDGAMES | Scottish festival of tossing the caber (8,5)
+CABER | Tree trunk tossed at Highland games
+EISTEDDFOD | Welsh festival of music and poetry
+FEIS | Irish festival of music and dance
+CEILIDH | Scottish or Irish social dance
+HOEDOWN | Lively country dance party
+SQUAREDANCE | Folk dance for four couples (6,5)
+CONGALINE | Party dance in a snaking line (5,4)
+LIMBO | Party game of bending under a bar
+HOKEYCOKEY | Party dance of putting your left leg in (5,5)
+GLOWSTICK | Light-up stick at parties and raves
+SKYLANTERN | Paper lantern floated into the night (3,7)
+CANDLELIGHT | Glow of candles at a vigil or service
+MIDNIGHTMASS | Christmas Eve church service (8,4)
+EVENSONG | Evening service of song
+HYMNAL | Book of hymns
+CHORISTER | Choir singer at a festive service
+CHIMES | Ringing bells at New Year
+FIREWORK | Exploding display of light
+PARTYHAT | Cone-shaped celebration headwear (5,3)
+NEWYEAR | Celebration of 1 January (3,4)
+FESTOON | Hang with decorative chains

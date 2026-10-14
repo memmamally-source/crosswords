@@ -1,0 +1,508 @@
+# Movies & TV — one entry per line: ANSWER | clue
+TITANIC | 1997 film about a doomed ocean liner
+JAWS | Spielberg's 1975 shark thriller
+AVATAR | James Cameron film set on the moon Pandora
+FROZEN | Disney film featuring the song "Let It Go"
+GODFATHER | Coppola's mafia epic, "The ___"
+ROCKY | Boxer played by Sylvester Stallone
+MATRIX | Film in which Neo takes the red pill, "The ___"
+GOLLUM | Ring-obsessed creature who says "my precious"
+HOGWARTS | School of witchcraft attended by Harry Potter
+VADER | Darth ___, Sith lord in the black helmet
+YODA | Small green Jedi master
+SIMPSONS | Animated family from Springfield, "The ___"
+FRIENDS | TV comedy whose gang hangs out at Central Perk
+SITCOM | Situation comedy
+SEQUEL | Follow-up film
+TRAILER | Short preview of an upcoming film
+DIRECTOR | Person who calls "Action!"
+CAMEO | Brief appearance by a famous person
+SCREENPLAY | Script for a film
+PIXAR | Animation studio behind Toy Story
+NEMO | Lost clownfish of a 2003 animated film
+SHERLOCK | Baker Street detective played by Benedict Cumberbatch
+JOKER | Batman's grinning arch-enemy
+GANDALF | Wizard who says "You shall not pass!"
+WAKANDA | Hidden African nation in Black Panther
+MINIONS | Yellow henchmen from Despicable Me
+DORY | Forgetful blue tang voiced by Ellen DeGeneres
+PREMIERE | First public showing of a film
+BLOCKBUSTER | Huge box-office hit
+SPOILER | Plot reveal for someone who hasn't watched yet
+INCEPTION | Nolan film about stealing secrets through dreams
+JURASSIC | ___ Park, Spielberg's dinosaur adventure
+CASABLANCA | 1942 classic: "Here's looking at you, kid"
+GOONIES | 1985 kids' treasure-hunt film, "The ___"
+OPPENHEIMER | 2023 biopic of the physicist behind the atomic bomb
+ENCANTO | Disney film about the magical Madrigal family
+MOANA | Polynesian heroine who sails beyond the reef
+SKYWALKER | Surname of Luke and Anakin
+STUNTMAN | Performer who does dangerous scenes in place of a star
+BLOOPER | Funny mistake shown in an outtake reel
+REMAKE | New version of an older film
+DOCUMENTARY | Non-fiction film
+ANIME | Japanese style of animation
+SUBTITLES | On-screen translation of dialogue
+CINEMA | Place to watch films on a big screen
+POPCORN | Classic snack at the pictures
+CITIZENKANE | 1941 film whose last word is "Rosebud" (7,4)
+ROSEBUD | Charles Foster Kane's dying word
+VERTIGO | Hitchcock film of a detective's fear of heights
+PSYCHO | Hitchcock film of the Bates Motel
+BIRDS | Hitchcock film of avian attacks, "The ___"
+REARWINDOW | Hitchcock film of a photographer with a broken leg (4,6)
+DOROTHY | Kansas girl with ruby slippers
+TOTO | Dorothy's dog
+STARWARS | Space saga of the Skywalkers (4,4)
+LEIA | Princess of Alderaan
+HANSOLO | Smuggler pilot of the Millennium Falcon (3,4)
+CHEWBACCA | Wookiee co-pilot
+OBIWAN | ___ Kenobi, Jedi mentor (3-3)
+KENOBI | Obi-Wan ___, Jedi master
+LUKE | First name of Skywalker
+KYLO | ___ Ren, villain of the sequel trilogy
+DEATHSTAR | Moon-sized battle station (5,4)
+TATOOINE | Desert planet with two suns
+ALIEN | 1979 sci-fi horror film with Ripley
+RIPLEY | Ellen ___, Alien heroine
+BLADERUNNER | Ridley Scott's replicant noir (5,6)
+REPLICANT | Bioengineered android of Blade Runner
+ELLIOTT | Boy who befriends E.T.
+INDIANA | First name of the whip-cracking archaeologist
+JONES | Indiana ___, archaeologist hero
+RAIDERS | ___ of the Lost Ark
+CORLEONE | Mafia family of The Godfather
+SCARFACE | 1983 crime film of Tony Montana
+GOODFELLAS | Scorsese mob film of 1990
+TAXIDRIVER | Scorsese film of Travis Bickle (4,6)
+RAGINGBULL | Scorsese boxing film (6,4)
+PULPFICTION | Tarantino film of a briefcase and a dance contest (4,7)
+KILLBILL | Tarantino revenge saga (4,4)
+RESERVOIRDOGS | Tarantino heist film (9,4)
+FARGO | Coen brothers' snowy crime film
+LEBOWSKI | The Dude's surname in a Coen comedy
+SHAWSHANK | ___ Redemption, prison drama
+FORRESTGUMP | Film whose hero says "Life is like a box of chocolates" (7,4)
+TOYSTORY | First feature-length computer-animated film (3,5)
+COCO | Pixar film of the Day of the Dead
+INSIDEOUT | Pixar film of personified emotions (6,3)
+INCREDIBLES | Pixar superhero family, "The ___"
+CARS | Pixar film of Lightning McQueen
+LIONKING | Disney film of Simba (4,4)
+ALADDIN | Disney film of a genie and a lamp
+MULAN | Disney heroine who joins the army in disguise
+POCAHONTAS | Disney heroine of Jamestown
+CINDERELLA | Heroine who loses a glass slipper
+SNOWWHITE | Disney's first feature heroine (4,5)
+BAMBI | Disney fawn
+DUMBO | Disney's flying elephant
+PINOCCHIO | Puppet whose nose grows
+FANTASIA | Disney film set to classical music
+ARIEL | Disney mermaid princess
+BELLE | Heroine of Beauty and the Beast
+JASMINE | Princess of Agrabah
+RAPUNZEL | Long-haired heroine of Tangled
+TANGLED | Disney film of Rapunzel
+ZOOTOPIA | Disney film of an animal city
+FIONA | Ogre princess of Shrek
+ICEAGE | Animated film of a woolly mammoth and a sabre-tooth (3,3)
+SCRAT | Acorn-chasing squirrel of Ice Age
+TOOTHLESS | Night Fury dragon
+WALLACE | Cheese-loving inventor of Aardman films
+GROMIT | Silent beagle of Aardman films
+AKIRA | Landmark 1988 Japanese animated film
+NAVI | Blue-skinned people of Pandora
+MEMENTO | Nolan film told in reverse
+DARKKNIGHT | Nolan Batman film with Heath Ledger (4,6)
+LEDGER | Heath ___, Oscar-winning Joker
+MORPHEUS | Matrix rebel who offers the pills
+TRINITY | Matrix heroine played by Carrie-Anne Moss
+REDPILL | Choice to learn the truth in The Matrix (3,4)
+FRODO | Hobbit ring-bearer
+SAMWISE | Frodo's loyal companion
+ARAGORN | Ranger who becomes king
+LEGOLAS | Elf archer of the Fellowship
+GIMLI | Dwarf warrior of the Fellowship
+SAURON | Dark Lord of Mordor
+MORDOR | Land where the shadows lie
+SHIRE | Home of the hobbits
+HOBBIT | Small furry-footed person of Middle-earth
+HERMIONE | Clever Gryffindor witch
+DUMBLEDORE | Headmaster of Hogwarts
+VOLDEMORT | He Who Must Not Be Named
+SNAPE | Potions master
+HAGRID | Half-giant keeper of keys
+DOBBY | House-elf freed by a sock
+HEDWIG | Harry's snowy owl
+GRYFFINDOR | Hogwarts house of the brave
+SLYTHERIN | Hogwarts house of the ambitious
+HUFFLEPUFF | Hogwarts house of the loyal
+RAVENCLAW | Hogwarts house of the wise
+SPECTRE | Bond's villainous organisation
+GOLDFINGER | Bond villain obsessed with gold
+CONNERY | Sean ___, first film Bond
+CRAIG | Daniel ___, Bond from 2006 to 2021
+MONEYPENNY | M's secretary in Bond films
+BRUCE | Mechanical shark's nickname in Jaws
+FREDDY | Krueger of Elm Street
+JASON | Hockey-masked killer of Friday the 13th
+CHUCKY | Killer doll
+EXORCIST | 1973 horror film of a possessed girl, "The ___"
+SHINING | Kubrick horror film of the Overlook Hotel, "The ___"
+REDRUM | Backwards word in The Shining
+SCREAM | Horror franchise of Ghostface
+GETOUT | Jordan Peele horror film of 2017 (3,3)
+RAPTOR | Clever dinosaur of Jurassic Park
+MAXIMUS | General turned gladiator
+BRAVEHEART | Mel Gibson epic of William Wallace
+SCHINDLER | ___'s List, Spielberg's Holocaust drama
+APOCALYPSENOW | Coppola's Vietnam epic (10,3)
+PLATOON | Oliver Stone's Vietnam film
+DUNKIRK | Nolan war film of 1940's evacuation
+CASINO | Scorsese film set in Las Vegas
+HEAT | Michael Mann film pitting Pacino against De Niro
+DENIRO | Robert ___, star of Taxi Driver
+PACINO | Al ___, star of Scarface
+NICHOLSON | Jack ___, star of The Shining
+HOFFMAN | Dustin ___, star of The Graduate
+GRADUATE | 1967 film of Mrs Robinson, "The ___"
+REDFORD | Robert ___, star of The Sting
+NEWMAN | Paul ___, star of Cool Hand Luke
+EASTWOOD | Clint ___, the Man with No Name
+WAYNE | John ___, Western star
+BOGART | Humphrey ___, star of Casablanca
+BERGMAN | Ingrid ___, star of Casablanca
+GARBO | Greta ___, who wanted to be alone
+GRANT | Cary ___, star of North by Northwest
+STEWART | James ___, star of It's a Wonderful Life
+KELLY | Gene ___, star of Singin' in the Rain
+ASTAIRE | Fred ___, dancing partner of Ginger Rogers
+TEMPLE | Shirley ___, child star
+WELLES | Orson ___, director of Citizen Kane
+LUCAS | George ___, creator of Star Wars
+COPPOLA | Francis Ford ___, director of The Godfather
+CAMERON | James ___, director of Titanic
+SCOTT | Ridley ___, director of Gladiator
+FINCHER | David ___, director of Fight Club
+BURTON | Tim ___, director of Edward Scissorhands
+ANDERSON | Wes ___, director of The Grand Budapest Hotel
+COEN | Surname of filmmaking brothers Joel and Ethan
+VILLENEUVE | Denis ___, director of Dune
+PEELE | Jordan ___, director of Get Out
+GERWIG | Greta ___, director of Barbie
+BIGELOW | Kathryn ___, first woman to win Best Director
+KUROSAWA | Akira ___, director of Seven Samurai
+MIYAZAKI | Hayao ___, Studio Ghibli founder
+FELLINI | Federico ___, director of La Dolce Vita
+TRUFFAUT | François ___, director of The 400 Blows
+GODARD | Jean-Luc ___, New Wave director
+ALMODOVAR | Pedro ___, Spanish director
+PARASITE | First non-English film to win Best Picture
+CANNES | French film festival of the Palme d'Or
+SUNDANCE | Utah independent film festival
+BERLINALE | Berlin film festival
+PALMEDOR | Top prize at Cannes (5,1'2)
+GOLDENGLOBE | Award from Hollywood's foreign press (6,5)
+ACADEMY | ___ Awards, the Oscars
+NOMINEE | Award candidate
+STATUETTE | Small statue like an Oscar
+PREQUEL | Film set before an earlier one
+REBOOT | Fresh start for a franchise
+SPINOFF | Show derived from another (4-3)
+FRANCHISE | Series of related films
+TRILOGY | Series of three films
+CINEMATOGRAPHY | Art of film photography
+SCREENWRITER | Writer of film scripts
+CASTING | Choosing actors for roles
+UNDERSTUDY | Stand-in actor
+EXTRA | Background actor
+STARLET | Young aspiring actress
+MATINEE | Afternoon screening
+DRIVEIN | Outdoor cinema watched from cars (5-2)
+MULTIPLEX | Cinema with many screens
+IMAX | Giant-screen film format
+TICKET | Pass to see a film
+BOXOFFICE | Ticket sales (3,6)
+FLOP | Commercial failure
+CULTCLASSIC | Film with a devoted following (4,7)
+GENRE | Category such as horror or comedy
+WESTERN | Genre of cowboys
+HORROR | Genre meant to scare
+THRILLER | Suspenseful genre
+COMEDY | Genre meant to amuse
+ROMCOM | Romantic comedy
+DRAMA | Serious genre
+NOIR | Dark, cynical crime genre
+SCIFI | Science fiction, for short
+FANTASY | Genre of magic and myth
+ANIMATION | Drawn or computer-made moving images
+STOPMOTION | Animation of models moved frame by frame (4,6)
+CLAYMATION | Animation with clay figures
+GREENSCREEN | Backdrop replaced in post-production (5,6)
+SOUNDTRACK | Music of a film
+ZIMMER | Hans ___, composer of Inception's score
+WILLIAMS | John ___, composer of the Star Wars theme
+MORRICONE | Ennio ___, composer of spaghetti Western scores
+FOLEY | Art of adding everyday sound effects
+DUBBING | Replacing dialogue in another language
+SUBTITLE | Translation shown on screen
+CREDITS | Names listed at the end of a film
+OUTTAKE | Discarded scene
+CUT | Director's call to stop filming
+ACTION | Director's call to start filming
+TAKE | Single filmed attempt
+SCENE | Unit of action in a film
+SHOT | Continuous piece of film
+CLOSEUP | Tight shot of a face (5-2)
+MONTAGE | Sequence of quick cuts
+FLASHBACK | Scene from the past
+PLOTTWIST | Sudden surprise in a story (4,5)
+CLIFFHANGER | Suspenseful ending of an episode
+MACGUFFIN | Object that drives a plot
+STORYBOARD | Drawn plan of shots
+SCRIPT | Written text of a film
+DIALOGUE | Characters' spoken words
+MONOLOGUE | Long speech by one character
+VOICEOVER | Off-screen narration
+NARRATION | Commentary telling the story
+EDITOR | Person who assembles footage
+CLAPPERBOARD | Board snapped shut at the start of a take
+STUDIO | Film production company or facility
+BACKLOT | Outdoor studio area with sets
+SOUNDSTAGE | Soundproof filming hall
+LOCATION | Real place used for filming
+TEASER | Short early preview
+POSTER | Advertising image for a film
+RATING | Age classification of a film
+CENSOR | Official who cuts objectionable content
+NOSFERATU | 1922 silent vampire film
+MODERNTIMES | Chaplin's satire of the machine age (6,5)
+FRANKENSTEIN | 1931 monster film starring Boris Karloff
+DRACULA | 1931 vampire film starring Bela Lugosi
+BENHUR | 1959 epic of a chariot race (3-3)
+LAWRENCE | ___ of Arabia, David Lean epic
+ZHIVAGO | Doctor ___, 1965 epic of revolutionary Russia
+MARYPOPPINS | Practically perfect nanny (4,7)
+VONTRAPP | Singing family of The Sound of Music (3,4)
+GREASE | 1978 musical of Danny and Sandy
+TRAVOLTA | John ___, star of Grease
+DIRTYDANCING | 1987 film: "Nobody puts Baby in a corner" (5,7)
+FOOTLOOSE | 1984 film about a town that banned dancing
+FLASHDANCE | 1983 film of a welder who dreams of ballet
+FERRIS | ___ Bueller's Day Off
+SPLASH | 1984 film of a mermaid in New York
+GHOST | 1990 film with a pottery scene
+PRETTYWOMAN | 1990 romance starring Julia Roberts (6,5)
+NOTTINGHILL | Romcom of a bookshop owner and a film star (7,4)
+LOVEACTUALLY | Christmas romcom with cue cards (4,8)
+AMELIE | French film of a whimsical Parisian waitress
+LECTER | Hannibal ___, cannibal psychiatrist
+CLARICE | FBI trainee who visits Lecter
+SEVEN | 1995 thriller: "What's in the box?"
+SOZE | Keyser ___, mysterious crime lord
+FIGHTCLUB | Film whose first rule is not to talk about it (5,4)
+SIXTHSENSE | Film: "I see dead people" (5,5)
+SHYAMALAN | M. Night ___, director known for twist endings
+CHICAGO | Musical film of jazz-age murderesses
+SLUMDOG | ___ Millionaire, 2008 Best Picture winner
+NOCOUNTRY | ___ for Old Men, Coen thriller
+CHIGURH | Anton ___, coin-tossing killer
+ARTIST | Silent film that won Best Picture in 2012, "The ___"
+ARGO | 2012 thriller of a fake film rescue
+BIRDMAN | 2014 Best Picture with a long-take style
+SPOTLIGHT | 2015 Best Picture about investigative journalists
+MOONLIGHT | 2016 Best Picture winner announced after a mix-up
+LALALAND | Musical of a jazz pianist and an actress (2,2,4)
+GREENBOOK | 2018 Best Picture road movie (5,4)
+NOMADLAND | 2020 Best Picture of van dwellers
+CODA | 2021 Best Picture about a hearing child of deaf parents
+DUNE | Sci-fi epic of Arrakis and spice
+ARRAKIS | Desert planet of Dune
+ATREIDES | Noble house of Paul in Dune
+JOHNWICK | Hitman avenging his dog (4,4)
+MADMAX | Post-apocalyptic road warrior (3,3)
+FURIOSA | Imperator who drives the War Rig
+KNIVESOUT | Whodunit with detective Benoit Blanc (6,3)
+WHIPLASH | Drama of a jazz drummer and a ruthless teacher
+BLACKSWAN | Thriller of a ballerina (5,4)
+MARTIAN | Film of an astronaut growing potatoes on Mars, "The ___"
+ARRIVAL | Film of a linguist and alien visitors
+EXMACHINA | Film of a humanoid robot named Ava (2,7)
+THANOS | Marvel villain with the Infinity Gauntlet
+INFINITY | ___ Stones, Marvel's six gems
+PARKER | Peter ___, Spider-Man's alter ego
+KENT | Clark ___, Superman's alter ego
+LANE | Lois ___, Daily Planet reporter
+PENNYWISE | Clown of Stephen King's It
+MISERY | Stephen King thriller of an obsessed fan
+STANDBYME | Coming-of-age film of four boys (5,2,2)
+NEVERENDING | The ___ Story, fantasy film of Falkor
+FALKOR | Luckdragon of The NeverEnding Story
+INIGO | ___ Montoya, who seeks the six-fingered man
+BUTTERCUP | Heroine of The Princess Bride
+OOMPALOOMPA | Wonka's factory worker (5-6)
+CHARLIE | Boy with the golden ticket
+MATILDA | Telekinetic girl of Roald Dahl's tale
+HOMEALONE | Film of Kevin and the Wet Bandits (4,5)
+KEVIN | Boy left home alone
+BUDDY | Will Ferrell's character in Elf
+GRINCH | Who-hating creature who stole Christmas
+BAILEY | George ___, hero of It's a Wonderful Life
+BEETLEJUICE | Bio-exorcist of a Tim Burton film
+EDWARD | ___ Scissorhands
+ADDAMS | Creepy, kooky family
+MUNSTERS | Monster family sitcom, "The ___"
+CASPER | Friendly ghost
+ILOVELUCY | Classic sitcom starring Lucille Ball (1,4,4)
+LUCY | Lucille Ball's character
+HAWKEYE | Surgeon of the 4077th in M*A*S*H
+TAXI | Sitcom set in a New York cab garage
+GOLDENGIRLS | Sitcom of four Miami housemates (6,5)
+ROSEANNE | Sitcom of a working-class Illinois family
+FAMILYGUY | Animated sitcom of the Griffins (6,3)
+SOUTHPARK | Animated sitcom of four Colorado boys (5,4)
+FUTURAMA | Animated series of a delivery boy frozen until 3000
+BENDER | Robot of Futurama
+BOJACK | ___ Horseman, animated sitcom
+ARCHER | Animated spy comedy
+SCRUBS | Hospital sitcom of J.D. and Turk
+HOUSE | Medical drama of a misanthropic doctor
+SUITS | Legal drama of Harvey Specter
+COLUMBO | Rumpled detective with "just one more thing"
+KOJAK | Lollipop-sucking detective
+MAGNUM | Moustached Hawaiian private investigator
+MIAMIVICE | Pastel-suited cop show (5,4)
+TWINPEAKS | Lynch series: "Who killed Laura Palmer?" (4,5)
+WIRE | Baltimore crime drama, "The ___"
+OZARK | Drama of a family laundering money
+NARCOS | Drama about Pablo Escobar
+MONEYHEIST | Spanish drama of a mint robbery (5,5)
+DARK | German time-travel series
+LUPIN | French series of a gentleman thief
+BROADCHURCH | British crime drama of a seaside town
+BODYGUARD | BBC thriller starring Richard Madden
+VILLANELLE | Assassin of Killing Eve
+POIROT | Belgian detective with "little grey cells"
+MARPLE | Miss ___, village sleuth
+MORSE | Inspector ___, Oxford detective
+FAWLTYTOWERS | Sitcom of a hapless Torquay hotelier (6,6)
+BASIL | Fawlty of Fawlty Towers
+BLACKADDER | Rowan Atkinson's scheming historical sitcom
+MONTYPYTHON | Flying Circus comedy troupe (5,6)
+DELBOY | Peckham trader of Only Fools and Horses (3,3)
+GAVIN | ___ & Stacey, Welsh-Essex sitcom
+INBETWEENERS | Teen sitcom of four sixth-formers, "The ___"
+PEEPSHOW | Sitcom of Mark and Jeremy (4,4)
+HEISENBERG | Walter White's alias
+SAUL | Better Call ___
+SOPRANO | Tony ___, New Jersey mob boss
+DRAPER | Don ___, Mad Men's ad man
+STARK | Ned ___, Lord of Winterfell
+LANNISTER | Family that always pays its debts
+TARGARYEN | Dragon-riding dynasty of Westeros
+WESTEROS | Continent of Game of Thrones
+WINTERFELL | Seat of House Stark
+KHALEESI | Title of Daenerys
+WITCHER | Monster hunter Geralt, "The ___"
+GERALT | Witcher of Rivia
+ELEVEN | Telekinetic girl of Stranger Things
+HAWKINS | Indiana town of Stranger Things
+UPSIDEDOWN | Dark parallel world in Stranger Things
+SHOWRUNNER | Person in charge of a TV series
+PILOT | First episode of a series
+EPISODE | Single instalment of a series
+SEASON | Run of episodes
+FINALE | Last episode of a season
+MINISERIES | Short limited series
+ANTHOLOGY | Series of standalone stories
+SOAPOPERA | Long-running daytime drama (4,5)
+TELENOVELA | Latin American soap opera
+LAUGHTRACK | Recorded audience laughter (5,5)
+SKETCH | Short comic scene
+STANDUP | Solo comedy performance (5-2)
+LATENIGHT | ___ talk show (4,5)
+TALKSHOW | Programme of celebrity interviews (4,4)
+GAMESHOW | Programme where contestants win prizes (4,4)
+NEWSCAST | Broadcast of the news
+CHANNEL | TV station
+REMOTE | Device for changing channels
+PRIMETIME | Evening peak viewing (5,4)
+RERUN | Repeat broadcast
+SYNDICATION | Selling shows to other networks
+BINGEABLE | Easy to watch in one sitting
+SEVENSAMURAI | Kurosawa epic of 1954 (5,7)
+RASHOMON | Kurosawa film told from conflicting viewpoints
+YOJIMBO | Kurosawa film of a wandering ronin
+LADOLCEVITA | Fellini film of Rome's high life (2,5,4)
+BREATHLESS | Godard's 1960 New Wave film
+PERSONA | Bergman film of an actress who stops speaking
+SEVENTHSEAL | Bergman film of a chess game with Death
+OLDBOY | Korean revenge thriller of 2003
+ROMA | Cuarón's black-and-white film of 1970s Mexico City
+TENET | Nolan film of time inversion
+PRESTIGE | Nolan film of rival magicians, "The ___"
+INSOMNIA | Nolan thriller set in Alaska
+MOONRISE | ___ Kingdom, Wes Anderson film
+RUSHMORE | Wes Anderson film of Max Fischer
+JUNO | 2007 film of a pregnant teenager
+SUPERBAD | 2007 teen comedy of McLovin
+HANGOVER | Las Vegas comedy, "The ___"
+ANCHORMAN | Comedy of newsman Ron Burgundy
+ZOOLANDER | Comedy of a really, really good-looking model
+BORAT | Mockumentary of a Kazakh journalist
+AIRPLANE | 1980 disaster spoof: "Surely you can't be serious"
+GROUNDHOGDAY | Film of a weatherman reliving one day (9,3)
+TOOTSIE | Comedy of an actor posing as a woman
+MRSDOUBTFIRE | Robin Williams as a disguised nanny (3,9)
+JUMANJI | Film of a deadly jungle board game
+HOOK | Spielberg's grown-up Peter Pan film
+PADDINGTON | Marmalade-loving bear from Peru
+WONKA | Chocolatier of a 2023 musical
+ELPHABA | Green witch of Wicked
+GLINDA | Good witch of Oz
+BARNUM | Showman of The Greatest Showman
+ROCKETMAN | Biopic of Elton John
+TOPHAT | Astaire and Rogers musical of 1935 (3,3)
+MARIA | Heroine of West Side Story
+CABARET | Musical film of the Kit Kat Klub
+FUNNYGIRL | Streisand musical (5,4)
+STREISAND | Barbra ___, star of Funny Girl
+MINNELLI | Liza ___, star of Cabaret
+GARLAND | Judy ___, Dorothy in The Wizard of Oz
+POITIER | Sidney ___, first Black winner of Best Actor
+WASHINGTON | Denzel ___, star of Training Day
+FREEMAN | Morgan ___, narrator of March of the Penguins
+BERRY | Halle ___, first Black winner of Best Actress
+BLANCHETT | Cate ___, star of Tár
+MCDORMAND | Frances ___, three-time Best Actress winner
+DAYLEWIS | Daniel ___, three-time Best Actor winner (3-5)
+HOPKINS | Anthony ___, Hannibal Lecter actor
+DENCH | Judi ___, M in Bond films
+MIRREN | Helen ___, star of The Queen
+MCKELLEN | Ian ___, Gandalf actor
+OLDMAN | Gary ___, Churchill in Darkest Hour
+BALE | Christian ___, Batman of the Dark Knight trilogy
+DAMON | Matt ___, star of The Martian
+AFFLECK | Ben ___, director of Argo
+CARREY | Jim ___, star of The Mask
+MURRAY | Bill ___, star of Groundhog Day
+FERRELL | Will ___, star of Elf
+SANDLER | Adam ___, star of Happy Gilmore
+STILLER | Ben ___, star of Zoolander
+RUDD | Paul ___, star of Ant-Man
+REYNOLDS | Ryan ___, star of Deadpool
+PRATT | Chris ___, Star-Lord actor
+EVANS | Chris ___, Captain America actor
+ZEMECKIS | Robert ___, director of Back to the Future
+DELTORO | Guillermo ___, director of The Shape of Water (3,4)
+CUARON | Alfonso ___, director of Gravity
+INARRITU | Alejandro ___, director of The Revenant
+REVENANT | 2015 film of frontiersman Hugh Glass, "The ___"
+GRAVITY | 2013 film of astronauts adrift
+LIFEOFPI | Film of a boy, a boat and a tiger (4,2,2)
+WATERWORLD | 1995 film of a flooded Earth
+DIEHARD | Christmas action film at Nakatomi Plaza (3,4)
+MCCLANE | John ___, hero of Die Hard
+SPEED | 1994 film of a bus that mustn't slow down
+ARMAGEDDON | 1998 film of drillers saving Earth from an asteroid
+MENINBLACK | Alien-policing agents (3,2,5)

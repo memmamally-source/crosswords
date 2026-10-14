@@ -464,7 +464,7 @@ body.in-game .dateline { display: none; }
 .clue-nav { border: 0; background: none; width: 36px; height: 40px; font-size: 1.6rem; line-height: 1; border-radius: 999px; }
 .clue-nav:hover { background: var(--paper); }
 
-.board-wrap { position: relative; display: flex; justify-content: center; align-items: flex-start; }
+.board-wrap { position: relative; display: flex; justify-content: safe center; align-items: flex-start; overflow-x: auto; }
 .board {
   --size: 40px;
   display: grid;

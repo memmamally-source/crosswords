@@ -1,0 +1,518 @@
+# Video Games — one entry per line: ANSWER | clue
+MARIO | Moustachioed plumber who rescues Princess Peach
+ZELDA | Princess of Hyrule in Link's adventures
+SONIC | Sega's speedy blue hedgehog
+PACMAN | Yellow dot-gobbler chased by ghosts (3-3)
+TETRIS | Falling-block puzzle game created in the Soviet Union
+MINECRAFT | Block-building game created by Markus Persson
+FORTNITE | Battle royale game famous for its dance emotes
+PIKACHU | Electric yellow mascot of a monster-catching series
+CONSOLE | Gaming machine that plugs into a TV
+JOYSTICK | Lever used to steer in flight simulators
+ARCADE | Venue full of coin-operated games
+PIXEL | Tiny dot that makes up a screen image
+LEVEL | Stage of a game
+BOSS | Tough enemy waiting at the end of a stage
+RESPAWN | Come back to life after being defeated
+QUEST | Mission in a role-playing game
+SPEEDRUN | Attempt to finish a game as fast as possible
+CONTROLLER | Handheld device with buttons and thumbsticks
+NINTENDO | Japanese company behind the Switch
+PLAYSTATION | Sony's gaming system
+XBOX | Microsoft's gaming system
+KIRBY | Pink puffball who inhales enemies
+LUIGI | Taller, green-clad brother of a famous plumber
+YOSHI | Green dinosaur sidekick with a long tongue
+GLITCH | Bug that makes a game behave strangely
+MULTIPLAYER | Game mode for many people at once
+LOOT | Items collected from defeated enemies
+STEALTH | Gameplay style built on sneaking past enemies
+ROBLOX | Online platform where players build their own games
+CREEPER | Green mob that explodes in a block-building game
+CROFT | Lara ___, tomb-raiding adventurer
+HALO | Sci-fi shooter starring Master Chief
+POKEBALL | Red-and-white capsule for catching monsters
+HITPOINTS | Health total in many games, abbreviated HP (3,6)
+ACHIEVEMENT | Badge earned for completing an in-game challenge
+CHECKPOINT | Saved spot where you restart after losing a life
+SANDBOX | Open-ended genre with no set path
+POWERUP | Item that temporarily boosts your abilities (5-2)
+AMONGUS | Social deduction game about finding the impostor (5,2)
+DONKEYKONG | Barrel-throwing ape who debuted in 1981 (6,4)
+NPC | Character controlled by the computer (abbr.)
+TUTORIAL | Opening section that teaches the controls
+LOBBY | Waiting area before an online match begins
+CRAFTING | Combining items to make new ones
+HEADSHOT | Precise hit in a shooter
+MODS | Fan-made changes to a game
+LINK | Green-clad hero of Hyrule
+HYRULE | Kingdom of The Legend of Zelda
+GANON | Pig-like villain of Zelda
+TRIFORCE | Golden triangles of power in Zelda
+MASTERSWORD | Link's legendary blade (6,5)
+PEACH | Mushroom Kingdom princess
+BOWSER | Spiked-shell king of the Koopas
+TOAD | Mushroom-headed retainer of Princess Peach
+WARIO | Mario's greedy yellow-clad rival
+WALUIGI | Luigi's lanky rival
+DIDDY | ___ Kong, Donkey Kong's nephew
+KOOPA | Turtle-like Mario enemy
+GOOMBA | Mushroom-like Mario enemy
+FIREFLOWER | Mario power-up that throws fireballs
+STARMAN | Invincibility star of Mario
+WARPPIPE | Green tube for travel in Mario (4,4)
+SAMUS | Bounty hunter of Metroid
+METROID | Nintendo series of Samus Aran
+STARFOX | Nintendo space shooter (4,3)
+SPLATOON | Nintendo ink-shooting game
+ANIMALCROSSING | Life simulation game of a village of animals (6,8)
+TOMNOOK | Raccoon shopkeeper of Animal Crossing (3,4)
+ISABELLE | Shih Tzu assistant in Animal Crossing
+VILLAGER | Resident of a town in many games
+CHARMANDER | Fire-type starter Pokémon
+SQUIRTLE | Water-type starter Pokémon
+BULBASAUR | Grass-type starter Pokémon
+MEWTWO | Genetically engineered Psychic Pokémon
+EEVEE | Pokémon with many evolutions
+JIGGLYPUFF | Singing balloon Pokémon
+SNORLAX | Sleepy giant Pokémon
+GYARADOS | Fierce evolution of Magikarp
+MAGIKARP | Famously useless fish Pokémon
+POKEDEX | Encyclopaedia of Pokémon
+GYM | Pokémon battle venue with a leader
+ASH | Ketchum, Pokémon trainer of the anime
+TAILS | Sonic's two-tailed fox friend
+KNUCKLES | Echidna rival of Sonic
+ROBOTNIK | Doctor Eggman's original name
+EGGMAN | Doctor ___, Sonic's nemesis
+RING | Gold collectible in Sonic
+SPYRO | Purple dragon of PlayStation
+CRASH | ___ Bandicoot, PlayStation mascot
+RATCHET | Lombax mechanic paired with Clank
+CLANK | Robot companion of Ratchet
+KRATOS | Spartan god-slayer
+NATHAN | First name of Uncharted's Drake
+UNCHARTED | Treasure-hunting series of Nathan Drake
+JOEL | Smuggler of The Last of Us
+ELLIE | Teenage survivor of The Last of Us
+CLICKER | Fungus-infected enemy of The Last of Us
+ALOY | Huntress of Horizon Zero Dawn
+MASTERCHIEF | Spartan hero of Halo (6,5)
+CORTANA | AI companion of Master Chief
+GEARS | ___ of War, Xbox shooter
+FABLE | Xbox role-playing series set in Albion
+FORZA | Xbox racing series
+STEVE | Default hero of Minecraft
+ENDERMAN | Tall teleporting Minecraft mob
+NETHER | Fiery dimension of Minecraft
+REDSTONE | Minecraft's circuit-building material
+BIOME | Region type such as desert or taiga in Minecraft
+DIAMONDS | Precious Minecraft ore
+BATTLEBUS | Flying vehicle in Fortnite (6,3)
+STORM | Shrinking danger zone in battle royales
+BATTLEROYALE | Last-player-standing genre (6,6)
+APEX | ___ Legends, battle royale shooter
+OVERWATCH | Blizzard hero shooter
+VALORANT | Riot tactical shooter
+COUNTERSTRIKE | Tactical shooter of terrorists and counter-terrorists
+WARZONE | Battle royale mode of Call of Duty
+DOOM | 1993 shooter set on Mars's moons
+QUAKE | id Software's 1996 shooter
+WOLFENSTEIN | Shooter of escaping a Nazi castle
+HALFLIFE | Valve shooter of Gordon Freeman (4-4)
+GORDON | ___ Freeman, crowbar-wielding physicist
+PORTAL | Puzzle game of a two-ended gun
+GLADOS | Cake-promising AI of Portal
+CAKE | Thing that is a lie in Portal
+VALVE | Company behind Steam
+STEAM | PC game store and platform
+EPIC | ___ Games, maker of Fortnite
+BLIZZARD | Maker of World of Warcraft
+WARCRAFT | Blizzard fantasy series of orcs and humans
+AZEROTH | World of Warcraft's world
+DIABLO | Blizzard's demonic dungeon crawler
+STARCRAFT | Blizzard sci-fi strategy game
+ZERG | Swarming alien race of StarCraft
+DOTA | Defense of the Ancients (abbr.)
+MOBA | Multiplayer online battle arena (abbr.)
+SKYRIM | Fifth Elder Scrolls game
+DOVAHKIIN | Dragonborn hero of Skyrim
+OBLIVION | Fourth Elder Scrolls game
+FALLOUT | Post-apocalyptic RPG series of vaults
+VAULTBOY | Thumbs-up mascot of Fallout (5,3)
+PIPBOY | Wrist computer of Fallout (3-3)
+CYBERPUNK | Night City RPG
+ELDENRING | FromSoftware open-world game (5,4)
+DARKSOULS | Notoriously hard action RPG (4,5)
+BLOODBORNE | Gothic action RPG of Yharnam
+SEKIRO | FromSoftware game of a shinobi
+SOULSLIKE | Genre of punishing difficulty
+CLOUD | Spiky-haired hero of Final Fantasy VII
+SEPHIROTH | One-winged villain of Final Fantasy VII
+CHOCOBO | Rideable bird of Final Fantasy
+MOOGLE | Pom-pom creature of Final Fantasy
+SLIME | Blob enemy of Dragon Quest
+PERSONA | Japanese RPG series of high school students
+SNAKE | Codename of Metal Gear's hero
+BIOHAZARD | Japanese title of Resident Evil
+HADOUKEN | Ryu's fireball move
+FATALITY | Finishing move in Mortal Kombat
+TEKKEN | Fighting game of the Mishima family
+COMBO | Chain of attacks
+TETROMINO | Four-square Tetris piece
+BLINKY | Red ghost of Pac-Man
+INKY | Cyan ghost of Pac-Man
+PINKY | Pink ghost of Pac-Man
+CLYDE | Orange ghost of Pac-Man
+ASTEROIDS | Atari arcade game of a spaceship and rocks
+GALAGA | Arcade shooter of insect-like aliens
+FROGGER | Arcade game of crossing a road
+DIGDUG | Arcade game of inflating enemies (3,3)
+LEMMINGS | Puzzle game of saving suicidal rodents
+SIMCITY | City-building simulation (3,4)
+SIMS | Life simulation of Plumbob-topped people, "The ___"
+PLUMBOB | Green diamond above a Sim's head
+SIMOLEON | Currency of The Sims
+CIVILIZATION | Turn-based strategy of building an empire
+STARDEW | ___ Valley, farming game
+TERRARIA | 2D sandbox adventure
+UNDERTALE | Indie RPG where no one has to die
+HOLLOWKNIGHT | Indie metroidvania of Hallownest (6,6)
+CELESTE | Platformer about climbing a mountain
+HADES | Roguelike of Zagreus escaping the underworld
+CUPHEAD | Run-and-gun game in 1930s cartoon style
+BRAID | Indie puzzle platformer about time
+LIMBO | Monochrome indie platformer
+INSIDE | Dark puzzle platformer from the makers of Limbo
+JOURNEY | Wordless game of crossing a desert
+FIREWATCH | Game of a fire lookout in Wyoming
+IMPOSTOR | Saboteur in Among Us
+ROCKETLEAGUE | Car football game (6,6)
+MADDEN | American football video game series
+GUITARHERO | Game of a plastic guitar controller (6,4)
+GAMECUBE | Nintendo's cube-shaped console
+SWITCH | Nintendo hybrid console
+DREAMCAST | Sega's last console
+MEGADRIVE | Sega console called Genesis in the US (4,5)
+GENESIS | North American name of the Mega Drive
+STEAMDECK | Valve handheld PC (5,4)
+GAMEPAD | Handheld controller
+TRIGGER | Shoulder button for firing
+THUMBSTICK | Analogue stick on a controller
+RUMBLE | Controller vibration
+CARTRIDGE | Plug-in game cassette
+SAVEPOINT | Spot where progress is stored (4,5)
+CUTSCENE | Non-interactive story sequence
+SIDEQUEST | Optional mission (4,5)
+FETCHQUEST | Mission to retrieve items (5,5)
+GRIND | Repetitive play to level up
+LEVELUP | Gain a level (5,2)
+SKILLTREE | Branching set of upgrades (5,4)
+INVENTORY | Player's carried items
+MANA | Magic points
+POTION | Drink that restores health
+LOOTBOX | Randomised paid reward (4,3)
+EXPANSION | Large add-on to a game
+PATCH | Update that fixes bugs
+NERF | Weaken an overpowered feature
+BUFF | Strengthen a character or ability
+NOOB | Inexperienced player
+NEWBIE | Beginner
+PWNED | Thoroughly defeated, in gamer slang
+LAG | Delay caused by a slow connection
+PING | Network latency
+CAMPER | Player who hides in one spot
+SNIPER | Long-range shooter class
+TANK | Player who soaks up damage
+HEALER | Support class who restores health
+AGGRO | Enemy attention
+SPAWN | Appear in a game world
+HITBOX | Area that registers hits
+FRAMERATE | Frames displayed per second
+GRAPHICS | Visuals of a game
+PIXELART | Retro blocky visual style (5,3)
+OPENWORLD | Game with a freely explorable map (4,5)
+ROGUELIKE | Genre of permanent death and random levels
+METROIDVANIA | Exploration genre named after two series
+PLATFORMER | Genre of jumping between ledges
+SHOOTER | Genre of gunplay
+SURVIVAL | Genre of scavenging and crafting
+PUZZLE | Genre of brain-teasers
+SIMULATOR | Game imitating a real activity
+RACING | Genre of driving fast
+FIGHTING | Genre of one-on-one combat
+RHYTHM | Genre of hitting notes in time
+IDLE | ___ game, which plays itself
+GACHA | Game with randomised character draws
+GENSHIN | ___ Impact, open-world gacha RPG
+COOP | Playing on the same team as friends (2-2)
+SERVER | Computer hosting an online game
+CLAN | Organised group of players
+GUILD | Player association in an MMO
+RAID | Group assault on a powerful enemy
+DUNGEON | Enemy-filled underground level
+OVERWORLD | Main map connecting levels
+EASTEREGG | Hidden secret in a game (6,3)
+KONAMICODE | Up, up, down, down... cheat (6,4)
+HIGHSCORE | Best result (4,5)
+GAMEOVER | End screen of a game (4,4)
+CONTINUE | Option to keep playing after losing
+ONEUP | Extra life (3-2)
+BOSSFIGHT | Battle with a major enemy (4,5)
+MINIBOSS | Lesser boss partway through a level
+LETSPLAY | Video of someone playing a game (4,4)
+GAMER | Person who plays video games
+HEADSET | Headphones with a microphone
+OCULUS | Early VR headset brand
+BEATSABER | VR rhythm game of slicing blocks (4,5)
+GRANDTHEFTAUTO | Crime series set in cities like Los Santos (5,5,4)
+LOSSANTOS | Los Angeles-inspired city of GTA (3,6)
+VICECITY | Miami-inspired GTA setting (4,4)
+REDDEAD | ___ Redemption, Western series (3,4)
+ARTHURMORGAN | Outlaw hero of Red Dead Redemption 2 (6,6)
+ROCKSTAR | Studio behind Grand Theft Auto
+EZIO | Florentine assassin of Assassin's Creed II
+ANIMUS | Machine that relives ancestral memories
+UBISOFT | French publisher of Assassin's Creed
+TOMBRAIDER | Series of Lara Croft (4,6)
+BIOSHOCK | Shooter set in the undersea city of Rapture
+RAPTURE | Underwater city of BioShock
+BIGDADDY | Diving-suited protector of BioShock (3,5)
+MASSEFFECT | Sci-fi RPG series of Commander Shepard (4,6)
+SHEPARD | Commander of Mass Effect
+NORMANDY | Starship of Mass Effect
+BIOWARE | Studio behind Mass Effect
+DICE | Rolled to decide outcomes in tabletop games
+TRAINER | Pokémon battler
+BADGE | Award for beating a Pokémon gym
+EVOLUTION | Pokémon transformation into a stronger form
+LEGENDARY | Rare and powerful Pokémon category
+SHINY | Rare differently coloured Pokémon
+PALLET | ___ Town, Ash's hometown
+KANTO | First Pokémon region
+TEAMROCKET | Pokémon villains Jessie, James and Meowth (4,6)
+MEOWTH | Talking cat Pokémon of Team Rocket
+PSYDUCK | Headache-prone duck Pokémon
+LUCARIO | Aura-sensing Fighting and Steel Pokémon
+GENGAR | Grinning Ghost-type Pokémon
+DITTO | Pokémon that transforms into others
+ONIX | Rock snake Pokémon
+CHARIZARD | Fire-breathing dragon Pokémon
+DEDEDE | King of Dream Land in Kirby
+METAKNIGHT | Masked swordsman of Kirby (4,6)
+DAISY | Princess of Sarasaland
+ROSALINA | Princess of the Comet Observatory
+BOO | Shy ghost of Mario games
+SHYGUY | Masked Mario enemy (3,3)
+LAKITU | Cloud-riding Koopa
+BLOOPER | Squid enemy of Mario
+CHAINCHOMP | Ball-and-chain Mario enemy (5,5)
+KOOPALINGS | Bowser's seven minions
+MIYAMOTO | Shigeru ___, creator of Mario and Zelda
+KOJIMA | Hideo ___, creator of Metal Gear
+IWATANI | Toru ___, creator of Pac-Man
+PAJITNOV | Alexey ___, creator of Tetris
+NOTCH | Creator of Minecraft, Markus Persson
+WRIGHT | Will ___, creator of The Sims
+MEIER | Sid ___, creator of Civilization
+CARMACK | John ___, programmer of Doom
+ROMERO | John ___, co-creator of Doom
+NEWELL | Gabe ___, Valve co-founder
+SAKURAI | Masahiro ___, creator of Kirby and Smash Bros.
+CAPCOM | Japanese publisher of Street Fighter
+KONAMI | Japanese publisher of Metal Gear
+NAMCO | Japanese publisher of Pac-Man
+BANDAI | Toy maker merged with Namco
+TAITO | Japanese publisher of Space Invaders
+ACTIVISION | Publisher of Call of Duty
+BETHESDA | Publisher of Fallout and Skyrim
+RIOT | ___ Games, maker of League of Legends
+MOJANG | Swedish studio behind Minecraft
+SUPERCELL | Finnish maker of Clash of Clans
+INSOMNIAC | Studio behind Spider-Man and Ratchet & Clank
+SONY | Maker of PlayStation
+MICROSOFT | Maker of Xbox
+VIRTUALBOY | Nintendo's red 3D headset of 1995 (7,3)
+GAMEGEAR | Sega's colour handheld (4,4)
+MAGNAVOX | ___ Odyssey, first home console
+ODYSSEY | First home video game console
+PINBALL | Flipper-based arcade game
+FLIPPER | Paddle in pinball
+TILT | Pinball penalty for shaking too hard
+PACHINKO | Japanese pinball-like gambling game
+TOKEN | Coin used in arcades
+JOYPAD | Game controller
+WIIMOTE | Motion-sensing Nintendo remote
+KINECT | Xbox motion sensor camera
+EYETOY | PlayStation 2 camera accessory
+ZAPPER | NES light gun used in Duck Hunt
+EXCITEBIKE | NES motocross game
+CONTRA | Run-and-gun game famous for the Konami Code
+MEGAMAN | Blue robot hero of Capcom (4,3)
+CASTLEVANIA | Vampire-hunting series of the Belmonts
+BELMONT | Family of vampire hunters
+SIMON | ___ Belmont, whip-wielding hunter
+ALUCARD | Dracula's son in Castlevania
+EARTHBOUND | Quirky Nintendo RPG of Ness
+NESS | Baseball-capped hero of EarthBound
+FIREEMBLEM | Tactical RPG series (4,6)
+XENOBLADE | Nintendo RPG series
+PIKMIN | Tiny plant creatures led by Olimar
+OLIMAR | Captain who commands Pikmin
+POLTERGUST | Luigi's ghost-catching vacuum
+WARIOWARE | Microgame series
+NINTENDOGS | DS game of virtual puppies
+BANJO | ___-Kazooie, bear-and-bird platformer
+KAZOOIE | Red bird partner of Banjo
+CONKER | Foul-mouthed squirrel of Rare
+GOLDENEYE | 1997 Bond shooter on the N64
+RARE | British studio behind GoldenEye
+SHADOW | Black hedgehog rival of Sonic
+CHAO | Virtual pets of Sonic Adventure
+CRAZYTAXI | Sega arcade game of reckless driving (5,4)
+OUTRUN | Sega racing game of a Ferrari convertible
+SHENMUE | Sega adventure of Ryo Hazuki
+YAKUZA | Sega crime series of Kazuma Kiryu
+KIRYU | Dragon of Dojima in Yakuza
+JOKER | Phantom Thief leader of Persona 5
+NIER | ___: Automata, action RPG of androids
+BAYONETTA | Witch of a Platinum Games action series
+DANTE | Demon hunter of Devil May Cry
+OKAMI | Game of the sun goddess as a white wolf
+AMATERASU | Wolf goddess heroine of Okami
+KATAMARI | Game of rolling up everything
+PATAPON | Rhythm game of tiny warriors
+DAXTER | Ottsel sidekick of Jak
+SLY | ___ Cooper, raccoon thief
+SACKBOY | Knitted hero of LittleBigPlanet
+KILLZONE | PlayStation shooter series
+RESISTANCE | PlayStation shooter series of the Chimera
+INFAMOUS | PlayStation superhero series
+RETURNAL | Sci-fi roguelike of Selene
+HORIZON | ___ Zero Dawn, game of robot dinosaurs
+ARKHAM | Batman game series set in an asylum
+TELLTALE | Studio of choice-driven adventures
+DETROIT | ___: Become Human, android drama
+OUTLAST | First-person horror game in an asylum
+AMNESIA | ___: The Dark Descent, horror game
+PHASMOPHOBIA | Co-op ghost-hunting game
+ANIMATRONIC | Robot character of Five Nights at Freddy's
+VALHEIM | Viking survival game
+RUST | Survival game of raiding bases
+SUBNAUTICA | Underwater survival game
+ELITE | ___ Dangerous, space trading game
+KERBAL | ___ Space Program, rocket-building sim
+FACTORIO | Factory automation game
+SATISFACTORY | 3D factory-building game
+RIMWORLD | Colony simulation game
+TOTALWAR | Strategy series of real-time battles (5,3)
+HEARTHSTONE | Blizzard digital card game
+MAGIC | ___: The Gathering, trading card game
+SOLITAIRE | Card game bundled with Windows
+MINESWEEPER | Windows puzzle of hidden mines
+FLAPPYBIRD | Frustrating 2013 mobile game (6,4)
+FRUITNINJA | Mobile game of slicing fruit (5,5)
+PEASHOOTER | Plant that fires peas at zombies
+WORMS | Turn-based artillery game of invertebrates
+OUTERWILDS | Space exploration game of a time loop (5,5)
+DISCOELYSIUM | Detective RPG of Revachol (5,7)
+BALATRO | Poker-themed roguelike of 2024
+DEADCELLS | Roguevania of a headless hero (4,5)
+ISAAC | The Binding of ___
+SPELUNKY | Cave-exploring roguelike
+INSCRYPTION | Card-based horror puzzle game
+UNPACKING | Game of putting belongings away
+STRAY | Game of a cat in a cyberpunk city
+TUNIC | Game of a fox in an isometric world
+GRIS | Watercolour platformer about grief
+ORI | Spirit guardian of Blind Forest
+ASTRONEER | Space survival sandbox
+MODDING | Making fan alterations to games
+SPRITE | 2D character image in a game
+POLYGON | Flat shape used to build 3D models
+TEXTURE | Image wrapped onto a 3D model
+SHADER | Program that colours pixels
+RENDER | Draw a frame
+RAYTRACING | Realistic lighting technique (3,7)
+ENGINE | Software framework for building games
+UNREAL | Epic's game engine
+UNITY | Popular cross-platform game engine
+GODOT | Open-source game engine
+PHYSICS | Simulation of motion and collisions
+RAGDOLL | Floppy physics for falling characters
+MINIMAP | Small map in the corner of the screen
+CROSSHAIR | Aiming reticle
+THIRDPERSON | Camera view from behind the character (5,6)
+FIRSTPERSON | Camera view through the character's eyes (5,6)
+ISOMETRIC | Angled overhead view
+SIDESCROLLER | Game viewed from the side as it moves along
+TOPDOWN | Viewed from directly above (3-4)
+TWINSTICK | Shooter controlled with two analogue sticks
+QUICKTIME | ___ event, prompt to press a button in time
+PERMADEATH | Death that can't be undone
+HARDCORE | Mode with tougher rules
+DIFFICULTY | Setting such as easy or hard
+TROPHIES | PlayStation achievements
+COMPLETIONIST | Player who finishes everything
+COLLECTIBLE | Hidden item to find
+SKIN | Cosmetic outfit for a character
+COSMETIC | Item that changes looks but not power
+BATTLEPASS | Seasonal reward track (6,4)
+EARLYACCESS | Paid play before full release (5,6)
+BETA | Test version before release
+ALPHA | Earliest test version
+DEMO | Free sample of a game
+PREORDER | Buy before release (3-5)
+REMASTER | Updated re-release
+REMAKE | Rebuilt version of an old game
+PORT | Conversion to another platform
+EMULATOR | Software that imitates old consoles
+SPEEDRUNNER | Player racing to finish fastest
+SPLIT | Time marker in a speedrun
+SKIP | Shortcut that bypasses part of a game
+CLIP | Pass through a wall due to a bug
+SOFTLOCK | Stuck state with no way forward
+STUTTER | Uneven frame pacing
+ENDING | Final scene of a game
+POSTGAME | Content after the main story
+SEQUEL | Follow-up game
+CROSSOVER | Game mixing characters from different series
+MASCOT | Character representing a company
+LORE | Background story of a game world
+WORLDBUILDING | Crafting a game's setting and history
+NARRATIVE | Story of a game
+CHOICE | Decision that branches the story
+MORALITY | ___ system, tracking good and evil choices
+KARMA | Reputation for good or bad deeds in some RPGs
+FACTION | Group a player can join
+REPUTATION | Standing with a faction
+WORKBENCH | Station for building items
+FORGE | Place for smithing weapons
+ENCHANT | Add magical properties to gear
+GEAR | Equipment worn by a character
+ARMOUR | Protective equipment
+WEAPON | Sword, bow or gun
+SHIELD | Blocking equipment
+BOW | Ranged weapon with arrows
+STAFF | Mage's weapon
+WAND | Small magic stick
+RELIC | Ancient powerful item
+ARTIFACT | Rare magical item
+ORB | Glowing sphere of power
+GEM | Precious stone to collect
+COIN | Basic currency in many games
+RUPEE | Currency of Zelda
+BELLS | Currency of Animal Crossing
+VBUCKS | Fortnite currency
+ROBUX | Roblox currency
+TREASURE | Hidden riches
+CHEST | Box holding loot
+KEY | Item that opens a locked door
+MAP | Chart of a game world
+COMPASS | Item pointing the way
+FASTTRAVEL | Instant movement between places (4,6)
+MOUNT | Rideable creature
+EPONA | Link's horse
+ROACH | Geralt's horse
+AGRO | Wander's horse in Shadow of the Colossus
+COLOSSUS | Giant creature of a Team Ico game

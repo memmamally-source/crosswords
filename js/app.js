@@ -101,7 +101,7 @@
       kicker: `The Daily · ${sched.level}`,
       title: longDate(date),
       meta: `${sched.count} clues · drawn from ${DAILY_SUBJECTS} academic subjects`,
-      bank: rotatingPool(DAILY_BANK, day, 80, 1).filter((w) => w.answer.length <= sched.maxLen),
+      bank: rotatingPool(DAILY_BANK, day, DAILY_WINDOW, 1).filter((w) => w.answer.length <= sched.maxLen),
       count: sched.count,
       maxSize: sched.maxSize,
       seed: day * 31 + 7,
@@ -119,7 +119,7 @@
       kicker: 'The Mini',
       title: longDate(date),
       meta: `${MINI_CONFIG.count} clues · a quick warm-up`,
-      bank: rotatingPool(MINI_BANK, day, 30, 2),
+      bank: rotatingPool(MINI_BANK, day, MINI_WINDOW, 2),
       count: MINI_CONFIG.count,
       maxSize: MINI_CONFIG.maxSize,
       seed: day * 17 + 3,
@@ -186,7 +186,7 @@
       store.seen[genre.id] = [...seen];
       unseen = all.filter((i) => !seen.has(genre.words[i].answer));
     }
-    let pool = shuffled(unseen).slice(0, 80);
+    let pool = shuffled(unseen).slice(0, Math.max(80, cfg.count * 5));
     const spare = shuffled(all.filter((i) => !pool.includes(i)));
     let best = null;
     for (let attempt = 0; attempt < 8; attempt++) {
@@ -502,7 +502,7 @@
 
     const save = store.saves[spec.key];
     const solve = store.solves[spec.key];
-    if (save && save.entries && save.entries.length === rows) {
+    if (save && fitsPuzzle(save, puzzle)) {
       game.entries = save.entries;
       game.revealed = save.revealed || game.revealed;
       game.pencil = save.pencil || game.pencil;
@@ -535,12 +535,22 @@
     $('#win-dialog').open && $('#win-dialog').close();
   }
 
+  // A grid's shape as a string, so saved progress is only restored onto the
+  // same layout (layouts change when the word lists or puzzle sizes do).
+  const layoutSig = (puzzle) => puzzle.solution.map((row) => row.map((ch) => (ch ? '#' : '.')).join('')).join('/');
+  function fitsPuzzle(save, puzzle) {
+    if (!save.entries || save.entries.length !== puzzle.rows) return false;
+    if (save.sig) return save.sig === layoutSig(puzzle);
+    return save.entries.every((row, r) => row.length === puzzle.cols && row.every((ch, c) => !ch || puzzle.solution[r][c]));
+  }
+
   function persist() {
     if (!game) return;
     if (game.solved) {
       delete store.saves[game.spec.key];
     } else if (game.entries.some((row) => row.some(Boolean)) || store.saves[game.spec.key]) {
       store.saves[game.spec.key] = {
+        sig: layoutSig(game.puzzle),
         entries: game.entries,
         revealed: game.revealed,
         pencil: game.pencil,
@@ -677,7 +687,10 @@
     const kb = $('#keyboard').offsetHeight ? $('#keyboard').offsetHeight + 24 : 0;
     const availH = Math.max(wide ? 360 : 240, window.innerHeight - top - kb - 24);
     const cap = game.spec.kind === 'mini' ? 72 : 52;
-    const size = Math.max(18, Math.min(cap, Math.floor((availW - 4) / cols), Math.floor(availH / rows)));
+    // Big grids may run past the window's height rather than shrink below a
+    // comfortable size; on narrow phones they scroll sideways if needed.
+    const fitH = Math.max(Math.floor(availH / rows), Math.min(28, cap));
+    const size = Math.max(14, Math.min(cap, Math.floor((availW - 4) / cols), fitH));
     $('#board').style.setProperty('--size', size + 'px');
   }
   window.addEventListener('resize', sizeBoard);

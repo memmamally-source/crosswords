@@ -41,6 +41,7 @@
   class Board {
     constructor(maxSize) {
       this.cells = new Map(); // key -> { ch, across, down }
+      this.byLetter = new Map(); // letter -> [[r, c], ...]
       this.placed = [];
       this.maxSize = maxSize;
       this.minR = 0; this.maxR = -1; this.minC = 0; this.maxC = -1;
@@ -90,9 +91,14 @@
         const rr = r + dr * i;
         const cc = c + dc * i;
         const k = key(rr, cc);
-        const cell = this.cells.get(k) || { ch: word[i], across: false, down: false };
+        let cell = this.cells.get(k);
+        if (!cell) {
+          cell = { ch: word[i], across: false, down: false };
+          this.cells.set(k, cell);
+          if (!this.byLetter.has(cell.ch)) this.byLetter.set(cell.ch, []);
+          this.byLetter.get(cell.ch).push([rr, cc]);
+        }
         cell[dir] = true;
-        this.cells.set(k, cell);
       }
       const endR = r + dr * (word.length - 1);
       const endC = c + dc * (word.length - 1);
@@ -114,10 +120,9 @@
     // All legal positions for a word that cross an existing letter.
     candidates(word) {
       const out = [];
-      for (const [k, cell] of this.cells) {
-        const [r, c] = k.split(',').map(Number);
-        for (let i = 0; i < word.length; i++) {
-          if (word[i] !== cell.ch) continue;
+      for (let i = 0; i < word.length; i++) {
+        for (const [r, c] of this.byLetter.get(word[i]) || []) {
+          const cell = this.get(r, c);
           for (const dir of ['across', 'down']) {
             if (cell[dir]) continue;
             const { dr, dc } = DIRS[dir];
@@ -132,7 +137,30 @@
     }
   }
 
-  function buildAttempt(bank, count, maxSize, rng) {
+  // Answers from the bank that a clue mentions: single words (and simple
+  // plurals) plus two- and three-word runs, since answers drop their spaces.
+  function mentionedAnswers(entry, answers) {
+    const words = entry.clue
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toUpperCase()
+      .split(/[^A-Z]+/)
+      .filter(Boolean);
+    const found = new Set();
+    const consider = (w) => {
+      for (const form of [w, w.replace(/ES$/, ''), w.replace(/S$/, '')]) {
+        if (form.length >= 3 && form !== entry.answer && answers.has(form)) found.add(form);
+      }
+    };
+    words.forEach((w, i) => {
+      consider(w);
+      if (i + 1 < words.length) consider(w + words[i + 1]);
+      if (i + 2 < words.length) consider(w + words[i + 1] + words[i + 2]);
+    });
+    return [...found];
+  }
+
+  function buildAttempt(bank, answers, count, maxSize, rng) {
     // Favour longer words first (they give later words more to hook onto),
     // with some randomness so each puzzle feels different.
     // Large banks (the mixed genres) are sampled so each attempt stays fast.
@@ -141,11 +169,24 @@
       .map((e) => ({ e, w: Math.min(e.answer.length, 8) + rng() * 4 }))
       .sort((a, b) => b.w - a.w)
       .map((x) => x.e);
+    pool.forEach((e) => {
+      if (!e.mentions) e.mentions = mentionedAnswers(e, answers);
+    });
 
     const board = new Board(maxSize);
     const first = pool.find((e) => e.answer.length <= maxSize);
     if (!first) return board;
-    board.place(first, 0, 0, rng() < 0.5 ? 'across' : 'down');
+    // A clue must never give away another answer in the same puzzle, so two
+    // entries are kept apart when either one's clue mentions the other.
+    const placedAnswers = new Set();
+    const blocked = new Set();
+    const allowed = (e) => !blocked.has(e.answer) && !e.mentions.some((a) => placedAnswers.has(a));
+    const place = (e, r, c, dir) => {
+      board.place(e, r, c, dir);
+      placedAnswers.add(e.answer);
+      e.mentions.forEach((a) => blocked.add(a));
+    };
+    place(first, 0, 0, rng() < 0.5 ? 'across' : 'down');
 
     let remaining = pool.filter((e) => e !== first);
     // Several passes: words that didn't fit early may fit once the grid grows.
@@ -153,6 +194,7 @@
       const skipped = [];
       for (const entry of remaining) {
         if (board.placed.length >= count) break;
+        if (!allowed(entry)) continue;
         const options = board.candidates(entry.answer);
         if (!options.length) {
           skipped.push(entry);
@@ -174,7 +216,7 @@
             best = o;
           }
         }
-        board.place(entry, best.r, best.c, best.dir);
+        place(entry, best.r, best.c, best.dir);
       }
       remaining = skipped;
     }
@@ -243,11 +285,12 @@
         tag: e.tag,
       }))
       .filter((e) => e.answer.length >= 3);
+    const answers = new Set(clean.map((e) => e.answer));
 
     let best = null;
     let bestScore = -Infinity;
     for (let i = 0; i < opts.attempts; i++) {
-      const board = buildAttempt(clean, opts.count, opts.maxSize, rng);
+      const board = buildAttempt(clean, answers, opts.count, opts.maxSize, rng);
       const crossings = [...board.cells.values()].filter((c) => c.across && c.down).length;
       const score = board.placed.length * 1000 + crossings * 10 - board.area();
       if (score > bestScore) {
@@ -281,7 +324,7 @@
     return order.slice(slot * size, slot * size + size).map((i) => bank[i]);
   }
 
-  const api = { generate, mulberry32, rotatingPool };
+  const api = { generate, mulberry32, rotatingPool, mentionedAnswers };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CrosswordGenerator = api;
 })(typeof window !== 'undefined' ? window : globalThis);

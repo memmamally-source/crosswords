@@ -1,0 +1,501 @@
+# Chemistry — one entry per line: ANSWER | clue
+ELEMENT | Substance that can't be broken down chemically
+COMPOUND | Substance like water, made of bonded atoms of different kinds
+NOBLEGAS | Unreactive gas such as neon or argon (5,3)
+HALOGEN | Group 17 member such as chlorine
+ALKANE | Saturated hydrocarbon such as methane
+BENZENE | Six-carbon aromatic ring
+POLYMER | Long chain of repeating units, like nylon
+OXIDATION | Loss of electrons
+REDUCTION | Gain of electrons
+ELECTROLYSIS | Splitting a substance using an electric current
+MOLE | SI unit of amount of substance
+AVOGADRO | Italian whose constant is about 6.022 × 10²³
+MENDELEEV | Russian who arranged the periodic table in 1869
+VALENCE | Combining capacity of an atom
+COVALENT | Kind of bond formed by sharing electron pairs
+IONIC | Kind of bond formed by transferring electrons
+CATION | Positively charged ion
+ANION | Negatively charged ion
+ISOMER | Molecule with the same formula but a different structure
+SOLVENT | Liquid that dissolves a solute
+PRECIPITATE | Solid that falls out of a solution
+DISTILLATION | Separating liquids by their boiling points
+ENTHALPY | Heat content of a system
+ENTROPY | Measure of disorder
+EXOTHERMIC | Releasing heat
+BUFFER | Solution that resists changes in pH
+SODIUM | Na on the periodic table
+POTASSIUM | K on the periodic table
+MERCURY | Liquid metal with the symbol Hg
+TUNGSTEN | Metal with the highest melting point, symbol W
+HELIUM | Second-lightest gas on the periodic table
+NITROGEN | Gas that makes up about 78% of the air
+ALLOY | Mixture of metals, such as bronze
+CRYSTAL | Solid with a regular repeating lattice
+REAGENT | Substance used to bring about a reaction
+BUNSEN | ___ burner, a lab gas heater
+PIPETTE | Slim tube for measuring small volumes of liquid
+BEAKER | Lab glass with a lip for pouring
+ESTER | Fruity-smelling product of an acid and an alcohol
+CURIE | Marie ___, discoverer of polonium and radium
+LAVOISIER | Frenchman called the father of modern chemistry
+HYDROGEN | Element H, the most abundant in the universe
+LITHIUM | Element Li, used in rechargeable batteries
+BERYLLIUM | Element Be, a light but toxic metal
+BORON | Element B, used in heat-resistant glass
+CARBON | Element C, basis of organic chemistry
+OXYGEN | Element O, needed for combustion
+FLUORINE | Element F, the most electronegative
+NEON | Element Ne, glowing in signs
+MAGNESIUM | Element Mg, burning with a white flame
+ALUMINIUM | Element Al, the most abundant metal in Earth's crust
+SILICON | Element Si, the basis of microchips
+PHOSPHORUS | Element P, found in matches
+SULFUR | Element S, once called brimstone
+CHLORINE | Element Cl, a greenish disinfecting gas
+ARGON | Element Ar, the most common noble gas in air
+CALCIUM | Element Ca, essential for bones
+SCANDIUM | Element Sc, a rare light metal
+TITANIUM | Element Ti, strong and corrosion-resistant
+VANADIUM | Element V, used to toughen steel
+CHROMIUM | Element Cr, used for plating
+MANGANESE | Element Mn, added to steel
+IRON | Element Fe, the main part of steel
+COBALT | Element Co, giving a deep blue colour
+NICKEL | Element Ni, a magnetic metal used in coins
+COPPER | Element Cu, used in electrical wiring
+ZINC | Element Zn, used to galvanise steel
+GALLIUM | Element Ga, melting in the hand
+GERMANIUM | Element Ge, an early semiconductor
+ARSENIC | Element As, a notorious poison
+SELENIUM | Element Se, named after the Moon
+BROMINE | Element Br, a red-brown liquid
+KRYPTON | Element Kr, a noble gas
+RUBIDIUM | Element Rb, a reactive alkali metal
+STRONTIUM | Element Sr, giving fireworks a red colour
+YTTRIUM | Element Y, named after a Swedish village
+ZIRCONIUM | Element Zr, used in nuclear reactors
+NIOBIUM | Element Nb, used in superconducting magnets
+MOLYBDENUM | Element Mo, used in high-strength steel
+TECHNETIUM | Element Tc, the lightest with no stable isotopes
+RUTHENIUM | Element Ru, a platinum-group metal
+RHODIUM | Element Rh, one of the most expensive metals
+PALLADIUM | Element Pd, used in catalytic converters
+SILVER | Element Ag, the best electrical conductor
+CADMIUM | Element Cd, a toxic metal once used in batteries
+INDIUM | Element In, used in touchscreens
+TIN | Element Sn, used to plate cans
+ANTIMONY | Element Sb, a brittle metalloid
+TELLURIUM | Element Te, named after the Earth
+IODINE | Element I, a purple vapour when heated
+XENON | Element Xe, a heavy noble gas
+CAESIUM | Element Cs, used in atomic clocks
+BARIUM | Element Ba, used in X-ray meals
+LANTHANUM | Element La, first of the lanthanides
+CERIUM | Element Ce, used in lighter flints
+NEODYMIUM | Element Nd, used in powerful magnets
+EUROPIUM | Element Eu, used in euro banknotes' security marks
+GADOLINIUM | Element Gd, used in MRI contrast agents
+HOLMIUM | Element Ho, named after Stockholm
+HAFNIUM | Element Hf, named after Copenhagen
+TANTALUM | Element Ta, used in phone capacitors
+RHENIUM | Element Re, one of the last stable elements found
+OSMIUM | Element Os, the densest element
+IRIDIUM | Element Ir, found in a layer marking the dinosaurs' end
+PLATINUM | Element Pt, a precious catalyst metal
+GOLD | Element Au, a precious yellow metal
+THALLIUM | Element Tl, a poison once used in rat bait
+LEAD | Element Pb, a heavy soft metal
+BISMUTH | Element Bi, forming rainbow crystals
+POLONIUM | Element Po, discovered by the Curies
+ASTATINE | Element At, the rarest natural element
+RADON | Element Rn, a radioactive gas
+FRANCIUM | Element Fr, a highly unstable alkali metal
+RADIUM | Element Ra, once used in glowing paint
+ACTINIUM | Element Ac, first of the actinides
+THORIUM | Element Th, a potential nuclear fuel
+URANIUM | Element U, fuel for nuclear reactors
+NEPTUNIUM | Element Np, named after a planet
+PLUTONIUM | Element Pu, used in nuclear weapons
+AMERICIUM | Element Am, used in smoke detectors
+CURIUM | Element Cm, named after a famous couple
+EINSTEINIUM | Element Es, found in hydrogen bomb debris
+FERMIUM | Element Fm, named after an Italian physicist
+MENDELEVIUM | Element Md, named after the table's creator
+NOBELIUM | Element No, named after the dynamite inventor
+OGANESSON | Element Og, the heaviest known
+TENNESSINE | Element Ts, named after a US state
+NIHONIUM | Element Nh, named after Japan
+MOSCOVIUM | Element Mc, named after a Russian region
+FLEROVIUM | Element Fl, a superheavy element
+COPERNICIUM | Element Cn, named after an astronomer
+WATER | H₂O
+METHANE | CH₄, natural gas
+AMMONIA | NH₃, a pungent gas
+GLUCOSE | C₆H₁₂O₆, a simple sugar
+SUCROSE | Table sugar
+FRUCTOSE | Fruit sugar
+LACTOSE | Milk sugar
+ETHANOL | Alcohol in drinks
+METHANOL | Wood alcohol
+ACETONE | Solvent in nail polish remover
+ETHENE | Simplest alkene, used to make polythene
+PROPANE | Gas used in barbecues
+BUTANE | Gas in lighters
+OCTANE | Hydrocarbon used to rate petrol
+ACETYLENE | Gas used in welding torches
+CHLOROFORM | Old anaesthetic
+FORMALDEHYDE | Preservative for specimens
+ASPIRIN | Acetylsalicylic acid
+CAFFEINE | Stimulant in coffee
+NICOTINE | Addictive compound in tobacco
+QUININE | Antimalarial from cinchona bark
+MORPHINE | Painkiller from opium
+SALTPETRE | Potassium nitrate, used in gunpowder
+GYPSUM | Calcium sulfate mineral used in plaster
+QUICKLIME | Calcium oxide
+CHALK | Calcium carbonate
+BAKINGSODA | Sodium bicarbonate (6,4)
+BLEACH | Sodium hypochlorite solution
+BRINE | Salty water
+HYDROCHLORIC | ___ acid, found in the stomach
+SULFURIC | ___ acid, a strong mineral acid
+NITRIC | ___ acid, used to make fertilisers
+ACETIC | ___ acid, found in vinegar
+CITRIC | ___ acid, found in lemons
+CARBONIC | ___ acid, in fizzy drinks
+LACTIC | ___ acid, in tired muscles
+HYDROXIDE | OH⁻ ion
+CARBONATE | CO₃²⁻ ion
+NITRATE | NO₃⁻ ion
+SULFATE | SO₄²⁻ ion
+PHOSPHATE | PO₄³⁻ ion
+CHLORIDE | Cl⁻ ion
+OZONE | O₃ molecule
+PEROXIDE | Compound with an O–O bond
+ACID | Proton donor
+BASE | Proton acceptor
+NEUTRALISATION | Reaction of an acid and a base
+SALT | Product of neutralisation
+INDICATOR | Substance that changes colour with pH
+PHENOLPHTHALEIN | Indicator that turns pink in alkali
+LITMUS | Indicator from lichens
+BURETTE | Graduated tube for titrations
+CRUCIBLE | Heat-resistant pot
+EVAPORATING | ___ basin, for crystallisation
+FUNNEL | Cone for pouring
+CONDENSER | Tube that cools vapour
+DISTILL | Purify by boiling and condensing
+FRACTIONAL | ___ distillation, separating crude oil
+FRACTIONATING | ___ column, for separating mixtures
+DESICCATOR | Container for keeping things dry
+SPATULA | Tool for transferring powders
+TRIPOD | Stand for heating apparatus
+GAUZE | Wire mesh over a flame
+CLAMP | Holder for apparatus
+STOPPER | Plug for a flask
+VOLUMETRIC | ___ flask, for precise volumes
+MOLARITY | Moles per litre
+STOICHIOMETRY | Calculation of reaction quantities
+YIELD | Amount of product obtained
+LIMITING | ___ reagent, used up first
+EXCESS | Reagent left over
+CONCENTRATION | Amount of solute per volume
+DILUTE | Weak in concentration
+SATURATED | Unable to dissolve more
+SOLUBILITY | Ability to dissolve
+PRECIPITATION | Formation of a solid from solution
+SUSPENSION | Mixture with undissolved particles
+COLLOID | Mixture with dispersed tiny particles
+EMULSION | Mixture of immiscible liquids
+AMALGAM | Alloy containing mercury
+ELECTRODE | Conductor in electrolysis
+ANODE | Positive electrode in electrolysis
+CATHODE | Negative electrode in electrolysis
+REDOX | Reduction and oxidation together
+OXIDISING | ___ agent, which accepts electrons
+REDUCING | ___ agent, which donates electrons
+CORROSION | Gradual chemical destruction of metals
+RUSTING | Oxidation of iron
+ELECTROPLATING | Coating by electrolysis
+ENDOTHERMIC | Absorbing heat
+ACTIVATION | ___ energy, needed to start a reaction
+INHIBITOR | Substance that slows a reaction
+RATE | Speed of a reaction
+EQUILIBRIUM | State where forward and reverse rates are equal
+REVERSIBLE | Able to go both ways
+LECHATELIER | ___'s principle on equilibrium shifts (2,9)
+HABER | ___ process, making ammonia
+CONTACT | ___ process, making sulfuric acid
+CRACKING | Breaking long hydrocarbons
+POLYMERISATION | Joining monomers into chains
+MONOMER | Building block of a polymer
+NYLON | Synthetic polyamide fibre
+POLYTHENE | Common plastic of bags
+TEFLON | Non-stick polymer
+BAKELITE | Early plastic
+RUBBER | Elastic polymer from latex
+SILICONE | Flexible polymer containing silicon
+ALKENE | Hydrocarbon with a double bond
+ALKYNE | Hydrocarbon with a triple bond
+ALCOHOL | Organic compound with an OH group
+ALDEHYDE | Organic compound with a CHO group
+KETONE | Organic compound with a C=O in the chain
+CARBOXYLIC | ___ acid, with a COOH group
+AMINE | Organic derivative of ammonia
+AMIDE | Compound with a CONH₂ group
+HOMOLOGOUS | ___ series of similar compounds
+AROMATIC | Containing a benzene ring
+ALIPHATIC | Non-aromatic organic
+CHIRAL | Non-superimposable on its mirror image
+ENANTIOMER | Mirror-image molecule
+STEREOISOMER | Isomer differing in spatial arrangement
+VANDERWAALS | ___ forces between molecules (3,3,5)
+LATTICE | Regular 3D arrangement of particles
+METALLIC | ___ bond, of a sea of electrons
+OCTET | Stable set of eight outer electrons
+ISOTOPE | Atom with a different number of neutrons
+RADIOACTIVITY | Spontaneous emission from unstable nuclei
+ALPHA | Particle of two protons and two neutrons
+BETA | Particle that is a fast electron
+GAMMA | High-energy radiation from nuclei
+PERIOD | Horizontal row of the table of elements
+GROUP | Column of the periodic table
+METALLOID | Element with properties of metals and non-metals
+LANTHANIDE | Rare earth element
+ACTINIDE | Radioactive series of elements
+TRANSITION | ___ metal, in the middle block
+ALKALINE | ___ earth metal, such as calcium
+INERT | Unreactive
+VOLATILE | Easily evaporated
+FLAMMABLE | Easily set alight
+TOXIC | Poisonous
+CORROSIVE | Destroying by chemical action
+OXIDISER | Substance that supplies oxygen
+EXPLOSIVE | Substance that detonates
+NITROGLYCERIN | Explosive liquid tamed by Nobel
+DYNAMITE | Nobel's explosive
+PRIESTLEY | Joseph ___, who isolated oxygen
+SCHEELE | Swedish chemist who discovered oxygen independently
+DAVY | Humphry ___, who isolated sodium and potassium
+KEKULE | Chemist who dreamed of benzene's ring
+PAULING | Linus ___, winner of two unshared Nobel Prizes
+HODGKIN | Dorothy ___, crystallographer of penicillin and insulin
+NOBEL | Alfred ___, inventor of dynamite
+CHARLES | ___'s law, of gas volume and temperature
+GAYLUSSAC | French chemist of gas laws (3-6)
+ARRHENIUS | Swedish chemist of acids and greenhouse warming
+BRONSTED | Chemist of a proton-based acid definition
+ALCHEMY | Medieval forerunner of chemistry
+ALCHEMIST | Seeker of the philosopher's stone
+TRANSMUTATION | Changing one element into another
+CHEMIST | Scientist of substances
+PHARMACOLOGY | Study of drugs
+BIOCHEMISTRY | Chemistry of living things
+SPECTROSCOPY | Analysis of matter by light
+CHROMATOGRAPHY | Separating a mixture by movement through a medium
+CRYSTALLOGRAPHY | Study of crystal structures
+POTASH | Potassium-rich salt used as fertiliser
+SODA | Sodium carbonate
+LYE | Sodium hydroxide
+CAUSTIC | ___ soda, a strong alkali
+BORAX | Sodium borate mineral used in cleaning
+ALUM | Double sulfate salt used in dyeing
+VERDIGRIS | Green coating on copper
+PATINA | Surface film on old metal
+TARNISH | Dulling of silver
+ORE | Rock from which metal is extracted
+SMELTING | Extracting metal by heating ore
+BLASTFURNACE | Furnace for making iron (5,7)
+SLAG | Waste from smelting
+COKE | Fuel made from coal for smelting
+FLUX | Substance that helps metals melt and join
+SOLDER | Alloy used to join metals
+PEWTER | Tin alloy
+STAINLESS | ___ steel, which resists rust
+WROUGHT | ___ iron, worked by hand
+SILICA | Silicon dioxide
+QUARTZ | Crystalline silica
+ZEOLITE | Porous mineral used as a catalyst
+FULLERENE | Carbon molecule shaped like a football
+BUCKYBALL | Nickname of carbon-60
+NANOTUBE | Cylinder of carbon atoms
+ALLOTROPE | Different form of the same element
+GRAPHITE | Soft carbon allotrope
+SOOT | Fine black carbon from burning
+CHARCOAL | Carbon from heated wood
+ACTIVATED | ___ charcoal, used in filters
+ABSORB | Take in throughout
+ADSORB | Hold on a surface
+OSMOTIC | ___ pressure, across a membrane
+DIFFUSE | Spread out
+EFFUSION | Escape of gas through a tiny hole
+VAPOUR | Gas below its critical temperature
+CONDENSE | Turn from gas to liquid
+SUBLIME | Turn from solid straight to gas
+DEPOSITION | Turn from gas straight to solid
+PHASE | State of matter
+KINETICS | Study of reaction rates
+CALORIMETER | Device for measuring heat of reaction
+CALORIMETRY | Measurement of heat
+HESS | ___'s law, of total enthalpy change
+GIBBS | ___ free energy
+SPONTANEOUS | Occurring without outside energy
+EXERGONIC | Releasing free energy
+ENDERGONIC | Absorbing free energy
+HYDROLYSIS | Breaking bonds with water
+CONDENSATION | Joining molecules with loss of water
+ESTERIFICATION | Making esters from acids and alcohols
+SAPONIFICATION | Making soap from fats
+SOAP | Salt of a fatty acid
+DETERGENT | Synthetic cleaning agent
+SURFACTANT | Substance lowering surface tension
+LIPID | Fat or oil
+TRIGLYCERIDE | Fat made of glycerol and three fatty acids
+GLYCEROL | Sweet alcohol in fats
+CHOLESTEROL | Steroid in cell membranes
+STARCH | Plant storage carbohydrate
+CELLULOSE | Structural carbohydrate of plants
+CHITIN | Carbohydrate in insect shells
+GLYCOGEN | Animal storage carbohydrate
+PEPTIDE | Chain of amino acids
+NUCLEOTIDE | Building block of DNA
+ADENINE | DNA base paired with thymine
+THYMINE | DNA base paired with adenine
+GUANINE | DNA base paired with cytosine
+CYTOSINE | DNA base paired with guanine
+URACIL | RNA base replacing thymine
+HAEM | Iron-containing group in the red pigment of blood
+PORPHYRIN | Ring structure that binds metals
+CATALYTIC | ___ converter in a car exhaust
+ZIEGLER | Chemist of polymerisation catalysts
+GRIGNARD | ___ reagent, an organomagnesium compound
+WURTZ | ___ reaction, coupling alkyl halides
+FRIEDEL | ___-Crafts reaction
+ALKYL | Group derived from an alkane
+ARYL | Group derived from an aromatic ring
+METHYL | One-carbon group
+ETHYL | Two-carbon group
+PHENYL | Benzene-derived group
+HALIDE | Compound of a halogen
+HALOALKANE | Alkane with a halogen
+FREON | Brand of CFC refrigerants
+TOLUENE | Aromatic solvent in paint thinner
+XYLENE | Aromatic solvent
+HEXANE | Six-carbon alkane
+NAPHTHALENE | Compound in mothballs
+PHENOL | Antiseptic aromatic alcohol
+GLYCOL | Antifreeze ingredient
+ETHER | Old anaesthetic and solvent
+TOLLENS | ___ reagent, the silver mirror test
+FEHLING | ___'s solution, a test for sugars
+BIURET | Test for proteins
+QUANTITATIVE | Measuring amounts
+QUALITATIVE | Identifying what is present
+ANALYTICAL | ___ chemistry, of identifying substances
+SYNTHESIS | Making a compound from simpler ones
+PRODUCT | Substance formed in a reaction
+REACTANT | Substance used up in a reaction
+INTERMEDIATE | Short-lived species in a reaction
+MECHANISM | Step-by-step path of a reaction
+NUCLEOPHILE | Electron-pair donor
+ELECTROPHILE | Electron-pair acceptor
+RADICAL | Species with an unpaired electron
+MOLECULE | Group of bonded atoms
+MACROMOLECULE | Very large molecule
+POLAR | Having uneven charge distribution
+NONPOLAR | Having even charge distribution
+DIPOLE | Separation of positive and negative charge
+IONISATION | Formation of ions
+VALENCY | Combining power of an element
+DATIVE | ___ bond, where both electrons come from one atom
+SIGMA | Type of single covalent bond
+HYBRIDISATION | Mixing of atomic orbitals
+TETRAHEDRAL | Shape of methane
+TRIGONAL | ___ planar, a molecular shape
+LINEAR | Straight molecular shape
+BENT | Molecular shape of water
+LEWIS | ___ structure, dot diagram of electrons
+AUFBAU | Principle of filling orbitals
+HUND | ___'s rule of electron filling
+PAULI | ___ exclusion principle
+FERTILISER | Chemical that feeds crops
+PESTICIDE | Chemical that kills pests
+HERBICIDE | Chemical that kills weeds
+INSECTICIDE | Chemical that kills insects
+FUNGICIDE | Chemical that kills fungi
+DYE | Colouring substance
+INDIGO | Blue dye from plants
+MAUVE | First synthetic dye, made by Perkin
+PERKIN | William ___, discoverer of mauveine
+OCHRE | Earth pigment of iron oxide
+VERMILION | Red pigment from cinnabar
+CINNABAR | Mercury sulfide mineral
+GALENA | Lead sulfide mineral
+PYRITE | Fool's gold
+MALACHITE | Green copper carbonate mineral
+HAEMATITE | Iron oxide ore
+BAUXITE | Aluminium ore
+MAGNETITE | Magnetic iron ore
+FLUORITE | Calcium fluoride mineral
+HALITE | Rock salt
+CALCITE | Calcium carbonate mineral
+APATITE | Phosphate mineral in teeth
+ASBESTOS | Fibrous mineral once used as insulation
+SULFIDE | Compound of sulfur with a metal
+CYANIDE | Fast-acting poison
+CARBONMONOXIDE | Silent poisonous gas (6,8)
+NITROUSOXIDE | Laughing gas (7,5)
+SMOG | Polluted fog
+ACIDRAIN | Rain made acidic by pollution (4,4)
+PARTICULATE | Fine particle pollution
+LEADED | ___ petrol, phased out for health
+FIXATION | Conversion of nitrogen into compounds
+COMBUST | Burn
+INCOMPLETE | ___ combustion, producing soot
+FUEL | Substance burned for energy
+PETROCHEMICAL | Chemical made from oil
+REFINERY | Plant that processes crude oil
+BIODIESEL | Fuel from vegetable oil
+HYDROGENATION | Adding hydrogen to unsaturated bonds
+UNSATURATED | Having double bonds
+FERMENTATION | Making alcohol with yeast
+DISTILLERY | Place where spirits are made
+PERFUMERY | Chemistry of fragrances
+FLAVOURING | Additive giving taste
+ADDITIVE | Substance added to food
+PRESERVATIVE | Additive that prevents spoilage
+EMULSIFIER | Additive that blends oil and water
+ANTIOXIDANT | Substance that prevents oxidation
+FLUORIDE | Ion added to toothpaste
+CHLORINATION | Disinfecting water
+DESALINATION | Removing salt from seawater
+PURIFICATION | Making something pure
+CRYSTALLISE | Form crystals
+RELATIVE | ___ atomic mass
+ISOTOPIC | Relating to isotopes
+NUCLIDE | Specific atomic species
+DECAY | Breakdown of an unstable nucleus
+ENRICHMENT | Increasing the proportion of a fissile isotope
+DOSIMETER | Device measuring radiation exposure
+BECQUEREL | Unit of radioactivity
+SIEVERT | Unit of radiation dose
+HAZARD | Source of danger
+GLOVEBOX | Sealed container for handling dangerous materials
+IDEALGAS | Theoretical gas obeying PV = nRT (5,3)
+TORR | Pressure unit equal to 1/760 of an atmosphere
+EFFERVESCENCE | Fizzing from released gas
+FLUORESCENCE | Emission of light after absorbing radiation
+PHOSPHORESCENCE | Lingering glow after absorbing light
+LUMINOL | Chemical that glows when it meets blood
+THERMITE | Fiercely hot reaction of aluminium and iron oxide
+PERIODICITY | Repeating trends across the table of elements
+REACTIVITY | Tendency to react
+DISPLACEMENT | Reaction where one element replaces another
+DECOMPOSITION | Breaking down into simpler substances
+SYNTHESISE | Make chemically
+NEUTRALISE | Cancel acidity
+ACIDIC | Having a pH below 7
+BASIC | Having a pH above 7
+CHEMICAL | Substance with a definite composition

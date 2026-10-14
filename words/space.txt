@@ -1,0 +1,506 @@
+# Outer Space — one entry per line: ANSWER | clue
+GALAXY | Vast system of stars, like the Milky Way
+NEBULA | Cloud of gas and dust where stars are born
+COMET | Icy body that grows a glowing tail near the Sun
+ASTEROID | Rocky body orbiting the Sun, often in a belt
+MARS | The Red Planet
+JUPITER | Largest planet, home of the Great Red Spot
+SATURN | Planet famous for its bright rings
+ORBIT | Curved path around a star or planet
+ECLIPSE | When one body in the sky blocks the light of another
+TELESCOPE | Instrument for viewing distant objects
+ASTRONAUT | Person trained to travel into space
+ROCKET | Vehicle that blasts off into space
+METEOR | A "shooting star"
+PLUTO | Reclassified as a dwarf planet in 2006
+VENUS | Hottest planet, named after the Roman goddess of love
+MERCURY | Planet closest to the Sun
+NEPTUNE | Farthest planet from the Sun
+URANUS | Ice giant that spins on its side
+SUPERNOVA | Explosive death of a massive star
+QUASAR | Extremely bright, distant galactic core
+COSMOS | The universe seen as an ordered whole
+LUNAR | Relating to the Moon
+APOLLO | NASA programme that landed people on the Moon
+CRATER | Bowl-shaped hole left by an impact
+SUNSPOT | Dark, cooler patch on the Sun's surface
+CELESTIAL | Of the sky or the heavens
+HUBBLE | Orbiting observatory launched in 1990
+BLACKHOLE | Region where not even light escapes (5,4)
+ROVER | Wheeled explorer such as Curiosity or Perseverance
+GRAVITY | Force that keeps your feet on the ground
+COPERNICUS | Polish astronomer who said Earth circles the Sun
+EQUINOX | When day and night are about equal in length
+LIGHTYEAR | Distance light travels in twelve months (5,4)
+PULSAR | Rapidly spinning neutron star that sweeps out beams
+SPUTNIK | First artificial object launched around Earth, in 1957
+GAGARIN | First human in space, in 1961
+ARMSTRONG | First person to walk on the Moon
+ZODIAC | Twelve star patterns along the ecliptic
+CONSTELLATION | Group of stars forming a named pattern
+ATMOSPHERE | Layer of gases surrounding a planet
+TITAN | Largest moon of the ringed planet
+EUROPA | Icy moon of the largest planet, thought to hide an ocean
+ALIEN | Extraterrestrial being
+SATELLITE | Object circling a planet, such as the Moon
+EARTH | Third planet from the Sun
+MOON | Earth's natural satellite
+SUN | Star at the centre of the Solar System
+PLANET | World that orbits a star
+DWARFPLANET | Category that includes Pluto and Ceres (5,6)
+CERES | Largest object in the asteroid belt
+ERIS | Dwarf planet that triggered Pluto's demotion
+HAUMEA | Egg-shaped dwarf planet beyond Neptune
+MAKEMAKE | Dwarf planet named after a Rapa Nui god
+SEDNA | Distant icy body with a very long orbit
+GANYMEDE | Largest moon in the Solar System
+CALLISTO | Heavily cratered moon of Jupiter
+ENCELADUS | Icy moon of Saturn with water geysers
+MIMAS | Saturn moon with a huge crater like the Death Star
+RHEA | Saturn's second-largest moon
+IAPETUS | Two-toned moon of Saturn
+TRITON | Neptune's largest moon, which orbits backwards
+CHARON | Pluto's largest moon
+PHOBOS | Larger moon of Mars
+DEIMOS | Smaller moon of Mars
+MIRANDA | Uranian moon with towering cliffs
+OBERON | Outermost large moon of Uranus
+TITANIA | Largest moon of Uranus
+SIRIUS | Brightest star in the night sky
+BETELGEUSE | Red supergiant marking Orion's shoulder
+RIGEL | Blue supergiant at Orion's foot
+VEGA | Bright star of Lyra
+POLARIS | The North Star
+ALTAIR | Bright star of Aquila
+DENEB | Bright star at the tail of Cygnus
+ANTARES | Red heart of Scorpius
+ALDEBARAN | Red eye of Taurus
+ARCTURUS | Brightest star in the northern celestial hemisphere
+CAPELLA | Bright star of Auriga
+PROCYON | Bright star of Canis Minor
+SPICA | Brightest star of Virgo
+CANOPUS | Second-brightest star in the night sky
+PROXIMA | ___ Centauri, nearest star to the Sun
+ALPHACENTAURI | Nearest star system to the Sun (5,8)
+PLEIADES | Star cluster known as the Seven Sisters
+HYADES | V-shaped star cluster in Taurus
+ORION | Constellation of the Hunter
+URSAMAJOR | Constellation of the Great Bear (4,5)
+URSAMINOR | Constellation of the Little Bear (4,5)
+CASSIOPEIA | W-shaped constellation of a vain queen
+ANDROMEDA | Nearest large galaxy to the Milky Way
+PERSEUS | Constellation of a hero, and a summer meteor shower's source
+CYGNUS | Constellation of the Swan
+LYRA | Constellation of the Lyre
+AQUILA | Constellation of the Eagle
+DRACO | Constellation of the Dragon
+PEGASUS | Constellation of the winged horse
+CENTAURUS | Constellation of the half-horse
+CRUX | Southern Cross constellation
+SCORPIUS | Zodiac constellation of the scorpion
+SAGITTARIUS | Zodiac constellation of the archer
+CAPRICORNUS | Zodiac constellation of the sea goat
+AQUARIUS | Zodiac constellation of the water-bearer
+PISCES | Zodiac constellation of the fishes
+ARIES | Zodiac constellation of the ram
+TAURUS | Zodiac constellation of the bull
+GEMINI | Zodiac constellation of the twins
+CANCER | Zodiac constellation of the crab
+LEO | Zodiac constellation of the lion
+VIRGO | Zodiac constellation of the maiden
+LIBRA | Zodiac constellation of the scales
+BOOTES | Constellation of the Herdsman
+HERCULES | Constellation of the hero of twelve labours
+CANISMAJOR | Constellation of the Great Dog (5,5)
+PLOUGH | British name for the Big Dipper
+BIGDIPPER | Seven bright stars of the Great Bear (3,6)
+ASTERISM | Recognisable star pattern that isn't a constellation
+VOYAGER | Probes that left the Solar System
+PIONEER | Early probes that flew past Jupiter and Saturn
+CASSINI | Probe that orbited Saturn until 2017
+HUYGENS | Probe that landed on Titan
+JUNO | Probe orbiting Jupiter since 2016
+NEWHORIZONS | Probe that flew past Pluto in 2015 (3,8)
+ROSETTA | Probe that landed on a comet
+PHILAE | Lander that bounced onto a comet in 2014
+KEPLER | Telescope that found thousands of exoplanets
+WEBB | James ___ Space Telescope
+SPITZER | Infrared space telescope retired in 2020
+CHANDRA | NASA's X-ray observatory
+CURIOSITY | NASA rover that landed in Gale Crater
+PERSEVERANCE | NASA rover with the Ingenuity helicopter
+INGENUITY | First helicopter to fly on another planet
+OPPORTUNITY | Mars rover that lasted fourteen years
+SPIRIT | Twin rover of Opportunity
+SOJOURNER | First Mars rover, in 1997
+VIKING | Landers that touched down on Mars in 1976
+MARINER | Early NASA planetary probes
+MAGELLAN | Probe that mapped Venus with radar
+VENERA | Soviet probes that landed on Venus
+LUNA | Soviet probes that first reached the Moon
+VOSTOK | Spacecraft that carried the first human to orbit
+SOYUZ | Russian crew spacecraft
+SKYLAB | First US space station
+TIANGONG | China's space station
+SHENZHOU | Chinese crewed spacecraft
+CHANDRAYAAN | Indian lunar missions
+MANGALYAAN | India's Mars Orbiter Mission
+HAYABUSA | Japanese probes that returned asteroid samples
+ARTEMIS | NASA programme to return people to the Moon
+SATURNV | Rocket that launched Apollo (6,1)
+FALCON | SpaceX rocket family
+STARSHIP | SpaceX's giant reusable rocket
+DRAGON | SpaceX capsule
+SPACEX | Rocket company founded by Elon Musk
+NASA | US space agency
+ROSCOSMOS | Russian space agency
+JAXA | Japanese space agency
+ISRO | Indian space agency
+CAPECANAVERAL | Florida launch site (4,9)
+BAIKONUR | Kazakh cosmodrome
+HOUSTON | Mission control city, as in "we have a problem"
+TERESHKOVA | First woman in space
+LEONOV | First person to walk in space
+SHEPARD | First American in space
+GLENN | First American to orbit Earth
+ALDRIN | Second person on the Moon
+COLLINS | Apollo 11 pilot who stayed in lunar orbit
+RIDE | Sally ___, first American woman in space
+JEMISON | Mae ___, first African American woman in space
+HADFIELD | Canadian astronaut who sang Space Oddity on the ISS
+PEAKE | Tim ___, British astronaut on the ISS
+LOVELL | Commander of Apollo 13
+COSMONAUT | Russian space traveller
+TAIKONAUT | Chinese space traveller
+SPACEWALK | Activity outside a spacecraft
+SPACESUIT | Pressurised garment for astronauts
+LANDER | Spacecraft that touches down
+PROBE | Uncrewed spacecraft
+MODULE | Section of a spacecraft
+CAPSULE | Crew compartment of a spacecraft
+LAUNCHPAD | Site from which a rocket lifts off
+COUNTDOWN | Ten, nine, eight...
+LIFTOFF | Moment a rocket leaves the ground
+BOOSTER | Rocket stage that gives extra thrust
+THRUST | Force that propels a rocket
+PAYLOAD | Cargo carried by a rocket
+REENTRY | Return into the atmosphere
+SPLASHDOWN | Landing of a capsule at sea
+DOCKING | Joining of two spacecraft
+WEIGHTLESS | Experiencing no apparent gravity
+MICROGRAVITY | Very weak gravity in orbit
+HALLEY | Astronomer whose comet returns every 76 years
+HERSCHEL | Astronomer who discovered Uranus
+MESSIER | Astronomer who catalogued nebulae and clusters
+TYCHO | Danish astronomer Brahe
+SAGAN | Carl ___, presenter of Cosmos
+LEAVITT | Henrietta ___, who measured cosmic distances with variable stars
+TOMBAUGH | Discoverer of Pluto
+LEMAITRE | Priest who proposed the Big Bang
+PTOLEMY | Ancient astronomer of an Earth-centred model
+ARISTARCHUS | Ancient Greek who proposed a Sun-centred model
+GALILEAN | ___ moons, Jupiter's four largest
+HALEBOPP | Bright comet of 1997 (4-4)
+OORTCLOUD | Distant shell of icy bodies around the Solar System (4,5)
+KUIPERBELT | Region of icy bodies beyond Neptune (6,4)
+ASTEROIDBELT | Region between Mars and Jupiter (8,4)
+METEOROID | Small rocky body in space
+METEORSHOWER | Display such as the Perseids (6,6)
+PERSEIDS | August meteor shower
+LEONIDS | November meteor shower
+GEMINIDS | December meteor shower
+FIREBALL | Very bright meteor
+BOLIDE | Exploding fireball
+TEKTITE | Glassy pebble formed by a meteorite impact
+APHELION | Point of an orbit farthest from the Sun
+PERIHELION | Point of an orbit closest to the Sun
+APOGEE | Farthest point of an orbit around Earth
+PERIGEE | Closest point of an orbit around Earth
+PARSEC | Unit of distance of about 3.26 light years
+REDSHIFT | Stretching of light from receding galaxies
+BLUESHIFT | Shortening of light from approaching objects
+MAGNETAR | Neutron star with an immensely strong magnetic field
+NEUTRONSTAR | Ultra-dense remnant of a supernova (7,4)
+WHITEDWARF | Remnant core of a Sun-like star (5,5)
+REDGIANT | Swollen dying star (3,5)
+REDDWARF | Small, cool, common star (3,4)
+BROWNDWARF | Failed star (5,5)
+SUPERGIANT | Enormous luminous star
+PROTOSTAR | Star in the process of forming
+MAINSEQUENCE | Band where most stars spend their lives (4,8)
+BINARY | Star system of two stars
+VARIABLE | Star whose brightness changes
+CEPHEID | Pulsating star used as a distance marker
+NOVA | Sudden brightening of a star
+HYPERNOVA | Extremely energetic stellar explosion
+EVENTHORIZON | Boundary of a black hole (5,7)
+SINGULARITY | Point of infinite density
+WORMHOLE | Hypothetical tunnel through spacetime
+SPACETIME | Fabric of space and time combined
+DARKMATTER | Invisible mass that holds galaxies together (4,6)
+DARKENERGY | Force driving the accelerating expansion of the universe (4,6)
+BACKGROUND | Cosmic microwave ___, the Big Bang's afterglow
+EXOPLANET | Planet orbiting another star
+HOTJUPITER | Gas giant orbiting close to its star (3,7)
+HABITABLE | ___ zone, where liquid water could exist
+GASGIANT | Planet like Jupiter (3,5)
+ICEGIANT | Planet like Uranus (3,5)
+TERRESTRIAL | Rocky, like Earth
+OLYMPUSMONS | Largest volcano in the Solar System (7,4)
+GREATREDSPOT | Giant storm on Jupiter (5,3,4)
+MARE | Dark plain on the Moon
+RINGS | Bands of ice around Saturn
+MAGNETOSPHERE | Magnetic bubble around a planet
+AURORA | Northern or southern lights
+BOREALIS | Aurora ___, the northern lights
+SOLARWIND | Stream of particles from the Sun (5,4)
+SOLARFLARE | Sudden burst of energy from the Sun (5,5)
+CORONA | Sun's outer atmosphere
+PHOTOSPHERE | Visible surface of the Sun
+CHROMOSPHERE | Layer of the Sun above the photosphere
+PROMINENCE | Loop of plasma rising from the Sun
+SOLSTICE | Longest or shortest day of the year
+ZENITH | Point directly overhead
+NADIR | Point directly below
+HORIZON | Line where earth meets sky
+MERIDIAN | Line through the celestial poles and zenith
+ECLIPTIC | Sun's apparent path across the sky
+CONJUNCTION | Close apparent meeting of two bodies in the sky
+OPPOSITION | When a planet is opposite the Sun in the sky
+TRANSIT | Passage of a planet across a star's face
+OCCULTATION | One body hiding another
+PHASE | Shape of the lit part of the Moon
+CRESCENT | Thin sliver phase of the Moon
+GIBBOUS | Moon phase between half and full
+NEWMOON | Phase when the Moon is invisible (3,4)
+FULLMOON | Phase when the Moon is completely lit (4,4)
+BLUEMOON | Second full moon in a month (4,4)
+HARVESTMOON | Full moon nearest the autumn equinox (7,4)
+SUPERMOON | Full moon at its closest to Earth
+TIDES | Rise and fall of the sea
+ROTATION | Spinning on an axis
+REVOLUTION | Complete orbit around a body
+AXIS | Imaginary line around which a body spins
+TILT | Earth's 23.5-degree lean
+SEASON | Period such as summer or winter
+ORBITAL | Relating to an orbit
+GEOSTATIONARY | Orbiting in step with Earth's rotation
+REFRACTOR | Telescope that uses lenses
+REFLECTOR | Telescope that uses mirrors
+EYEPIECE | Lens you look through on a telescope
+ARECIBO | Puerto Rican radio telescope that collapsed in 2020
+JODRELLBANK | Observatory in Cheshire (7,4)
+MAUNAKEA | Hawaiian summit of major observatories (5,3)
+ASTROPHYSICS | Physics of stars and the universe
+COSMOLOGY | Study of the origin and fate of the universe
+ASTROBIOLOGY | Search for life beyond Earth
+SETI | Search for extraterrestrial intelligence (abbr.)
+MARTIAN | Inhabitant of the Red Planet, in fiction
+ASTROLOGY | Belief linking stars to human affairs
+STARGAZING | Looking at the night sky
+SPACEAGE | Era that began with Sputnik (5,3)
+SPACERACE | Cold War contest to reach space first (5,4)
+MOONLANDING | Event of July 1969 (4,7)
+TRANQUILLITY | Sea of ___, Apollo 11's landing site
+EAGLE | Apollo 11's lunar module
+COLUMBIA | Apollo 11's command module, and a shuttle
+CHALLENGER | Shuttle lost in 1986
+DISCOVERY | Shuttle that launched Hubble
+ENDEAVOUR | Last space shuttle built
+ATLANTIS | Last space shuttle to fly
+LAIKA | First dog in orbit
+STARDUST | Probe that collected comet dust
+GENESIS | Probe that collected solar wind particles
+DAWN | Probe that visited Vesta and Ceres
+VESTA | Bright asteroid visited by Dawn
+PALLAS | Third-largest asteroid
+BENNU | Asteroid sampled by OSIRIS-REx
+RYUGU | Asteroid sampled by Hayabusa2
+OUMUAMUA | First known interstellar object
+INTERSTELLAR | Between the stars
+INTERGALACTIC | Between galaxies
+LOCALGROUP | Galaxy group of the Milky Way (5,5)
+LANIAKEA | Supercluster that contains the Milky Way
+SPIRAL | Galaxy shape with arms
+ELLIPTICAL | Galaxy shape like a rugby ball
+IRREGULAR | Galaxy with no defined shape
+MAGELLANIC | ___ Clouds, satellite galaxies of the Milky Way
+TRIANGULUM | Third-largest galaxy in the Local Group
+WHIRLPOOL | Spiral galaxy M51
+SOMBRERO | Galaxy shaped like a wide-brimmed hat
+CRAB | ___ Nebula, remnant of a supernova seen in 1054
+HORSEHEAD | Dark nebula in Orion
+BLAZAR | Quasar with a jet pointed at Earth
+LIGO | Observatory that detected gravitational waves (abbr.)
+COSMIC | Relating to the universe
+STARCHART | Map of the night sky (4,5)
+PLANISPHERE | Rotating star chart
+ORRERY | Clockwork model of the Solar System
+ARMILLARY | ___ sphere, model of celestial circles
+ASTROLABE | Ancient instrument for measuring stars' altitudes
+SEXTANT | Navigational instrument for measuring star angles
+SPACESTATION | Orbiting outpost such as the ISS (5,7)
+SPACEPROBE | Uncrewed explorer of the Solar System (5,5)
+SPACECRAFT | Vehicle designed for space travel
+ROCKETSHIP | Spacecraft of science fiction
+ASTRONAUTICS | Science of spaceflight
+AEROSPACE | Industry of aircraft and spacecraft
+ORBITER | Spacecraft that circles a planet
+FLYBY | Close pass of a planet by a probe
+SLINGSHOT | Gravity-assisted boost from a planet
+TRAJECTORY | Path of a spacecraft
+ESCAPEVELOCITY | Speed needed to break free of gravity
+HEATSHIELD | Protection during re-entry (4,6)
+PARACHUTE | Canopy that slows a returning capsule
+AIRLOCK | Chamber between a spacecraft and space
+HATCH | Door of a spacecraft
+CUPOLA | Seven-windowed observation module on the ISS
+CANADARM | Robotic arm built by Canada
+TETHER | Line that secures a spacewalker
+JETPACK | Wearable thruster for moving in space
+SPACEJUNK | Debris orbiting Earth (5,4)
+DEBRIS | Fragments of old satellites
+TELSTAR | Early communications satellite of 1962
+STARLINK | SpaceX satellite internet constellation
+LANDSAT | Long-running Earth-imaging satellites
+POLARORBIT | Orbit passing over both poles (5,5)
+LAGRANGE | ___ point, where gravity balances
+MOONWALK | Stroll on the lunar surface
+MOONROCK | Sample brought back from the Moon (4,4)
+REGOLITH | Loose dust and rock covering the Moon
+FARSIDE | Hemisphere of the Moon never seen from Earth (3,4)
+DARKSIDE | Popular but misleading name for the Moon's far side (4,4)
+SHACKLETON | Crater at the Moon's south pole
+VALLESMARINERIS | Vast canyon system on Mars (6,9)
+JEZERO | Martian crater explored by Perseverance
+OLYMPUS | ___ Mons, the tallest Martian volcano
+CALORIS | Huge impact basin on Mercury
+HEXAGON | Six-sided cloud pattern at Saturn's north pole
+SPOKES | Ghostly features in Saturn's rings
+SHEPHERD | ___ moon, which keeps a planetary ring in shape
+TROJAN | Asteroid sharing a planet's orbit
+CENTAUR | Icy body orbiting between Jupiter and Neptune
+PLUTINO | Object in a 3:2 orbit with Neptune
+PLANETESIMAL | Early building block of planets
+ACCRETION | Gradual build-up of matter
+PROTOPLANETARY | ___ disc, where planets form
+NEBULAR | ___ hypothesis, origin of the Solar System
+STELLAR | Relating to stars
+LUMINOSITY | Total energy a star emits each second
+MAGNITUDE | Measure of a star's brightness
+APPARENT | ___ magnitude, brightness as seen from Earth
+ABSOLUTE | ___ magnitude, true brightness at a set distance
+PARALLAX | Apparent shift used to measure star distances
+SPECTROSCOPY | Analysis of light by wavelength
+ABSORPTION | ___ lines, dark gaps in a spectrum
+PLASMA | Ionised gas that makes up stars
+VANALLEN | ___ belts, zones of trapped radiation around Earth (3,5)
+HELIOSPHERE | Bubble carved out by the solar wind
+HELIOPAUSE | Boundary where the solar wind stops
+TERMINATOR | Line between day and night on a planet
+LIBRATION | Wobble that lets us see a little more of the Moon
+SIDEREAL | Measured relative to the stars
+SYNODIC | Relating to repeated alignments with the Sun
+LUNATION | Cycle of lunar phases
+METONIC | ___ cycle, 19 years of lunar phases
+EPOCH | Reference date for astronomical positions
+JULIAN | ___ date, continuous day count used by astronomers
+ALMANAC | Annual book of astronomical data
+STARGAZER | Amateur astronomer
+OBSERVER | One who watches the sky
+DOBSONIAN | Simple telescope on a swivelling base
+BINOCULARS | Twin-lensed instrument for viewing the sky
+DARKSKY | ___ reserve, protected from light pollution
+SUPERMASSIVE | ___ black hole, found at galactic centres
+JET | Narrow beam of matter shot from a black hole
+MULTIVERSE | Hypothetical set of many universes
+INFLATION | Rapid early expansion of the universe
+BIGCRUNCH | Possible collapse of the universe (3,6)
+HEATDEATH | Possible cold, uniform end of the universe (4,5)
+EXPANSION | Growth of the universe over time
+ZODIACAL | ___ light, faint glow along the ecliptic
+GEGENSCHEIN | Faint glow opposite the Sun in the night sky
+NOCTILUCENT | ___ clouds, glowing high-altitude clouds
+SHOOTINGSTAR | Meteor, informally (8,4)
+EVENINGSTAR | Venus seen after sunset (7,4)
+MORNINGSTAR | Venus seen before sunrise (7,4)
+NORTHSTAR | Polaris (5,4)
+DOGSTAR | Sirius (3,4)
+REDPLANET | Mars (3,6)
+BLUEMARBLE | 1972 photo of the whole Earth (4,6)
+PALEBLUEDOT | Voyager 1's 1990 photo of a distant Earth (4,4,3)
+EARTHRISE | Apollo 8 photo of Earth over the lunar horizon
+GOLDENRECORD | Disc of sounds and images carried by Voyager (6,6)
+DRAKE | ___ equation, estimating alien civilisations
+FERMI | ___ paradox: where is everybody?
+KARDASHEV | Scale ranking civilisations by energy use
+DYSONSPHERE | Hypothetical shell around a star (5,6)
+TERRAFORMING | Making a planet Earth-like
+COLONY | Settlement on another world
+HABITAT | Living module on a planet or station
+TOUCHDOWN | Landing on a planet's surface
+IMPACT | Collision of a space rock with a planet
+CHICXULUB | Crater linked to the dinosaurs' extinction
+TUNGUSKA | 1908 Siberian air blast
+BARRINGER | Arizona impact crater
+CORONAGRAPH | Instrument that blocks the Sun to study its corona
+HELIOSTAT | Mirror that tracks the Sun
+SUNDIAL | Shadow clock
+MIRA | Famous variable star in Cetus
+ALGOL | "Demon Star", an eclipsing binary in Perseus
+MIZAR | Double star in the handle of the Big Dipper
+ALCOR | Faint companion of Mizar
+FOMALHAUT | Bright star of Piscis Austrinus
+ACHERNAR | Bright star at the end of Eridanus
+REGULUS | Bright star at the heart of Leo
+POLLUX | Brightest star of Gemini
+CASTOR | Twin star of Pollux
+BELLATRIX | Star at Orion's left shoulder
+ORIONSBELT | Three stars in a line (6,4)
+ERIDANUS | Constellation of a river
+CETUS | Constellation of the sea monster
+HYDRA | Largest constellation
+LEPUS | Constellation of the hare
+MONOCEROS | Constellation of the unicorn
+CORVUS | Constellation of the crow
+SCUTUM | Constellation of the shield
+SAGITTA | Constellation of the arrow
+DELPHINUS | Constellation of the dolphin
+VULPECULA | Constellation of the little fox
+LACERTA | Constellation of the lizard
+CEPHEUS | Constellation of a king, husband of Cassiopeia
+AURIGA | Constellation of the charioteer
+OPHIUCHUS | Constellation of the serpent-bearer
+SERPENS | Constellation of the serpent
+CARINA | Constellation of the keel of a ship
+VELA | Constellation of the sails
+PUPPIS | Constellation of the stern
+COLUMBA | Constellation of the dove
+PAVO | Constellation of the peacock
+TUCANA | Constellation of the toucan
+PHOENIX | Constellation of the firebird
+GRUS | Constellation of the crane
+INDUS | Constellation of the Indian
+OCTANS | Constellation containing the south celestial pole
+CHAMAELEON | Small southern constellation
+MUSCA | Constellation of the fly
+CIRCINUS | Constellation of the compasses
+NORMA | Constellation of the carpenter's square
+TELESCOPIUM | Constellation of the telescope
+MICROSCOPIUM | Constellation of the microscope
+ANTLIA | Constellation of the air pump
+PYXIS | Constellation of the compass box
+SEXTANS | Constellation of the sextant
+FORNAX | Constellation of the furnace
+SCULPTOR | Southern constellation of the artist's studio
+HOROLOGIUM | Constellation of the clock
+RETICULUM | Constellation of the net
+PICTOR | Constellation of the painter's easel
+DORADO | Constellation containing the Large Magellanic Cloud
+MENSA | Constellation of Table Mountain
+VOLANS | Constellation of the flying fish
+APUS | Constellation of the bird of paradise
+LYNX | Faint northern constellation named for a wild cat
+CAMELOPARDALIS | Large faint constellation of the giraffe
+LEOMINOR | Constellation of the little lion (3,5)
+CANISMINOR | Constellation of the little dog (5,5)

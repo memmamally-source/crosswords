@@ -1,0 +1,495 @@
+# Human Anatomy — one entry per line: ANSWER | clue
+FEMUR | Thigh bone, the body's longest
+CRANIUM | Part of the skull that encloses the brain
+AORTA | Body's largest artery
+CORTEX | Outer layer of the brain
+NEURON | Nerve cell
+TENDON | Tissue joining muscle to bone
+LIGAMENT | Tissue joining bone to bone
+PANCREAS | Gland behind the stomach that regulates blood sugar
+LIVER | Largest internal organ
+DIAPHRAGM | Dome-shaped muscle used in breathing
+RETINA | Light-sensitive layer at the back of the eye
+COCHLEA | Spiral cavity of the inner ear
+HEMOGLOBIN | Oxygen-carrying protein in red blood cells
+ALVEOLI | Tiny air sacs in the lungs
+SPLEEN | Blood-filtering organ beside the stomach
+THYROID | Gland in the neck that regulates metabolism
+CLAVICLE | Collarbone
+STERNUM | Breastbone
+PATELLA | Kneecap
+ESOPHAGUS | Tube that carries food to the stomach
+KIDNEY | Bean-shaped organ that makes urine
+CARTILAGE | Flexible tissue in the nose and ears
+VERTEBRA | Single bone of the spine
+PLATELET | Cell fragment that helps blood clot
+CAPILLARY | Smallest type of blood vessel
+INSULIN | Hormone that lowers blood sugar
+MITOCHONDRIA | The "powerhouse of the cell"
+RIBOSOME | Cell structure that builds proteins
+HIPPOCAMPUS | Brain region vital for forming memories
+TIBIA | Shinbone
+HUMERUS | Upper arm bone
+SCAPULA | Shoulder blade
+PELVIS | Basin-shaped ring of bones at the hips
+ULNA | Forearm bone on the little-finger side
+CEREBELLUM | Brain region that coordinates balance and movement
+APPENDIX | Small pouch off the large intestine
+GALLBLADDER | Organ that stores bile
+TRACHEA | Windpipe
+LARYNX | Voice box
+IRIS | Coloured part of the eye
+CORNEA | Clear front surface of the eye
+BICEPS | Muscle at the front of the upper arm
+MANDIBLE | Lower jawbone
+PITUITARY | Pea-sized "master gland" at the base of the brain
+ADRENALINE | Hormone behind the fight-or-flight response
+SKULL | Bony framework of the head
+MAXILLA | Upper jawbone
+ZYGOMATIC | Cheekbone
+NASAL | ___ bone, forming the bridge of the nose
+FRONTAL | Bone of the forehead
+PARIETAL | Bone forming the top and sides of the skull
+TEMPORAL | Bone at the side of the skull near the ear
+OCCIPITAL | Bone at the back of the skull
+SPHENOID | Butterfly-shaped bone at the base of the skull
+ETHMOID | Spongy bone between the eye sockets
+HYOID | U-shaped bone in the neck
+VERTEBRAE | Bones of the spine
+CERVICAL | Relating to the neck vertebrae
+THORACIC | Relating to the chest vertebrae
+LUMBAR | Relating to the lower back vertebrae
+SACRUM | Triangular bone at the base of the spine
+COCCYX | Tailbone
+ATLAS | Top vertebra that supports the skull
+AXIS | Second cervical vertebra
+RIB | One of the curved bones of the chest
+RIBCAGE | Bony enclosure of the chest (3,4)
+XIPHOID | Small lower tip of the breastbone
+RADIUS | Forearm bone on the thumb side
+CARPAL | Wrist bone
+METACARPAL | Bone of the palm
+PHALANGES | Finger and toe bones
+SCAPHOID | Commonly fractured wrist bone
+FIBULA | Thin outer bone of the lower leg
+TARSAL | Ankle bone
+METATARSAL | Bone of the foot
+CALCANEUS | Heel bone
+TALUS | Ankle bone that joins the leg
+ILIUM | Upper part of the hip bone
+ISCHIUM | Lower part of the hip bone
+PUBIS | Front part of the hip bone
+STAPES | Stirrup bone of the ear, the body's smallest
+INCUS | Anvil bone of the middle ear
+MALLEUS | Hammer bone of the middle ear
+OSSICLES | Three tiny bones of the middle ear
+MARROW | Soft tissue inside bones
+PERIOSTEUM | Membrane covering bones
+JOINT | Point where bones meet
+SYNOVIAL | Lubricating fluid of joints
+MENISCUS | Cartilage pad in the knee
+ACHILLES | Tendon at the back of the heel
+SKELETAL | ___ muscle, attached to bones
+SMOOTH | ___ muscle, in organ walls
+CARDIAC | ___ muscle, of the heart
+TRICEPS | Muscle at the back of the upper arm
+DELTOID | Shoulder muscle
+PECTORAL | Chest muscle
+TRAPEZIUS | Large muscle of the upper back
+LATISSIMUS | Broad muscle of the back
+ABDOMINALS | Stomach muscles
+OBLIQUE | Side abdominal muscle
+GLUTEUS | Buttock muscle
+QUADRICEPS | Muscles of the front of the thigh
+HAMSTRING | Muscle at the back of the thigh
+GASTROCNEMIUS | Main calf muscle
+SOLEUS | Calf muscle beneath the gastrocnemius
+SARTORIUS | Longest muscle in the body
+MASSETER | Chewing muscle of the jaw
+ORBICULARIS | Ring-shaped muscle around the eye or mouth
+INTERCOSTAL | Muscle between the ribs
+ATRIUM | Upper chamber of the heart
+VENTRICLE | Lower chamber of the heart
+VALVE | Flap controlling blood flow in the heart
+MITRAL | Valve between the left atrium and ventricle
+TRICUSPID | Valve between the right atrium and ventricle
+PERICARDIUM | Sac around the heart
+SEPTUM | Wall dividing the heart
+PACEMAKER | Natural or artificial heart rhythm setter
+VENACAVA | Large vein entering the heart (4,4)
+PULMONARY | Relating to the lungs
+CORONARY | Relating to the heart's arteries
+CAROTID | Main artery of the neck
+JUGULAR | Major vein of the neck
+FEMORAL | Main artery of the thigh
+BRACHIAL | Artery of the upper arm
+ARTERIOLE | Small artery
+VENULE | Small vein
+CIRCULATION | Movement of blood through the body
+PULSE | Rhythmic throb of the arteries
+SYSTOLIC | Pressure when the heart contracts
+DIASTOLIC | Pressure when the heart relaxes
+ERYTHROCYTE | Red blood cell
+LEUKOCYTE | White blood cell
+LYMPHOCYTE | White blood cell of the immune system
+NEUTROPHIL | Most common white blood cell
+SERUM | Fluid part of blood without clotting factors
+LYMPH | Clear fluid that drains from body tissues
+LYMPHNODE | Swelling filter of the lymphatic system (5,4)
+TONSIL | Lymphoid tissue at the back of the throat
+ADENOID | Lymphoid tissue behind the nose
+THYMUS | Gland where T cells mature
+BRONCHUS | Main airway to a lung
+BRONCHIOLE | Small airway in the lung
+PLEURA | Membrane around the lungs
+EPIGLOTTIS | Flap that covers the windpipe when swallowing
+PHARYNX | Throat
+SINUS | Air-filled cavity in the skull
+NOSTRIL | Opening of the nose
+MOUTH | Opening for eating and speaking
+TONGUE | Muscular organ of taste
+PALATE | Roof of the mouth
+UVULA | Fleshy dangle at the back of the throat
+GUM | Tissue around the teeth
+TOOTH | Hard structure for chewing
+INCISOR | Front cutting tooth
+CANINE | Pointed tooth
+MOLAR | Back grinding tooth
+PREMOLAR | Tooth between the canine and molars
+ENAMEL | Hard outer layer of a tooth
+DENTINE | Layer beneath tooth enamel
+PULP | Soft centre of a tooth
+SALIVARY | ___ glands, which moisten food
+OESOPHAGUS | Food pipe, British spelling
+DUODENUM | First section of the small intestine
+JEJUNUM | Middle section of the small intestine
+ILEUM | Final section of the small intestine
+COLON | Main part of the large intestine
+RECTUM | Final section of the large intestine
+VILLI | Finger-like projections in the intestine
+PERISTALSIS | Waves of muscle contraction that move food
+BILE | Digestive fluid from the liver
+GALLSTONE | Hard deposit in the gallbladder
+APPENDICITIS | Inflammation of the appendix
+PERITONEUM | Lining of the abdominal cavity
+ABDOMEN | Belly
+BLADDER | Organ that stores urine
+URETER | Tube from kidney to bladder
+URETHRA | Tube carrying urine out of the body
+NEPHRON | Filtering unit of the kidney
+ADRENAL | Gland on top of the kidney
+UTERUS | Womb
+OVARY | Female reproductive gland
+TESTIS | Male reproductive gland
+PLACENTA | Organ nourishing a foetus
+UMBILICAL | ___ cord, linking foetus and placenta
+FOETUS | Unborn baby
+NAVEL | Belly button
+CEREBRUM | Largest part of the brain
+BRAINSTEM | Part of the brain controlling breathing (5,4)
+MEDULLA | Part of the brainstem
+PONS | Bridge-like part of the brainstem
+HYPOTHALAMUS | Brain region controlling hormones and temperature
+THALAMUS | Relay station of the brain
+AMYGDALA | Almond-shaped brain region linked to fear
+CORPUSCALLOSUM | Band linking the two brain hemispheres
+LOBE | Major division of the brain
+AXON | Long fibre of a nerve cell
+DENDRITE | Branching receiver of a nerve cell
+MYELIN | Fatty sheath around nerve fibres
+GANGLION | Cluster of nerve cells
+SPINALCORD | Nerve bundle in the spine (6,4)
+SCIATIC | Longest nerve in the body
+VAGUS | Cranial nerve to the heart and gut
+OPTIC | Nerve from eye to brain
+CRANIAL | Relating to the skull
+MENINGES | Membranes around the brain
+CEREBROSPINAL | ___ fluid, cushioning the brain
+EYE | Organ of sight
+PUPIL | Opening in the centre of the eye
+LENS | Focusing part of the eye
+SCLERA | White of the eye
+CONJUNCTIVA | Membrane covering the white of the eye
+EYELID | Fold of skin over the eye
+EYELASH | Hair on the edge of the eyelid
+EYEBROW | Arch of hair above the eye
+ROD | Light-sensitive cell for dim vision
+CONE | Light-sensitive cell for colour
+MACULA | Central part of the retina
+EAR | Organ of hearing
+PINNA | Outer ear
+TYMPANIC | ___ membrane, the eardrum
+EUSTACHIAN | Tube linking ear and throat
+VESTIBULAR | Relating to balance in the inner ear
+SKIN | Body's largest organ
+EPIDERMIS | Outer layer of skin
+DERMIS | Layer of skin beneath the epidermis
+PORE | Small opening in the skin
+FOLLICLE | Sac from which a hair grows
+MELANIN | Pigment of skin and hair
+KERATIN | Protein of hair and nails
+NAIL | Hard plate on a fingertip
+CUTICLE | Skin at the base of a nail
+HAIR | Strands growing from the skin
+SCALP | Skin on top of the head
+PINEAL | Gland that produces melatonin
+PARATHYROID | Gland that regulates calcium
+GLAND | Organ that secretes substances
+ENDOCRINE | System of hormone glands
+EXOCRINE | Glands with ducts
+OESTROGEN | Female sex hormone
+TESTOSTERONE | Male sex hormone
+CORTISOL | Stress hormone
+MELATONIN | Sleep hormone
+THYROXINE | Thyroid hormone
+GLUCAGON | Hormone that raises blood sugar
+OXYTOCIN | Bonding hormone
+HISTAMINE | Chemical released in allergic reactions
+ANTIGEN | Substance that triggers an immune response
+IMMUNE | ___ system, the body's defence
+INFLAMMATION | Redness and swelling
+FEVER | Raised body temperature
+TORSO | Trunk of the body
+THORAX | Chest
+GROIN | Area between abdomen and thigh
+HIP | Joint of the thigh and pelvis
+KNEE | Joint in the middle of the leg
+ANKLE | Joint between leg and foot
+WRIST | Joint between arm and hand
+ELBOW | Joint in the middle of the arm
+SHOULDER | Joint at the top of the arm
+NECK | Part joining head and body
+SPINE | Backbone
+HEEL | Back of the foot
+SOLE | Underside of the foot
+PALM | Inner surface of the hand
+THUMB | Opposable digit
+KNUCKLE | Finger joint
+FOREARM | Arm between elbow and wrist
+THIGH | Leg between hip and knee
+SHIN | Front of the lower leg
+CHIN | Lowest part of the face
+CHEEK | Side of the face
+TEMPLE | Side of the head beside the eye
+FOREHEAD | Part of the face above the eyes
+NOSE | Organ of smell
+LIP | Fleshy edge of the mouth
+JAW | Bone framework of the mouth
+ANATOMIST | Specialist in body structure
+PHYSIOLOGY | Study of how the body works
+HISTOLOGY | Study of tissues
+CYTOLOGY | Study of cells
+PATHOLOGY | Study of disease
+CARDIOLOGY | Study of the heart
+NEUROLOGY | Study of the nervous system
+DERMATOLOGY | Study of the skin
+ORTHOPAEDICS | Medicine of bones and muscles
+OPHTHALMOLOGY | Medicine of the eyes
+DENTISTRY | Care of the teeth
+RADIOLOGY | Medical imaging
+SURGEON | Doctor who operates
+PHYSICIAN | Medical doctor
+NURSE | Carer of patients
+PARAMEDIC | Emergency medical worker
+STETHOSCOPE | Instrument for listening to the chest
+BIOPSY | Sample of tissue for examination
+DIAGNOSIS | Identification of an illness
+PROGNOSIS | Likely outcome of a disease
+SYMPTOM | Sign of illness
+SYNDROME | Group of symptoms occurring together
+FRACTURE | Broken bone
+SPRAIN | Stretched or torn ligament
+DISLOCATION | Bone forced out of its joint
+CONCUSSION | Brain injury from a blow
+ANEURYSM | Bulge in a blood vessel wall
+STROKE | Interruption of blood flow to the brain
+ARRHYTHMIA | Irregular heartbeat
+ANGINA | Chest pain from reduced blood flow
+ASTHMA | Condition narrowing the airways
+ANAEMIA | Lack of red blood cells
+ARTHRITIS | Inflammation of the joints
+OSTEOPOROSIS | Thinning of the bones
+ANTERIOR | Towards the front of the body
+POSTERIOR | Towards the back of the body
+SUPERIOR | Above, in anatomy
+INFERIOR | Below, in anatomy
+MEDIAL | Towards the midline
+LATERAL | Away from the midline
+PROXIMAL | Nearer the point of attachment
+DISTAL | Farther from the point of attachment
+DORSAL | On the back side
+VENTRAL | On the belly side
+SAGITTAL | Plane dividing left and right
+CORONAL | Plane dividing front and back
+TRANSVERSE | Plane dividing top and bottom
+SUPINE | Lying face up
+PRONE | Lying face down
+FLEXION | Bending at a joint
+EXTENSION | Straightening at a joint
+ABDUCTION | Movement away from the midline
+ADDUCTION | Movement towards the midline
+PRONATION | Turning the palm downwards
+SUPINATION | Turning the palm upwards
+HINGE | ___ joint, like the elbow
+BALLANDSOCKET | Joint type of the hip and shoulder (4,3,6)
+PIVOT | ___ joint, allowing rotation
+SUTURE | Fixed joint between skull bones
+FONTANELLE | Soft spot on a baby's skull
+EPIPHYSIS | Rounded end of a long bone
+DIAPHYSIS | Shaft of a long bone
+OSTEOCYTE | Bone cell
+OSTEOBLAST | Bone-building cell
+OSTEOCLAST | Bone-dissolving cell
+COLLAGEN | Structural protein of connective tissue
+CONNECTIVE | ___ tissue, which supports and binds
+EPITHELIAL | ___ tissue, lining surfaces
+ADIPOSE | Fatty tissue
+FASCIA | Sheet of connective tissue
+SARCOMERE | Contractile unit of muscle
+MYOSIN | Muscle protein that pulls actin
+ACTIN | Muscle filament protein
+TENDONITIS | Inflammation of a tendon
+CRAMP | Painful involuntary muscle contraction
+SPASM | Sudden muscle contraction
+KNEEJERK | Reflex tested by tapping below the kneecap (4-4)
+SYMPATHETIC | ___ nervous system, for fight or flight
+AUTONOMIC | Nervous system controlling involuntary actions
+CENTRAL | ___ nervous system, brain and spinal cord
+PERIPHERAL | ___ nervous system, outside the brain and spine
+ACETYLCHOLINE | Neurotransmitter at muscle junctions
+ENDORPHIN | Natural painkiller
+RESPIRATORY | Relating to breathing
+INHALE | Breathe in
+EXHALE | Breathe out
+OXYGENATION | Supplying with oxygen
+HAEMOGLOBIN | Oxygen-carrying protein, British spelling
+CLOT | Thickened mass of blood
+COAGULATION | Clotting of blood
+BLOODTYPE | Group such as A, B, AB or O (5,4)
+RHESUS | Blood factor, positive or negative
+TRANSFUSION | Transfer of donated blood
+DONOR | Giver of blood or organs
+TRANSPLANT | Moving an organ from one body to another
+DIGESTIVE | Relating to the breakdown of food
+GASTRIC | Relating to the stomach
+CHYME | Semi-digested food leaving the stomach
+PEPSIN | Stomach enzyme that digests protein
+AMYLASE | Enzyme in saliva that digests starch
+LIPASE | Enzyme that digests fat
+ABSORPTION | Taking nutrients into the blood
+EXCRETION | Removal of waste
+URINE | Liquid waste from the kidneys
+DIALYSIS | Artificial filtering of the blood
+METABOLIC | ___ rate, speed of body chemistry
+SHIVERING | Muscle tremors that generate heat
+PERSPIRATION | Sweating
+HYDRATION | Water balance of the body
+ELECTROLYTE | Charged mineral such as sodium in the blood
+CELLULAR | Relating to cells
+GERM | Microbe that causes disease
+BACTERIAL | Caused by bacteria
+VIRAL | Caused by a virus
+INFECTIOUS | Able to spread disease
+CONTAGIOUS | Spread by contact
+VACCINATION | Injection to build immunity
+ALLERGY | Overreaction of the immune system
+ECZEMA | Itchy inflammation of the skin
+ACNE | Skin condition of spots
+PSORIASIS | Skin condition of scaly patches
+MIGRAINE | Severe recurring headache
+EPILEPSY | Condition of recurring seizures
+DEMENTIA | Decline in memory and thinking
+ALZHEIMERS | Most common form of dementia
+PARKINSONS | Condition of tremors and slow movement
+SCLEROSIS | Hardening of tissue
+DIABETIC | Having diabetes
+OBESITY | Excess body fat
+HYPERTENSION | High blood pressure
+ATHEROSCLEROSIS | Narrowing of arteries by plaque
+THROMBOSIS | Blood clot in a vessel
+EMBOLISM | Blockage of a vessel by a clot or bubble
+INFARCTION | Tissue death from blocked blood supply
+DEFIBRILLATOR | Device that shocks the heart
+TOURNIQUET | Band tightened to stop bleeding
+SPLINT | Support for a broken bone
+CAST | Rigid casing for a broken limb
+CRUTCH | Support for walking with an injury
+STITCHES | Sutures closing a wound
+WOUND | Injury breaking the skin
+BRUISE | Discoloured skin from a blow
+BLISTER | Fluid-filled bubble on the skin
+SCAR | Mark left by a healed wound
+SCAB | Crust over a healing wound
+INCISION | Surgical cut
+ANAESTHETIC | Drug that removes sensation
+ANALGESIC | Painkiller
+ANTISEPTIC | Substance that kills germs
+STEROID | Anti-inflammatory drug
+PRESCRIPTION | Doctor's order for medicine
+DOSAGE | Amount of medicine to take
+PHARMACIST | Dispenser of medicines
+PHARMACY | Shop selling medicines
+HOSPITAL | Place for treating the sick
+WARD | Room of patients in a hospital
+CLINIC | Place for outpatient treatment
+SURGERY | Operation on the body
+THEATRE | Room for surgery
+AMBULANCE | Emergency medical vehicle
+TRIAGE | Sorting patients by urgency
+PATIENT | Person receiving care
+CHECKUP | Routine medical examination (5-2)
+BREATH | Air taken into the lungs
+HICCUP | Involuntary spasm of the diaphragm
+YAWN | Involuntary deep breath when tired
+SNEEZE | Explosive expulsion of air from the nose
+COUGH | Expulsion of air from the lungs
+BLINK | Quick closing of the eyes
+GOOSEBUMPS | Raised bumps on the skin from cold or fear
+DIMPLE | Small dent in the cheek
+FRECKLE | Small brown spot on the skin
+MOLE | Dark spot on the skin
+BIRTHMARK | Coloured mark present from birth
+WRINKLE | Crease in the skin
+PUBERTY | Stage of sexual maturation
+ADOLESCENCE | Period between childhood and adulthood
+AGEING | Process of growing old
+LIFESPAN | Length of a life
+HEREDITARY | Passed from parent to child
+CONGENITAL | Present from birth
+CHRONIC | Long-lasting, of an illness
+ACUTE | Sudden and severe
+BENIGN | Not cancerous
+MALIGNANT | Cancerous
+TUMOUR | Abnormal growth of tissue
+CANCER | Disease of uncontrolled cell growth
+ONCOLOGY | Study of cancer
+REMISSION | Period when a disease is less active
+BICUSPID | Valve with two flaps, or a premolar
+AORTIC | ___ valve, guarding the body's largest artery
+ATRIA | Upper heart chambers
+MYOCARDIUM | Muscular wall of the heart
+ENDOCARDIUM | Inner lining of the heart
+HAEMORRHAGE | Heavy bleeding
+MACROPHAGE | Immune cell that engulfs invaders
+PHAGOCYTE | Cell that engulfs particles
+SPHINCTER | Ring of muscle that closes an opening
+PYLORUS | Opening from stomach to intestine
+CAECUM | Pouch at the start of the large intestine
+MESENTERY | Membrane holding the intestines in place
+CRUCIATE | ___ ligament of the knee
+INTERVERTEBRAL | ___ disc, cushion between spinal bones
+SLIPPEDDISC | Herniated spinal cushion (7,4)
+SCOLIOSIS | Sideways curvature of the spine
+KYPHOSIS | Excessive outward curve of the upper spine
+WHIPLASH | Neck injury from sudden jerking
+CARPALTUNNEL | ___ syndrome of the wrist (6,6)
+BUNION | Bony bump at the base of the big toe
+CORN | Thickened skin on the foot
+CALLUS | Hardened area of skin
+FINGERPRINT | Unique pattern on a fingertip
+ASTIGMATISM | Blurred vision from an irregular cornea
+MYOPIA | Short-sightedness
+CATARACT | Clouding of the eye's lens
+GLAUCOMA | Eye condition of raised pressure
+TINNITUS | Ringing in the ears
+VERTIGO | Dizzy spinning sensation

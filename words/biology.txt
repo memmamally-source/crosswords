@@ -1,0 +1,492 @@
+# Biology — one entry per line: ANSWER | clue
+PHOTOSYNTHESIS | Process by which plants turn light into food
+CHLOROPHYLL | Green pigment in plants
+MEIOSIS | Cell division that produces gametes
+MITOSIS | Cell division that produces two identical cells
+DARWIN | Naturalist who sailed on HMS Beagle
+MENDEL | Monk whose pea plants revealed the rules of heredity
+ALLELE | Variant form of a gene
+GENOME | Complete set of an organism's DNA
+PROTEIN | Molecule built from amino acids
+OSMOSIS | Movement of water toward a higher solute concentration
+MEMBRANE | Thin layer that encloses a cell
+CYTOPLASM | Jelly-like fluid inside a cell
+NUCLEUS | Control centre of a cell
+ORGANELLE | Specialised structure within a cell
+SPECIES | Group of organisms that can interbreed
+TAXONOMY | Science of classifying living things
+PREDATOR | Animal that hunts others
+SYMBIOSIS | Close, long-term partnership between different organisms
+PARASITE | Organism that lives off a host
+FUNGUS | Organism such as a mushroom or mould
+ALGAE | Simple aquatic organisms such as seaweed
+HABITAT | Natural home of an organism
+POLLINATION | Transfer of pollen between flowers
+STAMEN | Pollen-producing part of a flower
+XYLEM | Plant tissue that carries water up from the roots
+PHLOEM | Plant tissue that carries sugars
+CARNIVORE | Meat eater
+HERBIVORE | Plant eater
+METABOLISM | All the chemical reactions in an organism
+HOMEOSTASIS | Maintenance of a stable internal environment
+ANTIBODY | Y-shaped defender made by the immune system
+PATHOGEN | Disease-causing microbe
+EMBRYO | Early stage of a developing organism
+LARVA | Immature form of an insect, such as a caterpillar
+METAMORPHOSIS | Dramatic change of body form, as in a butterfly
+CLONE | Genetically identical copy
+HYBRID | Offspring of two different kinds, such as a mule
+BIOME | Large ecological community such as a rainforest
+FOODCHAIN | Sequence of who eats whom (4,5)
+VACCINATION | Jab that primes the body against a disease
+BIOLOGY | Study of living things
+ORGANISM | Individual living thing
+CELL | Basic unit of life
+PROKARYOTE | Cell without a nucleus
+EUKARYOTE | Cell with a nucleus
+BACTERIUM | Single-celled prokaryote
+ARCHAEA | Domain of extremophile microbes
+PROTIST | Simple eukaryote such as an amoeba
+AMOEBA | Shape-shifting single-celled organism
+PARAMECIUM | Slipper-shaped ciliate
+EUGLENA | Single-celled organism with a flagellum and chloroplasts
+VIRUS | Infectious particle that needs a host
+BACTERIOPHAGE | Virus that infects bacteria
+PRION | Misfolded infectious protein
+CYTOSKELETON | Network of protein filaments in a cell
+VACUOLE | Storage sac in a cell
+LYSOSOME | Organelle that digests waste
+RIBOSOME | Organelle that makes proteins
+GOLGI | ___ apparatus, which packages proteins
+ENDOPLASMIC | ___ reticulum, network of membranes
+MITOCHONDRION | Powerhouse of the cell
+CHLOROPLAST | Organelle of photosynthesis
+CENTRIOLE | Organelle involved in cell division
+FLAGELLUM | Whip-like tail for swimming
+CILIA | Tiny hair-like projections
+NUCLEOLUS | Structure in the nucleus that makes ribosomes
+CHROMATIN | DNA and protein in the nucleus
+CHROMOSOME | Thread-like package of DNA
+GENE | Unit of heredity
+HELIX | Spiral shape of DNA
+DOUBLEHELIX | Structure of DNA (6,5)
+CODON | Three-base unit of the genetic code
+ANTICODON | Matching triplet on transfer RNA
+TRANSCRIPTION | Copying DNA into RNA
+TRANSLATION | Building proteins from RNA
+REPLICATION | Copying of DNA
+POLYMERASE | Enzyme that builds DNA or RNA
+MUTATION | Change in DNA sequence
+GENOTYPE | Genetic make-up
+PHENOTYPE | Observable traits
+DOMINANT | Allele that masks another
+RECESSIVE | Allele that is masked
+HOMOZYGOUS | Having two identical alleles
+HETEROZYGOUS | Having two different alleles
+PUNNETT | ___ square, for predicting crosses
+INHERITANCE | Passing traits to offspring
+HEREDITY | Transmission of traits
+GENETICS | Study of heredity
+EPIGENETICS | Changes in gene activity without DNA change
+CRISPR | Gene-editing tool
+CLONING | Making genetic copies
+TRANSGENIC | Containing genes from another species
+SEQUENCING | Reading the order of DNA bases
+EVOLUTION | Change in species over generations
+SURVIVAL | ___ of the fittest
+FITNESS | Reproductive success
+ADAPTATION | Trait that improves survival
+SPECIATION | Formation of new species
+PHYLOGENY | Evolutionary history of a group
+CLADE | Group with a common ancestor
+CLADISTICS | Classification by shared ancestry
+HOMOLOGOUS | Similar due to common ancestry
+ANALOGOUS | Similar in function but not ancestry
+VESTIGIAL | Reduced and functionless, like the appendix
+FOSSIL | Preserved remains of past life
+EXTINCTION | Dying out of a species
+DARWINISM | Theory of evolution by natural selection
+LAMARCK | Biologist who proposed inheritance of acquired traits
+WALLACE | Co-discoverer of natural selection
+BEAGLE | HMS ___, Darwin's ship
+GALAPAGOS | Islands that inspired Darwin
+FINCHES | Darwin's birds with varied beaks
+KINGDOM | Major taxonomic rank such as animals
+PHYLUM | Rank below kingdom
+CLASS | Rank below phylum
+ORDER | Rank below class
+FAMILY | Rank below order
+GENUS | Rank below family
+BINOMIAL | ___ nomenclature, two-part naming
+LINNAEUS | Father of taxonomy
+VERTEBRATE | Animal with a backbone
+INVERTEBRATE | Animal without a backbone
+MAMMAL | Warm-blooded milk-producing animal
+REPTILE | Scaly cold-blooded animal
+AMPHIBIAN | Animal living in water and on land
+ARTHROPOD | Invertebrate with jointed legs
+MOLLUSC | Soft-bodied invertebrate such as a snail
+ANNELID | Segmented worm
+CNIDARIAN | Jellyfish or coral
+ECHINODERM | Starfish or sea urchin
+CRUSTACEAN | Crab or lobster
+INSECT | Six-legged arthropod
+ARACHNID | Eight-legged arthropod
+NEMATODE | Roundworm
+PLATYHELMINTH | Flatworm
+PLANT | Photosynthetic organism
+ANGIOSPERM | Flowering plant
+GYMNOSPERM | Seed plant without flowers, like a conifer
+CONIFER | Cone-bearing tree
+FERN | Spore-producing plant with fronds
+MOSS | Small non-vascular plant
+LICHEN | Partnership of fungus and alga
+FUNGI | Kingdom of mushrooms and moulds
+MYCELIUM | Thread network of a fungus
+SPORE | Reproductive cell of fungi and ferns
+YEAST | Single-celled fungus
+MOULD | Fuzzy fungal growth
+MUSHROOM | Fruiting body of a fungus
+STOMATA | Pores in leaves
+CAMBIUM | Growth layer in stems
+MERISTEM | Growth tissue at plant tips
+TROPISM | Growth response to a stimulus
+PHOTOTROPISM | Growth towards light
+GEOTROPISM | Growth in response to gravity
+AUXIN | Plant growth hormone
+GERMINATION | Sprouting of a seed
+POLLEN | Male plant cells
+STIGMA | Part of a flower that receives pollen
+STYLE | Stalk of the female flower part
+PETAL | Coloured part of a flower
+SEPAL | Leaf-like part protecting a bud
+NECTAR | Sugary liquid in flowers
+SEED | Plant embryo in a coat
+FRUIT | Ripened ovary containing seeds
+DICOT | Plant with two seed leaves
+MONOCOT | Plant with one seed leaf
+DECIDUOUS | Shedding leaves annually
+EVERGREEN | Keeping leaves all year
+ANNUAL | Plant completing its life in a year
+PERENNIAL | Plant living for many years
+ECOLOGY | Study of organisms and environment
+ECOSYSTEM | Community and its environment
+COMMUNITY | All populations in an area
+POPULATION | Members of one species in an area
+NICHE | Role of a species in its ecosystem
+PRODUCER | Organism that makes its own food
+CONSUMER | Organism that eats others
+DECOMPOSER | Organism that breaks down dead matter
+DETRITIVORE | Eater of dead matter
+TROPHIC | ___ level, position in a food chain
+FOODWEB | Network of food chains (4,3)
+APEX | ___ predator, at the top of the food chain
+KEYSTONE | ___ species, crucial to an ecosystem
+SUCCESSION | Gradual change in a community
+PIONEER | ___ species, first to colonise
+CLIMAX | ___ community, the stable end of succession
+MUTUALISM | Relationship benefiting both partners
+COMMENSALISM | Relationship benefiting one, not harming the other
+PARASITISM | Relationship benefiting one at the other's expense
+COMPETITION | Struggle for resources
+PREDATION | Hunting of prey
+CAMOUFLAGE | Blending into surroundings
+MIMICRY | Resembling another species
+BIODIVERSITY | Variety of life
+CONSERVATION | Protection of nature
+ENDANGERED | At risk of extinction
+INVASIVE | Non-native species that spreads harmfully
+RAINFOREST | Tropical biome of high rainfall
+TUNDRA | Cold treeless biome
+TAIGA | Coniferous forest biome
+SAVANNA | Tropical grassland biome
+DESERT | Dry biome
+WETLAND | Waterlogged habitat
+ESTUARY | Where river meets sea
+INTERTIDAL | Zone between high and low tide
+PLANKTON | Drifting organisms
+PHYTOPLANKTON | Photosynthetic plankton
+ZOOPLANKTON | Animal plankton
+EUTROPHICATION | Overgrowth of algae from excess nutrients
+BIOACCUMULATION | Build-up of toxins in organisms
+MICROBIOLOGY | Study of microorganisms
+MICROBIOME | Community of microbes in the body
+INFECTION | Invasion by a pathogen
+IMMUNITY | Resistance to disease
+VACCINE | Preparation that trains immunity
+ANTIBIOTIC | Drug that kills bacteria
+RESISTANCE | Ability of microbes to survive drugs
+PENICILLIN | Antibiotic from mould
+FLEMING | Discoverer of penicillin
+PASTEUR | Pioneer of germ theory
+KOCH | Robert ___, who identified the tuberculosis bacterium
+JENNER | Pioneer of the smallpox vaccine
+LEEUWENHOEK | First to see microbes
+HOOKE | Coiner of the word "cell"
+SCHLEIDEN | Co-founder of cell theory
+SCHWANN | Co-founder of cell theory
+VIRCHOW | Biologist who said all cells come from cells
+WATSON | Co-discoverer of DNA's structure
+CRICK | Co-discoverer of DNA's structure
+FRANKLIN | Rosalind ___, X-ray crystallographer of DNA
+MCCLINTOCK | Barbara ___, discoverer of jumping genes
+GOODALL | Jane ___, chimpanzee researcher
+CARSON | Rachel ___, author of Silent Spring
+ATTENBOROUGH | Naturalist broadcaster
+DAWKINS | Author of The Selfish Gene
+HAECKEL | Biologist who drew radiolarians
+AUDUBON | Painter of the birds of America
+HUMBOLDT | Explorer-naturalist of South America
+RESPIRATION | Release of energy from food
+AEROBIC | Requiring oxygen
+ANAEROBIC | Without oxygen
+FERMENTATION | Anaerobic breakdown of sugar
+GLYCOLYSIS | First stage of respiration
+KREBS | ___ cycle of respiration
+ADENOSINE | Part of the energy molecule ATP
+CALVIN | ___ cycle of photosynthesis
+ENZYME | Biological catalyst
+SUBSTRATE | Molecule an enzyme acts on
+DENATURE | Lose shape through heat or pH
+CATALYSE | Speed up a reaction
+HORMONE | Chemical messenger
+INSULIN | Hormone lowering blood sugar
+ADRENALINE | Hormone of fight or flight
+NEURON | Nerve cell
+SYNAPSE | Junction between neurons
+REFLEX | Automatic response
+ENDOCRINE | Hormone-producing system
+DIGESTION | Breaking down food
+ABSORPTION | Taking in nutrients
+EXCRETION | Removal of waste
+OSMOREGULATION | Control of water balance
+ENDOTHERM | Warm-blooded animal
+ECTOTHERM | Cold-blooded animal
+HIBERNATION | Winter dormancy
+AESTIVATION | Summer dormancy
+TORPOR | Short-term dormancy
+MIGRATION | Seasonal movement
+CIRCADIAN | Daily biological rhythm
+BIOLUMINESCENCE | Light produced by organisms
+PHEROMONE | Chemical signal between animals
+INSTINCT | Innate behaviour
+IMPRINTING | Early learning of attachment
+TERRITORY | Area defended by an animal
+COURTSHIP | Behaviour before mating
+MATING | Pairing for reproduction
+REPRODUCTION | Producing offspring
+ASEXUAL | Reproduction without a mate
+SEXUAL | Reproduction combining two parents
+BUDDING | Asexual reproduction by outgrowth
+FRAGMENTATION | Reproduction by breaking into pieces
+PARTHENOGENESIS | Reproduction without fertilisation
+GAMETE | Sex cell
+ZYGOTE | Fertilised egg
+FERTILISATION | Fusion of gametes
+EMBRYOLOGY | Study of embryos
+GESTATION | Period of pregnancy
+PUPA | Stage between larva and adult
+CHRYSALIS | Pupa of a butterfly
+COCOON | Silk case of a pupa
+NYMPH | Young insect that resembles the adult
+TADPOLE | Larval frog
+GENERATION | Single stage of descent
+OFFSPRING | Young of an organism
+GENEPOOL | All the genes in a population (4,4)
+BOTTLENECK | Sharp reduction in population
+FOUNDER | ___ effect, of a small colonising group
+POLYPLOIDY | Having extra chromosome sets
+KARYOTYPE | Picture of an organism's chromosomes
+DIPLOID | Having two chromosome sets
+HAPLOID | Having one chromosome set
+AUTOSOME | Non-sex chromosome
+CARRIER | Person with one copy of a recessive allele
+PEDIGREE | Family tree of a trait
+MENDELIAN | Following Mendel's laws
+GREGOR | First name of Mendel
+DROSOPHILA | Fruit fly of genetics labs
+MODEL | ___ organism, used in research
+ARABIDOPSIS | Model plant of genetics
+ZEBRAFISH | Model fish in developmental biology
+MICROSCOPE | Instrument for seeing cells
+SLIDE | Glass plate for specimens
+STAIN | Dye for showing cells
+CULTURE | Grown colony of microbes
+AGAR | Jelly for growing bacteria
+PETRIDISH | Shallow dish for cultures (5,4)
+INCUBATOR | Warm chamber for cultures
+ASEPTIC | Free from contamination
+ELECTROPHORESIS | Separating DNA by size
+CENTRIFUGE | Machine that spins samples
+DISSECT | Cut apart to examine
+SPECIMEN | Sample for study
+QUADRAT | Square frame for sampling
+TRANSECT | Line for sampling across a habitat
+FIELDWORK | Research in natural settings
+DICHOTOMOUS | ___ key, for identifying organisms
+HERBARIUM | Collection of preserved plants
+MUSEUM | Place where specimens are kept
+TAXIDERMY | Preserving animals for display
+NATURALIST | Student of nature
+BOTANIST | Plant scientist
+ZOOLOGIST | Animal scientist
+ECOLOGIST | Scientist of ecosystems
+GENETICIST | Scientist of heredity
+MICROBIOLOGIST | Scientist of microbes
+MARINE | ___ biologist, studying the sea
+ENTOMOLOGIST | Insect scientist
+ORNITHOLOGIST | Bird scientist
+HERPETOLOGIST | Reptile scientist
+ICHTHYOLOGIST | Fish scientist
+MYCOLOGIST | Fungus scientist
+PRIMATOLOGIST | Primate scientist
+PALAEONTOLOGIST | Fossil scientist
+VIROLOGIST | Virus scientist
+IMMUNOLOGIST | Immune system scientist
+PHYSIOLOGIST | Scientist of body functions
+ANATOMIST | Scientist of body structure
+BIOCHEMIST | Scientist of life's chemistry
+BIOINFORMATICS | Computing applied to biology
+BIOTECHNOLOGY | Technology using living organisms
+BIOENGINEERING | Engineering applied to biology
+BIOMIMICRY | Design imitating nature
+VELCRO | Fastener inspired by burrs
+STEMCELL | Unspecialised cell (4,4)
+DIFFERENTIATION | Specialisation of cells
+APOPTOSIS | Programmed cell death
+TELOMERE | Protective cap on chromosomes
+SENESCENCE | Biological ageing
+REGENERATION | Regrowth of lost parts
+PLANARIAN | Flatworm that regrows from pieces
+HYDRA | Tiny freshwater animal that regenerates
+TARDIGRADE | Water bear that survives extremes
+EXTREMOPHILE | Organism of extreme environments
+THERMOPHILE | Heat-loving microbe
+HALOPHILE | Salt-loving microbe
+CYANOBACTERIA | Photosynthetic bacteria
+DIATOM | Alga with a glass shell
+DINOFLAGELLATE | Plankton that can cause red tides
+KELP | Large brown seaweed
+SEAWEED | Marine algae
+CORAL | Colonial reef-building animal
+SPONGE | Simple filter-feeding animal
+JELLYFISH | Stinging cnidarian
+SQUID | Ten-armed cephalopod
+OCTOPUS | Eight-armed cephalopod
+CEPHALOPOD | Mollusc such as a squid
+BIVALVE | Mollusc with two shells
+GASTROPOD | Mollusc such as a snail
+EARTHWORM | Soil-dwelling annelid
+LEECH | Blood-sucking annelid
+TAPEWORM | Parasitic flatworm
+ROUNDWORM | Nematode
+TICK | Blood-sucking arachnid
+MITE | Tiny arachnid
+EXOSKELETON | External skeleton
+ENDOSKELETON | Internal skeleton
+MOULTING | Shedding of an exoskeleton
+CARTILAGINOUS | Fish with skeletons of cartilage
+GILLS | Breathing organs of fish
+SCALES | Protective plates on fish and reptiles
+FEATHERS | Outer covering of birds
+FUR | Hair of mammals
+WHISKER | Sensitive facial hair
+CLAWS | Curved nails
+TALONS | Claws of birds of prey
+BEAK | Bird's jaws
+PLACENTAL | Mammal nourished by a placenta
+MONOTREME | Egg-laying mammal
+MARSUPIAL | Pouched mammal
+PRIMATE | Order including humans
+HOMINID | Great ape or human
+NEANDERTHAL | Extinct human relative
+LUCY | Famous Australopithecus skeleton
+ERECTUS | Homo ___, upright early human
+HABILIS | Homo ___, "handy man"
+BIPEDAL | Walking on two legs
+OPPOSABLE | ___ thumb, of primates
+DINOSAUR | Extinct reptile group
+TYRANNOSAURUS | Huge predatory dinosaur
+VELOCIRAPTOR | Small feathered predatory dinosaur
+TRICERATOPS | Three-horned dinosaur
+STEGOSAURUS | Dinosaur with back plates
+BRACHIOSAURUS | Long-necked dinosaur
+ARCHAEOPTERYX | Early bird-like dinosaur
+PTERODACTYL | Flying reptile
+TRILOBITE | Extinct marine arthropod
+AMMONITE | Extinct spiral-shelled mollusc
+MAMMOTH | Extinct woolly elephant
+SABRETOOTH | Extinct cat with long canines
+DODO | Extinct flightless bird
+CAMBRIAN | ___ explosion of early animal life
+JURASSIC | Period of the dinosaurs
+CRETACEOUS | Period ending with the dinosaurs
+PERMIAN | Period ending in the greatest extinction
+TRANSPIRATION | Water loss from leaves
+TURGOR | Pressure keeping plant cells firm
+WILTING | Drooping from water loss
+PLASMOLYSIS | Shrinking of a plant cell in salty water
+DORMANCY | Resting state of a seed
+VERNALISATION | Cold exposure needed to flower
+PHOTOPERIOD | Day length affecting flowering
+ETHYLENE | Gas that ripens fruit
+GIBBERELLIN | Plant hormone of stem growth
+CYTOKININ | Plant hormone of cell division
+ABSCISSION | Shedding of leaves
+RHIZOME | Underground horizontal stem
+TUBER | Swollen underground storage organ
+BULB | Underground bud with fleshy leaves
+CORM | Swollen underground stem base
+STOLON | Runner that spreads a plant
+TENDRIL | Coiling stem for climbing
+THORN | Sharp woody spike
+CARNIVOROUS | ___ plant, like the Venus flytrap
+FLYTRAP | Venus ___, snapping carnivorous plant
+SUNDEW | Sticky carnivorous plant
+EPIPHYTE | Plant growing on another plant
+SUCCULENT | Water-storing plant
+CACTUS | Spiny desert succulent
+HALOPHYTE | Salt-tolerant plant
+MANGROVE | Salt-tolerant coastal tree
+SEQUOIA | Giant redwood tree
+BRISTLECONE | Pine among the oldest living things
+POLLINATOR | Animal carrying pollen
+HONEYBEE | Social pollinating insect
+BUMBLEBEE | Large fuzzy bee
+COLONY | Group of social insects
+HIVE | Bee home
+QUEEN | Egg-laying bee
+WORKER | Sterile female bee
+DRONE | Male bee
+EUSOCIAL | Living in cooperative colonies
+WAGGLE | ___ dance of honeybees
+SYMBIONT | Organism in a symbiosis
+MYCORRHIZA | Fungus-root partnership
+DECOMPOSITION | Breakdown of dead matter
+COMPOST | Decomposed organic matter
+HUMUS | Organic part of soil
+SOIL | Earth in which plants grow
+NUTRIENT | Substance needed for growth
+CARBOHYDRATE | Sugar or starch
+FIBRE | Indigestible plant matter
+CALORIE | Unit of food energy
+NUTRITION | Science of food and health
+MALNUTRITION | Poor nutrition
+SCURVY | Disease from lack of vitamin C
+RICKETS | Disease from lack of vitamin D
+BERIBERI | Disease from lack of vitamin B1
+GOITRE | Swollen thyroid from lack of iodine
+EPIDEMIOLOGY | Study of disease spread
+ZOONOSIS | Disease passing from animals to humans
+MALARIA | Mosquito-borne disease
+TUBERCULOSIS | Bacterial lung disease
+CHOLERA | Waterborne bacterial disease
+SMALLPOX | Eradicated viral disease
+POLIO | Viral disease targeted by vaccines
+MEASLES | Highly contagious viral rash
+INFLUENZA | Seasonal viral illness
+CORONAVIRUS | Virus family including SARS-CoV-2
+HERD | ___ immunity, protection of a population
+QUARANTINE | Isolation to prevent spread
+PLACEBO | Inactive control treatment
+DOUBLEBLIND | Trial where neither side knows who gets what (6-5)

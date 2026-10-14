@@ -1,0 +1,505 @@
+# Art & Architecture — one entry per line: ANSWER | clue
+PICASSO | Spanish painter of Guernica
+MONET | French Impressionist of the Water Lilies series
+REMBRANDT | Dutch master of The Night Watch
+FRESCO | Painting made on wet plaster
+MOSAIC | Picture made from small tiles
+BAROQUE | Ornate, dramatic 17th-century European style
+CUBISM | Movement of fragmented, geometric forms
+IMPRESSIONISM | Movement that captured fleeting light with loose brushwork
+SURREALISM | Dreamlike 1920s movement led by André Breton
+DALI | Painter of The Persistence of Memory
+VERMEER | Painter of Girl with a Pearl Earring
+MICHELANGELO | Painter of the Sistine Chapel ceiling
+DAVINCI | Leonardo ___, painter of the Mona Lisa (2,5)
+GOTHIC | Medieval style of flying buttresses and rose windows
+PALETTE | Board for mixing paints
+EASEL | Stand that holds a painting
+CANVAS | Fabric surface for painting
+SCULPTURE | Three-dimensional artwork
+KAHLO | Frida ___, Mexican painter of The Two Fridas
+VANGOGH | Painter of The Starry Night (3,4)
+WARHOL | Artist of the Campbell's Soup Cans
+POPART | Movement that borrowed from comics and advertising (3,3)
+CHIAROSCURO | Strong contrast of light and dark in painting
+PERSPECTIVE | Technique for showing depth on a flat surface
+COLUMN | Upright pillar, such as a Doric or Ionic one
+GALLERY | Room or building for displaying art
+ROCOCO | Light, playful 18th-century style
+ABSTRACT | Art that doesn't depict things realistically
+PORTRAIT | Picture of a person
+LOUVRE | Paris museum that houses the Mona Lisa
+MURAL | Large painting on a wall
+WATERCOLOUR | Translucent paint thinned with water
+SKETCH | Quick, rough drawing
+GRAFFITI | Art sprayed onto public walls
+BANKSY | Anonymous British street artist
+RODIN | Sculptor of The Thinker
+KLIMT | Austrian painter of The Kiss
+MATISSE | French Fauvist famous for paper cut-outs
+HOKUSAI | Japanese artist of The Great Wave off Kanagawa
+ACROPOLIS | Hilltop citadel in Athens crowned by the Parthenon
+DOME | Hemispherical roof, as on St Peter's Basilica
+ARCH | Curved structure spanning an opening
+GAUDI | Architect of Barcelona's Sagrada Família
+ETCHING | Print made from a plate bitten by acid
+PASTEL | Soft, chalky stick of colour
+STILLLIFE | Painting of fruit, flowers or objects (5,4)
+GIOTTO | Early Renaissance painter of the Scrovegni Chapel
+BOTTICELLI | Painter of The Birth of Venus
+RAPHAEL | Painter of The School of Athens
+DONATELLO | Florentine sculptor of a bronze David
+TITIAN | Venetian master of colour
+TINTORETTO | Venetian painter of dramatic religious scenes
+VERONESE | Venetian painter of lavish feasts
+CARAVAGGIO | Baroque master of dramatic light
+BERNINI | Baroque sculptor of St Peter's colonnade
+RUBENS | Flemish painter of fleshy figures
+VANDYCK | Court portraitist of Charles I (3,4)
+VELAZQUEZ | Painter of Las Meninas
+GOYA | Spanish painter of The Third of May 1808
+ELGRECO | Painter of elongated figures in Toledo (2,5)
+DURER | German master of woodcuts
+HOLBEIN | Portraitist of Henry VIII
+BRUEGEL | Flemish painter of peasant life
+BOSCH | Hieronymus ___, painter of The Garden of Earthly Delights
+VANEYCK | Painter of the Arnolfini Portrait (3,4)
+HALS | Frans ___, painter of The Laughing Cavalier
+POUSSIN | French classical painter
+WATTEAU | Painter of fêtes galantes
+FRAGONARD | Painter of The Swing
+CONSTABLE | Painter of The Hay Wain
+TURNER | Painter of The Fighting Temeraire
+GAINSBOROUGH | Painter of The Blue Boy
+REYNOLDS | First president of the Royal Academy
+HOGARTH | Satirist of A Rake's Progress
+STUBBS | Painter of horses such as Whistlejacket
+DELACROIX | Painter of Liberty Leading the People
+GERICAULT | Painter of The Raft of the Medusa
+INGRES | Painter of La Grande Odalisque
+DAVID | Jacques-Louis ___, painter of The Death of Marat
+COURBET | Realist painter of The Origin of the World
+MILLET | Painter of The Gleaners
+COROT | French landscape painter of the Barbizon era
+MANET | Painter of Le Déjeuner sur l'herbe
+DEGAS | Painter of ballet dancers
+RENOIR | Painter of Bal du moulin de la Galette
+PISSARRO | Impressionist father figure
+SISLEY | Impressionist of river landscapes
+MORISOT | Berthe ___, Impressionist painter
+CASSATT | Mary ___, American Impressionist
+CEZANNE | Painter of Mont Sainte-Victoire
+GAUGUIN | Painter of Tahitian scenes
+SEURAT | Pointillist painter of A Sunday Afternoon
+MUNCH | Painter of The Scream
+SCHIELE | Austrian Expressionist draughtsman
+KANDINSKY | Pioneer of abstract art
+MALEVICH | Painter of Black Square
+MONDRIAN | Painter of grids of primary colours
+MIRO | Joan ___, Catalan Surrealist
+MAGRITTE | Painter of The Treachery of Images
+ERNST | Max ___, Surrealist of collage and frottage
+DUCHAMP | Artist of the urinal Fountain
+KLEE | Paul ___, Bauhaus painter
+CHAGALL | Painter of dreamlike floating lovers
+MODIGLIANI | Painter of elongated faces
+BRAQUE | Co-founder of Cubism with Picasso
+LEGER | Fernand ___, painter of tubular figures
+HOPPER | Painter of Nighthawks
+OKEEFFE | Georgia ___, painter of flowers and New Mexico
+POLLOCK | Drip painter of Abstract Expressionism
+ROTHKO | Painter of colour field rectangles
+DEKOONING | Abstract Expressionist of the Woman series
+LICHTENSTEIN | Pop artist of comic-strip dots
+HOCKNEY | Painter of A Bigger Splash
+BACON | Francis ___, painter of screaming popes
+FREUD | Lucian ___, painter of fleshy portraits
+BASQUIAT | Neo-expressionist of 1980s New York
+HARING | Keith ___, artist of radiant babies
+KOONS | Jeff ___, creator of Balloon Dog
+HIRST | Damien ___, artist of a shark in formaldehyde
+EMIN | Tracey ___, artist of My Bed
+KUSAMA | Yayoi ___, artist of polka dots and infinity rooms
+AIWEIWEI | Chinese dissident artist (2,6)
+GORMLEY | Antony ___, sculptor of the Angel of the North
+MOORE | Henry ___, sculptor of reclining figures
+HEPWORTH | Barbara ___, abstract sculptor
+GIACOMETTI | Sculptor of thin elongated figures
+BRANCUSI | Sculptor of Bird in Space
+CALDER | Alexander ___, inventor of the mobile
+CANOVA | Neoclassical sculptor of Psyche Revived
+PRAXITELES | Greek sculptor of Aphrodite of Knidos
+PHIDIAS | Greek sculptor of the Parthenon
+HIROSHIGE | Japanese printmaker of The Fifty-Three Stations of the Tōkaidō
+UKIYOE | Japanese woodblock print genre (5-1)
+MONALISA | Leonardo's famous portrait (4,4)
+LASTSUPPER | Leonardo's mural in Milan (4,6)
+SUNFLOWERS | Van Gogh's series of yellow blooms
+SCREAM | Munch's anguished figure, "The ___"
+GUERNICA | Picasso's anti-war painting
+NIGHTWATCH | Rembrandt's militia painting (5,5)
+THINKER | Rodin's pensive sculpture, "The ___"
+KISS | Klimt's golden painting, "The ___"
+VENUSDEMILO | Armless Greek statue (5,2,4)
+PIETA | Michelangelo's sculpture of Mary holding Jesus
+SISTINE | Chapel with Michelangelo's ceiling
+ARNOLFINI | Portrait by van Eyck
+AMERICANGOTHIC | Wood's painting of a farmer and pitchfork (8,6)
+NIGHTHAWKS | Hopper's diner scene
+CAMPBELLS | Soup in Warhol's art
+IMPRESSION | Monet's ___, Sunrise, which named a movement
+RENAISSANCE | Rebirth of art in Italy
+MANNERISM | Style of elongated figures after the High Renaissance
+NEOCLASSICISM | Style reviving ancient Greek and Roman forms
+REALISM | Movement depicting everyday life
+POINTILLISM | Painting with dots of colour
+FAUVISM | Movement of wild, bold colour
+EXPRESSIONISM | Movement conveying emotion through distortion
+DADA | Anti-art movement of the First World War
+FUTURISM | Italian movement glorifying speed
+CONSTRUCTIVISM | Russian movement of geometric design
+DESTIJL | Dutch movement of Mondrian (2,4)
+BAUHAUS | German school of design founded in 1919
+ARTNOUVEAU | Style of flowing organic lines (3,7)
+ARTDECO | Style of geometric glamour (3,4)
+MINIMALISM | Movement of extreme simplicity
+CONCEPTUAL | Art where the idea matters most
+PERFORMANCE | Art enacted live
+INSTALLATION | Art arranged in a space
+OPART | Art of optical illusions (2,3)
+PRERAPHAELITE | Brotherhood of Rossetti and Millais
+ROSSETTI | Dante Gabriel ___, Pre-Raphaelite painter
+MILLAIS | Painter of Ophelia floating in a stream
+WATERHOUSE | Painter of The Lady of Shalott
+MORRIS | William ___, designer of the Arts and Crafts movement
+WHISTLER | Painter of his mother
+SARGENT | Painter of Madame X
+ROCKWELL | Norman ___, illustrator of American life
+WYETH | Andrew ___, painter of Christina's World
+RIVERA | Diego ___, Mexican muralist
+OROZCO | Mexican muralist of social themes
+BOTERO | Colombian painter of plump figures
+ARTEMISIA | ___ Gentileschi, Baroque painter
+LEYSTER | Judith ___, Dutch Golden Age painter
+OIL | Paint made with linseed
+ACRYLIC | Fast-drying plastic paint
+GOUACHE | Opaque watercolour
+TEMPERA | Paint made with egg yolk
+ENCAUSTIC | Painting with hot wax
+CHARCOAL | Burnt stick for drawing
+INK | Liquid for drawing and writing
+SEPIA | Brown ink from cuttlefish
+PIGMENT | Colouring substance
+PRIMER | Undercoat for a surface
+GESSO | White preparatory ground for painting
+VARNISH | Protective glossy coating
+IMPASTO | Thick application of paint
+GLAZE | Thin transparent layer of paint
+SFUMATO | Leonardo's soft blending of tones
+TENEBRISM | Dramatic darkness in painting
+TROMPELOEIL | Painting that deceives the eye
+ANAMORPHOSIS | Distorted image seen correctly from one angle
+FORESHORTENING | Depicting depth by shortening a form
+COMPOSITION | Arrangement of elements in a work
+PROPORTION | Relative sizes of parts
+CONTRAST | Difference between light and dark
+HUE | Pure colour
+TINT | Colour mixed with white
+SHADE | Colour mixed with black
+TONE | Colour mixed with grey
+SATURATION | Intensity of colour
+PRIMARY | Red, yellow or blue
+SECONDARY | Colour made by mixing two primaries
+COMPLEMENTARY | Colours opposite on the wheel
+MONOCHROME | Using one colour
+BRUSHSTROKE | Mark made by a brush
+STROKE | Single mark of a brush
+SKETCHBOOK | Book for drawings
+STUDY | Preparatory drawing
+DRAFT | Preliminary version
+MASTERPIECE | Artist's greatest work
+TRIPTYCH | Work in three panels
+DIPTYCH | Work in two panels
+POLYPTYCH | Work in many panels
+ALTARPIECE | Painting behind an altar
+ICON | Religious image on a panel
+MINIATURE | Very small painting
+SILHOUETTE | Dark outline against a light background
+NUDE | Unclothed figure in art
+LANDSCAPE | Painting of scenery
+SEASCAPE | Painting of the sea
+VANITAS | Still life reminding of mortality
+GENRE | Scene of everyday life
+PRINTMAKING | Making art by transferring ink
+WOODCUT | Print from a carved wooden block
+LINOCUT | Print from carved linoleum
+ENGRAVING | Print from incised metal
+LITHOGRAPH | Print from a flat stone
+SCREENPRINT | Print made through a mesh (6,5)
+MONOTYPE | One-off print
+COLLAGE | Art of pasted materials
+ASSEMBLAGE | Art of found objects
+READYMADE | Everyday object presented as art
+MOBILE | Hanging kinetic sculpture
+STABILE | Calder's stationary sculpture
+BRONZE | Metal for casting sculpture
+MARBLE | Stone for carving statues
+CARVING | Shaping by cutting away
+CASTING | Pouring molten metal into a mould
+RELIEF | Sculpture projecting from a background
+BUST | Sculpture of head and shoulders
+STATUE | Carved or cast figure
+PLINTH | Base for a statue
+CHISEL | Sculptor's cutting tool
+KILN | Oven for firing pottery
+POTTERY | Ceramic ware
+PORCELAIN | Fine translucent ceramic
+TERRACOTTA | Unglazed red-brown clay
+TAPESTRY | Woven picture
+CALLIGRAPHY | Art of beautiful writing
+ORIGAMI | Japanese paper folding
+IKEBANA | Japanese flower arranging
+ARCHITECT | Designer of buildings
+ARCHITECTURE | Art of designing buildings
+VITRUVIUS | Roman author on architecture
+BRUNELLESCHI | Architect of Florence's cathedral dome
+PALLADIO | Architect of Venetian villas
+WREN | Christopher ___, architect of St Paul's
+WRIGHT | Frank Lloyd ___, architect of Fallingwater
+MIES | ___ van der Rohe, who said "less is more"
+GROPIUS | Founder of the Bauhaus
+HADID | Zaha ___, architect of flowing curves
+GEHRY | Frank ___, architect of the Guggenheim Bilbao
+FOSTER | Norman ___, architect of the Gherkin
+NIEMEYER | Oscar ___, architect of Brasília
+UTZON | Jørn ___, architect of Sydney Opera House
+ROGERS | Richard ___, co-architect of the Pompidou Centre
+PIANO | Renzo ___, architect of the Shard
+KAHN | Louis ___, architect of the Salk Institute
+EIFFEL | Engineer of a Parisian tower
+PANTHEON | Roman temple with a great concrete dome
+HAGIASOPHIA | Domed church turned mosque in Istanbul (5,6)
+NOTREDAME | Gothic cathedral of Paris (5,4)
+CHARTRES | Gothic cathedral famous for its stained glass
+WESTMINSTER | ___ Abbey, London coronation church
+SAGRADA | ___ Família, Gaudí's basilica
+GUGGENHEIM | Spiral museum in New York
+POMPIDOU | Inside-out arts centre in Paris
+BILBAO | City of a titanium-clad Guggenheim
+FALLINGWATER | House built over a waterfall
+VAULT | Arched ceiling
+BUTTRESS | Support built against a wall
+FLYING | ___ buttress, Gothic support
+SPIRE | Tall pointed tower
+STEEPLE | Church tower with a spire
+NAVE | Main body of a church
+APSE | Semicircular end of a church
+TRANSEPT | Arm of a cross-shaped church
+CRYPT | Underground chamber of a church
+CLOISTER | Covered walkway around a courtyard
+FRIEZE | Decorated horizontal band
+PEDIMENT | Triangular gable of a classical building
+CORNICE | Decorative moulding at the top of a wall
+CAPITAL | Top of a column
+DORIC | Plainest classical order
+IONIC | Classical order with scroll capitals
+CORINTHIAN | Classical order with acanthus leaves
+PORTICO | Columned porch
+COLONNADE | Row of columns
+ROTUNDA | Round building with a dome
+ATRIUM | Open central hall
+FACADE | Front of a building
+CANTILEVER | Projecting beam supported at one end
+KEYSTONE | Central stone of an arch
+LINTEL | Beam over a doorway
+BALUSTRADE | Row of small posts supporting a rail
+MINARET | Tower of a mosque
+ZIGGURAT | Stepped Mesopotamian tower
+SKYSCRAPER | Very tall building
+BRUTALISM | Style of raw concrete
+MODERNIST | ___ architecture of glass and steel
+ROMANESQUE | Style of round arches and thick walls
+BYZANTINE | Style of domes and mosaics
+PALLADIAN | Style of symmetrical classical villas
+BLUEPRINT | Technical building plan
+CURATOR | Keeper of a museum collection
+EXHIBITION | Public display of art
+MUSEUM | Building housing collections
+VERNISSAGE | Private view before an exhibition opens
+PROVENANCE | Record of an artwork's ownership
+FORGERY | Fake artwork
+RESTORATION | Repair of an artwork
+PATRON | Sponsor of artists
+COMMISSION | Order for a specific artwork
+ATELIER | Artist's workshop
+MUSE | Source of an artist's inspiration
+SITTER | Person posing for a portrait
+UFFIZI | Florence's great gallery
+PRADO | Madrid's great gallery
+HERMITAGE | St Petersburg's great museum
+TATE | London galleries of British and modern art
+RIJKSMUSEUM | Amsterdam's national museum
+ORSAY | Musée d'___, Paris museum of Impressionism
+MASACCIO | Early Renaissance painter of The Holy Trinity
+PIERO | ___ della Francesca, painter of geometric calm
+UCCELLO | Painter of The Battle of San Romano
+MANTEGNA | Painter of the foreshortened Lamentation of Christ
+BELLINI | Venetian painter of luminous Madonnas
+GIORGIONE | Venetian painter of The Tempest
+CORREGGIO | Painter of dome frescoes in Parma
+CIMABUE | Painter who taught Giotto
+DUCCIO | Sienese painter of the Maestà
+CANALETTO | Painter of Venetian views
+TIEPOLO | Venetian painter of ceiling frescoes
+ZURBARAN | Spanish painter of austere saints
+MURILLO | Spanish painter of sweet Madonnas
+RIBERA | Spanish Baroque painter of martyrdoms
+CLAUDE | ___ Lorrain, painter of ideal landscapes
+CHARDIN | French painter of quiet still lifes
+BOUCHER | Rococo painter of pastoral scenes
+FRIEDRICH | Caspar David ___, painter of Wanderer above the Sea of Fog
+FUSELI | Painter of The Nightmare
+BONHEUR | Rosa ___, painter of The Horse Fair
+TISSOT | Painter of Victorian society
+LEIGHTON | Painter of Flaming June
+BEARDSLEY | Aubrey ___, illustrator of black-and-white decadence
+MUCHA | Alphonse ___, Art Nouveau poster artist
+TIFFANY | Louis Comfort ___, glass artist
+LALIQUE | René ___, glass and jewellery designer
+FABERGE | Maker of jewelled imperial eggs
+HORTA | Victor ___, Art Nouveau architect of Brussels
+MACKINTOSH | Charles Rennie ___, Glasgow designer
+ROUSSEAU | Henri ___, naive painter of jungles
+VUILLARD | Nabis painter of intimate interiors
+BONNARD | Painter of sunlit domestic scenes
+DERAIN | Fauvist painter of Charing Cross Bridge
+VLAMINCK | Fauvist painter of vivid landscapes
+MARC | Franz ___, painter of blue horses
+MACKE | August ___, Blue Rider painter
+KIRCHNER | Painter of the Die Brücke group
+NOLDE | German Expressionist of vivid flowers
+KOKOSCHKA | Painter of The Bride of the Wind
+BECKMANN | German painter of triptychs
+GROSZ | Satirist of Weimar Germany
+SCHWITTERS | Collagist of Merz
+MANRAY | Surrealist photographer (3,3)
+TANGUY | Surrealist painter of biomorphic shapes
+DECHIRICO | Painter of eerie metaphysical piazzas (2,7)
+MORANDI | Painter of quiet bottles
+BOCCIONI | Futurist sculptor of Unique Forms of Continuity in Space
+BALLA | Futurist painter of a dog on a leash
+RODCHENKO | Russian Constructivist designer
+TATLIN | Designer of a monument to the Third International
+LISSITZKY | Russian avant-garde designer
+ALBERS | Josef ___, painter of nested squares
+NEWMAN | Barnett ___, painter of "zips"
+KLINE | Franz ___, painter of black brushstrokes
+STILL | Clyfford ___, Abstract Expressionist
+FRANKENTHALER | Helen ___, colour field painter
+KRASNER | Lee ___, Abstract Expressionist
+TWOMBLY | Cy ___, painter of scribbles
+JOHNS | Jasper ___, painter of flags and targets
+RAUSCHENBERG | Artist of combines
+OLDENBURG | Sculptor of giant everyday objects
+STELLA | Frank ___, painter of black stripes
+JUDD | Donald ___, Minimalist sculptor of boxes
+FLAVIN | Dan ___, artist of fluorescent lights
+LEWITT | Sol ___, conceptual wall-drawing artist
+SERRA | Richard ___, sculptor of steel arcs
+SMITHSON | Robert ___, creator of Spiral Jetty
+CHRISTO | Artist who wrapped the Reichstag
+GOLDSWORTHY | Andy ___, artist of natural materials
+KAPOOR | Anish ___, sculptor of Cloud Gate
+WHITEREAD | Rachel ___, sculptor of casts of spaces
+RICHTER | Gerhard ___, painter of blurred photos
+KIEFER | Anselm ___, painter of German history
+BOURGEOIS | Louise ___, sculptor of giant spiders
+ABRAMOVIC | Marina ___, performance artist
+SHERMAN | Cindy ___, photographer of self-staged roles
+LEIBOVITZ | Annie ___, celebrity photographer
+ADAMS | Ansel ___, photographer of Yosemite
+CAPA | Robert ___, war photographer
+LANGE | Dorothea ___, photographer of Migrant Mother
+ARBUS | Diane ___, photographer of outsiders
+PHOTOGRAPHY | Art of capturing images with light
+DAGUERREOTYPE | Early photographic process
+NEGATIVE | Reversed photographic image
+DARKROOM | Room for developing film
+APERTURE | Opening that lets light into a camera
+EXPOSURE | Amount of light reaching film
+FOCUS | Sharpness of an image
+CAMERA | Device for taking photographs
+TRIPOD | Three-legged camera stand
+FILM | Light-sensitive strip
+PORTRAITURE | Art of portraits
+CARICATURE | Exaggerated portrait
+CARTOON | Preparatory drawing for a fresco or tapestry
+DOODLE | Absent-minded drawing
+ILLUSTRATION | Picture accompanying text
+TYPOGRAPHY | Art of arranging type
+FONT | Set of type
+SERIF | Small stroke at the end of a letter
+MURALIST | Painter of walls
+TESSERA | Single tile in a mosaic
+INLAY | Material set into a surface
+MARQUETRY | Inlaid wood veneer
+GILDING | Applying gold leaf
+GOLDLEAF | Thin sheets of gold (4,4)
+ENAMELLING | Fusing glass to metal
+CLOISONNE | Enamel set in wire compartments
+LACQUER | Glossy resin finish
+JAPANNING | European imitation of Asian lacquer
+EMBROIDERY | Decorative needlework
+QUILT | Stitched layered textile
+WEAVING | Interlacing threads
+LOOM | Weaving frame
+BATIK | Wax-resist dyeing
+IKAT | Resist-dyed weaving
+SCULPTOR | Maker of statues
+PAINTER | Artist who uses paint
+PRINTMAKER | Maker of prints
+CERAMICIST | Potter
+GLASSBLOWER | Shaper of molten glass
+SILVERSMITH | Worker of silver
+GOLDSMITH | Worker of gold
+JEWELLER | Maker of rings and necklaces
+CABINETMAKER | Maker of fine furniture
+CHIPPENDALE | Thomas ___, furniture maker
+SHERATON | Georgian furniture style
+EAMES | Designers of a famous lounge chair
+BREUER | Marcel ___, designer of tubular steel chairs
+JACOBSEN | Arne ___, designer of the Egg chair
+DESIGN | Planning the look and function of objects
+INTERIOR | ___ design, of rooms
+CAPABILITY | ___ Brown, English landscape gardener
+LENOTRE | André ___, garden designer of Versailles
+TOPIARY | Clipping shrubs into shapes
+PARTERRE | Formal garden of patterned beds
+FOLLY | Decorative garden building
+GROTTO | Artificial cave in a garden
+FOUNTAIN | Water feature in a square
+PIAZZA | Italian public square
+BOULEVARD | Wide tree-lined avenue
+PETRA | Rock-cut city of Jordan
+ANGKORWAT | Cambodian temple complex (6,3)
+BOROBUDUR | Buddhist monument of Java
+TOPKAPI | Ottoman palace in Istanbul
+NEUSCHWANSTEIN | Fairy-tale castle of Bavaria
+CHRYSLER | ___ Building, Art Deco skyscraper
+FLATIRON | Wedge-shaped New York building
+SHARD | London's tallest skyscraper, "The ___"
+GHERKIN | London tower nicknamed for a pickle
+BURJKHALIFA | World's tallest building (4,7)
+PETRONAS | Twin towers of Kuala Lumpur
+SKETCHING | Quick drawing
+DRAUGHTSMAN | Skilled drawer
+STIPPLING | Shading with dots
+HATCHING | Shading with parallel lines
+CROSSHATCHING | Shading with intersecting lines
+FIXATIVE | Spray that stops charcoal smudging
+TURPENTINE | Solvent for oil paint
+LINSEED | Oil used as a paint medium
+SIZE | Glue used to prepare canvas
+STRETCHER | Wooden frame for canvas
+FRAME | Border around a picture
+PLEINAIR | Painting outdoors (5,3)

@@ -1,0 +1,506 @@
+# Advanced Vocabulary — one entry per line: ANSWER | clue
+EPHEMERAL | Lasting a very short time
+UBIQUITOUS | Found everywhere
+LOQUACIOUS | Very talkative
+SERENDIPITY | Happy accident
+OBFUSCATE | Make deliberately unclear
+PERFUNCTORY | Done with minimal effort or care
+SYCOPHANT | Servile flatterer
+MELLIFLUOUS | Sweet and smooth-sounding
+PERNICIOUS | Harmful in a gradual or subtle way
+LACONIC | Using very few words
+GREGARIOUS | Fond of company; sociable
+ESOTERIC | Understood only by a select few
+CACOPHONY | Harsh, jarring mixture of sounds
+QUIXOTIC | Idealistic to the point of impracticality
+PRAGMATIC | Practical rather than idealistic
+TACITURN | Reserved; saying little
+VERBOSE | Using more words than needed
+ALACRITY | Brisk and cheerful readiness
+ENIGMA | Puzzling person or thing
+ZEALOT | Fanatical supporter
+ERUDITE | Having great learning
+FASTIDIOUS | Very attentive to accuracy and detail
+NEFARIOUS | Wicked or criminal
+OSTENSIBLE | Stated or appearing to be true, but perhaps not
+PARADIGM | Typical model or pattern
+RECALCITRANT | Stubbornly uncooperative
+VERACITY | Truthfulness
+BENEVOLENT | Kindly and well-meaning
+DILIGENT | Hard-working and careful
+SANGUINE | Optimistic, especially in a difficult situation
+PITHY | Concise and full of meaning
+TERSE | Brief to the point of curtness
+QUELL | Put an end to, as a rebellion
+AUGUR | Foretell; or a Roman reader of omens
+ABATE | Become less intense
+CAJOLE | Persuade by gentle flattery
+DEARTH | Scarcity or lack
+EPOCH | Distinct period in history
+INANE | Silly and lacking sense
+MOROSE | Sullen and gloomy
+OPINE | State as a personal view
+PLACID | Calm and peaceful
+RUSE | Trick intended to deceive
+WANE | Gradually decrease, like the moon
+EGRESS | The act of going out; an exit
+ABERRATION | Departure from what is normal
+ABEYANCE | State of temporary suspension
+ABJECT | Wretched and hopeless
+ABNEGATION | Self-denial
+ABSCOND | Leave secretly to avoid arrest
+ABSTRUSE | Difficult to understand
+ACERBIC | Sharp and forthright in tone
+ACQUIESCE | Accept reluctantly without protest
+ACRIMONY | Bitterness and ill feeling
+ACUMEN | Keen insight
+ADAMANT | Refusing to change one's mind
+ADROIT | Skilful and clever
+ADULATION | Excessive admiration
+AFFABLE | Friendly and easy to talk to
+AGGRANDISE | Increase the power or status of
+ALLEVIATE | Make less severe
+AMBIVALENT | Having mixed feelings
+AMELIORATE | Make something better
+AMIABLE | Friendly and pleasant
+ANACHRONISM | Something out of its proper time
+ANATHEMA | Something intensely disliked
+ANTIPATHY | Deep-seated dislike
+APATHY | Lack of interest
+APLOMB | Self-confidence under pressure
+APOCRYPHAL | Of doubtful authenticity
+APPEASE | Pacify by giving in to demands
+ARCANE | Known to few; mysterious
+ARDUOUS | Requiring great effort
+ARTICULATE | Able to express oneself clearly
+ASCETIC | Practising severe self-discipline
+ASSIDUOUS | Showing great care and perseverance
+ASTUTE | Shrewd and perceptive
+AUDACIOUS | Boldly daring
+AUSPICIOUS | Favourable; promising success
+AUSTERE | Severe or strict in manner
+AVARICE | Extreme greed for wealth
+BANAL | So lacking in originality as to be boring
+BELLICOSE | Eager to fight
+BELLIGERENT | Hostile and aggressive
+BEMUSED | Puzzled or bewildered
+BENIGN | Gentle and kindly; harmless
+BEQUEATH | Leave by will
+BERATE | Scold angrily
+BESEECH | Ask urgently and fervently
+BLITHE | Casually indifferent; cheerful
+BOMBASTIC | Pompous and high-sounding
+BOORISH | Rough and bad-mannered
+BREVITY | Concise use of words
+BUCOLIC | Relating to pleasant countryside
+BUREAUCRACY | System of government by officials
+CALLOUS | Cruelly insensitive
+CANDID | Truthful and straightforward
+CANTANKEROUS | Bad-tempered and argumentative
+CAPITULATE | Cease to resist
+CAPRICIOUS | Given to sudden changes of mood
+CASTIGATE | Reprimand severely
+CATHARTIC | Providing emotional release
+CAUSTIC | Sarcastic in a scathing way
+CAVALIER | Showing a lack of proper concern
+CENSURE | Express severe disapproval
+CHAGRIN | Annoyance at having failed
+CHICANERY | Use of trickery
+CIRCUMSPECT | Wary and unwilling to take risks
+CLANDESTINE | Kept secret
+CLEMENCY | Mercy
+COGENT | Clear, logical and convincing
+COMPLACENT | Smugly uncritical of oneself
+CONCILIATORY | Intended to placate
+CONDESCEND | Act in a patronising way
+CONFLAGRATION | Extensive, destructive fire
+CONNOISSEUR | Expert judge of taste
+CONSTERNATION | Dismay or anxiety
+CONTENTIOUS | Causing argument
+CONTRITE | Feeling remorse
+CONUNDRUM | Confusing problem
+CORPULENT | Fat
+CREDULOUS | Too ready to believe things
+CRYPTIC | Mysterious or obscure in meaning
+CULPABLE | Deserving blame
+CURSORY | Hasty and not thorough
+CYNICAL | Distrustful of human sincerity
+DAUNTLESS | Showing fearlessness
+DEBACLE | Sudden and ignominious failure
+DEBILITATE | Make very weak
+DECORUM | Behaviour in keeping with good taste
+DEFERENCE | Polite submission and respect
+DELETERIOUS | Causing harm
+DELINEATE | Describe precisely
+DEMAGOGUE | Leader who exploits popular prejudice
+DENIGRATE | Criticise unfairly
+DERIDE | Express contempt for
+DERIVATIVE | Imitative of others' work
+DESICCATE | Remove the moisture from
+DESPONDENT | In low spirits
+DESULTORY | Lacking a plan or enthusiasm
+DIATRIBE | Bitter verbal attack
+DIDACTIC | Intended to teach
+DIFFIDENT | Modest or shy
+DILATORY | Slow to act
+DISCERNING | Having good judgement
+DISCORDANT | Disagreeing or harsh-sounding
+DISPARAGE | Regard as being of little worth
+DISPARATE | Essentially different in kind
+DISSEMBLE | Conceal one's true motives
+DISSONANT | Lacking harmony
+DOCILE | Ready to accept control
+DOGMATIC | Laying down principles as undeniably true
+DOLEFUL | Expressing sorrow
+DUPLICITY | Deceitfulness
+EBULLIENT | Cheerful and full of energy
+ECCENTRIC | Unconventional and slightly strange
+ECLECTIC | Drawing from a broad range of sources
+EDIFY | Instruct and improve morally
+EFFERVESCENT | Bubbly; vivacious
+EFFICACIOUS | Successful in producing a result
+EFFRONTERY | Insolent or impertinent behaviour
+EGREGIOUS | Outstandingly bad
+ELOQUENT | Fluent and persuasive in speaking
+ELUCIDATE | Make clear; explain
+ELUSIVE | Difficult to find or catch
+EMBELLISH | Make more attractive with decoration
+EMULATE | Match or surpass by imitation
+ENERVATE | Cause to feel drained of energy
+ENGENDER | Cause or give rise to
+ENMITY | State of being hostile
+ENNUI | Listlessness from boredom
+EPHEMERA | Things meant to last only a short time
+EPITOME | Perfect example
+EQUANIMITY | Calmness under stress
+EQUIVOCAL | Ambiguous
+ERRONEOUS | Wrong; incorrect
+ESCHEW | Deliberately avoid
+ESPOUSE | Adopt or support a cause
+EUPHEMISM | Mild word for something unpleasant
+EUPHORIA | Intense excitement and happiness
+EXACERBATE | Make worse
+EXASPERATE | Irritate intensely
+EXCULPATE | Show to be not guilty
+EXEMPLARY | Serving as a desirable model
+EXHAUSTIVE | Including all elements
+EXONERATE | Absolve from blame
+EXPEDIENT | Convenient though possibly improper
+EXPUNGE | Erase completely
+EXTOL | Praise enthusiastically
+EXTRANEOUS | Irrelevant
+FACETIOUS | Treating serious issues with inappropriate humour
+FALLACIOUS | Based on a mistaken belief
+FATUOUS | Silly and pointless
+FECKLESS | Lacking initiative or strength of character
+FERVENT | Intensely passionate
+FICKLE | Changing frequently in loyalty
+FLAGRANT | Conspicuously offensive
+FLIPPANT | Not showing a serious attitude
+FLORID | Elaborately ornate; ruddy
+FOMENT | Instigate or stir up
+FORBEARANCE | Patient self-control
+FORTUITOUS | Happening by chance
+FRACTIOUS | Irritable and quarrelsome
+FRUGAL | Sparing with money
+FURTIVE | Attempting to avoid notice
+GARRULOUS | Excessively talkative
+GAUCHE | Socially awkward
+GLIB | Fluent but insincere
+GRANDILOQUENT | Pompous in language
+GRATUITOUS | Uncalled for
+GUILE | Cunning intelligence
+HACKNEYED | Overused and unoriginal
+HAPLESS | Unfortunate
+HARANGUE | Lengthy aggressive speech
+HAUGHTY | Arrogantly superior
+HEDONIST | Pleasure-seeker
+HEGEMONY | Dominance of one group over others
+HERETICAL | Holding unorthodox opinions
+HUBRIS | Excessive pride
+HYPERBOLE | Exaggerated statement
+ICONOCLAST | Person who attacks cherished beliefs
+IDIOSYNCRASY | Peculiar habit
+IGNOMINIOUS | Deserving public disgrace
+IMBROGLIO | Complicated, embarrassing situation
+IMMUTABLE | Unchanging
+IMPASSIVE | Not showing emotion
+IMPECCABLE | Flawless
+IMPECUNIOUS | Having little money
+IMPERIOUS | Arrogant and domineering
+IMPERTINENT | Not showing proper respect
+IMPERVIOUS | Unable to be affected
+IMPETUOUS | Acting quickly without thought
+IMPLACABLE | Unable to be appeased
+IMPUDENT | Not showing due respect
+INCENDIARY | Designed to cause fires or conflict
+INCESSANT | Continuing without pause
+INCHOATE | Just begun and not fully formed
+INCORRIGIBLE | Not able to be reformed
+INCREDULOUS | Unwilling to believe
+INDEFATIGABLE | Persisting tirelessly
+INDIFFERENT | Having no particular interest
+INDIGENOUS | Native to a place
+INDOLENT | Lazy
+INEFFABLE | Too great to be expressed in words
+INEXORABLE | Impossible to stop
+INGENUOUS | Innocent and unsuspecting
+INIMICAL | Tending to obstruct or harm
+INNATE | Inborn; natural
+INNOCUOUS | Not harmful or offensive
+INSATIABLE | Impossible to satisfy
+INSIPID | Lacking flavour or interest
+INSOLENT | Rude and disrespectful
+INTRANSIGENT | Unwilling to change one's views
+INTREPID | Fearless; adventurous
+INVECTIVE | Insulting, abusive language
+IRASCIBLE | Easily angered
+IRREVERENT | Showing a lack of respect
+JUBILANT | Feeling great happiness and triumph
+JUDICIOUS | Having good judgement
+JUXTAPOSE | Place side by side for contrast
+KINETIC | Relating to motion
+LACKADAISICAL | Lacking enthusiasm
+LAMENT | Express grief
+LANGUID | Displaying a lack of energy
+LARGESSE | Generosity
+LATENT | Existing but not yet developed
+LAUDABLE | Deserving praise
+LETHARGIC | Sluggish and apathetic
+LEVITY | Humour treating serious matters lightly
+LIONISE | Treat as a celebrity
+LOATHE | Feel intense dislike for
+LUCID | Expressed clearly
+LUDICROUS | Absurd
+LUGUBRIOUS | Looking or sounding sad
+LURID | Unpleasantly vivid
+MAGNANIMOUS | Generous or forgiving
+MALEVOLENT | Wishing harm to others
+MALIGN | Speak about in a spitefully critical way
+MALLEABLE | Easily influenced or shaped
+MAVERICK | Unorthodox, independent-minded person
+MENDACIOUS | Untruthful
+MERCURIAL | Subject to sudden changes of mood
+METICULOUS | Showing great attention to detail
+MISANTHROPE | Person who dislikes humankind
+MITIGATE | Make less severe
+MOLLIFY | Appease anger
+MORIBUND | At the point of death
+MUNDANE | Lacking interest; dull
+MUNIFICENT | More generous than usual
+MYRIAD | Countless number
+NADIR | Lowest point
+NASCENT | Just coming into existence
+NEBULOUS | Unclear; vague
+NEOPHYTE | Beginner
+NONCHALANT | Casually calm
+NOSTALGIC | Sentimentally longing for the past
+NOTORIOUS | Famous for something bad
+NOVICE | Person new to an activity
+NOXIOUS | Harmful or poisonous
+OBDURATE | Stubbornly refusing to change
+OBLIQUE | Not explicit; indirect
+OBLIVIOUS | Not aware
+OBSEQUIOUS | Excessively eager to please
+OBSOLETE | No longer in use
+OBSTINATE | Stubborn
+OFFICIOUS | Assertive of authority in a domineering way
+ONEROUS | Burdensome
+OPAQUE | Not transparent; hard to understand
+OPPORTUNE | Well-timed
+OPULENT | Ostentatiously rich
+OSTENTATIOUS | Showy, designed to impress
+OSTRACISE | Exclude from a group
+PALLIATE | Make less severe without curing
+PALPABLE | Able to be touched or felt
+PANACEA | Remedy for all difficulties
+PARAGON | Model of excellence
+PARIAH | Outcast
+PARSIMONIOUS | Unwilling to spend money
+PARTISAN | Strong supporter of a party
+PAUCITY | Scarcity
+PEDANTIC | Overly concerned with minor details
+PELLUCID | Clear in meaning
+PENCHANT | Strong liking
+PENITENT | Feeling regret for wrongdoing
+PENSIVE | Engaged in deep thought
+PENURY | Extreme poverty
+PERFIDIOUS | Deceitful and untrustworthy
+PERIPHERAL | On the edge
+PERSPICACIOUS | Having a ready insight
+PERTINENT | Relevant
+PERUSE | Read thoroughly
+PERVASIVE | Spreading widely
+PETULANT | Childishly sulky
+PHLEGMATIC | Unemotional and calm
+PIOUS | Devoutly religious
+PLACATE | Make less angry
+PLATITUDE | Remark used too often to be interesting
+PLAUSIBLE | Seeming reasonable
+PLETHORA | Excess
+POIGNANT | Evoking sadness
+PONDEROUS | Slow and clumsy
+PRAGMATISM | Practical approach to problems
+PRECARIOUS | Not securely held
+PRECOCIOUS | Developed early
+PREDILECTION | Preference
+PREPOSTEROUS | Utterly absurd
+PRESCIENT | Having knowledge of events before they happen
+PRESUMPTUOUS | Failing to observe limits
+PREVARICATE | Speak evasively
+PRISTINE | In its original condition
+PROBITY | Having strong moral principles
+PROCLIVITY | Tendency
+PRODIGAL | Wastefully extravagant
+PROFLIGATE | Recklessly wasteful
+PROFUSE | Abundant
+PROLIFIC | Producing much
+PROPENSITY | Inclination
+PROPITIOUS | Favourable
+PROSAIC | Lacking poetic beauty
+PROSCRIBE | Forbid
+PROVINCIAL | Unsophisticated
+PRUDENT | Acting with care for the future
+PUERILE | Childishly silly
+PUGNACIOUS | Eager to quarrel
+PUNGENT | Having a sharp taste or smell
+PUSILLANIMOUS | Showing a lack of courage
+QUANDARY | State of uncertainty
+QUERULOUS | Complaining petulantly
+QUIESCENT | In a state of inactivity
+QUINTESSENTIAL | Representing the most perfect example
+RANCOROUS | Characterised by bitterness
+RAPACIOUS | Aggressively greedy
+RECONDITE | Little known; abstruse
+RECTITUDE | Morally correct behaviour
+REDOLENT | Strongly reminiscent
+REFUTE | Prove to be false
+RELEGATE | Consign to an inferior position
+RELINQUISH | Voluntarily give up
+REMORSE | Deep regret
+RENOUNCE | Formally give up
+REPROBATE | Unprincipled person
+REPUDIATE | Refuse to accept
+RESILIENT | Able to recover quickly
+RESOLUTE | Determined
+RETICENT | Not revealing one's thoughts readily
+REVERENT | Feeling deep respect
+RHETORIC | Persuasive language
+RIBALD | Crudely humorous
+RUMINATE | Think deeply about
+SAGACIOUS | Wise
+SALIENT | Most noticeable
+SALUBRIOUS | Health-giving; pleasant
+SANCTIMONIOUS | Making a show of moral superiority
+SARDONIC | Grimly mocking
+SATIATE | Satisfy fully
+SCRUPULOUS | Diligent and thorough
+SCURRILOUS | Making scandalous claims
+SEDENTARY | Inactive; sitting a lot
+SEDULOUS | Showing dedication
+SERENE | Calm and peaceful
+SOLICITOUS | Showing care and concern
+SOLIPSISTIC | Self-absorbed
+SOPORIFIC | Tending to induce sleep
+SPECIOUS | Superficially plausible but wrong
+SPORADIC | Occurring at irregular intervals
+SPURIOUS | Not genuine
+SQUALID | Extremely dirty and unpleasant
+STAID | Sedate and unadventurous
+STOICAL | Enduring pain without complaint
+STRIDENT | Loud and harsh
+STYMIE | Prevent the progress of
+SUBLIMATE | Divert energy into a more acceptable activity
+SUBTERFUGE | Deceit used to achieve a goal
+SUCCINCT | Briefly and clearly expressed
+SUPERCILIOUS | Behaving as if superior to others
+SUPERFLUOUS | Unnecessary
+SURREPTITIOUS | Kept secret, especially because improper
+SYCOPHANTIC | Behaving obsequiously
+TANGENTIAL | Only slightly relevant
+TEMERITY | Excessive confidence or boldness
+TENACIOUS | Holding firmly
+TENUOUS | Very weak or slight
+TIMOROUS | Showing nervousness
+TIRADE | Long angry speech
+TORPID | Mentally or physically inactive
+TRACTABLE | Easy to control
+TRANQUIL | Free from disturbance
+TRANSIENT | Lasting only a short time
+TRENCHANT | Vigorous or incisive
+TREPIDATION | Fear or agitation
+TRUCULENT | Eager to argue or fight
+TURGID | Swollen; pompous
+TURPITUDE | Depravity
+UMBRAGE | Offence or annoyance
+UNCTUOUS | Excessively flattering
+UNEQUIVOCAL | Leaving no doubt
+UNKEMPT | Untidy
+UNPRECEDENTED | Never done before
+UNRULY | Disorderly
+UPBRAID | Scold
+USURP | Take a position by force
+VACILLATE | Waver between options
+VAPID | Offering nothing stimulating
+VENAL | Open to bribery
+VENERATE | Regard with great respect
+VERNACULAR | Everyday language of a region
+VESTIGE | Trace of something that no longer exists
+VEX | Make annoyed
+VICARIOUS | Experienced through another person
+VICISSITUDE | Change of circumstances
+VILIFY | Speak or write about in an abusive way
+VINDICATE | Clear of blame
+VINDICTIVE | Having a strong desire for revenge
+VIRULENT | Extremely severe or harmful
+VISCERAL | Felt deep inside
+VITRIOLIC | Filled with bitter criticism
+VOCIFEROUS | Vehement or clamorous
+VOLATILE | Liable to change rapidly
+VORACIOUS | Wanting great quantities
+WAN | Pale and giving the impression of illness
+WARY | Feeling caution
+WHIMSICAL | Playfully quaint
+WISTFUL | Having a feeling of vague longing
+ZEALOUS | Showing great energy for a cause
+ZENITH | Highest point
+ABHOR | Regard with disgust
+ACCOLADE | Award or privilege granted as a special honour
+ADMONISH | Warn or reprimand firmly
+ALTRUISTIC | Selflessly concerned for others
+ANTIQUATED | Old-fashioned or outdated
+APPRISE | Inform
+ASPERSION | Attack on someone's reputation
+BALEFUL | Threatening harm
+BEGUILE | Charm or enchant, often deceptively
+CAJOLERY | Coaxing persuasion
+CHURLISH | Rude in a mean-spirited way
+COALESCE | Come together to form one mass
+COMMENSURATE | Corresponding in size or degree
+COPIOUS | Abundant in supply
+DEPRECATE | Express disapproval of
+DIAPHANOUS | Light, delicate and translucent
+DISCOMBOBULATE | Confuse or disconcert
+EFFUSIVE | Expressing feelings in an unrestrained way
+ENIGMATIC | Difficult to interpret
+EPIPHANY | Moment of sudden revelation
+EUPHONIOUS | Pleasing to the ear
+EXIGENT | Pressing; demanding
+FLABBERGASTED | Greatly surprised
+GOSSAMER | Something light, thin and delicate
+HALCYON | Idyllically happy and peaceful
+IMPUGN | Dispute the truth or honesty of
+INCANDESCENT | Glowing with heat; extremely angry
+INSOUCIANT | Showing casual lack of concern
+LABYRINTHINE | Intricately complicated
+LIMPID | Clear and transparent
+LOQUACITY | Talkativeness
+MAGNILOQUENT | Using high-flown language
+MISNOMER | Wrong or inaccurate name
+NONPLUSSED | So surprised as to be unsure how to react
+PANDEMONIUM | Wild and noisy disorder
+PERNICKETY | Fussy about details
+QUIBBLE | Slight objection
+RAMBUNCTIOUS | Uncontrollably exuberant
+SESQUIPEDALIAN | Characterised by long words
+VERISIMILITUDE | Appearance of being true or real

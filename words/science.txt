@@ -1,0 +1,515 @@
+# Science Lab — one entry per line: ANSWER | clue
+ATOM | Smallest unit of a chemical element
+GRAVITY | Force that keeps your feet on the ground
+OXYGEN | Element O, the gas we need to breathe
+NEUTRON | Uncharged particle in a nucleus
+ELECTRON | Negatively charged subatomic particle
+MOLECULE | Smallest unit of a compound, such as H₂O
+GENE | Basic unit of heredity
+CELL | Basic unit of life
+MAGNET | Object that attracts iron
+FRICTION | Force that resists sliding
+EVOLUTION | Darwin's theory of change over generations
+ENZYME | Protein that speeds up reactions in the body
+VELOCITY | Speed in a given direction
+CATALYST | Substance that speeds a reaction without being used up
+FOSSIL | Preserved remains of ancient life
+NEWTON | Unit of force named after a famous physicist
+ACID | Substance with a pH below 7
+PROTON | Positively charged particle in the nucleus
+MICROSCOPE | Instrument for viewing very tiny objects
+HYDROGEN | Lightest chemical element
+PLASMA | State of matter found in lightning and stars
+ENERGY | Capacity to do work
+VACCINE | Shot that trains the immune system
+CARBON | Element at the heart of organic chemistry
+ISOTOPE | Variant of an element with a different mass number
+LASER | Device that emits a narrow, focused beam of light
+PRISM | Glass shape that splits light into a rainbow
+QUARTZ | Common crystal made of silicon dioxide
+VIRUS | Tiny infectious agent that can only replicate inside a host
+DENSITY | Mass divided by volume
+PHOTON | Particle of light
+MUTATION | Change in an organism's DNA sequence
+ALKALI | Base that dissolves in water
+INERTIA | Tendency of an object to resist changes in motion
+WAVELENGTH | Distance between successive wave crests
+THERMOMETER | Instrument for measuring temperature
+ECOSYSTEM | Community of organisms and their environment
+CHROMOSOME | Thread-like package of DNA; humans have 46
+CIRCUIT | Closed path for an electric current
+FUSION | Joining of light nuclei that powers the Sun
+BACTERIA | Microbes such as E. coli
+HYPOTHESIS | Testable proposed explanation
+TITRATION | Lab technique of adding a solution drop by drop to find a concentration
+IRON | Metal with the symbol Fe
+COPPER | Reddish metal with the symbol Cu
+GOLD | Precious metal with the symbol Au
+SILVER | Precious metal with the symbol Ag
+LEAD | Heavy metal with the symbol Pb
+ZINC | Metal used to galvanise steel
+TIN | Metal with the symbol Sn
+NICKEL | Metal with the symbol Ni
+ALUMINIUM | Light metal used in drinks cans
+TITANIUM | Strong, light metal used in aircraft
+URANIUM | Radioactive fuel of nuclear reactors
+PLUTONIUM | Radioactive element named after a dwarf planet
+RADIUM | Glowing radioactive element discovered by the Curies
+CALCIUM | Element in bones and teeth
+MAGNESIUM | Metal that burns with a brilliant white flame
+SILICON | Element at the heart of computer chips
+SULFUR | Yellow element that smells of rotten eggs when combined
+PHOSPHORUS | Element that glows in the dark
+CHLORINE | Green gas used to disinfect pools
+FLUORINE | Most reactive element
+IODINE | Element used as an antiseptic
+NEON | Gas that glows in signs
+ARGON | Inert gas filling light bulbs
+KRYPTON | Noble gas, and Superman's home planet
+XENON | Heavy noble gas used in headlamps
+RADON | Radioactive noble gas
+LITHIUM | Lightest metal, used in batteries
+BORON | Element number 5
+COBALT | Metal that gives a deep blue colour
+CHROMIUM | Shiny metal used for plating
+MANGANESE | Metal added to steel
+PLATINUM | Precious metal used in catalytic converters
+PALLADIUM | Silvery precious metal
+OSMIUM | Densest naturally occurring element
+GALLIUM | Metal that melts in your hand
+GERMANIUM | Semiconductor element number 32
+ARSENIC | Notorious poisonous element
+CAESIUM | Element used in atomic clocks
+FRANCIUM | Highly radioactive alkali metal named after a country
+EINSTEINIUM | Element named after a famous physicist
+PERIODICTABLE | Chart of the chemical elements (8,5)
+METAL | Shiny conductive element
+NONMETAL | Element such as carbon or oxygen
+BASE | Substance with a pH above 7
+SALT | Product of an acid reacting with a base
+NEUTRAL | Having a pH of 7
+INDICATOR | Substance like litmus that changes colour with pH
+LITMUS | Paper that turns red in acid
+REACTION | Process in which substances change into new ones
+SOLUTION | Mixture in which one substance dissolves in another
+SOLUTE | Substance dissolved in a solution
+MIXTURE | Combination of substances not chemically bonded
+COMPOUND | Substance of bonded atoms of different elements
+FORMULA | Chemical shorthand such as H₂O
+EQUATION | Balanced statement of a chemical reaction
+BOND | Link between atoms
+ION | Charged atom or molecule
+NUCLEUS | Dense centre of an atom
+ORBITAL | Region where an electron is likely to be found
+SHELL | Energy level occupied by electrons
+QUARK | Particle that makes up protons
+SOLID | State of matter with a fixed shape
+LIQUID | State of matter that flows and takes its container's shape
+GAS | State of matter that fills its container
+EVAPORATION | Liquid turning into vapour
+CONDENSATION | Vapour turning into liquid
+MELTING | Solid turning into liquid
+FREEZING | Liquid turning into solid
+SUBLIMATION | Solid turning straight into gas
+BOILINGPOINT | Temperature at which a liquid turns to gas (7,5)
+DIFFUSION | Spreading of particles from high to low concentration
+FILTRATION | Separating solids from liquids with a filter
+CHROMATOGRAPHY | Separating mixtures by how fast they travel
+CENTRIFUGE | Machine that spins samples to separate them
+TELESCOPE | Instrument for viewing distant objects
+BAROMETER | Instrument that measures air pressure
+THERMOSTAT | Device that controls temperature
+VOLTMETER | Instrument that measures potential difference
+AMMETER | Instrument that measures current
+GEIGER | ___ counter, detector of radiation
+SPECTROMETER | Instrument that analyses light by wavelength
+SEISMOMETER | Instrument that detects earthquakes
+BUNSEN | ___ burner, a lab gas flame
+TESTTUBE | Narrow glass tube for experiments (4,4)
+FLASK | Lab container with a narrow neck
+PETRIDISH | Shallow dish for growing cultures (5,4)
+TONGS | Tool for gripping hot apparatus
+GOGGLES | Eye protection in the lab
+LABCOAT | Protective garment for scientists (3,4)
+EXPERIMENT | Test carried out to check a hypothesis
+OBSERVATION | Something noted during an experiment
+VARIABLE | Factor that can change in an experiment
+CONTROL | Unchanged group used for comparison
+DATA | Collected measurements
+THEORY | Well-tested explanation of natural phenomena
+LAW | Statement describing an observed regularity in nature
+EVIDENCE | Facts that support a conclusion
+CONCLUSION | Final judgement drawn from results
+PEERREVIEW | Expert scrutiny before publication (4,6)
+GALILEO | Astronomer who improved the telescope and studied Jupiter's moons
+EINSTEIN | Physicist of relativity
+CURIE | Pioneer of radioactivity and double Nobel laureate
+DARWIN | Naturalist of natural selection
+MENDEL | Father of genetics
+PASTEUR | French scientist who proved the germ theory of disease
+FLEMING | Discoverer of penicillin
+FARADAY | Pioneer of electromagnetism
+TESLA | Inventor of alternating-current systems
+EDISON | Inventor of a practical light bulb
+HAWKING | Physicist of black hole radiation
+FRANKLIN | Rosalind ___, whose X-ray images revealed DNA's structure
+CRICK | Co-discoverer of the DNA double helix with Watson
+WATSON | Co-discoverer of the DNA double helix with Crick
+RUTHERFORD | Physicist who discovered the atomic nucleus
+DALTON | Chemist of early atomic theory
+BOYLE | Scientist of a gas pressure law
+HOOKE | Scientist who named the cell
+LINNAEUS | Father of taxonomy
+KEPLER | Astronomer of the laws of planetary motion
+COPERNICUS | Astronomer of the Sun-centred model
+ARCHIMEDES | Ancient scientist of buoyancy
+VOLTA | Inventor of the electric battery
+OHM | Physicist of a law of electrical resistance
+KELVIN | Physicist of an absolute temperature scale
+CELSIUS | Astronomer of a temperature scale
+FAHRENHEIT | Physicist of a temperature scale used in the US
+PENICILLIN | First widely used antibiotic
+ANTIBIOTIC | Drug that kills bacteria
+BACTERIUM | Single-celled microorganism
+MICROBE | Microscopic organism
+FUNGI | Mushrooms, moulds and yeasts
+ALGAE | Simple aquatic organisms that photosynthesise
+ORGANISM | Living thing
+SPECIES | Group that can interbreed
+EVOLVE | Change over generations
+ADAPTATION | Trait that helps an organism survive
+EXTINCTION | Dying out of a species
+GENETICS | Study of heredity
+RNA | Molecule that carries genetic instructions to make proteins
+HELIX | Spiral shape of DNA
+PROTEIN | Molecule made of amino acids
+HORMONE | Chemical messenger in the body
+NEURON | Nerve cell
+IMMUNITY | Protection against disease
+ANTIBODY | Immune protein that targets invaders
+PATHOGEN | Germ that causes disease
+PLANT | Living thing that makes its own food
+ROOT | Underground part of a plant
+STEM | Stalk of a plant
+LEAF | Green part of a plant where photosynthesis happens
+SEED | Embryo plant in a protective coat
+POLLEN | Powder carried by bees between flowers
+CHLOROPHYLL | Green pigment that captures light
+RESPIRATION | Process that releases energy from glucose
+GLUCOSE | Simple sugar used for energy
+CARBOHYDRATE | Nutrient group of sugars and starches
+VITAMIN | Nutrient such as C or D
+MINERAL | Naturally occurring inorganic solid
+ROCK | Solid mass of minerals
+IGNEOUS | Rock formed from cooled magma
+SEDIMENTARY | Rock formed in layers
+METAMORPHIC | Rock changed by heat and pressure
+MAGMA | Molten rock underground
+LAVA | Molten rock on the surface
+TECTONIC | Relating to Earth's crustal plates
+EARTHQUAKE | Sudden shaking of the ground
+EROSION | Wearing away of rock
+ATMOSPHERE | Envelope of gases around Earth
+OZONE | Gas layer that absorbs ultraviolet
+GREENHOUSE | ___ effect, trapping of heat by gases
+CLIMATE | Long-term pattern of weather
+WEATHER | Day-to-day state of the atmosphere
+FORCE | Push or pull
+MASS | Amount of matter in an object
+WEIGHT | Force of gravity on a mass
+SPEED | Distance travelled per unit of time
+ACCELERATION | Rate of change of velocity
+MOMENTUM | Mass multiplied by velocity
+WORK | Force times distance
+POWER | Rate of doing work
+PRESSURE | Force per unit area
+TEMPERATURE | Measure of how hot something is
+HEAT | Energy transferred because of a temperature difference
+KINETIC | Energy of motion
+POTENTIAL | Stored energy due to position
+NUCLEAR | Energy released from atomic nuclei
+SOLAR | Energy from the Sun
+WAVE | Disturbance that transfers energy
+SOUND | Vibration that travels through air
+LIGHT | Electromagnetic radiation we can see
+ULTRAVIOLET | Radiation beyond violet that causes sunburn
+INFRARED | Radiation felt as heat
+XRAY | Radiation used to image bones (1-3)
+GAMMA | Most energetic type of radiation
+MICROWAVE | Radiation used to heat food
+RADIO | Longest-wavelength electromagnetic waves
+SPECTRUM | Range of wavelengths
+REFLECTION | Bouncing back of light
+REFRACTION | Bending of light between materials
+LENS | Curved glass that focuses light
+MIRROR | Surface that reflects an image
+RAINBOW | Arc of colours formed by refraction in raindrops
+ECHO | Reflected sound
+DECIBEL | Unit of loudness
+FREQUENCY | Number of waves per second
+HERTZ | Unit of frequency
+VOLT | Unit of potential difference
+AMP | Short for the unit of current
+WATT | Unit of power
+JOULE | Unit of energy
+CALORIE | Unit of food energy
+METRE | Base unit of length
+KILOGRAM | Base unit of mass
+SECOND | Base unit of time
+LITRE | Unit of volume
+CURRENT | Flow of electric charge
+BATTERY | Cell that stores chemical energy as electricity
+RESISTOR | Component that limits current
+CONDUCTOR | Material that lets electricity flow
+INSULATOR | Material that blocks electricity
+ELECTROMAGNET | Magnet made with an electric current
+STATIC | Electricity that builds up on surfaces
+LIGHTNING | Huge electrical discharge in a storm
+RADIOACTIVE | Emitting radiation from decaying nuclei
+HALFLIFE | Time for half of a radioactive sample to decay (4-4)
+FISSION | Splitting of an atomic nucleus
+REACTOR | Device that controls a nuclear chain reaction
+PARTICLE | Tiny piece of matter
+ANTIMATTER | Matter made of antiparticles
+HIGGS | ___ boson, the "God particle"
+COLLIDER | Machine that smashes particles together
+CERN | European lab of the Large Hadron Collider
+MATTER | Anything with mass that takes up space
+VOLUME | Amount of space something occupies
+MOLECULAR | Relating to molecules
+ORGANIC | Chemistry of carbon compounds
+INORGANIC | Chemistry of non-carbon compounds
+HYDROCARBON | Compound of hydrogen and carbon
+METHANE | Simplest hydrocarbon, natural gas
+ETHANOL | Alcohol in drinks
+AMMONIA | Pungent gas of nitrogen and hydrogen
+OXIDE | Compound of oxygen with another element
+RUST | Iron oxide
+CORROSION | Gradual destruction of metals by reaction
+COMBUSTION | Burning
+CATALYSIS | Speeding up of a reaction by a catalyst
+ROBOT | Programmable machine
+GENOMICS | Study of whole genomes
+BIOTECHNOLOGY | Use of living organisms in technology
+CLONING | Making genetically identical copies
+STEMCELL | Unspecialised cell that can become many types (4,4)
+MICROSCOPY | Use of microscopes
+PIPETTE | Tube for transferring small volumes
+SCALPEL | Small sharp blade used in dissection
+DISSECTION | Cutting apart an organism to study it
+SPECIMEN | Sample for study
+CULTURE | Microorganisms grown in a lab
+STERILE | Free from microorganisms
+ASTRONOMY | Study of stars and planets
+BIOLOGY | Study of living things
+CHEMISTRY | Study of substances and reactions
+PHYSICS | Study of matter and energy
+GEOLOGY | Study of rocks and the Earth
+ECOLOGY | Study of organisms and their environment
+BOTANY | Study of plants
+ZOOLOGY | Study of animals
+METEOROLOGY | Study of the weather
+OCEANOGRAPHY | Study of the oceans
+PALAEONTOLOGY | Study of fossils
+GENETICIST | Scientist who studies heredity
+SCIENTIST | Person who studies the natural world
+LABORATORY | Room for experiments
+NOBEL | Prize founded by the inventor of dynamite
+EUREKA | Cry of discovery
+MAGNIFY | Make something appear larger
+GRAPHENE | One-atom-thick sheet of carbon
+PLASTIC | Synthetic polymer material
+CERAMIC | Hard material made by firing clay
+GLASS | Transparent solid made from sand
+STEEL | Alloy of iron and carbon
+BRONZE | Alloy of copper and tin
+BRASS | Alloy of copper and zinc
+DIAMOND | Hardest natural form of carbon
+GRAPHITE | Form of carbon in pencil leads
+SEMICONDUCTOR | Material like silicon used in chips
+SUPERCONDUCTOR | Material with zero electrical resistance when cold
+MAGNETISM | Force of attraction from a magnet
+POLE | North or south end of a magnet
+FIELD | Region where a force acts
+ATOMICNUMBER | Number of protons in an atom (6,6)
+MOLE | SI unit of amount of substance
+AVOGADRO | Italian whose number is about 6.022 × 10²³
+CONSTANT | Value that doesn't change
+KILO | Prefix meaning a thousand
+MEGA | Prefix meaning a million
+GIGA | Prefix meaning a billion
+MILLI | Prefix meaning a thousandth
+MICRO | Prefix meaning a millionth
+NANO | Prefix meaning a billionth
+LIGHTSPEED | About 300,000 kilometres per second (5,5)
+VACUUM | Space with no matter
+GRAVITATION | Attraction between masses
+ORBIT | Path of a satellite around a planet
+SATELLITE | Object orbiting a planet
+TIDE | Rise and fall of the sea caused by the Moon
+ECLIPSE | Shadowing of one body by another
+COMET | Icy body with a tail
+METEORITE | Space rock that reaches the ground
+CRATER | Bowl-shaped hole left by an impact
+PLANET | Body orbiting a star, such as Mars
+STAR | Ball of hot plasma such as the Sun
+GALAXY | System of billions of stars
+UNIVERSE | Everything that exists
+BIGBANG | Theory of the origin of the universe (3,4)
+BLACKHOLE | Region of spacetime nothing can escape (5,4)
+LIGHTYEAR | Distance light travels in a year (5,4)
+OBSERVATORY | Building housing a telescope
+PLANETARIUM | Theatre showing the night sky
+ROCKETRY | Science of rockets
+WIND | Renewable energy source turned by turbines
+HYDROELECTRIC | Power generated by flowing water
+GEOTHERMAL | Energy from heat inside the Earth
+BIOFUEL | Fuel made from living matter
+FOSSILFUEL | Coal, oil or gas (6,4)
+COAL | Black fossil fuel
+PETROLEUM | Crude oil
+TURBINE | Machine turned by a moving fluid
+GENERATOR | Machine that converts motion into electricity
+ENGINE | Machine that converts fuel into motion
+MOTOR | Machine that converts electricity into motion
+PISTON | Moving cylinder in an engine
+LEVER | Bar that pivots to lift loads
+PULLEY | Wheel and rope for lifting
+WEDGE | Simple machine such as an axe head
+SCREW | Simple machine of a spiral inclined plane
+GEAR | Toothed wheel
+AXLE | Rod on which a wheel turns
+SPRING | Coil that stores elastic energy
+ELASTIC | Able to return to its original shape
+DENSE | Packed tightly, heavy for its size
+BUOYANCY | Upward force on objects in a fluid
+FLOAT | Rest on the surface of a liquid
+VISCOSITY | Thickness of a fluid
+CAPILLARY | ___ action, liquid rising in a narrow tube
+OSMOSIS | Movement of water through a membrane
+MEMBRANE | Thin layer around a cell
+CYTOPLASM | Fluid inside a cell
+MITOCHONDRION | Organelle that produces energy
+RIBOSOME | Organelle that makes proteins
+CHLOROPLAST | Organelle where photosynthesis happens
+TISSUE | Group of similar cells
+ORGAN | Body part such as the heart
+SKELETON | Framework of bones
+MUSCLE | Tissue that contracts to move the body
+HEART | Organ that pumps blood
+LUNG | Organ for breathing
+BRAIN | Control centre of the nervous system
+KIDNEY | Organ that filters blood
+LIVER | Organ that detoxifies the blood
+STOMACH | Organ where food is churned with acid
+INTESTINE | Long tube where nutrients are absorbed
+BLOOD | Fluid pumped around the body
+ARTERY | Vessel carrying blood away from the heart
+VEIN | Vessel carrying blood to the heart
+OXYGENATED | Carrying oxygen, like arterial blood
+DIGESTION | Breaking down food
+METABOLISM | Chemical processes that sustain life
+HOMEOSTASIS | Keeping internal conditions stable
+REFLEX | Automatic response to a stimulus
+SENSE | Sight, hearing, touch, taste or smell
+RETINA | Light-sensitive layer of the eye
+EARDRUM | Membrane that vibrates with sound
+NERVE | Bundle of fibres carrying signals
+SYNAPSE | Gap between two nerve cells
+INSULIN | Hormone that controls blood sugar
+ADRENALINE | Fight-or-flight hormone
+DIABETES | Condition of high blood sugar
+INFECTION | Invasion of the body by germs
+EPIDEMIC | Rapid spread of disease in a community
+PANDEMIC | Disease outbreak across the world
+QUARANTINE | Isolation to prevent spreading disease
+HYGIENE | Practices that keep you clean and healthy
+NUTRITION | Science of food and health
+FIBRE | Indigestible plant matter that aids digestion
+CHOLESTEROL | Fatty substance in the blood
+GENOTYPE | Genetic make-up of an organism
+PHENOTYPE | Observable traits of an organism
+DOMINANT | Allele expressed over a recessive one
+RECESSIVE | Allele masked by a dominant one
+HEREDITY | Passing of traits from parents to offspring
+FOODWEB | Network of feeding relationships (4,3)
+PRODUCER | Organism that makes its own food
+CONSUMER | Organism that eats others
+DECOMPOSER | Organism that breaks down dead matter
+POLLINATOR | Animal such as a bee that carries pollen
+BIODIVERSITY | Variety of life in an area
+CONSERVATION | Protection of the natural world
+POLLUTION | Harmful substances in the environment
+RECYCLING | Turning waste into new products
+DEFORESTATION | Clearing of forests
+SUSTAINABLE | Able to continue without depleting resources
+CARBONDIOXIDE | Gas we exhale (6,7)
+WATERCYCLE | Circulation of water through evaporation and rain (5,5)
+PRECIPITATION | Rain, snow, sleet or hail
+CLOUD | Mass of condensed water vapour
+HUMIDITY | Water vapour in the air
+HURRICANE | Powerful tropical storm
+TORNADO | Violent spinning column of air
+THERMODYNAMICS | Physics of heat and energy
+ENTROPY | Measure of disorder in a system
+ABSOLUTEZERO | Coldest possible temperature (8,4)
+QUANTUMLEAP | Sudden jump between energy levels (7,4)
+AMPLITUDE | Height of a wave
+VIBRATION | Rapid back-and-forth motion
+OSCILLATION | Regular back-and-forth movement
+PENDULUM | Swinging weight on a string
+SIMULATION | Computer model of a real process
+STATISTIC | Numerical fact from data
+MEASUREMENT | Quantity found by measuring
+ACCURACY | Closeness to the true value
+PRECISION | Closeness of repeated measurements
+ERROR | Difference from the true value
+UNIT | Standard quantity of measurement
+SCALE | Device for weighing
+RULER | Strip for measuring length
+STOPWATCH | Timer for experiments
+CALIPER | Instrument for measuring thickness
+INVENTION | New device or process
+PATENT | Legal right to an invention
+WHEEL | Ancient invention that rolls
+PRINTINGPRESS | Gutenberg's revolutionary invention (8,5)
+STEAMENGINE | Machine that powered the Industrial Revolution (5,6)
+TELEPHONE | Device patented by Alexander Graham Bell
+LIGHTBULB | Glowing invention improved by Edison (5,4)
+INTERNET | Global computer network
+TRANSISTOR | Switch that made modern electronics possible
+SPACESHUTTLE | Reusable NASA spacecraft (5,7)
+HUBBLE | Space telescope launched in 1990
+ROVER | Wheeled vehicle that explores another planet
+ASTRONAUT | Person who travels into space
+TELEGRAPH | Device that sent coded messages along wires
+MICROCHIP | Tiny integrated circuit
+SONAR | System that locates objects with sound underwater
+RADAR | System that detects objects with radio waves
+ULTRASOUND | Scan using high-frequency sound
+STETHOSCOPE | Instrument for listening to the heart
+THERMAL | Relating to heat
+CONVECTION | Heat transfer by circulating fluid
+CONDUCTION | Heat transfer through direct contact
+EMISSION | Release of gas or radiation
+STRATA | Layers of rock
+CORE | Centre of the Earth
+CRUST | Outer layer of the Earth
+MANTLE | Layer between the Earth's crust and core
+TSUNAMI | Huge wave caused by an undersea earthquake
+GEYSER | Hot spring that erupts
+VOLCANOLOGY | Study of volcanoes
+SEISMOLOGY | Study of earthquakes
+ENTOMOLOGY | Study of insects
+ORNITHOLOGY | Study of birds
+VIROLOGY | Study of viruses
+IMMUNOLOGY | Study of the immune system
+NEUROSCIENCE | Study of the nervous system
+GENETICCODE | Instructions written in DNA (7,4)
+MUTANT | Organism with a changed gene
+PARASITE | Organism that lives off a host
+HOST | Organism that harbours a parasite
+SYMBIOSIS | Close relationship between two species
+PHOTOSYNTHESIS | Process plants use to make food from light
+TRANSPIRATION | Loss of water vapour from leaves
+GERMINATION | Sprouting of a seed

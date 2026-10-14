@@ -1,0 +1,503 @@
+# Economics — one entry per line: ANSWER | clue
+INFLATION | General rise in prices over time
+RECESSION | Significant, widespread decline in economic activity
+SUPPLY | Amount of a good available for sale
+DEMAND | Desire for a good backed by the ability to pay
+MONOPOLY | Market with a single seller
+TARIFF | Tax on imported goods
+CAPITAL | Wealth used to produce more wealth
+DIVIDEND | Payout made to a company's shareholders
+LIQUIDITY | Ease of turning an asset into cash
+KEYNES | Economist who urged government spending in downturns
+SMITH | Adam ___, author of The Wealth of Nations
+EQUITY | Ownership stake in a company
+BOND | Debt security that pays interest
+SUBSIDY | Government payment to support an industry
+DEFICIT | Shortfall when spending exceeds income
+SURPLUS | Amount left over when income exceeds spending
+ELASTICITY | How strongly buyers respond to a price change
+OLIGOPOLY | Market dominated by a few large firms
+AUSTERITY | Policy of deep government spending cuts
+BARTER | Trade goods directly without using money
+CURRENCY | Money in circulation, such as the euro or yen
+ARBITRAGE | Profiting from price differences between markets
+LEDGER | Book of financial accounts
+MARGINAL | ___ cost: the cost of producing one more unit
+SCARCITY | The basic economic problem of limited resources
+COMMODITY | Raw material like oil or wheat, traded in bulk
+FISCAL | Relating to a government's treasury
+MONETARY | ___ policy, set by central banks
+GDP | Measure of a nation's total output (abbr.)
+STAGFLATION | Rising prices combined with economic stagnation
+STOCK | Share in a company traded on an exchange
+BULL | ___ market: one with rising prices
+BEAR | ___ market: one with falling prices
+MORTGAGE | Loan used to buy a home
+INVESTMENT | Putting money into something for future return
+PROFIT | What remains after costs are paid
+REVENUE | Total income from sales
+BUDGET | Plan for income and spending
+TAXATION | Government levies on income and goods
+ENTREPRENEUR | Person who starts a business
+CARTEL | Group of firms that collude to fix prices
+PRODUCTIVITY | Output per worker or per hour
+INCENTIVE | Something that motivates a choice
+UTILITY | Economists' term for satisfaction from consumption
+MERCANTILISM | Early doctrine that a nation should export more than it imports
+EMBARGO | Ban on trade with a country
+MARKET | Place or system where goods are exchanged
+ECONOMY | System of production and consumption
+MICROECONOMICS | Study of individual markets and firms
+MACROECONOMICS | Study of the whole economy
+EQUILIBRIUM | Point where supply meets demand
+PRICE | Amount paid for a good
+SHORTAGE | When demand exceeds supply
+GLUT | Excessive supply
+INCOME | Money received regularly
+WAGE | Payment for labour
+SALARY | Fixed annual pay
+LABOUR | Human effort used in production
+LAND | Factor of production including natural resources
+ENTERPRISE | Factor of production that organises the others
+PRODUCTION | Making goods and services
+CONSUMPTION | Using up goods and services
+SAVINGS | Income not spent
+CREDIT | Ability to borrow
+DEBT | Money owed
+LOAN | Borrowed sum
+PRINCIPAL | Original sum borrowed
+COLLATERAL | Asset pledged against a loan
+DEFAULT | Failure to repay a debt
+BANKRUPTCY | Legal state of being unable to pay debts
+INSOLVENCY | Inability to pay debts
+LIQUIDATION | Winding up of a company
+ASSET | Something of value owned
+LIABILITY | Something owed
+BALANCESHEET | Statement of assets and liabilities (7,5)
+ACCOUNTING | Recording financial transactions
+AUDIT | Official inspection of accounts
+BOOKKEEPING | Recording of transactions
+TURNOVER | Total sales of a business
+OVERHEADS | Ongoing business costs
+MARGIN | Difference between cost and price
+MARKUP | Amount added to cost to set a price
+LOSS | Negative profit
+BREAKEVEN | Point where revenue equals costs
+FIXEDCOST | Cost that doesn't vary with output (5,4)
+SUNKCOST | Cost already incurred and unrecoverable (4,4)
+DIMINISHING | ___ returns, falling extra output
+PRODUCTIVE | Yielding output
+EFFICIENCY | Getting the most from resources
+INNOVATION | New products or methods
+COMPETITION | Rivalry between firms
+DUOPOLY | Market of two sellers
+MONOPSONY | Market with a single buyer
+BARRIERS | ___ to entry
+EXTERNALITY | Side effect on third parties
+PUBLICGOOD | Good that is non-rival and non-excludable (6,4)
+FREERIDER | One who benefits without paying (4,5)
+REGULATION | Government rules for markets
+DEREGULATION | Removal of government rules
+PRIVATISATION | Selling state enterprises
+CAPITALISM | System of private ownership and markets
+SOCIALISM | System of social ownership
+COMMUNISM | Classless system of common ownership
+LAISSEZFAIRE | Policy of minimal government interference (7-5)
+MIXED | ___ economy, combining public and private
+COMMAND | ___ economy, directed by the state
+GROWTH | Increase in economic output
+BOOM | Period of rapid growth
+BUST | Sharp economic downturn
+DEPRESSION | Long, severe recession
+STAGNATION | Lack of growth
+DEFLATION | General fall in prices
+HYPERINFLATION | Extremely rapid price rises
+DISINFLATION | Slowing of inflation
+UNEMPLOYMENT | Lack of jobs
+EMPLOYMENT | Having paid work
+WORKFORCE | People available to work
+STANDARD | ___ of living
+POVERTY | Lack of basic resources
+INEQUALITY | Uneven distribution of income or wealth
+GINI | ___ coefficient, measure of inequality
+WEALTH | Accumulated assets
+WELFARE | Government support for those in need
+BENEFITS | State payments to individuals
+PENSION | Retirement income
+TAX | Compulsory levy by the state
+EXCISE | Tax on specific goods such as alcohol
+DUTY | Tax on imports or certain goods
+QUOTA | Limit on imports
+PROTECTIONISM | Shielding domestic industry from imports
+FREETRADE | Trade without tariffs (4,5)
+GLOBALISATION | Increasing worldwide integration
+EXPORT | Good sold abroad
+IMPORT | Good bought from abroad
+COMPARATIVE | ___ advantage, Ricardo's trade theory
+DEVALUATION | Lowering of a currency's value
+APPRECIATION | Rise in a currency's value
+FOREX | Foreign exchange market
+DOLLAR | US currency
+STERLING | British currency
+YEN | Japanese currency
+YUAN | Chinese currency
+RUPEE | Indian currency
+ROUBLE | Russian currency
+PESO | Currency of Mexico and others
+REAL | Brazilian currency
+RAND | South African currency
+FRANC | Swiss currency
+KRONA | Swedish currency
+KRONE | Danish and Norwegian currency
+DINAR | Currency of several Arab states
+DIRHAM | Currency of the UAE and Morocco
+WON | Korean currency
+BAHT | Thai currency
+LIRA | Turkish currency
+SHEKEL | Israeli currency
+NAIRA | Nigerian currency
+SHILLING | Kenyan currency
+BITCOIN | First cryptocurrency
+CRYPTOCURRENCY | Digital currency secured by cryptography
+BLOCKCHAIN | Distributed ledger technology
+FIAT | Money declared legal tender by government
+COINAGE | Metal money
+BANKNOTE | Paper money
+CASH | Physical money
+CHEQUE | Written order to a bank to pay
+BANK | Institution for deposits and loans
+CENTRALBANK | Bank that sets monetary policy (7,4)
+FEDERALRESERVE | US central bank (7,7)
+OPEC | Oil producers' cartel
+TREASURY | Government finance department
+CHANCELLOR | British finance minister
+SPENDING | Outlay of money
+STIMULUS | Spending to boost the economy
+BAILOUT | Rescue with public money
+RECOVERY | Return to growth
+CYCLE | Business ___, of booms and busts
+TRADE | Buying and selling
+COMMERCE | Large-scale trade
+MERCHANT | Trader
+RETAIL | Selling to the public
+WHOLESALE | Selling in bulk to retailers
+SUPPLYCHAIN | Network from raw materials to customer (6,5)
+LOGISTICS | Organisation of transport and storage
+EXCHANGE | Market for trading securities
+SHARE | Unit of ownership in a company
+SHAREHOLDER | Owner of shares
+STOCKBROKER | Agent who buys and sells shares
+TRADER | Person who buys and sells securities
+INVESTOR | Person who puts money into ventures
+PORTFOLIO | Collection of investments
+DIVERSIFICATION | Spreading investments to reduce risk
+RISK | Possibility of loss
+RETURN | Gain on an investment
+YIELD | Income from an investment
+SECURITIES | Tradable financial assets
+DERIVATIVE | Contract whose value depends on an asset
+OPTION | Right to buy or sell at a set price
+FUTURES | Contracts to trade at a future date
+HEDGE | Investment to offset risk
+HEDGEFUND | Aggressively managed investment fund (5,4)
+DOWJONES | US stock index (3,5)
+NASDAQ | US tech-heavy stock exchange
+NIKKEI | Japanese stock index
+WALLSTREET | Financial district of New York (4,6)
+CITY | London's financial district
+CRASH | Sudden collapse in prices
+BUBBLE | Unsustainable price surge
+SPECULATION | Risky trading for profit
+VOLATILITY | Degree of price fluctuation
+FLOTATION | Listing a company on the stock market
+MERGER | Combination of two companies
+ACQUISITION | Purchase of a company
+TAKEOVER | Gaining control of a company
+CONGLOMERATE | Company of diverse businesses
+CORPORATION | Legal business entity
+FIRM | Business
+STARTUP | New business venture
+VENTURECAPITAL | Funding for high-growth start-ups
+UNICORN | Start-up valued at over a billion dollars
+FRANCHISEE | Holder of a franchise
+COOPERATIVE | Business owned by its members
+NONPROFIT | Organisation not run for profit
+BOARD | Directors of a company
+DIRECTOR | Member of a company board
+STAKEHOLDER | Party with an interest in a business
+CONSUMERISM | Preoccupation with buying goods
+CONSUMER | Buyer of goods
+RATIONALITY | Assumption of logical choices
+BEHAVIOURAL | ___ economics, of real decision-making
+NUDGE | Gentle push towards better choices
+SCARCE | In short supply
+ALLOCATION | Distribution of resources
+TRADEOFF | Giving up one thing for another (5-3)
+SUBSTITUTE | Good that replaces another
+COMPLEMENT | Good used with another
+NECESSITY | Good bought regardless of income
+LUXURY | Good bought more as income rises
+INFERIOR | Good bought less as income rises
+GIFFEN | ___ good, whose demand rises with price
+VEBLEN | ___ good, desired for its high price
+MINIMUMWAGE | Lowest legal hourly pay (7,4)
+RENT | Payment for the use of property
+LANDLORD | Owner who lets property
+TENANT | Person who rents property
+PROPERTY | Real estate
+REALESTATE | Land and buildings (4,6)
+HOUSING | ___ market
+RICARDO | David ___, economist of comparative advantage
+MALTHUS | Thomas ___, who warned about population growth
+MILL | John Stuart ___, author of Principles of Political Economy
+PIGOU | Economist of a tax on externalities
+FRIEDMAN | Milton ___, champion of monetarism
+HAYEK | Friedrich ___, author of The Road to Serfdom
+SAMUELSON | Paul ___, author of a famous textbook
+GALBRAITH | Economist of The Affluent Society
+SCHUMPETER | Economist of creative destruction
+KAHNEMAN | Psychologist of Thinking, Fast and Slow
+THALER | Nobel economist of nudge theory
+STIGLITZ | Nobel economist critical of globalisation
+KRUGMAN | Nobel economist of trade geography
+PIKETTY | Author of Capital in the Twenty-First Century
+YUNUS | Pioneer of microcredit
+MICROFINANCE | Small loans to the poor
+MONETARISM | Theory that money supply drives inflation
+KEYNESIAN | Favouring government demand management
+MERCANTILE | Relating to trade
+PHYSIOCRAT | Economist who saw land as the source of wealth
+INVISIBLEHAND | Smith's metaphor for markets (9,4)
+INVOICE | Bill for goods or services
+RECEIPT | Proof of payment
+DEPOSIT | Money paid into an account
+WITHDRAWAL | Money taken out of an account
+OVERDRAFT | Borrowing beyond an account balance
+COMPOUND | ___ interest, earned on interest
+ANNUITY | Fixed annual payment
+INSURANCE | Protection against loss
+PREMIUM | Payment for insurance
+ACTUARY | Calculator of insurance risk
+UNDERWRITER | Assessor of insurance risk
+BUSINESS | Commercial enterprise
+COMPANY | Business organisation
+INDUSTRY | Sector of economic activity
+SECTOR | Part of the economy
+MANUFACTURING | Making goods in factories
+SERVICES | Intangible economic activities
+AGRICULTURE | Farming sector
+TOURISM | Industry of travel and leisure
+INFRASTRUCTURE | Basic facilities such as roads and power
+EARNINGS | Company profits
+CASHFLOW | Movement of money in and out (4,4)
+DEPRECIATE | Lose value over time
+AMORTISATION | Spreading a cost over time
+VALUATION | Estimated worth
+BENCHMARK | Standard for comparison
+INDEX | Measure of the market such as the FTSE
+BLUECHIP | Shares of a reliable large company (4,4)
+COUPON | Interest payment on a bond
+MATURITY | Date when a bond is repaid
+GILT | UK government bond
+JUNK | ___ bond, high-yield and risky
+LEVERAGE | Use of borrowed money to invest
+SHORTSELLING | Betting on a fall in price
+ARBITRAGEUR | Trader exploiting price differences
+BROKER | Intermediary in a transaction
+COMMISSION | Fee for a transaction
+TRANSACTION | Instance of buying or selling
+LIQUID | Easily converted into cash
+SOLVENT | Able to pay debts
+RESERVE | Money held back
+FRACTIONAL | ___ reserve banking
+BANKRUN | Mass withdrawal of deposits (4,3)
+CREDITCRUNCH | Sudden shortage of lending (6,6)
+SUBPRIME | Risky lending behind the 2008 crisis
+CONTAGION | Spread of financial crisis
+SYSTEMIC | Affecting the whole system
+MORALHAZARD | Risk-taking encouraged by insurance (5,6)
+ASYMMETRIC | ___ information, unequal knowledge
+SIGNALLING | Revealing information through actions
+ZEROSUM | Game where one's gain is another's loss (4-3)
+PARETO | ___ efficiency, where no one can gain without another losing
+DEADWEIGHT | ___ loss from market inefficiency
+ELASTIC | Responsive to price changes
+INELASTIC | Unresponsive to price changes
+INCIDENCE | Who really bears a tax
+PROGRESSIVE | Tax taking a larger share from higher incomes
+REGRESSIVE | Tax taking a larger share from lower incomes
+FLATTAX | Single-rate tax (4,3)
+TAXHAVEN | Country with very low taxes (3,5)
+LOOPHOLE | Gap in rules allowing avoidance
+CUSTOMS | Border agency collecting import duties
+SMUGGLING | Illegal moving of goods across borders
+BLACKMARKET | Illegal trade (5,6)
+GIGECONOMY | Freelance short-term work (3,7)
+FREELANCER | Self-employed worker
+UNION | Organisation of workers
+STRIKE | Collective refusal to work
+MIGRANT | Person who moves for work
+REMITTANCE | Money sent home by migrants
+BRAINDRAIN | Emigration of skilled people (5,5)
+SKILLS | Abilities valued by employers
+AUTOMATION | Replacing labour with machines
+DEVELOPMENT | Economic progress of a country
+DEVELOPING | ___ country, with lower incomes
+EMERGING | ___ market, a fast-growing economy
+BRICS | Group of large emerging economies
+AID | Assistance given to poorer countries
+SUBSISTENCE | Producing only enough to survive
+MICROCREDIT | Tiny loans to entrepreneurs in poverty
+SUSTAINABILITY | Meeting needs without harming the future
+EMISSIONS | Release of pollutants
+CIRCULAR | ___ economy, based on reuse
+RENEWABLE | Energy that won't run out
+PETRODOLLAR | Dollar earned from oil exports
+OILSHOCK | Sudden rise in oil prices (3,5)
+GOLD | Precious metal used as a store of value
+SILVER | Precious metal once used for coins
+COPPER | Metal whose price tracks the economy
+WHEAT | Staple grain traded on commodity markets
+CRUDE | Unrefined oil
+BRENT | Benchmark for North Sea oil
+BARREL | Unit of oil
+URBANISATION | Growth of cities
+SPICES | Valuable goods of early trade
+TULIPMANIA | Dutch speculative bubble of the 1630s
+SOUTHSEA | ___ Bubble of 1720
+BRETTONWOODS | Conference that shaped postwar finance (7,5)
+EUROZONE | Countries using the euro
+SANCTIONS | Economic penalties on a country
+BOYCOTT | Refusal to buy as protest
+OUTSOURCING | Contracting work to outside firms
+OFFSHORING | Moving work abroad
+RESHORING | Bringing work back home
+MONOPOLIST | Sole seller
+PRICEWAR | Battle of competitive price cuts (5,3)
+DISCOUNT | Reduction in price
+SALE | Period of reduced prices
+BARGAIN | Thing bought cheaply
+INFLATIONARY | Causing rising prices
+SPIRAL | Wage-price ___, of rising costs
+ACCELERATOR | Effect of output growth on investment
+MULTIPLIER | Effect of spending on total income
+AGGREGATE | ___ demand, total spending in an economy
+PHILLIPS | ___ curve, linking inflation and unemployment
+LAFFER | ___ curve, linking tax rates and revenue
+LORENZ | ___ curve, showing inequality
+KUZNETS | ___ curve, of inequality and growth
+OKUN | ___'s law, linking output and unemployment
+GRESHAM | ___'s law: bad money drives out good
+INVISIBLE | ___ hand of the market
+ANIMALSPIRITS | Keynes's term for confidence (6,7)
+SENTIMENT | Market mood
+OPTIMISM | Hopeful outlook
+FORECAST | Prediction of economic trends
+INDICATOR | Statistic signalling economic trends
+PARITY | Equivalence of value between currencies
+BIGMAC | ___ Index, comparing currencies by burgers
+BASKET | Set of goods used to measure prices
+AFFORDABILITY | Ability to pay
+NATIONALDEBT | Total government borrowing (8,4)
+AUSTERE | Strict in spending
+MONEYSUPPLY | Total money in an economy (5,6)
+VELOCITY | Rate at which money circulates
+SEIGNIORAGE | Profit from issuing currency
+GOVERNOR | Head of a central bank
+GREENSPAN | Alan ___, long-serving Fed chairman
+BERNANKE | Fed chairman during the 2008 crisis
+YELLEN | Janet ___, first woman to chair the Fed
+DRAGHI | Mario ___, who promised "whatever it takes"
+LAGARDE | Christine ___, head of the ECB
+MARKETING | Promotion and selling of products
+ADVERTISING | Paid promotion
+BRAND | Distinctive identity of a product
+LOGO | Symbol of a company
+SLOGAN | Catchy advertising phrase
+BRANDING | Creating a product identity
+NICHE | Specialised market segment
+SEGMENT | Group within a market
+DEMOGRAPHIC | Population group targeted by marketers
+PRICING | Setting the price of goods
+SKIMMING | Setting a high launch price
+PENETRATION | ___ pricing, starting low to win share
+LOSSLEADER | Product sold cheaply to attract customers (4,6)
+LOYALTY | Repeat custom from satisfied buyers
+CUSTOMER | Buyer of goods or services
+CLIENT | Customer of a professional service
+SUPPLIER | Provider of goods to a business
+VENDOR | Seller
+PROCUREMENT | Buying goods for an organisation
+TENDER | Formal offer to supply
+AUCTION | Sale to the highest bidder
+BID | Offer of a price
+ASK | Price a seller will accept
+SPREAD | Gap between bid and ask
+MANAGEMENT | Running of an organisation
+STRATEGY | Long-term plan
+OPERATIONS | Day-to-day running of a business
+PAYROLL | List of employees and their pay
+BONUS | Extra payment for performance
+PERK | Extra benefit of a job
+OVERTIME | Work beyond normal hours
+SHIFT | Period of work
+LEAN | ___ production, minimising waste
+JUSTINTIME | Inventory system of minimal stock (4-2-4)
+KAIZEN | Japanese philosophy of continuous improvement
+ASSEMBLYLINE | Production line (8,4)
+FORDISM | Mass production system of Henry Ford
+TAYLORISM | Scientific management of work
+SPECIALISATION | Concentrating on particular tasks
+CRAFTSMANSHIP | Skilled handwork
+COPYRIGHT | Legal right over creative work
+TRADEMARK | Registered brand symbol
+ROYALTY | Payment for use of a patent or work
+LICENCE | Permission to use something
+INCORPORATION | Forming a company
+LIMITED | ___ liability, protecting shareholders
+PARTNERSHIP | Business owned by partners
+SOLETRADER | One-person business (4,6)
+HOLDING | ___ company, owning others
+SUBSIDIARY | Company controlled by another
+PARENT | ___ company, owning subsidiaries
+MULTINATIONAL | Company operating in many countries
+ANTITRUST | Laws against monopolies
+TRUSTBUSTER | Official breaking up monopolies
+ARROW | Kenneth ___, of the impossibility theorem
+COASE | Ronald ___, of transaction costs and the nature of the firm
+OSTROM | Elinor ___, first woman to win the economics Nobel
+BECKER | Gary ___, economist of human capital
+SOLOW | Robert ___, of the growth model
+TOBIN | James ___, of a proposed tax on currency trades
+MINSKY | Hyman ___, of financial instability
+VOLCKER | Paul ___, Fed chairman who tamed inflation
+QUESNAY | Physiocrat author of the Tableau économique
+TURGOT | French economist and minister of Louis XVI
+WALRAS | French economist of general equilibrium
+JEVONS | Economist of marginal utility
+MENGER | Founder of the Austrian school
+MISES | Ludwig von ___, Austrian school economist
+SRAFFA | Italian economist of Production of Commodities
+ROBINSON | Joan ___, Cambridge economist of imperfect competition
+NORDHAUS | Economist of climate change
+DUFLO | Esther ___, Nobel economist of poverty experiments
+BANERJEE | Abhijit ___, Nobel economist of poverty
+SACHS | Jeffrey ___, development economist
+EASTERLY | William ___, critic of foreign aid
+FREAKONOMICS | Bestseller by Levitt and Dubner
+ECONOMIST | Specialist in the economy
+TAXPAYER | Person who pays tax
+GRANT | Money given for a purpose
+EXPENDITURE | Spending
+OUTPUT | Amount produced
+INPUT | Resource used in production
+CAPACITY | Maximum possible output
+SHORTFALL | Deficit
+WINDFALL | Unexpected gain
+PROFITEER | One who makes excessive profits
+HOARDING | Stockpiling goods
+SPECULATOR | One who trades on price movements
+SOLVENCY | Ability to meet debts
+FINANCE | Management of money
+FINTECH | Financial technology
+NEOBANK | Online-only bank
