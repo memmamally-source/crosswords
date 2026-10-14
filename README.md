@@ -67,6 +67,10 @@ python3 -m http.server 8000
 Go to **Settings → Pages → Build and deployment**, choose "Deploy from a
 branch", then pick the branch and `/ (root)`.
 
+When you change the CSS or JavaScript, bump the `?v=` number on the
+stylesheet and script tags in `index.html`, so browsers fetch the new files
+instead of reusing cached ones.
+
 ## Adding words or a genre
 
 Each genre's words live in `words/<id>.txt`, one entry per line:
