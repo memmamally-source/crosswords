@@ -464,32 +464,38 @@ body.in-game .dateline { display: none; }
 .clue-nav { border: 0; background: none; width: 36px; height: 40px; font-size: 1.6rem; line-height: 1; border-radius: 999px; }
 .clue-nav:hover { background: var(--paper); }
 
-.board-wrap { position: relative; display: flex; justify-content: safe center; align-items: flex-start; overflow-x: auto; }
+.board-wrap { position: relative; overflow-x: auto; }
 .board {
   --size: 40px;
   display: grid;
   grid-auto-rows: var(--size);
   align-content: start;
+  width: max-content;
+  margin: 0 auto;
+  /* Room for the last row's and column's closing line (see .cell). */
+  padding: 0 1px 1px 0;
   user-select: none;
   touch-action: manipulation;
 }
+/* Each square is one pixel bigger than its track, so neighbours overlap and
+   share a single 1px line: every grid line is the same width. */
 .cell {
   position: relative;
-  width: var(--size);
-  height: var(--size);
+  width: calc(var(--size) + 1px);
+  height: calc(var(--size) + 1px);
+  border: 1px solid var(--grid-line);
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding-bottom: calc(var(--size) * 0.06);
   background: var(--cell);
-  box-shadow: 0 0 0 1px var(--grid-line);
   font-weight: 600;
   font-size: calc(var(--size) * 0.6);
   line-height: 1;
   text-transform: uppercase;
   cursor: pointer;
 }
-.cell.block { background: transparent; cursor: default; box-shadow: none; }
+.cell.block { background: transparent; cursor: default; border: 0; }
 .cell .num {
   position: absolute;
   top: 2px;
@@ -612,23 +618,25 @@ body.in-game .dateline { display: none; }
 }
 
 /* On-screen keyboard (touch devices) */
-.keyboard { display: none; margin-top: 14px; }
-.keyboard .row { display: flex; justify-content: center; gap: 5px; margin-bottom: 6px; }
-.keyboard button {
-  flex: 1;
-  max-width: 42px;
-  height: 48px;
+/* Hidden text box that brings up the device's own keyboard on phones and
+   tablets. It sits on the selected square so the page scrolls to it. */
+.type-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
   border: 0;
-  border-radius: 5px;
-  background: var(--wash);
-  font-weight: 700;
-  font-size: 1rem;
+  opacity: 0;
+  font-size: 16px; /* stops iOS zooming in on focus */
+  caret-color: transparent;
+  pointer-events: none;
 }
-.keyboard button:active { background: var(--hl-word); }
-.keyboard button.wide { max-width: 64px; flex: 1.5; font-size: 0.8rem; }
 @media (pointer: coarse) {
-  .keyboard { display: block; }
   .footer-keys { display: none; }
+  /* Keep the current clue in view while the keyboard is open. */
+  .clue-bar { position: sticky; top: 0; z-index: 6; }
 }
 
 /* ---------- Dialogs ---------- */
