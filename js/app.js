@@ -43,7 +43,7 @@
   const store = migrate(loadStore());
   // Phones and tablets, which type with the device keyboard.
   const touchScreen = window.matchMedia('(pointer: coarse)');
-  store.settings = Object.assign({ theme: 'system', skipFilled: true, autocheck: false, showTags: true, showTimer: true }, store.settings);
+  store.settings = Object.assign({ theme: 'system', skipFilled: true, autocheck: false, showTags: true, showTimer: true, vibrate: true }, store.settings);
   const storeListeners = [];
   function saveStore() {
     try {
@@ -266,6 +266,8 @@
     syncAutocheckUI();
     $('#set-tags').checked = store.settings.showTags;
     $('#set-timer').checked = store.settings.showTimer;
+    $('#set-vibrate').checked = store.settings.vibrate;
+    $('#set-vibrate').closest('.switch').hidden = !canVibrate;
     $('#timer').classList.toggle('hidden-time', !store.settings.showTimer);
     applyTheme();
   }
@@ -325,9 +327,10 @@
     const mini = miniSpec(today);
 
     const ds = statusLine(daily.key, 'Play');
+    const streakNow = dailyStreaks().current;
     $('#daily-feature').innerHTML = `
       <div>
-        <p class="kicker">${esc(daily.kicker)}</p>
+        <p class="kicker">${esc(daily.kicker)}${streakNow ? `<span class="streak-chip" title="Daily streak">🔥 ${plural(streakNow, 'day')}</span>` : ''}</p>
         <h2>${esc(daily.sched.day)}'s Crossword</h2>
         <p class="deck" id="daily-deck">An academic crossword drawn from ${DAILY_SUBJECTS} subjects, from chemistry and classics to law, linguistics and philosophy.</p>
         <ul class="facts">
@@ -743,6 +746,16 @@
   function refresh() {
     if (!game) return;
     placeTyping();
+    let total = 0;
+    let filled = 0;
+    game.puzzle.solution.forEach((row, r) => row.forEach((ch, c) => {
+      if (!ch) return;
+      total++;
+      if (game.entries[r][c]) filled++;
+    }));
+    $('#progress i').style.width = `${(filled / total) * 100}%`;
+    $('#progress').setAttribute('aria-valuenow', Math.round((filled / total) * 100));
+    $('#progress').classList.toggle('done', !!game.solved);
     const { puzzle, sel, entries, revealed, wrong, pencil } = game;
     const wi = currentWordIndex();
     const word = puzzle.words[wi];
@@ -861,7 +874,11 @@
   function typeLetter(ch) {
     if (game.solved || game.paused) return;
     const { sel, entries } = game;
+    const typedAt = [sel.r, sel.c];
+    const wordsHere = ['across', 'down'].map((d) => game.wordAt[sel.r][sel.c][d]).filter((i) => i != null);
+    const wasFull = wordsHere.map((i) => wordFull(i));
     setCell(sel.r, sel.c, ch);
+    feedbackTyped(typedAt, wordsHere, wasFull);
 
     const word = game.puzzle.words[currentWordIndex()];
     const pos = word.cells.findIndex(([r, c]) => r === sel.r && c === sel.c);
@@ -923,6 +940,15 @@
     }
     toast(bad ? `${plural(bad, 'square')} incorrect` : empty ? 'No mistakes so far' : 'All correct');
     afterChange();
+    const cells = targetCells(scope);
+    const wrongCells = cells.filter(([r, c]) => game.wrong[r][c]);
+    if (wrongCells.length) {
+      animateCells(wrongCells, 'shake');
+      buzz([30, 50, 30]);
+    } else {
+      animateCells(cells.filter(([r, c]) => game.entries[r][c]), 'ripple');
+      buzz(12);
+    }
   }
 
   let revealArmed = 0;
@@ -939,8 +965,10 @@
       const words = scope === 'all' ? game.puzzle.words : [game.puzzle.words[currentWordIndex()]];
       game.revealWords += words.filter((w) => w.cells.some(([r, c]) => game.entries[r][c] !== w.answer[w.cells.findIndex(([rr, cc]) => rr === r && cc === c)])).length;
     }
+    const popped = [];
     for (const [r, c] of targetCells(scope)) {
       if (game.entries[r][c] !== game.puzzle.solution[r][c]) {
+        popped.push([r, c]);
         game.entries[r][c] = game.puzzle.solution[r][c];
         game.revealed[r][c] = true;
         game.reveals++;
@@ -949,6 +977,7 @@
       game.wrong[r][c] = false;
     }
     afterChange();
+    if (!game.solved) animateCells(popped, 'pop');
   }
 
   function clear(scope) {
@@ -980,6 +1009,98 @@
   }
 
   let lastFullWarning = '';
+  // ---------- Feedback: animation, vibration, celebration ----------
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const canVibrate = typeof navigator.vibrate === 'function';
+  function buzz(pattern) {
+    if (!canVibrate || !store.settings.vibrate) return;
+    try { navigator.vibrate(pattern); } catch (e) { /* not allowed right now */ }
+  }
+  // Restart a CSS animation on some squares; --i staggers them in order.
+  function animateCells(cells, cls) {
+    if (reduceMotion.matches) return;
+    cells.forEach(([r, c], i) => {
+      const el = cellEls[r] && cellEls[r][c];
+      if (!el) return;
+      el.classList.remove(cls);
+      void el.offsetWidth; // let the animation start again
+      el.style.setProperty('--i', i);
+      el.classList.add(cls);
+      el.addEventListener('animationend', () => el.classList.remove(cls), { once: true });
+    });
+  }
+  const wordFull = (i) => game.puzzle.words[i].cells.every(([r, c]) => game.entries[r][c]);
+  const wordRight = (i) => game.puzzle.words[i].cells.every(([r, c]) => game.entries[r][c] === game.puzzle.solution[r][c]);
+  function feedbackTyped([r, c], wordsHere, wasFull) {
+    if (game.wrong[r][c]) {
+      // Auto-check caught a wrong letter.
+      animateCells([[r, c]], 'shake');
+      buzz([25, 40, 25]);
+      return;
+    }
+    animateCells([[r, c]], 'pop');
+    let completed = false;
+    wordsHere.forEach((i, k) => {
+      if (wasFull[k] || !wordFull(i)) return;
+      completed = true;
+      const cells = game.puzzle.words[i].cells;
+      // With auto-check on, a finished word shows whether it's right.
+      if (store.settings.autocheck && !wordRight(i)) animateCells(cells, 'shake');
+      else animateCells(cells, 'ripple');
+    });
+    buzz(completed ? 18 : 6);
+  }
+  function celebrate(clean) {
+    buzz(clean ? [30, 60, 30, 60, 140] : [40]);
+    if (reduceMotion.matches) return;
+    const cells = [];
+    game.puzzle.solution.forEach((row, r) => row.forEach((ch, c) => ch && cells.push([r, c])));
+    cells.forEach(([r, c]) => cellEls[r][c].style.setProperty('--d', `${(r + c) * 28}ms`));
+    if (clean) confetti();
+  }
+  // A short burst of paper confetti over the page.
+  function confetti() {
+    const canvas = document.createElement('canvas');
+    canvas.className = 'confetti';
+    document.body.appendChild(canvas);
+    const dpr = window.devicePixelRatio || 1;
+    const w = (canvas.width = innerWidth * dpr);
+    const h = (canvas.height = innerHeight * dpr);
+    const ctx = canvas.getContext('2d');
+    const colours = ['#f2c230', '#a7d8ff', '#9b2915', '#121212', '#4caf7a', '#ffffff'];
+    const bits = Array.from({ length: 140 }, () => ({
+      x: w / 2 + (Math.random() - 0.5) * w * 0.3,
+      y: h * 0.35,
+      vx: (Math.random() - 0.5) * 22 * dpr,
+      vy: (-Math.random() * 18 - 8) * dpr,
+      size: (5 + Math.random() * 6) * dpr,
+      spin: Math.random() * Math.PI,
+      vs: (Math.random() - 0.5) * 0.4,
+      colour: colours[Math.floor(Math.random() * colours.length)],
+    }));
+    const start = performance.now();
+    (function frame(now) {
+      const t = now - start;
+      ctx.clearRect(0, 0, w, h);
+      ctx.globalAlpha = Math.max(0, 1 - Math.max(0, t - 1400) / 800);
+      for (const b of bits) {
+        b.vy += 0.55 * dpr;
+        b.vx *= 0.985;
+        b.x += b.vx;
+        b.y += b.vy;
+        b.spin += b.vs;
+        ctx.save();
+        ctx.translate(b.x, b.y);
+        ctx.rotate(b.spin);
+        ctx.fillStyle = b.colour;
+        ctx.fillRect(-b.size / 2, -b.size / 4, b.size, b.size / 2);
+        ctx.restore();
+      }
+      if (t < 2200) requestAnimationFrame(frame);
+      else canvas.remove();
+    })(start);
+  }
+
   function afterChange() {
     if (!game.solved && isSolved()) {
       win();
@@ -1038,6 +1159,7 @@
     saveStore();
 
     $('#board').classList.add('solved');
+    celebrate(clean);
     $('#win-kicker').textContent = spec.kicker;
     $('#win-title').textContent = clean ? 'Solved' : 'Puzzle complete';
     $('#win-time').textContent = formatTime(time);
@@ -1341,6 +1463,11 @@
     saveStore();
     if (game && !$('#game-view').hidden) { renderGame(); refresh(); }
   });
+  $('#set-vibrate').addEventListener('change', (e) => {
+    store.settings.vibrate = e.target.checked;
+    saveStore();
+    buzz(20);
+  });
   $('#set-timer').addEventListener('change', (e) => {
     store.settings.showTimer = e.target.checked;
     saveStore();
@@ -1367,7 +1494,16 @@
 
   function showView(name) {
     if (name !== 'game') typeInput.blur();
-    for (const v of ['home', 'archive', 'game']) $(`#${v}-view`).hidden = v !== name;
+    for (const v of ['home', 'archive', 'game']) {
+      const el = $(`#${v}-view`);
+      const showing = v === name;
+      if (showing && el.hidden && !reduceMotion.matches) {
+        el.classList.remove('enter');
+        void el.offsetWidth;
+        el.classList.add('enter');
+      }
+      el.hidden = !showing;
+    }
     document.body.classList.toggle('in-game', name === 'game');
     $$('.masthead-nav button').forEach((b) => b.removeAttribute('aria-current'));
     const navName = name === 'game' ? null : name;
@@ -1409,7 +1545,11 @@
     }
     showView('home');
     renderHome();
-    if (parts[0] === 'genres') $('#genres').scrollIntoView();
+    if (parts[0] === 'genres') {
+      $('#genres').scrollIntoView();
+      $$('.masthead-nav button').forEach((b) => b.removeAttribute('aria-current'));
+      $('.masthead-nav [data-nav="genres"]').setAttribute('aria-current', 'page');
+    }
     else window.scrollTo(0, 0);
   }
 

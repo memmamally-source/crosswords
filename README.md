@@ -51,7 +51,16 @@ Pages from the repository root).
 - Finishing shows your time, your streak for the Daily, and a **Share
   result** button that copies a summary.
 
+- **Feel:**
+  - Letters pop in as you type, and a finished word ripples.
+  - Wrong letters shake when Check or auto-check finds them.
+  - A clean solve sets off a golden wave across the grid and a burst of confetti.
+  - A progress bar shows how much of the grid is filled, and the home page shows your Daily streak.
+  - On phones, a tab bar along the bottom switches sections, and Android phones vibrate on taps, finished words and wins. Vibration can be turned off in settings; iPhones don't allow websites to vibrate.
+  - All motion is skipped when the device asks for reduced motion.
+
 Progress, times and streaks are stored in the browser's `localStorage`.
+Players can also sign in to keep them in sync across devices (see Sign-in).
 
 ## Install as an app
 
@@ -76,6 +85,37 @@ the site for offline use. The icons in `icons/` are drawn by
 - **The Daily and the Mini** each use their own slice of a shuffled word bank
   each day, so answers don't come back for weeks. Everyone gets the same
   puzzle on a given date.
+
+## Sign-in
+
+Signing in (with Google, or an email and password) keeps a player's streaks,
+solves, best times and puzzles in progress the same on every device. It uses
+Firebase and stays switched off, with no account button, until it's set up:
+
+1. At [console.firebase.google.com](https://console.firebase.google.com),
+   **Add project** (Google Analytics isn't needed).
+2. **Build → Authentication → Get started.** Under **Sign-in method**, turn on
+   **Google** and **Email/Password**.
+3. **Authentication → Settings → Authorized domains → Add domain:** the site's
+   address, such as `memmamally-source.github.io`.
+4. **Build → Firestore Database → Create database** (production mode, a
+   location near your players).
+5. **Firestore → Rules:** replace the rules with the contents of
+   `firestore.rules`, then **Publish**. This lets each player read and write
+   only their own progress.
+6. **Project settings → Your apps → Web (`</>`):** register an app, copy the
+   `firebaseConfig` values, and put them in `js/firebase-config.js`:
+   `window.FIREBASE_CONFIG = { apiKey: "…", authDomain: "…", projectId: "…", appId: "…" };`
+   These values aren't secret; the rules from step 5 protect the data.
+
+Each player's progress is one document, `users/{uid}`. `js/sync.js` merges it
+with what's on the device:
+- A clean solve beats an assisted one, and the faster time wins.
+- Seen words from both copies combine.
+- The newest copy of a puzzle in progress wins.
+- Device settings stay per device.
+
+Firebase's free plan easily covers a site this size.
 
 ## Run locally
 
@@ -112,6 +152,7 @@ python3 tools/rate-words.py  # rate answers easy/medium/hard (pip install wordfr
 node tools/check-words.js    # lengths, duplicates, answers inside their own clue
 node tools/build-words.js    # compile words/*.txt into js/words.js
 node tests/generator.test.js # takes a couple of minutes
+node tests/sync.test.js      # merging progress between devices
 ```
 
 `rate-words.py` writes `words/levels.json`, rating each answer by how common
@@ -142,6 +183,7 @@ that `js/words.js` is up to date.
 | --- | --- |
 | `index.html` | Page structure: masthead, home, archive, solving view, dialogs |
 | `manifest.webmanifest`, `sw.js`, `icons/` | Installing as an app and working offline |
+| `js/account.js`, `js/sync.js`, `js/firebase-config.js`, `firestore.rules` | Optional sign-in and syncing progress |
 | `css/styles.css` | Styles, light and dark themes |
 | `words/*.txt` | Word lists, one file per genre |
 | `words/levels.json` | Easy and hard answers, from `tools/rate-words.py` |

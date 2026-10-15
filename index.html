@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=10" />
+  <link rel="stylesheet" href="css/styles.css?v=11" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -25,9 +25,10 @@
   <header class="masthead">
     <div class="masthead-bar">
       <nav class="masthead-nav" aria-label="Sections">
-        <button data-nav="home">Today</button>
-        <button data-nav="archive">Archive</button>
-        <button data-nav="genres">Genres</button>
+        <button data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 12h16M12 4v16" /></svg><span>Today</span></button>
+        <button data-nav="archive"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M4 10h16M9 3v4M15 3v4" /></svg><span>Archive</span></button>
+        <button data-nav="genres"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5" /><rect x="13" y="4" width="7" height="7" rx="1.5" /><rect x="4" y="13" width="7" height="7" rx="1.5" /><rect x="13" y="13" width="7" height="7" rx="1.5" /></svg><span>Genres</span></button>
+        <button data-action="stats" class="nav-stats"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V4M19 20v-6" /></svg><span>Stats</span></button>
       </nav>
       <a class="wordmark" href="#/" data-nav="home">Crossword Hub</a>
       <div class="masthead-tools">
@@ -54,6 +55,7 @@
             <label class="switch"><input type="checkbox" id="set-autocheck" /><span>Auto-check letters</span></label>
             <label class="switch"><input type="checkbox" id="set-tags" /><span>Show subject labels on clues</span></label>
             <label class="switch"><input type="checkbox" id="set-timer" /><span>Show timer</span></label>
+            <label class="switch"><input type="checkbox" id="set-vibrate" /><span>Vibrate on taps and wins</span></label>
           </div>
         </div>
       </div>
@@ -181,6 +183,7 @@
 
       <div class="game-layout">
         <div class="board-col">
+          <div class="progress" id="progress" role="progressbar" aria-label="Squares filled" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
           <div class="clue-bar" id="clue-bar">
             <button class="clue-nav" data-action="prev-word" aria-label="Previous clue">‹</button>
             <p aria-live="polite"><strong id="clue-bar-num"></strong><span id="clue-bar-text"></span></p>
@@ -277,12 +280,12 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=10"></script>
-  <script src="js/words.js?v=10"></script>
-  <script src="js/genres.js?v=10"></script>
-  <script src="js/sync.js?v=10"></script>
-  <script src="js/app.js?v=10"></script>
-  <script src="js/firebase-config.js?v=10"></script>
-  <script type="module" src="js/account.js?v=10"></script>
+  <script src="js/generator.js?v=11"></script>
+  <script src="js/words.js?v=11"></script>
+  <script src="js/genres.js?v=11"></script>
+  <script src="js/sync.js?v=11"></script>
+  <script src="js/app.js?v=11"></script>
+  <script src="js/firebase-config.js?v=11"></script>
+  <script type="module" src="js/account.js?v=11"></script>
 </body>
 </html>
