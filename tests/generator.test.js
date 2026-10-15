@@ -48,6 +48,9 @@ for (const genre of GENRES) {
       const p = generate(genre.words, { ...cfg, seed });
       const tag = `${genre.id}/${level}/seed ${seed}`;
       assert.strictEqual(p.words.length, cfg.count, `${tag}: placed ${p.words.length}/${cfg.count}`);
+      const levels = new Map(genre.words.map((w) => [w.answer, w.level]));
+      const hard = p.words.filter((w) => levels.get(w.answer) === 'hard').length;
+      assert.strictEqual(hard, cfg.hard, `${tag}: ${hard} hard answers, wanted ${cfg.hard}`);
       assert.ok(p.rows <= cfg.maxSize + 4 && p.cols <= cfg.maxSize + 4, `${tag}: grid too big`);
       for (const w of p.words) {
         w.cells.forEach(([r, c], i) => assert.strictEqual(p.solution[r][c], w.answer[i], `${tag}: ${w.answer}`));
@@ -77,13 +80,16 @@ for (const genre of GENRES) {
 }
 // The Daily and the Mini: 8 weeks of each, built exactly as the site builds them.
 const start = Math.floor(Date.UTC(2026, 8, 1) / 86400000);
+const DAILY_LEVELS = new Map(DAILY_BANK.map((w) => [w.answer, w.level]));
 let prevDaily = null;
 let dailyRepeats = 0;
 for (let day = start; day < start + 56; day++) {
   const sched = DAILY_SCHEDULE[(day + 4) % 7]; // 1 Jan 1970 was a Thursday
   const bank = rotatingPool(DAILY_BANK, day, DAILY_WINDOW, 1).filter((w) => w.answer.length <= sched.maxLen);
-  const p = generate(bank, { count: sched.count, maxSize: sched.maxSize, seed: day * 31 + 7 });
+  const p = generate(bank, { count: sched.count, maxSize: sched.maxSize, hard: sched.hard, seed: day * 31 + 7 });
   assert.strictEqual(p.words.length, sched.count, `daily ${day} (${sched.day}): placed ${p.words.length}/${sched.count}`);
+  const dailyHard = p.words.filter((w) => DAILY_LEVELS.get(w.answer) === 'hard').length;
+  assert.strictEqual(dailyHard, sched.hard, `daily ${day} (${sched.day}): ${dailyHard} hard answers, wanted ${sched.hard}`);
   assert.ok(p.words.every((w) => w.tag), `daily ${day}: every clue has a subject label`);
   assertNoGiveaways(p, `daily ${day}`);
   const answers = p.words.map((w) => w.answer);
@@ -92,6 +98,8 @@ for (let day = start; day < start + 56; day++) {
   const m = generate(rotatingPool(MINI_BANK, day, MINI_WINDOW, 2), { ...MINI_CONFIG, seed: day * 17 + 3 });
   assert.strictEqual(m.words.length, MINI_CONFIG.count, `mini ${day}: placed ${m.words.length}`);
   assertNoGiveaways(m, `mini ${day}`);
+  const miniLevels = new Map(MINI_BANK.map((w) => [w.answer, w.level]));
+  assert.ok(m.words.every((w) => miniLevels.get(w.answer) !== 'hard'), `mini ${day}: has a hard answer`);
   total += 2;
 }
 assert.ok(dailyRepeats <= 4, `too many answers repeated on consecutive days: ${dailyRepeats}`);

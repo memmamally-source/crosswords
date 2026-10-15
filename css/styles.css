@@ -438,6 +438,8 @@ body.in-game .dateline { display: none; }
 .tool:hover { background: var(--wash); }
 .tool[aria-pressed='true'] { background: var(--ink); color: var(--on-ink); }
 .tool-primary { margin-left: 8px; border: 1px solid var(--ink); }
+.tool.on { background: var(--ink); color: var(--on-ink); }
+.menu-list .menu-toggle { border-top: 1px solid var(--rule); font-weight: 700; }
 
 .game-layout {
   display: grid;
@@ -503,7 +505,14 @@ body.in-game .dateline { display: none; }
   font-size: max(8px, calc(var(--size) * 0.27));
   font-weight: 500;
   line-height: 1;
+  color: var(--ink-soft);
+  pointer-events: none;
 }
+/* Small squares (phones, big grids): a tinier number tucked into the corner
+   and the letter nudged right and down so the two don't overlap. */
+.board.compact .cell { padding: 0 0 0 calc(var(--size) * 0.14); font-size: calc(var(--size) * 0.58); align-items: flex-end; }
+.board.compact .cell .letter { line-height: 0.95; }
+.board.compact .cell .num { top: 1px; left: 1px; font-size: max(6px, calc(var(--size) * 0.3)); font-weight: 400; letter-spacing: -0.02em; }
 .cell.in-word { background: var(--hl-word); }
 .cell.active { background: var(--hl-cell); }
 .cell.pencil .letter { color: var(--pencil); font-weight: 400; }

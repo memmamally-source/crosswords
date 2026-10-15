@@ -106,6 +106,7 @@
       bank: rotatingPool(DAILY_BANK, day, DAILY_WINDOW, 1).filter((w) => w.answer.length <= sched.maxLen),
       count: sched.count,
       maxSize: sched.maxSize,
+      hard: sched.hard,
       seed: day * 31 + 7,
       tags: true,
     };
@@ -124,6 +125,7 @@
       bank: rotatingPool(MINI_BANK, day, MINI_WINDOW, 2),
       count: MINI_CONFIG.count,
       maxSize: MINI_CONFIG.maxSize,
+      hard: MINI_CONFIG.hard,
       seed: day * 17 + 3,
       tags: true,
     };
@@ -152,6 +154,7 @@
       bank: decodePool(genre, pool) || genre.words,
       count: cfg.count,
       maxSize: cfg.maxSize,
+      hard: cfg.hard,
       seed,
       tags: genre.category === 'mixed',
     };
@@ -160,7 +163,7 @@
   const puzzleCache = new Map();
   function puzzleFor(spec) {
     if (!puzzleCache.has(spec.key)) {
-      puzzleCache.set(spec.key, CrosswordGenerator.generate(spec.bank, { count: spec.count, maxSize: spec.maxSize, seed: spec.seed }));
+      puzzleCache.set(spec.key, CrosswordGenerator.generate(spec.bank, { count: spec.count, maxSize: spec.maxSize, hard: spec.hard, seed: spec.seed }));
     }
     return puzzleCache.get(spec.key);
   }
@@ -250,7 +253,7 @@
 
   function syncSettingsUI() {
     $('#set-skip').checked = store.settings.skipFilled;
-    $('#set-autocheck').checked = store.settings.autocheck;
+    syncAutocheckUI();
     $('#set-tags').checked = store.settings.showTags;
     $('#set-timer').checked = store.settings.showTimer;
     $('#timer').classList.toggle('hidden-time', !store.settings.showTimer);
@@ -445,6 +448,11 @@
     }
   }
 
+  // "5 letters and 1 word", "3 letters"
+  function revealSummary(letters, words) {
+    return words ? `${plural(letters, 'letter')} and ${plural(words, 'word')}` : plural(letters, 'letter');
+  }
+
   // ---------- Stats ----------
   function openStats() {
     const dailies = Object.entries(store.solves).filter(([k]) => k.startsWith('daily:'));
@@ -457,6 +465,9 @@
       [current, 'Current streak'],
       [longest, 'Longest streak'],
       [clean.length ? formatTime(avg) : '—', 'Average Daily'],
+      [clean.length, 'Dailies with no help'],
+      [dailies.reduce((t, [, s]) => t + (s.letters || 0), 0), 'Letters revealed in Dailies'],
+      [dailies.reduce((t, [, s]) => t + (s.words || 0), 0), 'Words revealed in Dailies'],
     ].map(([v, l]) => `<div><b>${v}</b><span>${l}</span></div>`).join('');
 
     const order = [1, 2, 3, 4, 5, 6, 0];
@@ -499,6 +510,7 @@
       pencilMode: false,
       solved: false,
       reveals: 0,
+      revealWords: 0,
       checks: 0,
     };
 
@@ -510,12 +522,18 @@
       game.pencil = save.pencil || game.pencil;
       game.elapsed = save.elapsed || 0;
       game.reveals = save.reveals || 0;
+      game.revealWords = save.revealWords || 0;
       game.checks = save.checks || 0;
     } else if (solve) {
       // Already solved and no work in progress: show the finished grid.
       game.entries = puzzle.solution.map((row) => row.map((ch) => ch || ''));
       game.elapsed = solve.time;
       game.reveals = solve.clean ? 0 : 1;
+    }
+    if (store.settings.autocheck) {
+      puzzle.solution.forEach((row, r) => row.forEach((ch, c) => {
+        game.wrong[r][c] = !!ch && !!game.entries[r][c] && !game.pencil[r][c] && game.entries[r][c] !== ch;
+      }));
     }
     if (spec.kind === 'genre') rememberWords(spec.genre, puzzle);
     saveStore();
@@ -558,6 +576,7 @@
         pencil: game.pencil,
         elapsed: currentElapsed(),
         reveals: game.reveals,
+        revealWords: game.revealWords,
         checks: game.checks,
         updated: Date.now(),
       };
@@ -668,7 +687,7 @@
         const li = document.createElement('li');
         li.dataset.index = i;
         li.innerHTML = `<strong>${w.number}</strong><span><span class="text"></span>${showTags && w.tag ? `<span class="tag">${esc(w.tag)}</span>` : ''}</span>`;
-        $('.text', li).textContent = `${w.clue} (${w.answer.length})`;
+        $('.text', li).textContent = withLength(w);
         li.addEventListener('click', () => {
           game.sel = { ...firstEmptyCell(i), dir: w.dir };
           refresh();
@@ -679,6 +698,10 @@
     }
     sizeBoard();
   }
+
+  // Clue text with the answer length, unless the clue already gives one, as
+  // in "(3,5)" for a two-word answer.
+  const withLength = (w) => (/\([\d,\- ]+\)$/.test(w.clue) ? w.clue : `${w.clue} (${w.answer.length})`);
 
   function sizeBoard() {
     if (!game) return;
@@ -698,6 +721,7 @@
     const size = Math.max(14, Math.min(cap, Math.floor((availW - 5) / cols), fitH));
     const board = $('#board');
     board.style.setProperty('--size', size + 'px');
+    board.classList.toggle('compact', size < 30);
     // Centre on a whole pixel: a half-pixel offset blurs the grid lines.
     const free = $('#board-wrap').clientWidth - (cols * size + 1);
     board.style.marginLeft = Math.max(0, Math.floor(free / 2)) + 'px';
@@ -900,6 +924,11 @@
       return;
     }
     revealArmed = 0;
+    // Count whole words given away (Reveal → Word or Puzzle), for the stats.
+    if (scope !== 'cell') {
+      const words = scope === 'all' ? game.puzzle.words : [game.puzzle.words[currentWordIndex()]];
+      game.revealWords += words.filter((w) => w.cells.some(([r, c]) => game.entries[r][c] !== w.answer[w.cells.findIndex(([rr, cc]) => rr === r && cc === c)])).length;
+    }
     for (const [r, c] of targetCells(scope)) {
       if (game.entries[r][c] !== game.puzzle.solution[r][c]) {
         game.entries[r][c] = game.puzzle.solution[r][c];
@@ -919,7 +948,7 @@
       const { rows, cols } = game.puzzle;
       Object.assign(game, {
         entries: grid2(rows, cols, ''), revealed: grid2(rows, cols, false), pencil: grid2(rows, cols, false),
-        wrong: grid2(rows, cols, false), elapsed: 0, reveals: 0, checks: 0, solved: false,
+        wrong: grid2(rows, cols, false), elapsed: 0, reveals: 0, revealWords: 0, checks: 0, solved: false,
       });
       $('#board').classList.remove('solved');
       startTimer();
@@ -985,7 +1014,9 @@
     let newBest = false;
     store.solvedCount = (store.solvedCount || 0) + 1;
     const prev = store.solves[spec.key];
-    if (!prev || (clean && (!prev.clean || time < prev.time))) store.solves[spec.key] = { time, clean, at: Date.now() };
+    if (!prev || (clean && (!prev.clean || time < prev.time))) {
+      store.solves[spec.key] = { time, clean, at: Date.now(), letters: game.reveals, words: game.revealWords };
+    }
     if (spec.kind === 'genre' && clean) {
       const k = `${spec.genre.id}:${spec.difficulty}`;
       if (!store.best[k] || time < store.best[k]) {
@@ -1002,11 +1033,12 @@
     $('#win-time').textContent = formatTime(time);
     $('#win-text').textContent = clean
       ? newBest ? 'A new personal best for this genre and level.' : game.checks ? 'Finished without reveals.' : 'Finished without checks or reveals.'
-      : `${plural(game.reveals, 'square')} revealed, so this one doesn't count toward streaks or best times.`;
+      : `${revealSummary(game.reveals, game.revealWords)} revealed, so this one doesn't count toward streaks or best times.`;
     let stats = '';
     if (spec.kind === 'daily') {
       const { current, longest } = dailyStreaks();
       stats = `<div><b>${current}</b><span>Current streak</span></div><div><b>${longest}</b><span>Longest streak</span></div>`;
+      if (!clean) stats += `<div><b>${game.reveals}</b><span>Letters revealed</span></div><div><b>${game.revealWords}</b><span>Words revealed</span></div>`;
     } else if (spec.kind === 'genre' && store.best[`${spec.genre.id}:${spec.difficulty}`]) {
       stats = `<div><b>${formatTime(store.best[`${spec.genre.id}:${spec.difficulty}`])}</b><span>Best ${esc(DIFFICULTIES[spec.difficulty].label)} time</span></div>`;
     }
@@ -1022,7 +1054,7 @@
   function shareText() {
     const { spec } = game;
     const name = spec.kind === 'genre' ? `${spec.title} (${DIFFICULTIES[spec.difficulty].label})` : `${spec.kicker.split(' · ')[0]}, ${shortDate(spec.date)}`;
-    const how = game.reveals ? `finished with ${plural(game.reveals, 'reveal')}` : 'solved with no reveals';
+    const how = game.reveals ? `finished with ${revealSummary(game.reveals, game.revealWords)} revealed` : 'solved with no reveals';
     let text = `Crossword Hub · ${name}\n${formatTime(game.elapsed)}, ${how}`;
     let framed = true;
     try {
@@ -1137,6 +1169,11 @@
     if (!e.isComposing) resetTyping();
   });
   typeInput.addEventListener('compositionend', () => setTimeout(resetTyping));
+  // Moving between clues shouldn't close the device keyboard: stop these
+  // controls from taking focus away from the text box.
+  document.addEventListener('pointerdown', (e) => {
+    if (document.activeElement === typeInput && e.target.closest('.clue-nav, .clue-list li, #clue-bar')) e.preventDefault();
+  });
 
   // ---------- Clicks ----------
   function closeMenus(except) {
@@ -1233,14 +1270,15 @@
       case 'check-cell': check('cell'); break;
       case 'check-word': check('word'); break;
       case 'check-all': check('all'); break;
+      case 'toggle-autocheck': setAutocheck(!store.settings.autocheck); break;
       case 'reveal-cell': reveal('cell'); break;
       case 'reveal-word': reveal('word'); break;
       case 'reveal-all': reveal('all'); break;
       case 'clear-incorrect': clear('incorrect'); break;
       case 'clear-word': clear('word'); break;
       case 'clear-all': clear('all'); break;
-      case 'next-word': if (!game.paused) { jumpWord(1, false); refresh(); } break;
-      case 'prev-word': if (!game.paused) { jumpWord(-1, false); refresh(); } break;
+      case 'next-word': if (!game.paused) { jumpWord(1, false); refresh(); focusTyping(); } break;
+      case 'prev-word': if (!game.paused) { jumpWord(-1, false); refresh(); focusTyping(); } break;
       case 'share': share(); break;
       case 'new':
         if (game.spec.kind === 'genre') {
@@ -1262,16 +1300,30 @@
 
   // Settings toggles
   $('#set-skip').addEventListener('change', (e) => { store.settings.skipFilled = e.target.checked; saveStore(); });
-  $('#set-autocheck').addEventListener('change', (e) => {
-    store.settings.autocheck = e.target.checked;
+  $('#set-autocheck').addEventListener('change', (e) => setAutocheck(e.target.checked));
+  // Auto-check stays on until it's switched off (here, in the Check menu or
+  // in settings), marking wrong letters as soon as they're typed.
+  function setAutocheck(on) {
+    store.settings.autocheck = on;
     saveStore();
+    syncAutocheckUI();
     if (game && !game.solved) {
       game.puzzle.solution.forEach((row, r) => row.forEach((ch, c) => {
-        game.wrong[r][c] = store.settings.autocheck && !!ch && !!game.entries[r][c] && !game.pencil[r][c] && game.entries[r][c] !== ch;
+        game.wrong[r][c] = on && !!ch && !!game.entries[r][c] && !game.pencil[r][c] && game.entries[r][c] !== ch;
       }));
+      if (on) game.checks++;
       refresh();
+      persist();
     }
-  });
+  }
+  function syncAutocheckUI() {
+    const on = store.settings.autocheck;
+    $('#set-autocheck').checked = on;
+    $('#check-btn').classList.toggle('on', on);
+    $('#check-btn').setAttribute('aria-label', on ? 'Check (auto-check is on)' : 'Check');
+    $('#autocheck-item').setAttribute('aria-checked', String(on));
+    $('#autocheck-item').textContent = on ? 'Turn auto-check off' : 'Auto-check (stays on)';
+  }
   $('#set-tags').addEventListener('change', (e) => {
     store.settings.showTags = e.target.checked;
     saveStore();

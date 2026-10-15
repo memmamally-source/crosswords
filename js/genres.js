@@ -4,11 +4,15 @@
  */
 const WORD_LISTS = typeof CROSSWORD_WORDS !== 'undefined' ? CROSSWORD_WORDS : require('./words.js');
 
+// Lines read "ANSWER|clue". A leading ! marks a hard answer and + an easy one
+// (rated by tools/rate-words.py); everything else counts as medium.
 function parseList(text) {
   if (!text) return [];
   return text.split('\n').map((line) => {
     const bar = line.indexOf('|');
-    return { answer: line.slice(0, bar), clue: line.slice(bar + 1) };
+    const mark = line[0];
+    const level = mark === '!' ? 'hard' : mark === '+' ? 'easy' : 'medium';
+    return { answer: line.slice(level === 'medium' ? 0 : 1, bar), clue: line.slice(bar + 1), level };
   });
 }
 
@@ -272,9 +276,10 @@ const CATEGORIES = [
 ];
 
 const DIFFICULTIES = {
-  easy: { label: 'Easy', count: 12, maxSize: 13 },
-  medium: { label: 'Medium', count: 20, maxSize: 17 },
-  hard: { label: 'Hard', count: 30, maxSize: 21 },
+  // hard: how many tough answers each puzzle mixes in; the rest lean easy.
+  easy: { label: 'Easy', count: 12, maxSize: 13, hard: 2 },
+  medium: { label: 'Medium', count: 20, maxSize: 17, hard: 5 },
+  hard: { label: 'Hard', count: 30, maxSize: 21, hard: 8 },
 };
 
 // ---------- Daily puzzles ----------
@@ -288,13 +293,13 @@ const DAILY_BANK = mixGenre('daily', 'The Daily', '', '', DAILY_SOURCES).words;
 
 // Indexed by Date.getDay(): 0 = Sunday.
 const DAILY_SCHEDULE = [
-  { day: 'Sunday', level: 'Grand', count: 40, maxSize: 23, maxLen: 15 },
-  { day: 'Monday', level: 'Gentle', count: 22, maxSize: 17, maxLen: 8 },
-  { day: 'Tuesday', level: 'Moderate', count: 25, maxSize: 17, maxLen: 9 },
-  { day: 'Wednesday', level: 'Moderate', count: 28, maxSize: 19, maxLen: 10 },
-  { day: 'Thursday', level: 'Tricky', count: 30, maxSize: 21, maxLen: 15 },
-  { day: 'Friday', level: 'Challenging', count: 32, maxSize: 21, maxLen: 15 },
-  { day: 'Saturday', level: 'Fiendish', count: 34, maxSize: 21, maxLen: 15 },
+  { day: 'Sunday', level: 'Grand', count: 40, maxSize: 23, maxLen: 15, hard: 8 },
+  { day: 'Monday', level: 'Gentle', count: 22, maxSize: 17, maxLen: 8, hard: 3 },
+  { day: 'Tuesday', level: 'Moderate', count: 25, maxSize: 17, maxLen: 9, hard: 4 },
+  { day: 'Wednesday', level: 'Moderate', count: 28, maxSize: 19, maxLen: 10, hard: 5 },
+  { day: 'Thursday', level: 'Tricky', count: 30, maxSize: 21, maxLen: 15, hard: 6 },
+  { day: 'Friday', level: 'Challenging', count: 32, maxSize: 21, maxLen: 15, hard: 7 },
+  { day: 'Saturday', level: 'Fiendish', count: 34, maxSize: 21, maxLen: 15, hard: 8 },
 ];
 
 // The Mini is a quick warm-up of short everyday and pop-culture answers.
@@ -302,7 +307,7 @@ const MINI_BANK = mixGenre(
   'mini', 'The Mini', '', '',
   BASE_GENRES.filter((g) => g.category === 'classic' || g.category === 'fun')
 ).words.filter((w) => w.answer.length >= 3 && w.answer.length <= 6);
-const MINI_CONFIG = { count: 6, maxSize: 7 };
+const MINI_CONFIG = { count: 6, maxSize: 7, hard: 0 };
 
 // How many answers each day's Daily and Mini may choose from.
 const DAILY_WINDOW = 240;

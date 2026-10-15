@@ -9,7 +9,7 @@ const strip = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
 let problems = 0;
 for (const [id, text] of Object.entries(lists)) {
   if (only.length && !only.includes(id)) continue;
-  const entries = text.split('\n').map((l) => { const i = l.indexOf('|'); return { answer: l.slice(0, i), clue: l.slice(i + 1) }; });
+  const entries = text.split('\n').map((l) => { const i = l.indexOf('|'); return { answer: l.slice(0, i).replace(/^[!+]/, ''), clue: l.slice(i + 1) }; });
   const seen = new Map();
   const answers = new Set(entries.map((e) => e.answer));
   const report = (msg) => { problems++; console.log(`${id}: ${msg}`); };

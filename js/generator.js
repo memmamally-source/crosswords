@@ -160,13 +160,20 @@
     return [...found];
   }
 
-  function buildAttempt(bank, answers, count, maxSize, rng) {
+  function buildAttempt(bank, answers, count, maxSize, rng, hardTarget) {
     // Favour longer words first (they give later words more to hook onto),
     // with some randomness so each puzzle feels different.
     // Large banks (the mixed genres) are sampled so each attempt stays fast.
-    const pool = shuffle(bank, rng)
-      .slice(0, Math.max(count * 4, 48))
-      .map((e) => ({ e, w: Math.min(e.answer.length, 8) + rng() * 4 }))
+    // With a hard target, a few hard answers are tried early and the rest
+    // lean towards easy ones.
+    const mixed = hardTarget != null;
+    const sample = mixed
+      ? shuffle(bank.filter((e) => e.level === 'hard'), rng).slice(0, Math.max(hardTarget * 4, 8))
+          .concat(shuffle(bank.filter((e) => e.level !== 'hard'), rng).slice(0, Math.max(count * 4, 48)))
+      : shuffle(bank, rng).slice(0, Math.max(count * 4, 48));
+    const boost = (e) => (!mixed ? 0 : e.level === 'hard' ? 3 : e.level === 'easy' ? 2 : 0);
+    const pool = sample
+      .map((e) => ({ e, w: Math.min(e.answer.length, 8) + rng() * 4 + boost(e) }))
       .sort((a, b) => b.w - a.w)
       .map((x) => x.e);
     pool.forEach((e) => {
@@ -174,15 +181,20 @@
     });
 
     const board = new Board(maxSize);
-    const first = pool.find((e) => e.answer.length <= maxSize);
+    const first = pool.find((e) => e.answer.length <= maxSize && !(mixed && e.level === 'hard' && !hardTarget));
     if (!first) return board;
     // A clue must never give away another answer in the same puzzle, so two
     // entries are kept apart when either one's clue mentions the other.
     const placedAnswers = new Set();
     const blocked = new Set();
-    const allowed = (e) => !blocked.has(e.answer) && !e.mentions.some((a) => placedAnswers.has(a));
+    board.hardPlaced = 0;
+    const allowed = (e) =>
+      !blocked.has(e.answer) &&
+      !e.mentions.some((a) => placedAnswers.has(a)) &&
+      !(mixed && e.level === 'hard' && board.hardPlaced >= hardTarget);
     const place = (e, r, c, dir) => {
       board.place(e, r, c, dir);
+      if (e.level === 'hard') board.hardPlaced++;
       placedAnswers.add(e.answer);
       e.mentions.forEach((a) => blocked.add(a));
     };
@@ -270,7 +282,9 @@
   }
 
   /**
-   * generate(bank, { count, maxSize, seed, attempts })
+   * generate(bank, { count, maxSize, seed, attempts, hard })
+ * hard: how many answers marked level 'hard' to include; the rest favour
+ * 'easy' ones. Leave it out to ignore levels.
    * Returns { rows, cols, solution, numbers, words, seed }.
    */
   function generate(bank, options) {
@@ -283,6 +297,7 @@
         // An entry may carry several clues; the seed picks one.
         clue: Array.isArray(e.clue) ? e.clue[Math.floor(rng() * e.clue.length)] : e.clue,
         tag: e.tag,
+        level: e.level,
       }))
       .filter((e) => e.answer.length >= 3);
     const answers = new Set(clean.map((e) => e.answer));
@@ -290,14 +305,15 @@
     let best = null;
     let bestScore = -Infinity;
     for (let i = 0; i < opts.attempts; i++) {
-      const board = buildAttempt(clean, answers, opts.count, opts.maxSize, rng);
+      const board = buildAttempt(clean, answers, opts.count, opts.maxSize, rng, opts.hard);
       const crossings = [...board.cells.values()].filter((c) => c.across && c.down).length;
-      const score = board.placed.length * 1000 + crossings * 10 - board.area();
+      const hardMiss = opts.hard != null ? Math.abs(opts.hard - board.hardPlaced) : 0;
+      const score = board.placed.length * 1000 - hardMiss * 300 + crossings * 10 - board.area();
       if (score > bestScore) {
         bestScore = score;
         best = board;
       }
-      if (board.placed.length >= opts.count && i >= opts.attempts / 3) break;
+      if (board.placed.length >= opts.count && !hardMiss && i >= opts.attempts / 3) break;
     }
     // Banks of long words sometimes can't all fit; allow a slightly larger grid.
     if (best.placed.length < opts.count && !opts.grown) {
