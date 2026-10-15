@@ -3,7 +3,7 @@
  * VERSION must match the ?v= number on the scripts and stylesheet in
  * index.html (the tests check this). Bumping it replaces the cached copy.
  */
-const VERSION = 9;
+const VERSION = 10;
 const CACHE = `crossword-hub-v${VERSION}`;
 const FONT_CACHE = 'crossword-hub-fonts';
 const SHELL = [
@@ -13,7 +13,10 @@ const SHELL = [
   `js/generator.js?v=${VERSION}`,
   `js/words.js?v=${VERSION}`,
   `js/genres.js?v=${VERSION}`,
+  `js/sync.js?v=${VERSION}`,
   `js/app.js?v=${VERSION}`,
+  `js/firebase-config.js?v=${VERSION}`,
+  `js/account.js?v=${VERSION}`,
   'icons/icon-192.png',
   'icons/icon-512.png',
   'icons/apple-touch-icon.png',

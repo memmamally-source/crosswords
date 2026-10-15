@@ -696,7 +696,7 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   color: var(--ink-soft);
 }
 .dialog-close:hover { background: var(--wash); color: var(--ink); }
-.win, .stats { padding: 34px 28px 26px; }
+.win, .stats, .account { padding: 34px 28px 26px; }
 .win { text-align: center; }
 .win h2, .stats h2 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 2rem; line-height: 1.1; }
 .win-time { margin: 14px 0 0; font-size: 2.6rem; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
@@ -718,6 +718,50 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
 .weekday-row .bar { height: 10px; background: var(--wash); border-radius: 2px; overflow: hidden; }
 .weekday-row .bar i { display: block; height: 100%; background: var(--ink); }
 .weekday-row .t { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+
+/* Account */
+.account-btn { position: relative; }
+.account-btn[hidden] { display: none; }
+.account-btn.signed-in svg { display: none; }
+.account-btn .avatar {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--on-ink);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+.account-btn .avatar[hidden] { display: none; }
+.account h2 { margin: 0 0 6px; font-family: var(--font-display); font-weight: 700; font-size: 2rem; line-height: 1.1; }
+.account-lede { margin: 0 0 18px; color: var(--ink-soft); }
+.account .btn { width: 100%; }
+.btn-google svg { width: 18px; height: 18px; }
+.account-or { display: flex; align-items: center; gap: 10px; margin: 18px 0 14px; color: var(--ink-soft); font-size: 0.82rem; }
+.account-or::before, .account-or::after { content: ''; flex: 1; border-top: 1px solid var(--rule); }
+#account-form { display: grid; gap: 12px; }
+#account-form label { display: grid; gap: 4px; font-size: 0.82rem; font-weight: 700; }
+#account-form input {
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px; /* stops iOS zooming in */
+  font-weight: 400;
+}
+#account-form input:focus { outline: 2px solid var(--ink); outline-offset: 1px; }
+.account-links { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin: 14px 0 0; font-size: 0.88rem; }
+.account-who { margin: 0 0 4px; font-weight: 700; overflow-wrap: anywhere; }
+.account-status { margin: 0 0 18px; color: var(--ink-soft); font-size: 0.9rem; }
+.account-note { margin: 10px 0 0; color: var(--ink-soft); font-size: 0.82rem; text-align: center; }
+.account-message { margin: 12px 0 0; color: var(--wrong); font-size: 0.9rem; }
+.account-message:empty { display: none; }
+.account-message.ok { color: var(--ink); }
 
 /* Toast */
 .toast {
@@ -780,5 +824,5 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   body.in-game .puzzle-head .kicker { margin-bottom: 2px; }
   .calendar .dot { width: 14px; height: 14px; margin-top: 12px; }
   .calendar .num { top: 3px; left: 5px; font-size: 0.72rem; }
-  .win, .stats { padding: 30px 18px 22px; }
+  .win, .stats, .account { padding: 30px 18px 22px; }
 }

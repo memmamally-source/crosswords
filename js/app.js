@@ -44,12 +44,14 @@
   // Phones and tablets, which type with the device keyboard.
   const touchScreen = window.matchMedia('(pointer: coarse)');
   store.settings = Object.assign({ theme: 'system', skipFilled: true, autocheck: false, showTags: true, showTimer: true }, store.settings);
+  const storeListeners = [];
   function saveStore() {
     try {
       localStorage.setItem(STORE_KEY, JSON.stringify(store));
     } catch (e) {
       /* storage unavailable or full: progress just won't persist */
     }
+    storeListeners.forEach((fn) => fn());
   }
 
   // ---------- Dates ----------
@@ -1450,6 +1452,21 @@
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
     window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
   }
+
+  // ---------- Account sync ----------
+  // js/account.js (loaded only when sign-in is set up) reads and replaces the
+  // saved progress through this bridge.
+  window.CrosswordHub = {
+    getStore: () => store,
+    applyStore(next) {
+      for (const k of Object.keys(store)) delete store[k];
+      Object.assign(store, next);
+      saveStore();
+      // Refresh what's on screen, but leave a puzzle being played alone.
+      if ($('#game-view').hidden) route();
+    },
+    onSave: (fn) => storeListeners.push(fn),
+  };
 
   syncSettingsUI();
   showInstallCard();
