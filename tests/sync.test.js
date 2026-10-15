@@ -1,0 +1,70 @@
+// Tests for merging progress between devices: node tests/sync.test.js
+const assert = require('assert');
+const { mergeStores, syncable, differs, MAX_SYNCED_SAVES } = require('../js/sync.js');
+
+const local = {
+  v: 2,
+  settings: { theme: 'dark' },
+  solves: {
+    'daily:2026-10-01': { time: 300, clean: true, at: 10 },
+    'daily:2026-10-02': { time: 200, clean: false, at: 10, letters: 4, words: 0 },
+    'mini:2026-10-02': { time: 50, clean: true, at: 10 },
+  },
+  best: { 'space:easy': 120, 'food:hard': 900 },
+  seen: { space: ['MARS', 'VENUS'] },
+  lastWords: { space: ['MARS'] },
+  solvedCount: 3,
+  saves: {
+    'daily:2026-10-05': { updated: 50, elapsed: 10 },
+    'daily:2026-10-06': { updated: 10, elapsed: 5 },
+    'daily:2026-10-07': { updated: 10, elapsed: 5 },
+  },
+};
+const remote = {
+  solves: {
+    'daily:2026-10-01': { time: 250, clean: true, at: 20 }, // faster: wins
+    'daily:2026-10-02': { time: 400, clean: true, at: 20 }, // clean beats assisted
+    'daily:2026-10-03': { time: 100, clean: true, at: 20 }, // only in the account
+    'daily:2026-10-07': { time: 99, clean: true, at: 20 }, // finished elsewhere after the local save
+  },
+  best: { 'space:easy': 150, 'art:medium': 400 },
+  seen: { space: ['VENUS', 'PLUTO'], art: ['MONET'] },
+  lastWords: { art: ['MONET'] },
+  solvedCount: 5,
+  saves: {
+    'daily:2026-10-05': { updated: 40, elapsed: 99 }, // older than local
+    'daily:2026-10-06': { updated: 60, elapsed: 30 }, // newer than local
+  },
+};
+
+const m = mergeStores(local, remote);
+assert.deepStrictEqual(m.settings, { theme: 'dark' }, 'device settings stay local');
+assert.strictEqual(m.v, 2);
+assert.strictEqual(m.solves['daily:2026-10-01'].time, 250);
+assert.strictEqual(m.solves['daily:2026-10-02'].clean, true);
+assert.ok(m.solves['daily:2026-10-03'] && m.solves['mini:2026-10-02']);
+assert.deepStrictEqual(m.best, { 'space:easy': 120, 'food:hard': 900, 'art:medium': 400 });
+assert.deepStrictEqual(m.seen.space.sort(), ['MARS', 'PLUTO', 'VENUS']);
+assert.deepStrictEqual(m.seen.art, ['MONET']);
+assert.deepStrictEqual(m.lastWords, { space: ['MARS'], art: ['MONET'] });
+assert.strictEqual(m.solvedCount, 5);
+assert.strictEqual(m.saves['daily:2026-10-05'].elapsed, 10, 'newer local save kept');
+assert.strictEqual(m.saves['daily:2026-10-06'].elapsed, 30, 'newer account save kept');
+assert.ok(!m.saves['daily:2026-10-07'], 'puzzle finished on another device is no longer in progress');
+
+// Merging is stable: doing it again changes nothing.
+assert.ok(!differs(mergeStores(m, syncable(m)), m), 'merge is idempotent');
+assert.ok(differs(local, m));
+
+// Merging into an empty account or from an empty device keeps everything.
+assert.deepStrictEqual(syncable(mergeStores(local, null)).solves, local.solves);
+assert.deepStrictEqual(mergeStores({ settings: {} }, syncable(m)).solves, m.solves);
+
+// Only the most recent in-progress puzzles go to the account.
+const many = { saves: {} };
+for (let i = 0; i < 30; i++) many.saves['play:x/easy/' + i + '/'] = { updated: i };
+const kept = Object.keys(syncable(many).saves);
+assert.strictEqual(kept.length, MAX_SYNCED_SAVES);
+assert.ok(kept.includes('play:x/easy/29/') && !kept.includes('play:x/easy/0/'));
+
+console.log('OK: sync merge tests passed');

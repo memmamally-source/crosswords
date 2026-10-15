@@ -232,6 +232,7 @@ h1, h2, h3 { text-wrap: balance; }
 }
 .masthead-nav button:hover { border-bottom-color: var(--rule); }
 .masthead-nav button[aria-current='page'] { border-bottom-color: var(--ink); }
+.masthead-nav svg, .masthead-nav .nav-stats { display: none; }
 .wordmark {
   font-family: var(--font-display);
   font-weight: 700;
@@ -557,7 +558,7 @@ body.in-game .dateline { display: none; }
   border-color: transparent var(--revealed) transparent transparent;
 }
 .cell.revealed .letter, .cell.verified .letter { color: var(--revealed); }
-.board.solved .cell:not(.block) { animation: settle 0.6s ease both; }
+.board.solved .cell:not(.block) { animation: settle 0.7s ease both; animation-delay: var(--d, 0ms); }
 @keyframes settle {
   0% { background: var(--cell); }
   40% { background: var(--hl-cell); }
@@ -565,6 +566,70 @@ body.in-game .dateline { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .board.solved .cell:not(.block) { animation: none; }
+}
+
+/* ---------- Feedback animations ---------- */
+.cell { transition: background-color 0.12s ease; }
+.cell.pop .letter { display: inline-block; animation: pop 0.18s ease-out; }
+@keyframes pop {
+  0% { transform: scale(0.4); opacity: 0.2; }
+  70% { transform: scale(1.18); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.cell.shake { animation: shake 0.42s cubic-bezier(0.36, 0.07, 0.19, 0.97); z-index: 1; }
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(3px); }
+  30%, 50%, 70% { transform: translateX(-5px); background: color-mix(in srgb, var(--wrong) 22%, var(--cell)); }
+  40%, 60% { transform: translateX(5px); }
+}
+.cell.ripple { animation: ripple 0.5s ease both; animation-delay: calc(var(--i, 0) * 45ms); }
+@keyframes ripple {
+  0% { transform: translateY(0); }
+  35% { transform: translateY(-4px); background: var(--hl-cell); }
+  100% { transform: translateY(0); }
+}
+.view.enter { animation: view-in 0.28s ease-out; }
+@keyframes view-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+dialog[open] { animation: dialog-in 0.24s cubic-bezier(0.2, 0.9, 0.3, 1.2); }
+dialog[open]::backdrop { animation: fade-in 0.2s ease; }
+@keyframes dialog-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fade-in { from { opacity: 0; } }
+.btn, .tool, .icon-btn, .masthead-nav button, .clue-nav, .genre-card, .calendar button {
+  transition: transform 0.1s ease, background-color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:active, .tool:active, .icon-btn:active, .masthead-nav button:active, .clue-nav:active, .calendar button:active { transform: scale(0.94); }
+.genre-card:active { transform: scale(0.98); }
+.confetti { position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 1000; }
+
+/* Puzzle progress */
+.progress { height: 4px; margin-bottom: 10px; border-radius: 2px; background: var(--wash); overflow: hidden; }
+.progress i { display: block; height: 100%; width: 0; background: var(--ink); border-radius: 2px; transition: width 0.25s ease; }
+.progress.done i { background: #4caf7a; }
+
+/* Daily streak badge */
+.streak-chip {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: color-mix(in srgb, #f2c230 30%, transparent);
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  animation: chip-in 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.4);
+}
+@keyframes chip-in { from { transform: scale(0.6); opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .view.enter, dialog[open], dialog[open]::backdrop, .streak-chip { animation: none; }
+  .btn:active, .tool:active, .icon-btn:active, .masthead-nav button:active, .clue-nav:active, .calendar button:active, .genre-card:active { transform: none; }
 }
 
 .pause-overlay {
@@ -696,7 +761,7 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   color: var(--ink-soft);
 }
 .dialog-close:hover { background: var(--wash); color: var(--ink); }
-.win, .stats { padding: 34px 28px 26px; }
+.win, .stats, .account { padding: 34px 28px 26px; }
 .win { text-align: center; }
 .win h2, .stats h2 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 2rem; line-height: 1.1; }
 .win-time { margin: 14px 0 0; font-size: 2.6rem; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
@@ -718,6 +783,50 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
 .weekday-row .bar { height: 10px; background: var(--wash); border-radius: 2px; overflow: hidden; }
 .weekday-row .bar i { display: block; height: 100%; background: var(--ink); }
 .weekday-row .t { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+
+/* Account */
+.account-btn { position: relative; }
+.account-btn[hidden] { display: none; }
+.account-btn.signed-in svg { display: none; }
+.account-btn .avatar {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--on-ink);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+.account-btn .avatar[hidden] { display: none; }
+.account h2 { margin: 0 0 6px; font-family: var(--font-display); font-weight: 700; font-size: 2rem; line-height: 1.1; }
+.account-lede { margin: 0 0 18px; color: var(--ink-soft); }
+.account .btn { width: 100%; }
+.btn-google svg { width: 18px; height: 18px; }
+.account-or { display: flex; align-items: center; gap: 10px; margin: 18px 0 14px; color: var(--ink-soft); font-size: 0.82rem; }
+.account-or::before, .account-or::after { content: ''; flex: 1; border-top: 1px solid var(--rule); }
+#account-form { display: grid; gap: 12px; }
+#account-form label { display: grid; gap: 4px; font-size: 0.82rem; font-weight: 700; }
+#account-form input {
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px; /* stops iOS zooming in */
+  font-weight: 400;
+}
+#account-form input:focus { outline: 2px solid var(--ink); outline-offset: 1px; }
+.account-links { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin: 14px 0 0; font-size: 0.88rem; }
+.account-who { margin: 0 0 4px; font-weight: 700; overflow-wrap: anywhere; }
+.account-status { margin: 0 0 18px; color: var(--ink-soft); font-size: 0.9rem; }
+.account-note { margin: 10px 0 0; color: var(--ink-soft); font-size: 0.82rem; text-align: center; }
+.account-message { margin: 12px 0 0; color: var(--wrong); font-size: 0.9rem; }
+.account-message:empty { display: none; }
+.account-message.ok { color: var(--ink); }
 
 /* Toast */
 .toast {
@@ -761,7 +870,38 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
 }
 @media (max-width: 640px) {
   .masthead-bar { grid-template-columns: 1fr auto; padding-block: 12px 6px; }
-  .masthead-nav { grid-row: 2; grid-column: 1 / -1; justify-content: center; }
+  /* App-style tab bar along the bottom of the screen. */
+  .masthead-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    justify-content: space-around;
+    gap: 0;
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px));
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--rule);
+  }
+  .masthead-nav button, .masthead-nav .nav-stats {
+    display: grid;
+    justify-items: center;
+    gap: 3px;
+    flex: 1;
+    padding: 4px 0;
+    border: 0;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    color: var(--ink-soft);
+  }
+  .masthead-nav svg { display: block; width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .masthead-nav button[aria-current='page'] { color: var(--ink); }
+  .masthead-nav button[aria-current='page'] svg { stroke-width: 2.4; }
+  .masthead-tools [data-action="stats"] { display: none; }
+  body:not(.in-game) { padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px)); }
+  body:not(.in-game) .toast { bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
   .wordmark { font-size: 1.7rem; }
   .view { padding-top: 18px; }
   .feature { grid-template-columns: 1fr; padding: 18px; }
@@ -780,5 +920,5 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   body.in-game .puzzle-head .kicker { margin-bottom: 2px; }
   .calendar .dot { width: 14px; height: 14px; margin-top: 12px; }
   .calendar .num { top: 3px; left: 5px; font-size: 0.72rem; }
-  .win, .stats { padding: 30px 18px 22px; }
+  .win, .stats, .account { padding: 30px 18px 22px; }
 }

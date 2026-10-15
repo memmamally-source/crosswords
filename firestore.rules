@@ -1,0 +1,14 @@
+// Firestore security rules for Crossword Hub sign-in.
+// Paste these into Firebase console → Firestore Database → Rules → Publish.
+// Each signed-in player can read and write only their own progress document.
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null && request.auth.uid == uid
+        && request.resource.data.progress is string
+        && request.resource.data.progress.size() < 900000;
+    }
+  }
+}
