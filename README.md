@@ -53,6 +53,20 @@ Pages from the repository root).
 
 Progress, times and streaks are stored in the browser's `localStorage`.
 
+## Install as an app
+
+The site installs like an app: it gets a home-screen icon, opens full screen
+and works offline once it has loaded.
+
+- **Android, and Chrome or Edge on a computer:** an **Install** button
+  appears on the home page (or use the browser menu → Install app).
+- **iPhone and iPad:** in Safari, tap Share → **Add to Home Screen**. The home
+  page shows these steps.
+
+`manifest.webmanifest` describes the app and `sw.js` (a service worker) saves
+the site for offline use. The icons in `icons/` are drawn by
+`tools/make-icons.py`.
+
 ## Freshness
 
 - **Genre puzzles** are built only from words you haven't seen in that genre.
@@ -76,8 +90,9 @@ Go to **Settings → Pages → Build and deployment**, choose "Deploy from a
 branch", then pick the branch and `/ (root)`.
 
 When you change the CSS or JavaScript, bump the `?v=` number on the
-stylesheet and script tags in `index.html`, so browsers fetch the new files
-instead of reusing cached ones.
+stylesheet and script tags in `index.html` and `VERSION` in `sw.js` to the
+same number, so browsers and installed apps fetch the new files instead of
+reusing saved ones. The tests check that the two match.
 
 ## Adding words or a genre
 
@@ -126,6 +141,7 @@ that `js/words.js` is up to date.
 | File | Purpose |
 | --- | --- |
 | `index.html` | Page structure: masthead, home, archive, solving view, dialogs |
+| `manifest.webmanifest`, `sw.js`, `icons/` | Installing as an app and working offline |
 | `css/styles.css` | Styles, light and dark themes |
 | `words/*.txt` | Word lists, one file per genre |
 | `words/levels.json` | Easy and hard answers, from `tools/rate-words.py` |

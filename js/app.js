@@ -249,6 +249,14 @@
     if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
     else delete document.documentElement.dataset.theme;
     $$('[data-theme-choice]').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.themeChoice === t)));
+    // Match the phone's status bar to a theme picked in settings.
+    $$('meta[name="theme-color"]').forEach((m) => {
+      if (!m.dataset.media) m.dataset.media = m.getAttribute('media');
+      if (t === 'light' || t === 'dark') m.removeAttribute('media');
+      else m.setAttribute('media', m.dataset.media);
+      if (t !== 'system') m.content = t === 'dark' ? '#121212' : '#ffffff';
+      else m.content = m.dataset.media.includes('dark') ? '#121212' : '#ffffff';
+    });
   }
 
   function syncSettingsUI() {
@@ -1249,6 +1257,8 @@
     switch (action) {
       case 'close-dialog': closeDialogs(); return;
       case 'stats': openStats(); return;
+      case 'install': promptInstall(); return;
+      case 'install-dismiss': dismissInstall(); return;
       case 'month-prev':
       case 'month-next': {
         const [y, m] = archive.month.split('-').map(Number);
@@ -1401,6 +1411,47 @@
     else window.scrollTo(0, 0);
   }
 
+  // ---------- Installing as an app ----------
+  // Chrome and Edge (Android, desktop) offer an install prompt we can trigger
+  // from a button; iPhones and iPads need Share → Add to Home Screen.
+  let installEvent = null;
+  const standalone = () => window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  function showInstallCard() {
+    const card = $('#install-card');
+    if (standalone() || store.installDismissed) { card.hidden = true; return; }
+    if (installEvent) {
+      $('#install-btn').hidden = false;
+      card.hidden = false;
+    } else if (isIOS()) {
+      $('#install-btn').hidden = true;
+      $('#install-text').textContent = 'Tap the Share button, then “Add to Home Screen”. It opens full screen and works offline.';
+      card.hidden = false;
+    }
+  }
+  async function promptInstall() {
+    if (!installEvent) return;
+    installEvent.prompt();
+    const { outcome } = await installEvent.userChoice;
+    installEvent = null;
+    if (outcome === 'accepted') $('#install-card').hidden = true;
+  }
+  function dismissInstall() {
+    store.installDismissed = true;
+    saveStore();
+    $('#install-card').hidden = true;
+  }
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    installEvent = e;
+    showInstallCard();
+  });
+  window.addEventListener('appinstalled', () => { $('#install-card').hidden = true; });
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+    window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+  }
+
   syncSettingsUI();
+  showInstallCard();
   route();
 })();

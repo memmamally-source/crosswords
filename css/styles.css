@@ -157,6 +157,28 @@ h1, h2, h3 { text-wrap: balance; }
   text-underline-offset: 3px;
 }
 .link-btn:hover { color: var(--accent); }
+
+/* ---------- Install prompt ---------- */
+.install-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding: 14px 16px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--wash);
+}
+.install-card[hidden] { display: none; }
+.install-card img { border-radius: 11px; }
+.install-title { margin: 0 0 2px; font-weight: 800; }
+.install-text { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+.install-actions { display: flex; align-items: center; gap: 12px; }
+@media (max-width: 560px) {
+  .install-card { grid-template-columns: auto minmax(0, 1fr); }
+  .install-actions { grid-column: 1 / -1; justify-content: flex-end; }
+}
 .icon-btn {
   display: inline-grid;
   place-items: center;

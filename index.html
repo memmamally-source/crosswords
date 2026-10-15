@@ -6,10 +6,18 @@
   <title>Crossword Hub</title>
   <meta name="description" content="A daily academic crossword, a quick daily Mini, and themed puzzles in 33 genres from pop culture to philosophy." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%23121212'/><rect x='5' y='5' width='10' height='10' fill='%23fff'/><rect x='17' y='5' width='10' height='10' fill='%23fff'/><rect x='5' y='17' width='10' height='10' fill='%23fff'/><rect x='17' y='17' width='10' height='10' fill='%23f2c230'/></svg>" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Crosswords" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=8" />
+  <link rel="stylesheet" href="css/styles.css?v=9" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -52,6 +60,18 @@
   <main id="main">
     <!-- ================= Home ================= -->
     <div id="home-view" class="view" hidden>
+      <aside class="install-card" id="install-card" hidden>
+        <img src="icons/icon-192.png" alt="" width="48" height="48" />
+        <div>
+          <p class="install-title">Get the Crossword Hub app</p>
+          <p class="install-text" id="install-text">Add it to your home screen: it opens full screen and works offline.</p>
+        </div>
+        <div class="install-actions">
+          <button class="btn btn-primary" data-action="install" id="install-btn" hidden>Install</button>
+          <button class="link-btn" data-action="install-dismiss">Not now</button>
+        </div>
+      </aside>
+
       <section class="today" aria-label="Today's puzzles">
         <article class="feature feature-daily" id="daily-feature"></article>
         <article class="feature feature-mini" id="mini-feature"></article>
@@ -221,9 +241,9 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=8"></script>
-  <script src="js/words.js?v=8"></script>
-  <script src="js/genres.js?v=8"></script>
-  <script src="js/app.js?v=8"></script>
+  <script src="js/generator.js?v=9"></script>
+  <script src="js/words.js?v=9"></script>
+  <script src="js/genres.js?v=9"></script>
+  <script src="js/app.js?v=9"></script>
 </body>
 </html>
