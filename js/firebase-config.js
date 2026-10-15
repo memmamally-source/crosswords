@@ -5,4 +5,11 @@
  * These values are not secret; the database rules in firestore.rules are
  * what keep each player's progress private. See README → Sign-in.
  */
-window.FIREBASE_CONFIG = null;
+window.FIREBASE_CONFIG = {
+  apiKey: 'AIzaSyAU8db8cLcZ7KJr_VZH9PczS5hvGrnz2ko',
+  authDomain: 'crossword-hub.firebaseapp.com',
+  projectId: 'crossword-hub',
+  storageBucket: 'crossword-hub.firebasestorage.app',
+  messagingSenderId: '427785979209',
+  appId: '1:427785979209:web:2d630373040f9b6a2a8698',
+};
