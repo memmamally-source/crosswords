@@ -769,7 +769,7 @@
     }
 
     $('#clue-bar-num').textContent = `${word.number}${word.dir === 'across' ? 'A' : 'D'}`;
-    $('#clue-bar-text').textContent = word.clue;
+    $('#clue-bar-text').textContent = withLength(word);
 
     $('#done-bar').hidden = !game.solved;
     if (game.solved) {
