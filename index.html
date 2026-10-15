@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=6" />
+  <link rel="stylesheet" href="css/styles.css?v=7" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -143,11 +143,12 @@
             </div>
           </div>
           <div class="menu menu-right">
-            <button class="tool" data-menu="check">Check</button>
+            <button class="tool" data-menu="check" id="check-btn">Check</button>
             <div class="menu-list" data-menu-list="check" hidden>
               <button data-action="check-cell">Square</button>
               <button data-action="check-word">Word</button>
               <button data-action="check-all">Puzzle</button>
+              <button class="menu-toggle" id="autocheck-item" data-action="toggle-autocheck" role="menuitemcheckbox" aria-checked="false">Auto-check (stays on)</button>
             </div>
           </div>
           <button class="tool tool-primary" data-action="new" id="new-btn">New puzzle</button>
@@ -220,9 +221,9 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=6"></script>
-  <script src="js/words.js?v=6"></script>
-  <script src="js/genres.js?v=6"></script>
-  <script src="js/app.js?v=6"></script>
+  <script src="js/generator.js?v=7"></script>
+  <script src="js/words.js?v=7"></script>
+  <script src="js/genres.js?v=7"></script>
+  <script src="js/app.js?v=7"></script>
 </body>
 </html>

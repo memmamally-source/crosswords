@@ -17,6 +17,10 @@ Pages from the repository root).
   (1 September 2026), with solved, in-progress and finished-with-help marks.
 - **Genre puzzles:** 33 genres in four groups, each with about 500 words.
   Easy puzzles have 12 clues, Medium 20 and Hard 30.
+- **A mix of easy and hard clues:** every puzzle has a set number of tough
+  answers (2 on Easy, 5 on Medium, 8 on Hard; 3 on a Monday Daily rising to 8
+  on Saturday and Sunday), and the rest lean towards easier ones. The Mini has
+  no hard answers.
   - *Mixed:* Mixed Bag, Pop & Fun Mix, Academic Mix.
   - *Everyday:* Animal Kingdom, Food & Drink, World Geography, Science Lab,
     Sports Arena, Music Hall, Outer Space, Myths & Legends.
@@ -26,8 +30,9 @@ Pages from the repository root).
     History, Economics, Human Anatomy, Art & Architecture, Chemistry, Physics,
     Biology, Psychology, Computer Science, Law & Government, World Religions,
     Language & Linguistics, Earth Science, Latin & the Ancient World.
-- **Statistics:** puzzles solved, Daily streaks, and average Daily time by
-  day of the week.
+- **Statistics:** puzzles solved, Daily streaks, average Daily time by day
+  of the week, Dailies solved with no help, and how many letters and words
+  you've revealed in Dailies.
 
 ## Solving
 
@@ -37,6 +42,8 @@ Pages from the repository root).
   direction.
 - **Pencil** enters tentative letters in grey.
 - **Check** and **Reveal** work on a square, a word or the whole puzzle.
+  **Check → Auto-check** stays on, marking wrong letters as you type, until
+  you switch it off (the Check button turns dark while it's on).
   **Clear** removes incorrect squares, a word or everything.
 - **Pause** (click the timer) hides the grid and stops the clock.
 - **Settings** (the sun icon): light, dark or system theme; skip filled
@@ -86,10 +93,14 @@ with `#` are comments. After editing, run:
 
 ```sh
 node tools/dedupe-words.js   # drop repeated answers
+python3 tools/rate-words.py  # rate answers easy/medium/hard (pip install wordfreq)
 node tools/check-words.js    # lengths, duplicates, answers inside their own clue
 node tools/build-words.js    # compile words/*.txt into js/words.js
 node tests/generator.test.js # takes a couple of minutes
 ```
+
+`rate-words.py` writes `words/levels.json`, rating each answer by how common
+it is in everyday English. Answers it hasn't rated count as medium.
 
 `check-words.js --strict` also lists clues that mention other answers in the
 genre. These don't need fixing: the generator never puts an answer in the same
@@ -117,6 +128,7 @@ that `js/words.js` is up to date.
 | `index.html` | Page structure: masthead, home, archive, solving view, dialogs |
 | `css/styles.css` | Styles, light and dark themes |
 | `words/*.txt` | Word lists, one file per genre |
+| `words/levels.json` | Easy and hard answers, from `tools/rate-words.py` |
 | `js/words.js` | Word lists compiled by `tools/build-words.js` (don't edit by hand) |
 | `js/genres.js` | Genre groups, difficulty levels, Daily and Mini settings |
 | `js/generator.js` | Seeded crossword layout generator and the daily word rotation |

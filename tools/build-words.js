@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 // Builds js/words.js from the word lists in words/*.txt.
 // Each list has one entry per line: ANSWER | clue   (lines starting with # are comments)
+// Answers rated easy or hard in words/levels.json (see tools/rate-words.py)
+// are marked with a leading + or ! in the output.
 // Run after editing a list:  node tools/build-words.js
 const fs = require('fs');
 const path = require('path');
@@ -8,7 +10,14 @@ const path = require('path');
 const root = path.join(__dirname, '..');
 const dir = path.join(root, 'words');
 
+function readLevels() {
+  const file = path.join(dir, 'levels.json');
+  const levels = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {};
+  return { easy: new Set(levels.easy || []), hard: new Set(levels.hard || []) };
+}
+
 function readLists() {
+  const { easy, hard } = readLevels();
   const lists = {};
   for (const file of fs.readdirSync(dir).filter((f) => f.endsWith('.txt')).sort()) {
     const id = file.replace(/\.txt$/, '');
@@ -21,7 +30,8 @@ function readLists() {
       const answer = line.slice(0, bar).trim().toUpperCase().replace(/[^A-Z]/g, '');
       const clue = line.slice(bar + 1).trim();
       if (!answer || !clue) throw new Error(`${file}:${i + 1}: empty answer or clue`);
-      entries.push(`${answer}|${clue}`);
+      const mark = hard.has(answer) ? '!' : easy.has(answer) ? '+' : '';
+      entries.push(`${mark}${answer}|${clue}`);
     });
     lists[id] = entries.join('\n');
   }
