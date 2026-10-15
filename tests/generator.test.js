@@ -39,6 +39,14 @@ function runs(puzzle) {
 const build = require('../tools/build-words.js');
 assert.strictEqual(require('fs').readFileSync(build.out, 'utf8'), build.render(build.readLists()), 'js/words.js is out of date: run node tools/build-words.js');
 
+// The service worker caches the versioned scripts, so its version must match.
+{
+  const fs = require('fs');
+  const swVersion = fs.readFileSync(require.resolve('../sw.js'), 'utf8').match(/const VERSION = (\d+);/)[1];
+  const pageVersions = [...fs.readFileSync(require.resolve('../index.html'), 'utf8').matchAll(/\?v=(\d+)/g)].map((m) => m[1]);
+  assert.ok(pageVersions.length >= 5 && pageVersions.every((v) => v === swVersion), `sw.js VERSION ${swVersion} doesn't match index.html ?v= ${pageVersions}`);
+}
+
 let total = 0;
 for (const genre of GENRES) {
   const answers = new Set(genre.words.map((w) => w.answer));
