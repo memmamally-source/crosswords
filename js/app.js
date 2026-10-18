@@ -339,11 +339,14 @@
   // Off unless a measurement ID is configured and the player allows it.
   const analytics = typeof HubAnalytics !== 'undefined' ? HubAnalytics : { available: false, start() {}, stop() {}, track() {}, page() {} };
   if (analytics.available && store.settings.analytics === true) analytics.start();
+  // Return visits are noted only while analytics is on, so a visit made
+  // without consent is never reported later.
   function setAnalytics(on) {
     store.settings.analytics = on;
     saveStore();
     if (on) analytics.start();
     else analytics.stop();
+    if (on) noteVisit();
     $('#consent').hidden = true;
     syncSettingsUI();
   }
@@ -351,11 +354,24 @@
   function offerConsent(view) {
     $('#consent').hidden = !(analytics.available && store.settings.analytics == null && view === 'home');
   }
-  // What a puzzle is, for analytics: kind, genre, category and level only.
+  // What a puzzle is, for analytics: kind, category, level and genre only.
   function puzzleParams(spec) {
-    const p = { puzzle_kind: spec.kind };
-    if (spec.kind === 'genre') Object.assign(p, { genre: spec.genre.id, category: spec.genre.category, level: spec.difficulty });
-    return p;
+    if (spec.kind === 'genre') return { puzzle_kind: 'genre', category: spec.genre.category, level: spec.difficulty, genre: spec.genre.id };
+    const level = spec.kind === 'daily' ? scheduleFor(spec.date).level.toLowerCase() : spec.kind;
+    return { puzzle_kind: spec.kind, category: spec.kind, level };
+  }
+  // Return visits: once a day, how many days since the last visit. Google
+  // Analytics also reports new and returning players itself.
+  function noteVisit() {
+    const today = todayKey();
+    const last = store.lastVisit;
+    if (last === today) return;
+    if (last) {
+      const days = Math.round((Date.parse(today) - Date.parse(last)) / 86400000);
+      if (days > 0) analytics.track('return_visit', { days_since_last_visit: days });
+    }
+    store.lastVisit = today;
+    saveStore();
   }
 
   // ---------- Settings & theme ----------
@@ -2144,5 +2160,6 @@
   showInstallCard();
   withTimeout(syncClock(), 1500)
     .then(() => withTimeout(loadMonth(todayKey().slice(0, 7)), 2500))
-    .then(route);
+    .then(route)
+    .then(() => { if (analytics.available && store.settings.analytics === true) noteVisit(); });
 })();

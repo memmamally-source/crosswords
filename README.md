@@ -240,31 +240,54 @@ Firebase's free plan easily covers a site this size.
 
 ## Analytics (optional)
 
-Crossword Hub can use Google Analytics 4 to measure:
-- daily and monthly players, and Day-1, Day-7 and Day-30 retention
-- puzzle starts and completions, and popular genres and levels
-- hint use, shares and challenge links
+Crossword Hub can use Google Analytics 4 (free) to measure:
+- daily and monthly players, return visits, and Day-1, Day-7 and Day-30
+  retention
+- puzzle starts and completions, by category and difficulty
+- hint use and shares
 
-It's off until both of these are true:
+Analytics never affects play. Players who decline, or whose browsers block
+Google, play exactly as normal.
+
+**It's off until both of these are true:**
 1. **A measurement ID is set.** In the Firebase console, open **Project
    settings → Integrations → Google Analytics → Enable** and follow the
    steps. Then copy the web app's **measurementId** (it starts with `G-`)
    into `js/firebase-config.js`.
-2. **The player agrees.** A small "Help improve Crossword Hub?" prompt
-   appears once, on the home page only. Nothing loads, and no cookie is set,
-   unless the player taps **Allow**. They can change their mind in Settings,
-   which also deletes Google Analytics' cookies.
+2. **The player agrees.**
+   - A small "Help improve Crossword Hub?" prompt appears once, on the home
+     page only, never during a puzzle.
+   - Nothing loads, and no cookie is set, unless the player taps **Allow**.
+   - They can change their mind any time in Settings, which also deletes
+     Google Analytics' cookies.
 
-What is sent (`js/analytics.js`):
-- page views, with seeds, grid codes and challenge data stripped
-- `puzzle_start` and `puzzle_complete` (kind, genre, category, level, time,
-  hint points, assisted or No-Hint)
-- `hint_used`, `check_used` and `autocheck_on`
-- `share` (the method) and `challenge_open`
+**Then, in Google Analytics** (Admin → Data streams → your web stream):
+- Under **Enhanced measurement**, switch off:
+  - **Page changes based on browser history events.** The site sends its
+    own cleaned page views.
+  - **Site search** and **Form interactions.** Neither is needed.
+- Under **Admin → Data collection**, leave **Google signals** off. Under
+  **Data retention**, 2 months is enough.
 
-It never sends names, emails or answers. Advertising features and Google
-signals are off. A **Privacy** note, linked from Settings and the prompt,
-explains all this to players. Google Analytics is free.
+**What is sent** (`js/analytics.js`). Only these events and fields, checked
+against a fixed list; anything else is dropped, as is any value that looks
+like an email address:
+
+| Event | Fields |
+|---|---|
+| `page_view` | a cleaned path, such as `/play/friends/fan` (no puzzle codes, challenge data or private links) |
+| `puzzle_start` | kind, category, level, genre, resumed |
+| `puzzle_complete` | kind, category, level, genre, seconds, hint points, assisted, No-Hint, from a challenge |
+| `hint_used` | letter, word or puzzle; puzzle kind |
+| `check_used`, `autocheck_on` | scope; puzzle kind |
+| `share` | method (share sheet, WhatsApp, link, image); puzzle kind and page |
+| `challenge_open` | page |
+| `return_visit` | days since the last visit (once a day) |
+
+It never sends answers, clues, gift stories, names or email addresses, and
+advertising features are off. `tests/analytics.test.js` checks the fixed
+list. A **Privacy** note, linked from Settings and the prompt, explains all
+this to players.
 
 ## Search pages
 
@@ -365,6 +388,7 @@ node tests/stats.test.js     # streaks, hints used, averages and favourites
 node tests/access.test.js    # every puzzle and level stays free
 node tests/share.test.js     # challenge links, countdown, analytics page names
 node tests/pages.test.js     # search pages and sitemap are up to date
+node tests/analytics.test.js # analytics sends only allowed, non-personal fields
 ```
 
 `rate-words.py` writes `words/levels.json`, rating each answer by how common
