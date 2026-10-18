@@ -913,9 +913,9 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   color: var(--ink-soft);
 }
 .dialog-close:hover { background: var(--wash); color: var(--ink); }
-.win, .stats, .account { padding: 34px 28px 26px; }
+.win, .stats, .account, .privacy, .name-form, .room-invite { padding: 34px 28px 26px; }
 .win { text-align: center; }
-.win h2, .stats h2 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 2rem; line-height: 1.1; }
+.win h2, .stats h2, .privacy h2 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 2rem; line-height: 1.1; }
 .win-time { margin: 14px 0 0; font-size: 2.6rem; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
 .win-text { margin: 4px 0 0; color: var(--ink-soft); }
 .win-stats { display: flex; justify-content: center; gap: 28px; margin: 18px 0 0; }
@@ -1042,10 +1042,19 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
 }
 @media (max-width: 900px) {
   .today { grid-template-columns: 1fr; }
+  .week-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+/* Grid above the clues when upright; side by side (the default) on tablets
+   and phones held sideways. Keep in step with sideBySide in js/app.js. */
+@media (max-width: 900px) and (orientation: portrait), (max-width: 699px) {
   .game-layout { grid-template-columns: 1fr; }
   .clues { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .clue-list ol { max-height: none; }
-  .week-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) and (min-width: 700px) and (orientation: landscape) {
+  .game-layout { gap: 18px; }
+  .clues { grid-template-columns: 1fr; top: 64px; max-height: calc(100vh - 80px); overflow: auto; }
+  .clue-list ol { max-height: none; }
 }
 @media (max-width: 640px) {
   .masthead-bar { grid-template-columns: 1fr auto; padding-block: 12px 6px; }
@@ -1110,7 +1119,7 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   body.in-game .puzzle-head .kicker { margin-bottom: 2px; }
   .calendar .dot { width: 14px; height: 14px; margin-top: 12px; }
   .calendar .num { top: 3px; left: 5px; font-size: 0.72rem; }
-  .win, .stats, .account { padding: 30px 18px 22px; }
+  .win, .stats, .account, .privacy, .name-form, .room-invite { padding: 30px 20px 22px; }
 }
 
 /* Genre and collection pages (play/, made by tools/build-pages.js) */
@@ -1147,18 +1156,94 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
 .cell.peer-word { box-shadow: inset 0 -4px 0 var(--peer); }
 .clue-list .peer-dots { display: inline-flex; gap: 3px; margin-left: 6px; vertical-align: middle; }
 .clue-list .peer-dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--peer); }
-.name-form { display: grid; gap: 10px; }
-.name-form h2 { margin: 0; font-family: var(--font-display); }
-.name-form p { margin: 0; color: var(--ink-soft); }
-.name-form label { display: grid; gap: 6px; font-weight: 700; font-size: 0.9rem; }
-.name-form input, .room-link { padding: 10px 12px; border: 1px solid var(--rule); border-radius: 10px; background: var(--paper); color: var(--ink); font: inherit; font-size: 1rem; }
-.name-note { font-size: 0.82rem; }
-.name-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 6px; }
-.room-invite { display: grid; gap: 12px; }
-.room-invite h2 { margin: 0; font-family: var(--font-display); }
-.room-invite p { margin: 0; color: var(--ink-soft); }
-.room-invite h3 { margin: 6px 0 0; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
-.room-link { width: 100%; font-size: 0.88rem; }
-.room-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-.room-list li { display: flex; align-items: center; gap: 8px; font-size: 0.92rem; }
-.room-list li span { flex: 1; }
+.name-form, .room-invite { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+.room-badge { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: var(--primary); color: var(--on-primary); }
+.room-badge svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.name-form h2, .room-invite h2 { margin: 0; font-family: var(--font-display); font-size: 1.7rem; line-height: 1.15; }
+.room-lede { margin: -6px 0 0; color: var(--ink-soft); }
+.name-field { display: grid; gap: 6px; }
+.name-field span { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+.name-field input { width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1.5px solid var(--rule); border-radius: 12px; background: var(--paper); color: var(--ink); font: inherit; font-size: 1.05rem; font-weight: 600; }
+.name-field input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 18%, transparent); }
+.name-note { margin: -6px 0 0; font-size: 0.82rem; color: var(--ink-soft); }
+.name-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
+.name-actions .btn { justify-content: center; }
+.room-link-row { display: flex; align-items: center; gap: 8px; padding: 6px 6px 6px 14px; border: 1.5px solid var(--rule); border-radius: 12px; background: var(--paper); }
+.room-link { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.9rem; color: var(--ink-soft); }
+.room-copy { flex: none; padding: 8px 14px; border: 0; border-radius: 9px; background: var(--primary); color: var(--on-primary); font: inherit; font-size: 0.88rem; font-weight: 700; cursor: pointer; }
+.btn-wide { width: 100%; justify-content: center; gap: 10px; }
+.btn-whatsapp svg { width: 22px; height: 22px; fill: currentColor; }
+.room-players-head { display: flex; align-items: baseline; justify-content: space-between; margin-top: 6px; padding-top: 14px; border-top: 1px solid var(--rule); }
+.room-players-head h3 { margin: 0; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.room-players-head span { font-size: 0.82rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.room-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.room-list li { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; }
+.room-avatar { display: grid; place-items: center; flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--peer); color: #fff; font-weight: 800; font-size: 0.95rem; }
+.room-avatar.away { opacity: 0.45; }
+.room-name { flex: 1; min-width: 0; font-weight: 600; }
+.room-name em { margin-left: 6px; padding: 2px 7px; border-radius: 999px; background: var(--wash); font-style: normal; font-size: 0.72rem; font-weight: 700; color: var(--ink-soft); vertical-align: 1px; }
+.room-name small { margin-left: 6px; color: var(--ink-soft); font-weight: 500; }
+.room-seats-free { display: flex; flex: none; width: 34px; justify-content: center; }
+.room-seats-free i { width: 14px; height: 14px; margin-left: -6px; border-radius: 50%; border: 1.5px dashed var(--ink-soft); background: var(--card); }
+.room-seats-free i:first-child { margin-left: 0; }
+#game-view.joining .toolbar, #game-view.joining .game-layout, #game-view.joining .room-bar, #game-view.joining .room-start, #game-view.joining .puzzle-meta { display: none; }
+.room-empty .room-name { color: var(--ink-soft); font-weight: 500; }
+.room-remove { font-size: 0.85rem; }
+.room-foot { margin: 4px 0 0; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 0.82rem; color: var(--ink-soft); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.room-leave { color: var(--wrong); font-size: 0.85rem; }
+
+/* Phones held upright: the clue bar docks to the bottom, above the keyboard
+   (--dock-bottom is set from the visual viewport in js/app.js). */
+.sheet-hint { display: none; }
+@media (pointer: coarse) and (max-width: 900px) and (orientation: portrait) {
+  .clue-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: var(--dock-bottom, 0px);
+    z-index: 30;
+    margin: 0;
+    grid-template-columns: 56px minmax(0, 1fr) 56px;
+    min-height: 68px;
+    padding: 6px 6px calc(6px + env(safe-area-inset-bottom, 0px));
+    border-radius: 0;
+    border-top: 1px solid var(--rule);
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.12);
+    touch-action: pan-y;
+  }
+  .clue-bar .clue-nav { width: 52px; height: 52px; font-size: 2rem; background: var(--card); }
+  .clue-bar p { cursor: pointer; padding: 4px 2px; }
+  .sheet-hint { display: block; margin-top: 2px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
+  .sheet-hint::after { content: ' ▴'; }
+  body.in-game #game-view { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* The clue panel (phones) */
+dialog.sheet { width: 100%; max-width: 560px; max-height: 78vh; margin: auto auto 0; padding: 0; border-radius: 18px 18px 0 0; }
+.sheet-head { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; background: var(--card); border-bottom: 1px solid var(--rule); }
+.sheet-head h2 { margin: 0; font-family: var(--font-display); font-size: 1.3rem; }
+.sheet-head .dialog-close { position: static; }
+.sheet-lists { padding: 4px 16px 24px; }
+.sheet-lists h3 { margin: 16px 0 6px; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+.sheet-lists ol { list-style: none; margin: 0; padding: 0; }
+.sheet-lists li { display: grid; grid-template-columns: 2.2em minmax(0, 1fr); gap: 6px; padding: 10px 8px; border-radius: 10px; cursor: pointer; font-size: 0.98rem; }
+.sheet-lists li strong { font-weight: 800; }
+.sheet-lists li.current { background: var(--hl-word); color: var(--on-hl-cell); }
+.sheet-lists li.done span { color: var(--ink-soft); }
+.sheet-lists li.done strong::after { content: ' ✓'; color: var(--good); }
+
+/* Phones held sideways: little height, so keep the header and tools compact
+   and let the grid start near the top. */
+@media (orientation: landscape) and (max-height: 520px) {
+  body.in-game .masthead-bar { padding-block: 4px; }
+  body.in-game .masthead-nav { display: none; }
+  body.in-game .puzzle-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding-bottom: 6px; }
+  body.in-game .puzzle-head .kicker { margin: 0; }
+  body.in-game .puzzle-title { font-size: 1.15rem; }
+  body.in-game .puzzle-meta { display: none; }
+  body.in-game .room-start { margin-top: 0; padding: 4px 10px; font-size: 0.8rem; }
+  body.in-game .toolbar { min-height: 0; padding-block: 2px; }
+  body.in-game .game-layout { margin-top: 8px; }
+  body.in-game .clues { top: 8px; max-height: calc(100vh - 24px); }
+}
