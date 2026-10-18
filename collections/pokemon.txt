@@ -7,8 +7,8 @@ PIKACHU | Yellow Electric-type mouse, the franchise mascot | casual
 ASH KETCHUM | Anime hero who dreams of being a Pokémon Master (3,7) | casual
 CHARMANDER | Fire-type starter lizard with a flame on its tail | casual
 BULBASAUR | Grass/Poison starter with a bulb on its back | casual
-SQUIRTLE | Tiny turtle that is a Water-type Kanto starter | casual
-CHARIZARD | Fire/Flying dragon-like final form of a Kanto starter | casual
+SQUIRTLE | Tiny turtle that is a Water-type Gen 1 starter | casual
+CHARIZARD | Fire/Flying dragon-like final form of a Gen 1 starter | casual
 POKÉ BALL | Red-and-white capture device (4,4) | casual
 JIGGLYPUFF | Pink balloon Pokémon that sings foes to sleep | casual
 MEWTWO | Genetically engineered Psychic-type legend | casual
@@ -18,26 +18,25 @@ SNORLAX | Huge, sleepy Pokémon that blocks roads | casual
 PSYDUCK | Yellow duck plagued by headaches | casual
 GENGAR | Grinning Ghost/Poison-type shadow | casual
 MAGIKARP | Famously feeble flopping fish | casual
-GYARADOS | Fearsome sea serpent evolved from a feeble fish | casual
+GYARADOS | Fearsome Water/Flying sea serpent | casual
 MISTY | Cerulean City's Water-type Gym Leader | casual
 BROCK | Squinting Rock-type Gym Leader and anime companion | casual
-TEAM ROCKET | Villainous group of Jessie and James (4,6) | casual
+TEAM ROCKET | Villainous group with a big red R on its uniforms (4,6) | casual
 MEOWTH | Talking cat in the anime's villain trio | casual
-PROFESSOR OAK | Pallet Town researcher who hands out starters (9,3) | casual
+PROFESSOR OAK | Gen 1 researcher who hands out starters (9,3) | casual
 PALLET TOWN | Quiet Kanto hometown of the first games' hero (6,4) | casual
-KANTO | Region of the original Red and Blue games | casual
+KANTO | Region of the very first games | casual
 POKÉDEX | Electronic encyclopedia of species | casual
-GYM LEADER | Badge-awarding boss of a town (3,6) | casual
 BADGE | Token earned for beating a Gym | casual
 EVOLUTION | Change of form, often on levelling up | casual
 TRAINER | Person who catches and battles with Pokémon | casual
 POTION | Basic healing spray item | casual
-PIDGEY | Common early-route bird Pokémon of Kanto | casual
+PIDGEY | Common early-route bird Pokémon of Gen 1 | casual
 RATTATA | Purple rat found on early routes | casual
 CATERPIE | Green bug that evolves into Metapod | casual
 BUTTERFREE | Bug/Flying butterfly evolved from Metapod | casual
-ONIX | Giant rock snake used by Brock | casual
-TOGEPI | Egg-shelled baby carried by Misty in the anime | casual
+ONIX | Giant rock snake Pokémon | casual
+TOGEPI | Egg-shelled baby Fairy-type | casual
 LUCARIO | Aura-sensing Fighting/Steel jackal | casual
 LAPRAS | Gentle shelled Pokémon that ferries people over water | casual
 DITTO | Purple blob that can transform into others | casual
@@ -46,9 +45,10 @@ RAICHU | Orange mouse evolved with a Thunder Stone | casual
 SHINY | Rare, alternately coloured Pokémon | casual
 NURSE JOY | Pink-haired healer at a Pokémon Center (5,3) | casual
 SLOWPOKE | Dim-witted pink Pokémon | casual
-CHIKORITA | Leaf-headed Grass starter of Johto | casual
-JESSIE | Magenta-haired anime villain with Arbok and Wobbuffet | fan
-GARY | Anime rival who is the professor's grandson | fan
+CHIKORITA | Leaf-headed Grass starter of Gen 2 | casual
+BLASTOISE | Cannon-shelled final form of the Gen 1 Water starter | casual
+JESSIE | Anime villain with long magenta hair and an Arbok | fan
+GARY | Spiky-haired anime rival of the hero's early journeys | fan
 WOBBUFFET | Blue Psychic-type that loves to shout its own name | fan
 HOENN | Region of Ruby and Sapphire | fan
 JOHTO | Region of Gold and Silver | fan
@@ -62,47 +62,47 @@ MASTER BALL | Capture device that never fails (6,4) | fan
 RARE CANDY | Treat that raises a level instantly (4,5) | fan
 LUGIA | Legendary diving bird on the Silver box | fan
 HO-OH | Rainbow legendary bird on the Gold box (2,2) | fan
-RAYQUAZA | Green sky-dwelling dragon legend of Hoenn | fan
+RAYQUAZA | Green sky-dwelling dragon legend of Gen 3 | fan
 GROUDON | Land-shaping legend on the Ruby box | fan
 KYOGRE | Sea-expanding legend on the Sapphire box | fan
 DIALGA | Time-controlling legend of Diamond | fan
 PALKIA | Space-controlling legend of Pearl | fan
 ARCEUS | Mythical said to have shaped the universe | fan
-ZAPDOS | Electric legendary bird of Kanto | fan
-MOLTRES | Fire legendary bird of Kanto | fan
-ARTICUNO | Ice legendary bird of Kanto | fan
-TREECKO | Gecko Grass starter of Hoenn | fan
-TORCHIC | Chick Fire starter of Hoenn | fan
-MUDKIP | Mudfish Water starter of Hoenn | fan
-CYNDAQUIL | Fire starter of Johto with flames on its back | fan
-TOTODILE | Crocodile Water starter of Johto | fan
+ZAPDOS | Electric legendary bird of Gen 1 | fan
+MOLTRES | Fire legendary bird of Gen 1 | fan
+ARTICUNO | Ice legendary bird of Gen 1 | fan
+TREECKO | Gecko Grass starter of Gen 3 | fan
+TORCHIC | Chick Fire starter of Gen 3 | fan
+MUDKIP | Mudfish Water starter of Gen 3 | fan
+CYNDAQUIL | Gen 2 Fire starter with flames on its back | fan
+TOTODILE | Crocodile Water starter of Gen 2 | fan
 GRENINJA | Ninja frog Water/Dark starter evolution of Kalos | fan
-GIOVANNI | Boss of the Kanto crime syndicate | fan
-LANCE | Dragon master of the Kanto Elite Four | fan
-CYNTHIA | Sinnoh Champion with a Garchomp | fan
+GIOVANNI | Villainous boss who is secretly Viridian City's Gym Leader | fan
+LANCE | Caped Dragon-type expert of Gen 1 and Gen 2 | fan
+CYNTHIA | Blonde Champion of Diamond and Pearl | fan
 GARCHOMP | Land shark Dragon/Ground pseudo-legendary | fan
 DRAGONITE | Friendly orange Dragon/Flying evolved from Dragonair | fan
 ELITE FOUR | Quartet faced before the Champion (5,4) | fan
 EVERSTONE | Held item that prevents evolving | fan
-FIRE STONE | Item that evolves Vulpix and Growlithe (4,5) | fan
-TYRANITAR | Rock/Dark pseudo-legendary of Johto | fan
+FIRE STONE | Item that evolves Growlithe into Arcanine (4,5) | fan
+TYRANITAR | Rock/Dark pseudo-legendary of Gen 2 | fan
 PORYGON | Digital Pokémon made of computer code | fan
 CUBONE | Lonely Pokémon that wears its mother's skull | fan
 HYPER BEAM | Powerful Normal move needing a recharge turn (5,4) | fan
 SPLASH | Move that does absolutely nothing | fan
 METRONOME | Move that uses a random move | fan
 SOLAR BEAM | Grass move charged by sunlight (5,4) | fan
-MISSINGNO | Glitch Pokémon of Red and Blue | superfan
-SILPH CO | Corporate HQ the villains occupy in Red and Blue (5,2) | superfan
-SAFFRON | Central Kanto city with a Psychic Gym | superfan
-LAVENDER TOWN | Kanto settlement with a haunted Pokémon Tower (8,4) | superfan
-CINNABAR | Volcanic Kanto island with a Fire Gym | superfan
-SABRINA | Psychic Gym Leader in Kanto | superfan
+MISSINGNO | Glitch Pokémon of the first generation | superfan
+SILPH CO | Corporate HQ the villains occupy in the first games (5,2) | superfan
+SAFFRON | Central Gen 1 city with a Psychic Gym | superfan
+LAVENDER TOWN | Gen 1 settlement with a haunted Pokémon Tower (8,4) | superfan
+CINNABAR | Volcanic Gen 1 island with a Fire Gym | superfan
+SABRINA | Psychic-type Gym Leader of Gen 1 | superfan
 KOGA | Ninja Poison Gym Leader of Fuchsia | superfan
 BLAINE | Quiz-loving Fire Gym Leader | superfan
 ERIKA | Grass Gym Leader of Celadon | superfan
-WHITNEY | Normal Gym Leader of Goldenrod with a Miltank | superfan
-MILTANK | Cow Pokémon whose Rollout tormented Johto players | superfan
+WHITNEY | Pink-haired Normal-type Gym Leader of Gen 2 | superfan
+MILTANK | Cow Pokémon whose Rollout tormented Gold and Silver players | superfan
 CLAIR | Blackthorn City's Dragon Gym Leader | superfan
 MORTY | Ghost Gym Leader of Ecruteak | superfan
 FALKNER | Flying Gym Leader of Violet City | superfan
@@ -111,10 +111,10 @@ JASMINE | Steel Gym Leader of Olivine | superfan
 PRYCE | Ice Gym Leader of Mahogany | superfan
 STEVEN | Hoenn Champion in Ruby and Sapphire | superfan
 WALLACE | Hoenn Champion in Emerald | superfan
-TEAM AQUA | Sea-loving villains of Hoenn (4,4) | superfan
-TEAM MAGMA | Land-loving villains of Hoenn (4,5) | superfan
-MAXIE | Leader of Hoenn's land-loving villains | superfan
-ARCHIE | Leader of Hoenn's sea-loving villains | superfan
+TEAM AQUA | Sea-loving villains of Gen 3 (4,4) | superfan
+TEAM MAGMA | Land-loving villains of Gen 3 (4,5) | superfan
+MAXIE | Leader of the land-loving villains of Gen 3 | superfan
+ARCHIE | Leader of the sea-loving villains of Gen 3 | superfan
 UNOWN | Letter-shaped Psychic-type of the Ruins of Alph | superfan
 SMEARGLE | Painter that permanently copies moves with Sketch | superfan
 SPINDA | Normal-type whose spot pattern is unique to each one | superfan
@@ -129,11 +129,11 @@ POKÉ FLUTE | Instrument that wakes a sleeping road-blocker (4,5) | superfan
 EXP SHARE | Item that splits experience points (3,5) | superfan
 SAFARI ZONE | Fuchsia attraction where you throw bait and rocks (6,4) | superfan
 BILL | Pokémaniac who invented the PC storage system | superfan
-NINCADA | Bug that can leave a Shedinja behind when evolving | superfan
+NINCADA | Bug that can gain an extra Pokémon when it evolves | superfan
 SHEDINJA | Bug/Ghost with only 1 HP and Wonder Guard | superfan
 SLOWBRO | Pokémon with a Shellder biting its tail | superfan
 FARFETCH'D | Wild duck that carries a leek | superfan
-GOLDENROD | Johto's largest city, home of the Radio Tower | superfan
-RED | Silent trainer atop Mt. Silver in Gold and Silver | superfan
+GOLDENROD | Gen 2's largest city, home of the Radio Tower | superfan
+RED | Silent hero atop Mt. Silver in Gold and Silver | superfan
 KRIS | Female hero introduced in Crystal | superfan
 POKÉRUS | Beneficial virus that boosts stat growth | superfan

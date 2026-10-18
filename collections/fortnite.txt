@@ -6,13 +6,13 @@
 BATTLE BUS | Blue vehicle that drops players onto the island (6,3) | casual
 STORM | Shrinking danger zone that closes in | casual
 VICTORY ROYALE | Prize for being the last one standing (7,6) | casual
-PICKAXE | Swung to gather building materials | casual
+PICKAXE | Swung to harvest materials from walls and trees | casual
 WOOD | Weakest but fastest-building material | casual
 BRICK | Middle-strength building material | casual
 METAL | Strongest building material | casual
 EMOTE | Dance or gesture your character performs | casual
-DEFAULT DANCE | Basic emote every player owns (7,5) | casual
-FLOSS | Hip-swinging emote popularised by Backpack Kid | casual
+DEFAULT DANCE | Basic groove every player owns (7,5) | casual
+FLOSS | Hip-swinging dance popularised by Backpack Kid | casual
 SKIN | Outfit, informally | casual
 BATTLE PASS | Seasonal reward track (6,4) | casual
 V-BUCKS | In-game currency (1,5) | casual
@@ -25,7 +25,7 @@ SQUAD | Team of four | casual
 DUOS | Mode for teams of two | casual
 SOLO | Mode where it's every player for themselves | casual
 TILTED TOWERS | Famous city of high-rises (6,6) | casual
-LLAMA | Supply ___, piñata packed with materials | casual
+LLAMA | Piñata-style container stuffed with materials and ammo | casual
 CHEST | Glowing box that hums when you are near | casual
 JONESY | Default soldier-style outfit | casual
 PEELY | Walking banana outfit | casual
@@ -47,34 +47,33 @@ LOBBY | Pre-match screen showing your character | casual
 BUILDING | Signature mechanic of raising walls and ramps | casual
 CREATIVE | Mode for designing your own islands | casual
 ZERO BUILD | Mode where structures can't be raised (4,5) | casual
-CHUG JUG | Drink restoring full health and shields (4,3) | fan
-SLURP JUICE | Purple drink that heals over time (5,5) | fan
-BOOGIE BOMB | Grenade that forces foes to dance (6,4) | fan
+CHUG JUG | Slow-to-drink item that fully restores both bars (4,3) | fan
+SLURP JUICE | Drink that tops up both bars over time (5,5) | fan
+BOOGIE BOMB | Throwable that forces foes to dance (6,4) | fan
 LAUNCH PAD | Trap that springs you into the air (6,3) | fan
 IMPULSE GRENADE | Damage-free explosive that knocks players back (7,7) | fan
 HAND CANNON | Powerful heavy pistol (4,6) | fan
 MINIGUN | Spinning rapid-fire heavy gun | fan
 HUNTING RIFLE | Scopeless bolt-action long gun (7,5) | fan
-GUIDED MISSILE | Rocket you steer from its point of view (6,7) | fan
+GUIDED MISSILE | Explosive you steer from its point of view (6,7) | fan
 SUPPLY DROP | Crate that floats down under a balloon (6,4) | fan
 REBOOT VAN | Station that brings back fallen teammates (6,3) | fan
 VENDING MACHINE | Box trading materials for items (7,7) | fan
-MYTHIC | Rarity above Legendary | fan
+MYTHIC | Top weapon rarity, above gold | fan
 SAVE THE WORLD | Co-op campaign against zombie-like foes (4,3,5) | fan
-ORANGE JUSTICE | Arm-pumping emote from a fan contest (6,7) | fan
-TAKE THE L | Mocking emote with an L on the forehead (4,3,1) | fan
+ORANGE JUSTICE | Arm-pumping dance from a fan contest (6,7) | fan
+TAKE THE L | Mocking dance with an L on the forehead (4,3,1) | fan
 SKULL TROOPER | Skeleton-suit outfit from Halloween 2017 (5,7) | fan
-BLACK KNIGHT | Dark armored Season 2 battle pass outfit (5,6) | fan
-BRITE BOMBER | Pink outfit adorned with a rainbow (5,6) | fan
+BLACK KNIGHT | Dark armored Season 2 tier-70 outfit (5,6) | fan
 MIDAS | Agent with a golden touch | fan
 MEOWSCLES | Muscular cat agent | fan
 RAVEN | Dark bird-themed outfit with glowing eyes | fan
-DRIFT | Fox-masked battle pass outfit | fan
+DRIFT | Fox-masked Season 5 tier-1 outfit | fan
 PLEASANT PARK | Suburb built around a soccer pitch (8,4) | fan
-RETAIL ROW | Shopping strip location (6,3) | fan
+RETAIL ROW | Chapter 1 strip of stores (6,3) | fan
 SALTY SPRINGS | Small suburban town near the map's centre (5,7) | fan
-LOOT LAKE | Watery location at the map's centre (4,4) | fan
-GREASY GROVE | Location home to a burger restaurant (6,5) | fan
+LOOT LAKE | Watery Chapter 1 spot with a house on an island (4,4) | fan
+GREASY GROVE | Chapter 1 town home to a famous fast-food joint (6,5) | fan
 SWEATY SANDS | Chapter 2 beach town (6,5) | fan
 DIRTY DOCKS | Chapter 2 waterfront location (5,5) | fan
 CONTRAIL | Cosmetic trail left while skydiving | fan
@@ -83,37 +82,35 @@ SPRAY | Graffiti-style cosmetic | fan
 BUSH | Disguise item for hiding as a shrub | fan
 COZY CAMPFIRE | Placeable fire that heals over time (4,8) | fan
 FLOPPER | Fish that restores health | fan
-FISHING ROD | Item cast into water for loot (7,3) | fan
+FISHING ROD | Item cast into water for catches (7,3) | fan
 EDIT | Reshape a build piece, e.g. to add a window | fan
 ARENA | Points-based competitive mode | fan
-CHAPTER | Era of the game made up of several seasons | fan
 UNREAL | ___ Engine, the game's technology | fan
 DRUM GUN | Weapon with a big circular magazine (4,3) | fan
 DURRR BURGER | Fast-food joint topped by a giant mascot head (5,6) | superfan
-PIZZA PIT | Rival eatery to the burger joint (5,3) | superfan
+PIZZA PIT | Italian-style fast-food chain on the island (5,3) | superfan
 WAILING WOODS | Chapter 1 forest location (7,5) | superfan
 LUCKY LANDING | Asian-inspired Chapter 1 town in the south (5,7) | superfan
-FATAL FIELDS | Chapter 1 farmland location (5,6) | superfan
 FLUSH FACTORY | Chapter 1 toilet-making plant (5,7) | superfan
 HAUNTED HILLS | Chapter 1 graveyard and church location (7,5) | superfan
 SNOBBY SHORES | Chapter 1 mansions on the west coast (6,6) | superfan
-LONELY LODGE | Chapter 1 cabins beside a tall tower (6,5) | superfan
+LONELY LODGE | Chapter 1 cabins with a tall lookout tower (6,5) | superfan
 MOISTY MIRE | Chapter 1 swamp location (6,4) | superfan
 TOMATO TOWN | Chapter 1 roadside spot later replaced by a temple (6,4) | superfan
 SHIFTY SHAFTS | Chapter 1 mine tunnels (6,6) | superfan
 JUNK JUNCTION | Chapter 1 scrapyard (4,8) | superfan
 RISKY REELS | Chapter 1 drive-in cinema (5,5) | superfan
 PARADISE PALMS | Chapter 1 desert resort town (8,5) | superfan
-RENEGADE RAIDER | Rare outfit from the very first season (8,6) | superfan
+RENEGADE RAIDER | Coveted outfit from the very first season (8,6) | superfan
 GHOUL TROOPER | Zombie-style Halloween 2017 outfit (5,7) | superfan
-TOMATOHEAD | Pizza-chain mascot outfit | superfan
-OMEGA | Season 4 battle pass outfit unlocked at the top tier | superfan
-CARBIDE | Robotic Season 4 battle pass outfit | superfan
+TOMATOHEAD | Fast-food mascot outfit with a fruit for a head | superfan
+OMEGA | Season 4 tier-100 outfit with unlockable lights | superfan
+CARBIDE | Robotic Season 4 tier-1 outfit | superfan
 FLINT-KNOCK | Single-shot pistol that blasts you backwards (5,5) | superfan
 PORT-A-FORT | Instant tower in a can (4,1,4) | superfan
 BOUNCER | Trap pad that bounces players | superfan
-CLINGER | Sticky grenade | superfan
-STINK BOMB | Grenade releasing a toxic cloud (5,4) | superfan
+CLINGER | Sticky throwable explosive | superfan
+STINK BOMB | Throwable releasing a toxic cloud (5,4) | superfan
 SHOPPING CART | Rideable store trolley vehicle (8,4) | superfan
 QUADCRASHER | Ramming all-terrain vehicle | superfan
 BALLER | Rolling ball vehicle with a grapple | superfan
@@ -123,11 +120,13 @@ THE LOOP | Lore name for the repeating battles (3,4) | superfan
 TURBO BUILD | Setting that keeps placing pieces while held (5,5) | superfan
 STORM SURGE | Damage burst when too many players remain (5,5) | superfan
 HUSK | Zombie-like foe of the co-op campaign | superfan
-ELECTRO SHUFFLE | Fast-footed dance emote (7,7) | superfan
-SLURPY SWAMP | Chapter 2 bog with a juice factory (6,5) | superfan
-HOLLY HEDGES | Chapter 2 garden-centre location (5,6) | superfan
+ELECTRO SHUFFLE | Fast-footed dance move (7,7) | superfan
+SLURPY SWAMP | Chapter 2 bog with a drinks factory (6,5) | superfan
 STEAMY STACKS | Chapter 2 power plant (6,6) | superfan
-FRENZY FARM | Chapter 2 agricultural location (6,4) | superfan
-WEEPING WOODS | Chapter 2 forest location (7,5) | superfan
-MISTY MEADOWS | Chapter 2 village location (5,7) | superfan
 CRAGGY CLIFFS | Chapter 2 coastal town (6,6) | superfan
+SIPHON | Rule that tops up health after you take out a foe | superfan
+INFINITY BLADE | Overpowered sword vaulted within days in Season 7 (8,5) | superfan
+KEVIN | Fans' name for the purple cube of Season 5 | superfan
+HOP ROCK | Meteor fragment that grants low gravity (3,4) | superfan
+RIFT-TO-GO | Item that opens a portal so you can skydive again (4,2,2) | superfan
+THE VISITOR | Mystery figure who launched the Season 4 rocket (3,7) | superfan

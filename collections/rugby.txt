@@ -1,7 +1,7 @@
 # Rugby: unofficial sport crossword clues
 @title Rugby
 @category sport
-@blurb Scrums, tries and World Cup glory.
+@blurb Heroes, venues and the language of the oval-ball game.
 @icon ball
 SPRINGBOKS | South Africa's national rugby union team | casual
 ALL BLACKS | New Zealand's national team (3,6) | casual
@@ -9,7 +9,7 @@ WALLABIES | Australia's national team | casual
 TRY | Five-point score made by grounding the ball | casual
 SCRUM | Set piece where the packs bind and push | casual
 LINEOUT | Throw-in contest after the ball goes into touch | casual
-CONVERSION | Two-point kick after a try | casual
+CONVERSION | Two-point kick following a five-point score | casual
 PENALTY | Three-point kick awarded for an infringement | casual
 DROP GOAL | Three points from a kick off the half-volley (4,4) | casual
 HAKA | Maori challenge performed before New Zealand Tests | casual
@@ -18,22 +18,22 @@ WEBB ELLIS CUP | Trophy awarded to the world champions (4,5,3) | casual
 KOLISI | Siya, captain of the 2019 and 2023 world champions | casual
 MANDELA | President who wore the No 6 jersey at the 1995 final | casual
 FLY-HALF | Playmaker who wears No 10 (3,4) | casual
-HOOKER | Front-rower who throws in at lineouts | casual
-PROP | Front-row forward either side of the hooker | casual
+HOOKER | Front-rower who usually throws the ball in from touch | casual
+PROP | Front-row forward wearing 1 or 3 | casual
 LOCK | Second-row forward | casual
 FLANKER | Back-row forward wearing 6 or 7 | casual
 WING | Speedy back out wide | casual
 KNOCK-ON | Fumbling the ball forward (5,2) | casual
 RUCK | Contest for the ball on the ground | casual
 MAUL | Contest for the ball held off the ground | casual
-SIN BIN | Ten-minute exile after a yellow card (3,3) | casual
+SIN BIN | Ten-minute exile for an offending player (3,3) | casual
 SIX NATIONS | Annual European championship (3,7) | casual
 LIONS | British & Irish ___, touring side | casual
-WILKINSON | Jonny, whose drop goal won the 2003 World Cup | casual
-LOMU | Jonah, giant All Black wing of the 1995 World Cup | casual
+WILKINSON | Jonny, whose extra-time kick won the 2003 World Cup | casual
+LOMU | Jonah, giant New Zealand flyer of the 1995 World Cup | casual
 MCCAW | Richie, captain of the 2011 and 2015 world champions | casual
-CARTER | Dan, All Black fly-half | casual
-HABANA | Bryan, Springbok wing with eight tries at the 2007 World Cup | casual
+CARTER | Dan, New Zealand No 10, world player of the year in 2015 | casual
+HABANA | Bryan, South African speedster of the 2007 world champions | casual
 PIENAAR | Francois, South Africa's 1995 World Cup captain | casual
 TACKLE | Bring down the ball carrier | casual
 SCRUM-HALF | Player wearing No 9 who feeds the pack (5,4) | casual
@@ -44,64 +44,62 @@ ELLIS PARK | Johannesburg venue of the 1995 World Cup final (5,4) | casual
 INVICTUS | 2009 film about the 1995 World Cup | casual
 YELLOW CARD | Sanction sending a player off for ten minutes (6,4) | casual
 EDEN PARK | Auckland ground of the 1987 and 2011 finals (4,4) | casual
-NEW ZEALAND | First World Cup winners, in 1987 (3,7) | casual
-BARBARIANS | Invitational side in black and white hoops | casual
-RUGBY SCHOOL | Where William Webb Ellis supposedly ran with the ball (5,6) | casual
-STRANSKY | Joel, scorer of the extra-time drop goal in the 1995 final | fan
-ETZEBETH | Eben, towering Springbok lock | fan
-DE KLERK | Faf, Springbok scrum-half of 2019 (2,5) | fan
-KOLBE | Cheslin, Springbok wing who scored in the 2019 final | fan
-MAPIMPI | Makazole, first Springbok to score a try in a World Cup final | fan
-POLLARD | Handré, Springbok goal-kicker in the 2019 and 2023 finals | fan
-ERASMUS | Rassie, coach of the 2019 Springboks | fan
-MATFIELD | Victor, Springbok lock of the 2007 winners | fan
+BARBARIANS | Invitational touring side founded in 1890 | casual
+RUGBY SCHOOL | Where a pupil supposedly first ran with the ball in 1823 (5,6) | casual
+STRANSKY | Joel, whose extra-time kick won the 1995 final | fan
+ETZEBETH | Eben, towering South African second-rower | fan
+DE KLERK | Faf, South Africa's No 9 in the 2019 final (2,5) | fan
+KOLBE | Cheslin, South African speedster who scored in the 2019 final | fan
+MAPIMPI | Makazole, first South African to touch down in a World Cup final | fan
+POLLARD | Handré, South Africa's kicker in the 2019 and 2023 finals | fan
+ERASMUS | Rassie, South Africa's head coach at the 2019 World Cup | fan
+MATFIELD | Victor, South African second-rower of the 2007 winners | fan
 SMIT | John, South Africa's 2007 World Cup captain | fan
-JOOST | ___ van der Westhuizen, Springbok scrum-half in 1995 | fan
-WILLIAMS | Chester, Springbok wing at the 1995 World Cup | fan
-DU PREEZ | Fourie, Springbok scrum-half of 2007 (2,5) | fan
+JOOST | ___ van der Westhuizen, South Africa's No 9 in 1995 | fan
+WILLIAMS | Chester, only player of colour in South Africa's 1995 squad | fan
+DU PREEZ | Fourie, South Africa's No 9 at the 2007 World Cup (2,5) | fan
 VERMEULEN | Duane, player of the match in the 2019 final | fan
-BOMB SQUAD | Nickname of the Springboks' forward-heavy bench (4,5) | fan
+BOMB SQUAD | Nickname of South Africa's forward-heavy bench (4,5) | fan
 SUPER RUGBY | Southern hemisphere franchise competition (5,5) | fan
 CURRIE CUP | South Africa's historic provincial competition (6,3) | fan
-BULLS | Pretoria franchise based at Loftus | fan
+BULLS | Pretoria franchise in the United Rugby Championship | fan
 SHARKS | Durban franchise | fan
 LOFTUS | Pretoria's ___ Versfeld stadium | fan
 YOKOHAMA | Japanese city that staged the 2019 World Cup final | fan
 STADE DE FRANCE | Venue of the 2007 and 2023 World Cup finals (5,2,6) | fan
-FRANCE | Hosts of the 2007 and 2023 World Cups | fan
 JOHNSON | Martin, England's 2003 World Cup captain | fan
 WOODWARD | Sir Clive, England's 2003 World Cup coach | fan
-CAMPESE | David, Wallaby wing of the 1991 world champions | superfan
-O'DRISCOLL | Brian, Irish centre who captained the 2005 Lions | fan
-SEXTON | Johnny, Irish fly-half and 2018 world player of the year | fan
-DUPONT | Antoine, French scrum-half | fan
-ITOJE | Maro, England and Lions lock | fan
+CAMPESE | David, Australian flyer of the 1991 world champions | superfan
+O'DRISCOLL | Brian, Irish centre who played his last Test in 2014 | fan
+SEXTON | Johnny, Irish No 10 and 2018 world player of the year | fan
+DUPONT | Antoine, French No 9 and 2021 world player of the year | fan
+ITOJE | Maro, second-rower made England captain in 2025 | fan
 FARRELL | Owen, England captain at the 2023 World Cup | fan
-BARRETT | Beauden, All Black fly-half with two brothers in black | fan
-GATLAND | Warren, New Zealander who coached Wales and the Lions | superfan
+BARRETT | Beauden, world player of the year in 2016 and 2017 | fan
+GATLAND | Warren, New Zealand-born Wales head coach from 2007 | superfan
 GRUBBER | Low kick that bobbles along the ground | fan
 TMO | Video referee, initially | fan
 JACKAL | Steal the ball at the breakdown | fan
-TIGHTHEAD | Prop on the right of the scrum | fan
-LOOSEHEAD | Prop on the left of the scrum | fan
-PENALTY TRY | Award for a try prevented by foul play (7,3) | fan
+TIGHTHEAD | Front-rower who packs down on the right | fan
+LOOSEHEAD | Front-rower who packs down on the left | fan
+PENALTY TRY | Award made when foul play stops a certain score (7,3) | fan
 CALCUTTA CUP | Prize contested by England and Scotland (8,3) | fan
 TRIPLE CROWN | Beating all three other home nations (6,5) | fan
 WOODEN SPOON | Booby prize for finishing last (6,5) | fan
 BLEDISLOE CUP | Trophy contested by New Zealand and Australia (9,3) | fan
-GRAND SLAM | Winning every Six Nations match in a season (5,4) | fan
+GRAND SLAM | Winning every championship match in a season (5,4) | fan
 PUMAS | Argentina's national team | fan
 MURRAYFIELD | Scotland's national stadium | fan
 CARDIFF | Welsh capital, venue of the 1999 World Cup final | fan
 AVIVA | Dublin stadium built on the Lansdowne Road site | fan
 SEVENS | Short form with seven players a side | fan
 STORMERS | Cape Town side that won the first URC title in 2022 | superfan
-NIENABER | Jacques, coach of the 2023 Springboks | superfan
-WHITE | Jake, coach of the 2007 Springboks | superfan
-MONTGOMERY | Percy, Springbok goal-kicker in the 2007 final | superfan
-STEYN | Morné, whose long penalty won the 2009 Lions series | superfan
-ROOS | Paul, captain of the first Springbok tour in 1906 | superfan
-BLITZBOKKE | Nickname of South Africa's sevens team | superfan
+NIENABER | Jacques, South Africa's head coach at the 2023 World Cup | superfan
+WHITE | Jake, South Africa's head coach at the 2007 World Cup | superfan
+MONTGOMERY | Percy, South Africa's kicker in the 2007 final | superfan
+STEYN | Morné, long-range kicker in South Africa's 2009 series win | superfan
+ROOS | Paul, captain of South Africa's first overseas tour, in 1906 | superfan
+BLITZBOKKE | Nickname of South Africa's seven-a-side team | superfan
 KINGS PARK | Durban stadium (5,4) | superfan
 FREEDOM CUP | Trophy contested by South Africa and New Zealand (7,3) | superfan
 MANDELA PLATE | Trophy contested by South Africa and Australia (7,5) | superfan
@@ -110,15 +108,15 @@ BRAVE BLOSSOMS | Nickname of Japan's national team (5,8) | superfan
 KIRK | David, New Zealand's 1987 World Cup-winning captain | superfan
 FARR-JONES | Nick, Australia's 1991 World Cup-winning captain (4,5) | superfan
 EALES | John, Australia's 1999 World Cup-winning captain | superfan
-FITZPATRICK | Sean, All Black hooker and captain of the 1990s | superfan
-EDWARDS | Gareth, Welsh scrum-half who scored a famous 1973 try | superfan
-ZINZAN | ___ Brooke, All Black who dropped a goal in the 1995 semi | superfan
+FITZPATRICK | Sean, New Zealand captain on the 1996 series win in South Africa | superfan
+EDWARDS | Gareth, Welsh No 9 who won 53 caps in a row | superfan
+ZINZAN | ___ Brooke, New Zealander who dropped a goal in the 1995 semi | superfan
 GARRYOWEN | High kick named after an Irish club | superfan
 UP AND UNDER | High kick for the chasers to contest (2,3,5) | superfan
-CROOKED FEED | Scrum-half's illegal put-in (7,4) | superfan
+CROOKED FEED | No 9's illegal put-in at a set piece (7,4) | superfan
 BLOOD BIN | Temporary replacement for a bleeding player (5,3) | superfan
 CAPTAIN'S RUN | Final training session before a Test (8,3) | superfan
-PRINCIPALITY | Sponsor's name for Cardiff's national stadium | superfan
+PRINCIPALITY | Sponsor's name for the Welsh national stadium | superfan
 LES BLEUS | Nickname of the French team (3,5) | superfan
 MARK | Clean catch claimed inside your own 22 | superfan
 AZZURRI | Nickname of Italy's national team | superfan
@@ -127,13 +125,12 @@ FIFTEEN | Points in South Africa's winning 1995 and 2007 final scores | superfan
 ELEVEN | New Zealand's points in the 2023 final | superfan
 LANCASTER | Stuart, England's coach at the 2015 home World Cup | superfan
 TELSTRA | Sydney stadium name at the 2003 final | superfan
-RUGBY | Warwickshire town where the game is said to have begun | superfan
-CRAVEN | Danie, long-serving Springbok coach and administrator | superfan
-DE ALLENDE | Damian, Springbok centre in the 2019 and 2023 finals (2,7) | superfan
-MTAWARIRA | Tendai, Springbok prop nicknamed the Beast | superfan
-MALHERBE | Frans, Springbok tighthead in the 2019 and 2023 finals | superfan
-LIBBOK | Manie, Springbok fly-half at the 2023 World Cup | superfan
-NEWLANDS | Cape Town ground, long home of the WP provincial side | superfan
-WESTERN PROVINCE | Cape Town side with a host of Currie Cup titles (7,8) | superfan
+CRAVEN | Danie, long-serving South African coach and administrator | superfan
+DE ALLENDE | Damian, South African centre in the 2019 and 2023 finals (2,7) | superfan
+MTAWARIRA | Tendai, South African front-rower nicknamed the Beast | superfan
+MALHERBE | Frans, front-rower who started the 2019 and 2023 finals | superfan
+LIBBOK | Manie, South Africa's No 10 at the 2023 World Cup | superfan
+NEWLANDS | Cape Town ground where the 1995 World Cup opened | superfan
+WESTERN PROVINCE | Cape Town provincial union, often shortened to WP (7,8) | superfan
 TOULOUSE | French club that won its sixth European Cup in 2024 | superfan
 HEINEKEN CUP | Original sponsored name of the European club competition (8,3) | superfan
