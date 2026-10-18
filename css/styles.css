@@ -11,14 +11,16 @@
   --rule: #dcdcd7;
   --wash: #f5f4f0;
   --accent: #9b2915;
-  --cell: #ffffff;
-  --block: #121212;
-  --grid-line: #121212;
-  --thumb-bg: #121212;
-  --thumb-cell: #ffffff;
-  --hl-word: #a7d8ff;
-  --hl-cell: #ffda00;
-  --hl-cross: #e3f1fc;
+  --cell: #fffdf8;
+  --block: #1b2540;
+  --board: #1b2540; /* the dark board behind the grid: every non-letter square */
+  --grid-line: #1b2540;
+  --thumb-bg: #1b2540;
+  --thumb-cell: #fffdf8;
+  --hl-word: #b9dafc;
+  --hl-cell: #f4c430;
+  --hl-cross: #e8f2fd;
+  --on-hl-cell: #10141f;
   --wrong: #d0021b;
   --revealed: #1f62c4;
   --pencil: #8b8b86;
@@ -41,14 +43,16 @@
     --rule: #2f2f2d;
     --wash: #1b1b1a;
     --accent: #e98a72;
-    --cell: #232322;
-    --block: #030303;
-    --grid-line: #55554f;
-    --thumb-bg: #000000;
-    --thumb-cell: #cfcdc6;
-    --hl-word: #2b4c70;
-    --hl-cell: #a8860f;
-    --hl-cross: #1d2a38;
+    --cell: #2a3347;
+    --block: #05070d;
+    --board: #05070d;
+    --grid-line: #7884a3; /* light outlines so squares stand out from the board */
+    --thumb-bg: #05070d;
+    --thumb-cell: #8b96b1;
+    --hl-word: #3d6aa8;
+    --hl-cell: #e2b33a;
+    --hl-cross: #36425c;
+    --on-hl-cell: #10141f;
     --wrong: #ff6b6b;
     --revealed: #7fb2ff;
     --pencil: #8f8e89;
@@ -67,14 +71,16 @@
   --rule: #2f2f2d;
   --wash: #1b1b1a;
   --accent: #e98a72;
-  --cell: #232322;
-  --block: #030303;
-  --grid-line: #55554f;
-  --thumb-bg: #000000;
-  --thumb-cell: #cfcdc6;
-  --hl-word: #2b4c70;
-  --hl-cell: #a8860f;
-  --hl-cross: #1d2a38;
+  --cell: #2a3347;
+  --block: #05070d;
+  --board: #05070d;
+  --grid-line: #7884a3; /* light outlines so squares stand out from the board */
+  --thumb-bg: #05070d;
+  --thumb-cell: #8b96b1;
+  --hl-word: #3d6aa8;
+  --hl-cell: #e2b33a;
+  --hl-cross: #36425c;
+  --on-hl-cell: #10141f;
   --wrong: #ff6b6b;
   --revealed: #7fb2ff;
   --pencil: #8f8e89;
@@ -492,13 +498,19 @@ body.in-game .dateline { display: none; }
 .board-wrap { position: relative; overflow-x: auto; }
 .board {
   --size: 40px;
+  --pad: 6px; /* keep in step with BOARD_PAD in js/app.js */
   display: grid;
   grid-auto-rows: var(--size);
   align-content: start;
   width: max-content;
   margin: 0 auto;
-  /* Room for the last row's and column's closing line (see .cell). */
-  padding: 0 1px 1px 0;
+  /* A dark board around and between the words, so every answer reads as a
+     clear strip of squares. The extra 1px leaves room for the last row's and
+     column's closing line (see .cell). */
+  padding: var(--pad) calc(var(--pad) + 1px) calc(var(--pad) + 1px) var(--pad);
+  background: var(--board);
+  border-radius: 8px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 8px 24px rgba(16, 24, 48, 0.12);
   user-select: none;
   touch-action: manipulation;
 }
@@ -521,6 +533,34 @@ body.in-game .dateline { display: none; }
   cursor: pointer;
 }
 .cell.block { background: transparent; cursor: default; border: 0; }
+.cell.active { background: var(--hl-cell); color: var(--on-hl-cell); }
+.cell.active .num { color: var(--on-hl-cell); }
+/* Direction marker in the current square: a small arrow pointing across or down. */
+.cell .dir { display: none; }
+.cell.active .dir {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  pointer-events: none;
+  opacity: 0.75;
+}
+.board:not(.dir-down) .cell.active .dir {
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: calc(var(--size) * 0.1) 0 calc(var(--size) * 0.1) calc(var(--size) * 0.14);
+  border-left-color: var(--on-hl-cell);
+}
+.board.dir-down .cell.active .dir {
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: calc(var(--size) * 0.14) calc(var(--size) * 0.1) 0;
+  border-top-color: var(--on-hl-cell);
+}
 .cell .num {
   position: absolute;
   top: 2px;
@@ -536,8 +576,9 @@ body.in-game .dateline { display: none; }
 .board.compact .cell { padding: 0 0 0 calc(var(--size) * 0.14); font-size: calc(var(--size) * 0.58); align-items: flex-end; }
 .board.compact .cell .letter { line-height: 0.95; }
 .board.compact .cell .num { top: 1px; left: 1px; font-size: max(6px, calc(var(--size) * 0.3)); font-weight: 400; letter-spacing: -0.02em; }
+.cell.in-cross { background: var(--hl-cross); }
 .cell.in-word { background: var(--hl-word); }
-.cell.active { background: var(--hl-cell); }
+.cell.in-word.active { background: var(--hl-cell); }
 .cell.pencil .letter { color: var(--pencil); font-weight: 400; }
 .cell.wrong .letter { color: var(--wrong); }
 .cell.wrong::after {
@@ -703,6 +744,13 @@ dialog[open]::backdrop { animation: fade-in 0.2s ease; }
 .clue-list li.cross { border-left-color: var(--hl-word); }
 .clue-list li.current { background: var(--hl-word); border-left-color: var(--hl-word); }
 .clue-list li.done .text { color: var(--ink-soft); }
+/* A tick beside finished words, in the list and in the clue bar. */
+.clue-list li.done strong::after, .clue-bar.complete strong::after {
+  content: '✓';
+  margin-left: 4px;
+  color: var(--good);
+  font-size: 0.85em;
+}
 .clue-list .tag {
   display: block;
   margin-top: 2px;

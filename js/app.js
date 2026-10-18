@@ -761,7 +761,7 @@
         if (ch) {
           el.setAttribute('role', 'gridcell');
           const n = puzzle.numbers[r][c];
-          el.innerHTML = `${n ? `<span class="num">${n}</span>` : ''}<span class="letter"></span>`;
+          el.innerHTML = `${n ? `<span class="num">${n}</span>` : ''}<span class="letter"></span><i class="dir"></i>`;
           el.addEventListener('pointerdown', (e) => {
             e.preventDefault();
             onCellClick(r, c);
@@ -798,6 +798,7 @@
   // in "(3,5)" for a two-word answer.
   const withLength = (w) => (/\([\d,\- ]+\)$/.test(w.clue) ? w.clue : `${w.clue} (${w.answer.length})`);
 
+  const BOARD_PAD = 6; // keep in step with --pad in css/styles.css
   function sizeBoard() {
     if (!game) return;
     const { rows, cols } = game.puzzle;
@@ -813,12 +814,13 @@
     // Big grids may run past the window's height rather than shrink below a
     // comfortable size; on narrow phones they scroll sideways if needed.
     const fitH = Math.max(Math.floor(availH / rows), Math.min(28, cap));
-    const size = Math.max(14, Math.min(cap, Math.floor((availW - 5) / cols), fitH));
+    const frame = 2 * BOARD_PAD + 1; // the dark board's padding around the squares
+    const size = Math.max(14, Math.min(cap, Math.floor((availW - 4 - frame) / cols), fitH));
     const board = $('#board');
     board.style.setProperty('--size', size + 'px');
     board.classList.toggle('compact', size < 30);
     // Centre on a whole pixel: a half-pixel offset blurs the grid lines.
-    const free = $('#board-wrap').clientWidth - (cols * size + 1);
+    const free = $('#board-wrap').clientWidth - (cols * size + frame);
     board.style.marginLeft = Math.max(0, Math.floor(free / 2)) + 'px';
   }
   window.addEventListener('resize', sizeBoard);
@@ -844,6 +846,8 @@
     const inWord = new Set(word.cells.map(([r, c]) => r + ',' + c));
     const crossDir = sel.dir === 'across' ? 'down' : 'across';
     const crossIndex = game.wordAt[sel.r][sel.c][crossDir];
+    const inCross = new Set(crossIndex == null ? [] : puzzle.words[crossIndex].cells.map(([r, c]) => r + ',' + c));
+    $('#board').classList.toggle('dir-down', sel.dir === 'down');
 
     for (let r = 0; r < puzzle.rows; r++) {
       for (let c = 0; c < puzzle.cols; c++) {
@@ -852,6 +856,7 @@
         $('.letter', el).textContent = entries[r][c];
         el.classList.toggle('in-word', !game.solved && inWord.has(r + ',' + c));
         el.classList.toggle('active', !game.solved && r === sel.r && c === sel.c);
+        el.classList.toggle('in-cross', !game.solved && inCross.has(r + ',' + c) && !inWord.has(r + ',' + c));
         el.classList.toggle('revealed', revealed[r][c]);
         el.classList.toggle('pencil', pencil[r][c] && !revealed[r][c]);
         el.classList.toggle('wrong', wrong[r][c] && !!entries[r][c]);
@@ -875,6 +880,7 @@
 
     $('#clue-bar-num').textContent = `${word.number}${word.dir === 'across' ? 'A' : 'D'}`;
     $('#clue-bar-text').textContent = withLength(word);
+    $('#clue-bar').classList.toggle('complete', word.cells.every(([r, c]) => entries[r][c]));
 
     $('#done-bar').hidden = !game.solved;
     if (game.solved) {

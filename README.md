@@ -36,6 +36,12 @@ Pages from the repository root).
 
 ## Solving
 
+The grid sits on a dark board (navy in light mode, near-black in dark mode),
+so every answer reads as a clear strip of squares. The current square is
+gold, with a small arrow showing across or down. The current word is blue
+and the crossing word lightly tinted. Finished words get a ✓ in the clue list
+and the clue bar.
+
 - Type to fill. Arrow keys move, Space or Enter switches direction, Tab jumps
   to the next clue, Backspace erases. On phones and tablets, tap a square to
   type with the device's own keyboard; tap the square again to switch
