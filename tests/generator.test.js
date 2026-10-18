@@ -1,6 +1,6 @@
 // Run with: node tests/generator.test.js
 const assert = require('assert');
-const { generate, rotatingPool, mentionedAnswers } = require('../js/generator.js');
+const { generate, rotatingPool, mentionedAnswers, layoutCode, fromLayoutCode, answerId } = require('../js/generator.js');
 
 // No clue in a puzzle may mention another answer in the same puzzle.
 function assertNoGiveaways(p, tag) {
@@ -39,6 +39,38 @@ function runs(puzzle) {
 const build = require('../tools/build-words.js');
 assert.strictEqual(require('fs').readFileSync(build.out, 'utf8'), build.render(build.readLists()), 'js/words.js is out of date: run node tools/build-words.js');
 
+// The generator must keep building exactly the same grids: older genre
+// share links are rebuilt by it. The bank comes from the frozen September
+// puzzles, so only a change to the generator itself changes this fingerprint.
+{
+  const crypto = require('crypto');
+  const sep = JSON.parse(require('fs').readFileSync(require.resolve('../puzzles/2026-09.json'), 'utf8'));
+  const seen = new Set();
+  const bank = [];
+  for (const p of Object.values(sep.daily)) {
+    for (const [answer, , , , clue, tag] of p.words) {
+      if (seen.has(answer)) continue;
+      seen.add(answer);
+      bank.push({ answer, clue, tag, level: answer.length > 9 ? 'hard' : answer.length < 6 ? 'easy' : 'medium' });
+    }
+  }
+  const out = [];
+  for (const [count, maxSize, hard] of [[12, 13, 2], [20, 17, 5], [30, 21, 8], [40, 23, 8]]) {
+    for (const seed of [1, 7, 42]) out.push(generate(bank, { count, maxSize, hard, seed }));
+  }
+  assert.strictEqual(crypto.createHash('sha256').update(JSON.stringify(out)).digest('hex'),
+    '04181469584575e83328d42286a5868a6cf712557f98d95fdacad1e96ae6f627',
+    'the generator now builds different grids: older shared genre links would open different puzzles');
+}
+
+// The snapshot used to open older genre links must never change.
+{
+  const crypto = require('crypto');
+  const text = require('fs').readFileSync(require.resolve('../words/legacy-order.json'));
+  assert.strictEqual(crypto.createHash('sha256').update(text).digest('hex'),
+    '08c38c0e55ef06e3a8fc80a86fd6ff76a71000806c5d7a8bf6b2e12b2407070d', 'words/legacy-order.json was changed');
+}
+
 // The service worker caches the versioned scripts, so its version must match.
 {
   const fs = require('fs');
@@ -50,6 +82,7 @@ assert.strictEqual(require('fs').readFileSync(build.out, 'utf8'), build.render(b
 let total = 0;
 for (const genre of GENRES) {
   const answers = new Set(genre.words.map((w) => w.answer));
+  assert.strictEqual(new Set(genre.words.map((w) => answerId(w.answer))).size, genre.words.length, `${genre.id}: two answers share a link id`);
   assert.strictEqual(answers.size, genre.words.length, `${genre.id}: duplicate answers`);
   for (const [level, cfg] of Object.entries(DIFFICULTIES)) {
     for (let seed = 1; seed <= 10; seed++) {
@@ -65,6 +98,9 @@ for (const genre of GENRES) {
         assert.strictEqual(p.numbers[w.row][w.col], w.number, `${tag}: numbering`);
       }
       assertNoGiveaways(p, tag);
+      // Share links rebuild the same grid.
+      const { seed: _seed, ...grid } = p;
+      assert.deepStrictEqual(fromLayoutCode(layoutCode(p), genre.words), grid, `${tag}: link code doesn't rebuild the grid`);
       const expected = p.words.map((w) => `${w.dir}:${w.row},${w.col}`).sort();
       assert.deepStrictEqual(runs(p), expected, `${tag}: stray letter runs`);
       // Connected: flood fill from first letter reaches every letter.

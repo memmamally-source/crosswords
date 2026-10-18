@@ -313,6 +313,38 @@ const MINI_CONFIG = { count: 6, maxSize: 7, hard: 0 };
 const DAILY_WINDOW = 240;
 const MINI_WINDOW = 30;
 
+// How the Daily and the Mini for a date (YYYY-MM-DD) are built. Published
+// dates are saved in puzzles/*.json (see tools/freeze-puzzles.js), so these
+// only build dates that haven't been frozen yet.
+function dayNumberOf(date) {
+  const [y, m, d] = date.split('-').map(Number);
+  return Math.floor(Date.UTC(y, m - 1, d) / 86400000);
+}
+function scheduleFor(date) {
+  const [y, m, d] = date.split('-').map(Number);
+  return DAILY_SCHEDULE[new Date(Date.UTC(y, m - 1, d)).getUTCDay()];
+}
+function dailyBuild(date) {
+  const day = dayNumberOf(date);
+  const sched = scheduleFor(date);
+  const rotate = (typeof CrosswordGenerator !== 'undefined' ? CrosswordGenerator : require('./generator.js')).rotatingPool;
+  return {
+    bank: rotate(DAILY_BANK, day, DAILY_WINDOW, 1).filter((w) => w.answer.length <= sched.maxLen),
+    options: { count: sched.count, maxSize: sched.maxSize, hard: sched.hard, seed: day * 31 + 7 },
+  };
+}
+function miniBuild(date) {
+  const day = dayNumberOf(date);
+  const rotate = (typeof CrosswordGenerator !== 'undefined' ? CrosswordGenerator : require('./generator.js')).rotatingPool;
+  return {
+    bank: rotate(MINI_BANK, day, MINI_WINDOW, 2),
+    options: { count: MINI_CONFIG.count, maxSize: MINI_CONFIG.maxSize, hard: MINI_CONFIG.hard, seed: day * 17 + 3 },
+  };
+}
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW };
+  module.exports = {
+    GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW,
+    scheduleFor, dailyBuild, miniBuild,
+  };
 }

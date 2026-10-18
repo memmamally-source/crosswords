@@ -76,6 +76,26 @@ and works offline once it has loaded.
 the site for offline use. The icons in `icons/` are drawn by
 `tools/make-icons.py`.
 
+## Published puzzles never change
+
+- **The Daily and the Mini are frozen.** Every date from launch (1 September
+  2026) through at least 60 days ahead is saved in `puzzles/YYYY-MM.json`,
+  and the site plays those saved grids. Editing word lists or the generator
+  never changes a published puzzle. `puzzles/index.json` holds each month's
+  fingerprint, and the tests fail if a frozen month is edited or if fewer
+  than 60 days ahead are frozen. To freeze more months:
+  `node tools/freeze-puzzles.js` (or `--through 2027-12`). It only adds new
+  months and never rewrites existing ones.
+- **One official day for everyone:** a new Daily and Mini at midnight South
+  African time (00:00 SAST, UTC+2). The time comes from the web server's
+  clock, so a device set to the wrong date or time zone still gets the same
+  puzzle as everyone else.
+- **Genre puzzle links record the finished grid** (`#/play/<genre>/<level>/0/L…`),
+  so a shared link opens the same puzzle even after word lists change.
+  Older links (lists of word positions) are read against a snapshot of the
+  word lists, `words/legacy-order.json`. A test locks the generator's output,
+  because older links are rebuilt by it.
+
 ## Freshness
 
 - **Genre puzzles** are built only from words you haven't seen in that genre.
@@ -83,8 +103,7 @@ the site for offline use. The icons in `icons/` are drawn by
   played. The chosen words are encoded in the puzzle's URL, so a shared link
   always rebuilds the same grid.
 - **The Daily and the Mini** each use their own slice of a shuffled word bank
-  each day, so answers don't come back for weeks. Everyone gets the same
-  puzzle on a given date.
+  each day, so answers don't come back for weeks.
 
 ## Sign-in
 
@@ -153,6 +172,7 @@ node tools/check-words.js    # lengths, duplicates, answers inside their own clu
 node tools/build-words.js    # compile words/*.txt into js/words.js
 node tests/generator.test.js # takes a couple of minutes
 node tests/sync.test.js      # merging progress between devices
+node tests/puzzles.test.js   # frozen puzzles are unchanged and far enough ahead
 ```
 
 `rate-words.py` writes `words/levels.json`, rating each answer by how common
@@ -185,6 +205,7 @@ that `js/words.js` is up to date.
 | `manifest.webmanifest`, `sw.js`, `icons/` | Installing as an app and working offline |
 | `js/account.js`, `js/sync.js`, `js/firebase-config.js`, `firestore.rules` | Optional sign-in and syncing progress |
 | `css/styles.css` | Styles, light and dark themes |
+| `puzzles/` | Frozen Daily and Mini puzzles, one file per month, and their fingerprints |
 | `words/*.txt` | Word lists, one file per genre |
 | `words/levels.json` | Easy and hard answers, from `tools/rate-words.py` |
 | `js/words.js` | Word lists compiled by `tools/build-words.js` (don't edit by hand) |

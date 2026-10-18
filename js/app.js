@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG */
+/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild */
 (function () {
   'use strict';
 
@@ -57,7 +57,32 @@
   // ---------- Dates ----------
   const pad = (n) => String(n).padStart(2, '0');
   const keyOf = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
-  const todayKey = () => keyOf(new Date());
+  // The official date is South African time (UTC+2, no daylight saving), so
+  // every player shares one "today". The time comes from the web server's
+  // clock when it can be read (see syncClock), not the device's clock.
+  const SAST_OFFSET = 2 * 3600 * 1000;
+  let clockOffset = 0;
+  const now = () => Date.now() + clockOffset;
+  const todayKey = () => {
+    const d = new Date(now() + SAST_OFFSET);
+    return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`;
+  };
+  // Reads the server's clock from the Date header of a tiny request. If the
+  // device is more than a minute out, the difference is applied.
+  async function syncClock() {
+    try {
+      const sent = Date.now();
+      const res = await fetch(location.pathname, { method: 'HEAD', cache: 'no-store' });
+      const back = Date.now();
+      const server = Date.parse(res.headers.get('date'));
+      if (Number.isNaN(server)) return;
+      const offset = server - (sent + back) / 2;
+      clockOffset = Math.abs(offset) > 60 * 1000 ? offset : 0;
+    } catch (e) {
+      /* offline: use the device clock */
+    }
+  }
+  const withTimeout = (promise, ms) => Promise.race([promise, new Promise((done) => setTimeout(done, ms))]);
   function parseKey(k) {
     const [y, m, d] = k.split('-').map(Number);
     return new Date(y, m - 1, d);
@@ -67,10 +92,6 @@
     d.setDate(d.getDate() + n);
     return keyOf(d);
   }
-  const dayNumber = (k) => {
-    const [y, m, d] = k.split('-').map(Number);
-    return Math.floor(Date.UTC(y, m - 1, d) / 86400000);
-  };
   const validDate = (k) => /^\d{4}-\d{2}-\d{2}$/.test(k) && k >= LAUNCH && k <= todayKey() && keyOf(parseKey(k)) === k;
   const longDate = (k) => parseKey(k).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
   const shortDate = (k) => parseKey(k).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
@@ -85,17 +106,36 @@
   const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 
   // ---------- Puzzle definitions ----------
-  // Each day's Daily and Mini draw from their own slice of a shuffled bank,
-  // so no answer comes back for a couple of weeks.
-  const rotatingPool = CrosswordGenerator.rotatingPool;
-
   const genreById = (id) => GENRES.find((g) => g.id === id);
   const categoryById = (id) => CATEGORIES.find((c) => c.id === id);
   const DAILY_SUBJECTS = new Set(DAILY_BANK.map((w) => w.tag)).size;
 
+  // ---------- Frozen puzzles ----------
+  // Every published Daily and Mini is saved in puzzles/YYYY-MM.json (made by
+  // tools/freeze-puzzles.js), so they never change once published. Dates not
+  // frozen yet are built on the spot, the same way the freeze tool builds them.
+  const frozenMonths = new Map(); // month -> data, or null once known missing
+  const monthLoads = new Map();
+  function loadMonth(month) {
+    if (!monthLoads.has(month)) {
+      monthLoads.set(month, fetch(`puzzles/${month}.json`)
+        .then((res) => (res.ok ? res.json() : null))
+        .catch(() => null)
+        .then((data) => {
+          if (data) frozenMonths.set(month, data);
+          else monthLoads.delete(month); // try again next time (e.g. offline)
+          return data;
+        }));
+    }
+    return monthLoads.get(month);
+  }
+  const frozenPuzzle = (kind, date) => {
+    const data = frozenMonths.get(date.slice(0, 7));
+    return (data && data[kind] && data[kind][date]) || null;
+  };
+
   function dailySpec(date) {
     const sched = DAILY_SCHEDULE[parseKey(date).getDay()];
-    const day = dayNumber(date);
     return {
       kind: 'daily',
       key: `daily:${date}`,
@@ -105,17 +145,12 @@
       kicker: `The Daily · ${sched.level}`,
       title: longDate(date),
       meta: `${sched.count} clues · drawn from ${DAILY_SUBJECTS} academic subjects`,
-      bank: rotatingPool(DAILY_BANK, day, DAILY_WINDOW, 1).filter((w) => w.answer.length <= sched.maxLen),
-      count: sched.count,
-      maxSize: sched.maxSize,
-      hard: sched.hard,
-      seed: day * 31 + 7,
+      build: () => dailyBuild(date),
       tags: true,
     };
   }
 
   function miniSpec(date) {
-    const day = dayNumber(date);
     return {
       kind: 'mini',
       key: `mini:${date}`,
@@ -124,19 +159,42 @@
       kicker: 'The Mini',
       title: longDate(date),
       meta: `${MINI_CONFIG.count} clues · a quick warm-up`,
-      bank: rotatingPool(MINI_BANK, day, MINI_WINDOW, 2),
-      count: MINI_CONFIG.count,
-      maxSize: MINI_CONFIG.maxSize,
-      hard: MINI_CONFIG.hard,
-      seed: day * 17 + 3,
+      build: () => miniBuild(date),
       tags: true,
     };
   }
 
+  // Genre puzzle links. New links ("L..." codes) record the finished grid,
+  // so they rebuild exactly even after word lists change. Older links list
+  // word positions in a genre's list; those are read against a snapshot of
+  // the lists as they were (words/legacy-order.json), loaded when needed.
   const encodePool = (indices) => indices.slice().sort((a, b) => a - b).map((i) => i.toString(36)).join('.');
+  let legacyOrder = null;
+  function loadLegacyOrder() {
+    if (!legacyOrder) {
+      legacyOrder = fetch('words/legacy-order.json')
+        .then((res) => (res.ok ? res.json() : null))
+        .catch(() => null)
+        .then((data) => {
+          if (!data) legacyOrder = null; // try again next time
+          return data;
+        });
+    }
+    return legacyOrder;
+  }
+  let legacyLists = null; // genre id -> answers, once loaded
   function decodePool(genre, code) {
-    if (!code) return null;
-    const words = code.split('.').map((x) => genre.words[parseInt(x, 36)]).filter(Boolean);
+    if (!code || code[0] === 'L') return null;
+    const indices = code.split('.').map((x) => parseInt(x, 36));
+    let words;
+    if (legacyLists && legacyLists[genre.id]) {
+      const byAnswer = new Map(genre.words.map((w) => [w.answer, w]));
+      const answers = legacyLists[genre.id].split(' ');
+      words = indices.map((i) => byAnswer.get(answers[i]));
+    } else {
+      words = indices.map((i) => genre.words[i]);
+    }
+    words = words.filter(Boolean);
     return words.length ? words : null;
   }
 
@@ -146,6 +204,7 @@
     return {
       kind: 'genre',
       key: `play:${genre.id}/${difficulty}/${seed}/${pool || ''}`,
+      layout: pool && pool[0] === 'L' ? pool : null,
       url: `#/play/${genre.id}/${difficulty}/${seed}${pool ? '/' + pool : ''}`,
       genre,
       difficulty,
@@ -164,10 +223,27 @@
 
   const puzzleCache = new Map();
   function puzzleFor(spec) {
-    if (!puzzleCache.has(spec.key)) {
-      puzzleCache.set(spec.key, CrosswordGenerator.generate(spec.bank, { count: spec.count, maxSize: spec.maxSize, hard: spec.hard, seed: spec.seed }));
+    if (puzzleCache.has(spec.key)) return puzzleCache.get(spec.key);
+    let puzzle;
+    let keep = true;
+    if (spec.kind === 'daily' || spec.kind === 'mini') {
+      const frozen = frozenPuzzle(spec.kind, spec.date);
+      if (frozen) {
+        puzzle = CrosswordGenerator.thaw(frozen);
+      } else {
+        const { bank, options } = spec.build();
+        puzzle = CrosswordGenerator.generate(bank, options);
+        // Don't hold on to a built copy while the month's frozen file is still loading.
+        keep = !monthLoads.has(spec.date.slice(0, 7)) || frozenMonths.has(spec.date.slice(0, 7));
+      }
+    } else if (spec.layout) {
+      puzzle = CrosswordGenerator.fromLayoutCode(spec.layout, spec.genre.words);
+      if (!puzzle) return null; // a word in the link is no longer in the bank
+    } else {
+      puzzle = CrosswordGenerator.generate(spec.bank, { count: spec.count, maxSize: spec.maxSize, hard: spec.hard, seed: spec.seed });
     }
-    return puzzleCache.get(spec.key);
+    if (keep) puzzleCache.set(spec.key, puzzle);
+    return puzzle;
   }
 
   // ---------- Genre word rotation ----------
@@ -203,7 +279,13 @@
       if (placed >= cfg.count) break;
       pool = pool.concat(spare.splice(0, 4)); // let a few seen words back in so the grid fills
     }
-    return best.spec;
+    // Share the finished grid itself, so the link never depends on word order.
+    const puzzle = puzzleFor(best.spec);
+    const code = CrosswordGenerator.layoutCode(puzzle);
+    if (!code) return best.spec;
+    const spec = genreSpec(genre, difficulty, 0, code);
+    puzzleCache.set(spec.key, puzzle);
+    return spec;
   }
 
   function rememberWords(genre, puzzle) {
@@ -336,7 +418,7 @@
         <ul class="facts">
           <li><b>${daily.count}</b> clues</li>
           <li><b>${esc(daily.sched.level)}</b> difficulty</li>
-          <li>New every day at midnight</li>
+          <li>New every day at midnight SAST</li>
         </ul>
         <button class="btn btn-primary" data-open="${daily.url}">${ds.label}</button>
         ${ds.text ? `<p class="status ${ds.cls}">${esc(ds.text)}</p>` : ''}
@@ -1511,7 +1593,8 @@
     if (name !== 'game') document.title = 'Crossword Hub';
   }
 
-  function route() {
+  async function route() {
+    const routeNow = currentRoute;
     const parts = currentRoute.replace(/^#\/?/, '').split('/');
     leaveGame();
     const today = todayKey();
@@ -1521,6 +1604,8 @@
       const date = parts[1] && validDate(parts[1]) ? parts[1] : today;
       showView('game');
       window.scrollTo(0, 0);
+      await withTimeout(loadMonth(date.slice(0, 7)), 4000);
+      if (currentRoute !== routeNow) return;
       startGame(parts[0] === 'daily' ? dailySpec(date) : miniSpec(date));
       return;
     }
@@ -1531,7 +1616,18 @@
       if (genre && Number.isFinite(seed)) {
         showView('game');
         window.scrollTo(0, 0);
-        startGame(genreSpec(genre, difficulty, seed, parts[4] || ''));
+        const pool = parts[4] || '';
+        if (pool && pool[0] !== 'L' && !legacyLists) {
+          legacyLists = await withTimeout(loadLegacyOrder(), 6000) || null;
+          if (currentRoute !== routeNow) return;
+        }
+        const spec = genreSpec(genre, difficulty, seed, pool);
+        if (!puzzleFor(spec)) {
+          toast('That puzzle used words that have since been retired. Here’s a new one.');
+          navigate(freshGenreSpec(genre, difficulty).url);
+          return;
+        }
+        startGame(spec);
         return;
       }
     }
@@ -1610,5 +1706,7 @@
 
   syncSettingsUI();
   showInstallCard();
-  route();
+  withTimeout(syncClock(), 1500)
+    .then(() => withTimeout(loadMonth(todayKey().slice(0, 7)), 2500))
+    .then(route);
 })();
