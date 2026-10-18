@@ -1,0 +1,131 @@
+# Super Mario: unofficial fan crossword clues
+@title Super Mario
+@category gaming
+@blurb Pipes, power-ups and a plumber who never stops jumping.
+@icon gamepad
+LUIGI | Green-clad younger plumber brother | casual
+PEACH | Pink-gowned princess who is often kidnapped | casual
+BOWSER | Spiky-shelled King of the Koopas | casual
+TOAD | Small retainer with a spotted cap | casual
+YOSHI | Green dinosaur the hero rides | casual
+WARIO | Greedy rival in a yellow cap with a W | casual
+WALUIGI | Lanky rival in purple with an upside-down L | casual
+DAISY | Orange-gowned tomboyish princess | casual
+DONKEY KONG | Barrel-throwing ape of the 1981 arcade game (6,4) | casual
+GOOMBA | Brown mushroom foe that's easy to stomp | casual
+KOOPA TROOPA | Turtle foe that leaves its shell behind (5,6) | casual
+MUSHROOM | Super ___, power-up that makes you grow | casual
+FIRE FLOWER | Power-up for throwing fireballs (4,6) | casual
+SUPER STAR | Power-up giving brief invincibility (5,4) | casual
+COIN | Collect 100 for an extra life | casual
+WARP PIPE | Green tube used for travel (4,4) | casual
+MUSHROOM KINGDOM | Realm ruled by the princess (8,7) | casual
+BULLET BILL | Cannon-fired black missile with eyes (6,4) | casual
+BOO | Shy ghost that covers its face when watched | casual
+PIRANHA PLANT | Biting flora that pops out of pipes (7,5) | casual
+CHAIN CHOMP | Tethered, lunging iron ball with teeth (5,5) | casual
+LAKITU | Cloud-riding foe who drops Spinies | casual
+SHY GUY | Masked foe in a robe (3,3) | casual
+BOB-OMB | Walking bomb with a wind-up key (3,3) | casual
+THWOMP | Angry stone block that crashes down | casual
+CHEEP CHEEP | Red leaping fish foe (5,5) | casual
+HAMMER BRO | Helmeted Koopa that throws tools (6,3) | casual
+MARIO KART | Racing spin-off series (5,4) | casual
+PLUMBER | Trade of the red-capped hero | casual
+NINTENDO | Company behind the franchise | casual
+MIYAMOTO | Designer who created the hero | casual
+FLAGPOLE | Grab it at the end of a level | casual
+QUESTION BLOCK | Floating box that holds a coin or power-up (8,5) | casual
+CASTLE | Where the princess is often held | casual
+BLOOPER | Squid foe that swims in pulses | casual
+OVERALLS | Bib-fronted garment both brothers wear | casual
+MUSTACHE | Facial hair both brothers sport | casual
+BANANA | Peel dropped on the track in kart races | casual
+BLUE SHELL | Spiny item that targets the race leader (4,5) | casual
+RAINBOW ROAD | Colourful track with no guard rails (7,4) | casual
+MARIO PARTY | Board-game spin-off packed with minigames (5,5) | casual
+SUPER MARIO BROS | Landmark 1985 NES platformer (5,5,4) | casual
+RED | Colour of the hero's cap | casual
+ROSALINA | Star-watching guardian of the Lumas | fan
+LUMA | Little star-shaped creature of Galaxy | fan
+CAPPY | Living hat companion in Odyssey | fan
+FLUDD | Water-spraying backpack from Sunshine | fan
+ODYSSEY | 2017 Switch adventure with a living hat | fan
+GALAXY | 2007 Wii adventure set across space | fan
+SUNSHINE | GameCube adventure with a water pack | fan
+BOWSER JR | Koopa King's paintbrush-wielding son (6,2) | fan
+KOOPALINGS | Seven airship-captaining Koopa bosses | fan
+KAMEK | Wand-waving Magikoopa who raised the Koopa King | fan
+DRY BONES | Skeletal Koopa that reassembles itself (3,5) | fan
+BIRDO | Bow-wearing dinosaur that spits eggs | fan
+KING BOO | Crowned ghost ruler (4,3) | fan
+TANOOKI | ___ Suit, raccoon outfit that can turn to stone | fan
+SUPER LEAF | Item granting a raccoon tail (5,4) | fan
+CAPE FEATHER | Super Mario World item for gliding and soaring (4,7) | fan
+ICE FLOWER | Power-up for throwing freezing balls (3,6) | fan
+SPINY | Spiked red-shelled foe | fan
+PAULINE | Original arcade damsel, later a city mayor | fan
+NEW DONK CITY | Skyscraper metropolis of the Metro Kingdom (3,4,4) | fan
+JUMPMAN | Name of the hero in his arcade debut | fan
+TOADSWORTH | Elderly mushroom steward of the princess | fan
+TOADETTE | Pink pigtailed mushroom girl | fan
+POWER STAR | Main collectible of the N64's 3D debut (5,4) | fan
+WIGGLER | Caterpillar that turns red with rage when stomped | fan
+MONTY MOLE | Burrowing foe that pops out of the ground (5,4) | fan
+POKEY | Stacked cactus foe | fan
+BANZAI BILL | Giant cannon-fired bullet (6,4) | fan
+CAT SUIT | Super Bell outfit from 3D World (3,4) | fan
+PROPELLER | ___ Mushroom, power-up for spinning flight | fan
+WONDER | Super Mario Bros. ___, 2023 game with talking flowers | fan
+WORLD | Super Mario ___, SNES launch title | fan
+GREEN SHELL | Kart item fired straight ahead (5,5) | fan
+WARP ZONE | Hidden area of pipes that skips worlds (4,4) | fan
+LUIGI'S MANSION | GameCube ghost-hunting spin-off (6,7) | fan
+DIDDY KONG | Red-capped monkey sidekick of the great ape (5,4) | fan
+DINOSAUR LAND | Setting of Super Mario World (8,4) | fan
+YOSHI'S ISLAND | SNES game where a dinosaur carries the baby hero (6,6) | fan
+METAL CAP | N64 power-up that makes you heavy and shiny (5,3) | fan
+WING CAP | N64 power-up hat that lets you fly (4,3) | fan
+SHINE SPRITE | Main collectible of the GameCube 3D outing (5,6) | fan
+POWER MOON | Main collectible of Odyssey (5,4) | fan
+ISLE DELFINO | Tropical resort setting of Sunshine (4,7) | superfan
+SARASALAND | Kingdom ruled by Daisy | superfan
+TATANGA | Alien villain of Super Mario Land | superfan
+WART | Frog villain of Super Mario Bros. 2 | superfan
+SUBCON | Dream land of Super Mario Bros. 2 | superfan
+MINUS WORLD | Endless glitch water level of the 1985 original (5,5) | superfan
+POLTERGUST | Ghost-sucking vacuum | superfan
+E GADD | Professor who builds ghost-catching gear (1,4) | superfan
+FAWFUL | Bean-obsessed villain of Superstar Saga | superfan
+CACKLETTA | Bean witch of Superstar Saga | superfan
+GENO | Star warrior inhabiting a doll in Super Mario RPG | superfan
+MALLOW | Fluffy cloud prince raised by a frog sage | superfan
+SMITHY | Main villain of Super Mario RPG | superfan
+GOOMBELLA | Archaeology student partner in The Thousand-Year Door | superfan
+DIMENTIO | Jester villain of Super Paper Mario | superfan
+COUNT BLECK | Caped villain of Super Paper Mario (5,5) | superfan
+SHADOW QUEEN | Ancient demon of The Thousand-Year Door (6,5) | superfan
+BOOM BOOM | Hulking fortress boss of Super Mario Bros. 3 (4,4) | superfan
+CHARGIN' CHUCK | Football-player foe in Super Mario World (7,5) | superfan
+REZNOR | Rotating triceratops bosses of Super Mario World | superfan
+VANISH CAP | N64 power-up that lets you pass through mesh (6,3) | superfan
+WHOMP | Flat stone foe that falls face-first | superfan
+PIANTA | Islander race with palm-tree heads | superfan
+NOKI | Shell-wearing race of the Sunshine island | superfan
+LUBBA | Purple Luma who captains a starship in Galaxy 2 | superfan
+POLARI | Elder Luma of the Comet Observatory | superfan
+TIARA | Crown companion of the princess in Odyssey | superfan
+BROODALS | Rabbit wedding planners in Odyssey | superfan
+DOUBLE CHERRY | 3D World item that creates clones (6,6) | superfan
+SPRIXIE | Fairy princesses of 3D World | superfan
+GOLD FLOWER | Power-up that turns blocks into coins (4,6) | superfan
+MINI MUSHROOM | Item that shrinks you to tiny size (4,8) | superfan
+NABBIT | Item-stealing rabbit thief in New Super Mario Bros. U | superfan
+LEMMY | Ball-balancing Koopaling | superfan
+LUDWIG | Wild-haired Koopaling with a composer's name | superfan
+WENDY | Koopaling with a pink bow | superfan
+DRY BOWSER | Skeletal form of the Koopa King (3,6) | superfan
+DONUT PLAINS | Early map region of Super Mario World (5,6) | superfan
+VANILLA DOME | Underground world of Super Mario World (7,4) | superfan
+STAR ROAD | Secret warp routes of Super Mario World (4,4) | superfan
+TOSTARENA | Desert town of the Sand Kingdom in Odyssey | superfan

@@ -29,7 +29,7 @@ ODDJOB | Henchman with a lethal bowler hat | casual
 JAWS | Steel-toothed giant henchman | casual
 FLEMING | Ian ___, creator of 007 | casual
 LICENCE | ___ to Kill (1989) | casual
-VESPER | ___ Lynd, treasury agent 007 falls for | casual
+VESPER | ___ Lynd, Treasury official 007 falls for | casual
 HONEY RYDER | Shell diver who emerges from the sea in Dr. No (5,5) | casual
 LIVE AND LET DIE | 1973 film, Roger Moore's first (4,3,3,3) | casual
 NO TIME TO DIE | 2021 film, the 25th in the series (2,4,2,3) | casual

@@ -38,7 +38,7 @@ JAVELIN | Spear thrown in athletics | casual
 POLE VAULT | Event using a long flexible rod (4,5) | casual
 ROWING | Sport of eights and coxless pairs | casual
 FENCING | Sport with foil, epee and sabre | casual
-JUDO | Japanese martial art, Olympic since 1964 | casual
+JUDO | Japanese martial art that debuted in 1964 | casual
 ARCHERY | Sport aiming arrows at a target | casual
 VELODROME | Indoor track cycling arena | casual
 WATER POLO | Team ball game played in a pool (5,4) | casual
@@ -59,7 +59,7 @@ JOHNSON | Michael ___, 200m and 400m champion at Atlanta 1996 | fan
 KIPCHOGE | Eliud ___, marathon champion in 2016 and 2021 | fan
 RUDISHA | David ___, set an 800m world record in the 2012 final | fan
 LEDECKY | Katie ___, 800m freestyle champion aged 15 in 2012 | fan
-THORPE | Ian ___, Australian swimmer called the Thorpedo | fan
+THORPE | Ian ___, Australian swimmer with five golds in 2000 and 2004 | fan
 FREEMAN | Cathy ___, 400m champion at Sydney 2000 | fan
 WIGGINS | Bradley ___, road time trial champion in 2012 | fan
 HOLMES | Kelly ___, 800m and 1500m champion in 2004 | fan
@@ -84,19 +84,13 @@ SARAJEVO | Host of the 1984 Winter Games | fan
 LILLEHAMMER | Norwegian host of the 1994 Winter Games | fan
 NAGANO | Japanese host of the 1998 Winter Games | fan
 VANCOUVER | Host of the 2010 Winter Games | fan
-SOCHI | Russian host of the 2014 Winter Games | fan
 LAKE PLACID | New York host of the 1932 and 1980 Winter Games (4,6) | fan
 MIRACLE ON ICE | US hockey win over the Soviet Union in 1980 (7,2,3) | fan
 JAMAICA | Nation of the Cool Runnings bobsleigh team of 1988 | fan
 SKELETON | Head-first sliding event | fan
-MUNICH | Host of the 1972 Summer Games | fan
-MONTREAL | Host of the 1976 Summer Games | fan
-SEOUL | Host of the 1988 Summer Games | fan
-ATLANTA | Host of the 1996 Summer Games | fan
 MEXICO CITY | High-altitude host of 1968 (6,4) | fan
 TRIATHLON | Swim, bike and run event that debuted in 2000 | fan
 BREAKING | Dance sport that debuted at Paris 2024 | fan
-WENLOCK | One-eyed mascot of London 2012 | fan
 FRASER-PRYCE | Shelly-Ann ___, 100m champion in 2008 and 2012 (6-5) | superfan
 LATYNINA | Larisa ___, Soviet gymnast with 18 Olympic medals | superfan
 KORBUT | Olga ___, Soviet gymnast who starred in 1972 | superfan

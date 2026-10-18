@@ -1,0 +1,129 @@
+# Queen: unofficial music crossword clues
+@title Queen
+@category music
+@blurb Freddie, the Red Special and twenty minutes at Live Aid.
+@icon note
+MERCURY | Freddie, the band's flamboyant frontman | casual
+MAY | Brian, the band's guitarist | casual
+TAYLOR | Roger, the band's drummer | casual
+DEACON | John, the band's bass player | casual
+LIVE AID | 1985 charity concert they stole at Wembley (4,3) | casual
+WEMBLEY | London stadium of their Live Aid set | casual
+RHAPSODY | Bohemian ___, their 1975 epic | casual
+WE WILL ROCK YOU | Stomp-stomp-clap anthem of 1977 (2,4,4,3) | casual
+CHAMPIONS | We Are the ___, 1977 anthem | casual
+RADIO GA GA | 1984 hit written by Roger Taylor (5,2,2) | casual
+KILLER QUEEN | 1974 hit from Sheer Heart Attack (6,5) | casual
+DON'T STOP ME NOW | Upbeat 1979 single from Jazz (4,4,2,3) | casual
+UNDER PRESSURE | 1981 No 1 recorded with David Bowie (5,8) | casual
+BOWIE | David, co-star of a 1981 No 1 single | casual
+FLASH GORDON | 1980 sci-fi film they scored (5,6) | casual
+MALEK | Rami, Oscar winner for playing Freddie | casual
+OPERA | A Night at the ___, 1975 album | casual
+PIANO | Freddie's keyboard instrument | casual
+DRUMS | Roger's instrument | casual
+BASS | John's instrument | casual
+GUITAR | Brian's instrument | casual
+A KIND OF MAGIC | 1986 album linked to the film Highlander (1,4,2,5) | casual
+THE SHOW MUST GO ON | 1991 single with a theatrical title (3,4,4,2,2) | casual
+SOMEBODY TO LOVE | 1976 gospel-flavoured single (8,2,4) | casual
+BICYCLE RACE | 1978 single from Jazz (7,4) | casual
+LOVE OF MY LIFE | Ballad that became a live sing-along (4,2,2,4) | casual
+GREATEST HITS | 1981 compilation, the UK's best-selling album (8,4) | casual
+MOUSTACHE | Freddie's 1980s facial hair | casual
+LONDON | City where the band formed in 1970 | casual
+WAYNE'S WORLD | 1992 film whose car scene revived their epic (6,5) | casual
+HIGHLANDER | 1986 film featuring Who Wants to Live Forever | casual
+FOREVER | Who Wants to Live ___, 1986 ballad | casual
+BREAK FREE | I Want to ___, 1984 single (5,4) | casual
+CROWN | Regal headwear Freddie wore to end Magic Tour shows | casual
+FREDDIE | First name of the band's singer | casual
+BOHEMIAN | ___ Rhapsody, 2018 biopic | casual
+LEATHER | Material of Freddie's early-1980s stage jacket | casual
+OPERATIC | Style of the mid-section of their 1975 epic | casual
+ZANZIBAR | Island where Freddie was born in 1946 | casual
+STADIUM | Rock genre of huge venues they ruled | casual
+GELDOF | Bob, organiser of Live Aid | casual
+RED SPECIAL | Guitar Brian built with his father (3,7) | casual
+SIXPENCE | Coin Brian uses as a plectrum | fan
+BULSARA | Freddie's original surname | fan
+MONTREUX | Swiss lakeside town with a statue of Freddie | fan
+NEWS OF THE WORLD | 1977 album with a robot on its cover (4,2,3,5) | fan
+A DAY AT THE RACES | 1976 album named after a Marx Brothers film (1,3,2,3,5) | fan
+JAZZ | 1978 album including Bicycle Race | fan
+INNUENDO | 1991 album and UK No 1 single | fan
+THE MIRACLE | 1989 album with a morphing face cover (3,7) | fan
+THE GAME | 1980 album, their first US No 1 (3,4) | fan
+THE WORKS | 1984 album including Radio Ga Ga (3,5) | fan
+MADE IN HEAVEN | 1995 album released after Freddie's death (4,2,6) | fan
+SEVEN SEAS OF RHYE | 1974 single, their first UK hit (5,4,2,4) | fan
+ALIVE | Keep Yourself ___, 1973 debut single | fan
+ONE VISION | 1985 single written after Live Aid (3,6) | fan
+HAMMER TO FALL | Song from The Works played at Live Aid (6,2,4) | fan
+BARCELONA | 1987 Freddie duet for the city's Olympics | fan
+CABALLE | Montserrat, opera singer who duetted with Freddie | fan
+LAMBERT | Adam, singer touring with the band since 2011 | fan
+RODGERS | Paul, ex-Free singer who toured with the band | fan
+KNEBWORTH | Site of Freddie's last show with the band, August 1986 | fan
+HYDE PARK | London park of their free 1976 concert (4,4) | fan
+CHRISTMAS | Season of their 1975 and 1991 UK No 1s | fan
+ELEKTRA | Their original US record label | fan
+EMI | Their long-time UK record company | fan
+SMILE | Brian and Roger's band before Freddie joined | fan
+ASTROPHYSICS | Subject of Brian's 2007 doctorate | fan
+TRIBUTE | 1992 Wembley concert for Freddie, a ___ Concert | fan
+CREST | Logo Freddie designed using zodiac signs | fan
+BUCKINGHAM | Palace whose roof Brian played from in 2002 | fan
+BADGERS | Animals Brian campaigns to protect | fan
+MR BAD GUY | Freddie's 1985 solo album (2,3,3) | fan
+GREAT PRETENDER | Freddie's 1987 cover of a Platters hit (5,9) | fan
+EALING | London art college where Freddie studied graphics | fan
+DELILAH | Innuendo song about Freddie's cat | fan
+MUNICH | German city where they recorded at Musicland | fan
+LOVE | Crazy Little Thing Called ___, 1979 hit | fan
+DRAG | Costume theme of the I Want to Break Free video | fan
+PHOENIX | Mercury ___ Trust, AIDS charity set up in 1992 | fan
+STEADY | Word before "nine weeks"? No | fan
+FARROKH | Freddie's birth first name | superfan
+IBEX | Freddie's band before he joined Brian and Roger | superfan
+STAFFELL | Tim, singer and bassist of Smile | superfan
+TRIDENT | London studios behind their early recordings | superfan
+ROCKFIELD | Welsh studio where they worked on A Night at the Opera | superfan
+ELTON | Ben, writer of the jukebox musical We Will Rock You | superfan
+DOMINION | West End theatre that hosted their musical from 2002 | superfan
+COSMOS ROCKS | The ___, 2008 album with Paul Rodgers (6,5) | superfan
+HOT SPACE | Funk-flavoured 1982 album (3,5) | superfan
+LIVE KILLERS | 1979 live double album (4,7) | superfan
+SPREAD YOUR WINGS | 1978 single sung from a barman's view (6,4,5) | superfan
+NOW I'M HERE | 1975 single from Sheer Heart Attack (3,2,4) | superfan
+BRIGHTON ROCK | Opening track of Sheer Heart Attack (8,4) | superfan
+STONE COLD CRAZY | Speedy 1974 track later covered by Metallica (5,4,5) | superfan
+OGRE BATTLE | Heavy fantasy track from Queen II (4,6) | superfan
+LIAR | Track from their 1973 debut album | superfan
+DEATH ON TWO LEGS | Opening track of A Night at the Opera (5,2,3,4) | superfan
+MUSTAPHA | Opening track of Jazz | superfan
+HEADLONG | 1991 single from Innuendo, written by Brian | superfan
+MOTHER LOVE | Made in Heaven track with Freddie's final vocals (6,4) | superfan
+PANCHGANI | Indian hill town where Freddie went to boarding school | superfan
+HECTICS | Freddie's school band in India | superfan
+SOUR MILK SEA | Freddie's short-lived pre-Queen band (4,4,3) | superfan
+LUREX | Larry ___, Freddie's 1973 pseudonym | superfan
+DENTISTRY | Subject Roger first studied in London | superfan
+ELECTRONICS | Subject of John's degree | superfan
+DEACY | ___ Amp, John's homemade amplifier | superfan
+SYNTHESISERS | Instruments early sleeves said were not used | superfan
+RAINBOW | Finsbury Park theatre of a famous 1974 live recording | superfan
+EVERETT | Kenny, DJ who championed their 1975 epic | superfan
+BAKER | Roy Thomas ___, producer of their 1970s albums | superfan
+MACK | Producer of The Game and The Works | superfan
+BUDAPEST | City of their 1986 concert behind the Iron Curtain | superfan
+RIO | Rock in ___, 1985 festival they headlined | superfan
+GOWERS | Bruce, director of the 1975 epic's video | superfan
+HOLLYWOOD | US label, ___ Records, from 1991 | superfan
+CROSS | The ___, Roger's side band from 1987 | superfan
+FUN IN SPACE | Roger's 1981 solo album (3,2,5) | superfan
+BACK TO THE LIGHT | Brian's 1992 solo album (4,2,3,5) | superfan
+NO-ONE BUT YOU | 1997 track, John's last with the band (2,3,3,3) | superfan
+HOWE | Steve, Yes guitarist guesting on a 1991 title track | superfan
+GARDEN LODGE | Freddie's Kensington home (6,5) | superfan
+MOUNTAIN | Montreux studio the band bought in 1979 | superfan

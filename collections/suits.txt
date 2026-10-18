@@ -1,0 +1,126 @@
+# Suits: unofficial fan crossword clues
+@title Suits
+@category tv
+@blurb A star Manhattan closer hires a brilliant associate with a secret.
+@icon tv
+HARVEY | Specter, the firm's best closer | casual
+MIKE | Ross, brilliant associate with a secret | casual
+DONNA | Harvey's all-knowing secretary | casual
+JESSICA | Pearson, the firm's managing partner | casual
+LOUIS | Litt, the firm's prickly financial partner | casual
+RACHEL | Zane, paralegal who wins Mike's heart | casual
+HARVARD | Law school Mike claims he attended | casual
+MANHATTAN | New York borough where the firm sits | casual
+LAWYER | What Mike pretends to be, legally | casual
+PARALEGAL | Rachel's job at the start | casual
+ASSOCIATE | Mike's role at the firm at first | casual
+CLOSER | Harvey's reputation: best ___ in the city | casual
+MEGHAN MARKLE | Actress who played Rachel (6,6) | casual
+GABRIEL MACHT | Actor who played Harvey (7,5) | casual
+PATRICK J ADAMS | Actor who played Mike (7,1,5) | casual
+SARAH RAFFERTY | Actress who played Donna (5,8) | casual
+GINA TORRES | Actress who played Jessica (4,6) | casual
+RICK HOFFMAN | Actor who played Louis (4,7) | casual
+MEMORY | Mike's photographic gift | casual
+FRAUD | Mike's big secret crime | casual
+PRISON | Where Mike serves time | casual
+SEATTLE | City Mike and Rachel move to | casual
+LITT UP | Gloating catchphrase: "You just got ___!" (4,2) | casual
+USA | Cable network that aired the show | casual
+NEW YORK | City where the firm is based (3,4) | casual
+LAW FIRM | Pearson Hardman, for one (3,4) | casual
+DEGREE | Credential Mike never actually earned | casual
+SUIT | Harvey's sharp everyday wear | casual
+BICYCLE | Mike's way around town | casual
+TREVOR | Mike's bad-influence best friend | casual
+SPECTER | Harvey's surname | casual
+ROSS | Mike's surname | casual
+PEARSON | Jessica's surname | casual
+LITT | Louis's surname | casual
+ZANE | Rachel's surname | casual
+PAULSEN | Donna's surname | casual
+MARIJUANA | Contents of the briefcase at Mike's interview | casual
+LSAT | Law exam Mike took for others for cash | casual
+PARTNER | Rank every associate wants to make | casual
+WEDDING | Mike and Rachel's big day, with Harvey there | casual
+LEGAL DRAMA | Genre of the show (5,5) | casual
+SECRETARY | Donna's job title at the start | casual
+NINE | Number of seasons it ran | casual
+SCOTTIE | Harvey's ex and courtroom rival | fan
+KATRINA | Bennett, associate who rises to partner | fan
+ALEX | Williams, Harvey's old friend who joins as partner | fan
+SAMANTHA | Wheeler, tough newcomer partner | fan
+ROBERT | Zane, Rachel's powerful father | fan
+HARDMAN | Daniel, the ousted co-founder | fan
+TRAVIS | Tanner, Harvey's slick rival lawyer | fan
+DARBY | Edward, the British merger partner | fan
+SHEILA | Sazs, Harvard admissions officer Louis loves | fan
+HAROLD | Hapless associate Louis torments | fan
+PAULA | Agard, Harvey's therapist | fan
+CAHILL | Sean, the SEC lawyer | fan
+MUDDING | Louis's beloved spa ritual | fan
+EIDETIC | Type of memory Mike has | fan
+CHICAGO | City Jessica moves to | fan
+MARCUS | Harvey's younger brother | fan
+GORDON | Harvey's father, a musician | fan
+KATHERINE HEIGL | Actress who played Samantha (9,5) | fan
+DULE HILL | Actor who played Alex (4,4) | fan
+COLUMBIA | Law school Rachel attends | fan
+NAME PARTNER | Title whose surname goes on the door (4,7) | fan
+GRAMMY | Mike's beloved grandmother, to him | fan
+LOGAN | Rachel's ex, ___ Sanders | fan
+FORSTMAN | Charles, the ruthless investor | fan
+DANBURY | Federal prison where Mike is held | fan
+SOLOFF | Jack, partner who schemes against Jessica | fan
+TANNER | Travis's surname | fan
+KORSH | Aaron, creator of the show | fan
+TORONTO | Canadian city where it was filmed | fan
+NORMA | Louis's longtime assistant | fan
+CAN OPENER | Harvey and Donna's victory ritual (3,6) | fan
+CLINIC | Legal aid office Mike runs after prison | fan
+DISBARRED | Jessica's fate after leaving the firm | fan
+GRETCHEN | Harvey's no-nonsense later assistant | fan
+JENNY | Trevor's girlfriend, who dates Mike | fan
+WHEELER | Samantha's surname | fan
+BENNETT | Katrina's surname | fan
+WILLIAMS | Alex's surname | fan
+SENIOR PARTNER | Harvey's rank at the start (6,7) | fan
+LONDON | City where Darby's firm is based | fan
+JAZZ | Music Harvey's father played | fan
+EDITH | Mike's grandmother's first name | superfan
+LIPSCHITZ | Stan, Louis's therapist | superfan
+SAZS | Sheila's surname | superfan
+KYLE | Smug fellow associate who needles Mike | superfan
+GALLO | Frank, Mike's prison nemesis | superfan
+KEVIN | Mike's cellmate who needs a deal | superfan
+ESTHER | Louis's sister | superfan
+LILY | Harvey's mother | superfan
+SAXOPHONE | Instrument of Harvey's father | superfan
+TARA | Messer, the architect Louis dates | superfan
+OLIVER | Grady, Mike's protege at the clinic | superfan
+GIBBS | Anita, prosecutor who pursues Mike | superfan
+FAYE | Richardson, the bar watchdog of season eight | superfan
+CAMERON | Dennis, Harvey's old DA boss | superfan
+SIDWELL | Jonathan, investment banker who hires Mike | superfan
+RAY | Harvey's trusted driver | superfan
+AVA | Hessington, oil executive client | superfan
+HESSINGTON | Ava's surname, also her oil firm's name | superfan
+VINYL | Format of Harvey's record collection | superfan
+WENDELL PIERCE | Actor who played Robert Zane (7,6) | superfan
+AMANDA SCHULL | Actress who played Katrina (6,6) | superfan
+DAVID COSTABILE | Actor who played Daniel Hardman (5,9) | superfan
+DENNIS | Cameron's surname | superfan
+MALONE | Jeff, Jessica's SEC boyfriend | superfan
+BODINSKI | Gretchen's surname | superfan
+GUNDERSON | Harold's surname | superfan
+AGARD | Paula's surname | superfan
+MESSER | Tara's surname | superfan
+GRADY | Oliver's surname | superfan
+SANDERS | Logan's surname | superfan
+RICHARDSON | Faye's surname | superfan
+SCOTT | Dana ___, Harvey's Harvard Law rival | superfan
+DANA | Scottie's real first name | superfan
+BRATTON GOULD | Rival firm Alex leaves to join Harvey (7,5) | superfan
+ZOE | Lawford, Harvey's romance in season three | superfan
+CLIFFORD | Danner, wrongly convicted man Harvey helps | superfan
+BENJAMIN | Firm's in-house tech whiz | superfan

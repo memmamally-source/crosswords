@@ -1,0 +1,137 @@
+# NBA: unofficial sport crossword clues
+@title NBA
+@category sport
+@blurb Pro basketball: teams, legends, arenas and big shots.
+@icon ball
+JORDAN | Michael ___, six-time champion with Chicago | casual
+JAMES | LeBron ___, champion with Miami, Cleveland and the Lakers | casual
+BRYANT | Kobe ___, Lakers great with five rings | casual
+CURRY | Stephen ___, Warriors guard, MVP in 2015 and 2016 | casual
+O'NEAL | Shaquille ___, giant center called Shaq | casual
+MAGIC | ___ Johnson, Lakers point guard of the 1980s | casual
+BIRD | Larry ___, Celtics forward of the 1980s | casual
+ABDUL-JABBAR | Kareem ___, center with six MVP awards (5-6) | casual
+CHAMBERLAIN | Wilt ___, scored 100 points in a 1962 game | casual
+RUSSELL | Bill ___, Celtics center with 11 championships | casual
+DUNCAN | Tim ___, Spurs big man with five titles | casual
+LAKERS | Purple-and-gold Los Angeles franchise | casual
+CELTICS | Boston franchise, champions in 2024 | casual
+BULLS | Chicago franchise | casual
+WARRIORS | Golden State franchise | casual
+KNICKS | New York franchise at Madison Square Garden | casual
+HEAT | Miami franchise | casual
+SPURS | San Antonio franchise | casual
+NETS | Brooklyn franchise | casual
+ROCKETS | Houston franchise | casual
+PISTONS | Detroit franchise | casual
+SUNS | Phoenix franchise | casual
+JAZZ | Utah franchise that began in New Orleans | casual
+CLIPPERS | Los Angeles franchise that is not the Lakers | casual
+RAPTORS | Toronto franchise, champions in 2019 | casual
+MAVERICKS | Dallas franchise, champions in 2011 | casual
+CAVALIERS | Cleveland franchise, champions in 2016 | casual
+SIXERS | Philadelphia franchise, informally | casual
+SLAM DUNK | Shot hammered down through the hoop (4,4) | casual
+REBOUND | Ball recovered after a missed shot | casual
+ASSIST | Pass that leads to a basket | casual
+STEAL | Taking the ball from an opponent | casual
+DRIBBLE | Bounce the ball while moving | casual
+LAYUP | Close-range shot off the backboard | casual
+FREE THROW | Unguarded shot from the foul line (4,5) | casual
+TRIPLE DOUBLE | Ten or more in three statistical categories (6,6) | casual
+ALLEY OOP | Lob caught and slammed in mid-air (5-3) | casual
+BUZZER BEATER | Shot that goes in as time expires (6,6) | casual
+JUMP BALL | Tip-off contest between two players (4,4) | casual
+ROOKIE | First-year player | casual
+DRAFT | Annual selection of new players | casual
+MVP | Most valuable player award, by its initials | casual
+DREAM TEAM | US Olympic basketball squad of 1992 (5,4) | casual
+SPACE JAM | 1996 basketball film with Bugs Bunny (5,3) | casual
+ERVING | Julius ___, high-flying Dr J | fan
+IVERSON | Allen ___, 76ers guard, MVP in 2001 | fan
+NOWITZKI | Dirk ___, German forward, Finals MVP in 2011 | fan
+GARNETT | Kevin ___, MVP with Minnesota in 2004 | fan
+PIPPEN | Scottie ___, Michael's sidekick for six Chicago titles | fan
+RODMAN | Dennis ___, rebounding specialist with dyed hair | fan
+MALONE | Karl ___, Utah forward called the Mailman | fan
+STOCKTON | John ___, Utah point guard from Gonzaga | fan
+OLAJUWON | Hakeem ___, Houston center, top pick in 1984 | fan
+EWING | Patrick ___, Knicks center from Georgetown | fan
+BARKLEY | Charles ___, MVP with Phoenix in 1993 | fan
+NASH | Steve ___, Canadian MVP in 2005 and 2006 | fan
+HARDEN | James ___, Houston guard, MVP in 2018 | fan
+WESTBROOK | Point guard who was MVP in 2017 with 42 triple-doubles | fan
+DURANT | Kevin ___, Finals MVP in 2017 and 2018 | fan
+LEONARD | Kawhi ___, Finals MVP in 2014 and 2019 | fan
+JOKIC | Nikola ___, Serbian center, Finals MVP in 2023 | fan
+EMBIID | Joel ___, Cameroonian center, MVP in 2023 | fan
+WADE | Dwyane ___, Finals MVP in 2006 | fan
+PIERCE | Paul ___, Finals MVP in 2008 | fan
+ALLEN | Ray ___, hit a famous corner three in the 2013 Finals | fan
+BROWN | Jaylen ___, Finals MVP in 2024 | fan
+CARTER | Vince ___, winner of the 2000 dunk contest | fan
+MILLER | Reggie ___, Pacers sharpshooter | fan
+THOMAS | Isiah ___, point guard of Detroit's Bad Boys | fan
+WEST | Jerry ___, Lakers great whose silhouette is said to be the logo | fan
+YAO | ___ Ming, Chinese center for the Rockets | fan
+WEMBANYAMA | Victor ___, French center, top draft pick in 2023 | fan
+ANTETOKOUNMPO | Giannis ___, Greek Freak, Finals MVP in 2021 | fan
+NAISMITH | James ___, inventor of basketball in 1891 | fan
+SPRINGFIELD | Massachusetts city where basketball was invented | fan
+AUERBACH | Red ___, cigar-smoking Celtics coach | fan
+JACKSON | Phil ___, coach with 11 championships | fan
+POPOVICH | Gregg ___, Spurs coach from 1996 | fan
+RILEY | Pat ___, slick-haired coach of the 1980s Lakers | fan
+KERR | Steve ___, Warriors coach from 2014 | fan
+BAD BOYS | Nickname of Detroit's 1989 and 1990 champions (3,4) | fan
+SHOWTIME | Fast-breaking style of the 1980s Lakers | fan
+SPLASH BROTHERS | Nickname of Golden State's sharpshooting backcourt duo (6,8) | fan
+SHOT CLOCK | 24-second timer introduced in 1954 (4,5) | fan
+SIXTH MAN | Award for the best player off the bench (5,3) | fan
+LOTTERY | Draw for the top draft picks, used since 1985 | fan
+SKYHOOK | Kareem's signature sweeping shot | fan
+UNITED CENTER | Chicago arena since 1994 (6,6) | fan
+STAPLES CENTER | Lakers' home arena from 1999 to 2021 (7,6) | fan
+THUNDER | Oklahoma City franchise since 2008 | fan
+MIKAN | George ___, Minneapolis Lakers star of the late 1940s | superfan
+COUSY | Bob ___, Celtics point guard of the 1950s | superfan
+ROBERTSON | Oscar ___, averaged a triple-double in 1961-62 | superfan
+BAYLOR | Elgin ___, scored 61 points in a 1962 Finals game | superfan
+HAVLICEK | John ___, who famously stole the ball in 1965 | superfan
+PETTIT | Bob ___, the first league MVP in 1956 | superfan
+MARAVICH | Pete ___, the Pistol | superfan
+DUMARS | Joe ___, Finals MVP in 1989 | superfan
+WORTHY | James ___, Big Game James, Finals MVP in 1988 | superfan
+MCHALE | Kevin ___, Celtics forward of the 1980s | superfan
+PARISH | Robert ___, Celtics center called the Chief | superfan
+WALTON | Bill ___, center of Portland's 1977 champions | superfan
+GERVIN | George ___, Spurs scorer called the Iceman | superfan
+ROBINSON | David ___, Spurs center called the Admiral | superfan
+PARKER | Tony ___, French guard, Finals MVP in 2007 | superfan
+GINOBILI | Manu ___, Argentine sixth man for San Antonio | superfan
+IGUODALA | Andre ___, Finals MVP off the bench in 2015 | superfan
+BILLUPS | Chauncey ___, Finals MVP in 2004 | superfan
+BOSH | Chris ___, member of Miami's Big Three from 2010 | superfan
+ROSE | Derrick ___, youngest MVP, in 2011 | superfan
+SPOELSTRA | Erik ___, Heat coach for the 2012 and 2013 titles | superfan
+DALY | Chuck ___, coach of Detroit's Bad Boys | superfan
+SUPERSONICS | Seattle franchise until 2008 | superfan
+BOBCATS | Charlotte franchise's name from 2004 to 2014 | superfan
+BULLETS | Washington franchise's name until 1997 | superfan
+ROYALS | Kings' name in Rochester and Cincinnati | superfan
+BRAVES | Buffalo franchise that became the Clippers | superfan
+MINNEAPOLIS | Original home of the Lakers | superfan
+FORUM | Inglewood arena of the Showtime Lakers | superfan
+BOSTON GARDEN | Celtics' home until 1995 (6,6) | superfan
+ORACLE ARENA | Warriors' Oakland home until 2019 (6,5) | superfan
+CHASE CENTER | San Francisco arena opened in 2019 (5,6) | superfan
+SEVENTY TWO | Wins by the 1995-96 Bulls (7,3) | superfan
+SEVENTY THREE | Wins by the 2015-16 Warriors (7,5) | superfan
+BAA | League that merged with the NBL in 1949, by its initials | superfan
+ABA | Rival league with a red, white and blue ball | superfan
+NUGGETS | Denver franchise, champions in 2023 | superfan
+BUCKS | Milwaukee franchise, champions in 1971 and 2021 | superfan
+PELICANS | New Orleans franchise | superfan
+TIMBERWOLVES | Minnesota franchise | superfan
+HAWKS | Atlanta franchise | superfan
+WIZARDS | Washington franchise | superfan

@@ -90,7 +90,7 @@ GRAYSON | Dick ___, the first Robin | fan
 JASON TODD | Second Robin (5,4) | fan
 BIZARRO | Flawed, backwards-talking Superman duplicate | fan
 FORTRESS | Superman's Arctic ___ of Solitude | fan
-LEXCORP | Luthor's company | superfan
+LEXCORP | Luthor's company | fan
 DAWES | Rachel ___, Bruce's childhood friend in Nolan's films | superfan
 FALCONE | Carmine ___, Gotham mob boss | superfan
 THEMYSCIRA | Island home of the Amazons | fan
@@ -100,7 +100,7 @@ JOE CHILL | Mugger who killed Thomas and Martha Wayne (3,5) | superfan
 PENNYWORTH | Alfred's surname | superfan
 DETECTIVE | ___ Comics, title where Batman debuted in 1939 | superfan
 ACTION | ___ Comics, title where Superman debuted in 1938 | superfan
-FINGER | Bill ___, uncredited co-creator of Batman | superfan
+FINGER | Bill ___, long-uncredited co-creator of Batman | superfan
 SIEGEL | Jerry ___, writer who co-created Superman | superfan
 SHUSTER | Joe ___, artist who co-created Superman | superfan
 MARSTON | William Moulton ___, Wonder Woman's creator | superfan

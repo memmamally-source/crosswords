@@ -1,0 +1,125 @@
+# The Big Bang Theory: unofficial fan crossword clues
+@title The Big Bang Theory
+@category tv
+@blurb Brilliant, awkward scientists and their neighbour in Pasadena.
+@icon planet
+SHELDON | Socially awkward genius with strict routines | casual
+LEONARD | Bespectacled scientist who falls for his neighbour | casual
+PENNY | Aspiring actress living across the hall | casual
+HOWARD | Aerospace whiz who lives with his mother | casual
+RAJ | Astrophysicist who can't talk to women sober | casual
+AMY | Sheldon's girlfriend, ___ Farrah Fowler | casual
+BERNADETTE | Squeaky-voiced scientist who marries Howard | casual
+COOPER | Sheldon's surname | casual
+HOFSTADTER | Leonard's surname | casual
+WOLOWITZ | Howard's surname | casual
+KOOTHRAPPALI | Raj's surname | casual
+BAZINGA | Sheldon's prank-reveal catchphrase | casual
+CALTECH | University where the guys work | casual
+PASADENA | California city where they live | casual
+PHYSICIST | Sheldon's profession | casual
+SPOCK | Rock-paper-scissors-lizard-___ | casual
+KNOCK | Sheldon does it three times at Penny's door | casual
+SOFT KITTY | Song Sheldon wants when he's sick (4,5) | casual
+ELEVATOR | Long-broken fixture in the apartment building | casual
+CHEESECAKE | ___ Factory, where Penny waitresses | casual
+SPOT | Sheldon's sacred place on the couch | casual
+ASTRONAUT | Role Howard takes on for a space trip | casual
+ENGINEER | Howard's profession | casual
+NEBRASKA | Penny's home state | casual
+TEXAS | Sheldon's home state | casual
+COMIC BOOK | Kind of store the guys haunt (5,4) | casual
+STAR TREK | Sci-fi franchise Sheldon idolises (4,4) | casual
+STAR WARS | Galactic saga the guys debate endlessly (4,4) | casual
+ROOMMATE | Sheldon's role to Leonard, by written agreement | casual
+ACTRESS | Penny's dream career | casual
+WAITRESS | Penny's day job | casual
+LAUNDRY | Chore that brings Sheldon and Penny together | casual
+HALO | Video game of the guys' weekly night | casual
+TRAIN | Mode of transport Sheldon adores | casual
+FLASH | Speedy DC hero all the guys dress as at once | casual
+GENIUS | Sheldon's IQ-backed self-description | casual
+STAIRS | What everyone climbs since the lift broke | casual
+DRIVING | Skill Sheldon never masters | casual
+WHITEBOARD | Sheldon's favourite surface for equations | casual
+NOBEL | Prize Sheldon dreams of winning | casual
+STUART | Glum, struggling shop owner the guys frequent | fan
+KRIPKE | Barry, Sheldon's rival with a speech impediment | fan
+WHEATON | Wil, Sheldon's nemesis playing himself | fan
+WINKLE | Leslie, Leonard's abrasive colleague | fan
+PRIYA | Raj's sister who dates Leonard | fan
+ZACK | Penny's dim, handsome boyfriend | fan
+EMILY | Dermatologist Raj dates | fan
+LUCY | Anxious woman Raj dates | fan
+BERT | Lonely geologist at the university | fan
+MEEMAW | Sheldon's beloved grandmother | fan
+MARY | Sheldon's devout mother | fan
+BEVERLY | Leonard's cold psychiatrist mother | fan
+MISSY | Sheldon's twin sister | fan
+CINNAMON | Raj's pampered dog | fan
+MUTISM | Raj's selective condition around women | fan
+MIT | Howard's alma mater | fan
+MAGIC | Howard's hobby of tricks | fan
+HALLEY | Howard and Bernadette's daughter | fan
+HAWKING | Stephen, Sheldon's idol who appears | fan
+FUN WITH FLAGS | Sheldon's web show (3,4,5) | fan
+STRING THEORY | Sheldon's field before he switches (6,6) | fan
+LASER | Beam bounced off the moon from the roof | fan
+HOT DOGS | Cut into spaghetti, Sheldon-style (3,4) | fan
+SHAMY | Couple nickname for Sheldon and Amy | fan
+VEGAS | Where Leonard and Penny elope | fan
+NEUROBIOLOGIST | Amy's profession | fan
+MICROBIOLOGIST | Bernadette's profession | fan
+THEORETICAL | Kind of physicist Sheldon is | fan
+EXPERIMENTAL | Kind of physicist Leonard is | fan
+INDIA | Raj's home country | fan
+PARSONS | Jim who plays Sheldon | fan
+GALECKI | Johnny who plays Leonard | fan
+CUOCO | Kaley who plays Penny | fan
+HELBERG | Simon who plays Howard | fan
+NAYYAR | Kunal who plays Raj | fan
+BIALIK | Mayim who plays Amy | fan
+RAUCH | Melissa who plays Bernadette | fan
+ALEX | Sheldon's assistant who asks Leonard out | fan
+RELATIONSHIP | ___ Agreement, Sheldon and Amy's contract | fan
+SALES | Penny's later career at a drug company | fan
+KURT | Penny's hulking ex-boyfriend | fan
+LACTOSE | Leonard's dairy intolerance | fan
+ARCTIC | Region of Sheldon's research expedition | fan
+ASYMMETRY | Super-___, Sheldon and Amy's prizewinning theory | superfan
+GABLEHAUSER | Department head who fires Sheldon early on | superfan
+SIEBERT | University president always courting donors | superfan
+THEREMIN | Electronic instrument Sheldon plays | superfan
+MANDARIN | Language Sheldon studies over a chicken dispute | superfan
+BOGGLE | Klingon ___, one of Sheldon's games | superfan
+WYATT | Penny's father | superfan
+ALFRED | Leonard's father | superfan
+NEW DELHI | Raj's hometown (3,5) | superfan
+SOYUZ | Russian craft that carries Howard to space | superfan
+FROOT LOOPS | Howard's mocking NASA nickname (5,5) | superfan
+DEBBIE | First name of Howard's mostly unseen mother | superfan
+TAM | Sheldon's childhood friend he left behind | superfan
+NEIL | Howard and Bernadette's son, ___ Michael | superfan
+DENISE | Employee Stuart hires at his store | superfan
+SERIAL APE-IST | Penny's B-movie role (6,3-3) | superfan
+GEORGE | Sheldon's late father | superfan
+RANDALL | Penny's brother | superfan
+PROTON | Professor ___, Sheldon's childhood TV hero | superfan
+NEWHART | Bob who plays that childhood TV hero | superfan
+ANU | Raj's fiancee in an arranged match | superfan
+JONES | James Earl ___, who spends a wild night with Sheldon | superfan
+HAMILL | Mark who officiates Sheldon's wedding | superfan
+NYE | Bill, a science guy cameo | superfan
+LEE | Stan who serves Sheldon a restraining order | superfan
+MASSIMINO | Real astronaut who teases Howard | superfan
+SPINER | Brent, Data actor in a cameo | superfan
+MUSK | Elon, a soup-kitchen cameo | superfan
+GATES | Bill, Microsoft founder Penny meets | superfan
+STEPHANIE | Doctor Leonard dates who moves in quickly | superfan
+JOYCE | ___ Kim, scientist who defects from North Korea | superfan
+SUSI | Carol Ann who voices Howard's mother | superfan
+METCALF | Laurie who plays Sheldon's mother | superfan
+BARANSKI | Christine who plays Leonard's mother | superfan
+CARRADINE | Keith who plays Penny's father | superfan
+HIRSCH | Judd who plays Leonard's father | superfan
+SUSSMAN | Kevin who plays the comic store owner | superfan

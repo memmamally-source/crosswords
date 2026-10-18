@@ -1,0 +1,130 @@
+# The Legend of Zelda: unofficial fan crossword clues
+@title The Legend of Zelda
+@category gaming
+@blurb Hyrule, the Triforce and a hero dressed in green.
+@icon gamepad
+LINK | Green-clad hero of the series | casual
+ZELDA | Princess whose name is in the series title | casual
+GANONDORF | Gerudo King of Evil | casual
+HYRULE | Kingdom where most of the games are set | casual
+TRIFORCE | Sacred relic of three golden triangles | casual
+MASTER SWORD | Blade of evil's bane (6,5) | casual
+NAVI | Fairy companion who cries "Hey! Listen!" | casual
+EPONA | The hero's trusty horse | casual
+RUPEE | Gem-shaped currency | casual
+HYLIAN SHIELD | Iconic blue defence bearing a red bird crest (6,6) | casual
+OCARINA | Wind instrument used to play magic songs | casual
+BOOMERANG | Curved weapon that returns when thrown | casual
+HOOKSHOT | Spring-loaded chain grappling hook | casual
+BOMB | Explosive used to open cracked walls | casual
+FAIRY | Tiny winged healer that revives you when you fall | casual
+HEART CONTAINER | Boss reward that boosts your maximum life (5,9) | casual
+GORON | Rock-eating mountain race | casual
+ZORA | Aquatic fish-like race | casual
+KOKIRI | Forest children who never grow up | casual
+GERUDO | Desert race of warrior women | casual
+CUCCO | Chicken that attacks in swarms if you hit it | casual
+OCTOROK | Rock-spitting octopus foe | casual
+BREATH OF THE WILD | 2017 open-air Switch adventure (6,2,3,4) | casual
+NINTENDO | Publisher of the series | casual
+MIYAMOTO | Co-creator of the series | casual
+DUNGEON | Puzzle-filled location with a boss and a big key | casual
+BOTTLE | Glass container for potions | casual
+DEKU | Great ___ Tree, guardian of the forest | casual
+TUNIC | Green garment the hero wears | casual
+SLINGSHOT | Young hero's seed-firing weapon | casual
+BOW | Weapon that fires arrows | casual
+POTION | Red ___, drink that restores hearts | casual
+OCARINA OF TIME | 1998 Nintendo 64 classic (7,2,4) | casual
+GREAT FAIRY | Towering fountain spirit who grants upgrades (5,5) | casual
+LOST WOODS | Mazelike forest the Kokiri warn you about (4,5) | casual
+DEATH MOUNTAIN | Volcano home of the Gorons (5,8) | casual
+KEESE | Bat foe that swoops at you | casual
+BOKOBLIN | Common pig-snouted club-wielding foe | casual
+WOLF | Beast form the hero takes in Twilight Princess | casual
+HYRULE CASTLE | Royal seat of the kingdom (6,6) | casual
+SHEIKAH SLATE | Tablet-like device of Breath of the Wild (7,5) | casual
+MOBLIN | Large spear-wielding foe | casual
+GANON | Pig-like beast form of the Gerudo king | fan
+IMPA | Sheikah guardian of the princess | fan
+SHEIK | Mysterious masked warrior who teaches songs in Ocarina of Time | fan
+MIDNA | Imp-like companion in Twilight Princess | fan
+TINGLE | Map-selling man in a green fairy suit | fan
+SKULL KID | Masked imp who torments Termina (5,3) | fan
+MAJORA | ___'s Mask, 2000 Nintendo 64 sequel | fan
+TETRA | Young pirate captain of the Great Sea | fan
+WIND WAKER | Conductor's baton of the flooded ocean (4,5) | fan
+TWILIGHT | ___ Princess, 2006 entry | fan
+SKYWARD | ___ Sword, 2011 Wii entry | fan
+MINISH | The ___ Cap, Game Boy Advance entry | fan
+GREAT SEA | Flooded ocean setting of the GameCube toon entry (5,3) | fan
+KOROK | Leafy forest spirit that hides seeds | fan
+MIPHA | Zora Champion with a healing power | fan
+DARUK | Goron Champion | fan
+REVALI | Rito Champion | fan
+URBOSA | Gerudo Champion | fan
+RITO | Bird-like race | fan
+SHEIKAH | Ninja-like tribe with an eye symbol | fan
+CALAMITY GANON | Malice-spewing foe of Breath of the Wild (8,5) | fan
+DIVINE BEAST | Giant ancient machine like Vah Ruta (6,5) | fan
+SHRINE | Bite-sized puzzle chamber of Breath of the Wild | fan
+KAKARIKO | Village founded by the Sheikah | fan
+LON LON RANCH | Farm run by Talon (3,3,5) | fan
+MALON | Singing ranch girl who teaches a horse's song | fan
+STALFOS | Skeleton swordsman foe | fan
+LIKE LIKE | Tube-shaped foe that swallows shields (4,4) | fan
+LIZALFOS | Agile lizard warrior foe | fan
+DARKNUT | Heavily armored knight foe | fan
+SARIA | Kokiri friend who plays a tune in the forest | fan
+DARUNIA | Goron chief and sworn brother of the hero | fan
+RUTO | Zora princess with a crush on the hero | fan
+NABOORU | Gerudo thief who opposes her king | fan
+SONG OF TIME | Tune that resets the three days in Termina (4,2,4) | fan
+LENS OF TRUTH | Item that reveals hidden things (4,2,5) | fan
+FARORE | Goddess of Courage | fan
+DIN | Goddess of Power | fan
+NAYRU | Goddess of Wisdom | fan
+PURAH | Sheikah scientist of Breath of the Wild | fan
+GHIRAHIM | Flamboyant Demon Lord of Skyward Sword | fan
+SKYLOFT | Floating island home in Skyward Sword | fan
+TERMINA | Parallel land of Majora's Mask | superfan
+CLOCK TOWN | Central settlement of Termina (5,4) | superfan
+KING OF RED LIONS | Talking boat that sails the flooded ocean (4,2,3,5) | superfan
+TALON | Sleepy owner of a ranch | superfan
+INGO | Ranch hand who seizes control of the farm | superfan
+AGAHNIM | Wizard villain of A Link to the Past | superfan
+VAATI | Wind sorcerer of The Minish Cap | superfan
+EZLO | Talking cap companion in The Minish Cap | superfan
+ZANT | Usurper King of the Twili | superfan
+DEMISE | Primal demon king of Skyward Sword | superfan
+GROOSE | Pompadoured rival in Skyward Sword | superfan
+KAEPORA GAEBORA | Wise owl who gives long-winded advice (7,7) | superfan
+BEEDLE | Travelling merchant seen across many games | superfan
+DAMPÉ | Gravekeeper of Kakariko | superfan
+GOLD SKULLTULA | Spider foe whose tokens you collect (4,10) | superfan
+LONGSHOT | Upgraded hookshot with double the reach | superfan
+BIGGORON | Giant Goron who forges a two-handed sword | superfan
+DODONGO | Fire-breathing lizard boss weak to bombs | superfan
+GOHMA | One-eyed arachnid boss inside the Deku Tree | superfan
+BARINADE | Jellyfish-like boss inside Lord Jabu-Jabu | superfan
+VOLVAGIA | Lava dragon boss of the Fire Temple | superfan
+MORPHA | Water-tentacle boss of the Water Temple | superfan
+BONGO BONGO | Drum-beating boss of the Shadow Temple (5,5) | superfan
+TWINROVA | Witch-sisters boss of the Spirit Temple | superfan
+KOUME | Fire-wielding half of the witch sisters | superfan
+VAH RUTA | Elephant-shaped Divine Beast (3,4) | superfan
+VAH MEDOH | Bird-shaped Divine Beast (3,5) | superfan
+HESTU | Maraca-shaking Korok | superfan
+KASS | Accordion-playing Rito bard | superfan
+PAYA | Shy Sheikah girl of Kakariko in Breath of the Wild | superfan
+ZONAI | Ancient sky race central to Tears of the Kingdom | superfan
+RAURU | First king of Hyrule in Tears of the Kingdom | superfan
+MEDLI | Rito girl who becomes the Sage of Earth | superfan
+MAKAR | Korok who becomes the Sage of Wind | superfan
+ORDON | Hero's home village in Twilight Princess | superfan
+ILIA | Childhood friend in Twilight Princess | superfan
+LANAYRU | Province named after a Light Spirit | superfan
+KOHOLINT | Dream island of Link's Awakening | superfan
+MARIN | Singing girl of Koholint Island | superfan
+WIND FISH | Giant whale dreaming an island into being (4,4) | superfan
+LOFTWING | Giant bird ridden in Skyward Sword | superfan

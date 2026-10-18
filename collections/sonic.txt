@@ -35,12 +35,12 @@ MOUSTACHE | The doctor's famous facial hair | casual
 BADNIK | Generic name for the doctor's robot enemies | casual
 MONITOR | TV-like item box | casual
 GAME OVER | What appears when lives run out (4,4) | casual
-DREAMCAST | Sega console that launched Sonic Adventure | casual
+DREAMCAST | Sega console that was home to Sonic Adventure | casual
 SPEED | The hero's defining trait | casual
 TORNADO | Tails's biplane | casual
 DEATH EGG | The doctor's giant space station (5,3) | casual
 CHAO | Cute virtual pets raised in gardens | casual
-METAL SONIC | Robotic double from Sonic CD (5,5) | casual
+METAL SONIC | Robotic double who debuted on Sega CD in 1993 (5,5) | casual
 JAMES MARSDEN | Actor playing the sheriff in the films (5,7) | casual
 SPECIAL STAGE | Bonus level for winning an emerald (7,5) | casual
 MOBIUS | Planet in Western comics and cartoons | casual
@@ -114,14 +114,14 @@ CARNIVAL NIGHT | Third game's zone with an infamous barrel (8,5) | superfan
 MUSHROOM HILL | First zone of Sonic & Knuckles (8,4) | superfan
 SANDOPOLIS | Desert pyramid zone of Sonic & Knuckles | superfan
 LAVA REEF | Volcanic zone of Sonic & Knuckles (4,4) | superfan
-SPEED HIGHWAY | Night-time city stage in Sonic Adventure (5,7) | superfan
+SPEED HIGHWAY | Skyscraper stage in Sonic Adventure (5,7) | superfan
 STATION SQUARE | Sonic Adventure's city hub (7,6) | superfan
 MYSTIC RUINS | Sonic Adventure's jungle hub (6,5) | superfan
 BIOLIZARD | Prototype life form fought at the end of SA2 | superfan
 MOTOBUG | Ladybug-like robot from the first zone | superfan
 BUZZ BOMBER | Wasp-like robot from the first game (4,6) | superfan
 CRABMEAT | Crab-like robot from the first game | superfan
-STAR POST | Checkpoint lamp post (4,4) | superfan
+STAR POST | Checkpoint lamp that saves progress (4,4) | superfan
 SOUTH ISLAND | Setting of the first game (5,6) | superfan
 WEST SIDE ISLAND | Setting of the second game (4,4,6) | superfan
 DONUT LORD | The hero's nickname for the sheriff (5,4) | superfan

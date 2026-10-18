@@ -1,0 +1,131 @@
+# The Beatles: unofficial music crossword clues
+@title The Beatles
+@category music
+@blurb Four lads from Liverpool, Abbey Road and Beatlemania.
+@icon note
+LENNON | John, rhythm guitarist and co-writer | casual
+MCCARTNEY | Paul, bassist and co-writer | casual
+HARRISON | George, lead guitarist | casual
+RINGO | Drummer who joined in 1962 | casual
+LIVERPOOL | Home city of the Fab Four | casual
+ABBEY ROAD | 1969 album named after a London street (5,4) | casual
+CAVERN | Liverpool club where they played nearly 300 times | casual
+HELP | 1965 album and film, with an exclamation mark | casual
+YESTERDAY | 1965 McCartney ballad with a string quartet | casual
+LET IT BE | Album released in 1970, after the split (3,2,2) | casual
+HEY JUDE | Seven-minute single of 1968 (3,4) | casual
+YELLOW SUBMARINE | 1966 song sung by Ringo, later an animated film (6,9) | casual
+PENNY LANE | Liverpool street named in a 1967 single (5,4) | casual
+REVOLVER | 1966 album with a cover drawn by Klaus Voormann | casual
+SGT PEPPER | Short name for the 1967 album with a famous collage cover (3,6) | casual
+WHITE ALBUM | Nickname of the 1968 double LP (5,5) | casual
+BEATLEMANIA | Fan frenzy of the early 1960s | casual
+FAB FOUR | Nickname for the band (3,4) | casual
+EPSTEIN | Brian, the band's manager from 1962 | casual
+YOKO | ___ Ono, John's wife and collaborator | casual
+WINGS | Paul's 1970s band | casual
+IMAGINE | John's 1971 solo album and title song | casual
+RUBBER SOUL | 1965 album with a stretched photo on its cover (6,4) | casual
+ELEANOR RIGBY | 1966 song about lonely people (7,5) | casual
+MICHELLE | Rubber Soul ballad with French words | casual
+SOMETHING | Harrison love song on Abbey Road | casual
+HERE COMES THE SUN | Harrison's sunny Abbey Road song (4,5,3,3) | casual
+TICKET TO RIDE | 1965 single from the film Help! (6,2,4) | casual
+COME TOGETHER | Opening track of Abbey Road (4,8) | casual
+BLACKBIRD | Acoustic McCartney song on the White Album | casual
+ROOFTOP | Site of their last public performance, January 1969 | casual
+A HARD DAY'S NIGHT | 1964 film and album (1,4,4,5) | casual
+TWIST AND SHOUT | Cover that closed their debut album (5,3,5) | casual
+SHE LOVES YOU | 1963 single that stayed the UK's best seller until 1977 (3,5,3) | casual
+MOPTOP | Shaggy haircut the band made famous | casual
+LOVE ME DO | First single, released in 1962 (4,2,2) | casual
+HELTER SKELTER | Loud White Album rocker named after a fairground slide (6,7) | casual
+GUITAR | Instrument played by John and George | casual
+DRUMS | Ringo's instrument | casual
+ED SULLIVAN | US TV host whose show they played in February 1964 (2,8) | casual
+HAMBURG | German city where they honed their act from 1960 | casual
+ALL MY LOVING | Song they opened with on US TV in 1964 (3,2,6) | casual
+MARTIN | George, their producer at Parlophone | fan
+PARLOPHONE | EMI label that signed them in 1962 | fan
+APPLE | Company and label the band founded in 1968 | fan
+QUARRYMEN | John's skiffle group that Paul joined in 1957 | fan
+SUTCLIFFE | Stuart, original bass player | fan
+BEST | Pete, drummer replaced in 1962 | fan
+MAHARISHI | Indian guru they studied with in 1968 | fan
+PLEASE PLEASE ME | Debut album, recorded in a day in 1963 (6,6,2) | fan
+BEATLES FOR SALE | Weary-looking 1964 album (7,3,4) | fan
+ANTHOLOGY | 1990s TV series and album project | fan
+NOW AND THEN | Final song released as a single in 2023 (3,3,4) | fan
+GET BACK | Peter Jackson's 2021 documentary series (3,4) | fan
+RAM | Paul's 1971 album with Linda | superfan
+MY SWEET LORD | Harrison's 1970 solo hit (2,5,4) | fan
+BAND ON THE RUN | Wings' 1973 album (4,2,3,3) | fan
+NORWEGIAN WOOD | Rubber Soul song featuring a sitar (9,4) | fan
+IN MY LIFE | Rubber Soul song about remembered places (2,2,4) | fan
+NOWHERE MAN | Rubber Soul song released as a US single in 1966 (7,3) | fan
+PAPERBACK WRITER | 1966 single about an aspiring author (9,6) | fan
+I AM THE WALRUS | Magical Mystery Tour song inspired partly by Lewis Carroll (1,2,3,6) | fan
+REVOLUTION | Lennon song issued as a B-side in 1968 | fan
+DON'T LET ME DOWN | Lennon song played on the rooftop in 1969 (4,3,2,4) | fan
+FROM ME TO YOU | 1963 single, their first undisputed UK No 1 (4,2,2,3) | fan
+CAN'T BUY ME LOVE | 1964 No 1 from A Hard Day's Night (4,3,2,4) | fan
+I FEEL FINE | 1964 single opening with feedback (1,4,4) | fan
+WE CAN WORK IT OUT | Double A-side with Day Tripper, 1965 (2,3,4,2,3) | fan
+HELLO GOODBYE | 1967 single of opposites (5,7) | fan
+LADY MADONNA | 1968 piano-driven single (4,7) | fan
+BACK IN THE USSR | White Album opener (4,2,3,4) | fan
+OCTOPUS'S GARDEN | Ringo's undersea song on Abbey Road (8,6) | fan
+A DAY IN THE LIFE | Closing track of Sgt Pepper (1,3,2,3,4) | fan
+TAXMAN | Harrison song opening Revolver | fan
+DAY TRIPPER | 1965 single with a famous guitar riff (3,7) | fan
+EIGHT DAYS A WEEK | 1964 song and title of a 2016 documentary (5,4,1,4) | fan
+MIMI | Aunt who raised John | fan
+SITAR | Indian instrument George took up | fan
+SHANKAR | Ravi, George's sitar teacher | fan
+MERSEYBEAT | Liverpool sound of the early 1960s | fan
+JULIAN | John's first son, born 1963 | fan
+EMI | Record company that owned Parlophone | fan
+MBE | Honour each member received in 1965 | superfan
+CLAPTON | Eric, guest guitarist on While My Guitar Gently Weeps | fan
+SPECTOR | Phil, producer of the Let It Be album | fan
+STARKEY | Surname Ringo was born with | superfan
+RISHIKESH | Indian town of their 1968 retreat | fan
+LESTER | Richard, director of A Hard Day's Night | superfan
+SHEA | New York stadium of their 1965 concert | superfan
+WOOLTON | Liverpool village where John met Paul in 1957 | superfan
+DECCA | Label that turned them down after a 1962 audition | superfan
+CANDLESTICK | San Francisco park of their final paid concert, 1966 | superfan
+BUDOKAN | Tokyo hall they played in 1966 | superfan
+MENDIPS | Name of John's childhood home on Menlove Avenue | superfan
+FORTHLIN ROAD | Street of Paul's family home, at No 20 (8,4) | superfan
+CASBAH | Club in Mona Best's cellar | superfan
+INDRA | First Hamburg club they played, in 1960 | superfan
+KAISERKELLER | Hamburg club they played later in 1960 | superfan
+STAR-CLUB | Hamburg venue they played in 1962 (4,4) | superfan
+REEPERBAHN | Hamburg street of nightclubs | superfan
+MATHEW STREET | Home of the Cavern Club (6,6) | superfan
+STRAWBERRY FIELD | Salvation Army home near John's childhood house (10,5) | superfan
+SAVILE ROW | London street of the Apple building (6,3) | superfan
+BOXING DAY | Day in 1967 the BBC first aired Magical Mystery Tour (6,3) | superfan
+OUR WORLD | 1967 global broadcast that premiered All You Need Is Love (3,5) | superfan
+EMERICK | Geoff, engineer on Revolver and Sgt Pepper | superfan
+KLEIN | Allen, their business manager from 1969 | superfan
+PRESTON | Billy, keyboard player on Get Back | superfan
+ASPINALL | Neil, road manager who later ran Apple | superfan
+EVANS | Mal, roadie and assistant | superfan
+WINSTON | John's original middle name | superfan
+JAMES | Paul's actual first name | superfan
+FREE AS A BIRD | 1995 single built from a John demo (4,2,1,4) | superfan
+REAL LOVE | 1996 Anthology single (4,4) | superfan
+PAST MASTERS | 1988 collection of non-album tracks (4,7) | superfan
+LOVE | Cirque du Soleil show and 2006 remix album | superfan
+RAIN | 1966 B-side noted for its backwards vocals | superfan
+HER MAJESTY | Short hidden track ending Abbey Road (3,7) | superfan
+DEAR PRUDENCE | White Album song written for Mia Farrow's sister (4,8) | superfan
+GOLDEN SLUMBERS | Abbey Road medley song based on a Dekker poem (6,8) | superfan
+WITH THE BEATLES | Second UK album, November 1963 (4,3,7) | superfan
+DAKOTA | New York building where John lived from 1973 | superfan
+ALLERTON | Liverpool suburb of Paul's family home | superfan
+SILVER | ___ Beetles, a 1960 band name | superfan
+SHOTTON | Pete, Quarrymen washboard player | superfan
+BLUE JAY WAY | Harrison song named after a Los Angeles street (4,3,3) | superfan
