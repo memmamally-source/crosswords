@@ -97,8 +97,25 @@ and the clue bar.
 - **Settings** (the sun icon): light, dark or system theme; skip filled
   squares; auto-check; subject labels; show or hide the timer.
 - Finishing shows your time, hint points, your streak for the Daily and
-  Mini, and a **Share
-  result** button that copies a summary.
+  Mini, and, for today's Daily or Mini, when the next ones arrive.
+- **Sharing a result:**
+  - **Share** opens the phone's share sheet with a result image.
+  - **WhatsApp** opens WhatsApp with a summary and a challenge link.
+  - **Copy challenge link** copies the link alone.
+  - **Save image** downloads the picture.
+
+  The image (1080 × 1350, made in `js/share.js`) shows the puzzle, your
+  time, your hint points or a No-Hint badge, your streak, and the grid's
+  shape with no letters, so it never spoils an answer. Where the share sheet
+  isn't available, Share copies the summary instead.
+- **Challenge links** add `?c=<seconds>.<hint points>.<no-hint>` to a puzzle
+  link, for example `#/daily/2026-10-19?c=252.0.1`.
+  - A friend who opens one sees "a friend finished this in 4:12…" above the
+    puzzle, and finds out on finishing whether they beat it.
+  - Fewer hint points wins, then the faster time.
+  - The link carries nothing else, and no sign-up is needed.
+- **The home page's streak note** reminds you to keep a streak going until
+  today's Daily or Mini is done.
 
 - **Feel:**
   - Letters pop in as you type, and a finished word ripples.
@@ -221,6 +238,53 @@ with what's on the device:
 
 Firebase's free plan easily covers a site this size.
 
+## Analytics (optional)
+
+Crossword Hub can use Google Analytics 4 to measure:
+- daily and monthly players, and Day-1, Day-7 and Day-30 retention
+- puzzle starts and completions, and popular genres and levels
+- hint use, shares and challenge links
+
+It's off until both of these are true:
+1. **A measurement ID is set.** In the Firebase console, open **Project
+   settings → Integrations → Google Analytics → Enable** and follow the
+   steps. Then copy the web app's **measurementId** (it starts with `G-`)
+   into `js/firebase-config.js`.
+2. **The player agrees.** A small "Help improve Crossword Hub?" prompt
+   appears once, on the home page only. Nothing loads, and no cookie is set,
+   unless the player taps **Allow**. They can change their mind in Settings,
+   which also deletes Google Analytics' cookies.
+
+What is sent (`js/analytics.js`):
+- page views, with seeds, grid codes and challenge data stripped
+- `puzzle_start` and `puzzle_complete` (kind, genre, category, level, time,
+  hint points, assisted or No-Hint)
+- `hint_used`, `check_used` and `autocheck_on`
+- `share` (the method) and `challenge_open`
+
+It never sends names, emails or answers. Advertising features and Google
+signals are off. A **Privacy** note, linked from Settings and the prompt,
+explains all this to players. Google Analytics is free.
+
+## Search pages
+
+Search engines can't read the app's `#/` addresses, so
+`node tools/build-pages.js` writes real pages for them:
+- **One page per genre and collection** (`play/<id>/`), with a description,
+  sample clues (never answers), Play buttons for each level and links to
+  related puzzles.
+- **A hub page** (`play/`) listing everything.
+- **`sitemap.xml` and `robots.txt`.**
+
+How it fits together:
+- **Play buttons** open `#/new/<genre>/<level>`, which starts a fresh puzzle.
+- **Link previews** use `icons/og-image.png`, drawn by
+  `tools/make-og-image.py`.
+- **Rebuild the pages** after changing genres, collections or the asset
+  version; `tests/pages.test.js` fails if they're out of date.
+- **Custom domain:** if the site moves to one, change `SITE` in
+  `tools/build-pages.js` and the addresses in `index.html`'s preview tags.
+
 ## Run locally
 
 ```sh
@@ -236,7 +300,9 @@ branch", then pick the branch and `/ (root)`.
 When you change the CSS or JavaScript, bump the `?v=` number on the
 stylesheet and script tags in `index.html` and `VERSION` in `sw.js` to the
 same number, so browsers and installed apps fetch the new files instead of
-reusing saved ones. The tests check that the two match.
+reusing saved ones. The tests check that the two match. Then run
+`node tools/build-pages.js`, since the search pages link the stylesheet by
+version.
 
 ## Themed collections
 
@@ -297,6 +363,8 @@ node tests/puzzles.test.js   # frozen puzzles are unchanged and far enough ahead
 node tests/hints.test.js     # hint credits and hint points
 node tests/stats.test.js     # streaks, hints used, averages and favourites
 node tests/access.test.js    # every puzzle and level stays free
+node tests/share.test.js     # challenge links, countdown, analytics page names
+node tests/pages.test.js     # search pages and sitemap are up to date
 ```
 
 `rate-words.py` writes `words/levels.json`, rating each answer by how common
@@ -333,6 +401,9 @@ that `js/words.js` is up to date.
 | `js/hints.js` | Hint credits and competitive hint points |
 | `js/stats.js` | Streaks, hints used, average time and favourites, from saved solves |
 | `js/access.js` | `canAccess`: who may play what (everything is free) |
+| `js/share.js` | Challenge links and the shareable result image |
+| `js/analytics.js` | Optional Google Analytics, only with the player's consent |
+| `play/`, `sitemap.xml`, `robots.txt` | Search pages, made by `tools/build-pages.js` (don't edit by hand) |
 | `MASTER_PLAN.md`, `PROJECT_STATUS.md` | The roadmap and what's built |
 | `css/styles.css` | Styles, light and dark themes |
 | `puzzles/` | Frozen Daily, Mini and Brutal Challenge puzzles, one file per month, and their fingerprints |

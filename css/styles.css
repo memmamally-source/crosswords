@@ -924,6 +924,17 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
 .win-stats b { font-size: 1.5rem; font-variant-numeric: tabular-nums; }
 .win-stats span { font-size: 0.75rem; color: var(--ink-soft); }
 .win-actions { display: flex; flex-direction: column; gap: 10px; margin: 24px 0 14px; }
+.win-next { margin: 14px 0 0; font-size: 0.86rem; color: var(--ink-soft); }
+.win-share { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
+.win-share .btn { justify-content: center; }
+.btn-whatsapp { background: #1f8f4e; border-color: #1f8f4e; color: #fff; }
+.btn-whatsapp:hover { background: #197a42; border-color: #197a42; }
+.consent { position: fixed; z-index: 40; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(560px, calc(100% - 32px)); display: grid; gap: 10px; padding: 14px 16px; border-radius: 14px; background: var(--card); color: var(--ink); border: 1px solid var(--rule); box-shadow: var(--shadow); font-size: 0.88rem; }
+.consent p { margin: 0; }
+.consent-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.panel-link { display: block; margin-top: 10px; }
+.privacy ul { margin: 16px 0 0; padding-left: 18px; display: grid; gap: 10px; font-size: 0.92rem; }
+.challenge-banner { margin: 10px 0 0; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--gold); background: color-mix(in srgb, var(--gold) 14%, transparent); font-size: 0.9rem; font-weight: 600; }
 
 .stat-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(86px, 1fr)); gap: 14px; margin: 20px 0 24px; padding: 16px 0; border-block: 1px solid var(--rule); }
 .stat-tiles div { display: grid; gap: 2px; }
@@ -1071,6 +1082,7 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   .masthead-tools [data-action="stats"] { display: none; }
   body:not(.in-game) { padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px)); }
   body:not(.in-game) .toast { bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+  body:not(.in-game) .consent { bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
   .wordmark { font-size: 1.35rem; gap: 9px; }
   .logo-mark { width: 32px; height: 32px; }
   .view { padding-top: 20px; }
@@ -1100,3 +1112,22 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   .calendar .num { top: 3px; left: 5px; font-size: 0.72rem; }
   .win, .stats, .account { padding: 30px 18px 22px; }
 }
+
+/* Genre and collection pages (play/, made by tools/build-pages.js) */
+.landing-bar { padding: 14px 16px; border-bottom: 1px solid var(--rule); background: var(--card); }
+.landing-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; }
+.landing-main { max-width: 760px; margin: 0 auto; padding: 32px 16px 24px; }
+.landing-main h1 { margin: 6px 0 10px; font-family: var(--font-display); font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.1; }
+.landing-main h2 { margin: 32px 0 10px; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.landing-lede { font-size: 1.1rem; color: var(--ink-soft); margin: 0 0 20px; }
+.landing-levels { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
+.landing-levels .btn { text-decoration: none; color: var(--ink); }
+.landing-levels .btn-primary { color: var(--on-primary); }
+.landing-note, .landing-small { color: var(--ink-soft); font-size: 0.92rem; }
+.landing-small { margin-top: 28px; font-size: 0.82rem; }
+.landing-clues { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.landing-links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.landing-links a { display: inline-block; padding: 6px 12px; border: 1px solid var(--rule); border-radius: 999px; color: var(--ink); text-decoration: none; background: var(--card); }
+.landing-links a:hover { border-color: var(--ink); }
+.landing-foot { max-width: 760px; margin: 0 auto; padding: 24px 16px 40px; border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: 0.9rem; }
+.landing-foot a { color: var(--ink); }
