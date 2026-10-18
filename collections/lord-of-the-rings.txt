@@ -127,7 +127,7 @@ MORANNON | Black Gate of Mordor | superfan
 DOL GULDUR | Fortress of the Necromancer (3,6) | superfan
 BOLG | Azog's son, an orc chieftain | superfan
 DWALIN | Balin's brother | superfan
-ESGAROTH | Elvish name of Lake-town | superfan
+ESGAROTH | Lake-town, by its proper name | superfan
 BERNARD HILL | Actor who played Théoden (7,4) | superfan
 KARL URBAN | Actor who played Éomer (4,5) | superfan
 MIRANDA OTTO | Actress who played Éowyn (7,4) | superfan

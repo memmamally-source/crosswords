@@ -23,7 +23,7 @@ ARROWS | Katniss's ammunition | casual
 CATCHING FIRE | Second book and film (8,4) | casual
 JOSH HUTCHERSON | Actor who played Peeta (4,10) | casual
 LIAM HEMSWORTH | Actor who played Gale (4,9) | casual
-WOODY HARRELSON | Actor who played Haymitch (5,8) | casual
+WOODY HARRELSON | Actor who played Haymitch (5,9) | casual
 ELIZABETH BANKS | Actress who played Effie (9,5) | casual
 SUZANNE COLLINS | Author of the books (7,7) | casual
 EVERDEEN | Katniss's surname | casual
@@ -95,7 +95,7 @@ HOB | District 12's black market | superfan
 MEADOW | Field between the Seam and the fence | superfan
 PORTIA | Peeta's stylist | fan
 OCTAVIA | Member of Katniss's prep team | superfan
-FLAVIUS | Prep team member with orange ringlets | superfan
+FLAVIUS | Only man on Katniss's prep team | superfan
 VENIA | Prep team member with aqua hair | superfan
 DARIUS | Friendly Peacekeeper from the Hob | superfan
 LAVINIA | Red-haired Avox Katniss saw captured in the woods | superfan
@@ -130,7 +130,7 @@ VIOLA DAVIS | Actress who played Dr Gaul (5,5) | superfan
 PETER DINKLAGE | Actor who played the Academy dean (5,8) | superfan
 HUNTER SCHAFER | Actress who played young Tigris (6,7) | superfan
 JEFFREY WRIGHT | Actor who played Beetee (7,6) | superfan
-FRANCIS LAWRENCE | Director of the last four films (7,8) | superfan
+FRANCIS LAWRENCE | Director of Catching Fire and both Mockingjay films (7,8) | superfan
 GARY ROSS | Director of the first film (4,4) | superfan
 WILLOW SHIELDS | Actress who played Prim (6,7) | superfan
 MUTTS | Capitol-engineered beasts released in arenas | fan

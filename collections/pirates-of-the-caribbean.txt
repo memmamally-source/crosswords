@@ -36,8 +36,8 @@ DEAD MANS CHEST | Second film: ___ (4,4,5) | casual
 WORLDS END | Third film: At ___ (6,3) | casual
 STRANGER TIDES | Fourth film: On ___ (8,5) | casual
 RIDE | Disney theme park attraction that inspired the films | casual
-MAROONED | Left on a desert island by mutineers | casual
-MUTINY | Crew's uprising against its captain | casual
+MAROONED | Left on a tiny island, as Jack was by Barbossa, twice | casual
+MUTINY | How Barbossa took the Black Pearl from Jack | casual
 MEDALLION | Aztec gold piece young Elizabeth takes | casual
 BLACKSMITH | Will's trade in Port Royal | casual
 GOVERNOR | Weatherby Swann's title | casual
@@ -45,8 +45,8 @@ SALAZAR | Ghostly Spanish villain of the fifth film | casual
 AZTEC | Origin of the cursed gold | casual
 HEART | What Jones locks away in a chest | casual
 LOCKER | Davy Jones' ___ | casual
-TREASURE | Gold and jewels pirates seek | casual
-CANNON | Ship's big gun | casual
+CARIBBEAN | Sea named in the franchise title | casual
+DISNEY | Studio behind the films | casual
 HENRY | Will's son in the fifth film | fan
 CARINA | Astronomer heroine of the fifth film | fan
 JAVIER BARDEM | Actor who played Salazar (6,6) | fan
@@ -122,7 +122,7 @@ KAYA SCODELARIO | Actress who played Carina (4,10) | superfan
 BRENTON THWAITES | Actor who played Henry (7,8) | superfan
 VOODOO DOLL | Effigy of Jack that Angelica keeps at the end (6,4) | superfan
 PEG LEG | Barbossa's wooden limb in the fourth film (3,3) | superfan
-DEVILS TRIANGLE | Waters where Salazar was trapped (7,8) | superfan
+DEVILS TRIANGLE | Waters where Salazar was trapped (6,8) | superfan
 APPLE | Fruit the cursed Barbossa cannot taste | fan
 MOONLIGHT | It reveals the cursed crew's true form | fan
 SWANN | Elizabeth's surname | fan

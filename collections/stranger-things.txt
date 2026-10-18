@@ -103,7 +103,7 @@ CEREBRO | Dustin's homemade hilltop radio tower | superfan
 MEWS | Dustin's cat, eaten by his growing pet | superfan
 CLAUDIA | Dustin's doting mother | superfan
 HOLLY | Mike's little sister | superfan
-HARGROVE | Billy and Max's family surname | superfan
+HARGROVE | Billy's surname | superfan
 OWENS | Dr Sam ___, the lab's more sympathetic chief | superfan
 TERRY IVES | Eleven's birth mother (5,4) | superfan
 BECKY | Sister of Eleven's birth mother | superfan
@@ -128,7 +128,7 @@ CALLAHAN | One of Hopper's two bumbling deputies | superfan
 FAWCETT | Steve's hair secret: Farrah ___ spray | superfan
 PLANCK | Constant Suzie recites to save the day | superfan
 HEATHER | Holloway, lifeguard taken by the Mind Flayer | superfan
-LOVERS LAKE | Water the gang dives into to reach Vecna's world (6,4) | superfan
+LOVERS LAKE | Hawkins water hiding a gate in season four (6,4) | superfan
 REISER | Paul ___, who plays Dr Owens | superfan
 BOWER | Jamie Campbell ___, who plays Vecna | superfan
 KAMCHATKA | Remote Russian peninsula where Hopper is held | superfan

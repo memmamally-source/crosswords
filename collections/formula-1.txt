@@ -67,7 +67,7 @@ BOTTAS | Valtteri ___, Hamilton's team-mate from 2017 to 2021 | fan
 RICCIARDO | Daniel ___, grinning Australian known for the shoey | fan
 SAINZ | Carlos ___, won the 2022 British GP for his first victory | fan
 MASSA | Felipe ___, briefly champion on the final lap in Brazil in 2008 | fan
-WOLFF | Toto ___, Mercedes team principal from 2013 | fan
+WOLFF | Toto ___, Austrian who joined Mercedes as team boss in 2013 | fan
 NEWEY | Adrian ___, designer of title-winning Williams, McLaren and Red Bull cars | fan
 ECCLESTONE | Bernie ___, the sport's longtime commercial boss | fan
 LOTUS | Colin Chapman's team | fan
@@ -75,7 +75,7 @@ BRAWN | Team that won both titles in its only season, 2009 | fan
 BENETTON | Team with which Schumacher won the 1994 and 1995 titles | fan
 JORDAN | Eddie ___'s team, where Schumacher made his debut in 1991 | fan
 HONDA | Japanese engine maker behind Red Bull's 2021 drivers' title | fan
-PIRELLI | Italian sole tyre supplier from 2011 | fan
+PIRELLI | Italian firm that became sole tyre supplier in 2011 | fan
 IMOLA | Italian venue of the San Marino GP | fan
 SINGAPORE | Host of the first night race, in 2008 | fan
 HUNGARORING | Twisty circuit near Budapest | fan
@@ -107,7 +107,7 @@ FISICHELLA | Giancarlo ___, won the 2003 Brazilian GP for Jordan | superfan
 HERBERT | Johnny ___, won the 1999 European GP for Stewart | superfan
 ZHOU | Guanyu ___, China's first full-time F1 driver, from 2022 | superfan
 TODT | Jean ___, Ferrari team boss in the Schumacher years | superfan
-DOMENICALI | Stefano ___, chief executive of F1 from 2021 | superfan
+DOMENICALI | Stefano ___, ex-Ferrari boss who became F1's chief executive in 2021 | superfan
 CHAPMAN | Colin ___, founder of Lotus | superfan
 TYRRELL | Team that raced the six-wheeled P34 in 1976 | superfan
 MINARDI | Faenza minnows who raced from 1985 to 2005 | superfan

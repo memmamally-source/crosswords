@@ -32,7 +32,7 @@ RESPAWN | Return to the match after going down | casual
 BATTLE ROYALE | Last-squad-standing genre (6,6) | casual
 VERDANSK | Original map of the free battle royale | casual
 WORLD AT WAR | 2008 WWII entry (5,2,3) | casual
-GHOSTS | 2013 entry featuring a dog named Riley | casual
+GHOSTS | 2013 entry featuring a military dog | casual
 MASON | Alex, Black Ops lead | casual
 WOODS | Frank, Mason's gruff comrade | casual
 REZNOV | Viktor, Red Army ally of Mason | casual
@@ -49,7 +49,7 @@ FREE FOR ALL | Every-player-for-themself mode (4,3,3) | casual
 HARDPOINT | Mode with a rotating zone to hold | casual
 SLEDGEHAMMER | Studio behind Advanced Warfare | fan
 CRASH | CoD4 map around a downed helicopter | fan
-RILEY | German shepherd in Ghosts | fan
+RILEY | German shepherd in the 2013 entry | fan
 INFINITE WARFARE | 2016 entry set in space (8,7) | fan
 TACTICAL NUKE | MW2's 25-kill game-ending reward (8,4) | fan
 CHOPPER GUNNER | MW2 reward manning a helicopter's gun (7,6) | fan
@@ -77,7 +77,7 @@ HUDSON | Jason, CIA officer in Black Ops | fan
 MENENDEZ | Raul, villain of Black Ops II | fan
 DAVID MASON | Alex's son, lead of Black Ops II (5,5) | fan
 IRONS | Jonathan, Atlas CEO played by Kevin Spacey | fan
-VANGUARD | 2021 WWII entry by Sledgehammer | fan
+VANGUARD | 2021 WWII entry | fan
 COLD WAR | 2020 Black Ops subtitle (4,3) | fan
 FARAH | Karim, rebel leader in MW 2019 | fan
 FAVELA | MW2 map set in a Rio hillside slum | fan
@@ -101,7 +101,7 @@ MAXIS | Ludvig, Zombies scientist | superfan
 SAMANTHA | Maxis's daughter in Zombies lore | superfan
 JACKSON | Paul, USMC sergeant in 2007's campaign | superfan
 VASQUEZ | Lieutenant leading Jackson's Marines | superfan
-GRIGGS | Marine sergeant alongside Jackson and Soap | superfan
+GRIGGS | USMC staff sergeant who fights beside the SAS in 2007's campaign | superfan
 ALL GHILLIED UP | CoD4 sniper mission in Pripyat (3,8,2) | superfan
 STEINER | Friedrich, Nova 6 scientist | superfan
 KRAVCHENKO | Lev, Dragovich's brutal lieutenant | superfan

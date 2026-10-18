@@ -101,7 +101,7 @@ GROOSE | Pompadoured rival in Skyward Sword | superfan
 KAEPORA GAEBORA | Wise owl who gives long-winded advice (7,7) | superfan
 BEEDLE | Travelling merchant seen across many games | superfan
 DAMPÉ | Gravekeeper of Kakariko | superfan
-GOLD SKULLTULA | Spider foe whose tokens you collect (4,10) | superfan
+GOLD SKULLTULA | Spider foe whose tokens you collect (4,9) | superfan
 LONGSHOT | Upgraded hookshot with double the reach | superfan
 BIGGORON | Giant Goron who forges a two-handed sword | superfan
 DODONGO | Fire-breathing lizard boss weak to bombs | superfan

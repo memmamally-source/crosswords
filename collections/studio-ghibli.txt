@@ -6,11 +6,11 @@
 TOTORO | Furry forest spirit who waits at a bus stop | casual
 CATBUS | Grinning feline vehicle with many legs | casual
 UMBRELLA | Item the girls lend the forest spirit in the rain | casual
-SPIRITED AWAY | 2001 Oscar winner set in a bathhouse (8,4) | casual
+SPIRITED AWAY | 2001 Miyazaki film about a girl working for a witch (8,4) | casual
 CHIHIRO | Ten-year-old girl trapped in the spirit world | casual
 HAKU | River spirit who can turn into a dragon | casual
 PIGS | What Chihiro's parents turn into after feasting | casual
-BATHHOUSE | Yubaba's establishment for spirits | casual
+BATHHOUSE | Spirit resort where Chihiro works | casual
 KIKI | Young witch who starts a delivery service | casual
 JIJI | Witch's talking black cat | casual
 BROOM | Kiki's means of flight | casual
@@ -20,22 +20,17 @@ SOPHIE | Hatter cursed to become an old woman | casual
 CALCIFER | Fire demon who powers a moving castle | casual
 MONONOKE | Princess ___ (1997) | casual
 NAUSICAA | Princess of the Valley of the Wind | casual
-CASTLE IN THE SKY | 1986 film about the floating island Laputa (6,2,3,3) | casual
+CASTLE IN THE SKY | 1986 film with Pazu, Sheeta and sky pirates (6,2,3,3) | casual
 MIYAZAKI | Hayao ___, studio co-founder and director | casual
-TAKAHATA | Isao ___, co-founder who directed Grave of the Fireflies | casual
+TAKAHATA | Isao ___, co-founder who directed Only Yesterday | casual
 FIREFLIES | Grave of the ___ (1988) | casual
 PORCO ROSSO | Pig pilot over the Adriatic (5,5) | casual
 OSCAR | Award won by Spirited Away in 2003 | casual
-JAPAN | Studio's home country | casual
 TOKYO | Studio's home metropolis | casual
 GHIBLI | Saharan wind that gave the studio its name | casual
 SOOT SPRITES | Fuzzy black dust balls (4,7) | casual
 SATSUKI | Older sister who moves to the countryside | casual
 MEI | Younger sister who first meets the forest spirit | casual
-WITCH | Kiki, by birth | casual
-DRAGON | Haku's alternate form | casual
-FISH | Ponyo, at the start | casual
-HAYAO | First name of the studio's most famous director | casual
 JOE HISAISHI | Composer of most of Miyazaki's scores (3,8) | casual
 ACORNS | Tree seeds the forest spirit gives the girls | casual
 TURNIP HEAD | Scarecrow who helps the cursed hatter (6,4) | casual
@@ -56,16 +51,16 @@ PAZU | Mining boy who catches a girl from the sky | fan
 SHEETA | Girl with a levitating crystal | fan
 DOLA | Matriarch of a gang of sky pirates | fan
 MUSKA | Agent who seeks Laputa's power | fan
-GINA | Hotel Adriano owner in Porco Rosso | fan
+GINA | Singer who loves the pig pilot | fan
 FIO | Young engineer who rebuilds a pig's plane | fan
 CURTIS | American pilot rival of the pig | fan
-KANTA | Neighbour boy who lends an umbrella | fan
+KANTA | Shy neighbour boy who teases Satsuki | fan
 KAMAJI | Many-armed boiler man | fan
 ZENIBA | Yubaba's twin sister | fan
 TOMBO | Bicycle-riding boy fascinated by flight | fan
 MARKL | Howl's young apprentice | fan
 FUJIMOTO | Ponyo's sorcerer father | fan
-SETSUKO | Little girl who loves fruit drops | fan
+SETSUKO | Seita's little sister | fan
 SEITA | Teenage brother caring for his sister in wartime | fan
 OHMU | Giant insects of the Toxic Jungle | fan
 MARNIE | When ___ Was There (2014) | fan
@@ -73,10 +68,10 @@ KAGUYA | The Tale of the Princess ___ (2013) | fan
 BAMBOO | Plant in which a princess is found | fan
 JIRO | Aircraft designer in The Wind Rises | fan
 EARTHSEA | Tales from ___ (2006) | fan
-GORO | Hayao's son who directed Tales from Earthsea | fan
+GORO | Director son of Hayao Miyazaki | fan
 POPPY HILL | From Up on ___ (2011) (5,4) | fan
 BARON | Cat figurine gentleman in The Cat Returns | fan
-POM POKO | 1994 Takahata film about shapeshifting tanuki (3,4) | fan
+POM POKO | 1994 Takahata film about raccoon dogs resisting development (3,4) | fan
 COUNTRY ROADS | Song Shizuku translates in Whisper of the Heart (7,5) | fan
 EARWIG | ___ and the Witch (2020) | fan
 HERON | Grey bird guide in a 2023 Miyazaki film | fan
@@ -85,8 +80,7 @@ LAPUTA | Floating island named after Gulliver's Travels | fan
 SUZUKI | Toshio ___, longtime Ghibli producer | fan
 HAM | Ponyo's favourite food | fan
 BERLIN | Film festival where Spirited Away shared the Golden Bear | fan
-MUSEUM | Ghibli attraction in Mitaka | fan
-GHIBLI PARK | Attraction that opened in Aichi in 2022 (6,4) | fan
+GHIBLI PARK | Theme attraction that opened near Nagoya in 2022 (6,4) | fan
 SHIZUKU | Aspiring writer in Whisper of the Heart | superfan
 SEIJI | Violin-making boy in Whisper of the Heart | superfan
 HARU | Schoolgirl taken to the Cat Kingdom | superfan

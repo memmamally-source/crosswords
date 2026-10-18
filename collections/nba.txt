@@ -80,9 +80,9 @@ NAISMITH | James ___, inventor of basketball in 1891 | fan
 SPRINGFIELD | Massachusetts city where basketball was invented | fan
 AUERBACH | Red ___, cigar-smoking Celtics coach | fan
 JACKSON | Phil ___, coach with 11 championships | fan
-POPOVICH | Gregg ___, Spurs coach from 1996 | fan
+POPOVICH | Gregg ___, coached the Spurs to five titles from 1999 to 2014 | fan
 RILEY | Pat ___, slick-haired coach of the 1980s Lakers | fan
-KERR | Steve ___, Warriors coach from 2014 | fan
+KERR | Steve ___, hired as Warriors coach in 2014 | fan
 BAD BOYS | Nickname of Detroit's 1989 and 1990 champions (3,4) | fan
 SHOWTIME | Fast-breaking style of the 1980s Lakers | fan
 SPLASH BROTHERS | Nickname of Golden State's sharpshooting backcourt duo (6,8) | fan
@@ -131,7 +131,7 @@ BAA | League that merged with the NBL in 1949, by its initials | superfan
 ABA | Rival league with a red, white and blue ball | superfan
 NUGGETS | Denver franchise, champions in 2023 | superfan
 BUCKS | Milwaukee franchise, champions in 1971 and 2021 | superfan
-PELICANS | New Orleans franchise | superfan
-TIMBERWOLVES | Minnesota franchise | superfan
-HAWKS | Atlanta franchise | superfan
-WIZARDS | Washington franchise | superfan
+PELICANS | New Orleans franchise | casual
+TIMBERWOLVES | Minnesota franchise | casual
+HAWKS | Atlanta franchise | casual
+WIZARDS | Washington franchise | casual

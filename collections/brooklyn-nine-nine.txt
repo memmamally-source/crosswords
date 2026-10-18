@@ -110,12 +110,12 @@ HADER | Bill who plays Captain Dozerman | superfan
 LONGORIA | Eva who plays Sophia | superfan
 SAGAL | Katey who plays Jake's mother | superfan
 WHITFORD | Bradley who plays Jake's father | superfan
-MEADOWS | Tim who plays Caleb | superfan
-CALEB | Polite cannibal Jake meets behind bars | superfan
+MEADOWS | Tim who plays Caleb the cannibal | superfan
+CALEB | Polite cannibal played by Tim Meadows | superfan
 PEMBROKE | Keith, the Vulture's real name | superfan
 BOMB | Threat that derails Jake and Amy's wedding venue | fan
 PROPOSAL | Jake's heist-ending surprise for Amy | fan
-PATROL | Uniformed beat Holt is demoted to | fan
+PATROL | Uniformed beat Holt is demoted to in season seven | fan
 INVESTIGATOR | Rosa's later private career | fan
 TWINS | What Terry's two eldest daughters are | fan
 SMOKING | Secret vice Amy turns to under stress | fan

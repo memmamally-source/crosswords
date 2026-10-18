@@ -83,7 +83,7 @@ JAR JAR | Clumsy Gungan ___ Binks (3,3) | fan
 WATTO | Junk dealer who owned young Anakin | fan
 OWEN | Uncle ___, Luke's moisture-farming guardian | fan
 BERU | Aunt ___, Luke's guardian on Tatooine | fan
-MOS EISLEY | Tatooine spaceport, a "wretched hive" (3,7) | fan
+MOS EISLEY | Tatooine spaceport, a "wretched hive" (3,6) | fan
 GREEDO | Rodian who confronts Han in the cantina | fan
 SARLACC | Pit creature in the Dune Sea | fan
 RANCOR | Monster kept beneath Jabba's palace | fan

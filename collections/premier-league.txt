@@ -13,19 +13,19 @@ LEICESTER | 5000-1 outsiders who won the title in 2016 | casual
 WEST HAM | East London club nicknamed the Hammers (4,3) | casual
 RED DEVILS | Manchester United's nickname (3,6) | casual
 ANFIELD | Liverpool's home ground | casual
-OLD TRAFFORD | Manchester United's home, the Theatre of Dreams (3,7) | casual
+OLD TRAFFORD | Manchester United's home, the Theatre of Dreams (3,8) | casual
 ETIHAD | Manchester City's stadium | casual
 EMIRATES | Arsenal's stadium since 2006 | casual
 STAMFORD BRIDGE | Chelsea's home ground (8,6) | casual
 MANCHESTER | Home city of United and City | casual
-ROONEY | Wayne ___, Manchester United's record goalscorer | casual
-SHEARER | Alan ___, PL record scorer with 260 goals | casual
+ROONEY | Wayne ___, passed Bobby Charlton as Manchester United's record scorer in 2017 | casual
+SHEARER | Alan ___, retired in 2006 with a PL record 260 goals | casual
 HENRY | Thierry ___, Arsenal's French striker with a statue at the Emirates | casual
 SALAH | Egyptian forward who joined Liverpool in 2017 | casual
-KANE | Harry ___, Tottenham's record goalscorer | casual
+KANE | Harry ___, passed Jimmy Greaves as Tottenham's record scorer in 2023 | casual
 FERGUSON | Sir Alex ___, Manchester United manager until 2013 | casual
 WENGER | Arsene ___, Arsenal manager from 1996 to 2018 | casual
-GUARDIOLA | Pep ___, Manchester City manager from 2016 | casual
+GUARDIOLA | Pep ___, appointed Manchester City manager in 2016 | casual
 KLOPP | Jurgen ___, Liverpool manager from 2015 to 2024 | casual
 MOURINHO | Jose ___, self-styled Special One | casual
 BECKHAM | David ___, United's free-kick specialist of the 1990s | casual
@@ -43,7 +43,7 @@ GOLDEN BOOT | Award for the season's top scorer (6,4) | casual
 INVINCIBLES | Arsenal's unbeaten 2003-04 side | casual
 MAGPIES | Newcastle's nickname | casual
 FOXES | Leicester's nickname | casual
-OFFSIDE | Flag raised when an attacker is beyond the last defender | casual
+OFFSIDE | Flag raised when an attacker is beyond the second-last defender | casual
 TRANSFER | Move of a player from one club to another | casual
 WEMBLEY | London stadium where the FA Cup final is played | casual
 BOXING DAY | Traditional 26 December fixture day (6,3) | casual
@@ -64,7 +64,7 @@ LE TISSIER | Matt ___, Southampton's one-club legend (2,7) | fan
 FOWLER | Robbie ___, Liverpool striker nicknamed God | fan
 OWEN | Michael ___, Liverpool striker, 2001 Ballon d'Or winner | fan
 SCHOLES | Paul ___, red-haired midfielder of United's Class of '92 | fan
-RONALDO | Cristiano ___, United winger from 2003 to 2009 | fan
+RONALDO | Cristiano ___, United winger in his first spell, 2003 to 2009 | fan
 VAN PERSIE | Robin ___, Dutchman who moved from Arsenal to United in 2012 (3,6) | fan
 SUAREZ | Luis ___, Uruguayan who scored 31 for Liverpool in 2013-14 | fan
 DE BRUYNE | Kevin ___, Belgian City playmaker (2,6) | fan

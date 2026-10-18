@@ -7,8 +7,8 @@ PAC MAN | Yellow maze-runner chased by four ghosts (3,3) | casual
 DONKEY KONG | 1981 arcade ape who hurls barrels (6,4) | casual
 MARIO | Mustachioed plumber hero | casual
 LUIGI | Green-clad younger brother | casual
-ZELDA | Princess of Hyrule | casual
-LINK | Green-tunicked hero of Hyrule | casual
+ZELDA | Title princess of a Nintendo fantasy series | casual
+LINK | Green-tunicked, sword-wielding Nintendo hero | casual
 TETRIS | Falling-block puzzler from the Soviet Union | casual
 ATARI | Company behind Pong | casual
 PONG | 1972 table-tennis arcade hit | casual
@@ -16,17 +16,17 @@ NINTENDO | Kyoto company behind the NES | casual
 NES | Nintendo's 8-bit home console, for short | casual
 SNES | Nintendo's 16-bit console, for short | casual
 GAME BOY | Nintendo's 1989 handheld (4,3) | casual
-JOYSTICK | Arcade control stick | casual
-CARTRIDGE | Plug-in game cart | casual
+JOYSTICK | Arcade control lever | casual
+CARTRIDGE | Plug-in ROM game pack | casual
 ARCADE | Coin-op venue | casual
 SPACE INVADERS | 1978 alien-blasting arcade hit (5,8) | casual
 ASTEROIDS | 1979 vector game of shooting space rocks | casual
 FROGGER | Amphibian crossing a busy road | casual
 GALAGA | Namco's 1981 bug-blasting shooter | casual
-BOWSER | Koopa king who kidnaps the princess | casual
+BOWSER | Fire-breathing turtle king who kidnaps the princess | casual
 PEACH | Mushroom Kingdom princess | casual
 YOSHI | Green dinosaur steed in Super Mario World | casual
-KIRBY | Pink puffball from Dream Land | casual
+KIRBY | Pink puffball who inhales enemies | casual
 SAMUS | Bounty hunter in a power suit | casual
 MEGA MAN | Capcom's blue robot hero (4,3) | casual
 STREET FIGHTER | Capcom's hugely popular fighting series (6,7) | casual
@@ -65,7 +65,7 @@ CAPCOM | Company behind Street Fighter II | fan
 TAITO | Company behind Space Invaders | fan
 QBERT | Big-nosed cube-hopper of 1982 | fan
 PITFALL | Activision's 1982 jungle adventure | fan
-DEFENDER | Williams' 1981 side-scrolling shooter | fan
+DEFENDER | 1981 side-scrolling arcade shooter protecting humanoids | fan
 BREAKOUT | Atari brick-busting paddle game | fan
 DIG DUG | Namco's tunnelling pump hero (3,3) | fan
 NEO GEO | SNK's arcade-quality home system (3,3) | fan
@@ -79,7 +79,7 @@ GANON | Pig-like villain of Zelda | fan
 TRIFORCE | Golden triangles of power | fan
 FIRE FLOWER | Power-up for throwing fireballs (4,6) | fan
 RARE | British studio behind Donkey Kong Country | fan
-GOLDENEYE | Rare's 1997 Bond shooter | fan
+GOLDENEYE | 1997 N64 Bond shooter | fan
 STAR FOX | 1993 SNES space shooter (4,3) | fan
 WOLFENSTEIN | Castle-escape series rebooted in 3D in 1992 | fan
 PRINCE OF PERSIA | Jordan Mechner's 1989 platformer (6,2,6) | fan
@@ -98,18 +98,18 @@ NESS | Hero of EarthBound | superfan
 MOTHER | EarthBound's series name in Japan | superfan
 ENIX | Original publisher of Dragon Quest | superfan
 MIDWAY | US distributor of the yellow maze game | superfan
-WILLIAMS | Maker of Defender and Joust | superfan
-ROBOTRON | Williams' twin-stick 2084 shooter | superfan
+WILLIAMS | Chicago pinball firm that also made Joust and Sinistar | superfan
+ROBOTRON | Twin-stick arcade shooter set in 2084 | superfan
 TEMPEST | Atari's 1981 vector tube shooter | superfan
 BATTLEZONE | Atari's 1980 vector tank game | superfan
 BERZERK | 1980 maze shooter with talking robots | superfan
-EVIL OTTO | Bouncing smiley face in Berzerk (4,4) | superfan
+EVIL OTTO | Indestructible bouncing smiley that chases you out of a 1980 robot maze (4,4) | superfan
 COMBAT | Pack-in tank game for the Atari 2600 | superfan
 ADVENTURE | Atari 2600 game with an early hidden credit | superfan
 ALAMOGORDO | New Mexico town where Atari carts were buried | superfan
 NOLAN BUSHNELL | Atari co-founder (5,8) | superfan
 RALPH BAER | Father of home video games (5,4) | superfan
-MAGNAVOX | Company behind the 1972 Odyssey | superfan
+MAGNAVOX | Company that released the first home console in 1972 | superfan
 ODYSSEY | First home video game console | superfan
 COLECOVISION | Coleco's 1982 console | superfan
 INTELLIVISION | Mattel's rival to the Atari 2600 | superfan
@@ -124,13 +124,13 @@ SUPER FX | Graphics chip inside Star Fox (5,2) | superfan
 HUDSON SOFT | Bomberman's original developer (6,4) | superfan
 DRAGONS LAIR | 1983 laserdisc arcade game (7,4) | superfan
 LITTLE MAC | Underdog boxer of Punch-Out!! (6,3) | superfan
-BALLOON FIGHT | 1984 NES game of popping rivals (7,5) | superfan
+BALLOON FIGHT | Joust-like NES game of popping rivals (7,5) | superfan
 PIT | Angel hero of Kid Icarus | superfan
 MOTHER BRAIN | Metroid's final boss (6,5) | superfan
 RIDLEY | Space pirate dragon of Metroid | superfan
 DREAM LAND | Kirby's home turf (5,4) | superfan
 LIU KANG | Shaolin monk of Mortal Kombat (3,4) | superfan
-SHENG LONG | Fake character born of a translation error (5,4) | superfan
-VIRTUA FIGHTER | Sega's 1993 3D polygon brawler (7,7) | superfan
+SHENG LONG | Street Fighter II master who never existed, born of a mistranslated win quote (5,4) | superfan
+VIRTUA FIGHTER | Sega's 1993 3D polygon brawler (6,7) | superfan
 SPACE HARRIER | Sega's 1985 into-the-screen shooter (5,7) | superfan
 ALEX KIDD | Sega's mascot before the blue hedgehog (4,4) | superfan

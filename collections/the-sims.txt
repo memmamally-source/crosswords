@@ -8,7 +8,7 @@ PLUMBOB | Green diamond floating overhead | casual
 MAXIS | Studio that created the series | casual
 WILL WRIGHT | Designer who created the series (4,6) | casual
 SIMOLEONS | In-game currency | casual
-NEEDS | Hunger, Bladder and Hygiene, collectively | casual
+NEEDS | Motives shown as bars you must keep topped up | casual
 HUNGER | Need refilled at the fridge | casual
 BLADDER | Need relieved by a toilet | casual
 HYGIENE | Need restored by a shower | casual
@@ -37,7 +37,7 @@ TODDLER | Life stage between baby and child | casual
 ELDER | Final life stage | casual
 TEEN | Life stage before young adult | casual
 GHOST | What a departed household member may become | casual
-PETS | Expansion that brought cats and dogs | casual
+PETS | Animal expansion for the second and third games | casual
 SEASONS | Expansion adding weather | casual
 UNIVERSITY | Second game's college expansion | casual
 SKILL | Cooking or Charisma, for example | casual
@@ -51,7 +51,7 @@ BELLA GOTH | Pleasantview matriarch who vanished (5,4) | fan
 MORTIMER | Bella's husband | fan
 CASSANDRA | Bella's daughter | fan
 DON LOTHARIO | Pleasantview's notorious romancer (3,8) | fan
-DINA CALIENTE | Gold-digging sister in Pleasantview (4,8) | fan
+DINA CALIENTE | Pleasantview sister chasing the widowed Goth's fortune (4,8) | fan
 NEWBIE | Family of Bob and Betty | fan
 MOODLET | Emotional buff introduced in the third game | fan
 ASPIRATION | Life-goal system that arrived with the second game | fan
@@ -99,7 +99,7 @@ VERONAVILLE | Shakespeare-inspired neighbourhood of the second game | superfan
 SERVO | Robot buildable in Open for Business | superfan
 BONEHILDA | Skeletal maid summoned from a coffin | superfan
 SOCIAL BUNNY | Giant pink rabbit who visits lonely characters (6,5) | superfan
-TRAGIC CLOWN | Mournful entertainer who cheers sad characters (6,5) | superfan
+TRAGIC CLOWN | Mopey entertainer whose attempts to amuse usually fall flat (6,5) | superfan
 PLANTSIM | Leafy life state from the second game's Seasons | superfan
 GENIE | Wish-granting life state from Showtime | superfan
 LIVIN LARGE | First expansion of the original game (5,5) | superfan
@@ -124,7 +124,7 @@ LIFETIME WANT | Second game's big aspiration goal (8,4) | superfan
 WANTS AND FEARS | Second game's goal and dread panel (5,3,5) | superfan
 ELIXIR OF LIFE | Potion that reverses ageing (6,2,4) | superfan
 MONEY TREE | Cash-growing aspiration reward (5,4) | superfan
-BOOLPROP | Cheat prefix used with testingcheatsenabled | superfan
+BOOLPROP | Second game's cheat prefix for toggling hidden settings | superfan
 MOVEOBJECTS | Cheat to ignore placement limits | superfan
 EXCHANGE | Third game's online sharing site | superfan
 SIXAM | Home planet of the visitors from space | superfan

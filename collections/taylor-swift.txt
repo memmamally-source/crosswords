@@ -10,7 +10,7 @@ REPUTATION | 2017 album with snake imagery | casual
 LOVER | 2019 album with pastel artwork | casual
 FOLKLORE | Surprise album made during the 2020 lockdown | casual
 EVERMORE | Sister album released in December 2020 | casual
-MIDNIGHTS | 2022 album about sleepless nights | casual
+MIDNIGHTS | 2022 album featuring Anti-Hero | casual
 TORTURED POETS | The ___ Department (2024) (8,5) | casual
 SHAKE IT OFF | Lead single from 1989 (5,2,3) | casual
 BLANK SPACE | 1989 hit satirising her man-eater image (5,5) | casual
@@ -19,7 +19,7 @@ STYLE | 1989 single that also means fashion sense | casual
 LOVE STORY | Hit inspired by Romeo and Juliet (4,5) | casual
 YOU BELONG WITH ME | Hit whose video casts her as two rival girls (3,6,4,2) | casual
 CARDIGAN | Lead single from her surprise 2020 album | casual
-ANTI-HERO | Lead single from her 2022 album (4,4) | casual
+ANTI-HERO | Lead single from her 2022 album (4-4) | casual
 CRUEL SUMMER | 2019 track that became a hit in 2023 (5,6) | casual
 FORTNIGHT | Lead single of her 2024 album | casual
 ALL TOO WELL | Red song released in a ten-minute version (3,3,4) | casual
@@ -37,21 +37,17 @@ PENNSYLVANIA | Her home state | casual
 DECEMBER | Month of her birthday | casual
 MEAN | Speak Now song aimed at a critic | casual
 OUR SONG | Early hit she wrote for a school talent show (3,4) | casual
-WILDEST DREAMS | 1989 single she re-released early in 2021 (7,6) | casual
+WILDEST DREAMS | 1989 single she re-released in 2021 after a TikTok trend (7,6) | casual
 KANYE | Rapper who interrupted her speech at the 2009 VMAs | casual
 TIME | Magazine that named her Person of the Year in 2023 | casual
 ED SHEERAN | British singer on Everything Has Changed (2,7) | casual
-TOUR | The Eras ___ | casual
-CONCERT | Eras Tour event, e.g. | casual
-ALBUM | Midnights, for one | casual
-STADIUM | Venue for her biggest tour dates | casual
 DELICATE | Reputation single with a city-dancing video | fan
 THE MAN | Lover single where she plays a male alter ego (3,3) | fan
 KARMA | Midnights song named for cosmic justice | fan
 LAVENDER HAZE | Opening track of Midnights (8,4) | fan
 BEJEWELED | Midnights single with a Cinderella-style video | fan
 POST MALONE | Featured artist on Fortnight (4,6) | fan
-EXILE | Folklore duet with Justin Vernon's band | fan
+EXILE | Folklore duet sung from both sides of a breakup | fan
 BON IVER | Justin Vernon's indie band (3,4) | fan
 WILLOW | Lead single from Evermore | fan
 BETTY | Folklore song in a teen love triangle | fan
@@ -125,7 +121,7 @@ INNOCENT | Speak Now song she debuted at the 2010 VMAs | superfan
 MR PERFECTLY FINE | From the Vault track on Fearless re-recording (2,9,4) | superfan
 BRENDON URIE | Panic! at the Disco singer on ME! (7,4) | superfan
 CHRIS STAPLETON | Duet partner on a Red vault track (5,9) | superfan
-CIVIL WARS | Duo on a Hunger Games song with her (5,4) | superfan
+CIVIL WARS | Duo of Joy Williams and John Paul White (5,4) | superfan
 LONG LIVE | Closing track of standard Speak Now (4,4) | superfan
 THE LAKES | Bonus track on the deluxe Folklore (3,5) | superfan
 WONDERLAND | 1989 deluxe track nodding to Lewis Carroll | superfan

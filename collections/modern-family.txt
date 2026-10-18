@@ -16,14 +16,14 @@ ALEX | Brainy middle Dunphy child | casual
 LUKE | Youngest Dunphy, the scatterbrained son | casual
 JOE | Jay and Gloria's son | casual
 DUNPHY | Surname of Phil, Claire and their kids | casual
-PRITCHETT | Surname of Jay and his two adult children | casual
+PRITCHETT | Surname of Jay, Mitchell and little Joe | casual
 TUCKER | Cam's surname | casual
 MOCKUMENTARY | Faux-documentary format of the show | casual
 CALIFORNIA | US state where the family lives | casual
 COLOMBIA | Gloria's home country | casual
 REALTOR | Phil's line of work | casual
 LAWYER | Mitchell's profession | casual
-CLOSETS | Jay's company sells these, plus blinds | casual
+CLOSETS | Main products of Jay's company | casual
 VIETNAM | Country Lily was adopted from | casual
 ABC | US network that aired the sitcom | casual
 LION KING | Film Cam recreates when presenting Lily (4,4) | casual
@@ -40,9 +40,9 @@ EMMYS | Awards the show won for best comedy five years running | casual
 THREE | Number of related households the show follows | casual
 SITCOM | TV genre of the show | casual
 CLOWN | Cam's sideline career, in face paint and big shoes | casual
-FOOTBALL | Sport Cam once played and later coaches | casual
+FOOTBALL | Sport Cam coaches at the high school | fan
 HALLOWEEN | Claire's favourite, most competitive holiday | casual
-STEP | Broken stair the Dunphys never get fixed | casual
+STEP | Broken stair Phil keeps tripping on | fan
 FIZBO | Name of Cam's clown alter ego | fan
 DEDE | Jay's first wife, Claire and Mitchell's mother | fan
 JAVIER | Gloria's charming, unreliable ex-husband | fan
@@ -76,13 +76,11 @@ SHORTY | Jay's long-time buddy | fan
 OLD SOUL | What Manny is often called (3,4) | fan
 SIMBA | Lion cub Lily is held up as in the pilot | fan
 REXFORD | Boy Mitchell and Cam adopt in the finale | superfan
-FULGENCIO | Joe's real first name | superfan
-BETH | Andy's long-distance girlfriend | superfan
+FULGENCIO | Joe's legal first name, chosen by Gloria | superfan
 ARVIN | Haley's nerdy scientist boyfriend | superfan
 SANJAY | Alex's academic rival | superfan
 RAINER | Weatherman Haley dates, ___ Shine | superfan
 SAL | Mitchell and Cam's wild friend, played by Elizabeth Banks | superfan
-LONGINUS | Pepper's partner | superfan
 SALTZMAN | Pepper's surname | superfan
 GRACE | Phil's late mother | superfan
 MERLE | Cam's father | superfan

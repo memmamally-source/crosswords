@@ -79,9 +79,9 @@ GIGANOTOSAURUS | Huge carnivore of Dominion | fan
 INDORAPTOR | Fallen Kingdom's hybrid | fan
 LOCUSTS | Giant insects ravaging crops in Dominion | fan
 GYROSPHERE | Glass ball ride among the herbivores | fan
-CHARLIE | Raptor named in Jurassic World | fan
-DELTA | Raptor in Owen's pack | fan
-ECHO | Raptor in Owen's pack | fan
+CHARLIE | Owen's raptor named for the NATO letter C | fan
+DELTA | Owen's raptor named for the NATO letter D | fan
+ECHO | Owen's raptor named for the NATO letter E | fan
 WAYNE KNIGHT | Actor who played Nedry (5,6) | fan
 BD WONG | Actor who played Wu (2,4) | fan
 VINCE VAUGHN | Actor who played Nick (5,6) | fan
@@ -130,7 +130,7 @@ ED REGIS | Park PR man in the novel (2,5) | superfan
 HARDING | Gerry, park vet in the novel | superfan
 BOB PECK | Actor who played Muldoon (3,4) | superfan
 MARTIN FERRERO | Actor who played Gennaro (6,7) | superfan
-ARIANA RICHARDS | Actress who played Lex (6,7) | superfan
-JOSEPH MAZZELLO | Actor who played Tim (6,7) | superfan
+ARIANA RICHARDS | Actress who played Lex (6,8) | superfan
+JOSEPH MAZZELLO | Actor who played Tim (6,8) | superfan
 IRRFAN KHAN | Actor who played Masrani (6,4) | superfan
 JA BAYONA | Director of Fallen Kingdom (2,6) | superfan

@@ -3,7 +3,7 @@
 @category sport
 @blurb Men's and women's World Cups: heroes, hosts and famous finals.
 @icon globe
-BRAZIL | Men's champions a record five times | casual
+BRAZIL | Men's champions in 1958, 1962, 1970, 1994 and 2002 | casual
 GERMANY | Beat Argentina in the 2014 final | casual
 ITALY | Men's champions in 1934, 1938, 1982 and 2006 | casual
 ARGENTINA | Men's champions in 1978, 1986 and 2022 | casual
@@ -13,7 +13,7 @@ ENGLAND | Won the men's title on home soil in 1966 | casual
 URUGUAY | Hosts and winners of the first World Cup, in 1930 | casual
 QATAR | Hosts of the 2022 men's tournament | casual
 RUSSIA | Hosts of the 2018 men's tournament | casual
-MEXICO | Men's hosts in 1970 and 1986 | casual
+MEXICO | First nation to host the men's tournament twice, in 1970 and 1986 | casual
 SOUTH AFRICA | Hosts in 2010, the first from their continent (5,6) | casual
 CROATIA | Beaten finalists in 2018 | casual
 USA | Women's champions in 1991, 1999, 2015 and 2019 | casual
@@ -36,7 +36,7 @@ MATILDAS | Australian women, co-hosts in 2023 | casual
 HAND OF GOD | Name for a notorious handled goal of 1986 (4,2,3) | casual
 GOLDEN BALL | Award for the tournament's best player (6,4) | casual
 JULES RIMET | Trophy awarded from 1930 to 1970 (5,5) | casual
-MARACANA | Rio stadium that hosted the 1950 and 2014 finals | casual
+MARACANA | Rio stadium of the 1950 decider and the 2014 final | casual
 VUVUZELA | Droning plastic horn heard at the 2010 tournament | casual
 PENALTIES | Spot kicks that settled the 1994, 2006 and 2022 finals | casual
 FIFA | Governing body that runs the tournament | casual
@@ -90,7 +90,7 @@ MIRACLE OF BERN | West Germany's shock 1954 final win (7,2,4) | fan
 TOTAL FOOTBALL | Fluid Dutch style of the 1970s (5,8) | fan
 PICKLES | Dog who found the stolen trophy in 1966 | fan
 SHAKIRA | Singer of Waka Waka for 2010 | fan
-INFANTINO | Gianni ___, FIFA president from 2016 | fan
+INFANTINO | Gianni ___, elected FIFA president in 2016 | fan
 FONTAINE | Just ___, scored a record 13 goals in one tournament, 1958 | superfan
 KEMPES | Mario ___, top scorer and final scorer in 1978 | superfan
 SALENKO | Oleg ___, scored five against Cameroon in 1994 | superfan
@@ -108,7 +108,7 @@ KOCSIS | Sandor ___, Hungary's 11-goal top scorer in 1954 | superfan
 LEONIDAS | Brazil's top scorer in 1938 | superfan
 PETERS | Martin ___, England's other scorer in the 1966 final | superfan
 WEBER | Wolfgang ___, West Germany's late equaliser in the 1966 final | superfan
-STILES | Nobby ___, England's gap-toothed midfielder in 1966 | superfan
+STILES | Nobby ___, England's combative holding midfielder in 1966 | superfan
 GHIGGIA | Alcides ___, scored Uruguay's 1950 winner at the Maracana | superfan
 MARACANAZO | Name for Uruguay's 1950 shock in Rio | superfan
 GAETJENS | Joe ___, scored the USA's 1950 winner against England | superfan

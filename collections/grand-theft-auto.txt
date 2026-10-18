@@ -8,7 +8,7 @@ TREVOR | Volatile GTA V lead living in Sandy Shores | casual
 FRANKLIN | Youngest of GTA V's three leads, from South Los Santos | casual
 MICHAEL | Retired GTA V robber living in Rockford Hills | casual
 CARL JOHNSON | San Andreas hero known as CJ (4,7) | casual
-TOMMY VERCETTI | Vice City's 1986 protagonist (5,7) | casual
+TOMMY VERCETTI | Vice City's 1986 protagonist (5,8) | casual
 LIBERTY CITY | New York-inspired setting of GTA III and IV (7,4) | casual
 VICE CITY | Miami-inspired setting of a 2002 entry (4,4) | casual
 LOS SANTOS | Sunny LA spoof where GTA V is set (3,6) | casual
@@ -121,7 +121,7 @@ BOHAN | Bronx-like borough in GTA IV | superfan
 SHORESIDE VALE | GTA III's third island (9,4) | superfan
 ASUKA | Yakuza leader in GTA III | superfan
 DONALD LOVE | Media mogul in GTA III (6,4) | superfan
-KENT PAUL | Recurring British music-scene hanger-on (4,4) | superfan
+KENT PAUL | Weaselly British music promoter in Vice City and San Andreas (4,4) | superfan
 UMBERTO | Robina, Cuban gang boss in Vice City | superfan
 AVERY | Carrington, property tycoon voiced by Burt Reynolds | superfan
 PHIL CASSIDY | Boozy arms dealer recurring since GTA III (4,7) | superfan

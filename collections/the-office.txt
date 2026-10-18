@@ -64,7 +64,7 @@ TEAPOT | Jim's thoughtful Secret Santa gift to Pam | fan
 GAS STATION | Rainy stop where Jim proposes (3,7) | fan
 NIAGARA | Falls where Jim and Pam marry | fan
 CECE | Jim and Pam's first child | fan
-SPRINKLES | Angela's cat, a casualty of Dwight's freezer | fan
+SPRINKLES | Angela's cat whose death Dwight causes | fan
 SENATOR | Political job of Angela's husband Robert | fan
 WUPHF | Ryan's multi-alert social network start-up | fan
 RABIES | Cause of Michael's charity fun run | fan
@@ -100,7 +100,6 @@ DATE MIKE | Michael's alter ego at a bar (4,4) | superfan
 PLOP | Andy's nickname for Pete | superfan
 LIPTON | Angela's senator husband's surname | superfan
 ANNEX | Area where Toby and Kelly sit | superfan
-SEBRING | Michael's Chrysler convertible | superfan
 SCRANTONICITY | Kevin's Police tribute band | superfan
 FINER THINGS CLUB | Pam, Oscar and Toby's cultured reading circle (5,6,4) | superfan
 HERE COMES TREBLE | Andy's college a cappella group (4,5,6) | superfan

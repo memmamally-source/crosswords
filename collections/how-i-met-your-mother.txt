@@ -63,9 +63,9 @@ JAMES | Barney's brother | fan
 BARKER | Bob ___, game-show host Barney thinks is his father | fan
 PINEAPPLE | The ___ Incident, a mystery morning-after | fan
 INTERVENTION | Sign-holding gang ritual | fan
-SLAPSGIVING | Marshall's mash-up of Thanksgiving and a strike | fan
+SLAPSGIVING | Thanksgiving overshadowed by Marshall's slap countdown | fan
 DOPPELGANGERS | Lookalikes the gang keeps spotting | fan
-NAKED MAN | Robin's bold dating gambit (5,3) | fan
+NAKED MAN | Nude dating gambit Robin's date pulls on her (5,3) | fan
 DUCKY TIE | Neckwear Marshall forces Barney to wear (5,3) | fan
 SAN FRANCISCO | City Lily goes to for an art fellowship (3,9) | fan
 HANNIGAN | Alyson who plays Lily | fan
@@ -100,7 +100,7 @@ LASER TAG | Barney's favourite arena game (5,3) | superfan
 PLEASE | Acronym for Barney's mysterious job | superfan
 FIERO | Marshall's beloved Pontiac | superfan
 WRESTLERS | Robots vs. ___, an event the gang attends | superfan
-DOGS | Robin had five of them when Ted moved in | superfan
+DOGS | Robin owns five of them early in the series | superfan
 PERFECT WEEK | Barney's streak of seven straight successes (7,4) | superfan
 LILYPAD | Marshall's pet name for his wife | superfan
 JERRY | Barney's real father | superfan

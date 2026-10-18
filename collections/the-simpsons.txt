@@ -7,7 +7,7 @@ HOMER | Bald, beer-loving father of three | casual
 MARGE | Blue-haired matriarch of the family | casual
 BART | Spiky-haired troublemaker, ten years old | casual
 LISA | Sax-playing brainbox of the family | casual
-MAGGIE | Pacifier-sucking baby of the family | casual
+MAGGIE | Youngest Simpson, who rarely speaks | casual
 SPRINGFIELD | Hometown of the yellow family | casual
 DOH | Homer's grunt of annoyance | casual
 DONUT | Homer's favourite pink-frosted snack | casual
@@ -91,7 +91,7 @@ KAVNER | Julie ___, voice of Marge | fan
 CARTWRIGHT | Nancy ___, voice of Bart | fan
 AZARIA | Hank ___, voice of Moe and Apu | fan
 SPIDER PIG | Homer's ceiling-walking pet in the movie (6,3) | fan
-KANG | Alien who once posed as Bill Clinton | fan
+KANG | One-eyed alien paired with Kodos in the Halloween specials | fan
 ISOTOPES | Springfield's baseball team | fan
 JEBEDIAH | Springfield's founding father | superfan
 LARGO | Mr ___, Lisa's music teacher | superfan
@@ -137,4 +137,4 @@ SHERRI | Twin sister of Terri | superfan
 WENDELL | Classmate prone to motion sickness | superfan
 DOLPH | Bully with a lopsided fringe | superfan
 KEARNEY | Bully who's oddly old for school | superfan
-KODOS | Alien who once posed as Bob Dole | superfan
+KODOS | One-eyed alien paired with Kang in the Halloween specials | superfan

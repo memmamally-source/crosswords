@@ -9,9 +9,9 @@ SAKURA | Pink-haired kunoichi of Team 7 | casual
 KAKASHI | Masked Copy Ninja who leads Team 7 | casual
 HOKAGE | Title of the Hidden Leaf's leader | casual
 KONOHA | The Village Hidden in the Leaves | casual
-RAMEN | Noodle dish the hero eats at Ichiraku | casual
+RAMEN | Noodle dish the orange-clad hero adores | casual
 RASENGAN | Spinning sphere of chakra held in the palm | casual
-CHIDORI | Lightning blade named for a thousand birds | casual
+CHIDORI | Sasuke's lightning technique, named for a thousand birds | casual
 SHARINGAN | Red eye of the Uchiha clan | casual
 CHAKRA | Energy ninja mould to perform techniques | casual
 JUTSU | Ninja technique | casual
@@ -29,7 +29,7 @@ KUNAI | Ninja throwing knife | casual
 SHADOW CLONE | Jutsu creating solid copies of the user (6,5) | casual
 BELIEVE IT | Hero's catchphrase in the English dub (7,2) | casual
 UZUMAKI | Clan name of the orange-clad hero | casual
-UCHIHA | Clan famed for the Sharingan | casual
+UCHIHA | Clan of Sasuke and Itachi | casual
 KURAMA | True name of the Nine-Tailed Fox | casual
 NINJA | Shinobi | casual
 KISHIMOTO | Masashi ___, creator of the manga | casual
@@ -69,7 +69,7 @@ KABUTO | Glasses-wearing spy for the snake Sannin | fan
 KILLER BEE | Rapping host of the Eight-Tails (6,3) | fan
 HASHIRAMA | First Hokage with Wood Style | fan
 HIRUZEN | Third Hokage, the Professor | fan
-DANZO | Leader of the secretive Root faction | fan
+DANZO | Bandaged Leaf elder who craved the Hokage title | fan
 SUSANOO | Giant spectral warrior of the Mangekyo | fan
 AMATERASU | Black flames that burn for seven days | fan
 TSUKUYOMI | Genjutsu named for a moon god | fan
@@ -81,8 +81,8 @@ KONOHAMARU | Third Hokage's grandson | fan
 SAI | Pale ink-drawing artist of Team Kakashi | fan
 KAGUYA | Rabbit goddess, mother of chakra | fan
 JINCHURIKI | Human host of a tailed beast | fan
-SHUKAKU | One-Tailed beast sealed in the Kazekage | fan
-NAGATO | Rinnegan wielder behind the Six Paths of Pain | fan
+SHUKAKU | One-Tailed beast sealed inside Gaara | fan
+NAGATO | Uzumaki Rinnegan wielder who controlled six bodies | fan
 KARIN | Red-haired sensor who joined Sasuke's team | fan
 ASUMA | Cigarette-smoking leader of Team 10 | fan
 FOREST OF DEATH | Second stage of the Chunin Exams (6,2,5) | fan

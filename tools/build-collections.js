@@ -50,7 +50,13 @@ function readCollection(file) {
     if (answer.length < 3 || answer.length > 15) problems.push(`${where}: ${answer} has ${answer.length} letters`);
     if (!clue) problems.push(`${where}: empty clue`);
     const words = strip(written).split(/[\s-]+/).filter((w) => /[A-Za-z]/.test(w));
-    if (words.length > 1 && !/\([\d,\- ]+\)$/.test(clue)) problems.push(`${where}: multi-word answer ${written} needs its word lengths, like (7,4)`);
+    const lengths = clue.match(/\((\d{1,2}(?:[,\- ]+\d{1,2})*)\)$/);
+    if (words.length > 1 && !lengths) problems.push(`${where}: multi-word answer ${written} needs its word lengths, like (7,4)`);
+    if (lengths) {
+      const want = words.map((w) => w.replace(/[^A-Za-z]/g, '').length).join(',');
+      const given = lengths[1].split(/[,\- ]+/).filter(Boolean).join(',');
+      if (want !== given) problems.push(`${where}: ${written} is (${want}), not (${lengths[1]})`);
+    }
     if (new RegExp(`\\b${answer}`, 'i').test(strip(clue).replace(/[^A-Za-z ]/g, ''))) problems.push(`${where}: ${answer} appears in its own clue`);
     for (const w of words) {
       const bare = w.replace(/[^A-Za-z]/g, '');

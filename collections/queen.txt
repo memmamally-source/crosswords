@@ -37,12 +37,8 @@ HIGHLANDER | 1986 film featuring Who Wants to Live Forever | casual
 FOREVER | Who Wants to Live ___, 1986 ballad | casual
 BREAK FREE | I Want to ___, 1984 single (5,4) | casual
 CROWN | Regal headwear Freddie wore to end Magic Tour shows | casual
-FREDDIE | First name of the band's singer | casual
-BOHEMIAN | ___ Rhapsody, 2018 biopic | casual
-LEATHER | Material of Freddie's early-1980s stage jacket | casual
 OPERATIC | Style of the mid-section of their 1975 epic | casual
 ZANZIBAR | Island where Freddie was born in 1946 | casual
-STADIUM | Rock genre of huge venues they ruled | casual
 GELDOF | Bob, organiser of Live Aid | casual
 RED SPECIAL | Guitar Brian built with his father (3,7) | casual
 SIXPENCE | Coin Brian uses as a plectrum | fan
@@ -62,10 +58,10 @@ ONE VISION | 1985 single written after Live Aid (3,6) | fan
 HAMMER TO FALL | Song from The Works played at Live Aid (6,2,4) | fan
 BARCELONA | 1987 Freddie duet for the city's Olympics | fan
 CABALLE | Montserrat, opera singer who duetted with Freddie | fan
-LAMBERT | Adam, singer touring with the band since 2011 | fan
+LAMBERT | Adam, singer performing with the band since 2011 | fan
 RODGERS | Paul, ex-Free singer who toured with the band | fan
 KNEBWORTH | Site of Freddie's last show with the band, August 1986 | fan
-HYDE PARK | London park of their free 1976 concert (4,4) | fan
+HYDE PARK | Central London site of their free 1976 concert (4,4) | fan
 CHRISTMAS | Season of their 1975 and 1991 UK No 1s | fan
 ELEKTRA | Their original US record label | fan
 EMI | Their long-time UK record company | fan
@@ -83,7 +79,6 @@ MUNICH | German city where they recorded at Musicland | fan
 LOVE | Crazy Little Thing Called ___, 1979 hit | fan
 DRAG | Costume theme of the I Want to Break Free video | fan
 PHOENIX | Mercury ___ Trust, AIDS charity set up in 1992 | fan
-STEADY | Word before "nine weeks"? No | fan
 FARROKH | Freddie's birth first name | superfan
 IBEX | Freddie's band before he joined Brian and Roger | superfan
 STAFFELL | Tim, singer and bassist of Smile | superfan
@@ -93,8 +88,8 @@ ELTON | Ben, writer of the jukebox musical We Will Rock You | superfan
 DOMINION | West End theatre that hosted their musical from 2002 | superfan
 COSMOS ROCKS | The ___, 2008 album with Paul Rodgers (6,5) | superfan
 HOT SPACE | Funk-flavoured 1982 album (3,5) | superfan
-LIVE KILLERS | 1979 live double album (4,7) | superfan
-SPREAD YOUR WINGS | 1978 single sung from a barman's view (6,4,5) | superfan
+LIVE KILLERS | 1979 concert double album (4,7) | superfan
+SPREAD YOUR WINGS | 1978 single written by John Deacon (6,4,5) | superfan
 NOW I'M HERE | 1975 single from Sheer Heart Attack (3,2,4) | superfan
 BRIGHTON ROCK | Opening track of Sheer Heart Attack (8,4) | superfan
 STONE COLD CRAZY | Speedy 1974 track later covered by Metallica (5,4,5) | superfan
@@ -127,3 +122,12 @@ NO-ONE BUT YOU | 1997 track, John's last with the band (2,3,3,3) | superfan
 HOWE | Steve, Yes guitarist guesting on a 1991 title track | superfan
 GARDEN LODGE | Freddie's Kensington home (6,5) | superfan
 MOUNTAIN | Montreux studio the band bought in 1979 | superfan
+DUST | Another One Bites the ___, 1980 hit | casual
+MIC STAND | Freddie's trademark half-length prop (3,5) | casual
+VEST | White top Freddie wore at Live Aid | casual
+HARMONIES | Layered vocals built up in the studio | casual
+CURLY | Like Brian's famous hair | casual
+PLAY THE GAME | 1980 ballad opening their first US No 1 album (4,3,4) | fan
+SAVE ME | 1980 Brian May ballad, a UK top 20 single (4,2) | fan
+IT'S A HARD LIFE | 1984 single with a costume-party video (3,1,4,4) | fan
+IMPERIAL | London college where Brian studied physics | fan

@@ -15,16 +15,16 @@ MALEFICENT | Horned fairy who curses a baby princess | casual
 AURORA | Princess pricked by a spinning wheel | casual
 MOWGLI | Man-cub raised by wolves | casual
 SIMBA | Lion cub who flees after his father's death | casual
-MUFASA | King of Pride Rock voiced by James Earl Jones | casual
+MUFASA | Lion king voiced by James Earl Jones | casual
 SCAR | Treacherous lion uncle in a 1994 hit | casual
 TIMON | Meerkat with a carefree philosophy | casual
 RAFIKI | Wise mandrill who presents the newborn cub | casual
-HAKUNA MATATA | Song meaning "no worries" (6,6) | casual
+HAKUNA MATATA | Swahili phrase Timon and Pumbaa sing about (6,6) | casual
 ARIEL | Mermaid who trades her voice for legs | casual
 URSULA | Sea witch with octopus tentacles | casual
 SEBASTIAN | Crab court composer under the sea | casual
 BELLE | Bookworm who falls for a Beast | casual
-GASTON | Vain hunter who hates books | casual
+GASTON | Vain hunter who woos the bookish heroine | casual
 ALADDIN | Street rat who finds a magic lamp | casual
 GENIE | Blue lamp-dweller voiced by Robin Williams | casual
 JAFAR | Scheming royal vizier with a snake staff | casual
@@ -71,7 +71,7 @@ ESMERALDA | Romani dancer in Paris | fan
 HADES | Blue-flamed lord of the underworld | fan
 KUZCO | Selfish emperor turned into a llama | fan
 YZMA | Villainous adviser to an emperor | fan
-JUMBA | Mad scientist who created Experiment 626 | fan
+JUMBA | Four-eyed evil genius who chases his alien creation | fan
 KENAI | Brother Bear hero transformed into a bear | fan
 PASCAL | Princess's chameleon companion in Tangled | fan
 MAXIMUS | Palace horse who hunts Flynn Rider | fan
@@ -111,7 +111,7 @@ FLOTSAM | One of Ursula's twin moray eels | superfan
 CAVE OF WONDERS | Tiger-headed treasure trove (4,2,7) | superfan
 SHENZI | Hyena voiced by Whoopi Goldberg | superfan
 RATCLIFFE | Greedy governor in Pocahontas | superfan
-DJALI | Esmeralda's pet goat | superfan
+DJALI | Pet goat of the Romani dancer in Hunchback | superfan
 SHAN YU | Hun leader in Mulan (4,2) | superfan
 KERCHAK | Silverback leader of the gorilla troop | superfan
 CLAYTON | Hunter villain of Tarzan | superfan
@@ -120,7 +120,7 @@ PLEAKLEY | One-eyed Earth expert in Lilo & Stitch | superfan
 KODA | Chatty bear cub in Brother Bear | superfan
 RHINO | Hamster in a ball who idolizes Bolt | superfan
 MAMA ODIE | Blind bayou priestess with a pet snake (4,4) | superfan
-TADASHI | Hiro's older brother | superfan
+TADASHI | Elder Hamada brother in Big Hero 6 | superfan
 OAKEN | Owner of a trading post and sauna | superfan
 MARSHMALLOW | Giant snow monster guarding the ice palace | superfan
 AHTOHALLAN | Mythical river of memory in Frozen II | superfan

@@ -46,7 +46,7 @@ CURLING | Winter sport with stones and brooms | casual
 BOBSLEIGH | Winter sledding event for teams of two or four | casual
 LUGE | Feet-first sledding event | casual
 BIATHLON | Skiing and shooting event | casual
-SLALOM | Downhill skiing race between gates | casual
+SLALOM | Alpine skiing race weaving through closely set gates | casual
 COE | Seb ___, 1500m champion in 1980 and 1984 | fan
 THOMPSON | Daley ___, decathlon champion in 1980 and 1984 | fan
 SPITZ | Mark ___, swimmer with seven golds in 1972 | fan

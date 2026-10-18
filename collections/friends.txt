@@ -20,8 +20,8 @@ PIVOT | Word Ross shouts while hauling a sofa upstairs | casual
 UNAGI | Ross's "state of total awareness" | casual
 LOBSTER | Phoebe's term for someone's mate for life | casual
 MARCEL | Ross's pet capuchin monkey | casual
-CHICK | Fluffy baby bird Chandler brings home | casual
-DUCK | Quacking pet in Joey and Chandler's bathtub | casual
+CHICK | Fluffy baby bird that becomes Joey and Chandler's pet | casual
+DUCK | Quacking pet of Joey and Chandler | casual
 HOW YOU DOIN | Joey's go-to pickup line (3,3,4) | casual
 WE WERE ON A BREAK | Ross's endless defence (2,4,2,1,5) | casual
 LAS VEGAS | City of an impulsive drunken wedding (3,5) | casual
@@ -59,7 +59,7 @@ FRANK | Phoebe's younger half-brother | fan
 TRIPLETS | What Phoebe carries as a surrogate | fan
 JUDY | Mother of Monica and Ross | fan
 JACK | Father of Monica and Ross | fan
-AMY | Rachel's self-absorbed younger sister | fan
+AMY | Rachel's self-absorbed sister, played by Christina Applegate | fan
 JILL | Rachel's sister who briefly dates Ross | fan
 RICHARD | Monica's older ophthalmologist boyfriend | fan
 PAOLO | Rachel's Italian boyfriend | fan
@@ -112,7 +112,7 @@ TWENTY | Monica's apartment number | superfan
 SPHYNX | Hairless cat breed Rachel buys | superfan
 GLADYS | Phoebe's unloved art piece passed between the girls | superfan
 ROSSELLINI | Isabella ___, on Ross's celebrity list | superfan
-MAC | Joey's role alongside a robot in a later show | superfan
+MAC | Joey's detective role opposite a robot partner | superfan
 ICHIBAN | Japanese brand of men's lipstick Joey advertises | superfan
 BAMBOOZLED | Game show Joey auditions to host | superfan
 ALESSANDROS | Restaurant whose food Monica slates, then runs | superfan

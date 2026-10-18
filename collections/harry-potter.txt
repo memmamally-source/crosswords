@@ -19,7 +19,7 @@ RAVENCLAW | House represented by an eagle | casual
 MUGGLE | Non-magical person | casual
 HEDWIG | Harry's snowy owl | casual
 SNITCH | Golden ball worth 150 points | casual
-WAND | Ollivander sells one to every new student | casual
+WAND | Ollivander's stock-in-trade, holly and phoenix feather for Harry | casual
 DOBBY | House-elf freed with a sock | casual
 DRACO | Malfoy who taunts Harry | casual
 SORTING HAT | It places first-years in their houses (7,3) | casual

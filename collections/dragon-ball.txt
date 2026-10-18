@@ -14,7 +14,7 @@ FRIEZA | Galactic tyrant who destroyed Planet Vegeta | casual
 CELL | Bio-android villain who seeks perfection | casual
 BUU | Pink Majin who turns foes into candy | casual
 TRUNKS | Half-Saiyan son of Bulma and Vegeta | casual
-YAMCHA | Former desert bandit with a Wolf Fang Fist | casual
+YAMCHA | Former desert bandit, Bulma's early boyfriend | casual
 TIEN | Three-eyed martial artist | casual
 SAIYAN | Warrior race that transforms under a full moon | casual
 KAMEHAMEHA | Turtle School's signature energy wave | casual
@@ -32,7 +32,6 @@ TORIYAMA | Akira ___, creator of the manga | casual
 ULTRA INSTINCT | Godly state of reflexive combat (5,8) | casual
 NAMEK | Home planet of Piccolo's race | casual
 KAKAROT | Goku's Saiyan birth name | casual
-DRAGON | Shenron, for one | casual
 TAIL | Saiyan appendage Goku is born with | casual
 ORANGE | Colour of Goku's classic gi | casual
 CAPSULE | Pocket device that pops out a house or car | casual
@@ -40,10 +39,10 @@ TOURNAMENT | World Martial Arts ___ | casual
 KING KAI | North Kai who trains Goku (4,3) | casual
 BROLY | Legendary Super Saiyan with immense power | casual
 GOKU BLACK | Evil duplicate in Future Trunks's timeline (4,5) | casual
-VIDEL | Mr. Satan's daughter who marries Gohan | casual
+VIDEL | Pigtailed crime-fighter who marries Gohan | casual
 GOGETA | Fusion of Goku and Vegeta via the dance | casual
-VEGITO | Fusion of Goku and Vegeta via Potara | casual
-POWER LEVEL | Measure read by a scouter (5,5) | casual
+VEGITO | Fusion of Goku and Vegeta via earrings | casual
+POWER LEVEL | Reading famously declared to be over nine thousand (5,5) | casual
 SEVEN | Number of wish orbs needed to summon the dragon | casual
 SHONEN JUMP | Weekly magazine that serialized the manga (6,4) | casual
 CHIAOTZU | Tien's small, pale telekinetic friend | fan
@@ -58,7 +57,7 @@ ZARBON | Frieza's handsome henchman with a monstrous form | fan
 DODORIA | Pink, spiky henchman of Frieza | fan
 DR GERO | Red Ribbon scientist behind the androids (2,4) | fan
 MR SATAN | Champion who takes credit for beating Cell (2,5) | fan
-HERCULE | Mr. Satan's name in the English dub | fan
+HERCULE | Afro-haired champion's name in the English dub | fan
 PAN | Gohan and Videl's daughter | fan
 BARDOCK | Goku's father | fan
 JIREN | Stoic powerhouse of Universe 11 | fan
@@ -76,13 +75,13 @@ GREAT APE | Giant form a Saiyan takes under a full moon (5,3) | fan
 POWER POLE | Goku's extending staff (5,4) | fan
 OX KING | Chi-Chi's giant father (2,4) | fan
 LOOKOUT | Floating platform home of Earth's guardian | fan
-SUPREME KAI | Kibito's master in the Buu saga (7,3) | fan
+SUPREME KAI | Lavender-skinned god with a white mohawk in the Buu saga (7,3) | fan
 BABIDI | Wizard who revived Majin Buu | fan
 GOTENKS | Fusion of Goten and Trunks | fan
 POTARA | Fusion earrings worn by Kais | fan
 CELL GAMES | Tournament the bio-android holds on Earth (4,5) | fan
 SOLAR FLARE | Tien's blinding technique (5,5) | fan
-DESTRUCTO DISC | Krillin's cutting energy disk (9,4) | fan
+DESTRUCTO DISC | Krillin's spinning energy blade (9,4) | fan
 GALICK GUN | Vegeta's purple beam attack (6,3) | fan
 FINAL FLASH | Vegeta's attack in the Cell saga (5,5) | fan
 WOLF FANG FIST | Yamcha's signature technique (4,4,4) | fan
@@ -101,7 +100,7 @@ DABURA | Demon king under Babidi's control | superfan
 METAMORAN | Race that taught Goku the fusion dance | superfan
 MASENKO | Gohan's early energy attack | superfan
 MAKANKOSAPPO | Special Beam Cannon in Japanese | superfan
-KIENZAN | Japanese name for the Destructo Disc | superfan
+KIENZAN | Krillin's cutting disc, in Japanese | superfan
 DODONPA | Crane School finger-beam technique | superfan
 TAO PAI PAI | Assassin who rides a thrown pillar (3,3,3) | superfan
 ZENKAI | Saiyan power boost after recovering from injury | superfan
