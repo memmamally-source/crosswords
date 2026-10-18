@@ -236,25 +236,26 @@
   }
 
   function finalize(board) {
-    const offR = board.minR;
-    const offC = board.minC;
-    const rows = board.maxR - board.minR + 1;
-    const cols = board.maxC - board.minC + 1;
-
-    const solution = Array.from({ length: rows }, () => Array(cols).fill(null));
-    for (const [k, cell] of board.cells) {
-      const [r, c] = k.split(',').map(Number);
-      solution[r - offR][c - offC] = cell.ch;
-    }
-
     const words = board.placed.map((p) => ({
       answer: p.entry.answer,
       clue: p.entry.clue,
       tag: p.entry.tag,
       dir: p.dir,
-      row: p.r - offR,
-      col: p.c - offC,
+      row: p.r - board.minR,
+      col: p.c - board.minC,
     }));
+    return fromLayout(board.maxR - board.minR + 1, board.maxC - board.minC + 1, words);
+  }
+
+  // Builds the full puzzle (letters, numbers, cells) from where each word
+  // sits. Used for freshly generated grids and for saved (frozen) ones, so
+  // both come out identical.
+  function fromLayout(rows, cols, words) {
+    const solution = Array.from({ length: rows }, () => Array(cols).fill(null));
+    words.forEach((w) => {
+      const { dr, dc } = DIRS[w.dir];
+      for (let i = 0; i < w.answer.length; i++) solution[w.row + dr * i][w.col + dc * i] = w.answer[i];
+    });
 
     // Number start squares in reading order.
     const starts = new Map();
@@ -279,6 +280,27 @@
     }
 
     return { rows, cols, solution, numbers, words };
+  }
+
+  // Compact form of a finished puzzle for saving to puzzles/*.json:
+  // { rows, cols, words: [[answer, 'a' | 'd', row, col, clue, tag?], ...] }.
+  function freeze(puzzle) {
+    return {
+      rows: puzzle.rows,
+      cols: puzzle.cols,
+      words: puzzle.words.map((w) => {
+        const out = [w.answer, w.dir === 'across' ? 'a' : 'd', w.row, w.col, w.clue];
+        if (w.tag) out.push(w.tag);
+        return out;
+      }),
+    };
+  }
+
+  function thaw(frozen) {
+    const words = frozen.words.map(([answer, d, row, col, clue, tag]) => ({
+      answer, clue, tag, dir: d === 'a' ? 'across' : 'down', row, col,
+    }));
+    return fromLayout(frozen.rows, frozen.cols, words);
   }
 
   /**
@@ -340,7 +362,47 @@
     return order.slice(slot * size, slot * size + size).map((i) => bank[i]);
   }
 
-  const api = { generate, mulberry32, rotatingPool, mentionedAnswers };
+  // Short, stable fingerprint of an answer (FNV-1a, base 36), so a shared
+  // link can name its words without depending on their order in a word list.
+  function answerId(answer) {
+    let h = 0x811c9dc5;
+    for (let i = 0; i < answer.length; i++) {
+      h ^= answer.charCodeAt(i);
+      h = Math.imul(h, 0x01000193) >>> 0;
+    }
+    return h.toString(36).padStart(7, '0');
+  }
+
+  // A finished grid as a link code: "L" then, for each word, its answer id,
+  // direction (a/d), row and column (one base-36 digit each). Returns null
+  // for grids too large to encode.
+  function layoutCode(puzzle) {
+    if (puzzle.rows > 36 || puzzle.cols > 36) return null;
+    return 'L' + puzzle.words.map((w) => answerId(w.answer) + w.dir[0] + w.row.toString(36) + w.col.toString(36)).join('.');
+  }
+
+  // Rebuilds a grid from a link code using the genre's current entries for
+  // the clues. Returns null if any word is no longer in the bank.
+  function fromLayoutCode(code, bank) {
+    if (!code || code[0] !== 'L') return null;
+    const byId = new Map(bank.map((e) => [answerId(e.answer), e]));
+    const words = [];
+    let rows = 0;
+    let cols = 0;
+    for (const part of code.slice(1).split('.')) {
+      const e = byId.get(part.slice(0, 7));
+      const dir = part[7] === 'a' ? 'across' : part[7] === 'd' ? 'down' : null;
+      const row = parseInt(part[8], 36);
+      const col = parseInt(part[9], 36);
+      if (!e || !dir || Number.isNaN(row) || Number.isNaN(col) || part.length !== 10) return null;
+      words.push({ answer: e.answer, clue: e.clue, tag: e.tag, dir, row, col });
+      rows = Math.max(rows, row + (dir === 'down' ? e.answer.length : 1));
+      cols = Math.max(cols, col + (dir === 'across' ? e.answer.length : 1));
+    }
+    return words.length ? fromLayout(rows, cols, words) : null;
+  }
+
+  const api = { generate, mulberry32, rotatingPool, mentionedAnswers, freeze, thaw, answerId, layoutCode, fromLayoutCode };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CrosswordGenerator = api;
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Crossword Hub</title>
-  <meta name="description" content="A daily academic crossword, a quick daily Mini, and themed puzzles in 33 genres from pop culture to philosophy." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%23121212'/><rect x='5' y='5' width='10' height='10' fill='%23fff'/><rect x='17' y='5' width='10' height='10' fill='%23fff'/><rect x='5' y='17' width='10' height='10' fill='%23fff'/><rect x='17' y='17' width='10' height='10' fill='%23f2c230'/></svg>" />
+  <meta name="description" content="A crossword for every obsession: a daily crossword, a quick daily Mini, and themed puzzles in 33 genres from pop culture to philosophy." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231b2540'/><rect x='6' y='19' width='13' height='13' fill='%23fffdf8'/><rect x='19' y='19' width='13' height='13' fill='%23fffdf8'/><rect x='33' y='19' width='13' height='13' fill='%23d4a12a'/><rect x='46' y='19' width='12' height='13' fill='%23fffdf8'/><rect x='33' y='6' width='13' height='13' fill='%23fffdf8'/><rect x='33' y='32' width='13' height='13' fill='%23fffdf8'/><rect x='33' y='45' width='13' height='13' fill='%23fffdf8'/></svg>" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fffdf8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#161d2d" media="(prefers-color-scheme: dark)" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="Crosswords" />
@@ -17,20 +17,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=12" />
+  <link rel="stylesheet" href="css/styles.css?v=16" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="masthead">
     <div class="masthead-bar">
+      <a class="wordmark" href="#/" data-nav="home" aria-label="Crossword Hub, home"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1b2540" /><rect x="8" y="20" width="11" height="11" rx="1.5" fill="#fffdf8" /><rect x="20.5" y="20" width="11" height="11" rx="1.5" fill="#fffdf8" /><rect x="33" y="20" width="11" height="11" rx="1.5" fill="#d4a12a" /><rect x="45.5" y="20" width="11" height="11" rx="1.5" fill="#fffdf8" /><rect x="33" y="7.5" width="11" height="11" rx="1.5" fill="#fffdf8" /><rect x="33" y="32.5" width="11" height="11" rx="1.5" fill="#fffdf8" /><rect x="33" y="45" width="11" height="11" rx="1.5" fill="#fffdf8" /></svg><span>Crossword Hub</span></a>
       <nav class="masthead-nav" aria-label="Sections">
         <button data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 12h16M12 4v16" /></svg><span>Today</span></button>
         <button data-nav="archive"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M4 10h16M9 3v4M15 3v4" /></svg><span>Archive</span></button>
-        <button data-nav="genres"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5" /><rect x="13" y="4" width="7" height="7" rx="1.5" /><rect x="4" y="13" width="7" height="7" rx="1.5" /><rect x="13" y="13" width="7" height="7" rx="1.5" /></svg><span>Genres</span></button>
+        <button data-nav="genres"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5" /><rect x="13" y="4" width="7" height="7" rx="1.5" /><rect x="4" y="13" width="7" height="7" rx="1.5" /><rect x="13" y="13" width="7" height="7" rx="1.5" /></svg><span>Collections</span></button>
         <button data-action="stats" class="nav-stats"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V4M19 20v-6" /></svg><span>Stats</span></button>
       </nav>
-      <a class="wordmark" href="#/" data-nav="home">Crossword Hub</a>
       <div class="masthead-tools">
         <button class="icon-btn account-btn" id="account-btn" data-action="account" aria-label="Sign in" title="Sign in" hidden>
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" /></svg>
@@ -60,7 +60,6 @@
         </div>
       </div>
     </div>
-    <p class="dateline" id="dateline"></p>
   </header>
 
   <main id="main">
@@ -78,9 +77,35 @@
         </div>
       </aside>
 
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="dateline" id="dateline"></p>
+          <h1 class="hero-title" id="hero-title">A crossword for every obsession.</h1>
+        </div>
+        <p class="streak-pill" id="streak-pill" hidden></p>
+      </section>
+
       <section class="today" aria-label="Today's puzzles">
         <article class="feature feature-daily" id="daily-feature"></article>
         <article class="feature feature-mini" id="mini-feature"></article>
+        <article class="brutal" aria-labelledby="brutal-title">
+          <div class="brutal-copy">
+            <p class="brutal-kicker">Coming soon · The Brutal Challenge</p>
+            <h2 id="brutal-title">The hardest crossword we make. How few hints will you need?</h2>
+            <p>Expert and Brutal puzzles, hint points and the No-Hint Club are on the way. Every hint will add points: a rephrased clue 1, a letter 2, a whole word 5. Fewest points wins.</p>
+          </div>
+          <span class="brutal-badge">Coming soon</span>
+        </article>
+      </section>
+
+      <section class="home-section" id="continue-section" aria-labelledby="continue-title" hidden>
+        <h2 class="section-title" id="continue-title">Continue playing</h2>
+        <div class="continue-row" id="continue-row"></div>
+      </section>
+
+      <section class="home-section" aria-labelledby="trending-title">
+        <h2 class="section-title" id="trending-title">Trending now</h2>
+        <div class="trending-row" id="trending-row"></div>
       </section>
 
       <section class="home-section" aria-labelledby="week-title">
@@ -94,7 +119,7 @@
 
       <section class="home-section" id="genres" aria-labelledby="genres-title">
         <div class="section-head">
-          <h2 class="section-title" id="genres-title">Genre puzzles</h2>
+          <h2 class="section-title" id="genres-title">Pick your obsession</h2>
           <div class="segmented" role="radiogroup" aria-label="Difficulty" id="difficulty">
             <button role="radio" data-difficulty="easy">Easy</button>
             <button role="radio" data-difficulty="medium">Medium</button>
@@ -104,6 +129,14 @@
         <p class="section-deck">A fresh grid every time. You won't meet the same clue twice in a genre until you've worked through its whole word bank.</p>
         <div class="category-tabs" role="tablist" aria-label="Genre groups" id="category-tabs"></div>
         <div class="genre-grid" id="genre-grid"></div>
+      </section>
+
+      <section class="home-section" aria-labelledby="home-stats-title">
+        <div class="section-head">
+          <h2 class="section-title" id="home-stats-title">Your stats</h2>
+          <button class="link-btn" data-action="stats">All statistics →</button>
+        </div>
+        <div class="home-stats" id="home-stats"></div>
       </section>
     </div>
 
@@ -183,7 +216,7 @@
 
       <div class="game-layout">
         <div class="board-col">
-          <div class="progress" id="progress" role="progressbar" aria-label="Squares filled" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+          <div class="puzzle-progress" id="puzzle-progress" role="progressbar" aria-label="Squares filled" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
           <div class="clue-bar" id="clue-bar">
             <button class="clue-nav" data-action="prev-word" aria-label="Previous clue">‹</button>
             <p aria-live="polite"><strong id="clue-bar-num"></strong><span id="clue-bar-text"></span></p>
@@ -218,8 +251,9 @@
   </main>
 
   <footer class="site-footer">
+    <p class="footer-brand">Crossword Hub</p>
     <p class="footer-keys">Type to fill · Arrow keys move · Space switches direction · Tab jumps to the next clue</p>
-    <p>New Daily and Mini puzzles at midnight, your local time.</p>
+    <p>New Daily and Mini puzzles every day at midnight South African time (SAST).</p>
   </footer>
 
   <dialog id="win-dialog" aria-labelledby="win-title">
@@ -280,12 +314,13 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=12"></script>
-  <script src="js/words.js?v=12"></script>
-  <script src="js/genres.js?v=12"></script>
-  <script src="js/sync.js?v=12"></script>
-  <script src="js/app.js?v=12"></script>
-  <script src="js/firebase-config.js?v=12"></script>
-  <script type="module" src="js/account.js?v=12"></script>
+  <script src="js/generator.js?v=16"></script>
+  <script src="js/words.js?v=16"></script>
+  <script src="js/genres.js?v=16"></script>
+  <script src="js/sync.js?v=16"></script>
+  <script src="js/featured.js?v=16"></script>
+  <script src="js/app.js?v=16"></script>
+  <script src="js/firebase-config.js?v=16"></script>
+  <script type="module" src="js/account.js?v=16"></script>
 </body>
 </html>

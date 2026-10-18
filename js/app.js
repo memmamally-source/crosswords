@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG */
+/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED */
 (function () {
   'use strict';
 
@@ -57,7 +57,32 @@
   // ---------- Dates ----------
   const pad = (n) => String(n).padStart(2, '0');
   const keyOf = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
-  const todayKey = () => keyOf(new Date());
+  // The official date is South African time (UTC+2, no daylight saving), so
+  // every player shares one "today". The time comes from the web server's
+  // clock when it can be read (see syncClock), not the device's clock.
+  const SAST_OFFSET = 2 * 3600 * 1000;
+  let clockOffset = 0;
+  const now = () => Date.now() + clockOffset;
+  const todayKey = () => {
+    const d = new Date(now() + SAST_OFFSET);
+    return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`;
+  };
+  // Reads the server's clock from the Date header of a tiny request. If the
+  // device is more than a minute out, the difference is applied.
+  async function syncClock() {
+    try {
+      const sent = Date.now();
+      const res = await fetch(location.pathname, { method: 'HEAD', cache: 'no-store' });
+      const back = Date.now();
+      const server = Date.parse(res.headers.get('date'));
+      if (Number.isNaN(server)) return;
+      const offset = server - (sent + back) / 2;
+      clockOffset = Math.abs(offset) > 60 * 1000 ? offset : 0;
+    } catch (e) {
+      /* offline: use the device clock */
+    }
+  }
+  const withTimeout = (promise, ms) => Promise.race([promise, new Promise((done) => setTimeout(done, ms))]);
   function parseKey(k) {
     const [y, m, d] = k.split('-').map(Number);
     return new Date(y, m - 1, d);
@@ -67,10 +92,6 @@
     d.setDate(d.getDate() + n);
     return keyOf(d);
   }
-  const dayNumber = (k) => {
-    const [y, m, d] = k.split('-').map(Number);
-    return Math.floor(Date.UTC(y, m - 1, d) / 86400000);
-  };
   const validDate = (k) => /^\d{4}-\d{2}-\d{2}$/.test(k) && k >= LAUNCH && k <= todayKey() && keyOf(parseKey(k)) === k;
   const longDate = (k) => parseKey(k).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
   const shortDate = (k) => parseKey(k).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
@@ -85,17 +106,36 @@
   const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 
   // ---------- Puzzle definitions ----------
-  // Each day's Daily and Mini draw from their own slice of a shuffled bank,
-  // so no answer comes back for a couple of weeks.
-  const rotatingPool = CrosswordGenerator.rotatingPool;
-
   const genreById = (id) => GENRES.find((g) => g.id === id);
   const categoryById = (id) => CATEGORIES.find((c) => c.id === id);
   const DAILY_SUBJECTS = new Set(DAILY_BANK.map((w) => w.tag)).size;
 
+  // ---------- Frozen puzzles ----------
+  // Every published Daily and Mini is saved in puzzles/YYYY-MM.json (made by
+  // tools/freeze-puzzles.js), so they never change once published. Dates not
+  // frozen yet are built on the spot, the same way the freeze tool builds them.
+  const frozenMonths = new Map(); // month -> data, or null once known missing
+  const monthLoads = new Map();
+  function loadMonth(month) {
+    if (!monthLoads.has(month)) {
+      monthLoads.set(month, fetch(`puzzles/${month}.json`)
+        .then((res) => (res.ok ? res.json() : null))
+        .catch(() => null)
+        .then((data) => {
+          if (data) frozenMonths.set(month, data);
+          else monthLoads.delete(month); // try again next time (e.g. offline)
+          return data;
+        }));
+    }
+    return monthLoads.get(month);
+  }
+  const frozenPuzzle = (kind, date) => {
+    const data = frozenMonths.get(date.slice(0, 7));
+    return (data && data[kind] && data[kind][date]) || null;
+  };
+
   function dailySpec(date) {
     const sched = DAILY_SCHEDULE[parseKey(date).getDay()];
-    const day = dayNumber(date);
     return {
       kind: 'daily',
       key: `daily:${date}`,
@@ -105,17 +145,12 @@
       kicker: `The Daily · ${sched.level}`,
       title: longDate(date),
       meta: `${sched.count} clues · drawn from ${DAILY_SUBJECTS} academic subjects`,
-      bank: rotatingPool(DAILY_BANK, day, DAILY_WINDOW, 1).filter((w) => w.answer.length <= sched.maxLen),
-      count: sched.count,
-      maxSize: sched.maxSize,
-      hard: sched.hard,
-      seed: day * 31 + 7,
+      build: () => dailyBuild(date),
       tags: true,
     };
   }
 
   function miniSpec(date) {
-    const day = dayNumber(date);
     return {
       kind: 'mini',
       key: `mini:${date}`,
@@ -124,19 +159,42 @@
       kicker: 'The Mini',
       title: longDate(date),
       meta: `${MINI_CONFIG.count} clues · a quick warm-up`,
-      bank: rotatingPool(MINI_BANK, day, MINI_WINDOW, 2),
-      count: MINI_CONFIG.count,
-      maxSize: MINI_CONFIG.maxSize,
-      hard: MINI_CONFIG.hard,
-      seed: day * 17 + 3,
+      build: () => miniBuild(date),
       tags: true,
     };
   }
 
+  // Genre puzzle links. New links ("L..." codes) record the finished grid,
+  // so they rebuild exactly even after word lists change. Older links list
+  // word positions in a genre's list; those are read against a snapshot of
+  // the lists as they were (words/legacy-order.json), loaded when needed.
   const encodePool = (indices) => indices.slice().sort((a, b) => a - b).map((i) => i.toString(36)).join('.');
+  let legacyOrder = null;
+  function loadLegacyOrder() {
+    if (!legacyOrder) {
+      legacyOrder = fetch('words/legacy-order.json')
+        .then((res) => (res.ok ? res.json() : null))
+        .catch(() => null)
+        .then((data) => {
+          if (!data) legacyOrder = null; // try again next time
+          return data;
+        });
+    }
+    return legacyOrder;
+  }
+  let legacyLists = null; // genre id -> answers, once loaded
   function decodePool(genre, code) {
-    if (!code) return null;
-    const words = code.split('.').map((x) => genre.words[parseInt(x, 36)]).filter(Boolean);
+    if (!code || code[0] === 'L') return null;
+    const indices = code.split('.').map((x) => parseInt(x, 36));
+    let words;
+    if (legacyLists && legacyLists[genre.id]) {
+      const byAnswer = new Map(genre.words.map((w) => [w.answer, w]));
+      const answers = legacyLists[genre.id].split(' ');
+      words = indices.map((i) => byAnswer.get(answers[i]));
+    } else {
+      words = indices.map((i) => genre.words[i]);
+    }
+    words = words.filter(Boolean);
     return words.length ? words : null;
   }
 
@@ -146,6 +204,7 @@
     return {
       kind: 'genre',
       key: `play:${genre.id}/${difficulty}/${seed}/${pool || ''}`,
+      layout: pool && pool[0] === 'L' ? pool : null,
       url: `#/play/${genre.id}/${difficulty}/${seed}${pool ? '/' + pool : ''}`,
       genre,
       difficulty,
@@ -164,10 +223,27 @@
 
   const puzzleCache = new Map();
   function puzzleFor(spec) {
-    if (!puzzleCache.has(spec.key)) {
-      puzzleCache.set(spec.key, CrosswordGenerator.generate(spec.bank, { count: spec.count, maxSize: spec.maxSize, hard: spec.hard, seed: spec.seed }));
+    if (puzzleCache.has(spec.key)) return puzzleCache.get(spec.key);
+    let puzzle;
+    let keep = true;
+    if (spec.kind === 'daily' || spec.kind === 'mini') {
+      const frozen = frozenPuzzle(spec.kind, spec.date);
+      if (frozen) {
+        puzzle = CrosswordGenerator.thaw(frozen);
+      } else {
+        const { bank, options } = spec.build();
+        puzzle = CrosswordGenerator.generate(bank, options);
+        // Don't hold on to a built copy while the month's frozen file is still loading.
+        keep = !monthLoads.has(spec.date.slice(0, 7)) || frozenMonths.has(spec.date.slice(0, 7));
+      }
+    } else if (spec.layout) {
+      puzzle = CrosswordGenerator.fromLayoutCode(spec.layout, spec.genre.words);
+      if (!puzzle) return null; // a word in the link is no longer in the bank
+    } else {
+      puzzle = CrosswordGenerator.generate(spec.bank, { count: spec.count, maxSize: spec.maxSize, hard: spec.hard, seed: spec.seed });
     }
-    return puzzleCache.get(spec.key);
+    if (keep) puzzleCache.set(spec.key, puzzle);
+    return puzzle;
   }
 
   // ---------- Genre word rotation ----------
@@ -203,7 +279,13 @@
       if (placed >= cfg.count) break;
       pool = pool.concat(spare.splice(0, 4)); // let a few seen words back in so the grid fills
     }
-    return best.spec;
+    // Share the finished grid itself, so the link never depends on word order.
+    const puzzle = puzzleFor(best.spec);
+    const code = CrosswordGenerator.layoutCode(puzzle);
+    if (!code) return best.spec;
+    const spec = genreSpec(genre, difficulty, 0, code);
+    puzzleCache.set(spec.key, puzzle);
+    return spec;
   }
 
   function rememberWords(genre, puzzle) {
@@ -311,6 +393,57 @@
     }
   }
 
+  // ---------- Icons ----------
+  // Simple stroke icons (24×24) for genres and featured cards.
+  const ICONS = {
+    dice: '<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.3" fill="currentColor"/><circle cx="16" cy="16" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/>',
+    popcorn: '<path d="M5 9l2 12h10l2-12"/><path d="M5 9a3 3 0 015-2.5 3 3 0 014 0A3 3 0 0119 9z"/><path d="M10 9l.5 12M14 9l-.5 12"/>',
+    cap: '<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5M22 9v6"/>',
+    paw: '<circle cx="8" cy="7" r="2"/><circle cx="16" cy="7" r="2"/><circle cx="4.5" cy="12" r="1.8"/><circle cx="19.5" cy="12" r="1.8"/><path d="M12 12c-3 0-5 3-5 5.5 0 1.6 1.5 2.5 3 2l2-.6 2 .6c1.5.5 3-.4 3-2C17 15 15 12 12 12z"/>',
+    utensils: '<path d="M7 3v8M5 3v4a2 2 0 004 0V3M7 11v10M17 3c-2 1-3 4-3 7h3v11"/>',
+    globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',
+    flask: '<path d="M9 3h6M10 3v6L4.5 18.5A2 2 0 006.2 21h11.6a2 2 0 001.7-2.5L14 9V3M7 15h10"/>',
+    ball: '<circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 5h-5L8 10z"/>',
+    note: '<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>',
+    planet: '<circle cx="12" cy="12" r="6"/><path d="M4.5 16.5C2 19 6 19.5 12 16s10-8.5 7.5-11"/>',
+    bolt: '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+    star: '<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>',
+    film: '<rect x="3" y="8" width="18" height="12" rx="1.5"/><path d="M3 8l3-4h3l-3 4M10 8l3-4h3l-3 4"/>',
+    tv: '<rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/>',
+    gamepad: '<rect x="2" y="7" width="20" height="10" rx="5"/><path d="M7 10v4M5 12h4M16 11h.01M18 13h.01"/>',
+    gift: '<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8c-2-4-6-4-6-1 0 1 1 1 6 1zM12 8c2-4 6-4 6-1 0 1-1 1-6 1z"/>',
+    columns: '<path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M3 10l9-6 9 6z"/>',
+    book: '<path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2zM4 19V5M8 7h7"/>',
+    sigma: '<path d="M18 5H6l7 7-7 7h12"/>',
+    pen: '<path d="M4 20l4-1 11-11-3-3L5 16zM14 6l3 3"/>',
+    scroll: '<path d="M8 3h11v13a3 3 0 01-3 3H6a3 3 0 01-3-3v-1h11v1a3 3 0 003 3M8 3a3 3 0 00-3 3v9M10 8h6M10 12h6"/>',
+    chart: '<path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6"/>',
+    heart: '<path d="M12 20s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.5-7 10-7 10z"/>',
+    palette: '<path d="M12 3a9 9 0 100 18c1.5 0 2-1 2-2 0-1.5-1-2-1-3s1-2 2.5-2H18a3 3 0 003-3c0-4.5-4-8-9-8z"/><circle cx="7.5" cy="11" r="1.2" fill="currentColor"/><circle cx="9.5" cy="7" r="1.2" fill="currentColor"/><circle cx="14.5" cy="7" r="1.2" fill="currentColor"/>',
+    beaker: '<path d="M6 3h12M7 3v16a2 2 0 002 2h6a2 2 0 002-2V3M7 12h10"/>',
+    atom: '<circle cx="12" cy="12" r="1.6" fill="currentColor"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/>',
+    leaf: '<path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15zM5 19l8-8"/>',
+    eye: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+    chip: '<rect x="7" y="7" width="10" height="10" rx="1"/><path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"/>',
+    scales: '<path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6a3 3 0 006 0zM19 7l-3 6a3 3 0 006 0z"/>',
+    candle: '<path d="M12 3c1.5 2 1.5 3.5 0 5-1.5-1.5-1.5-3 0-5z"/><rect x="9" y="10" width="6" height="11" rx="1"/>',
+    speech: '<path d="M4 5h16v11H9l-5 4z"/>',
+    mountain: '<path d="M3 20l6-10 4 6 3-4 5 8z"/>',
+    urn: '<path d="M8 3h8M9 3c0 3-4 4-4 9a7 7 0 0014 0c0-5-4-6-4-9M7 21h10"/>',
+    flame: '<path d="M12 22c4 0 7-2.7 7-7 0-3.6-2.4-6-4.3-8.1-.5 2.4-1.7 3.6-3 4.1.3-3.3-1.2-6.4-3.7-8C8.2 6.4 5 9.4 5 15c0 4.3 3 7 7 7z"/>',
+  };
+  const icon = (name, cls = '') => `<svg class="icon ${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[name] || ICONS.dice}</svg>`;
+  const GENRE_ICONS = {
+    mixed: 'dice', 'mixed-fun': 'popcorn', 'mixed-academic': 'cap',
+    animals: 'paw', food: 'utensils', geography: 'globe', science: 'flask', sports: 'ball', music: 'note', space: 'planet', mythology: 'bolt',
+    popculture: 'star', movies: 'film', gaming: 'gamepad', holidays: 'gift',
+    philosophy: 'columns', literature: 'book', mathematics: 'sigma', vocabulary: 'pen', history: 'scroll', economics: 'chart',
+    anatomy: 'heart', art: 'palette', chemistry: 'beaker', physics: 'atom', biology: 'leaf', psychology: 'eye', computing: 'chip',
+    law: 'scales', religion: 'candle', linguistics: 'speech', earthscience: 'mountain', classics: 'urn',
+  };
+  // One chip colour per genre group.
+  const CATEGORY_COLOURS = { mixed: '#1b2540', classic: '#2b4a3f', fun: '#5a2f4f', academic: '#24456b' };
+
   // ---------- Home ----------
   function statusLine(key, playLabel) {
     const st = statusOf(key);
@@ -326,19 +459,27 @@
     const daily = dailySpec(today);
     const mini = miniSpec(today);
 
-    const ds = statusLine(daily.key, 'Play');
-    const streakNow = dailyStreaks().current;
+    const ds = statusLine(daily.key, 'Play the Daily');
+    const streaks = dailyStreaks();
+    const pill = $('#streak-pill');
+    pill.hidden = false;
+    pill.innerHTML = streaks.current
+      ? `${icon('flame', 'flame')}<b>${plural(streaks.current, 'day')}</b> <span>Daily streak · best ${streaks.longest}</span>`
+      : `${icon('flame', 'flame')}<span>Solve today's Daily to start a streak</span>`;
     $('#daily-feature').innerHTML = `
       <div>
-        <p class="kicker">${esc(daily.kicker)}${streakNow ? `<span class="streak-chip" title="Daily streak">🔥 ${plural(streakNow, 'day')}</span>` : ''}</p>
+        <p class="kicker">${esc(daily.kicker)}</p>
         <h2>${esc(daily.sched.day)}'s Crossword</h2>
         <p class="deck" id="daily-deck">An academic crossword drawn from ${DAILY_SUBJECTS} subjects, from chemistry and classics to law, linguistics and philosophy.</p>
-        <ul class="facts">
-          <li><b>${daily.count}</b> clues</li>
-          <li><b>${esc(daily.sched.level)}</b> difficulty</li>
-          <li>New every day at midnight</li>
+        <ul class="chips">
+          <li>${daily.sched.count} clues</li>
+          <li>${esc(daily.sched.level)} difficulty</li>
+          <li>Same puzzle for everyone</li>
         </ul>
-        <button class="btn btn-primary" data-open="${daily.url}">${ds.label}</button>
+        <div class="feature-actions">
+          <button class="btn btn-primary btn-lg" data-open="${daily.url}">${ds.label}</button>
+          <button class="btn btn-lg" data-nav="archive">This week</button>
+        </div>
         ${ds.text ? `<p class="status ${ds.cls}">${esc(ds.text)}</p>` : ''}
       </div>
       <canvas class="thumb" aria-hidden="true"></canvas>`;
@@ -358,8 +499,8 @@
         <p class="kicker">The Mini</p>
         <h2>A six-clue warm-up</h2>
         <p class="deck">Short everyday and pop-culture answers. A good start before the Daily.</p>
-        <ul class="facts"><li><b>${mini.count}</b> clues</li><li>Small grid</li></ul>
-        <button class="btn" data-open="${mini.url}">${ms.label}</button>
+        <ul class="chips"><li>${MINI_CONFIG.count} clues</li><li>A few minutes</li></ul>
+        <button class="btn btn-lg" data-open="${mini.url}">${ms.label}</button>
         ${ms.text ? `<p class="status ${ms.cls}">${esc(ms.text)}</p>` : ''}
       </div>
       <canvas class="thumb" aria-hidden="true"></canvas>`;
@@ -390,8 +531,73 @@
     }
 
     $$('#difficulty button').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.difficulty === store.difficulty)));
+    renderContinue();
+    renderTrending();
     renderGenreTabs();
     renderGenreGrid();
+    renderHomeStats();
+  }
+
+  // Puzzles in progress, most recent first, from the saved games.
+  function renderContinue() {
+    const items = Object.entries(store.saves)
+      .filter(([, sv]) => sv.entries && sv.entries.some((row) => row.some(Boolean)))
+      .sort((a, b) => (b[1].updated || 0) - (a[1].updated || 0))
+      .map(([key, sv]) => ({ key, sv, info: describeSave(key) }))
+      .filter((x) => x.info)
+      .slice(0, 4);
+    $('#continue-section').hidden = !items.length;
+    $('#continue-row').innerHTML = items.map(({ sv, info }) => {
+      const pct = sv.total ? Math.round((100 * (sv.filled || 0)) / sv.total) : null;
+      const bits = [pct != null ? `${pct}% filled` : 'In progress', formatTime(sv.elapsed || 0)];
+      if (sv.reveals) bits.push(`${plural(sv.reveals, 'letter')} revealed`);
+      return `<button class="continue-card" data-open="${esc(info.url)}">
+        <span class="continue-kicker">${esc(info.kicker)}</span>
+        <span class="continue-title">${esc(info.title)}</span>
+        <span class="bar" aria-hidden="true"><i style="width:${pct || 4}%"></i></span>
+        <span class="continue-meta">${esc(bits.join(' · '))}</span>
+      </button>`;
+    }).join('');
+  }
+  // Title and link for a saved game's key, or null if it can't be opened.
+  function describeSave(key) {
+    const [kind, rest] = [key.slice(0, key.indexOf(':')), key.slice(key.indexOf(':') + 1)];
+    if ((kind === 'daily' || kind === 'mini') && validDate(rest)) {
+      const day = DAILY_SCHEDULE[parseKey(rest).getDay()].day;
+      return kind === 'daily'
+        ? { kicker: `Daily · ${shortDate(rest)}`, title: `${day}'s Crossword`, url: `#/daily/${rest}` }
+        : { kicker: `Mini · ${shortDate(rest)}`, title: 'The Mini', url: `#/mini/${rest}` };
+    }
+    if (kind === 'play') {
+      const [genreId, difficulty] = rest.split('/');
+      const genre = genreById(genreId);
+      if (!genre || !DIFFICULTIES[difficulty]) return null;
+      const cat = categoryById(genre.category);
+      return { kicker: `${cat ? cat.name : 'Genre'} · ${DIFFICULTIES[difficulty].label}`, title: genre.name, url: `#/play/${rest}` };
+    }
+    return null;
+  }
+
+  // Trending Now cards, from js/featured.js.
+  function renderTrending() {
+    const list = (typeof FEATURED !== 'undefined' ? FEATURED : []).filter((f) => (f.genre ? genreById(f.genre) : f.link));
+    $('#trending-row').closest('section').hidden = !list.length;
+    $('#trending-row').innerHTML = list.map((f) => `
+      <button class="trend-card" style="background:${esc(f.colour || '#1b2540')}" ${f.genre ? `data-genre="${esc(f.genre)}"` : `data-open="${esc(f.link)}"`}>
+        ${icon(f.icon || 'star')}
+        <span><span class="trend-kicker">${esc(f.kicker || '')}</span><span class="trend-title">${esc(f.title)}</span></span>
+      </button>`).join('');
+  }
+
+  function renderHomeStats() {
+    const dailies = Object.entries(store.solves).filter(([k]) => k.startsWith('daily:'));
+    const { current, longest } = dailyStreaks();
+    $('#home-stats').innerHTML = [
+      [current, 'Day streak'],
+      [longest, 'Longest streak'],
+      [store.solvedCount || 0, 'Puzzles solved'],
+      [dailies.filter(([, x]) => x.clean).length, 'Dailies with no help'],
+    ].map(([v, l]) => `<div><b>${v}</b><span>${l}</span></div>`).join('');
   }
 
   function renderGenreTabs() {
@@ -418,7 +624,7 @@
       card.className = 'genre-card';
       card.dataset.genre = g.id;
       card.innerHTML = `
-        <canvas class="thumb" aria-hidden="true"></canvas>
+        <span class="genre-icon" style="background:${CATEGORY_COLOURS[g.category] || '#1b2540'}">${icon(GENRE_ICONS[g.id])}</span>
         <span>
           <h3>${esc(g.name)}</h3>
           <p>${esc(g.blurb)}</p>
@@ -426,7 +632,6 @@
         </span>`;
       card.setAttribute('aria-label', `${g.name}. ${g.blurb} ${cfg.label}, ${cfg.count} clues.`);
       grid.appendChild(card);
-      queueThumb($('canvas', card), () => puzzleFor(genreSpec(g, 'easy', 1, '')));
     }
   }
 
@@ -584,6 +789,8 @@
     } else if (game.entries.some((row) => row.some(Boolean)) || store.saves[game.spec.key]) {
       store.saves[game.spec.key] = {
         sig: layoutSig(game.puzzle),
+        filled: game.entries.reduce((n, row) => n + row.filter(Boolean).length, 0),
+        total: game.puzzle.solution.reduce((n, row) => n + row.filter(Boolean).length, 0),
         entries: game.entries,
         revealed: game.revealed,
         pencil: game.pencil,
@@ -679,7 +886,7 @@
         if (ch) {
           el.setAttribute('role', 'gridcell');
           const n = puzzle.numbers[r][c];
-          el.innerHTML = `${n ? `<span class="num">${n}</span>` : ''}<span class="letter"></span>`;
+          el.innerHTML = `${n ? `<span class="num">${n}</span>` : ''}<span class="letter"></span><i class="dir"></i>`;
           el.addEventListener('pointerdown', (e) => {
             e.preventDefault();
             onCellClick(r, c);
@@ -716,6 +923,7 @@
   // in "(3,5)" for a two-word answer.
   const withLength = (w) => (/\([\d,\- ]+\)$/.test(w.clue) ? w.clue : `${w.clue} (${w.answer.length})`);
 
+  const BOARD_PAD = 6; // keep in step with --pad in css/styles.css
   function sizeBoard() {
     if (!game) return;
     const { rows, cols } = game.puzzle;
@@ -731,12 +939,13 @@
     // Big grids may run past the window's height rather than shrink below a
     // comfortable size; on narrow phones they scroll sideways if needed.
     const fitH = Math.max(Math.floor(availH / rows), Math.min(28, cap));
-    const size = Math.max(14, Math.min(cap, Math.floor((availW - 5) / cols), fitH));
+    const frame = 2 * BOARD_PAD + 1; // the dark board's padding around the squares
+    const size = Math.max(14, Math.min(cap, Math.floor((availW - 4 - frame) / cols), fitH));
     const board = $('#board');
     board.style.setProperty('--size', size + 'px');
     board.classList.toggle('compact', size < 30);
     // Centre on a whole pixel: a half-pixel offset blurs the grid lines.
-    const free = $('#board-wrap').clientWidth - (cols * size + 1);
+    const free = $('#board-wrap').clientWidth - (cols * size + frame);
     board.style.marginLeft = Math.max(0, Math.floor(free / 2)) + 'px';
   }
   window.addEventListener('resize', sizeBoard);
@@ -753,15 +962,17 @@
       total++;
       if (game.entries[r][c]) filled++;
     }));
-    $('#progress i').style.width = `${(filled / total) * 100}%`;
-    $('#progress').setAttribute('aria-valuenow', Math.round((filled / total) * 100));
-    $('#progress').classList.toggle('done', !!game.solved);
+    $('#puzzle-progress i').style.width = `${(filled / total) * 100}%`;
+    $('#puzzle-progress').setAttribute('aria-valuenow', Math.round((filled / total) * 100));
+    $('#puzzle-progress').classList.toggle('done', !!game.solved);
     const { puzzle, sel, entries, revealed, wrong, pencil } = game;
     const wi = currentWordIndex();
     const word = puzzle.words[wi];
     const inWord = new Set(word.cells.map(([r, c]) => r + ',' + c));
     const crossDir = sel.dir === 'across' ? 'down' : 'across';
     const crossIndex = game.wordAt[sel.r][sel.c][crossDir];
+    const inCross = new Set(crossIndex == null ? [] : puzzle.words[crossIndex].cells.map(([r, c]) => r + ',' + c));
+    $('#board').classList.toggle('dir-down', sel.dir === 'down');
 
     for (let r = 0; r < puzzle.rows; r++) {
       for (let c = 0; c < puzzle.cols; c++) {
@@ -770,6 +981,7 @@
         $('.letter', el).textContent = entries[r][c];
         el.classList.toggle('in-word', !game.solved && inWord.has(r + ',' + c));
         el.classList.toggle('active', !game.solved && r === sel.r && c === sel.c);
+        el.classList.toggle('in-cross', !game.solved && inCross.has(r + ',' + c) && !inWord.has(r + ',' + c));
         el.classList.toggle('revealed', revealed[r][c]);
         el.classList.toggle('pencil', pencil[r][c] && !revealed[r][c]);
         el.classList.toggle('wrong', wrong[r][c] && !!entries[r][c]);
@@ -793,6 +1005,7 @@
 
     $('#clue-bar-num').textContent = `${word.number}${word.dir === 'across' ? 'A' : 'D'}`;
     $('#clue-bar-text').textContent = withLength(word);
+    $('#clue-bar').classList.toggle('complete', word.cells.every(([r, c]) => entries[r][c]));
 
     $('#done-bar').hidden = !game.solved;
     if (game.solved) {
@@ -1511,7 +1724,8 @@
     if (name !== 'game') document.title = 'Crossword Hub';
   }
 
-  function route() {
+  async function route() {
+    const routeNow = currentRoute;
     const parts = currentRoute.replace(/^#\/?/, '').split('/');
     leaveGame();
     const today = todayKey();
@@ -1521,6 +1735,8 @@
       const date = parts[1] && validDate(parts[1]) ? parts[1] : today;
       showView('game');
       window.scrollTo(0, 0);
+      await withTimeout(loadMonth(date.slice(0, 7)), 4000);
+      if (currentRoute !== routeNow) return;
       startGame(parts[0] === 'daily' ? dailySpec(date) : miniSpec(date));
       return;
     }
@@ -1531,7 +1747,18 @@
       if (genre && Number.isFinite(seed)) {
         showView('game');
         window.scrollTo(0, 0);
-        startGame(genreSpec(genre, difficulty, seed, parts[4] || ''));
+        const pool = parts[4] || '';
+        if (pool && pool[0] !== 'L' && !legacyLists) {
+          legacyLists = await withTimeout(loadLegacyOrder(), 6000) || null;
+          if (currentRoute !== routeNow) return;
+        }
+        const spec = genreSpec(genre, difficulty, seed, pool);
+        if (!puzzleFor(spec)) {
+          toast('That puzzle used words that have since been retired. Here’s a new one.');
+          navigate(freshGenreSpec(genre, difficulty).url);
+          return;
+        }
+        startGame(spec);
         return;
       }
     }
@@ -1610,5 +1837,7 @@
 
   syncSettingsUI();
   showInstallCard();
-  route();
+  withTimeout(syncClock(), 1500)
+    .then(() => withTimeout(loadMonth(todayKey().slice(0, 7)), 2500))
+    .then(route);
 })();
