@@ -1,0 +1,144 @@
+# FIFA World Cup: unofficial sport crossword clues
+@title FIFA World Cup
+@category sport
+@blurb Men's and women's World Cups: heroes, hosts and famous finals.
+@icon globe
+BRAZIL | Men's champions a record five times | casual
+GERMANY | Beat Argentina in the 2014 final | casual
+ITALY | Men's champions in 1934, 1938, 1982 and 2006 | casual
+ARGENTINA | Men's champions in 1978, 1986 and 2022 | casual
+FRANCE | Men's champions in 1998 and 2018 | casual
+SPAIN | Won the men's title in 2010 and the women's in 2023 | casual
+ENGLAND | Won the men's title on home soil in 1966 | casual
+URUGUAY | Hosts and winners of the first World Cup, in 1930 | casual
+QATAR | Hosts of the 2022 men's tournament | casual
+RUSSIA | Hosts of the 2018 men's tournament | casual
+MEXICO | Men's hosts in 1970 and 1986 | casual
+SOUTH AFRICA | Africa's first hosts, in 2010 (5,6) | casual
+CROATIA | Beaten finalists in 2018 | casual
+USA | Women's champions in 1991, 1999, 2015 and 2019 | casual
+JAPAN | Women's champions in 2011 | casual
+NORWAY | Women's champions in 1995 | casual
+PELE | Only player to win three World Cups | casual
+MARADONA | Argentina's captain and star of 1986 | casual
+MESSI | Argentina captain who lifted the trophy in 2022 | casual
+ZIDANE | Two headers in the 1998 final | casual
+MBAPPE | Hat-trick scorer in the 2022 final | casual
+RONALDO | Brazil's eight-goal hero of 2002 | casual
+KLOSE | Miroslav ___, scored 16 World Cup goals from 2002 to 2014 | casual
+HURST | Geoff ___, hat-trick scorer in the 1966 final | casual
+MOORE | Bobby ___, England's captain in 1966 | casual
+BECKENBAUER | Franz ___, the Kaiser, winning captain in 1974 | casual
+RAPINOE | Megan ___, Golden Ball and Golden Boot winner in 2019 | casual
+MARTA | Brazilian forward who scored 17 Women's World Cup goals, 2003 to 2019 | casual
+LIONESSES | England women, beaten finalists in 2023 | casual
+MATILDAS | Australian women, co-hosts in 2023 | casual
+HAND OF GOD | Name for a notorious handled goal of 1986 (4,2,3) | casual
+GOLDEN BALL | Award for the tournament's best player (6,4) | casual
+JULES RIMET | Trophy awarded from 1930 to 1970 (5,5) | casual
+MARACANA | Rio stadium that hosted the 1950 and 2014 finals | casual
+VUVUZELA | Droning plastic horn heard at the 2010 tournament | casual
+PENALTIES | Spot kicks that settled the 1994, 2006 and 2022 finals | casual
+FIFA | Governing body that runs the tournament | casual
+FINAL | Last match of the tournament | casual
+GROUP | First-round pool of four teams | casual
+HOSTS | Nations staging the tournament | casual
+NETHERLANDS | Beaten in the finals of 1974, 1978 and 2010 | casual
+NEYMAR | Brazil's star forward at the home tournament in 2014 | casual
+KANE | Harry ___, Golden Boot winner in 2018 | casual
+MODRIC | Luka ___, Croatian Golden Ball winner in 2018 | casual
+EUSEBIO | Portugal's nine-goal top scorer in 1966 | fan
+LINEKER | Gary ___, Golden Boot winner in 1986 | fan
+ROSSI | Paolo ___, Italy's top scorer in 1982 | fan
+SCHILLACI | Toto ___, Italy's top scorer at Italia 90 | fan
+MULLER | Gerd ___, ten goals for West Germany in 1970 | fan
+GOTZE | Mario ___, scorer of the 2014 final winner | fan
+INIESTA | Andres ___, scorer of the 2010 final winner | fan
+CANNAVARO | Fabio ___, Italy's winning captain in 2006 | fan
+BAGGIO | Roberto ___, missed the decisive penalty in the 1994 final | fan
+ROMARIO | Brazil's Golden Ball winner in 1994 | fan
+MILLA | Roger ___, Cameroon's dancing veteran at Italia 90 | fan
+GARRINCHA | Brazilian winger who starred in 1958 and 1962 | fan
+CAFU | Brazil's captain in 2002, a player in three straight finals | fan
+RONALDINHO | Lobbed David Seaman from a free kick in 2002 | fan
+DESCHAMPS | Didier ___, won as France captain in 1998 and coach in 2018 | fan
+RAMSEY | Sir Alf ___, England's 1966 manager | fan
+SOUTHGATE | Gareth ___, England manager at the 2018 semi-final | fan
+DEL BOSQUE | Vicente ___, Spain's 2010 coach (3,6) | fan
+SCOLARI | Luiz Felipe ___, Brazil's coach in 2002 | fan
+GASCOIGNE | Paul ___, whose tears marked Italia 90 | fan
+BANKS | Gordon ___, keeper famed for a 1970 save from Pele | fan
+CHARLTON | Bobby ___, England's midfield star in 1966 | fan
+CRUYFF | Johan ___, Dutch captain of 1974 | fan
+PUSKAS | Ferenc ___, Hungary's captain in the 1954 final | fan
+YASHIN | Lev ___, Soviet keeper called the Black Spider | fan
+BATISTUTA | Gabriel ___, scored hat-tricks in 1994 and 1998 | fan
+MARTINEZ | Emiliano ___, Argentina's Golden Glove winner in 2022 | fan
+HAMM | Mia ___, USA forward in the 1999 triumph | fan
+CHASTAIN | Brandi ___, scored the winning penalty in the 1999 women's final | fan
+LLOYD | Carli ___, hat-trick in the 2015 women's final | fan
+BONMATI | Aitana ___, Spain's Golden Ball winner in 2023 | fan
+EARPS | Mary ___, England's Golden Glove winner in 2023 | fan
+AZTECA | Mexico City stadium that hosted the 1970 and 1986 finals | fan
+ROSE BOWL | Pasadena venue of the 1994 final and the 1999 women's final (4,4) | fan
+LUSAIL | Stadium of the 2022 final | fan
+STADE DE FRANCE | Venue of the 1998 final (5,2,6) | fan
+SWEDEN | Hosts and beaten finalists in 1958 | fan
+HUNGARY | Magical Magyars beaten in the 1954 final | fan
+CAMEROON | Indomitable Lions who reached the 1990 quarter-finals | fan
+MOROCCO | First African side to reach a semi-final, in 2022 | fan
+MIRACLE OF BERN | West Germany's shock 1954 final win (7,2,4) | fan
+TOTAL FOOTBALL | Fluid Dutch style of the 1970s (5,8) | fan
+PICKLES | Dog who found the stolen trophy in 1966 | fan
+JABULANI | Much-criticised match ball of 2010 | fan
+SHAKIRA | Singer of Waka Waka for 2010 | fan
+INFANTINO | Gianni ___, FIFA president from 2016 | fan
+SHOOTOUT | Penalty tiebreak first used at the tournament in 1982 | fan
+WILLIE | World Cup ___, the lion mascot of 1966 | fan
+FONTAINE | Just ___, scored a record 13 goals in one tournament, 1958 | superfan
+KEMPES | Mario ___, top scorer and final scorer in 1978 | superfan
+SALENKO | Oleg ___, scored five against Cameroon in 1994 | superfan
+STOICHKOV | Hristo ___, Bulgaria's joint top scorer in 1994 | superfan
+JAIRZINHO | Brazilian who scored in every match in 1970 | superfan
+DUNGA | Brazil's captain in 1994 | superfan
+FORLAN | Diego ___, Uruguay's Golden Ball winner in 2010 | superfan
+RODRIGUEZ | James ___, Colombia's Golden Boot winner in 2014 | superfan
+ZOFF | Dino ___, Italy's 40-year-old winning captain in 1982 | superfan
+GROSSO | Fabio ___, scored the winning penalty in the 2006 final | superfan
+BURRUCHAGA | Jorge ___, scorer of Argentina's winner in the 1986 final | superfan
+BREHME | Andreas ___, scored the 1990 final's only goal from the spot | superfan
+RAHN | Helmut ___, scored West Germany's winner in the 1954 final | superfan
+KOCSIS | Sandor ___, Hungary's 11-goal top scorer in 1954 | superfan
+LEONIDAS | Brazil's top scorer in 1938 | superfan
+PETERS | Martin ___, England's other scorer in the 1966 final | superfan
+WEBER | Wolfgang ___, West Germany's late equaliser in the 1966 final | superfan
+STILES | Nobby ___, England's gap-toothed midfielder in 1966 | superfan
+GHIGGIA | Alcides ___, scored Uruguay's 1950 winner at the Maracana | superfan
+MARACANAZO | Name for Uruguay's 1950 shock in Rio | superfan
+GAETJENS | Joe ___, scored the USA's 1950 winner against England | superfan
+ZAGALLO | Mario ___, won twice as a player and in 1970 as coach | superfan
+POZZO | Vittorio ___, coached Italy to the 1934 and 1938 titles | superfan
+BILARDO | Carlos ___, Argentina's coach in 1986 | superfan
+MENOTTI | Cesar Luis ___, Argentina's coach in 1978 | superfan
+SCALONI | Lionel ___, Argentina's coach in 2022 | superfan
+DI MARIA | Angel ___, scored in the 2022 final (2,5) | superfan
+HAVELANGE | Joao ___, FIFA president from 1974 to 1998 | superfan
+PRINZ | Birgit ___, German striker, women's champion in 2003 and 2007 | superfan
+SAWA | Homare ___, Japan's 2011 captain and Golden Ball winner | superfan
+CARMONA | Olga ___, scored the only goal of the 2023 women's final | superfan
+SUN WEN | China's star forward, Golden Ball winner in 1999 (3,3) | superfan
+NORTH KOREA | Beat Italy at Middlesbrough in 1966 (5,5) | superfan
+SENEGAL | Beat holders France in the 2002 opening match | superfan
+CZECHOSLOVAKIA | Beaten finalists in 1934 and 1962 | superfan
+SWITZERLAND | Hosts of the 1954 tournament | superfan
+CENTENARIO | Montevideo stadium of the 1930 final | superfan
+SOCCER CITY | Johannesburg stadium of the 2010 final (6,4) | superfan
+YOKOHAMA | Japanese city that staged the 2002 final | superfan
+LUZHNIKI | Moscow stadium of the 2018 final | superfan
+GOLDEN GOAL | Sudden-death extra-time rule used in 1998 and 2002 (6,4) | superfan
+TELSTAR | Adidas ball of 1970 | superfan
+AL RIHLA | Adidas ball of 2022 (2,5) | superfan
+FULECO | Armadillo mascot of 2014 | superfan
+ZABIVAKA | Wolf mascot of 2018 | superfan
+FOOTIX | Cockerel mascot of 1998 | superfan
+NARANJITO | Orange mascot of 1982 | superfan

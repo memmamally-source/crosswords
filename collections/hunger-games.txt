@@ -1,0 +1,137 @@
+# The Hunger Games: unofficial fan crossword clues
+@title The Hunger Games
+@category movies
+@blurb Districts, tributes and a bow-wielding girl from the Seam.
+@icon flame
+KATNISS | Heroine who volunteers for her sister | casual
+PEETA | Baker's son who enters the arena with the heroine | casual
+GALE | Katniss's hunting partner, Hawthorne | casual
+HAYMITCH | Hard-drinking mentor, Abernathy | casual
+EFFIE | Trinket, District 12's escort | casual
+PRIM | Katniss's little sister | casual
+PANEM | Nation built on the ruins of North America | casual
+CAPITOL | Seat of power over the districts | casual
+SNOW | Rose-scented president | casual
+MOCKINGJAY | Bird on Katniss's famous pin | casual
+CINNA | Designer who sets Katniss's costume ablaze | casual
+RUE | Small District 11 ally of Katniss | casual
+TRIBUTE | Youth chosen to fight in the Games | casual
+REAPING | Lottery that selects the contestants | casual
+ARENA | Designed battleground of the Games | casual
+BOW | Katniss's weapon of choice | casual
+ARROWS | Katniss's ammunition | casual
+CATCHING FIRE | Second book and film (8,4) | casual
+JOSH HUTCHERSON | Actor who played Peeta (4,10) | casual
+LIAM HEMSWORTH | Actor who played Gale (4,9) | casual
+WOODY HARRELSON | Actor who played Haymitch (5,8) | casual
+ELIZABETH BANKS | Actress who played Effie (9,5) | casual
+SUZANNE COLLINS | Author of the books (7,7) | casual
+EVERDEEN | Katniss's surname | casual
+MELLARK | Peeta's surname | casual
+DISTRICT TWELVE | Coal-mining home of the heroine (8,6) | casual
+COAL | District 12's main industry | casual
+BREAD | Peeta once tossed Katniss burnt loaves of this | casual
+CORNUCOPIA | Golden horn of supplies at the arena's centre | casual
+GAMEMAKER | Designer of an arena and its traps | casual
+PEACEKEEPER | White-uniformed Capitol enforcer | casual
+REBELLION | Uprising that Katniss comes to symbolise | casual
+QUARTER QUELL | Special Games held every 25 years (7,5) | casual
+VICTOR | Tribute who survives to win | casual
+CAESAR | Flickerman, the Games' TV interviewer | casual
+NIGHTLOCK | Poisonous berries | casual
+COIN | President of District 13 | casual
+SPONSOR | Patron who sends gifts into the arena | casual
+PARACHUTE | How gifts float down to tributes | casual
+DISTRICT | One of Panem's numbered regions | casual
+ODDS | Effie hopes they're ever in your favour | casual
+STAR CROSSED | Peeta and Katniss, as lovers (4-7) | casual
+FENCE | Electrified barrier around District 12 | casual
+BAKERY | Mellark family business | casual
+GIRL ON FIRE | Katniss's nickname after her chariot ride (4,2,4) | casual
+FINNICK | Odair, charming District 4 victor | fan
+JOHANNA | Mason, axe-wielding District 7 victor | fan
+BEETEE | Inventive District 3 victor | fan
+MAGS | Elderly District 4 victor | fan
+ANNIE | Cresta, Finnick's beloved | fan
+CATO | District 2 Career in the 74th Games | fan
+CLOVE | District 2 knife thrower | fan
+GLIMMER | District 1 girl in the 74th Games | fan
+THRESH | District 11 boy in the 74th Games | fan
+SENECA | Crane, Head Gamemaker of the 74th Games | fan
+PLUTARCH | Heavensbee, Gamemaker secretly with the rebels | fan
+CAREERS | Tributes trained for the Games from childhood | fan
+TRACKER JACKERS | Engineered wasps with hallucinogenic venom (7,7) | fan
+JABBERJAY | Capitol spy bird, ancestor of Katniss's symbol | fan
+BUTTERCUP | Prim's scruffy cat | fan
+PRIMROSE | Prim's full first name | fan
+AVOX | Mute Capitol servant punished for treason | fan
+SEAM | Poorest part of District 12 | fan
+VICTORS VILLAGE | Fine houses given to Games winners (7,7) | fan
+CAMOUFLAGE | Peeta's skill at hiding by the stream | fan
+HOVERCRAFT | Flying Capitol aircraft | fan
+TRIDENT | Finnick's weapon | fan
+TIGRIS | Snow's cousin, a former stylist | fan
+CORIOLANUS | President Snow's first name | fan
+LUCY GRAY | District 12 singer in the prequel (4,4) | fan
+SONGBIRDS | The Ballad of ___ and Snakes | fan
+APPLE | Katniss shoots one from a roast pig's mouth | fan
+WOODS | Where Katniss hunts beyond the fence | fan
+LENNY KRAVITZ | Actor who played Cinna (5,7) | fan
+STANLEY TUCCI | Actor who played the TV interviewer (7,5) | fan
+JENA MALONE | Actress who played Johanna (4,6) | fan
+SAM CLAFLIN | Actor who played Finnick (3,7) | fan
+JULIANNE MOORE | Actress who played President Coin (8,5) | fan
+AMANDLA STENBERG | Actress who played Rue (7,8) | fan
+RACHEL ZEGLER | Actress who played the prequel's District 12 singer (6,6) | fan
+TOM BLYTH | Actor who played young Snow (3,5) | fan
+ROSES | Snow's signature flowers | fan
+CATNIP | Gale's nickname for Katniss | superfan
+FOXFACE | Sly District 5 girl, as Katniss calls her | superfan
+MARVEL | District 1 boy in the 74th Games | superfan
+WIRESS | District 3 victor fixated on tick-tock | superfan
+MADGE | Mayor's daughter who gives Katniss the pin in the book | superfan
+GREASY SAE | Soup seller at the Hob (6,3) | superfan
+HOB | District 12's black market | superfan
+MEADOW | Field between the Seam and the fence | superfan
+PORTIA | Peeta's stylist | fan
+OCTAVIA | Member of Katniss's prep team | superfan
+FLAVIUS | Prep team member with orange ringlets | superfan
+VENIA | Prep team member with aqua hair | superfan
+DARIUS | Friendly Peacekeeper from the Hob | superfan
+LAVINIA | Red-haired Avox Katniss saw captured in the woods | superfan
+CLAUDIUS | Templesmith, the Games announcer | superfan
+ENOBARIA | District 2 victor with filed teeth | fan
+BRUTUS | District 2 tribute in the Quell | superfan
+GLOSS | District 1 victor, Cashmere's brother | superfan
+CASHMERE | District 1 victor, Gloss's sister | superfan
+CHAFF | One-handed District 11 friend of Haymitch | superfan
+BLIGHT | District 7 male tribute in the Quell | superfan
+CRESSIDA | Capitol director of the rebel propos | fan
+POLLUX | Avox cameraman who knows the tunnels | superfan
+CASTOR | Cameraman, Pollux's brother | superfan
+BOGGS | Coin's right-hand soldier | fan
+MESSALLA | Cressida's assistant in the squad | superfan
+PROPO | Short rebel propaganda film | superfan
+NUT | Mountain fortress of District 2, The ___ | superfan
+STAR SQUAD | Nickname for unit 451 in the Capitol (4,5) | superfan
+PODS | Booby traps in the Capitol's streets | superfan
+CLOCK | Shape of the Quell arena | superfan
+PEARL | Gift Peeta gives Katniss on the beach | superfan
+DANDELION | Yellow flower Katniss links to Peeta and hope | superfan
+LADY | Prim's goat | superfan
+ELEVEN | Katniss's training score | superfan
+TESSERAE | Grain rations bought with extra name entries | superfan
+HIJACKING | Venom conditioning used on Peeta | superfan
+SEJANUS | Plinth, District 2-born friend of young Snow | superfan
+HIGHBOTTOM | Dean Casca, who devised the Games | superfan
+GAUL | Dr Volumnia, prequel Head Gamemaker | superfan
+COVEY | Lucy Gray's musical family band | superfan
+VIOLA DAVIS | Actress who played Dr Gaul (5,5) | superfan
+PETER DINKLAGE | Actor who played the Academy dean (5,8) | superfan
+HUNTER SCHAFER | Actress who played young Tigris (6,7) | superfan
+JEFFREY WRIGHT | Actor who played Beetee (7,6) | superfan
+FRANCIS LAWRENCE | Director of the last four films (7,8) | superfan
+GARY ROSS | Director of the first film (4,4) | superfan
+WILLOW SHIELDS | Actress who played Prim (6,7) | superfan
+MUTTS | Capitol-engineered beasts released in arenas | fan
+CHARIOT | Vehicle tributes ride in the opening ceremony | fan

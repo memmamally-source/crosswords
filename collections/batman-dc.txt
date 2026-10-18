@@ -1,0 +1,137 @@
+# Batman & DC: unofficial fan crossword clues
+@title Batman & DC
+@category movies
+@blurb Gotham's Dark Knight, the Man of Steel and the Justice League.
+@icon bolt
+BATMAN | Caped crusader of Gotham | casual
+SUPERMAN | Man of Steel from Krypton | casual
+WONDER WOMAN | Amazon princess with a golden lasso (6,5) | casual
+JOKER | Clown Prince of Crime | casual
+ROBIN | Batman's young sidekick | casual
+GOTHAM | Batman's crime-ridden city | casual
+METROPOLIS | Superman's home city | casual
+KRYPTON | Superman's doomed home planet | casual
+KRYPTONITE | Green mineral that weakens the Man of Steel | casual
+BATMOBILE | Batman's armoured car | casual
+ALFRED | Wayne family's loyal butler | casual
+CATWOMAN | Feline-themed cat burglar | casual
+PENGUIN | Umbrella-toting crime boss | casual
+RIDDLER | Puzzle-obsessed villain in green | casual
+BANE | Masked, super-strong foe who broke the Bat | casual
+HARLEY QUINN | Joker's former psychiatrist turned partner (6,5) | casual
+LOIS LANE | Star reporter who loves Superman (4,4) | casual
+CLARK KENT | Superman's mild-mannered disguise (5,4) | casual
+BRUCE WAYNE | Billionaire behind Batman's cowl (5,5) | casual
+FLASH | Barry Allen's speedster codename | casual
+AQUAMAN | Undersea king Arthur Curry | casual
+ATLANTIS | Sunken kingdom ruled by Arthur Curry | casual
+BATCAVE | Hidden lair beneath Wayne Manor | casual
+BAT-SIGNAL | Searchlight used to summon the hero (3-6) | casual
+GORDON | Commissioner who works with Batman | casual
+JUSTICE LEAGUE | DC's premier superhero team (7,6) | casual
+LEX LUTHOR | Bald billionaire foe of Superman (3,6) | casual
+DAILY PLANET | Metropolis newspaper (5,6) | casual
+ARKHAM | ___ Asylum, home for Gotham's criminally insane | casual
+TWO-FACE | Scarred villain who flips a coin (3-4) | casual
+POISON IVY | Plant-controlling villain (6,3) | casual
+SCARECROW | Villain who spreads fear toxin | casual
+GREEN LANTERN | Hero with a power ring (5,7) | casual
+CYBORG | Half-machine member of the Justice League | casual
+SHAZAM | Word that turns Billy into a hero | casual
+LASSO | Wonder Woman's golden ___ of Truth | casual
+SMALLVILLE | Clark Kent's Kansas hometown | casual
+DARK KNIGHT | Batman's nickname, and a 2008 film title (4,6) | casual
+DIANA | First name of the Amazon princess | casual
+WAYNE MANOR | Stately home above the Batcave (5,5) | casual
+BATARANG | Bat-shaped throwing weapon | casual
+UTILITY BELT | Batman's gadget-filled accessory (7,4) | casual
+KAL-EL | Superman's Kryptonian birth name (3-2) | casual
+ZOD | General ___, exiled Kryptonian villain | fan
+BRAINIAC | Alien android who shrinks and collects cities | fan
+DARKSEID | Tyrant ruler of Apokolips | fan
+STEPPENWOLF | Darkseid's horned general in Justice League | fan
+DOOMSDAY | Monster who killed Superman in 1992 comics | fan
+JOR-EL | Superman's Kryptonian father (3-2) | fan
+PERRY | ___ White, Daily Planet editor | fan
+JIMMY OLSEN | Cub photographer and Superman's pal (5,5) | fan
+RAS AL GHUL | Leader of the League of Assassins (3,2,4) | fan
+TALIA | Daughter of the Demon's Head | fan
+LUCIUS | ___ Fox, Wayne Enterprises tech chief | fan
+NIGHTWING | Dick Grayson's identity after Robin | fan
+BATGIRL | Barbara Gordon's original costumed identity | fan
+ORACLE | Barbara Gordon's hacker identity | fan
+HARVEY DENT | Gotham DA who becomes a two-faced villain (6,4) | fan
+SELINA | ___ Kyle, cat burglar | fan
+COBBLEPOT | Oswald ___, the Penguin | fan
+NYGMA | Edward ___, the Riddler | fan
+CRANE | Jonathan ___, the Scarecrow | fan
+KILLER CROC | Reptilian Gotham villain (6,4) | fan
+DEATHSTROKE | One-eyed mercenary Slade Wilson | fan
+MERA | Aquaman's queen | fan
+BLACK MANTA | Aquaman's helmeted nemesis (5,5) | fan
+STEVE TREVOR | Pilot who crash-lands near Themyscira (5,6) | fan
+CHEETAH | Barbara Minerva's villainous form | fan
+ARES | God of war fought by Diana in 2017 | fan
+HAL JORDAN | Test pilot who became a ring-bearing hero (3,6) | fan
+SINESTRO | Lantern who turned to yellow fear power | superfan
+SUICIDE SQUAD | Task Force X, by another name (7,5) | fan
+AMANDA WALLER | Ruthless government boss of Task Force X (6,6) | fan
+DEADSHOT | Marksman who never misses | fan
+KEATON | Michael who played Batman in 1989 | fan
+BALE | Christian who played Nolan's Batman | fan
+PATTINSON | Robert who played The Batman (2022) | fan
+LEDGER | Heath who won an Oscar as the Joker | fan
+NOLAN | Christopher who directed The Dark Knight | fan
+CAVILL | Henry who played Superman in Man of Steel | fan
+REEVE | Christopher who played Superman in 1978 | fan
+GADOT | Gal who played Diana | fan
+MOMOA | Jason who played Arthur Curry | fan
+GRAYSON | Dick ___, the first Robin | fan
+JASON TODD | Second Robin (5,4) | fan
+BIZARRO | Flawed, backwards-talking Superman duplicate | fan
+FORTRESS | Superman's Arctic ___ of Solitude | fan
+LEXCORP | Luthor's company | superfan
+DAWES | Rachel ___, Bruce's childhood friend in Nolan's films | superfan
+FALCONE | Carmine ___, Gotham mob boss | superfan
+THEMYSCIRA | Island home of the Amazons | fan
+MARTHA | Name shared by Bruce's and Clark's mothers | fan
+CRIME ALLEY | Where Bruce's parents were killed (5,5) | superfan
+JOE CHILL | Mugger who killed Thomas and Martha Wayne (3,5) | superfan
+PENNYWORTH | Alfred's surname | superfan
+DETECTIVE | ___ Comics, title where Batman debuted in 1939 | superfan
+ACTION | ___ Comics, title where Superman debuted in 1938 | superfan
+FINGER | Bill ___, uncredited co-creator of Batman | superfan
+SIEGEL | Jerry ___, writer who co-created Superman | superfan
+SHUSTER | Joe ___, artist who co-created Superman | superfan
+MARSTON | William Moulton ___, Wonder Woman's creator | superfan
+DRAKE | Tim ___, third Robin | superfan
+DAMIAN | Bruce's son with Talia, later Robin | superfan
+ACE | ___ the Bat-Hound | superfan
+KRYPTO | Superman's super-powered dog | superfan
+MXYZPTLK | Mister ___, fifth-dimensional imp | superfan
+KANDOR | Kryptonian city shrunk and bottled | superfan
+QUINZEL | Harleen ___, Harley's real name | superfan
+ISLEY | Pamela ___, Poison Ivy's real name | superfan
+FRIES | Victor ___, Mr. Freeze | superfan
+NORA | Mr. Freeze's frozen wife | superfan
+VENOM | Drug that gives Bane his strength in the comics | superfan
+NAPIER | Jack ___, the Joker's name in the 1989 film | superfan
+VICKI VALE | Photojournalist in the 1989 film (5,4) | superfan
+SHRECK | Max ___, tycoon in Batman Returns | superfan
+HIPPOLYTA | Amazon queen, Diana's mother | superfan
+ANTIOPE | Diana's aunt and Amazon general | superfan
+ORM | Aquaman's half-brother, Ocean Master | superfan
+ATLANNA | Aquaman's mother, queen of Atlantis | superfan
+KILOWOG | Burly Lantern who trains new recruits | superfan
+BATSON | Billy ___, boy who becomes Shazam | superfan
+RAO | Krypton's red sun | superfan
+TERRY | ___ McGinnis, Batman Beyond | superfan
+BLACKGATE | Gotham penitentiary for sane criminals | superfan
+CONROY | Kevin, longtime animated Batman voice | superfan
+ADAM WEST | Star of the 1960s Batman TV series (4,4) | superfan
+DANO | Paul who played the Riddler in 2022 | superfan
+NICHOLSON | Jack who played the Joker in 1989 | superfan
+LOBO | Bounty hunter from Czarnia | superfan
+STARFIRE | Tamaranean member of the Teen Titans | superfan
+KARA | Supergirl's Kryptonian first name | superfan
+BURTON | Tim who directed Batman Returns | superfan

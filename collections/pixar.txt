@@ -1,0 +1,150 @@
+# Pixar: unofficial fan crossword clues
+@title Pixar
+@category movies
+@blurb Toys, monsters, fish and feelings from the animation studio.
+@icon popcorn
+WOODY | Pull-string cowboy sheriff toy | casual
+BUZZ | Space ranger toy, ___ Lightyear | casual
+NEMO | Clownfish with a small lucky fin | casual
+DORY | Forgetful blue tang | casual
+MARLIN | Overprotective clownfish dad | casual
+SULLEY | Big blue furry top scarer | casual
+MIKE | One-eyed green monster | casual
+BOO | Little girl Sulley returns home | casual
+MCQUEEN | Lightning ___, race car number 95 | casual
+MATER | Rusty, buck-toothed tow truck | casual
+REMY | Rat with a gift for cooking | casual
+WALL-E | Trash-compacting robot left on Earth (4-1) | casual
+EVE | Sleek probe robot sent to find plant life | casual
+CARL | Widower who flies his house with balloons | casual
+RUSSELL | Wilderness Explorer scout in Up | casual
+ELLIE | Carl's adventurous late wife | casual
+DUG | Talking golden retriever in Up | casual
+MERIDA | Red-haired archer princess | casual
+JOY | Upbeat leading emotion in Riley's mind | casual
+SADNESS | Blue emotion who touches memories | casual
+ANGER | Fiery red emotion | casual
+FEAR | Nervous purple emotion | casual
+DISGUST | Green emotion with high standards | casual
+ANXIETY | Orange emotion introduced in the 2024 sequel | casual
+RILEY | Girl whose mind is the setting of Inside Out | casual
+MIGUEL | Aspiring musician who visits the Land of the Dead | casual
+COCO | Miguel's great-grandmother, and the film title | casual
+LUCA | Sea monster boy on the Italian Riviera | casual
+MEI | Teen who turns into a red panda | casual
+EMBER | Fiery heroine of Elemental | casual
+FLIK | Inventive ant in A Bug's Life | casual
+DASH | Super-fast Parr son | casual
+VIOLET | Shy Parr daughter who turns invisible | casual
+EDNA | ___ Mode, superhero costume designer | casual
+ANDY | Woody's original owner | casual
+JESSIE | Yodelling cowgirl toy | casual
+REX | Anxious green dinosaur toy | casual
+HAMM | Wisecracking piggy bank | casual
+BO PEEP | Porcelain shepherdess with a crook (2,4) | casual
+MR POTATO HEAD | Spud-shaped toy with removable parts (2,6,4) | casual
+SID | Toy-torturing boy next door to Andy | casual
+PIZZA PLANET | Space-themed eatery with a delivery truck (5,6) | casual
+MONSTROPOLIS | City powered by children's screams | casual
+RADIATOR SPRINGS | Forgotten Route 66 town in Cars (8,7) | casual
+RATATOUILLE | 2007 film about a rat chef in Paris | casual
+FROZONE | Ice-making superhero friend of Bob Parr | fan
+JACK-JACK | Parr baby with many powers (4-4) | fan
+SYNDROME | Rocket-booted villain, a former fan | fan
+ELASTIGIRL | Helen Parr's stretchy alter ego | fan
+LOTSO | Strawberry-scented bear running Sunnyside | fan
+FORKY | Spork turned toy in Toy Story 4 | fan
+ZURG | Emperor and Buzz Lightyear's arch-enemy | fan
+SLINKY | Coiled toy dog | fan
+DOC HUDSON | Retired champion and town judge in Cars (3,6) | fan
+SALLY | Porsche who runs the Cozy Cone | fan
+LUIGI | Fiat tyre-shop owner | fan
+GUIDO | Forklift pit-stop whiz | fan
+GUSTEAU | Late chef whose motto inspires Remy | fan
+LINGUINI | Garbage boy turned chef | fan
+COLETTE | Tough female chef in Ratatouille | fan
+SKINNER | Scheming head chef in Ratatouille | fan
+CRUSH | Laid-back sea turtle | fan
+BRUCE | Great white shark trying to quit fish | fan
+GILL | Scarred leader of the Tank Gang | fan
+HANK | Grumpy "septopus" in Finding Dory | fan
+HECTOR | Skeleton trickster who befriends Miguel | fan
+ALBERTO | Luca's daring best friend | fan
+WADE | Emotional water guy in Elemental | fan
+JOE | ___ Gardner, jazz pianist and teacher | fan
+BING BONG | Riley's imaginary friend (4,4) | fan
+RANDALL | Colour-changing rival scarer | fan
+CELIA | Mike's snake-haired girlfriend | fan
+HOPPER | Grasshopper gang boss | fan
+ATTA | Ant princess in A Bug's Life | fan
+AXIOM | Luxury starliner carrying humanity | fan
+MUNTZ | Explorer Charles F. ___ | fan
+KEVIN | Colourful giant bird in Up | fan
+ERNESTO | ___ de la Cruz, legendary singer in Coco | fan
+DANTE | Hairless dog sidekick in Coco | fan
+PORTOROSSO | Italian seaside town in Luca | fan
+MING | Mei's protective mother | fan
+BULLSEYE | Woody's horse | fan
+PROSPECTOR | Stinky Pete's role in Woody's Roundup | fan
+CRUZ | ___ Ramirez, trainer turned racer in Cars 3 | fan
+ARLO | Timid dinosaur in The Good Dinosaur | fan
+ELINOR | Queen transformed into a bear | fan
+HARDSCRABBLE | Stern dean in Monsters University | fan
+ENNUI | Bored, phone-scrolling emotion | fan
+SUNNYSIDE | Daycare where toys are donated | fan
+PISTON CUP | Racing championship in Cars (6,3) | fan
+MACK | Truck who hauls McQueen's trailer | fan
+DARLA | Fish-shaking niece of the dentist | fan
+HANKS | Tom who voices Woody | fan
+CRYSTAL | Billy who voices Mike | fan
+GOODMAN | John who voices Sulley | fan
+SAN FRANCISCO | City Riley moves to (3,9) | fan
+MARIGOLD | Flower whose petals form a bridge in Coco | fan
+LUXO | Pixar's desk-lamp mascot, ___ Jr. | superfan
+BIRD | Brad ___, director of The Incredibles | superfan
+DOCTER | Pete ___, director of Up and Inside Out | superfan
+STANTON | Andrew ___, director of Finding Nemo | superfan
+LASSETER | John ___, director of the first Toy Story | superfan
+RATZENBERGER | John, voice of Hamm | superfan
+SCUD | Sid's snarling bull terrier | superfan
+CLAW | Alien toys revere The ___ | superfan
+ROUNDUP | Woody's ___, vintage TV show | superfan
+BIG BABY | Lotso's doll enforcer (3,4) | superfan
+GIGGLE | ___ McDimples, Bo's tiny police officer pal | superfan
+SQUIRT | Crush's son | superfan
+MR RAY | Nemo's singing teacher (2,3) | superfan
+CORAL | Nemo's mother | superfan
+DESTINY | Near-sighted whale shark | superfan
+BAILEY | Beluga with echolocation trouble | superfan
+YETI | Abominable snowman banished to the Himalayas | superfan
+KITTY | Boo's nickname for Sulley | superfan
+SULLIVAN | James P. ___, Sulley's full name | superfan
+HARRYHAUSEN | Sushi restaurant in Monsters, Inc. | superfan
+NOMANISAN | Syndrome's island lair | superfan
+BUDDY | Syndrome's real first name | superfan
+INSURICARE | Insurance firm where Bob Parr works | superfan
+SCREENSLAVER | Hypnotic villain of Incredibles 2 | superfan
+VOYD | Portal-making wannabe superhero | superfan
+HONEY | Frozone's never-seen wife | superfan
+BOMB VOYAGE | French mime villain (4,6) | superfan
+RUST-EZE | Bumper ointment sponsor of McQueen (4-3) | superfan
+HORNET | Doc's racing nickname: the Fabulous Hudson ___ | superfan
+FILLMORE | Hippie VW bus | superfan
+EMILE | Remy's always-hungry brother | superfan
+DJANGO | Remy's father | superfan
+MCCREA | Captain of the Axiom | superfan
+ALPHA | Doberman with a squeaky voice | superfan
+ANGUS | Merida's horse | superfan
+DUNBROCH | Merida's clan | superfan
+WISPS | Blue spirits that lead Merida | superfan
+PEPITA | Winged jaguar spirit guide | superfan
+SANTA CECILIA | Miguel's Mexican hometown (5,7) | superfan
+RIVERA | Miguel's shoemaking family | superfan
+GUINEVERE | Barley's beloved van | superfan
+COREY | Manticore running a tavern | superfan
+MOONWIND | Sign-twirling mystic in Soul | superfan
+TERRY | Accountant tracking souls in Soul | superfan
+ERCOLE | ___ Visconti, Portorosso bully | superfan
+MASSIMO | Giulia's one-armed fisherman father | superfan
+BERNIE | Ember's father | superfan
+FIREPLACE | Ember's family shop | superfan

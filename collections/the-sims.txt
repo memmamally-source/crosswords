@@ -1,0 +1,130 @@
+# The Sims: unofficial fan crossword clues
+@title The Sims
+@category gaming
+@blurb Build a house, live a life and keep everyone fed.
+@icon heart
+SIMLISH | Gibberish language spoken in the series | casual
+PLUMBOB | Green diamond floating overhead | casual
+MAXIS | Studio that created the series | casual
+WILL WRIGHT | Designer who created the series (4,6) | casual
+SIMOLEONS | In-game currency | casual
+NEEDS | Hunger, Bladder and Hygiene, collectively | casual
+HUNGER | Need refilled at the fridge | casual
+BLADDER | Need relieved by a toilet | casual
+HYGIENE | Need restored by a shower | casual
+ENERGY | Need refilled by sleep | casual
+FUN | Need raised by TV or games | casual
+SOCIAL | Need filled by chatting | casual
+ROSEBUD | Citizen Kane-inspired money cheat | casual
+MOTHERLODE | Cheat granting 50,000 in cash | casual
+KACHING | Cash-register-sounding money cheat | casual
+GRIM REAPER | Hooded figure who collects departed souls (4,6) | casual
+WOOHOO | The series' cheeky word for romance | casual
+CREATE A SIM | Character editor where you design a person (6,1,3) | casual
+BUILD MODE | Where you place walls and floors (5,4) | casual
+BUY MODE | Where you shop for furniture (3,4) | casual
+LIVE MODE | Where you control the household day to day (4,4) | casual
+POOL | Remove its ladder for an infamous prank | casual
+EXPANSION PACK | Add-on such as Pets or Seasons (9,4) | casual
+SIMCITY | Earlier Maxis city-builder | casual
+ELECTRONIC ARTS | Publisher of the series (10,4) | casual
+CAREER | Job track with promotions | casual
+LLAMA | Animal that's a long-running Maxis in-joke | casual
+WILLOW CREEK | Starter world of the fourth game (6,5) | casual
+SUNSET VALLEY | Starter world of the third game (6,6) | casual
+PLEASANTVIEW | Home of the Goths in the second game | casual
+TODDLER | Life stage between baby and child | casual
+ELDER | Final life stage | casual
+TEEN | Life stage before young adult | casual
+GHOST | What a departed household member may become | casual
+PETS | Expansion that brought cats and dogs | casual
+SEASONS | Expansion adding weather | casual
+UNIVERSITY | Second game's college expansion | casual
+SKILL | Cooking or Charisma, for example | casual
+FIRE | Hazard of cooking with low skill | casual
+MAID | Hired help who cleans the house | casual
+LOT | Plot of land in a neighbourhood | casual
+HOUSEHOLD | Family unit you control | casual
+SIM | Virtual person you control | casual
+GARDENING | Skill raised by tending plants | casual
+BELLA GOTH | Pleasantview matriarch who vanished (5,4) | fan
+MORTIMER | Bella's husband | fan
+CASSANDRA | Bella's daughter | fan
+DON LOTHARIO | Pleasantview's notorious romancer (3,8) | fan
+DINA CALIENTE | Gold-digging sister in Pleasantview (4,8) | fan
+NEWBIE | Family of Bob and Betty | fan
+MOODLET | Emotional buff introduced in the third game | fan
+ASPIRATION | Life-goal system that arrived with the second game | fan
+TRAIT | Personality building block from the third game | fan
+COMFORT | Need served by cushy armchairs in early games | fan
+VAMPIRE | Plasma-drinking occult life state | fan
+ALIEN | Visitor from Sixam | fan
+WEREWOLF | Occult life state with a 2022 pack | fan
+MERMAID | Occult life state from Island Living | fan
+SPELLCASTER | Occult life state from Realm of Magic | fan
+NIGHTLIFE | Second game's after-dark expansion | fan
+HOT DATE | First game's romance expansion (3,4) | fan
+LATE NIGHT | Third game's nightlife expansion (4,5) | fan
+GET TO WORK | Fourth game's first expansion (3,2,4) | fan
+CITY LIVING | Fourth game's urban expansion (4,6) | fan
+GET FAMOUS | Fourth game's celebrity expansion (3,6) | fan
+STRANGERVILLE | Desert town with a mysterious crater | fan
+OASIS SPRINGS | Desert base-game world of the fourth game (5,7) | fan
+STRANGETOWN | Second game's desert neighbourhood | fan
+SUL SUL | Simlish hello (3,3) | fan
+GNOME | Garden ornament with a mischievous reputation | fan
+COWPLANT | Carnivorous plant that lures with cake | fan
+LEGACY | ___ Challenge, played across ten generations | fan
+MEDIEVAL | 2011 spin-off with castles and quests | fan
+FREEPLAY | Long-running mobile edition | fan
+TOMBSTONE | Grave marker left after a death | fan
+CHARISMA | Skill practised at a mirror | fan
+LOGIC | Skill raised by playing chess | fan
+HANDINESS | Skill for fixing broken appliances | fan
+CREATIVITY | Skill raised by painting in early games | fan
+EMOTION | Fourth game's mood system, e.g. Happy or Tense | fan
+GALLERY | Fourth game's online sharing hub | fan
+CUSTOM CONTENT | Player-made downloads, or CC (6,7) | fan
+BURGLAR | Night-time intruder who steals items | fan
+AUTONOMY | Setting letting characters act on their own | fan
+TESTINGCHEATS | Cheat that unlocks debug options | fan
+ALEXANDER | Bella's young son | superfan
+LANDGRAAB | Wealthy family recurring across games | superfan
+BROKE | Pleasantview family led by Brandi | superfan
+PLEASANT | Family of twins Lilith and Angela | superfan
+CURIOUS | Strangetown brothers with alien ties | superfan
+MONTY | Veronaville family feuding with the Capps | superfan
+GRUNT | Strangetown military family | superfan
+VERONAVILLE | Shakespeare-inspired neighbourhood of the second game | superfan
+SERVO | Robot buildable in Open for Business | superfan
+BONEHILDA | Skeletal maid summoned from a coffin | superfan
+SOCIAL BUNNY | Giant pink rabbit who visits lonely characters (6,5) | superfan
+TRAGIC CLOWN | Mournful entertainer who cheers sad characters (6,5) | superfan
+PLANTSIM | Leafy life state from the second game's Seasons | superfan
+GENIE | Wish-granting life state from Showtime | superfan
+LIVIN LARGE | First expansion of the original game (5,5) | superfan
+HOUSE PARTY | Original game's party expansion (5,5) | superfan
+VACATION | Original game's holiday expansion | superfan
+UNLEASHED | Original game's pet expansion | superfan
+SUPERSTAR | Original game's fame expansion | superfan
+MAKIN MAGIC | Original game's final expansion (5,5) | superfan
+AMBITIONS | Third game's careers expansion | superfan
+SUPERNATURAL | Third game's occult expansion | superfan
+TWINBROOK | Swampy world from Ambitions | superfan
+BRIDGEPORT | City world from Late Night | superfan
+SAN MYSHUNO | Asian-inspired city of City Living (3,7) | superfan
+ECO LIFESTYLE | Fourth game's green-living expansion (3,9) | superfan
+NEWCREST | Empty world for building from scratch | superfan
+BRINDLETON BAY | Coastal world of Cats & Dogs (10,3) | superfan
+WINDENBURG | European-style world of Get Together | superfan
+DAG DAG | Simlish goodbye (3,3) | superfan
+BUSTIN OUT | 2003 console spin-off (6,3) | superfan
+URBZ | Spin-off subtitled Sims in the City | superfan
+LIFETIME WANT | Second game's big aspiration goal (8,4) | superfan
+WANTS AND FEARS | Second game's goal and dread panel (5,3,5) | superfan
+ELIXIR OF LIFE | Potion that reverses ageing (6,2,4) | superfan
+MONEY TREE | Cash-growing aspiration reward (5,4) | superfan
+BOOLPROP | Cheat prefix used with testingcheatsenabled | superfan
+MOVEOBJECTS | Cheat to ignore placement limits | superfan
+EXCHANGE | Third game's online sharing site | superfan
+SIXAM | Home planet of the visitors from space | superfan

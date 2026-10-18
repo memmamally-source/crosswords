@@ -1,0 +1,137 @@
+# Call of Duty: unofficial fan crossword clues
+@title Call of Duty
+@category gaming
+@blurb Campaigns, killstreaks and classic multiplayer maps.
+@icon gamepad
+SOAP | MacTavish's nickname | casual
+PRICE | Moustached captain in a boonie hat | casual
+GHOST | Skull-masked Task Force 141 operative | casual
+MAKAROV | Russian ultranationalist villain of MW2 and MW3 | casual
+ZOMBIES | Undead co-op mode born in World at War | casual
+WARZONE | Free battle royale launched in 2020 | casual
+MODERN WARFARE | 2007 subtitle that moved the series to the present (6,7) | casual
+BLACK OPS | Treyarch's covert-ops sub-series (5,3) | casual
+KILLSTREAK | Reward for several eliminations without dying | casual
+UAV | Spy-plane reward revealing enemies on the radar | casual
+NUKETOWN | Small suburban map full of mannequins | casual
+TEAM DEATHMATCH | Classic mode where the top-scoring side wins (4,10) | casual
+DOMINATION | Mode about holding flags A, B and C | casual
+PRESTIGE | Resetting your rank for a new emblem | casual
+ACTIVISION | Publisher of the series | casual
+INFINITY WARD | Studio behind the original Modern Warfare (8,4) | casual
+TREYARCH | Studio behind Black Ops | casual
+RUST | Tiny desert MW2 map with a central tower | casual
+TERMINAL | MW2 airport map | casual
+SHIPMENT | Tiny map built from shipping containers | casual
+KILLCAM | Replay showing how you were taken out | casual
+JUGGERNOG | Zombies drink that boosts health | casual
+MYSTERY BOX | Zombies crate of random weapons (7,3) | casual
+LOADOUT | Your chosen weapons, perks and gear | casual
+GRENADE | Frag you can cook before throwing | casual
+RESPAWN | Return to the match after going down | casual
+BATTLE ROYALE | Last-squad-standing genre (6,6) | casual
+VERDANSK | Original map of the free battle royale | casual
+WORLD AT WAR | 2008 WWII entry (5,2,3) | casual
+GHOSTS | 2013 entry featuring a dog named Riley | casual
+MASON | Alex, Black Ops lead | casual
+WOODS | Frank, Mason's gruff comrade | casual
+REZNOV | Viktor, Red Army ally of Mason | casual
+CAMPAIGN | Single-player story mode | casual
+QUICKSCOPE | Fast sniper aim-and-fire trick | casual
+GULAG | Second-chance one-on-one fight after elimination | casual
+TASK FORCE | ___ 141, Price's elite unit (4,5) | casual
+SAS | British special forces unit of Price | casual
+CLAYMORE | Directional tripwire mine | casual
+SEMTEX | Sticky explosive throwable | casual
+FLASHBANG | Blinding throwable | casual
+DESERT EAGLE | Hefty .50 pistol (6,5) | casual
+FREE FOR ALL | Every-player-for-themself mode (4,3,3) | casual
+HARDPOINT | Mode with a rotating zone to hold | casual
+SLEDGEHAMMER | Studio behind Advanced Warfare | fan
+CRASH | CoD4 map around a downed helicopter | fan
+RILEY | German shepherd in Ghosts | fan
+INFINITE WARFARE | 2016 entry set in space (8,7) | fan
+TACTICAL NUKE | MW2's 25-kill game-ending reward (8,4) | fan
+CHOPPER GUNNER | MW2 reward manning a helicopter's gun (7,6) | fan
+PREDATOR MISSILE | MW2 reward you steer down onto targets from above (8,7) | fan
+CARE PACKAGE | Airdropped crate of rewards (4,7) | fan
+SENTRY GUN | Automated turret reward (6,3) | fan
+STOPPING POWER | Classic perk for extra bullet damage (8,5) | fan
+MARATHON | Perk for unlimited sprint | fan
+SCAVENGER | Perk for picking up ammo from the fallen | fan
+MARTYRDOM | Perk that drops a live grenade on death | fan
+LAST STAND | Perk letting you fight on with a pistol when downed (4,5) | fan
+PACK A PUNCH | Zombies machine that upgrades weapons (4,1,5) | fan
+RAY GUN | Zombies wonder weapon firing green blasts (3,3) | fan
+RICHTOFEN | Edward, German doctor in the Zombies crew | fan
+DEMPSEY | US Marine in the Zombies crew | fan
+TAKEO | Japanese soldier in the Zombies crew | fan
+SHEPHERD | US general who turns on Task Force 141 | fan
+ZAKHAEV | Imran, villain of 2007's campaign | fan
+ROACH | Gary Sanderson's nickname in MW2 | fan
+PRIPYAT | Abandoned Ukrainian city in a sniper flashback | fan
+MACMILLAN | Captain who mentors a young Price | fan
+DRAGOVICH | Nikita, Soviet villain of Black Ops | fan
+VORKUTA | Soviet prison camp Mason escapes | fan
+HUDSON | Jason, CIA officer in Black Ops | fan
+MENENDEZ | Raul, villain of Black Ops II | fan
+DAVID MASON | Alex's son, lead of Black Ops II (5,5) | fan
+IRONS | Jonathan, Atlas CEO played by Kevin Spacey | fan
+VANGUARD | 2021 WWII entry by Sledgehammer | fan
+COLD WAR | 2020 Black Ops subtitle (4,3) | fan
+FARAH | Karim, rebel leader in MW 2019 | fan
+FAVELA | MW2 map set in a Rio hillside slum | fan
+HIGHRISE | MW2 rooftop map | fan
+SCRAPYARD | MW2 map in an aircraft boneyard | fan
+BACKLOT | CoD4 map of half-built city blocks | fan
+INTERVENTION | MW2 sniper rifle beloved by quickscopers | fan
+RIOT SHIELD | MW2 equipment for blocking bullets (4,6) | fan
+TOMAHAWK | Throwable axe from Black Ops | fan
+GUNSMITH | MW 2019's weapon-tuning system | fan
+GUN GAME | Mode where each kill swaps your weapon (3,4) | fan
+SPEC OPS | MW2's co-op mission mode (4,3) | fan
+NOOB TUBE | Nickname for the underbarrel grenade launcher (4,4) | fan
+COMMANDO | MW2 perk extending the knife lunge | superfan
+DEAD SILENCE | Perk muffling your footsteps (4,7) | superfan
+DER RIESE | WaW Zombies map set in a factory (3,5) | superfan
+KINO DER TOTEN | Black Ops Zombies map in a theatre (4,3,5) | superfan
+NACHT DER UNTOTEN | The very first Zombies map (5,3,7) | superfan
+NIKOLAI | Vodka-loving Russian in the Zombies crew | superfan
+MAXIS | Ludvig, Zombies scientist | superfan
+SAMANTHA | Maxis's daughter in Zombies lore | superfan
+JACKSON | Paul, USMC sergeant in 2007's campaign | superfan
+VASQUEZ | Lieutenant leading Jackson's Marines | superfan
+GRIGGS | Marine sergeant alongside Jackson and Soap | superfan
+ALL GHILLIED UP | CoD4 sniper mission in Pripyat (3,8,2) | superfan
+STEINER | Friedrich, Nova 6 scientist | superfan
+KRAVCHENKO | Lev, Dragovich's brutal lieutenant | superfan
+SECTION | David Mason's callsign | superfan
+RORKE | Gabriel, ex-Ghost villain | superfan
+MITCHELL | Jack, Advanced Warfare lead | superfan
+REYES | Nick, Infinite Warfare lead | superfan
+ETHAN | Nickname of the robot E3N | superfan
+PERSEUS | Soviet spy hunted in a 2020 entry | superfan
+GARRICK | Kyle, SAS sergeant in MW 2019 | superfan
+URZIKSTAN | Fictional country in MW 2019 | superfan
+REBIRTH ISLAND | Compact battle royale map added in late 2020 (7,6) | superfan
+CALDERA | Pacific battle royale map of 2021 | superfan
+AL MAZRAH | Warzone 2.0's launch map (2,6) | superfan
+FINEST HOUR | 2004 console-only entry (6,4) | superfan
+UNITED OFFENSIVE | 2004 expansion for the original game (6,9) | superfan
+BIG RED ONE | 2005 entry following a US infantry division (3,3,3) | superfan
+KARACHI | MW2 map in a Pakistani city | superfan
+WASTELAND | MW2 map with trenches and bunkers | superfan
+DERAIL | Snowy MW2 map with a wrecked train | superfan
+OVERGROWN | CoD4 map in a grassy village | superfan
+BLOC | CoD4 map among Pripyat apartments | superfan
+HIJACKED | BO2 map on a luxury yacht | superfan
+SUMMIT | Black Ops map on a snowy mountain base | superfan
+ONE IN THE CHAMBER | Wager match with one bullet per kill (3,2,3,7) | superfan
+SABOTAGE | CoD4 mode with a single shared bomb | superfan
+EXTINCTION | Ghosts' alien-fighting co-op mode | superfan
+DEAD OPS ARCADE | Hidden twin-stick minigame in Black Ops (4,3,6) | superfan
+ZORK | Classic text game hidden on a Black Ops terminal | superfan
+STALINGRAD | Soviet battle in the 2003 original | superfan
+PETRENKO | Dimitri, Red Army player character in WaW | superfan
+ROEBUCK | Sergeant in WaW's Pacific campaign | superfan
+PELELIU | Pacific island assault in WaW | superfan

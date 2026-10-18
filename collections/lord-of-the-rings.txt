@@ -1,0 +1,137 @@
+# The Lord of the Rings: unofficial fan crossword clues
+@title The Lord of the Rings
+@category movies
+@blurb Hobbits, wizards and a long walk across Middle-earth.
+@icon book
+FRODO | Hobbit who carries the One Ring | casual
+SAMWISE | Frodo's loyal gardener companion | casual
+GANDALF | Wizard known as the Grey, later the White | casual
+ARAGORN | Ranger who would be king | casual
+LEGOLAS | Elf archer of the Fellowship | casual
+GIMLI | Axe-wielding dwarf of the Fellowship | casual
+BOROMIR | Man of Gondor tempted by the Ring | casual
+GOLLUM | Creature who calls the Ring his precious | casual
+SAURON | Dark Lord of Mordor | casual
+SARUMAN | White wizard who betrays the Free Peoples | casual
+BILBO | Hobbit who found the Ring in a cave | casual
+MORDOR | Land where the shadows lie | casual
+SHIRE | Green homeland of the hobbits | casual
+RIVENDELL | Hidden valley of the Last Homely House | casual
+MOUNT DOOM | Volcano where the Ring was forged (5,4) | casual
+HOBBIT | Small, hairy-footed halfling | casual
+DWARF | Gimli, by race | casual
+ORC | Foot soldier of Sauron's armies | casual
+FELLOWSHIP | Nine walkers who set out from Rivendell | casual
+MIDDLE EARTH | Tolkien's invented world (6-5) | casual
+GONDOR | Southern realm of Men with a White Tree | casual
+ROHAN | Land of the horse-lords | casual
+MORIA | Dwarf mines the Fellowship passes through | casual
+BALROG | Fiery demon of the deep | casual
+NAZGUL | Black Riders, Ringwraiths | casual
+MERRY | Brandybuck hobbit friend of Pippin | casual
+PIPPIN | Took hobbit friend of Merry | casual
+ARWEN | Elf maiden who loves Aragorn | casual
+GALADRIEL | Elf lady of Lothlórien | casual
+ELROND | Lord of Rivendell | casual
+TREEBEARD | Eldest of the Ents | casual
+SMAUG | Dragon of the Lonely Mountain | casual
+ELIJAH WOOD | Actor who played Frodo (6,4) | casual
+IAN MCKELLEN | Actor who played Gandalf (3,8) | casual
+VIGGO MORTENSEN | Actor who played Aragorn (5,9) | casual
+PETER JACKSON | Director of both film trilogies (5,7) | casual
+TOLKIEN | Author J.R.R. | casual
+HOBBITON | Village home of Bilbo and Frodo | casual
+BAG END | Bilbo's home under the Hill (3,3) | casual
+MINAS TIRITH | White city of Gondor (5,6) | casual
+HELMS DEEP | Fortress where Rohan makes its stand (5,4) | casual
+ISENGARD | Saruman's stronghold, ringed by stone | casual
+NEW ZEALAND | Country where the films were shot (3,7) | casual
+ORLANDO BLOOM | Actor who played Legolas (7,5) | casual
+STING | Bilbo's elven blade that glows near orcs | fan
+MITHRIL | Light, precious metal of Bilbo's shirt | fan
+ANDURIL | Reforged sword, Flame of the West | fan
+NARSIL | Broken sword that cut the Ring from Sauron | fan
+SHADOWFAX | Gandalf's swift white horse | fan
+THEODEN | King of Rohan | fan
+EOWYN | Shieldmaiden of Rohan | fan
+EOMER | Third Marshal of the Riddermark | fan
+FARAMIR | Boromir's younger brother | fan
+DENETHOR | Steward of Gondor | fan
+WORMTONGUE | Gríma, Saruman's spy at Edoras | fan
+URUK HAI | Saruman's fighting orcs (4-3) | fan
+OLIPHAUNT | Giant war beast of the Haradrim | fan
+SHELOB | Giant spider of Cirith Ungol | fan
+WITCH KING | Lord of the Nazgûl, of Angmar (5-4) | fan
+RADAGAST | Brown wizard | fan
+THORIN | Oakenshield, leader of the dwarves | fan
+BARD | Bowman of Lake-town | fan
+EREBOR | The Lonely Mountain, dwarf kingdom | fan
+ARKENSTONE | Heart of the Mountain, Thorin's treasure | fan
+BEORN | Skin-changer who can become a bear | fan
+THRANDUIL | Elvenking of Mirkwood | fan
+TAURIEL | Elf captain created for the Hobbit films | fan
+AZOG | Pale orc hunting Thorin in the films | fan
+MIRKWOOD | Dark forest east of the Misty Mountains | fan
+LOTHLORIEN | Golden wood of Galadriel | fan
+EDORAS | Capital of Rohan | fan
+OSGILIATH | Ruined city on the Anduin | fan
+FANGORN | Forest home of the Ents | fan
+WEATHERTOP | Hill where Frodo is stabbed by a Ringwraith | fan
+STRIDER | Aragorn's nickname in Bree | fan
+LEMBAS | Elvish waybread | fan
+PALANTIR | Seeing stone | fan
+SEAN ASTIN | Actor who played Sam (4,5) | fan
+SEAN BEAN | Actor who played Boromir (4,4) | fan
+CATE BLANCHETT | Actress who played Galadriel (4,9) | fan
+CHRISTOPHER LEE | Actor who played Saruman (11,3) | fan
+ANDY SERKIS | Actor behind Gollum (4,6) | fan
+HUGO WEAVING | Actor who played Elrond (4,7) | fan
+MARTIN FREEMAN | Actor who played young Bilbo (6,7) | fan
+HOWARD SHORE | Composer of the film scores (6,5) | fan
+ISILDUR | King who claimed the Ring as weregild | fan
+GLAMDRING | Gandalf's sword, Foe-hammer | fan
+BARAD DUR | Sauron's dark tower (5-3) | fan
+DEAGOL | Hobbit who first found the Ring in the river | superfan
+TOM BOMBADIL | Merry master of the Old Forest, book only (3,8) | superfan
+GLORFINDEL | Elf lord who speeds Frodo to the ford in the book | superfan
+BRUINEN | River whose ford floods the Black Riders | superfan
+BUTTERBUR | Barliman, landlord of the inn at Bree | superfan
+MAGGOT | Farmer whose crops the hobbits raid | superfan
+ROSIE | Cotton girl Sam marries | superfan
+ELANOR | Sam's eldest daughter | superfan
+HAMFAST | Sam's father, known as the Gaffer | superfan
+GREEN DRAGON | Inn at Bywater (5,6) | superfan
+SHARKEY | Saruman's alias in the Shire | superfan
+GRISHNAKH | Mordor orc among Merry and Pippin's captors | superfan
+QUICKBEAM | Hasty young Ent, Bregalad | superfan
+GWAIHIR | Windlord, chief of the eagles | superfan
+SNOWMANE | Théoden's horse | superfan
+BREGO | Aragorn's horse in the films | superfan
+HALDIR | Elf who leads archers to Helm's Deep in the film | superfan
+CELEBORN | Galadriel's husband | superfan
+MITHRANDIR | Elvish name for Gandalf | superfan
+ESTEL | Aragorn's childhood name, meaning hope | superfan
+ELESSAR | Name Aragorn takes as king | superfan
+DERNHELM | Disguise of Éowyn riding to war | superfan
+ATHELAS | Healing herb, kingsfoil | superfan
+NENYA | Galadriel's Ring of Water | superfan
+VILYA | Elrond's Ring of Air | superfan
+NARYA | Gandalf's Ring of Fire | superfan
+ORTHANC | Saruman's black tower | superfan
+MELLON | Elvish password to the doors of the mines | superfan
+MAZARBUL | Chamber of Records where Balin lies | superfan
+AMON HEN | Hill of Sight above Parth Galen (4,3) | superfan
+ARGONATH | Pillars of the Kings on the Anduin | superfan
+MEDUSELD | Golden Hall of Edoras | superfan
+MORANNON | Black Gate of Mordor | superfan
+DOL GULDUR | Fortress of the Necromancer (3,6) | superfan
+BOLG | Azog's son, an orc chieftain | superfan
+DWALIN | Balin's brother | superfan
+ESGAROTH | Elvish name of Lake-town | superfan
+BERNARD HILL | Actor who played Théoden (7,4) | superfan
+KARL URBAN | Actor who played Éomer (4,5) | superfan
+MIRANDA OTTO | Actress who played Éowyn (7,4) | superfan
+DAVID WENHAM | Actor who played Faramir (5,6) | superfan
+BRAD DOURIF | Actor who played Gríma (4,6) | superfan
+BILLY BOYD | Actor who played Pippin (5,4) | superfan
+LEE PACE | Actor who played the Elvenking (3,4) | superfan

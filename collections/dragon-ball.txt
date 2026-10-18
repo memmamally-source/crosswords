@@ -1,0 +1,136 @@
+# Dragon Ball: unofficial fan crossword clues
+@title Dragon Ball
+@category anime
+@blurb Saiyans, wishes and martial arts battles across the universe.
+@icon bolt
+GOKU | Spiky-haired Saiyan hero raised on Earth | casual
+VEGETA | Proud Saiyan prince | casual
+GOHAN | Goku's scholarly elder son | casual
+GOTEN | Goku's younger son | casual
+PICCOLO | Green Namekian who trains Gohan | casual
+KRILLIN | Bald monk, Goku's best friend | casual
+BULMA | Genius inventor who first hunts the wish orbs | casual
+FRIEZA | Galactic tyrant who destroyed Planet Vegeta | casual
+CELL | Bio-android villain who seeks perfection | casual
+BUU | Pink Majin who turns foes into candy | casual
+TRUNKS | Half-Saiyan son of Bulma and Vegeta | casual
+YAMCHA | Former desert bandit with a Wolf Fang Fist | casual
+TIEN | Three-eyed martial artist | casual
+SAIYAN | Warrior race that transforms under a full moon | casual
+KAMEHAMEHA | Turtle School's signature energy wave | casual
+SUPER SAIYAN | Golden-haired transformation (5,6) | casual
+SHENRON | Eternal dragon who grants a wish | casual
+NIMBUS | Flying cloud only the pure of heart can ride | casual
+MASTER ROSHI | Turtle Hermit who trains Goku (6,5) | casual
+SPIRIT BOMB | Attack gathering energy from all living things (6,4) | casual
+FUSION | Dance that merges two fighters into one | casual
+SCOUTER | Eyepiece that reads power levels | casual
+BEERUS | Cat-like God of Destruction | casual
+WHIS | Angel attendant to the God of Destruction | casual
+SENZU BEAN | Healing legume grown by Korin (5,4) | casual
+TORIYAMA | Akira ___, creator of the manga | casual
+ULTRA INSTINCT | Godly state of reflexive combat (5,8) | casual
+NAMEK | Home planet of Piccolo's race | casual
+KAKAROT | Goku's Saiyan birth name | casual
+DRAGON | Shenron, for one | casual
+TAIL | Saiyan appendage Goku is born with | casual
+ORANGE | Colour of Goku's classic gi | casual
+CAPSULE | Pocket device that pops out a house or car | casual
+TOURNAMENT | World Martial Arts ___ | casual
+KING KAI | North Kai who trains Goku (4,3) | casual
+BROLY | Legendary Super Saiyan with immense power | casual
+GOKU BLACK | Evil duplicate in Future Trunks's timeline (4,5) | casual
+VIDEL | Mr. Satan's daughter who marries Gohan | casual
+GOGETA | Fusion of Goku and Vegeta via the dance | casual
+VEGITO | Fusion of Goku and Vegeta via Potara | casual
+POWER LEVEL | Measure read by a scouter (5,5) | casual
+SEVEN | Number of wish orbs needed to summon the dragon | casual
+SHONEN JUMP | Weekly magazine that serialized the manga (6,4) | casual
+CHIAOTZU | Tien's small, pale telekinetic friend | fan
+KAME HOUSE | Master Roshi's island home (4,5) | fan
+CAPSULE CORP | Bulma's family company (7,4) | fan
+KAIOKEN | Technique that multiplies power at a cost | fan
+SNAKE WAY | Long road to King Kai's planet (5,3) | fan
+RADITZ | Goku's older brother | fan
+NAPPA | Bald Saiyan who arrives with Vegeta | fan
+GINYU | Captain of Frieza's elite force | fan
+ZARBON | Frieza's handsome henchman with a monstrous form | fan
+DODORIA | Pink, spiky henchman of Frieza | fan
+DR GERO | Red Ribbon scientist behind the androids (2,4) | fan
+MR SATAN | Champion who takes credit for beating Cell (2,5) | fan
+HERCULE | Mr. Satan's name in the English dub | fan
+PAN | Gohan and Videl's daughter | fan
+BARDOCK | Goku's father | fan
+JIREN | Stoic powerhouse of Universe 11 | fan
+HIT | Universe 6 assassin who skips time | fan
+ZAMASU | Rogue Supreme Kai apprentice | fan
+KORIN | Cat sage atop his tower | fan
+KAMI | Earth's guardian before Dende | fan
+DENDE | Young Namekian who becomes Earth's guardian | fan
+MR POPO | Genie-like attendant on the Lookout (2,4) | fan
+OOLONG | Shapeshifting pig | fan
+PUAR | Shapeshifting cat-like companion of Yamcha | fan
+RED RIBBON | Army Goku battles as a child (3,6) | fan
+PILAF | Small blue emperor who seeks world domination | fan
+GREAT APE | Giant form a Saiyan takes under a full moon (5,3) | fan
+POWER POLE | Goku's extending staff (5,4) | fan
+OX KING | Chi-Chi's giant father (2,4) | fan
+LOOKOUT | Floating platform home of Earth's guardian | fan
+SUPREME KAI | Kibito's master in the Buu saga (7,3) | fan
+BABIDI | Wizard who revived Majin Buu | fan
+GOTENKS | Fusion of Goten and Trunks | fan
+POTARA | Fusion earrings worn by Kais | fan
+CELL GAMES | Tournament the bio-android holds on Earth (4,5) | fan
+SOLAR FLARE | Tien's blinding technique (5,5) | fan
+DESTRUCTO DISC | Krillin's cutting energy disk (9,4) | fan
+GALICK GUN | Vegeta's purple beam attack (6,3) | fan
+FINAL FLASH | Vegeta's attack in the Cell saga (5,5) | fan
+WOLF FANG FIST | Yamcha's signature technique (4,4,4) | fan
+BUBBLES | King Kai's pet monkey | superfan
+PORUNGA | Namekian dragon who grants three wishes | fan
+KING YEMMA | Giant judge of the dead (4,5) | fan
+GREAT SAIYAMAN | Gohan's superhero alter ego (5,8) | fan
+SUN WUKONG | Monkey King who inspired Goku (3,6) | fan
+UUB | Kid Buu's reincarnation | superfan
+CHAMPA | Beerus's twin brother | superfan
+TOEI | Animation studio behind the anime | fan
+ZENO | Omni-King above all gods | superfan
+VADOS | Angel attendant of Universe 6 | superfan
+KIBITO | Bodyguard attendant of the Supreme Kai | superfan
+DABURA | Demon king under Babidi's control | superfan
+METAMORAN | Race that taught Goku the fusion dance | superfan
+MASENKO | Gohan's early energy attack | superfan
+MAKANKOSAPPO | Special Beam Cannon in Japanese | superfan
+KIENZAN | Japanese name for the Destructo Disc | superfan
+DODONPA | Crane School finger-beam technique | superfan
+TAO PAI PAI | Assassin who rides a thrown pillar (3,3,3) | superfan
+ZENKAI | Saiyan power boost after recovering from injury | superfan
+SAIBAMEN | Plant-grown fighters planted by Nappa | superfan
+TARBLE | Vegeta's little brother | superfan
+GINE | Goku's mother | superfan
+YARDRAT | Planet where Goku learned Instant Transmission | superfan
+GREGORY | King Kai's cricket assistant | superfan
+URANAI BABA | Fortune-teller sister of Roshi (6,4) | superfan
+ARALE | Dr. Slump robot girl who meets young Goku | superfan
+PENGUIN VILLAGE | Dr. Slump's hometown visited by Goku (7,7) | superfan
+LAUNCH | Woman whose personality changes when she sneezes | superfan
+MAI | Emperor Pilaf's female henchman | superfan
+SHU | Pilaf's dog-like ninja henchman | superfan
+NAIL | Namekian warrior who merges with Piccolo | superfan
+GURU | Elder of all Namekians | superfan
+LAPIS | Android 17's original name | superfan
+LAZULI | Android 18's original name | superfan
+MARRON | Krillin and Android 18's daughter | superfan
+OOZARU | Japanese term for the Saiyan ape form | superfan
+NYOIBO | Japanese name for Goku's extending staff | superfan
+MORO | Planet-eating wizard of the Galactic Patrol arc | superfan
+GRANOLAH | Last Cerealian, seeking revenge on Saiyans | superfan
+DR HEDO | Gero's grandson who builds Gamma androids (2,4) | superfan
+TENKAICHI | ___ Budokai, the martial arts tournament | superfan
+MASAKO NOZAWA | Japanese voice of Goku (6,6) | superfan
+SEAN SCHEMMEL | Goku's longtime English voice (4,8) | superfan
+CHRIS SABAT | English voice of Vegeta and Piccolo (5,5) | superfan
+RYO HORIKAWA | Japanese voice of Vegeta (3,8) | superfan
+FIRE MOUNTAIN | Ox-King's burning home (4,8) | superfan
+GOLDEN FRIEZA | Tyrant's form in Resurrection F (6,6) | superfan
+PRIDE TROOPERS | Universe 11's heroic squad (5,8) | superfan

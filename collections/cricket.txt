@@ -1,0 +1,140 @@
+# Cricket: unofficial sport crossword clues
+@title Cricket
+@category sport
+@blurb Tests, T20s, Proteas and the Ashes urn.
+@icon ball
+PROTEAS | Nickname of South Africa's national side | casual
+WICKET | Set of stumps and bails, or a dismissal | casual
+BOWLER | Player who delivers the ball | casual
+OVER | Set of six legal deliveries | casual
+DUCK | Score of nought | casual
+CENTURY | Innings of a hundred runs | casual
+BOUNDARY | Rope marking the edge of the field | casual
+STUMPS | Three upright posts, or close of play | casual
+BAILS | Small pieces resting on top of the stumps | casual
+CREASE | Line marking the batter's ground | casual
+INNINGS | One side's turn at batting | casual
+ASHES | Urn contested by England and Australia | casual
+LORD'S | London ground called the home of cricket | casual
+TENDULKAR | Sachin, first to score 100 international centuries | casual
+BRADMAN | Don, whose Test batting average was 99.94 | casual
+KALLIS | Jacques, South African all-rounder with 13,289 Test runs | casual
+DE VILLIERS | AB, South Africa's Mr 360 (2,8) | casual
+STEYN | Dale, South African fast bowler who took 439 Test wickets | casual
+RABADA | Kagiso, South African fast bowler | casual
+YORKER | Delivery pitched right at the batter's feet | casual
+BOUNCER | Short ball that rears up at head height | casual
+GOOGLY | Leg-spinner's ball that turns the other way | casual
+NO BALL | Illegal delivery, often for overstepping (2,4) | casual
+WIDE | Delivery out of the batter's reach | casual
+MAIDEN | Over in which no runs are conceded | casual
+HAT TRICK | Three wickets in three balls (3,5) | casual
+RUN OUT | Dismissal by breaking the wicket before the batter is home (3,3) | casual
+STUMPED | Dismissed by the keeper when out of the ground | casual
+WICKETKEEPER | Gloved fielder behind the stumps | casual
+ALL-ROUNDER | Player who both bats and bowls well (3,7) | casual
+IPL | India's big T20 franchise league, briefly | casual
+NEWLANDS | Cape Town ground beneath Table Mountain | casual
+WANDERERS | Johannesburg Test ground known as the Bullring | casual
+MCG | Melbourne's huge ground, initially | casual
+KOHLI | Virat, Indian batting star | casual
+DHONI | MS, captain of India's 2011 World Cup winners | casual
+WARNE | Shane, Australian leg-spinner with 708 Test wickets | casual
+LARA | Brian, who made 400 not out against England in 2004 | casual
+RICHARDS | Viv, swaggering West Indies batting master | casual
+BOTHAM | Ian, hero of the 1981 Ashes | casual
+ROOT | Joe, prolific England batter | casual
+STOKES | Ben, hero of England's 2019 World Cup final | casual
+OVAL | London ground that often hosts a summer's final Test | casual
+LBW | Out when the ball would have hit the stumps, briefly | casual
+SPINNER | Slow bowler who turns the ball | casual
+KINGSMEAD | Durban Test ground | fan
+CENTURION | Gauteng city home to SuperSport Park | fan
+EDEN GARDENS | Kolkata's famous ground (4,7) | fan
+AMLA | Hashim, first South African to score a Test triple century | fan
+SMITH | Graeme, South Africa's captain from the age of 22 | fan
+POLLOCK | Shaun, South Africa's captain at the 2003 World Cup | fan
+DONALD | Allan, the South African paceman called White Lightning | fan
+KLUSENER | Lance, South African star of the 1999 World Cup | fan
+BOUCHER | Mark, long-serving South African wicketkeeper | fan
+NTINI | Makhaya, South Africa's first Black African Test player | fan
+BAVUMA | Temba, South Africa's first Black African Test captain | fan
+MARKRAM | Aiden, South Africa's captain in the 2024 T20 World Cup final | fan
+DE KOCK | Quinton, South African keeper-batter (2,4) | fan
+RHODES | Jonty, whose diving run-out lit up the 1992 World Cup | fan
+GIBBS | Herschelle, who hit six sixes in an over at the 2007 World Cup | fan
+MAHARAJ | Keshav, South African left-arm spinner | fan
+TIE | Result of the 1999 World Cup semi, SA v Australia | superfan
+SOBERS | Garry, first to hit six sixes in a first-class over, 1968 | superfan
+KAPIL DEV | Captain of India's 1983 World Cup winners (5,3) | fan
+IMRAN KHAN | Captain of Pakistan's 1992 World Cup winners (5,4) | fan
+LLOYD | Clive, captain of the West Indies' 1975 champions | superfan
+BARBADOS | Island where India won the 2024 T20 World Cup final | fan
+SUPER OVER | Tiebreaker used in the 2019 World Cup final (5,4) | fan
+BODYLINE | England's 1932-33 tactic to curb Bradman | fan
+GRACE | WG, bearded giant of the Victorian game | fan
+HEADINGLEY | Leeds ground of famous 1981 and 2019 Ashes wins | fan
+TRENT BRIDGE | Nottingham's Test ground (5,6) | fan
+GABBA | Brisbane's Test ground | fan
+SILLY POINT | Close fielding position near the bat (5,5) | fan
+GULLY | Fielding position between the slips and point | fan
+DOOSRA | Off-spinner's delivery that turns away from the right-hander | fan
+NIGHTWATCHMAN | Lower-order batter sent in late in the day | fan
+FOLLOW ON | Batting again straight after falling well behind (6,2) | fan
+DECLARE | Close an innings voluntarily | fan
+PAIR | Two ducks in the same match | fan
+GOLDEN DUCK | Out first ball for nought (6,4) | fan
+MCC | Club that frames the Laws of Cricket, initially | fan
+DRS | Review system for umpiring decisions, briefly | fan
+BAZBALL | England's attacking Test style under McCullum and Stokes | fan
+WISDEN | Annual almanack, the game's bible | fan
+GAVASKAR | Sunil, first to 10,000 Test runs, in 1987 | fan
+DRAVID | Rahul, Indian batter nicknamed The Wall | fan
+KUMBLE | Anil, who took all ten wickets in a Test innings in 1999 | superfan
+BUMRAH | Jasprit, player of the 2024 T20 World Cup | fan
+AKRAM | Wasim, Pakistan's left-arm Sultan of Swing | fan
+SANGAKKARA | Kumar, Sri Lankan keeper-batter | fan
+HADLEE | Sir Richard, New Zealand fast-bowling all-rounder | fan
+MCCULLUM | Brendon, who hit 158 not out in the first IPL match | superfan
+HOLDING | Michael, the West Indies quick called Whispering Death | fan
+GAYLE | Chris, Jamaican T20 slugger called the Universe Boss | fan
+CUMMINS | Pat, captain of Australia's 2023 World Cup winners | fan
+MURALITHARAN | Sri Lankan off-spinner with 800 Test wickets | fan
+ISOLATION | South Africa's exile from international cricket, 1970 to 1991 | superfan
+WESSELS | Kepler, who captained South Africa at the 1992 World Cup | superfan
+D'OLIVEIRA | Basil, whose 1968 selection sparked a cancelled tour | superfan
+TAYFIELD | Hugh, South African off-spinner of the 1950s | superfan
+FAULKNER | Aubrey, South African all-rounder of the 1900s | superfan
+NOURSE | Dudley, South African captain of the late 1940s | superfan
+BARLOW | Eddie, South African all-rounder nicknamed Bunter | superfan
+WOLVAARDT | Laura, captain of South Africa in the 2024 women's T20 World Cup final | superfan
+SYDNEY | Where rain left SA needing 22 off one ball in the 1992 semi | superfan
+EDGBASTON | Birmingham ground of the tied 1999 World Cup semi | superfan
+TIMELESS TEST | Durban match of 1939 abandoned so England could sail home (8,4) | superfan
+ST GEORGE'S PARK | Port Elizabeth venue of South Africa's first Test, 1889 (2,7,4) | superfan
+JAYAWARDENE | Mahela, who made 374 against South Africa in 2006 | superfan
+AHMEDABAD | City that staged the 2023 World Cup final | superfan
+RANATUNGA | Arjuna, captain of Sri Lanka's 1996 World Cup winners | superfan
+UNDERARM | Kind of 1981 delivery by Trevor Chappell that caused uproar | superfan
+JARDINE | Douglas, England's Bodyline captain | superfan
+LARWOOD | Harold, England's Bodyline spearhead | superfan
+SPOFFORTH | Fred, Australian bowler nicknamed The Demon | superfan
+LAKER | Jim, who took 19 wickets at Old Trafford in 1956 | superfan
+BANNERMAN | Charles, scorer of the first Test century, in 1877 | superfan
+HAMBLEDON | Hampshire village club of 18th-century fame | superfan
+PACKER | Kerry, founder of World Series Cricket in 1977 | superfan
+PINK BALL | Used in day-night Tests (4,4) | superfan
+FLIPPER | Backspinning delivery in Warne's armoury | superfan
+GATTING | Mike, bowled by Warne's Ball of the Century in 1993 | superfan
+SHASTRI | Ravi, who hit six sixes in a first-class over in 1985 | superfan
+NELSON | Number 111, said to be unlucky | superfan
+KING PAIR | Out first ball in both innings (4,4) | superfan
+LONG ROOM | Famous gallery in the Lord's pavilion (4,4) | superfan
+GALLE | Sri Lankan Test ground beside an old Dutch fort | superfan
+WACA | Perth's traditional Test ground, initially | superfan
+BASIN RESERVE | Wellington's historic Test ground (5,7) | superfan
+SABINA PARK | Kingston, Jamaica, Test ground (6,4) | superfan
+DILSCOOP | Shot over the keeper's head named after Dilshan | superfan
+CARROM BALL | Finger-flicked delivery made famous by Mendis (6,4) | superfan
+DUCKWORTH-LEWIS | Rain-rule method devised by two statisticians (9,5) | superfan
+TRUMPER | Victor, Australian batting stylist of the Golden Age | superfan

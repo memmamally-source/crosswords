@@ -1,0 +1,136 @@
+# Premier League: unofficial sport crossword clues
+@title Premier League
+@category sport
+@blurb English top-flight football since 1992: clubs, grounds and legends.
+@icon ball
+ARSENAL | North London club nicknamed the Gunners | casual
+CHELSEA | Stamford Bridge club, nicknamed the Blues | casual
+LIVERPOOL | Anfield club whose anthem is You'll Never Walk Alone | casual
+EVERTON | Merseyside club nicknamed the Toffees | casual
+TOTTENHAM | North London club nicknamed Spurs | casual
+NEWCASTLE | Magpies who play at St James' Park | casual
+LEICESTER | 5000-1 outsiders who won the title in 2016 | casual
+WEST HAM | East London club nicknamed the Hammers (4,3) | casual
+RED DEVILS | Manchester United's nickname (3,6) | casual
+ANFIELD | Liverpool's home ground | casual
+OLD TRAFFORD | Manchester United's home, the Theatre of Dreams (3,7) | casual
+ETIHAD | Manchester City's stadium | casual
+EMIRATES | Arsenal's stadium since 2006 | casual
+STAMFORD BRIDGE | Chelsea's home ground (8,6) | casual
+MANCHESTER | Home city of United and City | casual
+ROONEY | Wayne ___, Manchester United's record goalscorer | casual
+SHEARER | Alan ___, PL record scorer with 260 goals | casual
+HENRY | Thierry ___, Arsenal's French striker with a statue at the Emirates | casual
+SALAH | Egyptian forward who joined Liverpool in 2017 | casual
+KANE | Harry ___, Tottenham's record goalscorer | casual
+FERGUSON | Sir Alex ___, Manchester United manager until 2013 | casual
+WENGER | Arsene ___, Arsenal manager from 1996 to 2018 | casual
+GUARDIOLA | Pep ___, Manchester City manager from 2016 | casual
+KLOPP | Jurgen ___, Liverpool manager from 2015 to 2024 | casual
+MOURINHO | Jose ___, self-styled Special One | casual
+BECKHAM | David ___, United's free-kick specialist of the 1990s | casual
+GERRARD | Steven ___, long-serving Liverpool captain | casual
+LAMPARD | Frank ___, Chelsea's record goalscorer | casual
+CANTONA | Eric ___, Frenchman hailed as King of Old Trafford | casual
+HAALAND | Norwegian striker who scored 36 league goals in 2022-23 | casual
+SAKA | Bukayo ___, Arsenal winger from the Hale End academy | casual
+DERBY | Match between local rivals | casual
+RELEGATION | Drop to the Championship | casual
+HAT TRICK | Three goals by one player in a game (3,5) | casual
+PENALTY | Spot kick | casual
+VAR | Video referee system introduced in the 2019-20 season | casual
+GOLDEN BOOT | Award for the season's top scorer (6,4) | casual
+INVINCIBLES | Arsenal's unbeaten 2003-04 side | casual
+MAGPIES | Newcastle's nickname | casual
+FOXES | Leicester's nickname | casual
+OFFSIDE | Flag raised when an attacker is beyond the last defender | casual
+TRANSFER | Move of a player from one club to another | casual
+WEMBLEY | London stadium where the FA Cup final is played | casual
+BOXING DAY | Traditional 26 December fixture day (6,3) | casual
+BLACKBURN | Rovers who won the title in 1995 | fan
+DALGLISH | Kenny ___, managed Blackburn to the 1995 title | fan
+AGUERO | Scored City's 93:20 title winner in 2012 | fan
+RANIERI | Claudio ___, Leicester's title-winning manager in 2016 | fan
+VARDY | Jamie ___, scored in 11 straight league games in 2015 | fan
+MAHREZ | Algerian winger, PFA Player of the Year in 2016 | fan
+KANTE | N'Golo ___, won successive titles with Leicester and Chelsea | fan
+DROGBA | Didier ___, Ivorian Chelsea striker | fan
+ABRAMOVICH | Russian who bought Chelsea in 2003 | fan
+SCHMEICHEL | Peter ___, the Great Dane in United's goal | fan
+VIEIRA | Patrick ___, captain of Arsenal's unbeaten 2003-04 side | fan
+BERGKAMP | Dennis ___, Dutch Arsenal forward who refused to fly | fan
+ZOLA | Gianfranco ___, Chelsea's Sardinian playmaker | fan
+LE TISSIER | Matt ___, Southampton's one-club legend (2,7) | fan
+FOWLER | Robbie ___, Liverpool striker nicknamed God | fan
+OWEN | Michael ___, Liverpool striker, 2001 Ballon d'Or winner | fan
+SCHOLES | Paul ___, red-haired midfielder of United's Class of '92 | fan
+RONALDO | Cristiano ___, United winger from 2003 to 2009 | fan
+VAN PERSIE | Robin ___, Dutchman who moved from Arsenal to United in 2012 (3,6) | fan
+SUAREZ | Luis ___, Uruguayan who scored 31 for Liverpool in 2013-14 | fan
+DE BRUYNE | Kevin ___, Belgian City playmaker (2,6) | fan
+KOMPANY | Vincent ___, Belgian captain of City's 2012 champions | fan
+ANCELOTTI | Carlo ___, won the double with Chelsea in 2010 | fan
+ARTETA | Mikel ___, appointed Arsenal manager in December 2019 | fan
+POCHETTINO | Mauricio ___, took Spurs to the 2019 Champions League final | fan
+MOYES | David ___, Ferguson's successor at United in 2013 | fan
+SWANSEA | First Welsh club in the Premier League, in 2011 | fan
+KEANE | Roy ___, combative United captain from Cork | fan
+MOLINEUX | Wolves' home ground | fan
+CRAVEN COTTAGE | Fulham's riverside home (6,7) | fan
+HIGHBURY | Arsenal's home until 2006 | fan
+WHITE HART LANE | Tottenham's home until 2017 (5,4,4) | fan
+TREBLE | United's 1999 haul of league, FA Cup and Champions League | fan
+FERGIE TIME | Stoppage minutes said to favour Manchester United (6,4) | fan
+HAZARD | Eden ___, Belgian, PFA Player of the Year in 2015 | fan
+VAN DIJK | Virgil ___, Dutch defender, PFA Player of the Year in 2019 (3,4) | fan
+CENTURIONS | City's 100-point champions of 2017-18 | fan
+TOFFEES | Everton's nickname | fan
+TORRES | Fernando ___, sold by Liverpool to Chelsea for 50 million pounds in 2011 | fan
+MAKELELE | Claude ___, holding midfielder whose role took his name | fan
+WRIGHT | Ian ___, broke Cliff Bastin's Arsenal scoring record in 1997 | fan
+SON | ___ Heung-min, joint Golden Boot winner in 2021-22 | fan
+FODEN | Phil ___, PFA Player of the Year for 2023-24 | fan
+RODRI | Spanish City midfielder, 2024 Ballon d'Or winner | fan
+DEANE | Brian ___, scorer of the first Premier League goal in 1992 | superfan
+NORWICH | Canaries who finished third in the first PL season | superfan
+DERBY COUNTY | Relegated with a record-low 11 points in 2007-08 (5,6) | superfan
+FERDINAND | Rio ___, defender sold by Leeds to United in 2002 | superfan
+COLLYMORE | Stan ___, Liverpool's British-record signing from Forest in 1995 | superfan
+GINOLA | David ___, Spurs winger, PFA and FWA Player of the Year in 1999 | superfan
+JUNINHO | Brazilian playmaker who joined Middlesbrough in 1995 | superfan
+RAVANELLI | Fabrizio ___, Boro's white-haired Italian, hat-trick on debut in 1996 | superfan
+SOLSKJAER | Ole Gunnar ___, scored four as a sub at Nottingham Forest in 1999 | superfan
+DEFOE | Jermain ___, scored five for Spurs against Wigan in 2009 | superfan
+COLE | Andy ___, first to score five in a PL game, against Ipswich in 1995 | superfan
+BERBATOV | Dimitar ___, scored five for United against Blackburn in 2010 | superfan
+MANE | Sadio ___, hat-trick in under three minutes for Southampton in 2015 | superfan
+LONG | Shane ___, scored after 7.69 seconds against Watford in 2019 | superfan
+BARRY | Gareth ___, overtook Ryan Giggs's PL appearance record in 2017 | superfan
+WIMBLEDON | Crazy Gang club, PL members from 1992 to 2000 | superfan
+OLDHAM | Latics, founder members relegated in 1994 | superfan
+SWINDON | Conceded 100 goals in their only PL season, 1993-94 | superfan
+BARNSLEY | Tykes whose only PL season was 1997-98 | superfan
+BLACKPOOL | Tangerines whose only PL season was 2010-11 | superfan
+MAINE ROAD | Manchester City's home until 2003 (5,4) | superfan
+FILBERT STREET | Leicester's home until 2002 (7,6) | superfan
+THE DELL | Southampton's cramped home until 2001 (3,4) | superfan
+UPTON PARK | West Ham's home until 2016 (5,4) | superfan
+GULLIT | Ruud ___, Chelsea player-manager who won the 1997 FA Cup | superfan
+HOULLIER | Gerard ___, Liverpool manager of the 2001 cup treble | superfan
+BIELSA | Marcelo ___, led Leeds back to the top flight in 2020 | superfan
+PELLEGRINI | Manuel ___, won the title with Manchester City in 2014 | superfan
+MANCINI | Roberto ___, City's title-winning manager in 2012 | superfan
+KINKLADZE | Georgi ___, Georgian playmaker at City in the mid-1990s | superfan
+DI CANIO | Paolo ___, West Ham's scissor-kick scorer against Wimbledon in 2000 (2,5) | superfan
+YEBOAH | Tony ___, Ghanaian Leeds striker famed for 1995 volleys | superfan
+SHERWOOD | Tim ___, captain of Blackburn's 1995 champions | superfan
+WALKER | Jack ___, steel magnate who bankrolled Blackburn | superfan
+TWENTY TWO | Number of clubs in the first PL season, 1992-93 (6,3) | superfan
+CARLING | Lager brand that sponsored the league from 1993 to 2001 | superfan
+LEEDS | Last champions of the old First Division, in 1992 | superfan
+ANELKA | Nicolas ___, Golden Boot winner with Chelsea in 2008-09 | superfan
+HASSELBAINK | Jimmy Floyd ___, Golden Boot winner in 1999 and 2001 | superfan
+PHILLIPS | Kevin ___, Sunderland's 30-goal Golden Boot winner in 1999-2000 | superfan
+QUINN | Niall ___, Irish target man at Sunderland around 2000 | superfan
+HORNETS | Watford's nickname | superfan
+BLADES | Sheffield United's nickname | superfan

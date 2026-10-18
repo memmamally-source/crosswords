@@ -1,0 +1,140 @@
+# Stranger Things: unofficial fan crossword clues
+@title Stranger Things
+@category tv
+@blurb Kids, bikes and something strange in 1980s small-town Indiana.
+@icon tv
+ELEVEN | Shaven-headed girl with psychokinetic powers | casual
+MIKE | Wheeler boy who hides a runaway girl in his basement | casual
+DUSTIN | Curly-haired Henderson boy with a toothless grin | casual
+LUCAS | Sinclair boy, the party's sceptic | casual
+WILL | Byers boy who vanishes in the very first episode | casual
+HAWKINS | Small town where the show is set | casual
+INDIANA | US state that is home to the show's town | casual
+UPSIDE DOWN | Dark, decaying mirror dimension (6,4) | casual
+DEMOGORGON | Faceless monster named after a D&D demon prince | casual
+HOPPER | Gruff police chief who takes in a runaway girl | casual
+JOYCE | Will's frantic, devoted mother | casual
+NANCY | Mike's older sister, an aspiring reporter | casual
+STEVE | Harrington, the hair-proud teen turned babysitter | casual
+JONATHAN | Will's shy, photography-loving older brother | casual
+MAX | Mayfield, the skateboarding redhead | casual
+ROBIN | Steve's sardonic co-worker at the ice cream shop | casual
+EDDIE | Munson, heavy-metal leader of a D&D club | casual
+VECNA | Season four villain who curses troubled teens | casual
+MIND FLAYER | Spider-like shadow monster that possesses Will (4,6) | casual
+EGGO | Waffle brand Eleven can't get enough of | casual
+STARCOURT | Shiny new mall at the heart of season three | casual
+SCOOPS AHOY | Nautical-themed ice cream parlour in the mall (6,4) | casual
+WALKIE TALKIE | Handheld radio the kids use to keep in touch (6,6) | casual
+CHRISTMAS LIGHTS | Joyce's way of talking to her missing son (9,6) | casual
+EIGHTIES | Decade in which the show is set | casual
+NETFLIX | Streaming service behind the show | casual
+BARB | Nancy's loyal friend who disappears in season one | casual
+NOSEBLEED | Sign that Eleven has pushed her powers too far | casual
+DUFFER | Matt and Ross, the show's creator brothers | casual
+DRAGONS | Dungeons & ___, the boys' favourite game | casual
+SLINGSHOT | Lucas's weapon of choice in season one | casual
+BIKES | The boys' main way of getting around town | casual
+GATE | Rift to the other dimension, opened at the lab | casual
+TELEKINESIS | Power to move objects with the mind | casual
+FRIENDS DONT LIE | Eleven's rule about honesty (7,4,3) | casual
+BYERS | Surname of Joyce, Jonathan and Will | casual
+WHEELER | Surname of Mike, Nancy and their parents | casual
+PAPA | What Eleven calls Dr Brenner | casual
+RUSSIANS | Foreign agents with a secret base under the mall | casual
+BASEMENT | Mike's den, where the boys play their campaigns | casual
+VOID | Black, watery mental space Eleven enters to spy | casual
+BABYSITTER | Steve's unofficial role with the younger kids | casual
+LAB | Secretive government facility where Eleven grew up | casual
+HELLFIRE | ___ Club, the high school D&D group in season four | casual
+BRENNER | Scientist who raised Eleven as a test subject | fan
+BOB | Joyce's kind-hearted boyfriend in season two | fan
+MURRAY | Conspiracy-minded journalist in Illinois | fan
+ALEXEI | Russian scientist with a love of Slurpees | fan
+ERICA | Lucas's sassy little sister | fan
+SUZIE | Dustin's girlfriend from summer camp | fan
+DART | Dustin's pet that grows into a monster | fan
+KAREN | Mike and Nancy's mother | fan
+TED | Mike's oblivious father | fan
+BILLY | Max's volatile stepbrother | fan
+LIFEGUARD | Billy's summer job at the community pool | fan
+EIGHT | Number of Eleven's lab sister with illusion powers | fan
+CHICAGO | City where Eleven tracks down a punk gang | fan
+CREEL | Surname of the family whose house holds dark secrets | fan
+CLOCK | Chiming object that signals a Vecna curse | fan
+CHRISSY | Cheerleader who becomes Vecna's first season-four victim | fan
+JASON | Basketball star who hunts Eddie | fan
+ARGYLE | Jonathan's laid-back pizza-delivery pal | fan
+BENNY | Diner owner who feeds a hungry Eleven | fan
+SARA | Hopper's late daughter | fan
+CABIN | Hopper's woodland hideout where he sheltered Eleven | fan
+HARBOUR | David ___, who plays the police chief | fan
+MILLIE | ___ Bobby Brown, who plays Eleven | fan
+WINONA RYDER | Actress who plays Joyce (6,5) | fan
+FINN | ___ Wolfhard, who plays Mike | fan
+NOAH | ___ Schnapp, who plays Will | fan
+GATEN | ___ Matarazzo, who plays Dustin | fan
+SINK | Sadie ___, who plays Max | fan
+HAWKE | Maya ___, who plays Robin | fan
+MODINE | Matthew ___, who plays Dr Brenner | fan
+QUINN | Joseph ___, who plays Eddie | fan
+KEERY | Joe ___, who plays Steve | fan
+DEMODOGS | Pack of canine creatures from season two | fan
+BLINDFOLD | Covering Eleven wears to focus her powers | fan
+MOUTH BREATHER | Insult Eleven learns from the boys (5,8) | fan
+TROY | Bully who wets himself thanks to Eleven | fan
+KATE BUSH | Singer whose 1985 hit protects Max (4,4) | fan
+CALIFORNIA | State the Byers family moves to in season four | fan
+RUSSIA | Country where Hopper is imprisoned in season four | fan
+NAIL BAT | Steve's spiked weapon of choice (4,3) | fan
+SAILOR | Theme of Steve's ice cream shop uniform | fan
+GHOSTBUSTERS | Group the boys dress up as for Halloween | fan
+QUARRY | Place where a fake body is pulled from the water | fan
+ZOMBIE BOY | Bullies' cruel nickname for Will (6,3) | fan
+SNOW BALL | Middle school dance that ends season two (4,4) | fan
+CLASH | Band behind the song Will and Jonathan share | fan
+ARCADE | The Palace ___, where Dustin's high score is beaten | fan
+CLARKE | Mr ___, the boys' beloved science teacher | fan
+MADMAX | Name that tops Dustin's Dig Dug high score | superfan
+RADIOSHACK | Electronics store where Bob works | superfan
+CHERRY | Alexei's favourite Slurpee flavour | superfan
+UTAH | Suzie's home state | superfan
+CEREBRO | Dustin's homemade hilltop radio tower | superfan
+MEWS | Dustin's cat, eaten by his growing pet | superfan
+CLAUDIA | Dustin's doting mother | superfan
+HOLLY | Mike's little sister | superfan
+HARGROVE | Billy and Max's family surname | superfan
+OWENS | Dr Sam ___, the lab's more sympathetic chief | superfan
+TERRY IVES | Eleven's birth mother (5,4) | superfan
+BECKY | Sister of Eleven's birth mother | superfan
+KALI | Real name of Eleven's lab sister | superfan
+HENRY | First name of the boy who becomes Vecna | superfan
+PENNHURST | Asylum where Victor Creel is held | superfan
+VICTOR | Creel patriarch locked away for decades | superfan
+FRED | Benson, Nancy's newspaper colleague and Vecna victim | superfan
+PATRICK | McKinney, basketball player cursed in season four | superfan
+SURFER BOY PIZZA | Argyle's employer in California (6,3,5) | superfan
+LENORA | ___ Hills, the Byers' new Californian town | superfan
+NINA | Project ___, Brenner's desert facility | superfan
+YURI | Peanut-butter-loving Russian smuggler | superfan
+ENZO | Hopper's nickname for the guard who helps him | superfan
+GRIGORI | Relentless Russian hitman in season three | superfan
+FAMILY VIDEO | Store where Steve and Robin work in season four (6,5) | superfan
+VICKIE | Band student Robin has a crush on in season four | superfan
+TAMMY | Thompson, Robin's school crush in season three | superfan
+MELVALDS | ___ General Store, where Joyce works | superfan
+FLO | Hopper's long-suffering station secretary | superfan
+CALLAHAN | One of Hopper's two bumbling deputies | superfan
+FAWCETT | Steve's hair secret: Farrah ___ spray | superfan
+PLANCK | Constant Suzie recites to save the day | superfan
+HEATHER | Holloway, lifeguard taken by the Mind Flayer | superfan
+LOVERS LAKE | Water the gang dives into to reach Vecna's world (6,4) | superfan
+REISER | Paul ___, who plays Dr Owens | superfan
+BOWER | Jamie Campbell ___, who plays Vecna | superfan
+KAMCHATKA | Remote Russian peninsula where Hopper is held | superfan
+MIRKWOOD | Tolkien-named road where Will vanishes | superfan
+CASTLE | ___ Byers, Will's backyard fort | superfan
+POST | The Hawkins ___, where Nancy and Jonathan intern | superfan
+WISE | Will the ___, Will's D&D character | superfan
+ANGELA | Popular girl who bullies Eleven in California | superfan
+ONE | Lab number given to Henry Creel | superfan

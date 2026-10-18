@@ -1,0 +1,131 @@
+# Rugby: unofficial sport crossword clues
+@title Rugby
+@category sport
+@blurb Scrums, tries and World Cup glory.
+@icon ball
+SPRINGBOKS | South Africa's national rugby union team | casual
+ALL BLACKS | New Zealand's national team (3,6) | casual
+WALLABIES | Australia's national team | casual
+TRY | Five-point score made by grounding the ball | casual
+SCRUM | Set piece where the packs bind and push | casual
+LINEOUT | Throw-in contest after the ball goes into touch | casual
+CONVERSION | Two-point kick after a try | casual
+PENALTY | Three-point kick awarded for an infringement | casual
+DROP GOAL | Three points from a kick off the half-volley (4,4) | casual
+HAKA | Maori challenge performed before New Zealand Tests | casual
+TWICKENHAM | England's home ground in south-west London | casual
+WEBB ELLIS CUP | Trophy awarded to the world champions (4,5,3) | casual
+KOLISI | Siya, captain of the 2019 and 2023 world champions | casual
+MANDELA | President who wore the No 6 jersey at the 1995 final | casual
+FLY-HALF | Playmaker who wears No 10 (3,4) | casual
+HOOKER | Front-rower who throws in at lineouts | casual
+PROP | Front-row forward either side of the hooker | casual
+LOCK | Second-row forward | casual
+FLANKER | Back-row forward wearing 6 or 7 | casual
+WING | Speedy back out wide | casual
+KNOCK-ON | Fumbling the ball forward (5,2) | casual
+RUCK | Contest for the ball on the ground | casual
+MAUL | Contest for the ball held off the ground | casual
+SIN BIN | Ten-minute exile after a yellow card (3,3) | casual
+SIX NATIONS | Annual European championship (3,7) | casual
+LIONS | British & Irish ___, touring side | casual
+WILKINSON | Jonny, whose drop goal won the 2003 World Cup | casual
+LOMU | Jonah, giant All Black wing of the 1995 World Cup | casual
+MCCAW | Richie, captain of the 2011 and 2015 world champions | casual
+CARTER | Dan, All Black fly-half | casual
+HABANA | Bryan, Springbok wing with eight tries at the 2007 World Cup | casual
+PIENAAR | Francois, South Africa's 1995 World Cup captain | casual
+TACKLE | Bring down the ball carrier | casual
+SCRUM-HALF | Player who feeds the scrum, wearing No 9 (5,4) | casual
+CAP | Award for each Test appearance | casual
+POSTS | Uprights at each end of the field | casual
+FORWARD PASS | Illegal throw towards the opponents' line (7,4) | casual
+ELLIS PARK | Johannesburg venue of the 1995 World Cup final (5,4) | casual
+INVICTUS | 2009 film about the 1995 World Cup | casual
+YELLOW CARD | Sanction sending a player off for ten minutes (6,4) | casual
+EDEN PARK | Auckland ground of the 1987 and 2011 finals (4,4) | casual
+NEW ZEALAND | First World Cup winners, in 1987 (3,7) | casual
+BARBARIANS | Invitational side in black and white hoops | casual
+RUGBY SCHOOL | Where William Webb Ellis supposedly ran with the ball (5,6) | casual
+STRANSKY | Joel, scorer of the extra-time drop goal in the 1995 final | fan
+ETZEBETH | Eben, towering Springbok lock | fan
+DE KLERK | Faf, Springbok scrum-half of 2019 (2,5) | fan
+KOLBE | Cheslin, Springbok wing who scored in the 2019 final | fan
+MAPIMPI | Makazole, first Springbok to score a try in a World Cup final | fan
+POLLARD | Handré, Springbok goal-kicker in the 2019 and 2023 finals | fan
+ERASMUS | Rassie, coach of the 2019 Springboks | fan
+MATFIELD | Victor, Springbok lock of the 2007 winners | fan
+SMIT | John, South Africa's 2007 World Cup captain | fan
+JOOST | ___ van der Westhuizen, Springbok scrum-half in 1995 | fan
+WILLIAMS | Chester, Springbok wing at the 1995 World Cup | fan
+DU PREEZ | Fourie, Springbok scrum-half of 2007 (2,5) | fan
+VERMEULEN | Duane, player of the match in the 2019 final | fan
+BOMB SQUAD | Nickname of the Springboks' forward-heavy bench (4,5) | fan
+SUPER RUGBY | Southern hemisphere franchise competition (5,5) | fan
+CURRIE CUP | South Africa's historic provincial competition (6,3) | fan
+BULLS | Pretoria franchise based at Loftus | fan
+SHARKS | Durban franchise | fan
+LOFTUS | Pretoria's ___ Versfeld stadium | fan
+YOKOHAMA | Japanese city that staged the 2019 World Cup final | fan
+STADE DE FRANCE | Venue of the 2007 and 2023 World Cup finals (5,2,6) | fan
+FRANCE | Hosts of the 2007 and 2023 World Cups | fan
+JOHNSON | Martin, England's 2003 World Cup captain | fan
+WOODWARD | Sir Clive, England's 2003 World Cup coach | fan
+CAMPESE | David, Wallaby wing of the 1991 world champions | fan
+O'DRISCOLL | Brian, Irish centre and record Lions tourist | fan
+SEXTON | Johnny, Irish fly-half and 2018 world player of the year | fan
+DUPONT | Antoine, French scrum-half | fan
+ITOJE | Maro, England and Lions lock | fan
+FARRELL | Owen, England captain at the 2023 World Cup | fan
+BARRETT | Beauden, All Black fly-half with two brothers in black | fan
+GATLAND | Warren, New Zealander who coached Wales and the Lions | fan
+GRUBBER | Low kick that bobbles along the ground | fan
+TMO | Video referee, initially | fan
+JACKAL | Steal the ball at the breakdown | fan
+TIGHTHEAD | Prop on the right of the scrum | fan
+LOOSEHEAD | Prop on the left of the scrum | fan
+PENALTY TRY | Award for a try prevented by foul play (7,3) | fan
+CALCUTTA CUP | Prize contested by England and Scotland (8,3) | fan
+TRIPLE CROWN | Beating all three other home nations (6,5) | fan
+WOODEN SPOON | Booby prize for finishing last (6,5) | fan
+BLEDISLOE CUP | Trophy contested by New Zealand and Australia (9,3) | fan
+GRAND SLAM | Winning every Six Nations match in a season (5,4) | fan
+PUMAS | Argentina's national team | fan
+MURRAYFIELD | Scotland's national stadium | fan
+CARDIFF | Welsh capital, venue of the 1999 World Cup final | fan
+AVIVA | Dublin stadium built on the Lansdowne Road site | fan
+SEVENS | Short form with seven players a side | fan
+STORMERS | Cape Town side that won the first URC title in 2022 | superfan
+NIENABER | Jacques, coach of the 2023 Springboks | superfan
+WHITE | Jake, coach of the 2007 Springboks | superfan
+MONTGOMERY | Percy, Springbok goal-kicker in the 2007 final | superfan
+STEYN | Morné, whose long penalty won the 2009 Lions series | superfan
+ROOS | Paul, captain of the first Springbok tour in 1906 | superfan
+BLITZBOKKE | Nickname of South Africa's sevens team | superfan
+KINGS PARK | Durban stadium (5,4) | superfan
+FREEDOM CUP | Trophy contested by South Africa and New Zealand (7,3) | superfan
+MANDELA PLATE | Trophy contested by South Africa and Australia (7,5) | superfan
+BRIGHTON | English city where Japan stunned South Africa in 2015 | superfan
+BRAVE BLOSSOMS | Nickname of Japan's national team (5,8) | superfan
+KIRK | David, New Zealand's 1987 World Cup-winning captain | superfan
+FARR-JONES | Nick, Australia's 1991 World Cup-winning captain (4,5) | superfan
+EALES | John, Australia's 1999 World Cup-winning captain | superfan
+FITZPATRICK | Sean, All Black hooker and captain of the 1990s | superfan
+EDWARDS | Gareth, Welsh scrum-half who scored a famous 1973 try | superfan
+ZINZAN | ___ Brooke, All Black who dropped a goal in the 1995 semi | superfan
+GARRYOWEN | High kick named after an Irish club | superfan
+UP AND UNDER | High kick for the chasers to contest (2,3,5) | superfan
+CROOKED FEED | Scrum-half's illegal put-in (7,4) | superfan
+BLOOD BIN | Temporary replacement for a bleeding player (5,3) | superfan
+CAPTAIN'S RUN | Final training session before a Test (8,3) | superfan
+PRINCIPALITY | Sponsor's name for Cardiff's national stadium | superfan
+LES BLEUS | Nickname of the French team (3,5) | superfan
+SHARKS | Durban franchise | superfan
+MARK | Clean catch claimed inside your own 22 | superfan
+AZZURRI | Nickname of Italy's national team | superfan
+TWELVE | Points in South Africa's winning 2023 final score | superfan
+FIFTEEN | Points in South Africa's winning 1995 and 2007 final scores | superfan
+ELEVEN | New Zealand's points in the 2023 final | superfan
+LANCASTER | Stuart, England's coach at the 2015 home World Cup | superfan
+TELSTRA | Sydney stadium name at the 2003 final | superfan
+RUGBY | Warwickshire town where the game began | superfan

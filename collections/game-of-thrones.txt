@@ -1,0 +1,138 @@
+# Game of Thrones: unofficial fan crossword clues
+@title Game of Thrones
+@category tv
+@blurb Noble houses, dragons and a long winter in the fight for a throne.
+@icon flame
+JON SNOW | Bastard of Winterfell who joins the Night's Watch (3,4) | casual
+ARYA | Youngest Stark daughter, trained in Braavos | casual
+SANSA | Elder Stark daughter, later Lady of Winterfell | casual
+TYRION | The Imp of House Lannister | casual
+CERSEI | Queen who married Robert Baratheon | casual
+JAIME | Cersei's twin brother | casual
+DAENERYS | Mother of Dragons | casual
+JOFFREY | Cruel boy king of the early seasons | casual
+BRAN | Stark boy who becomes the Three-Eyed Raven | casual
+EDDARD | Ned Stark's full first name | casual
+WINTERFELL | Seat of House Stark | casual
+KINGS LANDING | Capital of the Seven Kingdoms (5,7) | casual
+IRON THRONE | Seat forged from a thousand swords (4,6) | casual
+DROGON | Daenerys's largest dragon | casual
+WALL | Vast ice barrier in the North | casual
+STARK | House with the direwolf sigil | casual
+LANNISTER | House whose sigil is a golden lion | casual
+TARGARYEN | House with a three-headed dragon sigil | casual
+BARATHEON | House with a crowned stag sigil | casual
+GREYJOY | House of the kraken | casual
+TYRELL | House of the rose, of Highgarden | casual
+WESTEROS | Continent of the Seven Kingdoms | casual
+HODOR | Gentle giant who says just one word | casual
+DIREWOLF | Giant wolf on the Stark sigil | casual
+GHOST | Jon's white direwolf | casual
+KHAL DROGO | Dothraki warlord who weds Daenerys (4,5) | casual
+DOTHRAKI | Horse lords of Essos | casual
+VARYS | Eunuch spymaster called the Spider | casual
+BRONN | Sellsword who becomes Tyrion's ally | casual
+HOUND | Sandor Clegane's nickname, with "The" | casual
+NIGHT KING | Leader of the army of the dead (5,4) | casual
+WILDLINGS | Free Folk, to the Night's Watch | casual
+RED WEDDING | Infamous massacre at the Twins (3,7) | casual
+WINTER | "___ is coming" (Stark words) | casual
+ROAR | "Hear me ___!" (Lannister words) | casual
+DRACARYS | Daenerys's command for dragonfire | casual
+CASTLE BLACK | Night's Watch headquarters (6,5) | casual
+BRIENNE | Lady knight of Tarth | casual
+THEON | Greyjoy ward raised at Winterfell | casual
+MELISANDRE | Red Woman who serves the Lord of Light | casual
+ROBB | Stark heir hailed King in the North | casual
+CATELYN | Ned's wife, born a Tully | casual
+NEEDLE | Arya's slim sword, a gift from Jon | casual
+SAMWELL | Jon's bookish friend, Sam for short | casual
+OLENNA | Queen of Thorns | fan
+MARGAERY | Tyrell bride of Joffrey, then Tommen | fan
+TOMMEN | Joffrey's younger brother and successor | fan
+MYRCELLA | Cersei's daughter sent to Dorne | fan
+DORNE | Southern realm ruled from Sunspear | fan
+OBERYN | The Red Viper of Dorne | fan
+PEDRO PASCAL | Actor who played the Red Viper (5,6) | fan
+KIT HARINGTON | Actor who played Jon (3,9) | fan
+LENA HEADEY | Actress who played Cersei (4,6) | fan
+SEAN BEAN | Actor who played Ned (4,4) | fan
+JORAH | Exiled knight devoted to Daenerys | fan
+MISSANDEI | Daenerys's translator from Astapor | fan
+GREY WORM | Commander of the Unsullied (4,4) | fan
+UNSULLIED | Eunuch soldiers bought in Astapor | fan
+MEEREEN | Slaver's Bay city Daenerys rules | fan
+BRAAVOS | Free City home of the Iron Bank | fan
+TORMUND | Red-bearded wildling ally of Jon | fan
+YGRITTE | Wildling who says Jon knows nothing | fan
+GILLY | Craster's daughter who flees with Sam | fan
+STANNIS | Dragonstone lord who claims his late brother's crown | fan
+RENLY | Youngest of the Baratheon brothers | fan
+DAVOS | The Onion Knight | fan
+GENDRY | Robert's bastard, a blacksmith | fan
+PODRICK | Tyrion's squire, called Pod | fan
+HIGHGARDEN | Seat of House Tyrell | fan
+RIVERRUN | Seat of House Tully | fan
+EYRIE | Arryn seat high in the Vale | fan
+LYSA | Catelyn's sister, Lady of the Eyrie | fan
+MOON DOOR | Sky-high exit at the Eyrie (4,4) | fan
+QYBURN | Disgraced maester who serves Cersei | fan
+WILDFIRE | Green substance that burns on water | fan
+HARDHOME | Episode set at a doomed wildling village | fan
+TYWIN | Lannister patriarch, Hand to Joffrey | fan
+LYANNA | Ned's sister, mother of Jon | fan
+VISERYS | Daenerys's elder brother, a would-be king | fan
+EURON | Greyjoy uncle who seizes the Salt Throne | fan
+YARA | Theon's sister | fan
+REEK | Name forced on Theon at the Dreadfort | fan
+GREYSCALE | Disease that turns skin to stone | fan
+RHAEGAL | Green dragon named for a Targaryen prince | fan
+VISERION | Cream-and-gold dragon later raised by the dead | fan
+DRAGONGLASS | Obsidian that can kill White Walkers | fan
+CITADEL | Order of maesters' seat in Oldtown | fan
+HARPY | Sons of the ___, Meereen insurgents | fan
+NYMERIA | Arya's direwolf | superfan
+SUMMER | Bran's direwolf | superfan
+LADY | Sansa's direwolf | superfan
+SHAGGYDOG | Rickon's direwolf | superfan
+GREY WIND | Robb's direwolf (4,4) | superfan
+ICE | Ned's ancestral greatsword | superfan
+LONGCLAW | Jon's bastard-sword from Jeor Mormont | superfan
+OATHKEEPER | Brienne's sword, a gift from Jaime | superfan
+SYRIO | Arya's Braavosi dancing master | superfan
+WAIF | Faceless trainee who hunts Arya in Braavos | superfan
+MORDANE | Septa to the Stark girls | superfan
+UNELLA | Septa who guards Cersei in her cell | superfan
+MYCAH | Butcher's boy Arya plays swords with | superfan
+POLLIVER | Lannister soldier Arya slays at an inn | superfan
+TALISA | Healer from Volantis who weds Robb | superfan
+EDMURE | Catelyn's younger brother, Lord of Riverrun | superfan
+BLACKFISH | Brynden Tully's nickname | superfan
+LORAS | Knight of Flowers | superfan
+JOJEN | Meera's brother with greensight | superfan
+HARRENHAL | Ruined castle where Arya serves Tywin | superfan
+LANCEL | Lannister cousin who joins the Faith Militant | superfan
+SHAE | Tyrion's lover from the camp | superfan
+ALLISER | Ser Thorne of Castle Black | superfan
+QHORIN | Halfhand of the Night's Watch | superfan
+MANCE | King-Beyond-the-Wall | superfan
+WUN WUN | Giant who fights at the Battle of the Bastards (3,3) | superfan
+BENJEN | Ned's brother, First Ranger | superfan
+QARTH | City of the House of the Undying | superfan
+PENTOS | Free City where Daenerys weds Drogo | superfan
+ASTAPOR | City where the Unsullied are bought | superfan
+YUNKAI | The Yellow City of Slaver's Bay | superfan
+KHALASAR | A khal's horde | superfan
+DREADFORT | Seat of House Bolton | superfan
+JEOR | Lord Commander Mormont, Jorah's father | superfan
+EDD | Dolorous ___, Jon's gloomy brother | superfan
+WEIRWOOD | White tree with red leaves and carved faces | superfan
+PYCELLE | Long-serving Grand Maester | superfan
+SER POUNCE | King Tommen's cat (3,6) | superfan
+NAATH | Missandei's island homeland | superfan
+TARTH | Brienne's island home | superfan
+HOT PIE | Baker boy who travels with Arya (3,3) | superfan
+OSHA | Wildling who protects Bran and Rickon | superfan
+RICKON | Youngest Stark son | superfan
+MEERA | Reed sibling who travels with Bran | superfan
+OLDTOWN | City of the Citadel | superfan
