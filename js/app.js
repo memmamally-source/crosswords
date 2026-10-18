@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED */
+/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED */
 (function () {
   'use strict';
 
@@ -112,7 +112,8 @@
   const DAILY_SUBJECTS = new Set(DAILY_BANK.map((w) => w.tag)).size;
 
   // ---------- Frozen puzzles ----------
-  // Every published Daily and Mini is saved in puzzles/YYYY-MM.json (made by
+  // Every published Daily and Mini is saved in puzzles/YYYY-MM.json, and each
+  // week's Brutal Challenge in puzzles/brutal-YYYY-MM.json (made by
   // tools/freeze-puzzles.js), so they never change once published. Dates not
   // frozen yet are built on the spot, the same way the freeze tool builds them.
   const frozenMonths = new Map(); // month -> data, or null once known missing
@@ -130,8 +131,9 @@
     }
     return monthLoads.get(month);
   }
+  const frozenFile = (kind, date) => (kind === 'brutal' ? 'brutal-' : '') + date.slice(0, 7);
   const frozenPuzzle = (kind, date) => {
-    const data = frozenMonths.get(date.slice(0, 7));
+    const data = frozenMonths.get(frozenFile(kind, date));
     return (data && data[kind] && data[kind][date]) || null;
   };
 
@@ -161,6 +163,21 @@
       title: longDate(date),
       meta: `${MINI_CONFIG.count} clues · a quick warm-up`,
       build: () => miniBuild(date),
+      tags: true,
+    };
+  }
+
+  // The Brutal Challenge: one shared Brutal puzzle a week, named by its Monday.
+  function brutalSpec(week) {
+    return {
+      kind: 'brutal',
+      key: `brutal:${week}`,
+      url: `#/brutal/${week}`,
+      date: week,
+      kicker: 'The Brutal Challenge',
+      title: `Week of ${parseKey(week).toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}`,
+      meta: `${DIFFICULTIES.brutal.count} clues · no easy answers · every genre`,
+      build: () => brutalBuild(week),
       tags: true,
     };
   }
@@ -218,7 +235,7 @@
       kicker: cat ? (genre.themed && cat.id !== 'sport' ? `${cat.name} · Unofficial fan crossword` : cat.name) : 'Genre puzzle',
       title: genre.name,
       meta: `${cfg.label} · ${cfg.count} clues`,
-      bank: genre.themed ? themedBank(words, difficulty) : words,
+      bank: bankFor(genre, words, difficulty),
       count: cfg.count,
       maxSize: cfg.maxSize,
       hard: cfg.hard,
@@ -232,7 +249,7 @@
     if (puzzleCache.has(spec.key)) return puzzleCache.get(spec.key);
     let puzzle;
     let keep = true;
-    if (spec.kind === 'daily' || spec.kind === 'mini') {
+    if (spec.kind === 'daily' || spec.kind === 'mini' || spec.kind === 'brutal') {
       const frozen = frozenPuzzle(spec.kind, spec.date);
       if (frozen) {
         puzzle = CrosswordGenerator.thaw(frozen);
@@ -240,7 +257,8 @@
         const { bank, options } = spec.build();
         puzzle = CrosswordGenerator.generate(bank, options);
         // Don't hold on to a built copy while the month's frozen file is still loading.
-        keep = !monthLoads.has(spec.date.slice(0, 7)) || frozenMonths.has(spec.date.slice(0, 7));
+        const file = frozenFile(spec.kind, spec.date);
+        keep = !monthLoads.has(file) || frozenMonths.has(file);
       }
     } else if (spec.layout) {
       puzzle = CrosswordGenerator.fromLayoutCode(spec.layout, spec.genre.words);
@@ -267,7 +285,9 @@
 
   function freshGenreSpec(genre, difficulty) {
     const cfg = levelsFor(genre)[difficulty];
-    const all = genre.words.map((_, i) => i);
+    const levels = new Map(bankFor(genre, genre.words, difficulty).map((w) => [w.answer, w.level]));
+    const all = genre.words.map((_, i) => i).filter((i) => levels.has(genre.words[i].answer));
+    const isHard = (i) => levels.get(genre.words[i].answer) === 'hard';
     let seen = new Set(store.seen[genre.id] || []);
     let unseen = all.filter((i) => !seen.has(genre.words[i].answer));
     if (unseen.length < cfg.count + 6) {
@@ -275,7 +295,9 @@
       store.seen[genre.id] = [...seen];
       unseen = all.filter((i) => !seen.has(genre.words[i].answer));
     }
-    let pool = shuffled(unseen).slice(0, Math.max(80, cfg.count * 5));
+    // Enough tough answers for the level, plus plenty of the rest.
+    const fresh = shuffled(unseen);
+    let pool = fresh.filter(isHard).slice(0, cfg.hard * 3).concat(fresh.filter((i) => !isHard(i)).slice(0, Math.max(80, cfg.count * 5)));
     const spare = shuffled(all.filter((i) => !pool.includes(i)));
     let best = null;
     for (let attempt = 0; attempt < 8; attempt++) {
@@ -515,6 +537,17 @@
       <canvas class="thumb" aria-hidden="true"></canvas>`;
     queueThumb($('#mini-feature canvas'), () => puzzleFor(mini));
 
+    const brutal = brutalSpec(weekOf(today));
+    const bs = statusLine(brutal.key, 'Take the challenge');
+    $('#brutal-feature').innerHTML = `
+      <div class="brutal-copy">
+        <p class="brutal-kicker">The Brutal Challenge · ${esc(brutal.title)}</p>
+        <h2 id="brutal-title">The hardest crossword we make. Can you finish it?</h2>
+        <p>One Brutal puzzle a week, the same for everyone: ${DIFFICULTIES.brutal.count} clues from every genre and not one easy answer. A new one every Monday.</p>
+        ${bs.text ? `<p class="brutal-status">${esc(bs.text)}</p>` : ''}
+      </div>
+      <button class="btn btn-gold btn-lg" data-open="${brutal.url}">${bs.label}</button>`;
+
     // The week runs Monday to Sunday.
     const dow = parseKey(today).getDay();
     const monday = addDays(today, -((dow + 6) % 7));
@@ -575,6 +608,10 @@
       return kind === 'daily'
         ? { kicker: `Daily · ${shortDate(rest)}`, title: `${day}'s Crossword`, url: `#/daily/${rest}` }
         : { kicker: `Mini · ${shortDate(rest)}`, title: 'The Mini', url: `#/mini/${rest}` };
+    }
+    if (kind === 'brutal' && validDate(rest)) {
+      const spec = brutalSpec(rest);
+      return { kicker: spec.kicker, title: spec.title, url: spec.url };
     }
     if (kind === 'play') {
       const [genreId, difficulty] = rest.split('/');
@@ -1356,6 +1393,8 @@
     if (spec.kind === 'genre') {
       actions.push({ label: 'Play another', primary: true, attr: 'data-action="new"' });
       actions.push({ label: 'Back to genres', attr: 'data-nav="genres"' });
+    } else if (spec.kind === 'brutal') {
+      actions.push({ label: 'Back to today', primary: true, attr: 'data-nav="home"' });
     } else {
       const otherKind = spec.kind === 'daily' ? 'mini' : 'daily';
       const otherKey = `${otherKind}:${spec.date}`;
@@ -1759,6 +1798,15 @@
       await withTimeout(loadMonth(date.slice(0, 7)), 4000);
       if (currentRoute !== routeNow) return;
       startGame(parts[0] === 'daily' ? dailySpec(date) : miniSpec(date));
+      return;
+    }
+    if (parts[0] === 'brutal') {
+      const week = weekOf(parts[1] && validDate(parts[1]) ? parts[1] : today);
+      showView('game');
+      window.scrollTo(0, 0);
+      await withTimeout(loadMonth(frozenFile('brutal', week)), 4000);
+      if (currentRoute !== routeNow) return;
+      startGame(brutalSpec(week));
       return;
     }
     if (parts[0] === 'play') {

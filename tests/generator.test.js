@@ -10,7 +10,7 @@ function assertNoGiveaways(p, tag) {
     assert.strictEqual(hits.length, 0, `${tag}: clue for ${w.answer} gives away ${hits.join(', ')}: "${w.clue}"`);
   }
 }
-const { GENRES, DIFFICULTIES, levelsFor, themedBank, COLLECTIONS, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW } = require('../js/genres.js');
+const { GENRES, DIFFICULTIES, levelsFor, bankFor, COLLECTIONS, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW } = require('../js/genres.js');
 
 function runs(puzzle) {
   // Every horizontal/vertical run of 2+ letters in the grid.
@@ -94,7 +94,7 @@ for (const genre of GENRES) {
   assert.strictEqual(answers.size, genre.words.length, `${genre.id}: duplicate answers`);
   // Themed collections play at Casual/Fan/Superfan, each ranking its clues differently.
   for (const [level, cfg] of Object.entries(levelsFor(genre))) {
-    const bank = genre.themed ? themedBank(genre.words, level) : genre.words;
+    const bank = bankFor(genre, genre.words, level);
     for (let seed = 1; seed <= 10; seed++) {
       const p = generate(bank, { ...cfg, seed });
       const tag = `${genre.id}/${level}/seed ${seed}`;
