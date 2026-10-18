@@ -91,6 +91,35 @@ and the clue bar.
   - On phones, a tab bar along the bottom switches sections, and Android phones vibrate on taps, finished words and wins. Vibration can be turned off in settings; iPhones don't allow websites to vibrate.
   - All motion is skipped when the device asks for reduced motion.
 
+### Hints, hint points and the No-Hint Club
+
+Every hint has two separate costs, both set in `js/hints.js` so they're easy
+to change:
+
+| Hint | Hint credits | Competitive hint points |
+|---|---|---|
+| Reveal a letter | 1 | 2 |
+| Rephrase the clue | 2 | 1 |
+| Reveal a word | 3 | 5 |
+
+- **Hint credits** are what a hint costs the player. They're counted on each
+  solve and in Statistics, but nothing is charged yet: a credit balance and
+  credit packs need payments, which aren't switched on.
+- **Hint points** are the competitive score: fewer is better. They show on
+  the result, the share text, Continue playing and in Statistics.
+- **Check and auto-check are free** on both scales, but mark the puzzle as
+  assisted. Auto-check counts if it was on at any point during the puzzle.
+- **The No-Hint Club:** a puzzle finished with no reveals, rephrasing or
+  checks is a No-Hint solve. Statistics shows No-Hint solves, the No-Hint
+  Daily streak, average hint points and badges (First No-Hint solve, Three,
+  Seven and Thirty Days, Ten and Fifty No-Hint solves, Brutal Finisher).
+  Solves from before hint points existed don't count.
+- **Rephrase clue** appears under Reveal only for answers that have a second
+  wording in `REPHRASED_CLUES` (in `js/hints.js`). That list is empty until
+  the rephrased clues are written, so the option doesn't show yet.
+- A puzzle solved again, or on two devices, keeps its better record: No-Hint,
+  then no reveals, then fewer hint points, then the faster time.
+
 Progress, times and streaks are stored in the browser's `localStorage`.
 Players can also sign in to keep them in sync across devices (see Sign-in).
 
@@ -243,9 +272,10 @@ node tools/dedupe-words.js   # drop repeated answers
 python3 tools/rate-words.py  # rate answers easy/medium/hard (pip install wordfreq)
 node tools/check-words.js    # lengths, duplicates, answers inside their own clue
 node tools/build-words.js    # compile words/*.txt into js/words.js
-node tests/generator.test.js # takes a couple of minutes
+node tests/generator.test.js # takes about 10 minutes
 node tests/sync.test.js      # merging progress between devices
 node tests/puzzles.test.js   # frozen puzzles are unchanged and far enough ahead
+node tests/hints.test.js     # hint credits and hint points
 ```
 
 `rate-words.py` writes `words/levels.json`, rating each answer by how common
@@ -279,6 +309,7 @@ that `js/words.js` is up to date.
 | `js/account.js`, `js/sync.js`, `js/firebase-config.js`, `firestore.rules` | Optional sign-in and syncing progress |
 | `collections/*.txt`, `js/collections.js` | Themed fan collections, and their compiled form |
 | `js/featured.js` | The Trending now cards on the home page (edit by hand) |
+| `js/hints.js` | Hint credits, competitive hint points and rephrased clues |
 | `css/styles.css` | Styles, light and dark themes |
 | `puzzles/` | Frozen Daily, Mini and Brutal Challenge puzzles, one file per month, and their fingerprints |
 | `words/*.txt` | Word lists, one file per genre |

@@ -52,6 +52,14 @@ assert.strictEqual(m.saves['daily:2026-10-05'].elapsed, 10, 'newer local save ke
 assert.strictEqual(m.saves['daily:2026-10-06'].elapsed, 30, 'newer account save kept');
 assert.ok(!m.saves['daily:2026-10-07'], 'puzzle finished on another device is no longer in progress');
 
+// No-Hint beats clean-but-checked, then fewer hint points, then faster.
+{
+  const pick = (a, b) => mergeStores({ solves: { k: a } }, { solves: { k: b } }).solves.k;
+  assert.strictEqual(pick({ time: 500, clean: true, noHint: true, points: 0 }, { time: 100, clean: true, points: 0 }).time, 500, 'No-Hint beats a faster checked solve');
+  assert.strictEqual(pick({ time: 100, clean: true, points: 3 }, { time: 300, clean: true, points: 1 }).time, 300, 'fewer hint points wins');
+  assert.strictEqual(pick({ time: 100, clean: true, points: 1 }, { time: 300, clean: true, points: 1 }).time, 100, 'then the faster time');
+}
+
 // Merging is stable: doing it again changes nothing.
 assert.ok(!differs(mergeStores(m, syncable(m)), m), 'merge is idempotent');
 assert.ok(differs(local, m));

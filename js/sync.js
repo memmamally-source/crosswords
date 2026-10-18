@@ -24,12 +24,15 @@
     };
   }
 
-  // The better of two records of the same solve: clean beats assisted, then
-  // the faster time.
+  // The better of two records of the same solve: a No-Hint solve beats a
+  // clean one (no reveals), which beats an assisted one; then fewer hint
+  // points, then the faster time.
   function betterSolve(a, b) {
     if (!a) return b;
     if (!b) return a;
-    if (a.clean !== b.clean) return a.clean ? a : b;
+    const rank = (s) => (s.noHint ? 2 : s.clean ? 1 : 0);
+    if (rank(a) !== rank(b)) return rank(a) > rank(b) ? a : b;
+    if ((a.points || 0) !== (b.points || 0)) return (a.points || 0) < (b.points || 0) ? a : b;
     return (b.time || Infinity) < (a.time || Infinity) ? b : a;
   }
 
@@ -74,7 +77,7 @@
     return JSON.stringify(syncable(a)) !== JSON.stringify(syncable(b));
   }
 
-  const api = { syncable, mergeStores, differs, MAX_SYNCED_SAVES };
+  const api = { syncable, mergeStores, differs, betterSolve, MAX_SYNCED_SAVES };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CrosswordSync = api;
 })(typeof window !== 'undefined' ? window : globalThis);
