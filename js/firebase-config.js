@@ -15,5 +15,5 @@ window.FIREBASE_CONFIG = {
   // Google Analytics (optional): the measurement ID (G-…) from Firebase
   // console → Project settings → Integrations → Google Analytics. While this
   // is empty, analytics stays off and players are never asked about it.
-  measurementId: '',
+  measurementId: 'G-RN1ZYN9RSC',
 };

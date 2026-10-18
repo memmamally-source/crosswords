@@ -113,8 +113,8 @@ What is built and live today, what's unfinished, and how it compares with the
     and challenge opens.
   - No names, emails or answers, and no advertising features.
   - A Privacy note sits in Settings.
-  - **Off until the owner adds the measurement ID** to
-    `js/firebase-config.js` (see the README, Analytics).
+  - Measurement ID `G-RN1ZYN9RSC` is set (added after Stage 4 was
+    merged), so the consent prompt appears once that change is live.
 - **Search pages:**
   - `play/` plus one page per genre and collection (83 in all), with
     descriptions, sample clues and Play buttons
@@ -136,7 +136,6 @@ What is built and live today, what's unfinished, and how it compares with the
   - Realtime Database
   - Cloud Functions
   - Cloud Storage
-  - Analytics (built in Stage 4, waiting for a measurement ID)
 - **Firebase plan:** presumed Spark (free), since nothing needs Blaze. Check
   in the Firebase console.
 - **Public config:** the web config in `js/firebase-config.js` is public by
@@ -187,7 +186,7 @@ What is built and live today, what's unfinished, and how it compares with the
 | Teams and tournaments | ❌ | Stage 9 |
 | Gifts | ❌ | Stage 7 (7A manual, 7B AI) |
 | Result cards, WhatsApp challenge links, Instagram images | ✅ Stage 4 | Share sheet with image, WhatsApp, challenge links, image download |
-| Analytics | ✅ Stage 4 (dormant) | Google Analytics with consent; switches on once the measurement ID is added |
+| Analytics | ✅ Stage 4 | Google Analytics with consent; measurement ID set |
 | SEO (pages, sitemap, previews) | ✅ Stage 4 | Real pages per genre and collection link into the app; puzzles themselves stay on `#/` addresses |
 | Custom domain | ⏳ Open decision | `SITE` in `tools/build-pages.js` and the preview tags change when it's set |
 | Monetisation (Premium, credits, ads, gift purchases) | ❌ Deliberately not built | Documented as future only |
@@ -221,8 +220,9 @@ What is built and live today, what's unfinished, and how it compares with the
 ## 6. Recommended next step
 
 1. **Review and merge the Stage 4 PR.**
-2. **Switch analytics on:** enable Google Analytics in Firebase and send me
-   the measurement ID (`G-…`). It's a one-line change.
+2. **Finish the Google Analytics settings:** under Enhanced measurement,
+   switch off history-based page views, site search and form interactions;
+   keep Google signals off; set data retention to 2 months.
 3. **Stage 4 follow-up: new category collections** (travel, medicine,
    technology, general knowledge), written and fact-checked like the
    existing 50.
