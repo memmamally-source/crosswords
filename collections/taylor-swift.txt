@@ -41,7 +41,6 @@ WILDEST DREAMS | 1989 single she re-released early in 2021 (7,6) | casual
 KANYE | Rapper who interrupted her speech at the 2009 VMAs | casual
 TIME | Magazine that named her Person of the Year in 2023 | casual
 ED SHEERAN | British singer on Everything Has Changed (2,7) | casual
-SINGER | Songwriter's other job, for her | casual
 TOUR | The Eras ___ | casual
 CONCERT | Eras Tour event, e.g. | casual
 ALBUM | Midnights, for one | casual
@@ -72,7 +71,7 @@ GORGEOUS | Reputation single with a baby-voice intro | fan
 END GAME | Reputation single with Future and a British star (3,4) | fan
 LONDON BOY | Lover song about a British beau (6,3) | fan
 PAPER RINGS | Lover song preferring cheap jewellery (5,5) | fan
-CORNELIA STREET | Lover song named for a New York street (8,6) | fan
+CORNELIA STREET | Lover song named for a Greenwich Village road (8,6) | fan
 SNOW ON THE BEACH | Midnights duet with Lana Del Rey (4,2,3,5) | fan
 MAROON | Midnights song named for a dark shade | fan
 JACK ANTONOFF | Bleachers frontman and frequent producer (4,8) | fan
@@ -98,7 +97,6 @@ MY TEARS RICOCHET | Track 5 of Folklore (2,5,8) | superfan
 DEAR JOHN | Track 5 of Speak Now (4,4) | superfan
 TOLERATE IT | Track 5 of Evermore (8,2) | superfan
 ARCHER | The ___, track 5 of Lover | superfan
-CHANGE | Fearless song used in 2008 Olympics coverage | superfan
 SPARKS FLY | Speak Now single first performed years before release (6,3) | superfan
 STATE OF GRACE | Opening track of Red (5,2,5) | superfan
 NEW ROMANTICS | Single from the deluxe edition of 1989 (3,9) | superfan
@@ -115,7 +113,7 @@ LIZ ROSE | Co-writer of many early songs (3,4) | superfan
 WILLIAM BOWERY | Pseudonymous co-writer on Folklore (7,6) | superfan
 NILS SJOBERG | Pseudonym she used on a Calvin Harris hit (4,7) | superfan
 SCOTT BORCHETTA | Founder of her first record label (5,9) | superfan
-LONG POND | ___ Studio Sessions, 2020 concert film (4,4) | superfan
+LONG POND | ___ Studio Sessions, 2020 Disney+ film (4,4) | superfan
 BOMBALURINA | Her role in the 2019 film of Cats | superfan
 ROSEMARY | Her character in The Giver (2014) | superfan
 AUDREY | Character she voiced in The Lorax | superfan
@@ -128,3 +126,7 @@ MR PERFECTLY FINE | From the Vault track on Fearless re-recording (2,9,4) | supe
 BRENDON URIE | Panic! at the Disco singer on ME! (7,4) | superfan
 CHRIS STAPLETON | Duet partner on a Red vault track (5,9) | superfan
 CIVIL WARS | Duo on a Hunger Games song with her (5,4) | superfan
+LONG LIVE | Closing track of standard Speak Now (4,4) | superfan
+THE LAKES | Bonus track on the deluxe Folklore (3,5) | superfan
+WONDERLAND | 1989 deluxe track nodding to Lewis Carroll | superfan
+BREATHE | Fearless duet with Colbie Caillat | superfan

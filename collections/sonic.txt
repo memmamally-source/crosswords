@@ -1,0 +1,132 @@
+# Sonic the Hedgehog: unofficial fan crossword clues
+@title Sonic the Hedgehog
+@category gaming
+@blurb Loops, rings and a very fast blue hero.
+@icon bolt
+SONIC | Blue speedster who debuted in 1991 | casual
+TAILS | Two-tailed fox sidekick | casual
+KNUCKLES | Red echidna who guards an island | casual
+AMY ROSE | Pink hedgehog with a big hammer (3,4) | casual
+SHADOW | Black-and-red rival created by a professor | casual
+EGGMAN | Moustached doctor and arch-nemesis | casual
+ROBOTNIK | The doctor's surname in early Western releases | casual
+CHAOS EMERALDS | Seven gems of great power (5,8) | casual
+RINGS | Golden collectibles that protect you from a hit | casual
+GREEN HILL | Checkerboard opening zone of the first game (5,4) | casual
+SEGA | Company whose mascot he became | casual
+GENESIS | North American console of his 1991 debut | casual
+MEGA DRIVE | European and Japanese name for that console (4,5) | casual
+SUPER SONIC | Golden transformation (5,5) | casual
+SPIN DASH | Rev-up move from the second game (4,4) | casual
+CHILI DOG | The hero's favourite snack (5,3) | casual
+MASTER EMERALD | Giant gem guarded by the echidna (6,7) | casual
+SONIC TEAM | In-house Sega developer of the series (5,4) | casual
+SPRING | Bouncy launcher pad | casual
+LOOP | Classic track feature that turns you upside down | casual
+SHIELD | Bubble that absorbs a hit | casual
+HEDGEHOG | Spiny animal the hero is | casual
+ECHIDNA | Knuckles's species | casual
+JIM CARREY | Actor playing the doctor in the films (3,6) | casual
+BEN SCHWARTZ | Voice of the hero in the films (3,8) | casual
+BLUE | The hero's signature colour | casual
+SHOES | Red ___ with a white strap | casual
+GLOVES | White hand-wear on the hero | casual
+MOUSTACHE | The doctor's famous facial hair | casual
+BADNIK | Generic name for the doctor's robot enemies | casual
+MONITOR | TV-like item box | casual
+GAME OVER | What appears when lives run out (4,4) | casual
+DREAMCAST | Sega console that launched Sonic Adventure | casual
+SPEED | The hero's defining trait | casual
+TORNADO | Tails's biplane | casual
+DEATH EGG | The doctor's giant space station (5,3) | casual
+CHAO | Cute virtual pets raised in gardens | casual
+METAL SONIC | Robotic double from Sonic CD (5,5) | casual
+JAMES MARSDEN | Actor playing the sheriff in the films (5,7) | casual
+SPECIAL STAGE | Bonus level for winning an emerald (7,5) | casual
+MOBIUS | Planet in Western comics and cartoons | casual
+MARIO | Rival who joined him at the Olympic Games | casual
+MILES PROWER | Tails's real name (5,6) | fan
+CREAM | Polite rabbit who travels with a Chao | fan
+BIG | Laid-back cat who loves fishing | fan
+ROUGE | Jewel-thief bat | fan
+SILVER | Psychokinetic hedgehog from the future | fan
+BLAZE | Fire-wielding cat princess | fan
+VECTOR | Crocodile detective | fan
+ESPIO | Chameleon ninja detective | fan
+CHARMY | Bee detective | fan
+CHAOTIX | Detective agency of the crocodile and friends | fan
+CHAOS | Watery creature freed in Sonic Adventure | fan
+WISPS | Alien power-ups introduced in Colors | fan
+COLORS | 2010 game set in an interstellar theme park | fan
+GENERATIONS | 2011 game pairing Classic and Modern heroes | fan
+UNLEASHED | 2008 game where the hero turns beastly at night | fan
+WEREHOG | Night-time form in that 2008 game | fan
+FORCES | 2017 game with a custom avatar hero | fan
+FRONTIERS | 2022 open-zone adventure | fan
+MANIA | 2017 retro-style game by Christian Whitehead and co | fan
+HEROES | 2003 game played in teams of three | fan
+CHEMICAL PLANT | Second game's zone with toxic pink liquid (8,5) | fan
+CASINO NIGHT | Pinball-themed zone of the second game (6,5) | fan
+MARBLE | ___ Zone, lava-and-ruins level in the first game | fan
+EMERALD HILL | Opening zone of the second game (7,4) | fan
+ANGEL ISLAND | Floating home of the echidna (5,6) | fan
+ICE CAP | Snowboarding zone of the third game (3,3) | fan
+CITY ESCAPE | SA2 opener with a truck chase (4,6) | fan
+FLICKY | Bird freed from a robot when it is destroyed | fan
+CHAOS CONTROL | Shadow's time-bending power (5,7) | fan
+IDRIS ELBA | Voice of the echidna in the films (5,4) | fan
+KEANU REEVES | Voice of Shadow in the third film (5,6) | fan
+STONE | Agent loyal to the doctor in the films | fan
+TOM | Wachowski, small-town sheriff in the films | fan
+SATURN | Sega's 32-bit console of the mid-1990s | fan
+GAME GEAR | Sega's colour handheld (4,4) | fan
+MASTER SYSTEM | Sega's 8-bit console (6,6) | fan
+BLUE SPHERE | Third game's globe-hopping bonus stage (4,6) | fan
+GERALD | Professor who created Shadow | fan
+MARIA | Gerald's granddaughter | fan
+ARK | Space colony in SA2 | fan
+RAY | Flying squirrel ally | fan
+MIGHTY | Armadillo ally | fan
+YUJI NAKA | Lead programmer of the original game (4,4) | superfan
+NAOTO OHSHIMA | Original character designer (5,6) | superfan
+CHEESE | Cream's Chao companion | superfan
+FROGGY | Big's amphibian friend | superfan
+GAMMA | E-102 robot with his own story in Sonic Adventure | superfan
+JET | Hawk who leads the Babylon Rogues | superfan
+WAVE | Swallow mechanic of the Babylon Rogues | superfan
+STORM | Albatross muscle of the Babylon Rogues | superfan
+TIKAL | Ancient echidna girl in Sonic Adventure | superfan
+INFINITE | Masked jackal villain of Forces | superfan
+ZAVOK | Leader of the Deadly Six | superfan
+DEADLY SIX | Zeti villains of Lost World (6,3) | superfan
+ORBOT | The doctor's red, spherical assistant | superfan
+CUBOT | The doctor's yellow, boxy assistant | superfan
+STARFALL ISLANDS | Archipelago setting of the 2022 game (8,7) | superfan
+SAGE | AI girl in the 2022 game | superfan
+SPINBALL | 1993 pinball spin-off | superfan
+LITTLE PLANET | Time-travel world of Sonic CD (6,6) | superfan
+SPRING YARD | First game's bumper-filled zone (6,4) | superfan
+LABYRINTH | First game's underwater zone | superfan
+STAR LIGHT | First game's night-time city zone (4,5) | superfan
+SCRAP BRAIN | First game's final full zone (5,5) | superfan
+HYDROCITY | Third game's watery second zone | superfan
+CARNIVAL NIGHT | Third game's zone with an infamous barrel (8,5) | superfan
+MUSHROOM HILL | First zone of Sonic & Knuckles (8,4) | superfan
+SANDOPOLIS | Desert pyramid zone of Sonic & Knuckles | superfan
+LAVA REEF | Volcanic zone of Sonic & Knuckles (4,4) | superfan
+SPEED HIGHWAY | Night-time city stage in Sonic Adventure (5,7) | superfan
+STATION SQUARE | Sonic Adventure's city hub (7,6) | superfan
+MYSTIC RUINS | Sonic Adventure's jungle hub (6,5) | superfan
+BIOLIZARD | Prototype life form fought at the end of SA2 | superfan
+MOTOBUG | Ladybug-like robot from the first zone | superfan
+BUZZ BOMBER | Wasp-like robot from the first game (4,6) | superfan
+CRABMEAT | Crab-like robot from the first game | superfan
+STAR POST | Checkpoint lamp post (4,4) | superfan
+SOUTH ISLAND | Setting of the first game (5,6) | superfan
+WEST SIDE ISLAND | Setting of the second game (4,4,6) | superfan
+DONUT LORD | The hero's nickname for the sheriff (5,4) | superfan
+MEAN BEAN MACHINE | Dr. Robotnik's ___, 1993 puzzler (4,4,7) | superfan
+OMOCHAO | Robot Chao that offers tips | superfan
+FANG | Weasel bounty hunter, the Sniper | superfan
+BEAN | Bomb-throwing duck, the Dynamite | superfan
+BARK | Polar bear brawler from The Fighters | superfan

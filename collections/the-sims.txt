@@ -57,8 +57,8 @@ MOODLET | Emotional buff introduced in the third game | fan
 ASPIRATION | Life-goal system that arrived with the second game | fan
 TRAIT | Personality building block from the third game | fan
 COMFORT | Need served by cushy armchairs in early games | fan
-VAMPIRE | Plasma-drinking occult life state | fan
-ALIEN | Visitor from Sixam | fan
+VAMPIRE | Fanged occult life state that avoids sunlight | fan
+ALIEN | Green-skinned life state from outer space | fan
 WEREWOLF | Occult life state with a 2022 pack | fan
 MERMAID | Occult life state from Island Living | fan
 SPELLCASTER | Occult life state from Realm of Magic | fan
@@ -103,7 +103,7 @@ TRAGIC CLOWN | Mournful entertainer who cheers sad characters (6,5) | superfan
 PLANTSIM | Leafy life state from the second game's Seasons | superfan
 GENIE | Wish-granting life state from Showtime | superfan
 LIVIN LARGE | First expansion of the original game (5,5) | superfan
-HOUSE PARTY | Original game's party expansion (5,5) | superfan
+HOUSE PARTY | Original game's celebration expansion (5,5) | superfan
 VACATION | Original game's holiday expansion | superfan
 UNLEASHED | Original game's pet expansion | superfan
 SUPERSTAR | Original game's fame expansion | superfan
@@ -128,3 +128,8 @@ BOOLPROP | Cheat prefix used with testingcheatsenabled | superfan
 MOVEOBJECTS | Cheat to ignore placement limits | superfan
 EXCHANGE | Third game's online sharing site | superfan
 SIXAM | Home planet of the visitors from space | superfan
+DEL SOL VALLEY | Hollywood-style world of Get Famous (3,3,6) | fan
+OCCULT | Catch-all term for vampires, mermaids and the like | fan
+PLASMA | What the series' vampires drink | fan
+EVERGREEN HARBOR | Industrial world of Eco Lifestyle (9,6) | superfan
+CRUMPLEBOTTOM | Agnes, cranky elder who scolds public romance | superfan

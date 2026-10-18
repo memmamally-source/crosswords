@@ -1,0 +1,128 @@
+# Grey's Anatomy: unofficial fan crossword clues
+@title Grey's Anatomy
+@category tv
+@blurb Surgeons, interns and heartbreak at a Seattle hospital.
+@icon heart
+MEREDITH | Title surgeon, daughter of a legendary doctor | casual
+DEREK | Neurosurgeon nicknamed McDreamy | casual
+CRISTINA | Meredith's fiercely ambitious best friend | casual
+IZZIE | Bubbly intern who bakes when stressed | casual
+GEORGE | Sweet, awkward intern O'Malley | casual
+ALEX | Karev, the brash intern who softens over time | casual
+BAILEY | Tough resident who supervises the first interns | casual
+WEBBER | Chief of surgery in the early seasons | casual
+MCDREAMY | Nickname for Derek Shepherd | casual
+MCSTEAMY | Nickname for Derek's womanising plastic surgeon friend | casual
+SEATTLE | City where the hospital stands | casual
+SURGEON | What every intern hopes to become | casual
+INTERN | First-year trainee doctor | casual
+RESIDENT | Doctor between intern and attending | casual
+CALLIE | Torres, the orthopaedic surgeon | casual
+ARIZONA | Robbins, the paediatric surgeon | casual
+OWEN | Hunt, the trauma surgeon who later becomes chief | casual
+APRIL | Kepner, the devout, perky surgeon | casual
+JACKSON | Avery, surgeon from a famous medical dynasty | casual
+MARK | Plastic surgeon who arrives from New York in season two | casual
+LEXIE | Meredith's younger half-sister | casual
+ADDISON | Derek's first wife, a neonatal surgeon | casual
+TEDDY | Altman, Owen's old army friend | casual
+AMELIA | Derek's younger sister, also a brain surgeon | casual
+MAGGIE | Meredith's half-sister through her mother | casual
+ELLIS | Meredith's legendary surgeon mother | casual
+RHIMES | Shonda ___, creator of the show | casual
+ABC | US network that airs the show | casual
+SHEPHERD | Derek's surname | casual
+PERSON | You're my ___ (Cristina and Meredith's bond) | casual
+DANCE IT OUT | Cristina and Meredith's stress-busting ritual (5,2,3) | casual
+POST IT | Note on which Derek and Meredith write their vows (4,2) | casual
+PLANE CRASH | Season eight finale disaster in the woods (5,5) | casual
+BOMB | Explosive Meredith grips inside a patient's body | casual
+CHIEF | Title held by the head of surgery | casual
+BURKE | Cardiothoracic surgeon engaged to Cristina | casual
+BUS | Vehicle that fatally hits George | casual
+DENNY | Heart patient Izzie falls in love with | casual
+ZOLA | Daughter Meredith and Derek adopt | casual
+SPIN OFF | Private Practice is one (4,3) | casual
+EMERALD | ___ City Bar, the doctors' hangout | casual
+KAREV | Alex's surname | fan
+MONTGOMERY | Addison's surname | fan
+POMPEO | Ellen ___, who plays Meredith | fan
+DEMPSEY | Patrick ___, who plays Derek | fan
+HEIGL | Katherine ___, who plays Izzie | fan
+KNIGHT | T.R. ___, who plays George | fan
+CHAMBERS | Justin ___, who plays Alex | fan
+RAMIREZ | Sara ___, who plays Callie | fan
+CAPSHAW | Jessica ___, who plays Arizona | fan
+MCKIDD | Kevin ___, who plays Owen | fan
+DANE | Eric ___, who plays Mark | fan
+LEIGH | Chyler ___, who plays Lexie | fan
+WALSH | Kate ___, who plays Addison | fan
+WILLIAMS | Jesse ___, who plays Jackson | fan
+LVAD | Device whose wire Izzie cuts to save her love | fan
+MELANOMA | Cancer Izzie is diagnosed with | fan
+ALZHEIMERS | Disease afflicting Meredith's mother | fan
+THATCHER | Meredith's estranged father | fan
+ADELE | Richard Webber's wife | fan
+CATHERINE | Jackson's formidable mother | fan
+SOFIA | Callie and Arizona's daughter | fan
+STATION | ___ 19, firefighter spin-off | fan
+TRAILER | Derek's home on his patch of land | fan
+TEQUILA | Meredith's drink of choice | fan
+ZURICH | Swiss city Cristina leaves for | fan
+CARDIO | Cristina's surgical speciality, informally | fan
+NEUROSURGEON | Derek's job title | fan
+PLASTICS | Mark's surgical speciality | fan
+ORTHO | Callie's speciality, informally | fan
+PEDS | Arizona's speciality, informally | fan
+TRAUMA | Owen's surgical speciality | fan
+ARMY | Branch of the military Owen served in | fan
+DELUCA | Andrew ___, Italian-American surgeon | fan
+LINK | Orthopaedic surgeon Atticus Lincoln, for short | fan
+PIERCE | Maggie's surname | fan
+BOSTON | City Meredith moves to in season nineteen | fan
+CLARK | Gary ___, the season six finale gunman | fan
+MUSICAL | Format of season seven's Song Beneath the Song | fan
+PANDEMIC | Crisis dominating season seventeen | fan
+PROM | Dance Izzie organises at the hospital | fan
+MODEL | Izzie's former job that paid for medical school | fan
+ALTAR | Where Burke abandons Cristina | fan
+HAHN | Erica ___, cardio surgeon who falls for Callie | fan
+LEG | Body part Arizona loses after the crash | fan
+SLOAN | Grey ___ Memorial, the hospital's later name | fan
+WARREN | Ben ___, Bailey's anaesthesiologist husband | fan
+DUQUETTE | Denny's surname | superfan
+MERCY WEST | Hospital that merges with Seattle Grace (5,4) | superfan
+PSAPP | Band behind the theme Cosy in the Rocket | superfan
+ISOBEL | Izzie's full first name | superfan
+HELEN | Cristina's mother | superfan
+CARLOS | Callie's wealthy father | superfan
+HENRY | Teddy's patient turned husband | superfan
+LEO | Boy Owen adopts | superfan
+SCOUT | Amelia and Link's son | superfan
+HARRIET | Jackson and April's daughter | superfan
+UROLOGY | Catherine Avery's surgical speciality | superfan
+LEXIPEDIA | Nickname for Lexie, thanks to her memory | superfan
+HEELYS | Arizona's wheeled shoes | superfan
+MEGAN | Owen's sister, missing in Iraq for years | superfan
+IRAQ | Country where Owen served | superfan
+RIGGS | Nathan ___, surgeon tied to Owen's sister | superfan
+GLASSES | Bespectacled intern Levi Schmitt's nickname | superfan
+SCHMITT | Levi ___, intern known as Glasses | superfan
+NICO | Kim, orthopaedic fellow who dates Levi | superfan
+CARINA | Andrew's sister, an obstetrician | superfan
+DIANE | Maggie's adoptive mother | superfan
+HAYES | Cormac ___, Irish paediatric surgeon | superfan
+CAROLYN | Derek and Amelia's mother | superfan
+NANCY | One of Derek's sisters, an obstetrician | superfan
+PENNY | Resident who dates Callie | superfan
+DOC | Derek and Meredith's dog | superfan
+TUCK | Bailey's son | superfan
+MOLLY | Meredith's paternal half-sister | superfan
+HICCUPS | Ailment that brings Susan Grey into hospital | superfan
+SUSAN | Thatcher's second wife | superfan
+BEACH | Where Meredith sees Derek while ill with COVID | superfan
+SCORSONE | Caterina ___, who plays Amelia | superfan
+PICKENS | James ___ Jr., who plays Richard | superfan
+DREW | Sarah ___, who plays April | superfan
+WASHINGTON | Isaiah ___, who plays Burke | superfan
+WILSON | Chandra ___, who plays Bailey | superfan

@@ -36,7 +36,7 @@ CARTER | Dan, All Black fly-half | casual
 HABANA | Bryan, Springbok wing with eight tries at the 2007 World Cup | casual
 PIENAAR | Francois, South Africa's 1995 World Cup captain | casual
 TACKLE | Bring down the ball carrier | casual
-SCRUM-HALF | Player who feeds the scrum, wearing No 9 (5,4) | casual
+SCRUM-HALF | Player wearing No 9 who feeds the pack (5,4) | casual
 CAP | Award for each Test appearance | casual
 POSTS | Uprights at each end of the field | casual
 FORWARD PASS | Illegal throw towards the opponents' line (7,4) | casual
@@ -71,14 +71,14 @@ STADE DE FRANCE | Venue of the 2007 and 2023 World Cup finals (5,2,6) | fan
 FRANCE | Hosts of the 2007 and 2023 World Cups | fan
 JOHNSON | Martin, England's 2003 World Cup captain | fan
 WOODWARD | Sir Clive, England's 2003 World Cup coach | fan
-CAMPESE | David, Wallaby wing of the 1991 world champions | fan
+CAMPESE | David, Wallaby wing of the 1991 world champions | superfan
 O'DRISCOLL | Brian, Irish centre who captained the 2005 Lions | fan
 SEXTON | Johnny, Irish fly-half and 2018 world player of the year | fan
 DUPONT | Antoine, French scrum-half | fan
 ITOJE | Maro, England and Lions lock | fan
 FARRELL | Owen, England captain at the 2023 World Cup | fan
 BARRETT | Beauden, All Black fly-half with two brothers in black | fan
-GATLAND | Warren, New Zealander who coached Wales and the Lions | fan
+GATLAND | Warren, New Zealander who coached Wales and the Lions | superfan
 GRUBBER | Low kick that bobbles along the ground | fan
 TMO | Video referee, initially | fan
 JACKAL | Steal the ball at the breakdown | fan
@@ -128,3 +128,12 @@ ELEVEN | New Zealand's points in the 2023 final | superfan
 LANCASTER | Stuart, England's coach at the 2015 home World Cup | superfan
 TELSTRA | Sydney stadium name at the 2003 final | superfan
 RUGBY | Warwickshire town where the game is said to have begun | superfan
+CRAVEN | Danie, long-serving Springbok coach and administrator | superfan
+DE ALLENDE | Damian, Springbok centre in the 2019 and 2023 finals (2,7) | superfan
+MTAWARIRA | Tendai, Springbok prop nicknamed the Beast | superfan
+MALHERBE | Frans, Springbok tighthead in the 2019 and 2023 finals | superfan
+LIBBOK | Manie, Springbok fly-half at the 2023 World Cup | superfan
+NEWLANDS | Cape Town ground, long home of the WP provincial side | superfan
+WESTERN PROVINCE | Cape Town side with a host of Currie Cup titles (7,8) | superfan
+TOULOUSE | French club that won its sixth European Cup in 2024 | superfan
+HEINEKEN CUP | Original sponsored name of the European club competition (8,3) | superfan

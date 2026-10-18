@@ -4,9 +4,9 @@
 @blurb Cursed gold, ghost ships and a captain with a compass.
 @icon star
 JACK SPARROW | Swaggering captain played by Johnny Depp (4,7) | casual
-BLACK PEARL | Jack's ship with black sails (5,5) | casual
+BLACK PEARL | Jack's ship with dark sails (5,5) | casual
 WILL TURNER | Blacksmith who turns pirate (4,6) | casual
-ELIZABETH | Governor's daughter, surname Swann | casual
+ELIZABETH | Governor's daughter who loves Will | casual
 BARBOSSA | Captain who led a mutiny against Jack | casual
 DAVY JONES | Tentacle-bearded sea captain (4,5) | casual
 FLYING DUTCHMAN | Ghost ship that ferries souls lost at sea (6,8) | casual
@@ -48,7 +48,7 @@ LOCKER | Davy Jones' ___ | casual
 TREASURE | Gold and jewels pirates seek | casual
 CANNON | Ship's big gun | casual
 HENRY | Will's son in the fifth film | fan
-CARINA | Astronomer Smyth in the fifth film | fan
+CARINA | Astronomer heroine of the fifth film | fan
 JAVIER BARDEM | Actor who played Salazar (6,6) | fan
 PENELOPE CRUZ | Actress who played Angelica (8,4) | fan
 IAN MCSHANE | Actor who played Blackbeard (3,7) | fan
@@ -69,16 +69,16 @@ KEITH RICHARDS | Rolling Stone who played Jack's father (5,8) | fan
 INTERCEPTOR | Fast navy ship Jack and Will commandeer | fan
 SILENT MARY | Salazar's ghostly warship (6,4) | fan
 TRIDENT | ___ of Poseidon, the fifth film's prize | fan
-ISLA DE MUERTA | Island that can only be found by the lost (4,2,6) | fan
+ISLA DE MUERTA | Island found only by those who know where it is (4,2,6) | fan
 CORTES | Conquistador linked to the cursed gold | fan
-KEY | Jack's crab-shaped drawing shows one | fan
+KEY | Jack's cloth bears a drawing of this | fan
 PHILIP | Missionary who falls for a mermaid | fan
 SYRENA | Mermaid who falls for a missionary | fan
 GORE VERBINSKI | Director of the first three films (4,9) | fan
-HANS ZIMMER | Composer behind the later films' scores (4,6) | fan
+HANS ZIMMER | Composer of the second, third and fourth films (4,6) | fan
 JONATHAN PRYCE | Actor who played Governor Swann (8,5) | fan
 NAOMIE HARRIS | Actress who played Tia Dalma (6,6) | fan
-BLACK SPOT | Mark Jones's hunters put on Jack's palm (5,4) | fan
+BLACK SPOT | Mark on Jack's palm that summons the Kraken (5,4) | fan
 BOTTLE | Blackbeard keeps shrunken ships in these | fan
 PARROT | Mr Cotton's talking bird | fan
 EAST INDIA | ___ Trading Company (4,5) | fan
@@ -120,8 +120,17 @@ MACKENZIE CROOK | Actor who played Ragetti (9,5) | superfan
 LEE ARENBERG | Actor who played Pintel (3,8) | superfan
 KAYA SCODELARIO | Actress who played Carina (4,10) | superfan
 BRENTON THWAITES | Actor who played Henry (7,8) | superfan
-VOODOO DOLL | Angelica's effigy of Jack (6,4) | superfan
+VOODOO DOLL | Effigy of Jack that Angelica keeps at the end (6,4) | superfan
 PEG LEG | Barbossa's wooden limb in the fourth film (3,3) | superfan
 DEVILS TRIANGLE | Waters where Salazar was trapped (7,8) | superfan
-SANTIAGO | Ponce de León's wrecked ship | superfan
-DUTCHMAN skip | x | superfan
+APPLE | Fruit the cursed Barbossa cannot taste | fan
+MOONLIGHT | It reveals the cursed crew's true form | fan
+SWANN | Elizabeth's surname | fan
+QUEEN ANNES | ___ Revenge, Blackbeard's ship (5,5) | fan
+ZOMBIES | Blackbeard's undead officers | fan
+GEOFF ZANELLI | Composer of the fifth film (5,7) | superfan
+ESPEN SANDBERG | Co-director of the fifth film (5,8) | superfan
+ISLA CRUCES | Island where the chest is buried (4,6) | superfan
+TEN | Years between each day ashore for the Dutchman's captain | superfan
+SMYTH | Carina's surname | superfan
+PRIVATEER | Barbossa's role in the King's service in the fourth film | superfan
