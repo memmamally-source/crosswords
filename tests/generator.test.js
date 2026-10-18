@@ -10,7 +10,7 @@ function assertNoGiveaways(p, tag) {
     assert.strictEqual(hits.length, 0, `${tag}: clue for ${w.answer} gives away ${hits.join(', ')}: "${w.clue}"`);
   }
 }
-const { GENRES, DIFFICULTIES, levelsFor, bankFor, COLLECTIONS, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW } = require('../js/genres.js');
+const { GENRES, DIFFICULTIES, levelsFor, bankFor, COLLECTIONS, DAILY_BANK, DAILY_SCHEDULE, EASIER_DAILY_FROM, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW } = require('../js/genres.js');
 
 function runs(puzzle) {
   // Every horizontal/vertical run of 2+ letters in the grid.
@@ -135,7 +135,8 @@ for (const genre of GENRES) {
   }
 }
 // The Daily and the Mini: 8 weeks of each, built exactly as the site builds them.
-const start = Math.floor(Date.UTC(2026, 8, 1) / 86400000);
+// Starts at the gentler schedule; earlier Dailies are frozen and checked by puzzles.test.js.
+const start = Math.floor(Date.UTC(...EASIER_DAILY_FROM.split('-').map((x, i) => Number(x) - (i === 1))) / 86400000);
 const DAILY_LEVELS = new Map(DAILY_BANK.map((w) => [w.answer, w.level]));
 let prevDaily = null;
 let dailyRepeats = 0;

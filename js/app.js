@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED */
+/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED */
 (function () {
   'use strict';
 
@@ -138,7 +138,7 @@
   };
 
   function dailySpec(date) {
-    const sched = DAILY_SCHEDULE[parseKey(date).getDay()];
+    const sched = scheduleFor(date);
     return {
       kind: 'daily',
       key: `daily:${date}`,
@@ -555,7 +555,7 @@
     strip.innerHTML = '';
     for (let i = 0; i < 7; i++) {
       const k = addDays(monday, i);
-      const sched = DAILY_SCHEDULE[parseKey(k).getDay()];
+      const sched = scheduleFor(k);
       const key = `daily:${k}`;
       const st = statusOf(key);
       const future = k > today || k < LAUNCH;
@@ -1789,7 +1789,7 @@
     const parts = currentRoute.replace(/^#\/?/, '').split('/');
     leaveGame();
     const today = todayKey();
-    $('#dateline').textContent = `${longDate(today)} · Today's Daily: ${DAILY_SCHEDULE[parseKey(today).getDay()].level}`;
+    $('#dateline').textContent = `${longDate(today)} · Today's Daily: ${scheduleFor(today).level}`;
 
     if (parts[0] === 'daily' || parts[0] === 'mini') {
       const date = parts[1] && validDate(parts[1]) ? parts[1] : today;
