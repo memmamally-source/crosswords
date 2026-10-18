@@ -1,0 +1,138 @@
+# Marvel: unofficial fan crossword clues
+@title Marvel
+@category movies
+@blurb Avengers, Infinity Stones and heroes across the multiverse.
+@icon bolt
+IRON MAN | Tony Stark's armoured alter ego (4,3) | casual
+THOR | Asgardian god of thunder | casual
+LOKI | Thor's mischievous adoptive brother | casual
+HULK | Bruce Banner's big green alter ego | casual
+THANOS | Mad Titan who sought all six Infinity Stones | casual
+WAKANDA | Hidden, technologically advanced African nation | casual
+ASGARD | Realm ruled by Odin | casual
+AVENGERS | Earth's Mightiest Heroes | casual
+GROOT | Tree-like Guardian with a three-word vocabulary | casual
+ROCKET | Gun-loving raccoon of the Guardians | casual
+GAMORA | Adopted daughter of Thanos who joined the Guardians | casual
+DRAX | Very literal-minded Guardian, "the Destroyer" | casual
+STAR-LORD | Peter Quill's self-chosen outlaw name (4-4) | casual
+MJOLNIR | Thor's enchanted hammer | casual
+SHURI | Tech-genius princess of Wakanda | casual
+VIBRANIUM | Rare metal in Captain America's shield | casual
+CAPTAIN AMERICA | Steve Rogers' star-spangled identity (7,7) | casual
+BLACK WIDOW | Natasha Romanoff's codename (5,5) | casual
+HAWKEYE | Clint Barton's archer codename | casual
+SPIDER-MAN | Peter Parker's web-slinging identity (6-3) | casual
+STRANGE | Stephen ___, former neurosurgeon turned sorcerer | casual
+ANT-MAN | Scott Lang's shrinking identity (3-3) | casual
+WANDA | Scarlet Witch's first name | casual
+VISION | Android whose forehead held the Mind Stone | casual
+ULTRON | Rogue AI that wanted to wipe out humanity | casual
+GAUNTLET | Thanos's stone-studded golden glove | casual
+SNAP | Thanos's fateful finger gesture | casual
+FURY | Nick ___, eyepatch-wearing spymaster | casual
+PEPPER | ___ Potts, Tony Stark's partner | casual
+JARVIS | Tony Stark's original AI butler | casual
+SHAWARMA | Dish the Avengers eat after the Battle of New York | casual
+ODIN | Thor's one-eyed father, the All-Father | casual
+NEBULA | Gamora's blue cyborg sister | casual
+BUCKY | Steve Rogers' childhood best friend | casual
+CAPTAIN MARVEL | Carol Danvers' superhero name (7,6) | casual
+DEADPOOL | Wisecracking mercenary in a red suit | casual
+WOLVERINE | Clawed mutant played by Hugh Jackman | casual
+BLACK PANTHER | T'Challa's royal mantle (5,7) | casual
+ENDGAME | Avengers: ___ (2019) | casual
+SHANG-CHI | Martial artist hero of a 2021 film (5-3) | casual
+STAN LEE | Comics legend with countless film cameos (4,3) | casual
+BROOKLYN | Steve Rogers' home borough | casual
+ROMANOFF | Natasha's surname | casual
+MAY | Peter Parker's aunt | casual
+RED SKULL | Hydra leader and Captain America's first foe (3,5) | fan
+HELA | Goddess of death in Thor: Ragnarok | fan
+RAGNAROK | Thor's 2017 apocalypse-themed outing | fan
+KILLMONGER | Erik Stevens' alias in Black Panther | fan
+VULTURE | Adrian Toomes' winged villain identity | fan
+MYSTERIO | Illusionist foe played by Jake Gyllenhaal | fan
+YONDU | Blue Ravager with a whistle-controlled arrow | fan
+MANTIS | Empath with antennae who joins the Guardians | fan
+KORG | Rock-bodied gladiator voiced by Taika Waititi | fan
+VALKYRIE | Asgardian warrior played by Tessa Thompson | fan
+HEIMDALL | All-seeing gatekeeper played by Idris Elba | fan
+BIFROST | Rainbow bridge linking the Nine Realms | fan
+SAKAAR | Garbage planet ruled by Jeff Goldblum's character | fan
+DORMAMMU | Dark Dimension ruler Strange bargains with | fan
+WONG | Sorcerer and loyal friend of Stephen Strange | fan
+ZEMO | Helmut ___, Sokovian baron behind Civil War's split | fan
+SOKOVIA | Eastern European nation devastated in Age of Ultron | fan
+TESSERACT | Glowing cube housing the Space Stone | fan
+QUANTUM REALM | Subatomic dimension Scott Lang gets lost in (7,5) | fan
+WASP | Hope van Dyne's winged identity | fan
+HAPPY | ___ Hogan, Tony's driver and bodyguard | fan
+FALCON | Sam Wilson's winged codename | fan
+WAR MACHINE | Rhodey's armoured codename (3,7) | fan
+FRIDAY | AI that replaced Tony's first digital assistant | fan
+PEGGY | Agent Carter, Steve Rogers' great love | fan
+OBADIAH | ___ Stane, the Iron Monger | fan
+AGATHA | ___ Harkness, nosy neighbour witch in WandaVision | fan
+KANG | ___ the Conqueror, multiversal villain | fan
+HEMSWORTH | Chris who plays the god of thunder | fan
+RUFFALO | Mark who plays Bruce Banner | fan
+HOLLAND | Tom who plays Peter Parker | fan
+HIDDLESTON | Tom who plays the god of mischief | fan
+STORMBREAKER | Axe Thor forges in Infinity War | fan
+GOOSE | Carol Danvers' "cat" | fan
+RONAN | ___ the Accuser, Kree fanatic | fan
+KNOWHERE | Mining colony inside a Celestial's severed head | fan
+SHE-HULK | Jennifer Walters' green alter ego (3-4) | fan
+OKOYE | General of the Dora Milaje | fan
+NAMOR | Undersea king in Wakanda Forever | fan
+KAMALA | ___ Khan, Ms. Marvel | fan
+COULSON | Agent Phil ___, Captain America superfan | fan
+MOBIUS | Time agent played by Owen Wilson | fan
+WENWU | Shang-Chi's father, leader of the Ten Rings | fan
+HULKBUSTER | Tony's giant anti-Hulk armour | fan
+YELENA | ___ Belova, Natasha's "little sister" | fan
+YINSEN | Doctor who helped Tony build his first suit in a cave | superfan
+ERSKINE | Dr. Abraham ___, creator of the super-soldier serum | superfan
+MORAG | Ruined planet where Quill steals the Orb | superfan
+EBONY MAW | Telekinetic member of the Black Order (5,3) | superfan
+KAREN | Name Peter gives his suit's AI | superfan
+PALLADIUM | Element slowly poisoning Tony in Iron Man 2 | superfan
+TALOS | Skrull leader played by Ben Mendelsohn | superfan
+VERS | Carol Danvers' name among the Kree | superfan
+KAECILIUS | Zealot sorcerer played by Mads Mikkelsen | superfan
+AYESHA | Golden High Priestess of the Sovereign | superfan
+MALEKITH | Dark Elf leader in The Dark World | superfan
+HARLEY | Tennessee boy who helps Tony in Iron Man 3 | superfan
+DESTROYER | Enchanted armour Loki sends to New Mexico | superfan
+PUENTE ANTIGUO | New Mexico town where Thor lands in 2011 (6,7) | superfan
+BAST | Panther goddess worshipped in Wakanda | superfan
+TASERFACE | Mutinous Ravager with a much-mocked name | superfan
+SPRITE | Eternal stuck in a child's form | superfan
+AGNES | Alias of WandaVision's witchy neighbour | superfan
+ALIOTH | Cloud-like creature that devours matter in the Void | superfan
+JACK RUSSELL | Title monster of Werewolf by Night (4,7) | superfan
+VERONICA | Codename for the Hulkbuster deployment system | superfan
+NIDAVELLIR | Dwarven forge world run by Eitri | superfan
+FLERKEN | Tentacled alien species that resembles a cat | superfan
+LAUFEY | Frost Giant king, Loki's birth father | superfan
+JOTUNHEIM | Icy realm of the Frost Giants | superfan
+XANDAR | Home planet of the Nova Corps | superfan
+ARNIM ZOLA | Hydra scientist whose mind lived on in computers (5,4) | superfan
+TRISKELION | S.H.I.E.L.D.'s Washington headquarters | superfan
+EXTREMIS | Regenerative treatment that empowers Iron Man 3's villains | superfan
+TREVOR | ___ Slattery, actor posing as a terrorist | superfan
+VORMIR | Planet where the Soul Stone is kept | superfan
+AGAMOTTO | Eye of ___, amulet housing the Time Stone | superfan
+DREYKOV | General who ran the Red Room | superfan
+TALOKAN | Hidden underwater kingdom in Wakanda Forever | superfan
+ARISHEM | Celestial known as the Judge in Eternals | superfan
+MORRIS | Faceless winged creature in Shang-Chi | superfan
+MODOK | Darren Cross's giant-headed form in Quantumania | superfan
+COSMO | Telepathic Soviet space dog | superfan
+KRAGLIN | Yondu's loyal first mate | superfan
+MADRIPOOR | Lawless island nation visited by Sam and Bucky | superfan
+ISAIAH | ___ Bradley, forgotten Korean War super-soldier | superfan
+KHONSHU | Egyptian moon god in Moon Knight | superfan
+LAGOS | City where a mission gone wrong led to the Sokovia Accords | superfan
+CASSANDRA NOVA | Charles Xavier's twin in the Void (9,4) | superfan

@@ -10,7 +10,7 @@ function assertNoGiveaways(p, tag) {
     assert.strictEqual(hits.length, 0, `${tag}: clue for ${w.answer} gives away ${hits.join(', ')}: "${w.clue}"`);
   }
 }
-const { GENRES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW } = require('../js/genres.js');
+const { GENRES, DIFFICULTIES, levelsFor, themedBank, COLLECTIONS, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW } = require('../js/genres.js');
 
 function runs(puzzle) {
   // Every horizontal/vertical run of 2+ letters in the grid.
@@ -79,17 +79,27 @@ assert.strictEqual(require('fs').readFileSync(build.out, 'utf8'), build.render(b
   assert.ok(pageVersions.length >= 5 && pageVersions.every((v) => v === swVersion), `sw.js VERSION ${swVersion} doesn't match index.html ?v= ${pageVersions}`);
 }
 
+// Every genre and collection has its own id.
+assert.strictEqual(new Set(GENRES.map((g) => g.id)).size, GENRES.length, 'two genres or collections share an id');
+// js/collections.js must be rebuilt after editing collections/*.txt.
+{
+  const coll = require('../tools/build-collections.js');
+  assert.strictEqual(require('fs').readFileSync(coll.out, 'utf8'), coll.render(coll.readAll([])), 'js/collections.js is out of date: run node tools/build-collections.js');
+}
+
 let total = 0;
 for (const genre of GENRES) {
   const answers = new Set(genre.words.map((w) => w.answer));
   assert.strictEqual(new Set(genre.words.map((w) => answerId(w.answer))).size, genre.words.length, `${genre.id}: two answers share a link id`);
   assert.strictEqual(answers.size, genre.words.length, `${genre.id}: duplicate answers`);
-  for (const [level, cfg] of Object.entries(DIFFICULTIES)) {
+  // Themed collections play at Casual/Fan/Superfan, each ranking its clues differently.
+  for (const [level, cfg] of Object.entries(levelsFor(genre))) {
+    const bank = genre.themed ? themedBank(genre.words, level) : genre.words;
     for (let seed = 1; seed <= 10; seed++) {
-      const p = generate(genre.words, { ...cfg, seed });
+      const p = generate(bank, { ...cfg, seed });
       const tag = `${genre.id}/${level}/seed ${seed}`;
       assert.strictEqual(p.words.length, cfg.count, `${tag}: placed ${p.words.length}/${cfg.count}`);
-      const levels = new Map(genre.words.map((w) => [w.answer, w.level]));
+      const levels = new Map(bank.map((w) => [w.answer, w.level]));
       const hard = p.words.filter((w) => levels.get(w.answer) === 'hard').length;
       assert.strictEqual(hard, cfg.hard, `${tag}: ${hard} hard answers, wanted ${cfg.hard}`);
       assert.ok(p.rows <= cfg.maxSize + 4 && p.cols <= cfg.maxSize + 4, `${tag}: grid too big`);
@@ -100,7 +110,9 @@ for (const genre of GENRES) {
       assertNoGiveaways(p, tag);
       // Share links rebuild the same grid.
       const { seed: _seed, ...grid } = p;
-      assert.deepStrictEqual(fromLayoutCode(layoutCode(p), genre.words), grid, `${tag}: link code doesn't rebuild the grid`);
+      const rebuilt = fromLayoutCode(layoutCode(p), genre.words);
+      assert.deepStrictEqual(rebuilt && { ...rebuilt, words: rebuilt.words.map(({ answer, clue, dir, row, col, number, cells }) => ({ answer, clue, dir, row, col, number, cells })) },
+        { ...grid, words: grid.words.map(({ answer, clue, dir, row, col, number, cells }) => ({ answer, clue, dir, row, col, number, cells })) }, `${tag}: link code doesn't rebuild the grid`);
       const expected = p.words.map((w) => `${w.dir}:${w.row},${w.col}`).sort();
       assert.deepStrictEqual(runs(p), expected, `${tag}: stray letter runs`);
       // Connected: flood fill from first letter reaches every letter.
@@ -117,7 +129,7 @@ for (const genre of GENRES) {
       }
       assert.strictEqual(seen.size, filled.length, `${tag}: disconnected`);
       // Same seed -> same puzzle.
-      assert.deepStrictEqual(generate(genre.words, { ...cfg, seed }).solution, p.solution, `${tag}: not deterministic`);
+      assert.deepStrictEqual(generate(bank, { ...cfg, seed }).solution, p.solution, `${tag}: not deterministic`);
       total++;
     }
   }

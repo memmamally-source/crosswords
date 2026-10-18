@@ -1,0 +1,140 @@
+# Doctor Who: unofficial fan crossword clues
+@title Doctor Who
+@category tv
+@blurb A time-travelling alien, a blue box and all of space and time.
+@icon planet
+TARDIS | Time-travelling ship disguised as a police box | casual
+DALEKS | Pepper-pot-shaped alien foes in armoured casings | casual
+CYBERMEN | Emotionless, upgraded silver humanoids | casual
+GALLIFREY | Home planet of the Time Lords | casual
+SCREWDRIVER | The Doctor's sonic multi-tool | casual
+TIME LORD | Member of the Doctor's species (4,4) | casual
+REGENERATION | Process by which the Doctor gets a new face | casual
+POLICE BOX | Old London kiosk the ship resembles (6,3) | casual
+MASTER | The Doctor's renegade arch-rival | casual
+ROSE | Shop-girl companion of the Ninth and Tenth Doctors | casual
+MARTHA | Medical student companion of the Tenth Doctor | casual
+DONNA | Loud-mouthed temp who travels with the Tenth Doctor | casual
+AMY | Pond, the girl who waited | casual
+RORY | Nurse who marries Amy | casual
+CLARA | Impossible Girl companion of two Doctors | casual
+RIVER SONG | Archaeologist with a diary full of secrets (5,4) | casual
+EXTERMINATE | Daleks' screeched catchphrase | casual
+COMPANION | The Doctor's travelling friend | casual
+BBC | British broadcaster of the show | casual
+INSIDE | The ship is famously bigger on the ___ | casual
+BLUE | Colour of the police box | casual
+TWO | Number of hearts a Time Lord has | casual
+SCARF | Fourth Doctor's very long woolly accessory | casual
+BOW TIE | Eleventh Doctor's neckwear, which he calls cool (3,3) | casual
+JOHN SMITH | Alias the Doctor often uses (4,5) | casual
+TENNANT | David ___, the Tenth Doctor | casual
+SMITH | Matt ___, the Eleventh Doctor | casual
+CAPALDI | Peter ___, the Twelfth Doctor | casual
+WHITTAKER | Jodie ___, the first female Doctor | casual
+ECCLESTON | Christopher ___, the Ninth Doctor | casual
+BAKER | Tom ___, the scarf-wearing Fourth Doctor | casual
+WEEPING | ___ Angels, statues that move when unseen | casual
+SONTARANS | Potato-headed clone warrior race | casual
+DAVROS | Scarred scientist who created the Daleks | casual
+SKARO | Home planet of the Daleks | casual
+TORCHWOOD | Alien-hunting institute with its own spin-off | casual
+REGENERATE | What a dying Time Lord can do | casual
+TIME TRAVEL | What the show is all about (4,6) | casual
+FEZ | Hat the Eleventh Doctor insists is cool | casual
+SPACESHIP | What the blue box really is | casual
+ALIEN | What the Doctor is, despite looking human | casual
+SPOILERS | River Song's coy catchphrase | casual
+GERONIMO | Eleventh Doctor's catchphrase | fan
+ALLONS Y | Tenth Doctor's French catchphrase (6,1) | fan
+BLINK | Weeping Angels episode with a famous warning | fan
+GILLAN | Karen ___, who plays Amy | fan
+PIPER | Billie ___, who plays Rose | fan
+TATE | Catherine ___, who plays Donna | fan
+COLEMAN | Jenna ___, who plays Clara | fan
+KINGSTON | Alex ___, who plays River | fan
+GATWA | Ncuti ___, Fifteenth Doctor | fan
+OOD | Telepathic alien servants with tentacled faces | fan
+ZYGONS | Shape-shifting aliens covered in suckers | fan
+JUDOON | Rhino-headed galactic police | fan
+SILENCE | Aliens you forget the moment you look away | fan
+AUTONS | Living plastic shop-window dummies | fan
+SLITHEEN | Flatulent aliens who wear human skins | fan
+MISSY | Female incarnation of the Doctor's rival | fan
+UNIT | Military taskforce that fights alien threats | fan
+BRIGADIER | Military rank of UNIT's long-serving chief | fan
+SARAH JANE | Journalist companion with her own spin-off (5,4) | fan
+HARKNESS | Captain Jack's surname | fan
+BAD WOLF | Phrase scattered through time by Rose (3,4) | fan
+MICKEY | Rose's boyfriend who later joins the ship | fan
+WILF | Donna's stargazing grandfather | fan
+NOBLE | Donna's surname | fan
+POND | Amy's surname | fan
+FISH CUSTARD | Eleventh Doctor's first meal (4,7) | fan
+JELLY BABIES | Sweets offered by the Fourth Doctor (5,6) | fan
+PSYCHIC PAPER | Blank ID card that shows what the viewer expects (7,5) | fan
+TIME WAR | Last great conflict between Gallifrey and the Daleks (4,3) | fan
+WAR DOCTOR | Incarnation who fought in the last great war (3,6) | fan
+SAXON | Harold ___, the rival's alias as Prime Minister | fan
+NURSE | Rory's profession | fan
+SHAKESPEARE | Bard the Doctor and Martha meet in 1599 | fan
+DICKENS | Novelist who helps the Doctor in Victorian Cardiff | fan
+VAN GOGH | Painter visited in Vincent and the Doctor (3,4) | fan
+POMPEII | Doomed Roman city visited by the Doctor and Donna | fan
+DAVIES | Russell T ___, who revived the show in 2005 | fan
+MOFFAT | Steven ___, showrunner after 2010 | fan
+CHIBNALL | Chris ___, showrunner from 2018 | fan
+TWELVE | Traditional limit on a Time Lord's regenerations | fan
+GRAHAM | Bus driver companion of the Thirteenth Doctor | fan
+YAZ | Police officer companion of the Thirteenth Doctor | fan
+ACE | Seventh Doctor's explosives-loving companion | fan
+HARTNELL | William ___, the First Doctor | fan
+TROUGHTON | Patrick ___, the Second Doctor | fan
+PERTWEE | Jon ___, the Third Doctor | fan
+DAVISON | Peter ___, the Fifth Doctor | fan
+PANDORICA | Box said to hold the universe's most feared being | superfan
+CELERY | Vegetable the Fifth Doctor wears on his lapel | superfan
+UMBRELLA | Seventh Doctor's question-mark-handled accessory | superfan
+SUSAN | First Doctor's granddaughter | superfan
+TOTTERS LANE | Junkyard street where the ship is first found (7,4) | superfan
+FOREMAN | I.M. ___, owner of the original junkyard | superfan
+CHAMELEON | Broken circuit that leaves the ship stuck as a box | superfan
+HANDLES | Cyberman head the Eleventh Doctor keeps as a companion | superfan
+DIMENSION | What the D in the ship's name stands for | superfan
+RACNOSS | Spider-like empress in The Runaway Bride | superfan
+VASHTA NERADA | Shadow-dwelling swarms in the Library (6,6) | superfan
+CARRIONITES | Witch-like aliens in The Shakespeare Code | superfan
+SYCORAX | Bone-masked invaders on Christmas Day | superfan
+STORMCAGE | Prison where River is held | superfan
+MELODY | River Song's birth name | superfan
+TRENZALORE | Planet where the Eleventh Doctor's grave lies | superfan
+DARILLIUM | Planet of the Singing Towers | superfan
+RASSILON | Founder of Time Lord society | superfan
+OMEGA | Time Lord engineer trapped in an antimatter world | superfan
+RANI | Renegade Time Lady and chemist | superfan
+ARCADIA | Gallifreyan city that falls in The Day of the Doctor | superfan
+MOMENT | Sentient doomsday weapon from the Time War | superfan
+CLOISTER | ___ Bell, the ship's alarm for catastrophe | superfan
+POWELL | ___ Estate, Rose's London home | superfan
+VALIANT | UNIT's flying aircraft carrier | superfan
+YANA | Professor who turns out to be the rival in disguise | superfan
+HENRIKS | Department store where Rose works | superfan
+NORWAY | Country of Bad Wolf Bay | superfan
+REINETTE | Madame de Pompadour's first name | superfan
+ASTRID | Waitress played by Kylie Minogue | superfan
+HARRIET | ___ Jones, Prime Minister for a time | superfan
+DERBYSHIRE | Delia ___, who realised the original theme | superfan
+GRAINER | Ron ___, composer of the theme tune | superfan
+LAMBERT | Verity ___, the show's first producer | superfan
+LETHBRIDGE | Alistair Gordon ___-Stewart, UNIT's long-serving chief | superfan
+LEELA | Knife-wielding warrior of the Sevateem | superfan
+ROMANA | Time Lady companion of the Fourth Doctor | superfan
+ADRIC | Young maths whizz from E-Space | superfan
+TEGAN | Australian air stewardess companion | superfan
+PERI | American botany student companion | superfan
+JAMIE | Kilted Highland companion of the Second Doctor | superfan
+MCCOY | Sylvester ___, the Seventh Doctor | superfan
+MCGANN | Paul ___, the Eighth Doctor | superfan
+ADIPOSE | Cute creatures made of human fat | superfan
+TOCLAFANE | Spherical killers that are humanity's future | superfan
+DARVILL | Arthur ___, who plays Rory | superfan

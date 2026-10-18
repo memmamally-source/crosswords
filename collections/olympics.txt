@@ -1,0 +1,137 @@
+# The Olympics: unofficial sport crossword clues
+@title The Olympics
+@category sport
+@blurb Summer and Winter Games: champions, host cities and great moments.
+@icon flame
+BOLT | Usain ___, Jamaican sprinter with 100m golds in 2008, 2012 and 2016 | casual
+PHELPS | Michael ___, US swimmer with 23 gold medals | casual
+BILES | Simone ___, US gymnast, all-around champion in 2016 and 2024 | casual
+OWENS | Jesse ___, four-time gold medallist at Berlin 1936 | casual
+LEWIS | Carl ___, nine-time gold medallist from 1984 to 1996 | casual
+FARAH | Mo ___, 5000m and 10,000m champion in 2012 and 2016 | casual
+REDGRAVE | Steve ___, rower with golds at five straight Games | casual
+HOY | Chris ___, Scottish track cyclist with six golds | casual
+DALEY | Tom ___, British diver who won synchro gold in Tokyo | casual
+COMANECI | Nadia ___, first gymnast to score a perfect 10, in 1976 | casual
+MARCHAND | Leon ___, French swimmer with four individual golds in 2024 | casual
+ATHENS | Host of the first modern Games, in 1896 | casual
+LONDON | Host city in 1908, 1948 and 2012 | casual
+BEIJING | Host of the 2008 Summer and 2022 Winter Games | casual
+RIO | South American host city of 2016 | casual
+TOKYO | Host of the Games held in 2021 | casual
+PARIS | Host city in 1900, 1924 and 2024 | casual
+SYDNEY | Host of the 2000 Summer Games | casual
+BARCELONA | Host of the 1992 Summer Games | casual
+SEINE | River used for the 2024 opening ceremony | casual
+OLYMPIA | Greek site of the ancient Games | casual
+ZEUS | God honoured at the ancient Games | casual
+TORCH | Flame carrier relayed from Greece | casual
+RINGS | Five interlocking symbols on the flag | casual
+GOLD | Winner's medal | casual
+PODIUM | Medal ceremony stand | casual
+IOC | Body that runs the Games, by its initials | casual
+MARATHON | Road race of 26.2 miles | casual
+DECATHLON | Ten-event men's competition | casual
+HEPTATHLON | Seven-event women's competition | casual
+HURDLES | Barriers in the 110m and 400m races | casual
+JAVELIN | Spear thrown in athletics | casual
+POLE VAULT | Event using a long flexible rod (4,5) | casual
+ROWING | Sport of eights and coxless pairs | casual
+FENCING | Sport with foil, epee and sabre | casual
+JUDO | Japanese martial art that debuted in 1964 | casual
+ARCHERY | Sport aiming arrows at a target | casual
+VELODROME | Indoor track cycling arena | casual
+WATER POLO | Team ball game played in a pool (5,4) | casual
+CURLING | Winter sport with stones and brooms | casual
+BOBSLEIGH | Winter sledding event for teams of two or four | casual
+LUGE | Feet-first sledding event | casual
+BIATHLON | Skiing and shooting event | casual
+SLALOM | Alpine skiing race weaving through closely set gates | casual
+COE | Seb ___, 1500m champion in 1980 and 1984 | fan
+THOMPSON | Daley ___, decathlon champion in 1980 and 1984 | fan
+SPITZ | Mark ___, swimmer with seven golds in 1972 | fan
+NURMI | Paavo ___, the Flying Finn | fan
+ZATOPEK | Emil ___, won the 5000m, 10,000m and marathon in 1952 | fan
+BIKILA | Abebe ___, won the 1960 marathon barefoot | fan
+BEAMON | Bob ___, long jumper whose 1968 leap stunned Mexico City | fan
+FOSBURY | Dick ___, high jumper whose back-first flop won gold in 1968 | fan
+JOHNSON | Michael ___, 200m and 400m champion at Atlanta 1996 | fan
+KIPCHOGE | Eliud ___, marathon champion in 2016 and 2021 | fan
+RUDISHA | David ___, set an 800m world record in the 2012 final | fan
+LEDECKY | Katie ___, 800m freestyle champion aged 15 in 2012 | fan
+THORPE | Ian ___, Australian swimmer with five golds in 2000 and 2004 | fan
+FREEMAN | Cathy ___, 400m champion at Sydney 2000 | fan
+WIGGINS | Bradley ___, road time trial champion in 2012 | fan
+HOLMES | Kelly ___, 800m and 1500m champion in 2004 | fan
+PINSENT | Matthew ___, rower with four golds from 1992 to 2004 | fan
+AINSLIE | Ben ___, sailor with four golds from 2000 to 2012 | fan
+KENNY | Jason ___, British track cyclist with seven golds | fan
+PEATY | Adam ___, 100m breaststroke champion in 2016 and 2021 | fan
+ADLINGTON | Rebecca ___, double swimming champion in 2008 | fan
+MURRAY | Andy ___, tennis singles champion in 2012 and 2016 | fan
+DJOKOVIC | Novak ___, tennis singles champion in 2024 | fan
+FELIX | Allyson ___, US sprinter, 200m champion in 2012 | fan
+DUPLANTIS | Armand ___, pole vaulter who set a world record at Paris 2024 | fan
+LYLES | Noah ___, 100m champion in 2024 | fan
+HODGKINSON | Keely ___, British 800m champion in 2024 | fan
+HASSAN | Sifan ___, Dutch marathon champion in 2024 | fan
+TORVILL | Jayne ___, ice dance champion with Christopher Dean in 1984 | fan
+WHITE | Shaun ___, halfpipe champion in 2006, 2010 and 2018 | fan
+COUBERTIN | Pierre de ___, founder of the modern Games | fan
+BACH | Thomas ___, IOC president elected in 2013 | fan
+CALGARY | Host of the 1988 Winter Games | fan
+SARAJEVO | Host of the 1984 Winter Games | fan
+LILLEHAMMER | Norwegian host of the 1994 Winter Games | fan
+NAGANO | Japanese host of the 1998 Winter Games | fan
+VANCOUVER | Host of the 2010 Winter Games | fan
+LAKE PLACID | New York host of the 1932 and 1980 Winter Games (4,6) | fan
+MIRACLE ON ICE | US hockey win over the Soviet Union in 1980 (7,2,3) | fan
+JAMAICA | Nation of the Cool Runnings bobsleigh team of 1988 | fan
+SKELETON | Head-first sliding event | fan
+MEXICO CITY | High-altitude host of 1968 (6,4) | fan
+TRIATHLON | Swim, bike and run event that debuted in 2000 | fan
+BREAKING | Dance sport that debuted at Paris 2024 | fan
+FRASER-PRYCE | Shelly-Ann ___, 100m champion in 2008 and 2012 (6-5) | superfan
+LATYNINA | Larisa ___, Soviet gymnast with 18 Olympic medals | superfan
+KORBUT | Olga ___, Soviet gymnast who starred in 1972 | superfan
+WHITLOCK | Max ___, pommel horse champion in 2016 and 2021 | superfan
+GEBRSELASSIE | Haile ___, 10,000m champion in 1996 and 2000 | superfan
+BEKELE | Kenenisa ___, 5000m and 10,000m champion in 2008 | superfan
+DIBABA | Tirunesh ___, Ethiopian distance double champion in 2008 | superfan
+VIREN | Lasse ___, Finn who won the 5000m and 10,000m in 1972 and 1976 | superfan
+ZELEZNY | Jan ___, Czech javelin champion in 1992, 1996 and 2000 | superfan
+OERTER | Al ___, discus champion at four Games from 1956 to 1968 | superfan
+BUBKA | Sergey ___, pole vaulter whose only Olympic gold came in 1988 | superfan
+EDWARDS | Jonathan ___, triple jump champion at Sydney 2000 | superfan
+ALFRED | Julien ___, won Saint Lucia's first gold in the 2024 100m | superfan
+TEBOGO | Letsile ___, Botswana's 200m champion in 2024 | superfan
+KILLY | Jean-Claude ___, won all three alpine golds in 1968 | superfan
+HEIDEN | Eric ___, speed skater with five golds in 1980 | superfan
+WITT | Katarina ___, figure skating champion in 1984 and 1988 | superfan
+DAEHLIE | Bjorn ___, Norwegian cross-country skiing great of the 1990s | superfan
+YARNOLD | Lizzy ___, skeleton champion in 2014 and 2018 | superfan
+SAMARANCH | Juan Antonio ___, IOC president from 1980 to 2001 | superfan
+BRUNDAGE | Avery ___, IOC president from 1952 to 1972 | superfan
+CHAMONIX | French host of the first Winter Games, 1924 | superfan
+ST MORITZ | Swiss host of the 1928 and 1948 Winter Games (2,6) | superfan
+CORTINA | Italian resort that hosted the 1956 Winter Games | superfan
+OSLO | Norwegian host of the 1952 Winter Games | superfan
+GRENOBLE | French host of the 1968 Winter Games | superfan
+STOCKHOLM | Host of the 1912 Summer Games | superfan
+AMSTERDAM | Host of the 1928 Summer Games | superfan
+ANTWERP | Belgian host of the 1920 Summer Games | superfan
+ST LOUIS | US host of the 1904 Summer Games (2,5) | superfan
+HELSINKI | Host of the 1952 Summer Games | superfan
+MELBOURNE | Southern hemisphere's first host, in 1956 | superfan
+TEAHUPOO | Tahitian surf break used for Paris 2024 | superfan
+TUG OF WAR | Rope-pulling event held until 1920 (3,2,3) | superfan
+CROQUET | Mallet sport contested only at the 1900 Games | superfan
+GOLF | Sport that returned in 2016 after 112 years | superfan
+CITIUS | ___, Altius, Fortius | superfan
+OLYMPIAD | Four-year span between Games | superfan
+MISHA | Bear mascot of Moscow 1980 | superfan
+COBI | Dog mascot of Barcelona 1992 | superfan
+WALDI | Dachshund of Munich 1972, the first official mascot | superfan
+BOYCOTT | Protest that kept the US away from Moscow 1980 | superfan
+CAULDRON | Vessel lit at the end of the torch relay | superfan
+TAEKWONDO | Korean martial art, a full medal sport since 2000 | superfan

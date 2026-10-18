@@ -1,0 +1,113 @@
+# Squid Game: unofficial fan crossword clues
+@title Squid Game
+@category tv
+@blurb Hundreds of desperate players, children's games and a huge prize.
+@icon tv
+GI-HUN | Player 456, Seong ___ (2-3) | casual
+SANG-WOO | Player 218, Cho ___ (4-3) | casual
+SAE-BYEOK | Player 067, Kang ___ (3-5) | casual
+IL-NAM | Player 001, elderly Oh ___ (2-3) | casual
+ALI | Player 199, a kind migrant worker | casual
+DEOK-SU | Player 101, gangster Jang ___ (4-2) | casual
+FRONT MAN | Masked overseer of the games (5,3) | casual
+DALGONA | Sugar candy of the second game | casual
+UMBRELLA | Shape Gi-hun must cut from his candy | casual
+STAR | Five-pointed shape in the candy game | casual
+RED LIGHT | First game, with a giant doll (3,5) | casual
+DOLL | Giant figure that spots movement | casual
+TUG OF WAR | Third game, played on high platforms (3,2,3) | casual
+MARBLES | Fourth game, played in pairs | casual
+GLASS | Material of the fifth game's stepping panes | casual
+BRIDGE | Structure crossed in the fifth game | casual
+PINK | Colour of the guards' jumpsuits | casual
+GREEN | Colour of the players' numbered outfits | casual
+TRACKSUIT | Numbered outfit every player wears | casual
+LEE JUNG-JAE | Actor who played player 456 (3,4-3) | casual
+NETFLIX | Streaming service behind the hit | casual
+KOREA | Country where the drama is set | casual
+SEOUL | Capital where players are recruited | casual
+WON | Currency of the prize money | casual
+PIGGY BANK | Giant suspended cash display (5,4) | casual
+BILLION | 45.6 ___, the prize total in won | casual
+ISLAND | Remote location of the games | casual
+VIPS | Masked rich guests who watch | casual
+DEBT | What every player is drowning in | casual
+VOTE | Majority ballot that can halt the games | casual
+NORTH KOREA | Player 067's homeland (5,5) | casual
+MASK | Face covering each guard wears | casual
+SQUID | Sea creature that names the final game | casual
+GUARDS | Jumpsuited enforcers who shoot the eliminated | casual
+PRIZE | Money awaiting the last player standing | casual
+RULES | They must be obeyed, or players are eliminated | casual
+GAMES | Six childhood contests played for money | casual
+RECRUITER | Suited stranger who lures players in | fan
+GONG YOO | Actor who played the recruiter (4,3) | fan
+DDAKJI | Paper-tile slapping game the recruiter plays | fan
+SLAP | Recruiter's penalty for each lost round | fan
+SUBWAY | Where Gi-hun first meets the recruiter | fan
+JI-YEONG | Player 240, Sae-byeok's marble partner (2-5) | fan
+MI-NYEO | Player 212, loud and scheming Han ___ (2-4) | fan
+JUN-HO | Detective who sneaks onto the island (3-2) | fan
+GA-YEONG | Gi-hun's young daughter (2-5) | fan
+PAKISTAN | Homeland of player 199 | fan
+HORSES | Races Gi-hun bets on | fan
+GGANBU | Term for a trusted marbles partner | fan
+LICK | Gi-hun's trick to loosen his candy shape | fan
+NEEDLE | Tool given for the candy game | fan
+TRIANGLE | Guard symbol for armed soldiers | fan
+CIRCLE | Guard symbol for lowest-rank workers | fan
+SQUARE | Guard symbol for managers | fan
+CARD | Business ___ with three shapes and a number | fan
+GOLD | Colour of the VIPs' animal masks | fan
+COFFIN | Gift-box casket for the eliminated | fan
+BUNK | Stacked bed in the players' dormitory | fan
+STAIRS | Pastel maze linking the game halls | fan
+PARK HAE-SOO | Actor who played player 218 (4,3-3) | fan
+HWANG DONG-HYUK | Creator, writer and director (5,4-4) | fan
+EMMY | Award the lead actor won in 2022 | fan
+DOCTOR | Profession of player 111 | fan
+NINE | Number of episodes in season one | fan
+RED | Colour Gi-hun dyes his hair at the end | fan
+AIRPORT | Where Gi-hun turns back at the end | fan
+MOTHER | Gi-hun's ailing parent | fan
+FACTORY | Player 199's workplace that withheld his wages | fan
+IN-HO | Jun-ho's brother, revealed as the Front Man (2-2) | superfan
+LEE BYUNG-HUN | Actor behind the Front Man's mask (3,5-3) | superfan
+WI HA-JOON | Actor who played the undercover detective (2,2-4) | superfan
+GOLDEN GLOBE | Award won by O Yeong-su (6,5) | superfan
+CHEOL | Sae-byeok's little brother | superfan
+BYUNG-GI | Player 111, in league with corrupt guards (5-2) | superfan
+MUGUNGHWA | Flower named in the first game's chant | superfan
+SNOW | Weather at Il-nam's final wager | superfan
+FISH | What Sang-woo's mother sells at the market | superfan
+DRAGON MOTORS | Car firm that laid Gi-hun off (6,6) | superfan
+SSANGMUN-DONG | Seoul district where 456 and 218 grew up (8-4) | superfan
+YOUNG-HEE | Name of the giant robot girl of game one (5-3) | superfan
+CLAUSE | Third ___ of the consent form: a majority can stop play | superfan
+GLASSMAKER | Player 017, who could read the panes | superfan
+RIBBON | Pink tie on each coffin | superfan
+JUNG HO-YEON | Model-turned-actress who played player 067 (4,2-4) | superfan
+ANUPAM TRIPATHI | Actor who played player 199 (6,8) | superfan
+HEO SUNG-TAE | Actor who played player 101 (3,4-3) | superfan
+KIM JOO-RYOUNG | Actress who played player 212 (3,3-6) | superfan
+O YEONG-SU | Veteran actor who played player 001 (1,5-2) | superfan
+LEE YOO-MI | Actress who played player 240 (3,3-2) | superfan
+JUNG JAE-IL | Composer of the score (4,3-2) | superfan
+CLAW MACHINE | Arcade game where Gi-hun wins a birthday gift (4,7) | superfan
+LIGHTER | Gun-shaped gift Gi-hun gives his daughter | superfan
+GAS | Knock-out agent used in the pickup van | superfan
+BLACK | Colour of the Front Man's mask | superfan
+TUMOR | Il-nam's terminal condition | superfan
+ORPHANAGE | Where Sae-byeok leaves her brother | superfan
+BROKER | Middleman Sae-byeok needs to pay to free her mother | superfan
+DIABETES | Illness of Gi-hun's mother | superfan
+SECURITIES | Type of firm Sang-woo worked for | superfan
+HONEYCOMB | English name often used for the candy game | fan
+TEMPERED | Kind of pane that holds in the fifth game | superfan
+PRIDE | Sang-woo, the ___ of his neighbourhood | superfan
+TEAMS | Groups of ten in the third game | fan
+DORMITORY | Shared sleeping hall of the players | fan
+POLICE | Jun-ho's profession | fan
+KANG | Surname of the North Korean defector player | fan
+CHO | Surname of the Seoul National University grad | fan
+SEONG | Surname of the show's protagonist | fan

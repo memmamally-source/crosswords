@@ -1,0 +1,130 @@
+# The Legend of Zelda: unofficial fan crossword clues
+@title The Legend of Zelda
+@category gaming
+@blurb Hyrule, the Triforce and a hero dressed in green.
+@icon gamepad
+LINK | Green-clad hero of the series | casual
+ZELDA | Princess whose name is in the series title | casual
+GANONDORF | Desert-born King of Evil | casual
+HYRULE | Kingdom where most of the games are set | casual
+TRIFORCE | Sacred relic of three golden triangles | casual
+MASTER SWORD | Blade of evil's bane (6,5) | casual
+NAVI | Winged companion who cries "Hey! Listen!" | casual
+EPONA | The hero's trusty horse | casual
+RUPEE | Gem-shaped currency | casual
+HYLIAN SHIELD | Iconic blue defence bearing a red bird crest (6,6) | casual
+OCARINA | Wind instrument used to play magic songs | casual
+BOOMERANG | Curved weapon that returns when thrown | casual
+HOOKSHOT | Spring-loaded chain grappling hook | casual
+BOMB | Explosive used to open cracked walls | casual
+FAIRY | Tiny winged healer that revives you when you fall | casual
+HEART CONTAINER | Boss reward that boosts your maximum life (5,9) | casual
+GORON | Rock-eating mountain race | casual
+ZORA | Aquatic fish-like race | casual
+KOKIRI | Forest children who never grow up | casual
+GERUDO | Desert race of warrior women | casual
+CUCCO | Chicken that attacks in swarms if you hit it | casual
+OCTOROK | Rock-spitting octopus foe | casual
+BREATH OF THE WILD | 2017 open-air Switch adventure (6,2,3,4) | casual
+NINTENDO | Publisher of the series | casual
+MIYAMOTO | Co-creator of the series | casual
+DUNGEON | Puzzle-filled location with a boss and a big key | casual
+BOTTLE | Glass container for medicine and captured bugs | casual
+DEKU | Great ___ Tree, guardian of the forest | casual
+TUNIC | Green garment the hero wears | casual
+SLINGSHOT | Young hero's seed-firing weapon | casual
+BOW | Weapon that fires arrows | casual
+POTION | Red ___, drink that restores hearts | casual
+OCARINA OF TIME | 1998 Nintendo 64 classic (7,2,4) | casual
+GREAT FAIRY | Towering fountain spirit who grants upgrades (5,5) | casual
+LOST WOODS | Mazelike forest where wrong turns send you back (4,5) | casual
+DEATH MOUNTAIN | Smoking volcano peak above a village (5,8) | casual
+KEESE | Bat foe that swoops at you | casual
+BOKOBLIN | Common pig-snouted club-wielding foe | casual
+WOLF | Beast form the hero takes in the 2006 entry | casual
+HYRULE CASTLE | Royal seat of the kingdom (6,6) | casual
+SHEIKAH SLATE | Tablet-like device of the 2017 Switch entry (7,5) | casual
+MOBLIN | Large spear-wielding foe | casual
+GANON | Pig-like beast form of the King of Evil | fan
+IMPA | Loyal guardian and nursemaid of the princess | fan
+SHEIK | Masked warrior who teaches songs in the 1998 classic | fan
+MIDNA | Imp-like companion in the 2006 entry | fan
+TINGLE | Map-selling man in a green costume | fan
+SKULL KID | Masked imp who sends the moon falling (5,3) | fan
+MAJORA | ___'s Mask, 2000 Nintendo 64 sequel | fan
+TETRA | Young pirate captain who is secretly a princess | fan
+WIND WAKER | Conductor's baton of the flooded ocean (4,5) | fan
+TWILIGHT | ___ Princess, 2006 entry | fan
+SKYWARD | ___ Sword, 2011 Wii entry | fan
+MINISH | The ___ Cap, Game Boy Advance entry | fan
+GREAT SEA | Flooded ocean setting of the GameCube toon entry (5,3) | fan
+KOROK | Leafy forest spirit that hides seeds | fan
+MIPHA | Champion princess with a healing power | fan
+DARUK | Champion with a protective barrier power | fan
+REVALI | Arrogant archer Champion with a gale power | fan
+URBOSA | Lightning-calling Champion of the desert | fan
+RITO | Bird-like race | fan
+SHEIKAH | Ninja-like tribe with an eye symbol | fan
+CALAMITY GANON | Malice-spewing foe of the 2017 Switch entry (8,5) | fan
+DIVINE BEAST | Giant ancient animal-shaped war machine (6,5) | fan
+SHRINE | Bite-sized puzzle chamber of the 2017 Switch entry | fan
+KAKARIKO | Village with a graveyard in the 1998 N64 classic | fan
+LON LON RANCH | Farm famous for its milk (3,3,5) | fan
+MALON | Singing ranch girl who teaches a horse's song | fan
+STALFOS | Skeleton swordsman foe | fan
+LIKE LIKE | Tube-shaped foe that swallows your gear (4,4) | fan
+LIZALFOS | Agile lizard warrior foe | fan
+DARKNUT | Heavily armored knight foe | fan
+SARIA | Green-haired forest friend who plays a tune | fan
+DARUNIA | Rock-tribe chief and sworn brother of the hero | fan
+RUTO | Fish-folk princess with a crush on the hero | fan
+NABOORU | Desert thief who opposes her king | fan
+SONG OF TIME | Tune that resets the three-day cycle (4,2,4) | fan
+LENS OF TRUTH | Item that reveals hidden things (4,2,5) | fan
+FARORE | Goddess of Courage | fan
+DIN | Goddess of Power | fan
+NAYRU | Goddess of Wisdom | fan
+PURAH | Scientist who accidentally made herself young again | fan
+GHIRAHIM | Flamboyant Demon Lord of the 2011 Wii entry | fan
+SKYLOFT | Floating island home in the 2011 Wii entry | fan
+TERMINA | Parallel land of the 2000 N64 sequel | superfan
+CLOCK TOWN | Settlement at the heart of the 2000 N64 sequel (5,4) | superfan
+KING OF RED LIONS | Talking boat that sails the flooded ocean (4,2,3,5) | superfan
+TALON | Sleepy owner of a ranch | superfan
+INGO | Ranch hand who seizes control of the farm | superfan
+AGAHNIM | Wizard villain of the SNES entry | superfan
+VAATI | Wind sorcerer of the shrinking-hero GBA entry | superfan
+EZLO | Talking hat companion of the shrinking-hero GBA entry | superfan
+ZANT | Usurper King of the Twili | superfan
+DEMISE | Primal demon king of the 2011 Wii entry | superfan
+GROOSE | Pompadoured rival in the 2011 Wii entry | superfan
+KAEPORA GAEBORA | Wise owl who gives long-winded advice (7,7) | superfan
+BEEDLE | Travelling merchant seen across many games | superfan
+DAMPÉ | Hunched gravekeeper of the 1998 classic | superfan
+GOLD SKULLTULA | Spider foe whose tokens you collect (4,9) | superfan
+LONGSHOT | Upgraded grappling chain with double the reach | superfan
+BIGGORON | Giant who forges a two-handed sword | superfan
+DODONGO | Fire-breathing lizard foe weak to explosives | superfan
+GOHMA | One-eyed arachnid boss inside a great forest tree | superfan
+BARINADE | Jellyfish-like boss inside Lord Jabu-Jabu | superfan
+VOLVAGIA | Lava dragon boss of the Fire Temple | superfan
+MORPHA | Water-tentacle boss of the Water Temple | superfan
+BONGO BONGO | Drum-beating boss of the Shadow Temple (5,5) | superfan
+TWINROVA | Witch-sisters boss of the Spirit Temple | superfan
+KOUME | Fire-wielding half of the witch sisters | superfan
+VAH RUTA | Elephant-shaped ancient war machine (3,4) | superfan
+VAH MEDOH | Bird-shaped ancient war machine (3,5) | superfan
+HESTU | Maraca-shaking forest spirit who expands your pouches | superfan
+KASS | Accordion-playing bird-man bard | superfan
+PAYA | Shy girl of a ninja village in the 2017 Switch entry | superfan
+ZONAI | Ancient sky race central to Tears of the Kingdom | superfan
+RAURU | First king of the realm in Tears of the Kingdom | superfan
+MEDLI | Harp-playing bird girl who becomes the Sage of Earth | superfan
+MAKAR | Leafy violinist who becomes the Sage of Wind | superfan
+ORDON | Hero's home village in the 2006 entry | superfan
+ILIA | Childhood friend in the 2006 entry | superfan
+LANAYRU | Province named after a Light Spirit | superfan
+KOHOLINT | Dream island of the 1993 Game Boy entry | superfan
+MARIN | Singing girl who finds the shipwrecked hero | superfan
+WIND FISH | Sleeping sky being whose dream is an island (4,4) | superfan
+LOFTWING | Giant bird ridden in the 2011 Wii entry | superfan

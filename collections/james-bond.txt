@@ -1,0 +1,136 @@
+# James Bond: unofficial fan crossword clues
+@title James Bond
+@category movies
+@blurb Licensed to thrill: 007, gadgets, villains and martinis.
+@icon star
+BOND | Agent 007's surname | casual
+JAMES | First name of Agent 007 | casual
+MONEYPENNY | M's secretary | casual
+GOLDFINGER | Gold-loving villain and 1964 film title | casual
+SKYFALL | 2012 film with a Scottish lodge finale | casual
+SPECTRE | Octopus-emblem criminal organisation | casual
+GOLDENEYE | 1995 film, Pierce Brosnan's debut | casual
+MOONRAKER | 1979 film that sends 007 into space | casual
+THUNDERBALL | 1965 film with an underwater battle | casual
+OCTOPUSSY | 1983 film featuring a Faberge egg | casual
+CASINO ROYALE | First Fleming novel, filmed in 2006 (6,6) | casual
+DR NO | 1962 film that began the series (2,2) | casual
+ASTON MARTIN | Maker of the DB5 (5,6) | casual
+MARTINI | 007's cocktail of choice | casual
+SHAKEN | ___, not stirred | casual
+VODKA | Spirit in 007's preferred cocktail | casual
+WALTHER | German maker of 007's PPK pistol | casual
+CONNERY | Sean, the first film 007 | casual
+CRAIG | Daniel, 007 from 2006 to 2021 | casual
+BROSNAN | Pierce, 007 in the 1990s | casual
+MOORE | Roger, 007 in seven films | casual
+BLOFELD | Bald villain stroking a white cat | casual
+ODDJOB | Henchman with a lethal bowler hat | casual
+JAWS | Steel-toothed giant henchman | casual
+FLEMING | Ian ___, creator of 007 | casual
+LICENCE | ___ to Kill (1989) | casual
+VESPER | ___ Lynd, Treasury official 007 falls for | casual
+HONEY RYDER | Shell diver who emerges from the sea in Dr. No (5,5) | casual
+LIVE AND LET DIE | 1973 film, Roger Moore's first (4,3,3,3) | casual
+NO TIME TO DIE | 2021 film, the 25th in the series (2,4,2,3) | casual
+QUANTUM | ___ of Solace (2008) | casual
+A VIEW TO A KILL | 1985 film set partly in Silicon Valley (1,4,2,1,4) | casual
+DIE ANOTHER DAY | 2002 film featuring an ice palace (3,7,3) | casual
+GOLDEN GUN | The Man with the ___ (1974) (6,3) | casual
+FOR YOUR EYES ONLY | 1981 film opening at Tracy's grave (3,4,4,4) | casual
+DIAMONDS | ___ Are Forever (1971) | casual
+SECRET | On Her Majesty's ___ Service | casual
+LIVING | The ___ Daylights (1987) | casual
+SPY | 007's profession | casual
+POKER | Game at the 2006 film's high-stakes table | casual
+JUDI DENCH | Actress who played M from 1995 to 2012 (4,5) | casual
+ADELE | Singer of the Skyfall theme | casual
+QUARTERMASTER | Job title Q's initial stands for | casual
+FELIX | ___ Leiter, 007's CIA friend | fan
+VAUXHALL | London riverside area home to MI6's HQ | fan
+JINX | Halle Berry's NSA agent | fan
+ANDRESS | Ursula who played Honey Ryder | fan
+LOTUS | Maker of the submarine car in The Spy Who Loved Me | fan
+SCARAMANGA | Christopher Lee's golden-gunned assassin | fan
+KANANGA | San Monique's prime minister, Dr. ___ | fan
+GUN BARREL | Classic opening sequence seen down a rifle (3,6) | fan
+BACCARAT | Card game played in Fleming's first novel | fan
+OMEGA | Watch brand worn by Brosnan's and Craig's 007 | fan
+EILISH | Billie who sang the No Time to Die theme | fan
+DALTON | Timothy, 007 in two late-1980s films | fan
+LAZENBY | George, 007 in just one film | fan
+LE CHIFFRE | Banker who weeps blood (2,7) | fan
+SILVA | Javier Bardem's villain in Skyfall | fan
+SAFIN | Rami Malek's villain | fan
+MADELEINE | ___ Swann, daughter of Mr. White | fan
+TRACY | 007's bride, played by Diana Rigg | fan
+KLEBB | Rosa ___, villain with a poisoned shoe blade | fan
+ZORIN | Christopher Walken's villain | fan
+DRAX | Hugo ___, Moonraker villain | fan
+STROMBERG | Undersea-lair villain in The Spy Who Loved Me | fan
+CARVER | Media baron villain in Tomorrow Never Dies | fan
+ELEKTRA | ___ King, oil heiress in The World Is Not Enough | fan
+TREVELYAN | Alec ___, agent 006 | fan
+XENIA | ___ Onatopp, thigh-crushing assassin | fan
+GRAVES | Gustav ___, Die Another Day villain | fan
+LARGO | Emilio ___, Thunderball villain | fan
+AURIC | Goldfinger's first name | fan
+SANCHEZ | Franz ___, drug lord in Licence to Kill | fan
+NICK NACK | Herve Villechaize's diminutive henchman (4,4) | fan
+MAYDAY | Grace Jones's henchwoman | fan
+NOMI | Lashana Lynch's agent who took the 007 number | fan
+PALOMA | Ana de Armas's CIA agent in Cuba | fan
+MALLORY | Gareth ___, who becomes M | fan
+WHISHAW | Ben who plays Q opposite Craig | fan
+BARRY | John ___, composer of many classic scores | fan
+BASSEY | Shirley who sang three title themes | fan
+SOLITAIRE | Tarot-reading psychic in 1973 | fan
+DOMINO | Largo's mistress in Thunderball | fan
+WAI LIN | Michelle Yeoh's Chinese agent (3,3) | fan
+FORT KNOX | Gold depository Goldfinger targets (4,4) | fan
+SCOTLAND | Country of 007's childhood home | fan
+COMMANDER | 007's Royal Navy rank | fan
+SMERSH | Soviet counterintelligence foe in the novels | fan
+JAMAICA | Island where Fleming wrote his novels | fan
+JETPACK | Flying gadget in Thunderball's opening | fan
+GREENE | Dominic ___, Quantum of Solace villain | superfan
+RENARD | Terrorist with a bullet lodged in his brain | superfan
+KOSKOV | Defecting Soviet general in The Living Daylights | superfan
+TEE HEE | Henchman with a metal arm (3,3) | superfan
+BARON SAMEDI | Voodoo figure in 1973 (5,6) | superfan
+WINT | Mr. ___, partner of Mr. Kidd | superfan
+GRANT | Red ___, Robert Shaw's assassin | superfan
+TANNER | Bill ___, M's chief of staff | superfan
+MATHIS | Rene ___, 007's ally in Montenegro | superfan
+LLEWELYN | Desmond who played Q for decades | superfan
+BROCCOLI | Cubby ___, long-time producer | superfan
+SALTZMAN | Harry ___, co-producer of the early films | superfan
+BINDER | Maurice ___, designer of the gun-barrel opening | superfan
+NORMAN | Monty ___, credited composer of the main theme | superfan
+TIFFANY | ___ Case, smuggler in Diamonds Are Forever | superfan
+KISSY | ___ Suzuki, You Only Live Twice heroine | superfan
+MELINA | ___ Havelock, crossbow-wielding avenger | superfan
+KARA | ___ Milovy, cellist in 1987 | superfan
+ANYA | ___ Amasova, Agent Triple X | superfan
+NATALYA | ___ Simonova, GoldenEye programmer | superfan
+CHRISTMAS | Dr. ___ Jones, nuclear physicist | superfan
+KERIM | ___ Bey, Istanbul station head | superfan
+QUARREL | Cayman Islander who helps 007 in 1962 | superfan
+TIGER | ___ Tanaka, head of Japan's secret service | superfan
+PIZ GLORIA | Blofeld's Alpine lair (3,6) | superfan
+LITTLE NELLIE | Autogyro in You Only Live Twice (6,6) | superfan
+FETTES | Scottish school 007 attended after Eton | superfan
+BENTLEY | 007's car in Fleming's novels | superfan
+MAY | 007's Scottish housekeeper in the novels | superfan
+CHELSEA | London district of 007's flat in the novels | superfan
+KRISTATOS | Smuggler villain in For Your Eyes Only | superfan
+WHITAKER | Brad ___, arms dealer in The Living Daylights | superfan
+KHAN | Kamal ___, exiled Afghan prince in Octopussy | superfan
+ORLOV | Rogue Soviet general in Octopussy | superfan
+HINX | Dave Bautista's henchman | superfan
+OBERHAUSER | Franz ___, Blofeld's birth name in 2015 | superfan
+GOGOL | General ___, KGB chief of the Moore era | superfan
+DOLLY | Pigtailed girl who wins Jaws's heart | superfan
+ZAO | Diamond-studded henchman in Die Another Day | superfan
+VOLPE | Fiona ___, SPECTRE assassin in Thunderball | superfan
+OSATO | Mr. ___, industrialist in You Only Live Twice | superfan

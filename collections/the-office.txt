@@ -1,0 +1,128 @@
+# The Office: unofficial fan crossword clues
+@title The Office
+@category tv
+@blurb Paper, pranks and a camera crew at a Pennsylvania branch office.
+@icon tv
+MICHAEL | Clueless, attention-loving branch manager | casual
+DWIGHT | Intense salesman who craves authority | casual
+JIM | Prankster salesman who often looks at the camera | casual
+PAM | Front-desk worker with artistic dreams | casual
+RYAN | Business-school grad who rises and falls fast at corporate | casual
+ANDY | Preppy salesman who loves a cappella | casual
+ANGELA | Strict accountant devoted to her cats | casual
+KEVIN | Lovable, slow-talking accountant | casual
+OSCAR | Accountant who's usually the smartest in the room | casual
+STANLEY | Grumpy salesman counting the days to retirement | casual
+PHYLLIS | Saleswoman married to a refrigeration businessman | casual
+MEREDITH | Hard-partying employee often seen with a drink | casual
+CREED | Mysterious older employee with a shady past | casual
+TOBY | HR rep Michael despises | casual
+KELLY | Gossipy, pop-culture-obsessed chatterbox | casual
+DARRYL | Warehouse foreman who later moves upstairs | casual
+ERIN | Cheerful, naive redheaded receptionist | casual
+DUNDER MIFFLIN | Paper company at the centre of the show (6,7) | casual
+SCRANTON | City of the main branch | casual
+PAPER | What the company sells | casual
+BEETS | Crop on Dwight's family farm | casual
+JELLO | Wobbly dessert Jim encases a co-worker's stapler in | casual
+DUNDIES | Michael's annual office awards | casual
+CHILI | Kevin's famous dish, spilled all over the floor | casual
+WORLDS BEST BOSS | Boast on Michael's coffee mug (6,4,4) | casual
+REGIONAL MANAGER | Michael's official title (8,7) | casual
+ASSISTANT | Dwight insists his title is "___ to the" boss | casual
+SALESMAN | Jim's job title | casual
+RECEPTIONIST | Pam's job when the show begins | casual
+DOCUMENTARY | Format of the show-within-the-show | casual
+PRANK | Trick Jim plays on his desk mate | casual
+ACCOUNTING | Department that handles the branch's books | casual
+WAREHOUSE | Downstairs space with forklifts | casual
+SCHRUTE | Dwight's surname | casual
+HALPERT | Jim's surname | casual
+BEESLY | Pam's maiden name | casual
+SCOTT | Michael's surname | casual
+CONFERENCE ROOM | Where Michael holds his meetings (10,4) | casual
+CAMERA | What Jim glances at after something absurd | casual
+CHRISTMAS | Holiday of many office parties | casual
+PENNSYLVANIA | State where the branch is located | casual
+NARD DOG | Andy's self-given nickname (4,3) | fan
+CORNELL | Ivy League school Andy never stops mentioning | fan
+HOLLY | HR rep who is Michael's soulmate | fan
+JAN | Corporate boss turned Michael's girlfriend | fan
+DAVID WALLACE | CFO who often deals with Michael (5,7) | fan
+CALIFORNIA | Robert ___, James Spader's character | fan
+SABRE | Printer firm that takes over the paper company | fan
+STAMFORD | Branch Jim transfers to | fan
+KAREN | Saleswoman Jim dates after his transfer | fan
+ROY | Pam's warehouse-worker fiance | fan
+UTICA | Branch that Karen ends up managing | fan
+NASHUA | New Hampshire branch Holly is moved to | fan
+MOSE | Dwight's odd cousin on the farm | fan
+PRISON MIKE | Michael's tough-talking alter ego (6,4) | fan
+BEAR | Jim's Dwight impression: "What kind of ___ is best?" | fan
+PARKOUR | Office-leaping craze Andy, Dwight and Michael try | fan
+TEAPOT | Jim's thoughtful Secret Santa gift to Pam | fan
+GAS STATION | Rainy stop where Jim proposes (3,7) | fan
+NIAGARA | Falls where Jim and Pam marry | fan
+CECE | Jim and Pam's first child | fan
+SPRINKLES | Angela's cat whose death Dwight causes | fan
+SENATOR | Political job of Angela's husband Robert | fan
+WUPHF | Ryan's multi-alert social network start-up | fan
+RABIES | Cause of Michael's charity fun run | fan
+PRETZEL | Stanley's favourite day: ___ Day | fan
+CROSSWORD | Puzzle Stanley does during meetings | fan
+BELSNICKEL | Dwight's Christmas character who judges children | fan
+DEPUTY | Dwight's volunteer role with the sheriff's office | fan
+CHILIS | Restaurant chain that bans Pam after the Dundies | fan
+MURAL | Pam's artwork in the warehouse | fan
+KRASINSKI | John who plays Jim | fan
+CARELL | Steve who plays Michael | fan
+WILSON | Rainn who plays Dwight | fan
+FISCHER | Jenna who plays Pam | fan
+HELMS | Ed who plays Andy | fan
+KALING | Mindy who plays Kelly | fan
+NOVAK | B.J. who plays Ryan | fan
+DIVERSITY | ___ Day, Michael's disastrous seminar | fan
+LAKE | Where Michael drives, obeying his GPS | fan
+COSTA RICA | Where Toby moves after quitting (5,4) | fan
+GABE | Sabre's lanky liaison who dates Erin | fan
+TEMP | Ryan's starting job at the branch | fan
+NELLIE | Brash Brit who muscles into the manager's office | fan
+MINER | Charles ___, Idris Elba's corporate VP | superfan
+SCHRUTE BUCKS | Dwight's worthless reward currency (7,5) | superfan
+BERNARD | Andy's surname | superfan
+FLENDERSON | Holly's surname | superfan
+LEVINSON | Jan's surname | superfan
+SERENITY | Jan's candle company: ___ by Jan | superfan
+SCARN | Agent Michael ___, hero of Michael's spy film | superfan
+GOLDENFACE | Villain of Michael's homemade spy film | superfan
+SCOTTS TOTS | Kids Michael promised free college (6,4) | superfan
+DATE MIKE | Michael's alter ego at a bar (4,4) | superfan
+PLOP | Andy's nickname for Pete | superfan
+LIPTON | Angela's senator husband's surname | superfan
+ANNEX | Area where Toby and Kelly sit | superfan
+SCRANTONICITY | Kevin's Police tribute band | superfan
+FINER THINGS CLUB | Pam, Oscar and Toby's cultured reading circle (5,6,4) | superfan
+HERE COMES TREBLE | Andy's college a cappella group (4,5,6) | superfan
+PRATT | New York art school Pam attends | superfan
+ATHLEAD | Jim's sports marketing start-up | superfan
+TALLAHASSEE | Florida city of the Sabre store project | superfan
+OVEN MITT | Phyllis's handmade Secret Santa gift Michael scorns (4,4) | superfan
+IPOD | Pricey gift Michael brings to the Christmas swap | superfan
+FOREMAN | Brand of grill that burns Michael's foot | superfan
+CONCUSSION | Dwight's injury racing to rescue Michael | superfan
+STRANGLER | Serial killer of Scranton lore | superfan
+LACKAWANNA | County that includes Scranton | superfan
+INFINITY | Dunder Mifflin ___, Ryan's website initiative | superfan
+JOSH | Stamford manager who jumps ship to Staples | superfan
+HANNON | Erin's surname | superfan
+PHILLIP | Angela's son | superfan
+TUNA | Andy's "Big" nickname for Jim | superfan
+HELENE | Pam's mother, whom Michael dates | superfan
+SNEAKERS | Pam's Dundie: Whitest ___ | superfan
+QUALITY | Creed's department: ___ assurance | superfan
+CUSTOMER | Kelly's department: ___ service | superfan
+SUPPLIER | Meredith's department: ___ relations | superfan
+DEANGELO | Will Ferrell's short-lived branch manager | superfan
+VANCE | Phyllis's husband Bob's surname | superfan
+PACKER | Todd, Michael's crude salesman pal | superfan
+YANKEE SWAP | Gift game Michael imposes at a Christmas party (6,4) | superfan

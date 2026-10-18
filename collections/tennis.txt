@@ -1,0 +1,135 @@
+# Tennis: unofficial sport crossword clues
+@title Tennis
+@category sport
+@blurb Champions, venues, history and jargon from over a century of the game.
+@icon ball
+FEDERER | Swiss maestro who won eight Wimbledon singles titles | casual
+NADAL | Spaniard who won the French Open 14 times | casual
+DJOKOVIC | Serb who won his 24th major singles title in 2023 | casual
+SERENA | ___ Williams, winner of 23 major singles titles | casual
+VENUS | ___ Williams, five-time Wimbledon singles champion | casual
+MURRAY | Scot who won Wimbledon in 2013 and 2016 | casual
+ACE | Delivery the receiver cannot touch | casual
+DEUCE | Score of 40-40 | casual
+LOVE | Zero, in tennis scoring | casual
+TIEBREAK | Game that settles a set at six-all | casual
+RACKET | Strung implement used to hit the ball | casual
+BASELINE | Line at each end of the playing area | casual
+VOLLEY | Shot hit before the ball bounces | casual
+LOB | High shot over a net-rushing opponent | casual
+SMASH | Hard overhead shot | casual
+DROP SHOT | Soft stroke that dies just over the net (4,4) | casual
+FOREHAND | Stroke played on the side of the hitting arm | casual
+BACKHAND | Stroke played across the body | casual
+GRAND SLAM | Any of the sport's four majors (5,4) | casual
+DAVIS CUP | Men's international team competition founded in 1900 (5,3) | casual
+MELBOURNE | City hosting the year's first major | casual
+UMPIRE | Official in the high chair | casual
+GRASS | Surface at Wimbledon | casual
+CLAY | Red surface of the French Open | casual
+LET | Delivery that clips the net cord and lands in | casual
+FAULT | Delivery that misses the service box | casual
+DOUBLE FAULT | Two missed deliveries in a row (6,5) | casual
+RALLY | Extended exchange of shots | casual
+BORG | Swede who won five Wimbledons in a row, 1976-80 | casual
+MCENROE | Fiery American left-hander, Wimbledon champion 1981 | casual
+AGASSI | Las Vegas-born 1992 Wimbledon champion | casual
+SAMPRAS | American who won seven Wimbledon singles titles | casual
+NAVRATILOVA | Martina, winner of nine Wimbledon singles titles | casual
+GRAF | Steffi who won all four majors and Olympic gold in 1988 | casual
+SHARAPOVA | Russian who won Wimbledon aged 17 in 2004 | casual
+STRAWBERRIES | Fruit served with cream at Wimbledon | casual
+CENTRE COURT | Wimbledon's main show arena (6,5) | casual
+ALCARAZ | Spaniard who won Wimbledon in 2023 and 2024 | casual
+ADVANTAGE | Score for the player a point ahead after 40-40 | casual
+MATCH POINT | Chance to win the whole contest (5,5) | casual
+LINE JUDGE | Official calling balls in or out (4,5) | casual
+SERVE | Shot that starts every point | casual
+ROLAND GARROS | Paris stadium named after a First World War aviator (6,6) | fan
+LAVER | Rod who won all four majors in both 1962 and 1969 | fan
+BECKER | German who won Wimbledon aged 17 in 1985 | fan
+EDBERG | Swede who won Wimbledon in 1988 and 1990 | fan
+LENDL | Czech-born winner of eight major singles titles, 1984-90 | fan
+CONNORS | Jimmy who won 109 tour singles titles | fan
+EVERT | Chris who won the French Open seven times | fan
+KING | Billie Jean who won 1973's Battle of the Sexes | fan
+SELES | Monica who won the 1990 French Open aged 16 | fan
+HINGIS | Swiss who won the 1997 Australian Open aged 16 | fan
+WAWRINKA | Stan, Swiss winner of the 2015 French Open | fan
+DEL POTRO | Argentine who won the 2009 US Open (3,5) | fan
+OSAKA | Naomi, 2018 US Open champion | fan
+BARTY | Ash, Australian who won Wimbledon in 2021 | fan
+KVITOVA | Czech left-hander, Wimbledon champion 2011 and 2014 | fan
+HALEP | Romanian who won Wimbledon in 2019 | fan
+RADUCANU | Emma, qualifier who won the 2021 US Open | fan
+SINNER | Italian who won the 2024 Australian Open | fan
+MEDVEDEV | Russian who won the 2021 US Open | fan
+THIEM | Austrian who won the 2020 US Open | fan
+HEWITT | Lleyton, Wimbledon men's champion in 2002 | fan
+RAFTER | Australian who won the US Open in 1997 and 1998 | fan
+GOOLAGONG | Evonne, Wimbledon champion in 1971 and 1980 | fan
+COURT | Margaret ___, winner of 24 major singles titles | fan
+GOLDEN SLAM | All four majors plus Olympic gold in one year (6,4) | fan
+TOPSPIN | Forward rotation that makes the ball dip | fan
+SLICE | Backspin stroke | fan
+QUEEN'S | West London club staging a pre-Wimbledon event | fan
+HENMAN | Tim, after whom a Wimbledon hill was nicknamed | fan
+BAGEL | Slang for a 6-0 set | fan
+BREAK POINT | Chance for the receiver to win the game (5,5) | fan
+LUCKY LOSER | Beaten qualifier given a main-draw place (5,5) | fan
+SEED | Ranked player placed apart in the draw | fan
+ISNER | John who won an 11-hour Wimbledon match in 2010 | fan
+ASHE | Arthur, 1975 Wimbledon champion | fan
+ANDERSON | Kevin, South African Wimbledon finalist in 2018 | fan
+OPEN ERA | Period from 1968 when professionals were admitted (4,3) | fan
+FLUSHING MEADOWS | New York home of the US Open since 1978 (8,7) | fan
+GAUFF | Coco, US Open champion in 2023 | fan
+SABALENKA | Belarusian who won the Australian Open in 2023 and 2024 | fan
+RYBAKINA | Elena, Wimbledon women's champion in 2022 | fan
+KYRGIOS | Nick, Australian Wimbledon finalist in 2022 | fan
+WADE | Virginia, Wimbledon champion in the 1977 jubilee year | fan
+CHANG | Michael who won the 1989 French Open aged 17 | fan
+PERRY | Fred, British Wimbledon champion in 1934, 1935 and 1936 | fan
+RIGGS | Bobby, beaten in 1973's Battle of the Sexes | superfan
+KUERTEN | Brazilian who won the French Open three times | superfan
+IVANISEVIC | Croat who won Wimbledon as a wild card in 2001 | superfan
+KRAJICEK | Dutchman who won Wimbledon in 1996 | superfan
+STICH | German who won Wimbledon in 1991 | superfan
+CASH | Pat, 1987 Wimbledon champion who climbed into the stands | superfan
+EMERSON | Roy, Australian winner of 12 major singles titles | superfan
+ROSEWALL | Ken, who won the 1972 Australian Open aged 37 | superfan
+LENGLEN | Suzanne, French star of the 1920s | superfan
+WILLS | Helen ___ Moody, eight-time Wimbledon champion | superfan
+BUDGE | Don, first to win all four majors in one year, 1938 | superfan
+CONNOLLY | Maureen, known as Little Mo, who won all four majors in 1953 | superfan
+TILDEN | Big Bill, American star of the 1920s | superfan
+CURREN | Kevin, South African-born Wimbledon finalist of 1985 | superfan
+KRIEK | Johan, South African-born Australian Open champion 1981 | superfan
+WALKOVER | How South Africa won the 1974 Davis final India refused to play | superfan
+DROBNY | Jaroslav, Wimbledon champion in 1954 | superfan
+NOVOTNA | Jana, Wimbledon women's champion in 1998 | superfan
+MARTINEZ | Conchita, Spanish winner of Wimbledon in 1994 | superfan
+MAHUT | Frenchman who lost a final set 70-68 at Wimbledon, 2010 | superfan
+HAWK-EYE | Line-calling system first used at a major in 2006 (4,3) | superfan
+KOOYONG | Club that hosted the Australian Open until 1987 | superfan
+FLINDERS PARK | Name of the Australian Open's venue when it opened in 1988 (8,4) | superfan
+FOREST HILLS | New York venue of the US Open until 1977 (6,5) | superfan
+WORPLE ROAD | Wimbledon's home from 1877 until 1921 (6,4) | superfan
+SPENCER GORE | First Wimbledon champion, in 1877 (7,4) | superfan
+RENSHAW | William, seven-time Wimbledon champion in the 1880s | superfan
+WINGFIELD | Major who patented lawn tennis in 1874 | superfan
+SPHAIRISTIKE | Original Greek-derived name for lawn tennis | superfan
+REAL TENNIS | Indoor ancestor of the modern game (4,6) | superfan
+SLAZENGER | Brand supplying Wimbledon balls since 1902 | superfan
+WOODIES | Nickname of doubles pair Woodbridge and Woodforde | superfan
+STOSUR | Sam, Australian winner of the 2011 US Open | superfan
+SCHIAVONE | Francesca, Italian winner of the 2010 French Open | superfan
+LI NA | Chinese winner of the 2011 French Open (2,2) | superfan
+OSTAPENKO | Jelena, unseeded winner of the 2017 French Open | superfan
+BARTOLI | Marion, French winner of Wimbledon in 2013 | superfan
+VONDROUSOVA | Unseeded Czech who won Wimbledon in 2023 | superfan
+KREJCIKOVA | Barbora, Czech who won Wimbledon in 2024 | superfan
+RUUD | Casper, Norwegian finalist in Paris and New York in 2022 | superfan
+CILIC | Marin, Croat who won the 2014 US Open | superfan
+NOAH | Yannick, French Open champion in 1983 | superfan
+ALL ENGLAND CLUB | Private members' body that runs Wimbledon (3,7,4) | superfan

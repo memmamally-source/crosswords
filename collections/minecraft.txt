@@ -1,0 +1,132 @@
+# Minecraft: unofficial fan crossword clues
+@title Minecraft
+@category gaming
+@blurb Blocks, creepers and the world you build.
+@icon gamepad
+CREEPER | Green mob that hisses before exploding | casual
+STEVE | Default player skin with a teal shirt | casual
+ALEX | Default player skin with orange hair | casual
+ZOMBIE | Groaning undead mob with outstretched arms | casual
+SKELETON | Bony mob armed with a bow | casual
+ENDERMAN | Tall black mob that teleports and carries blocks | casual
+DIAMOND | Precious blue gem mined deep underground | casual
+PICKAXE | Tool for mining stone and ore | casual
+CRAFTING TABLE | Workbench with a three-by-three grid (8,5) | casual
+FURNACE | Block used to smelt ore | casual
+ENDER DRAGON | Final boss with its own dimension (5,6) | casual
+REDSTONE | Red dust used to build circuits | casual
+TORCH | Stick-and-coal light source | casual
+COBBLESTONE | Block dropped when you mine stone | casual
+OBSIDIAN | Purple-black block formed when water meets a lava source | casual
+BEDROCK | Unbreakable block at the bottom of the world | casual
+VILLAGER | Big-nosed mob that trades for gems | casual
+PIG | Pink farm mob that drops porkchops | casual
+SHEEP | Woolly mob you can shear | casual
+CHICKEN | Mob that lays eggs | casual
+WOLF | Wild mob tamed with bones | casual
+SPIDER | Eight-legged mob that climbs walls | casual
+BED | Sleep in it to skip the night | casual
+CHEST | Wooden storage block | casual
+TNT | Explosive red-and-white block | casual
+COAL | Black ore used as fuel | casual
+BIOME | Region type such as desert or taiga | casual
+SURVIVAL | Mode where you gather, craft and fight to stay alive | casual
+CREATIVE | Mode with unlimited blocks and flight | casual
+DIRT | Brown block found under grass | casual
+MINECART | Rideable vehicle that runs on rails | casual
+SLIME | Bouncy green cube mob | casual
+CAKE | Placeable dessert eaten a slice at a time | casual
+NOTCH | Nickname of the game's creator, Markus Persson | casual
+MOJANG | Swedish studio behind the game | casual
+IRON GOLEM | Hulking metal protector of villages (4,5) | casual
+COW | Mob that gives milk and leather | casual
+BUCKET | Holds water, lava or milk | casual
+LADDER | Climbable block placed on walls | casual
+EMERALD | Green gem used as village currency | casual
+SWORD | Melee weapon that can make sweeping attacks | casual
+WHEAT | Crop baked into bread | casual
+ELYTRA | Wings found on End ships | fan
+ENCHANTING TABLE | Block where XP levels improve gear (10,5) | fan
+BLAZE | Fiery Nether mob that drops rods | fan
+GHAST | Floating Nether mob that shoots fireballs | fan
+WITHER | Three-headed boss summoned with skulls | fan
+PIGLIN | Nether mob that loves gold | fan
+NETHERITE | Toughest gear material, made from scrap and gold | fan
+WARDEN | Blind mob of the deep dark | fan
+AXOLOTL | Aquatic lush-cave mob that plays dead | fan
+PHANTOM | Flying mob that harasses players who skip sleep | fan
+SHULKER | Box mob of End cities that makes you levitate | fan
+GUARDIAN | One-eyed fish mob of ocean monuments | fan
+DROWNED | Undead mob that lurks underwater | fan
+STRAY | Icy undead archer with slowing arrows | fan
+HUSK | Desert undead that doesn't burn in daylight | fan
+PILLAGER | Crossbow-wielding illager raider | fan
+EVOKER | Robed illager that summons biting fangs | fan
+RAVAGER | Hulking beast that charges in raids | fan
+TOTEM OF UNDYING | Item that saves you from death (5,2,7) | fan
+ENDER PEARL | Thrown item that teleports you (5,5) | fan
+EYE OF ENDER | Thrown item that leads you to a stronghold (3,2,5) | fan
+STRONGHOLD | Underground structure holding the End portal | fan
+LAPIS LAZULI | Blue ore used for enchanting (5,6) | fan
+BEACON | Block granting buffs atop a mineral pyramid | fan
+ANVIL | Block for repairing and renaming items | fan
+BREWING STAND | Block used to make potions (7,5) | fan
+GLOWSTONE | Light-giving block from the Nether ceiling | fan
+QUARTZ | White ore of the Nether | fan
+SOUL SAND | Nether block that slows you down (4,4) | fan
+HOPPER | Funnel block that moves items | fan
+PISTON | Block that pushes others | fan
+OBSERVER | Block with a face that detects changes | fan
+TRIDENT | Three-pronged throwable weapon | fan
+TAIGA | Spruce forest biome | fan
+MOOSHROOM | Red cow covered in fungi | fan
+LLAMA | Spitting mob that can carry storage | fan
+PANDA | Bamboo-munching jungle mob | fan
+BEE | Pollinating mob that lives in a hive | fan
+HEROBRINE | White-eyed legend jokingly "removed" in patch notes | fan
+HARDCORE | Mode with only one life | fan
+SPECTATOR | Mode for flying invisibly through blocks | fan
+JUKEBOX | Block that plays music discs | fan
+SNOW GOLEM | Pumpkin-headed snowball thrower (4,5) | fan
+ANCIENT DEBRIS | Rare Nether ore smelted into scrap (7,6) | superfan
+JEB | Nickname of longtime lead developer Bergensten | superfan
+VEX | Small winged spirit that flies through walls | superfan
+ENDERMITE | Tiny purple mob sometimes spawned by teleporting | superfan
+SILVERFISH | Bug mob hiding in infested stone blocks | superfan
+COMPARATOR | Circuit part that can measure container contents | superfan
+REPEATER | Circuit part that delays signals | superfan
+BASTION | Piglin-filled ruin in the Nether | superfan
+STRIDER | Lava-walking mob steered with fungus on a stick | superfan
+HOGLIN | Hostile Nether boar | superfan
+WARPED | ___ Forest, teal Nether biome | superfan
+CRIMSON | ___ Forest, red Nether biome | superfan
+BASALT | ___ Deltas, ashy Nether biome | superfan
+ALLAY | Blue flying mob that collects items for you | superfan
+SNIFFER | Long-extinct mob that digs up seeds | superfan
+CAMEL | Desert mount that can carry two riders | superfan
+ARMADILLO | Mob whose scutes make armor for pet dogs | superfan
+SCULK | Deep dark block family that detects vibrations | superfan
+ECHO SHARD | Deep dark find used for recovery compasses (4,5) | superfan
+AMETHYST | Purple crystal grown in geodes | superfan
+DEEPSLATE | Dark stone of the deepest cave layers | superfan
+MYCELIUM | Purple-tinged soil of mushroom fields | superfan
+PODZOL | Brown soil of giant tree taigas | superfan
+PRISMARINE | Teal block of ocean monuments | superfan
+SPONGE | Water-absorbing block found in ocean monuments | superfan
+MENDING | Enchantment that repairs gear with XP | superfan
+INFINITY | Bow enchantment for endless arrows | superfan
+LOOTING | Weapon enchantment for extra mob drops | superfan
+FORTUNE | Mining enchantment for extra ore drops | superfan
+SILK TOUCH | Enchantment that mines blocks intact (4,5) | superfan
+THORNS | Armor enchantment that hurts attackers | superfan
+RIPTIDE | Enchantment that launches you through water or rain | superfan
+SMITE | Weapon enchantment extra effective on undead | superfan
+DRAGON EGG | Trophy left atop the exit portal (6,3) | superfan
+CHORUS FRUIT | End plant produce that teleports you (6,5) | superfan
+PURPUR | Purple building block of End cities | superfan
+FAR LANDS | Glitched terrain at the edge of old worlds (3,5) | superfan
+ZOMBIE PIGMAN | Neutral undead Nether mob, renamed in 2020 (6,6) | superfan
+ZOMBIE VILLAGER | Infected trader cured with a golden apple (6,8) | superfan
+WANDERING TRADER | Travelling merchant who turns up near players (9,6) | superfan
+LODESTONE | Block a compass can be linked to | superfan
+ENDER CHEST | Storage that shares contents wherever placed (5,5) | superfan

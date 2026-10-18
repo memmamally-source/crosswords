@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=16" />
+  <link rel="stylesheet" href="css/styles.css?v=17" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -120,13 +120,9 @@
       <section class="home-section" id="genres" aria-labelledby="genres-title">
         <div class="section-head">
           <h2 class="section-title" id="genres-title">Pick your obsession</h2>
-          <div class="segmented" role="radiogroup" aria-label="Difficulty" id="difficulty">
-            <button role="radio" data-difficulty="easy">Easy</button>
-            <button role="radio" data-difficulty="medium">Medium</button>
-            <button role="radio" data-difficulty="hard">Hard</button>
-          </div>
+          <div class="segmented" role="radiogroup" aria-label="Level" id="difficulty"></div>
         </div>
-        <p class="section-deck">A fresh grid every time. You won't meet the same clue twice in a genre until you've worked through its whole word bank.</p>
+        <p class="section-deck" id="genres-deck"></p>
         <div class="category-tabs" role="tablist" aria-label="Genre groups" id="category-tabs"></div>
         <div class="genre-grid" id="genre-grid"></div>
       </section>
@@ -314,13 +310,14 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=16"></script>
-  <script src="js/words.js?v=16"></script>
-  <script src="js/genres.js?v=16"></script>
-  <script src="js/sync.js?v=16"></script>
-  <script src="js/featured.js?v=16"></script>
-  <script src="js/app.js?v=16"></script>
-  <script src="js/firebase-config.js?v=16"></script>
-  <script type="module" src="js/account.js?v=16"></script>
+  <script src="js/generator.js?v=17"></script>
+  <script src="js/words.js?v=17"></script>
+  <script src="js/collections.js?v=17"></script>
+  <script src="js/genres.js?v=17"></script>
+  <script src="js/sync.js?v=17"></script>
+  <script src="js/featured.js?v=17"></script>
+  <script src="js/app.js?v=17"></script>
+  <script src="js/firebase-config.js?v=17"></script>
+  <script type="module" src="js/account.js?v=17"></script>
 </body>
 </html>

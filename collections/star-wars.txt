@@ -1,0 +1,138 @@
+# Star Wars: unofficial fan crossword clues
+@title Star Wars
+@category movies
+@blurb A galaxy far, far away: Jedi, Sith and smugglers.
+@icon film
+LUKE | Farm boy from Tatooine who became a Jedi | casual
+LEIA | Princess and Rebel leader | casual
+HAN SOLO | Smuggler with a famous Corellian freighter (3,4) | casual
+CHEWBACCA | Wookiee co-pilot and loyal friend | casual
+YODA | Small green Jedi Master | casual
+VADER | Darth ___, Sith Lord in black armour | casual
+OBI-WAN | ___ Kenobi, Luke's first mentor (3-3) | casual
+TATOOINE | Desert planet with two suns | casual
+DEATH STAR | Planet-destroying Imperial battle station (5,4) | casual
+FALCON | Millennium ___, Han's ship | casual
+LIGHTSABER | Glowing blade carried by a Jedi | casual
+JEDI | Order of Force-wielding peacekeepers | casual
+SITH | Dark-side order with a rule of two | casual
+FORCE | Energy field that binds the galaxy together | casual
+EMPIRE | Galactic regime ruled by an Emperor | casual
+REBEL ALLIANCE | Insurgent coalition opposing the Empire (5,8) | casual
+PALPATINE | Senator who became Emperor | casual
+STORMTROOPER | White-armoured Imperial soldier | casual
+WOOKIEE | Tall, hairy species from Kashyyyk | casual
+EWOK | Furry native of a forest moon | casual
+ENDOR | Forest moon of the final battle in Return of the Jedi | casual
+HOTH | Ice planet hiding a Rebel base | casual
+DAGOBAH | Swamp planet where Yoda lives in exile | casual
+ALDERAAN | Leia's home world, destroyed by the Empire | casual
+JABBA | ___ the Hutt, Tatooine crime lord | casual
+BOBA FETT | Bounty hunter who delivers Han in carbonite (4,4) | casual
+ANAKIN | Skywalker who fell to the dark side | casual
+PADME | ___ Amidala, Queen and later Senator | casual
+REY | Scavenger from Jakku | casual
+KYLO REN | Han and Leia's son, drawn to the dark side (4,3) | casual
+FINN | Stormtrooper defector FN-2187 | casual
+POE | ___ Dameron, ace Resistance pilot | casual
+GROGU | Force-sensitive foundling with big ears | casual
+MANDALORIAN | Disney+ series about a helmeted bounty hunter (The ___) | casual
+TIE FIGHTER | Imperial ship with twin solar panels (3,7) | casual
+NABOO | Lush planet with an elected queen | casual
+CORUSCANT | City-covered capital planet | casual
+LANDO | ___ Calrissian, smooth-talking gambler | casual
+CLOUD CITY | Floating mining colony run by Lando (5,4) | casual
+JAWA | Hooded scavenger on Tatooine | casual
+CARBONITE | Substance Han is frozen in | casual
+DARTH MAUL | Horned Sith in The Phantom Menace (5,4) | casual
+TAUNTAUN | Hoth riding beast | casual
+AT-AT | Four-legged Imperial walker (2-2) | casual
+WEDGE | ___ Antilles, veteran X-wing pilot | fan
+MACE | ___ Windu, purple-bladed Jedi Master | fan
+DOOKU | Count ___, Separatist leader | fan
+GRIEVOUS | Cyborg general who collected Jedi lightsabers | fan
+QUI-GON | Jedi Master who discovered young Anakin (3-3) | fan
+JANGO | ___ Fett, template for the clone army | fan
+KAMINO | Ocean planet where clones are grown | fan
+MUSTAFAR | Volcanic planet of the Obi-Wan and Anakin duel | fan
+KASHYYYK | Wookiee homeworld | fan
+BESPIN | Gas giant where Lando ran a mining colony | fan
+JAKKU | Desert planet where Rey scavenged | fan
+STARKILLER | First Order superweapon carved into a planet | fan
+SNOKE | Supreme Leader of the First Order | fan
+PHASMA | Chrome-armoured First Order captain | fan
+ROSE | ___ Tico, Resistance mechanic | fan
+HOLDO | Vice Admiral who makes a lightspeed sacrifice | fan
+PORG | Wide-eyed seabird-like creature in The Last Jedi | fan
+EXEGOL | Hidden Sith world in The Rise of Skywalker | fan
+JYN | ___ Erso, Rogue One heroine | fan
+CASSIAN | ___ Andor, Rebel intelligence officer | fan
+SCARIF | Tropical planet holding the Death Star plans | fan
+KRENNIC | Imperial director in a white cape | fan
+QIRA | Han's early love in Solo | fan
+BECKETT | Thief who mentors young Han | fan
+KESSEL | Planet of a famous Run | fan
+DIN DJARIN | The Mandalorian's real name (3,6) | fan
+AHSOKA | Anakin's Padawan, a Togruta | fan
+DARKSABER | Black-bladed Mandalorian weapon | fan
+BESKAR | Mandalorian iron | fan
+TARKIN | Grand Moff commanding the first Death Star | fan
+ACKBAR | Mon Calamari admiral | fan
+MON MOTHMA | Senator who led the Rebellion (3,6) | fan
+JAR JAR | Clumsy Gungan ___ Binks (3,3) | fan
+WATTO | Junk dealer who owned young Anakin | fan
+OWEN | Uncle ___, Luke's moisture-farming guardian | fan
+BERU | Aunt ___, Luke's guardian on Tatooine | fan
+MOS EISLEY | Tatooine spaceport, a "wretched hive" (3,6) | fan
+GREEDO | Rodian who confronts Han in the cantina | fan
+SARLACC | Pit creature in the Dune Sea | fan
+RANCOR | Monster kept beneath Jabba's palace | fan
+HAMILL | Mark who plays Luke | fan
+LUCAS | George, creator of the saga | fan
+PASCAL | Pedro who plays Din Djarin | fan
+YAVIN | Gas giant whose moon hosts a Rebel base | fan
+CHIRRUT | Blind warrior monk in Rogue One | fan
+BIGGS | ___ Darklighter, Luke's friend killed at Yavin | superfan
+PORKINS | Rebel pilot Red Six at Yavin | superfan
+BOSSK | Trandoshan bounty hunter summoned by Vader | superfan
+DAK | Luke's snowspeeder gunner on Hoth | superfan
+MYNOCK | Power-cable-chewing space pest | superfan
+NUTE | ___ Gunray, Trade Federation viceroy | superfan
+MIDICHLORIANS | Microscopic life forms linked to Force sensitivity | superfan
+ZAM | ___ Wesell, shape-shifting assassin | superfan
+JOCASTA | ___ Nu, Jedi archivist | superfan
+TYRANUS | Darth ___, Dooku's Sith name | superfan
+SIDIOUS | Darth ___, Palpatine's Sith name | superfan
+PLAGUEIS | Darth ___ the Wise | superfan
+UTAPAU | Sinkhole planet where Grievous meets his end | superfan
+POLIS MASSA | Asteroid where Luke and Leia are born (5,5) | superfan
+BAIL | ___ Organa, Leia's adoptive father | superfan
+TANTIVE | Leia's blockade runner, ___ IV | superfan
+DEVASTATOR | Vader's Star Destroyer in the opening of A New Hope | superfan
+EXECUTOR | Vader's Super Star Destroyer flagship | superfan
+VEERS | General leading the walker assault on Hoth | superfan
+PIETT | Officer Vader promotes to admiral in Empire | superfan
+OZZEL | Admiral who came out of lightspeed too close to Hoth | superfan
+NEEDA | Star Destroyer captain who apologises to Vader in person | superfan
+OOLA | Twi'lek dancer dropped to the rancor | superfan
+BIB | ___ Fortuna, Jabba's majordomo | superfan
+WICKET | Ewok who befriends Leia | superfan
+NIEN NUNB | Lando's Sullustan co-pilot at Endor (4,4) | superfan
+MAZ | ___ Kanata, ancient pirate with a castle | superfan
+TAKODANA | Forested planet of Maz's castle | superfan
+UNKAR | ___ Plutt, junk boss on Jakku | superfan
+CRAIT | Salt planet of a Last Jedi battle | superfan
+CANTO BIGHT | Casino city in The Last Jedi (5,5) | superfan
+BAZE | ___ Malbus, heavy-gunner companion in Rogue One | superfan
+BODHI | ___ Rook, defecting Imperial pilot | superfan
+GALEN | ___ Erso, reluctant Death Star engineer | superfan
+SAW | ___ Gerrera, extremist rebel leader | superfan
+JEDHA | Holy moon mined for crystals | superfan
+ENFYS | ___ Nest, Cloud-Rider leader in Solo | superfan
+CORELLIA | Han Solo's home planet | superfan
+KUIIL | Ugnaught who helps Din protect Grogu in season one | superfan
+NEVARRO | Lava planet where Din's covert hides | superfan
+FENNEC | ___ Shand, Boba Fett's sharpshooter partner | superfan
+GREEF | ___ Karga, Nevarro guild boss | superfan
+SHMI | Anakin's mother | superfan
+SEBULBA | Podracing rival of young Anakin | superfan

@@ -1,0 +1,121 @@
+# Brooklyn Nine-Nine: unofficial fan crossword clues
+@title Brooklyn Nine-Nine
+@category tv
+@blurb A goofy detective, a stoic captain and their oddball squad.
+@icon tv
+JAKE | Goofy, brilliant detective who never grew up | casual
+PERALTA | Jake's surname | casual
+HOLT | Stoic captain of the precinct | casual
+RAYMOND | Captain Holt's first name | casual
+AMY | Rule-loving detective who craves approval | casual
+SANTIAGO | Amy's surname | casual
+ROSA | Tough, secretive detective who rarely smiles | casual
+DIAZ | Rosa's surname | casual
+TERRY | Muscular sergeant who adores his daughters | casual
+JEFFORDS | Terry's surname | casual
+CHARLES | Jake's devoted best friend and foodie | casual
+BOYLE | Charles's surname | casual
+GINA | Self-obsessed civilian administrator | casual
+LINETTI | Gina's surname | casual
+HITCHCOCK | Lazy veteran detective, partner of Scully | casual
+SCULLY | Lazy veteran detective, partner of Hitchcock | casual
+PRECINCT | The Nine-Nine is one | casual
+NYPD | Force the squad belongs to | casual
+DETECTIVE | Jake's rank | casual
+CAPTAIN | Holt's rank | casual
+SERGEANT | Terry's rank | casual
+HEIST | Annual Halloween contest for bragging rights | casual
+HALLOWEEN | Holiday of the squad's annual competition | casual
+COOL COOL COOL | Jake's nervous triple refrain (4,4,4) | casual
+NOICE | Jake's mock-Australian word of approval | casual
+DIE HARD | Jake's favourite action film (3,4) | casual
+YOGURT | Terry's favourite snack | casual
+NINE NINE | The squad's rallying chant (4,4) | casual
+CORGI | Breed of Holt's dog | casual
+COP | Job of everyone in the squad, informally | casual
+FOOD | Charles's great passion, often unusual | casual
+BADGE | What a detective flashes | casual
+INTERROGATION | Kind of room where suspects are grilled | casual
+MUSCLES | Terry's bulging pride and joy | casual
+UNDERCOVER | Like Jake's stints inside criminal gangs | casual
+STAKEOUT | Long surveillance job in a parked car | casual
+SQUAD | Holt's team of detectives | casual
+ARREST | Collar, in police terms | casual
+CHEDDAR | Holt's beloved corgi | fan
+KEVIN | Holt's husband, a university professor | fan
+BINDERS | Office supplies Amy treasures | fan
+PIMENTO | Adrian, Rosa's intense ex-fiance | fan
+PONTIAC | Doug Judy's criminal alias: The ___ Bandit | fan
+DOUG JUDY | Charming car thief Jake can't help liking (4,4) | fan
+WUNTCH | Madeline, Holt's bitter rival | fan
+VULTURE | Detective who swoops in to steal the squad's cases | fan
+TEDDY | Amy's sergeant ex who tries to win her back | fan
+PILSNER | Beer style Teddy obsesses over | fan
+SOPHIA | Defence lawyer Jake dates | fan
+GENEVIEVE | Art-gallery owner who becomes Charles's partner | fan
+NIKOLAJ | Charles's adopted son | fan
+SAMBERG | Andy who plays Jake | fan
+BRAUGHER | Andre who plays Holt | fan
+FUMERO | Melissa who plays Amy | fan
+BEATRIZ | Stephanie who plays Rosa | fan
+CREWS | Terry ___, who plays the sergeant | fan
+TRUGLIO | Joe Lo ___, who plays Charles | fan
+PERETTI | Chelsea who plays Gina | fan
+FIGGIS | Jimmy, mob boss Jake and Holt hide from | fan
+FLORIDA | State where Jake and Holt hide out | fan
+PRISON | Where Jake and Rosa are wrongly sent | fan
+BONE | Holt's furious one-word yell | fan
+BINGPOT | Jake's bingo-jackpot mash-up cry | fan
+MOTORCYCLE | Rosa's preferred ride | fan
+DEBBIE | Vanessa Bayer's short-lived detective | fan
+COMMISSIONER | Top job Holt keeps chasing | fan
+NBC | Network that revived the show | fan
+FOX | Network that first aired the show | fan
+VIVIAN | Charles's fiancee before Genevieve | fan
+CLASSICS | Academic field Holt's husband teaches | fan
+LIEUTENANT | Rank Terry finally earns | fan
+MCCLANE | Movie hero Jake idolises | fan
+CAGNEY | One of Terry's twin daughters | superfan
+LACEY | The other of Terry's twin daughters | superfan
+AVA | Terry's youngest daughter | superfan
+SHARON | Terry's wife | superfan
+LAVERNE | Holt's mother | superfan
+COZNER | Surname of Holt's husband | superfan
+DOZERMAN | Seth, short-lived captain played by Bill Hader | superfan
+HAWKINS | Melissa, lieutenant secretly running a crime ring | superfan
+SEAMUS | ___ Murphy, mobster Jake targets in season six | superfan
+JIMMY JAB | ___ Games, the squad's office contest (5,3) | superfan
+ELEANOR | Charles's ex-wife | superfan
+ROGER | Jake's absent father | superfan
+KAREN | Jake's mother | superfan
+SEVEN | Number of Amy's brothers | superfan
+KELLY | Corrupt commissioner Holt clashes with | superfan
+MAC | Jake and Amy's son | superfan
+TOIT | Jake's word in "___ nups" | superfan
+SMORT | Jake's mangled word for clever | superfan
+CORAL PALMS | Florida town of Jake and Holt's hideout (5,5) | superfan
+LATVIA | Country Nikolaj comes from | superfan
+DARLENE | Gina's mother | superfan
+BUS | Vehicle that hits Gina | superfan
+MARCUS | Holt's nephew who dates Rosa | superfan
+TRUDY | Doug Judy's sister | superfan
+BLOCKER | Dirk who plays Hitchcock | superfan
+MILLER | Joel McKinnon ___, who plays Scully | superfan
+SEDGWICK | Kyra who plays Hawkins | superfan
+ROBINSON | Craig who plays Doug Judy | superfan
+WINTERS | Dean who plays the Vulture | superfan
+MANTZOUKAS | Jason who plays Adrian | superfan
+JACKSON | Marc Evan ___, who plays Holt's husband | superfan
+HADER | Bill who plays Captain Dozerman | superfan
+LONGORIA | Eva who plays Sophia | superfan
+SAGAL | Katey who plays Jake's mother | superfan
+WHITFORD | Bradley who plays Jake's father | superfan
+MEADOWS | Tim who plays Caleb the cannibal | superfan
+CALEB | Polite cannibal played by Tim Meadows | superfan
+PEMBROKE | Keith, the Vulture's real name | superfan
+BOMB | Threat that derails Jake and Amy's wedding venue | fan
+PROPOSAL | Jake's heist-ending surprise for Amy | fan
+PATROL | Uniformed beat Holt is demoted to in season seven | fan
+INVESTIGATOR | Rosa's later private career | fan
+TWINS | What Terry's two eldest daughters are | fan
+SMOKING | Secret vice Amy turns to under stress | fan

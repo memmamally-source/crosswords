@@ -172,6 +172,42 @@ stylesheet and script tags in `index.html` and `VERSION` in `sw.js` to the
 same number, so browsers and installed apps fetch the new files instead of
 reusing saved ones. The tests check that the two match.
 
+## Themed collections
+
+Unofficial fan crosswords about one show, film series, game, sport or artist,
+grouped as TV & streaming, Movies, Anime, Gaming, Sport and Music. Each
+collection has Casual, Fan and Superfan clues, and puzzles come at those three
+levels:
+
+| Level | Clues | Mix |
+| --- | --- | --- |
+| Casual | 12 | Casual clues, with Fan ones filling in. No Superfan clues. |
+| Fan | 16 | Mostly Fan clues, plus 3 Superfan ones. |
+| Superfan | 20 | 9 Superfan clues; Fan and Casual ones fill in. |
+
+Each collection is one file, `collections/<id>.txt`:
+
+```
+# Friends: unofficial fan crossword clues
+@title Friends
+@category tv
+@blurb Central Perk, two apartments and six friends in New York.
+@icon tv
+CENTRAL PERK | Coffee house with an orange sofa (7,4) | casual
+```
+
+Multi-word answers give their word lengths, like `(7,4)`. To check and build:
+
+```sh
+node tools/build-collections.js --check friends   # check one collection
+node tools/build-collections.js                   # check all, then write js/collections.js
+```
+
+The checker catches format slips, short or repeated answers, answers that
+appear in their own clue, levels with too few clues, and levels that can't
+build complete puzzles. It can't check facts: every collection was fact-checked
+separately before publishing, and new clues should be too.
+
 ## Adding words or a genre
 
 Each genre's words live in `words/<id>.txt`, one entry per line:
@@ -223,6 +259,7 @@ that `js/words.js` is up to date.
 | `index.html` | Page structure: masthead, home, archive, solving view, dialogs |
 | `manifest.webmanifest`, `sw.js`, `icons/` | Installing as an app and working offline |
 | `js/account.js`, `js/sync.js`, `js/firebase-config.js`, `firestore.rules` | Optional sign-in and syncing progress |
+| `collections/*.txt`, `js/collections.js` | Themed fan collections, and their compiled form |
 | `js/featured.js` | The Trending now cards on the home page (edit by hand) |
 | `css/styles.css` | Styles, light and dark themes |
 | `puzzles/` | Frozen Daily and Mini puzzles, one file per month, and their fingerprints |

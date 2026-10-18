@@ -1,0 +1,128 @@
+# Taylor Swift: unofficial fan crossword clues
+@title Taylor Swift
+@category music
+@blurb Albums, eras and hits from pop's master storyteller.
+@icon note
+FEARLESS | 2008 album that won Album of the Year | casual
+SPEAK NOW | 2010 album she wrote entirely by herself (5,3) | casual
+RED | 2012 album named for a colour | casual
+REPUTATION | 2017 album with snake imagery | casual
+LOVER | 2019 album with pastel artwork | casual
+FOLKLORE | Surprise album made during the 2020 lockdown | casual
+EVERMORE | Sister album released in December 2020 | casual
+MIDNIGHTS | 2022 album featuring Anti-Hero | casual
+TORTURED POETS | The ___ Department (2024) (8,5) | casual
+SHAKE IT OFF | Lead single from 1989 (5,2,3) | casual
+BLANK SPACE | 1989 hit satirising her man-eater image (5,5) | casual
+BAD BLOOD | 1989 single with a star-studded video (3,5) | casual
+STYLE | 1989 single that also means fashion sense | casual
+LOVE STORY | Hit inspired by Romeo and Juliet (4,5) | casual
+YOU BELONG WITH ME | Hit whose video casts her as two rival girls (3,6,4,2) | casual
+CARDIGAN | Lead single from her surprise 2020 album | casual
+ANTI-HERO | Lead single from her 2022 album (4-4) | casual
+CRUEL SUMMER | 2019 track that became a hit in 2023 (5,6) | casual
+FORTNIGHT | Lead single of her 2024 album | casual
+ALL TOO WELL | Red song released in a ten-minute version (3,3,4) | casual
+TIM MCGRAW | Her 2006 debut single (3,6) | casual
+SWIFTIES | Her devoted fans | casual
+ERAS | The ___ Tour (2023–24) | casual
+THIRTEEN | Her lucky number | casual
+NASHVILLE | Music City where her career began | casual
+COUNTRY | Genre of her early albums | casual
+POP | Genre she fully embraced with 1989 | casual
+GUITAR | Instrument she often strums on stage | casual
+GRAMMY | Award she has won for Album of the Year four times | casual
+TAYLORS VERSION | Tag on her re-recorded albums (7,7) | casual
+PENNSYLVANIA | Her home state | casual
+DECEMBER | Month of her birthday | casual
+MEAN | Speak Now song aimed at a critic | casual
+OUR SONG | Early hit she wrote for a school talent show (3,4) | casual
+WILDEST DREAMS | 1989 single she re-released in 2021 after a TikTok trend (7,6) | casual
+KANYE | Rapper who interrupted her speech at the 2009 VMAs | casual
+TIME | Magazine that named her Person of the Year in 2023 | casual
+ED SHEERAN | British singer on Everything Has Changed (2,7) | casual
+DELICATE | Reputation single with a city-dancing video | fan
+THE MAN | Lover single where she plays a male alter ego (3,3) | fan
+KARMA | Midnights song named for cosmic justice | fan
+LAVENDER HAZE | Opening track of Midnights (8,4) | fan
+BEJEWELED | Midnights single with a Cinderella-style video | fan
+POST MALONE | Featured artist on Fortnight (4,6) | fan
+EXILE | Folklore duet sung from both sides of a breakup | fan
+BON IVER | Justin Vernon's indie band (3,4) | fan
+WILLOW | Lead single from Evermore | fan
+BETTY | Folklore song in a teen love triangle | fan
+AUGUST | Folklore song told from the other girl's view | fan
+MARJORIE | Evermore song about her opera-singer grandmother | fan
+NO BODY NO CRIME | Evermore murder ballad featuring Haim (2,4,2,5) | fan
+MIRRORBALL | Folklore song about a disco-ball persona | fan
+INVISIBLE STRING | Folklore song about a thread of fate (9,6) | fan
+WHITE HORSE | Fearless single that won two country Grammys (5,5) | fan
+FIFTEEN | Fearless single about freshman year | fan
+BACK TO DECEMBER | Speak Now apology song (4,2,8) | fan
+MINE | Lead single from Speak Now | fan
+ENCHANTED | Speak Now ballad about a magical first meeting | fan
+BEGIN AGAIN | Red single about a hopeful new date (5,5) | fan
+OUT OF THE WOODS | 1989 single co-written with Jack Antonoff (3,2,3,5) | fan
+GORGEOUS | Reputation single with a baby-voice intro | fan
+END GAME | Reputation single with Future and a British star (3,4) | fan
+LONDON BOY | Lover song about a British beau (6,3) | fan
+PAPER RINGS | Lover song preferring cheap jewellery (5,5) | fan
+CORNELIA STREET | Lover song named for a Greenwich Village road (8,6) | fan
+SNOW ON THE BEACH | Midnights duet with Lana Del Rey (4,2,3,5) | fan
+MAROON | Midnights song named for a dark shade | fan
+JACK ANTONOFF | Bleachers frontman and frequent producer (4,8) | fan
+AARON DESSNER | Folklore collaborator from The National (5,7) | fan
+MAX MARTIN | Swedish co-writer of 1989's biggest hits (3,6) | fan
+BIG MACHINE | Label that released her first six albums (3,7) | fan
+REPUBLIC RECORDS | Label she joined in 2018 (8,7) | fan
+MISS AMERICANA | 2020 Netflix documentary about her (4,9) | fan
+OLIVIA BENSON | Cat named for a Law & Order detective (6,6) | fan
+MEREDITH | Cat named for a Grey's Anatomy doctor | fan
+BENJAMIN BUTTON | Cat named for a Brad Pitt character (8,6) | fan
+SADIE SINK | Star of the All Too Well short film (5,4) | fan
+ICE SPICE | Rapper on the Karma remix (3,5) | fan
+SAFE AND SOUND | Hunger Games song with the Civil Wars (4,3,5) | fan
+CHRISTMAS TREE | Her family's farm grew these (9,4) | fan
+JAMES | Boy in Folklore's teen love triangle | superfan
+EPIPHANY | Folklore song inspired by her grandfather's war service | superfan
+HARKNESS | Rebekah ___, heiress who inspired a Folklore song | superfan
+DOROTHEA | Evermore song about a hometown girl turned star | superfan
+COWBOY LIKE ME | Evermore song about two con artists (6,4,2) | superfan
+SEVEN | Folklore song about a childhood friend | superfan
+MY TEARS RICOCHET | Track 5 of Folklore (2,5,8) | superfan
+DEAR JOHN | Track 5 of Speak Now (4,4) | superfan
+TOLERATE IT | Track 5 of Evermore (8,2) | superfan
+ARCHER | The ___, track 5 of Lover | superfan
+SPARKS FLY | Speak Now single first performed years before release (6,3) | superfan
+STATE OF GRACE | Opening track of Red (5,2,5) | superfan
+NEW ROMANTICS | Single from the deluxe edition of 1989 (3,9) | superfan
+CLEAN | Closing track of the standard 1989 | superfan
+IMOGEN HEAP | Co-writer and producer of a 1989 closer (6,4) | superfan
+GETAWAY CAR | Reputation song about a doomed escape (7,3) | superfan
+NEW YEARS DAY | Closing track of Reputation (3,5,3) | superfan
+DAYLIGHT | Closing track of Lover | superfan
+MASTERMIND | Closing track of standard Midnights | superfan
+CLARA BOW | Tortured Poets song named for a silent film star (5,3) | superfan
+FLORIDA | ___!!!, duet with Florence + the Machine | superfan
+SHELLBACK | Swedish producer who works with Max Martin | superfan
+LIZ ROSE | Co-writer of many early songs (3,4) | superfan
+WILLIAM BOWERY | Pseudonymous co-writer on Folklore (7,6) | superfan
+NILS SJOBERG | Pseudonym she used on a Calvin Harris hit (4,7) | superfan
+SCOTT BORCHETTA | Founder of her first record label (5,9) | superfan
+LONG POND | ___ Studio Sessions, 2020 Disney+ film (4,4) | superfan
+BOMBALURINA | Her role in the 2019 film of Cats | superfan
+ROSEMARY | Her character in The Giver (2014) | superfan
+AUDREY | Character she voiced in The Lorax | superfan
+WYOMISSING | Pennsylvania borough where she grew up | superfan
+HENDERSONVILLE | Tennessee town her family moved to | superfan
+LOVER FEST | Concert series cancelled in 2020 (5,4) | superfan
+RONAN | 2012 charity single about a young boy | superfan
+INNOCENT | Speak Now song she debuted at the 2010 VMAs | superfan
+MR PERFECTLY FINE | From the Vault track on Fearless re-recording (2,9,4) | superfan
+BRENDON URIE | Panic! at the Disco singer on ME! (7,4) | superfan
+CHRIS STAPLETON | Duet partner on a Red vault track (5,9) | superfan
+CIVIL WARS | Duo of Joy Williams and John Paul White (5,4) | superfan
+LONG LIVE | Closing track of standard Speak Now (4,4) | superfan
+THE LAKES | Bonus track on the deluxe Folklore (3,5) | superfan
+WONDERLAND | 1989 deluxe track nodding to Lewis Carroll | superfan
+BREATHE | Fearless duet with Colbie Caillat | superfan

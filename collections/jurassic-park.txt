@@ -1,0 +1,136 @@
+# Jurassic Park & Jurassic World: unofficial fan crossword clues
+@title Jurassic Park & World
+@category movies
+@blurb Cloned dinosaurs, island parks and a chaotic theme park dream.
+@icon globe
+ISLA NUBLAR | Island off Costa Rica home to the original park (4,6) | casual
+HAMMOND | Park founder John, who spared no expense | casual
+ALAN GRANT | Palaeontologist wary of children (4,5) | casual
+ELLIE SATTLER | Palaeobotanist on the first tour (5,7) | casual
+IAN MALCOLM | Chaos-theory mathematician (3,7) | casual
+NEDRY | Programmer who shuts down the security system | casual
+RAPTOR | Clever pack hunter, for short | casual
+VELOCIRAPTOR | Pack-hunting dinosaur that opens doors | casual
+T-REX | Tyrant lizard king, for short (1-3) | casual
+TYRANNOSAURUS | Huge predator whose footsteps ripple water | casual
+TRICERATOPS | Three-horned dinosaur found lying sick | casual
+BRACHIOSAURUS | Towering plant-eater that sneezes on Lex | casual
+DILOPHOSAURUS | Frilled venom-spitter | casual
+GALLIMIMUS | Ostrich-like dinosaur seen flocking | casual
+SPINOSAURUS | Sail-backed predator of the third film | casual
+PTERANODON | Flying reptile in the aviary | casual
+MOSASAURUS | Giant marine reptile fed a shark | casual
+INDOMINUS | Hybrid ___ rex of Jurassic World | casual
+OWEN GRADY | Navy veteran turned raptor trainer (4,5) | casual
+CLAIRE | Park manager Dearing | casual
+BLUE | Owen's favourite raptor | casual
+AMBER | Fossil resin holding a blood-filled mosquito | casual
+MOSQUITO | Insect that preserved dino blood | casual
+DNA | Genetic code cloned to revive dinosaurs | casual
+FROG | Animal whose code filled the genome gaps | casual
+FENCE | Electrified barrier around the paddocks | casual
+JEEP | Off-road vehicle chased by the big predator | casual
+EGGS | Hatchery products, all meant to be female | casual
+HATCHERY | Lab where baby dinosaurs emerge | casual
+DINOSAURS | Cloned stars of the films | casual
+SPIELBERG | Director of the first two films | casual
+CRICHTON | Author Michael, of the original novel | casual
+SAM NEILL | Actor who played Grant (3,5) | casual
+LAURA DERN | Actress who played Sattler (5,4) | casual
+JEFF GOLDBLUM | Actor who played Malcolm (4,8) | casual
+CHRIS PRATT | Actor who played Owen (5,5) | casual
+COSTA RICA | Country near the islands (5,4) | casual
+LEX | Hammond's granddaughter who hacks the computer | casual
+TIM | Hammond's dinosaur-mad grandson | casual
+INGEN | Hammond's genetics company | casual
+VOLCANO | Mount Sibo erupts in Fallen Kingdom | casual
+FALLEN KINGDOM | 2018 sequel subtitle (6,7) | casual
+DOMINION | 2022 film closing the World trilogy | casual
+LOST WORLD | 1997 sequel: The ___ (4,5) | casual
+HENRY WU | Chief geneticist in park and World (5,2) | fan
+MULDOON | Game warden Robert | fan
+GENNARO | Lawyer Donald on the first tour | fan
+RAY ARNOLD | Chain-smoking chief engineer (3,6) | fan
+DODGSON | Rival executive Lewis | fan
+BIOSYN | Rival genetics firm | fan
+SHAVING CREAM | Can used to smuggle embryos (7,5) | fan
+EMBRYOS | Cargo Nedry steals | fan
+ISLA SORNA | InGen's Site B (4,5) | fan
+SAN DIEGO | City a T. rex rampages through (3,5) | fan
+SARAH HARDING | Malcolm's girlfriend, a field palaeontologist (5,7) | fan
+KELLY | Malcolm's daughter in the second film | fan
+ROLAND | Tembo, big-game hunter | fan
+LUDLOW | Peter, Hammond's nephew | fan
+NICK | Van Owen, photographer and activist | fan
+EDDIE | Carr, field equipment expert | fan
+ERIC | Kirby boy stranded on Site B | fan
+KIRBY | Paul and Amanda's surname | fan
+BILLY | Brennan, Grant's assistant | fan
+MASRANI | Simon, owner of Jurassic World | fan
+HOSKINS | Vic, who wants raptors as weapons | fan
+ZACH | Older brother visiting Claire | fan
+GRAY | Younger brother visiting Claire | fan
+MAISIE | Lockwood girl with a secret origin | fan
+LOCKWOOD | Benjamin, Hammond's old partner | fan
+FRANKLIN | Webb, nervous IT expert | fan
+ZIA | Rodriguez, palaeoveterinarian | fan
+KAYLA | Watts, pilot in Dominion | fan
+GIGANOTOSAURUS | Huge carnivore of Dominion | fan
+INDORAPTOR | Fallen Kingdom's hybrid | fan
+LOCUSTS | Giant insects ravaging crops in Dominion | fan
+GYROSPHERE | Glass ball ride among the herbivores | fan
+CHARLIE | Owen's raptor named for the NATO letter C | fan
+DELTA | Owen's raptor named for the NATO letter D | fan
+ECHO | Owen's raptor named for the NATO letter E | fan
+WAYNE KNIGHT | Actor who played Nedry (5,6) | fan
+BD WONG | Actor who played Wu (2,4) | fan
+VINCE VAUGHN | Actor who played Nick (5,6) | fan
+JULIANNE MOORE | Actress who played Sarah (8,5) | fan
+JOE JOHNSTON | Director of the third film (3,8) | fan
+COLIN TREVORROW | Director of World and Dominion (5,9) | fan
+JOHN WILLIAMS | Composer of the original theme (4,8) | fan
+STAN WINSTON | Effects legend behind the animatronics (4,7) | fan
+GOAT | Bait tethered for the big predator | fan
+LYSINE | Amino acid the novel's animals cannot make | superfan
+UNIX | System Lex recognises at the console | superfan
+BARBASOL | Brand on Nedry's smuggling can | superfan
+EAST DOCK | Where Nedry is heading with the embryos (4,4) | superfan
+DIETER | Stark, hunter attacked by compys | superfan
+AJAY | Sidhu, Roland's hunting partner | superfan
+COMPY | Tiny pack-hunting dinosaur, for short | superfan
+STEGOSAURUS | Plated dinosaur on Site B | superfan
+UDESKY | Mercenary booking agent in the third film | superfan
+COOPER | Mercenary lost on the plane's first pass | superfan
+NASH | Pilot hired by the Kirbys | superfan
+PARASAILING | How Eric and Ben reached the island | superfan
+BEN | Amanda's boyfriend who went parasailing | superfan
+MONTANA | State of Grant's dig site | superfan
+LILAC | West Indian plant blamed for a sick dinosaur | superfan
+BARRY | Owen's raptor-pen colleague | superfan
+LOWERY | Control room tech with dinosaur toys | superfan
+ZARA | Claire's assistant | superfan
+VIVIAN | Control room colleague of Lowery | superfan
+STYGIMOLOCH | Dome-headed dinosaur nicknamed Stiggy | superfan
+BARYONYX | Fish-eating predator in Fallen Kingdom | superfan
+CARNOTAURUS | Horned predator in Fallen Kingdom | superfan
+SINOCERATOPS | Horned herbivore in Fallen Kingdom | superfan
+ELI MILLS | Lockwood aide turned schemer (3,5) | superfan
+WHEATLEY | Ken, mercenary hunter | superfan
+EVERSOL | Gunnar, dinosaur auctioneer | superfan
+IRIS | Lockwood's housekeeper | superfan
+BETA | Blue's offspring in Dominion | superfan
+DOLOMITES | Mountains of Biosyn's sanctuary | superfan
+MALTA | Island of a dinosaur black market | superfan
+SOYONA | Santos, black-market dealer | superfan
+THERIZINOSAURUS | Long-clawed herbivore in Dominion | superfan
+ATROCIRAPTOR | Attack-trained predator in Malta | superfan
+CHARLOTTE | Maisie's mother | superfan
+RAMSAY | Cole, Biosyn insider | superfan
+ED REGIS | Park PR man in the novel (2,5) | superfan
+HARDING | Gerry, park vet in the novel | superfan
+BOB PECK | Actor who played Muldoon (3,4) | superfan
+MARTIN FERRERO | Actor who played Gennaro (6,7) | superfan
+ARIANA RICHARDS | Actress who played Lex (6,8) | superfan
+JOSEPH MAZZELLO | Actor who played Tim (6,8) | superfan
+IRRFAN KHAN | Actor who played Masrani (6,4) | superfan
+JA BAYONA | Director of Fallen Kingdom (2,6) | superfan

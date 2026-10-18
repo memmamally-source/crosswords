@@ -1,0 +1,137 @@
+# Formula 1: unofficial sport crossword clues
+@title Formula 1
+@category sport
+@blurb Grand prix racing: teams, drivers and legendary circuits.
+@icon flame
+MONACO | Grand prix run through Monte Carlo's streets | casual
+SILVERSTONE | Northamptonshire home of the British Grand Prix | casual
+MONZA | Italy's Temple of Speed | casual
+SPA | Belgian circuit in the Ardennes | casual
+SUZUKA | Japanese circuit with a figure-of-eight layout | casual
+INTERLAGOS | Sao Paulo circuit of the Brazilian GP | casual
+MELBOURNE | Australian city of the Albert Park circuit | casual
+ABU DHABI | Emirate of the Yas Marina circuit (3,5) | casual
+BAHRAIN | Gulf kingdom of the Sakhir circuit | casual
+HAMILTON | Lewis ___, won his first title with McLaren in 2008 | casual
+SCHUMACHER | Michael ___, five straight titles with Ferrari from 2000 | casual
+SENNA | Ayrton ___, Brazilian champion in 1988, 1990 and 1991 | casual
+PROST | Alain ___, four-time champion nicknamed the Professor | casual
+LAUDA | Niki ___, Austrian champion of 1975, 1977 and 1984 | casual
+VERSTAPPEN | Max ___, Dutchman first crowned champion in 2021 | casual
+ALONSO | Fernando ___, Spain's champion of 2005 and 2006 | casual
+VETTEL | Sebastian ___, four titles in a row from 2010 to 2013 | casual
+BUTTON | Jenson ___, 2009 champion with Brawn | casual
+MANSELL | Nigel ___, 1992 champion with Williams | casual
+LECLERC | Charles ___, Monegasque who won his home race in 2024 | casual
+NORRIS | Lando ___, won his first grand prix in Miami in 2024 | casual
+FERRARI | Maranello team with a prancing horse badge | casual
+MCLAREN | Woking team founded by New Zealander Bruce | casual
+MERCEDES | Constructors' champions eight years running from 2014 | casual
+WILLIAMS | Grove team founded by Sir Frank | casual
+RED BULL | Constructors' champions from 2010 to 2013, an energy drink brand (3,4) | casual
+GRAND PRIX | A world championship race (5,4) | casual
+PIT STOP | Brief halt for fresh tyres (3,4) | casual
+POLE POSITION | First place on the starting grid (4,8) | casual
+CHEQUERED FLAG | Black-and-white signal at the finish (9,4) | casual
+SAFETY CAR | Vehicle that leads the field after a crash (6,3) | casual
+RED FLAG | Signal that halts a session (3,4) | casual
+PADDOCK | Area behind the garages for teams and VIPs | casual
+PODIUM | Top-three ceremony stand | casual
+CHAMPAGNE | Bubbly sprayed by the winners | casual
+GRID | Starting formation of the cars | casual
+LAP | One circuit of the track | casual
+TYRES | Rubber on the wheels | casual
+CHICANE | Tight sequence of bends to slow cars down | casual
+HAIRPIN | Very tight 180-degree bend | casual
+FIA | Motorsport's governing body, by its initials | casual
+TIFOSI | Ferrari's passionate Italian fans | casual
+DRIVE TO SURVIVE | Netflix series about the sport, launched in 2019 (5,2,7) | casual
+HELMET | Driver's protective headgear | casual
+STEWART | Jackie ___, three-time champion called the Flying Scot | fan
+CLARK | Jim ___, Scottish champion in 1963 and 1965 | fan
+HUNT | James ___, McLaren's 1976 champion | fan
+FANGIO | Juan Manuel ___, five-time champion of the 1950s | fan
+MOSS | Stirling ___, often called the greatest never to win the title | fan
+BRABHAM | Jack ___, 1966 champion in a car bearing his own name | fan
+FITTIPALDI | Emerson ___, Brazil's first champion, in 1972 | fan
+PIQUET | Nelson ___, Brazilian champion in 1981, 1983 and 1987 | fan
+ROSBERG | Nico ___, 2016 champion who retired days later | fan
+HAKKINEN | Mika ___, Finnish champion of 1998 and 1999 | fan
+RAIKKONEN | Kimi ___, Ferrari's 2007 champion, the Iceman | fan
+VILLENEUVE | Jacques ___, Williams' 1997 champion | fan
+HILL | Damon ___, 1996 champion, son of a double champion | fan
+COULTHARD | David ___, Scot who won Monaco in 2000 and 2002 | fan
+BARRICHELLO | Rubens ___, Schumacher's Ferrari team-mate from 2000 to 2005 | fan
+WEBBER | Mark ___, Australian who won Monaco in 2010 and 2012 | fan
+BOTTAS | Valtteri ___, Hamilton's team-mate from 2017 to 2021 | fan
+RICCIARDO | Daniel ___, grinning Australian known for the shoey | fan
+SAINZ | Carlos ___, won the 2022 British GP for his first victory | fan
+MASSA | Felipe ___, briefly champion on the final lap in Brazil in 2008 | fan
+WOLFF | Toto ___, Austrian who joined Mercedes as team boss in 2013 | fan
+NEWEY | Adrian ___, designer of title-winning Williams, McLaren and Red Bull cars | fan
+ECCLESTONE | Bernie ___, the sport's longtime commercial boss | fan
+LOTUS | Colin Chapman's team | fan
+BRAWN | Team that won both titles in its only season, 2009 | fan
+BENETTON | Team with which Schumacher won the 1994 and 1995 titles | fan
+JORDAN | Eddie ___'s team, where Schumacher made his debut in 1991 | fan
+HONDA | Japanese engine maker behind Red Bull's 2021 drivers' title | fan
+PIRELLI | Italian firm that became sole tyre supplier in 2011 | fan
+IMOLA | Italian venue of the San Marino GP | fan
+SINGAPORE | Host of the first night race, in 2008 | fan
+HUNGARORING | Twisty circuit near Budapest | fan
+ZANDVOORT | Seaside venue of the Dutch GP | fan
+EAU ROUGE | Famous uphill sweep at the Belgian circuit (3,5) | fan
+PARABOLICA | Monza's long final corner | fan
+UNDERCUT | Pitting early to gain track position | fan
+SLIPSTREAM | Tow gained by following closely behind another car | fan
+DOWNFORCE | Aerodynamic grip pushing the car onto the track | fan
+HALO | Cockpit protection device made compulsory in 2018 | fan
+DRS | Overtaking aid with an opening rear-wing flap, by its initials | fan
+BLUE FLAG | Signal shown to a driver about to be lapped (4,4) | fan
+SPRINT | Short Saturday race format introduced in 2021 | fan
+TURBO | Engine boost banned after 1988 and back in 2014 | fan
+FORMATION LAP | Warm-up tour before the start (9,3) | fan
+FARINA | Nino ___, first world champion, in 1950 | superfan
+ASCARI | Alberto ___, Ferrari's champion of 1952 and 1953 | superfan
+HULME | Denny ___, New Zealand's 1967 champion | superfan
+RINDT | Jochen ___, the sport's only posthumous champion, 1970 | superfan
+SCHECKTER | Jody ___, Ferrari's 1979 champion | superfan
+ANDRETTI | Mario ___, Lotus's 1978 champion | superfan
+JONES | Alan ___, Williams' first drivers' champion, 1980 | superfan
+SURTEES | John ___, world champion on two wheels and four | superfan
+MALDONADO | Pastor ___, won the 2012 Spanish GP for Williams | superfan
+KUBICA | Robert ___, Pole who won the 2008 Canadian GP | superfan
+PANIS | Olivier ___, won the chaotic 1996 Monaco GP for Ligier | superfan
+TRULLI | Jarno ___, won the 2004 Monaco GP for Renault | superfan
+FISICHELLA | Giancarlo ___, won the 2003 Brazilian GP for Jordan | superfan
+HERBERT | Johnny ___, won the 1999 European GP for Stewart | superfan
+ZHOU | Guanyu ___, China's first full-time F1 driver, from 2022 | superfan
+TODT | Jean ___, Ferrari team boss in the Schumacher years | superfan
+DOMENICALI | Stefano ___, ex-Ferrari boss who became F1's chief executive in 2021 | superfan
+CHAPMAN | Colin ___, founder of Lotus | superfan
+TYRRELL | Team that raced the six-wheeled P34 in 1976 | superfan
+MINARDI | Faenza minnows who raced from 1985 to 2005 | superfan
+SAUBER | Swiss team founded by Peter | superfan
+TOLEMAN | Team whose rookie came second in the wet 1984 Monaco GP | superfan
+VANWALL | British winners of the first constructors' title, 1958 | superfan
+MASERATI | Make of the 250F that Fangio drove to the 1957 title | superfan
+COOPER | Rear-engined champions of 1959 and 1960 | superfan
+COSWORTH | Maker of the DFV engine | superfan
+BRIDGESTONE | Tyre supplier from 1997 to 2010 | superfan
+LIBERTY | ___ Media, which took control of F1 in 2017 | superfan
+HOCKENHEIM | German circuit near Heidelberg | superfan
+MAGNY COURS | Home of the French GP from 1991 to 2008 (5,5) | superfan
+ESTORIL | Portuguese GP venue from 1984 to 1996 | superfan
+ADELAIDE | Australian GP host from 1985 to 1995 | superfan
+JEREZ | Spanish venue of the 1997 title decider | superfan
+BRANDS HATCH | Kent circuit that last hosted the British GP in 1986 (6,5) | superfan
+DONINGTON | Venue of Senna's wet 1993 European GP masterclass | superfan
+WATKINS GLEN | New York venue of the US GP from 1961 to 1980 (7,4) | superfan
+FUJI | Japanese venue of the rain-soaked 1976 title decider | superfan
+LA SOURCE | Hairpin at the first corner of Spa (2,6) | superfan
+KERS | Energy recovery system introduced in 2009, by its initials | superfan
+PARC FERME | Secure area where cars are held after qualifying (4,5) | superfan
+DIFFUSER | Brawn's 2009 car had a controversial double one | superfan
+PORPOISING | Bouncing problem that plagued 2022 cars | superfan
+MONOCOQUE | Car's single-shell chassis, first in carbon fibre on McLaren's MP4/1 | superfan
+GROUND EFFECT | Aerodynamic principle Lotus pioneered in the late 1970s (6,6) | superfan

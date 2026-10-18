@@ -1,0 +1,136 @@
+# Naruto: unofficial fan crossword clues
+@title Naruto
+@category anime
+@blurb Ninja, jutsu and the Hidden Leaf Village.
+@icon flame
+NARUTO | Orange-clad ninja who dreams of becoming Hokage | casual
+SASUKE | Brooding last survivor of the Uchiha clan | casual
+SAKURA | Pink-haired kunoichi of Team 7 | casual
+KAKASHI | Masked Copy Ninja who leads Team 7 | casual
+HOKAGE | Title of the Hidden Leaf's leader | casual
+KONOHA | The Village Hidden in the Leaves | casual
+RAMEN | Noodle dish the orange-clad hero adores | casual
+RASENGAN | Spinning sphere of chakra held in the palm | casual
+CHIDORI | Sasuke's lightning technique, named for a thousand birds | casual
+SHARINGAN | Red eye of the Uchiha clan | casual
+CHAKRA | Energy ninja mould to perform techniques | casual
+JUTSU | Ninja technique | casual
+HINATA | Shy heiress of the Hyuga clan | casual
+GAARA | Sand ninja who carries a gourd | casual
+ITACHI | Sasuke's older brother | casual
+OROCHIMARU | Snake-like rogue Sannin | casual
+JIRAIYA | Toad Sage and novelist | casual
+TSUNADE | Fifth Hokage, a legendary medical ninja | casual
+AKATSUKI | Rogue group in red-clouded cloaks | casual
+SHIKAMARU | Lazy genius who uses shadow techniques | casual
+ROCK LEE | Taijutsu specialist in a green jumpsuit (4,3) | casual
+SHURIKEN | Ninja throwing star | casual
+KUNAI | Ninja throwing knife | casual
+SHADOW CLONE | Jutsu creating solid copies of the user (6,5) | casual
+BELIEVE IT | Hero's catchphrase in the English dub (7,2) | casual
+UZUMAKI | Clan name of the orange-clad hero | casual
+UCHIHA | Clan of Sasuke and Itachi | casual
+KURAMA | True name of the Nine-Tailed Fox | casual
+NINJA | Shinobi | casual
+KISHIMOTO | Masashi ___, creator of the manga | casual
+IRUKA | Academy teacher with a scar across his nose | casual
+GENIN | Lowest rank of ninja | casual
+NEJI | Hyuga prodigy who believes in fate | casual
+MINATO | Fourth Hokage, the Yellow Flash | casual
+PAIN | Akatsuki leader who attacks the Leaf Village | casual
+MADARA | Uchiha co-founder of the Leaf Village | casual
+SHIPPUDEN | Sequel anime covering the teenage years | casual
+BORUTO | Hero's son with his own sequel series | casual
+KUNOICHI | Female ninja | casual
+TOAD | Animal Jiraiya summons | casual
+SAND | Element Gaara controls | casual
+HEADBAND | Forehead protector bearing a village symbol | casual
+ACADEMY | School where young ninja learn the basics | casual
+ICHIRAKU | Favourite ramen shop in the Leaf | fan
+BYAKUGAN | All-seeing eye of the Hyuga clan | fan
+RINNEGAN | Ripple-patterned eye of the Six Paths | fan
+CHOJI | Akimichi who can expand his body | fan
+INO | Yamanaka girl who uses mind transfer | fan
+KIBA | Inuzuka ninja who fights alongside a dog | fan
+AKAMARU | Kiba's canine partner | fan
+SHINO | Aburame who commands insects | fan
+TENTEN | Weapons specialist of Team Guy | fan
+MIGHT GUY | Green Beast of the Leaf (5,3) | fan
+KUSHINA | Hero's red-haired mother | fan
+CHUNIN | Ninja rank above genin | fan
+JONIN | Elite ninja rank | fan
+SANNIN | The Legendary Three of the Leaf | fan
+OBITO | Kakashi's former teammate who wore goggles | fan
+KISAME | Shark-like swordsman of the Akatsuki | fan
+DEIDARA | Akatsuki bomber who calls art an explosion | fan
+SASORI | Puppet master of the Sand | fan
+TOBI | Masked Akatsuki member with a childish act | fan
+KABUTO | Glasses-wearing spy for the snake Sannin | fan
+KILLER BEE | Rapping host of the Eight-Tails (6,3) | fan
+HASHIRAMA | First Hokage with Wood Style | fan
+HIRUZEN | Third Hokage, the Professor | fan
+DANZO | Bandaged Leaf elder who craved the Hokage title | fan
+SUSANOO | Giant spectral warrior of the Mangekyo | fan
+AMATERASU | Black flames that burn for seven days | fan
+TSUKUYOMI | Genjutsu named for a moon god | fan
+SAGE MODE | State that draws on natural energy (4,4) | fan
+TEMARI | Fan-wielding kunoichi of the Sand | fan
+HAKU | Ice-wielding boy loyal to Zabuza | fan
+ZABUZA | Demon of the Hidden Mist | fan
+KONOHAMARU | Third Hokage's grandson | fan
+SAI | Pale ink-drawing artist of Team Kakashi | fan
+KAGUYA | Rabbit goddess, mother of chakra | fan
+JINCHURIKI | Human host of a tailed beast | fan
+SHUKAKU | One-Tailed beast sealed inside Gaara | fan
+NAGATO | Uzumaki Rinnegan wielder who controlled six bodies | fan
+KARIN | Red-haired sensor who joined Sasuke's team | fan
+ASUMA | Cigarette-smoking leader of Team 10 | fan
+FOREST OF DEATH | Second stage of the Chunin Exams (6,2,5) | fan
+CURSE MARK | Seal Orochimaru places on Sasuke (5,4) | fan
+EIGHT GATES | Limits Guy can open at great cost (5,5) | fan
+DATTEBAYO | Hero's verbal tic in Japanese | fan
+PIERROT | Studio that animated the series | fan
+TOBIRAMA | Second Hokage, inventor of many jutsu | superfan
+ROOT | Danzo's secret division of ANBU | superfan
+KAMUI | Space-time jutsu of a Mangekyo user | superfan
+EDO TENSEI | Reanimation jutsu raising the dead (3,6) | superfan
+SUNAGAKURE | Japanese name of the Sand Village | superfan
+KIRIGAKURE | Japanese name of the Mist Village | superfan
+AMEGAKURE | Rainy village where Pain was based | superfan
+GAMABUNTA | Chief toad with a pipe and dagger | superfan
+GAMAKICHI | Son of the chief toad | superfan
+KATSUYU | Giant slug summoned by Tsunade | superfan
+MANDA | Giant snake summoned by Orochimaru | superfan
+MYOBOKU | Mount ___, home of the toads | superfan
+ICHA ICHA | Jiraiya's racy novel series Kakashi reads (4,4) | superfan
+EBISU | Elite tutor of the Third Hokage's grandson | superfan
+SHIZUNE | Tsunade's assistant and apprentice | superfan
+TONTON | Tsunade's pet pig | superfan
+PAKKUN | Pug ninja hound summoned by Kakashi | superfan
+HAGOROMO | Sage of the Six Paths | superfan
+INDRA | Elder son of the Sage, Uchiha ancestor | superfan
+ASHURA | Younger son of the Sage, Senju ancestor | superfan
+GYUKI | Eight-Tailed beast's true name | superfan
+MATATABI | Two-Tailed cat beast | superfan
+FUGAKU | Father of the Uchiha brothers | superfan
+MIKOTO | Mother of the Uchiha brothers | superfan
+YAHIKO | Orange-haired founder of the original Akatsuki | superfan
+SHISUI | Uchiha famed for his Body Flicker technique | superfan
+RIN | Kakashi's teammate who became a host to Isobu | superfan
+HIASHI | Hinata's father and Hyuga head | superfan
+HANABI | Hinata's younger sister | superfan
+HIMAWARI | Boruto's younger sister | superfan
+SHINRA TENSEI | Pain's repelling Almighty Push (6,6) | superfan
+VALLEY OF THE END | Site of the founders' statues and a famous duel (6,2,3,3) | superfan
+TAKA | Hawk, Sasuke's team after Hebi | superfan
+SUIGETSU | Water-bodied swordsman of Sasuke's team | superfan
+JUGO | Volatile member of Sasuke's team | superfan
+SAMEHADA | Chakra-eating sword of Kisame | superfan
+FLYING RAIJIN | Minato's teleportation jutsu (6,6) | superfan
+MIZUKAGE | Leader title of the Mist | superfan
+RAIKAGE | Leader title of the Cloud | superfan
+TEUCHI | Owner of the ramen shop | superfan
+HIDAN | Immortal Jashin worshipper of the Akatsuki | superfan
+KAKUZU | Akatsuki treasurer with five hearts | superfan
+JUNKO TAKEUCHI | Japanese voice of the hero (5,8) | superfan
+MAILE FLANAGAN | English voice of the hero (5,8) | superfan

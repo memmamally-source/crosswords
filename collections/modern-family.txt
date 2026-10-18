@@ -1,0 +1,110 @@
+# Modern Family: unofficial fan crossword clues
+@title Modern Family
+@category tv
+@blurb Three related households, one camera crew and plenty of chaos.
+@icon tv
+PHIL | Goofy, upbeat realtor dad of the Dunphy clan | casual
+CLAIRE | Phil's high-strung wife, Jay's daughter | casual
+JAY | Gruff patriarch who runs a closet company | casual
+GLORIA | Jay's glamorous, fiery second wife | casual
+MANNY | Gloria's poetic, old-before-his-time son | casual
+MITCHELL | Jay's uptight son, a lawyer | casual
+CAMERON | Mitchell's theatrical partner, later husband | casual
+LILY | Daughter adopted by Mitchell and Cam | casual
+HALEY | Eldest Dunphy child, the boy-crazy one | casual
+ALEX | Brainy middle Dunphy child | casual
+LUKE | Youngest Dunphy, the scatterbrained son | casual
+JOE | Jay and Gloria's son | casual
+DUNPHY | Surname of Phil, Claire and their kids | casual
+PRITCHETT | Surname of Jay, Mitchell and little Joe | casual
+TUCKER | Cam's surname | casual
+MOCKUMENTARY | Faux-documentary format of the show | casual
+CALIFORNIA | US state where the family lives | casual
+COLOMBIA | Gloria's home country | casual
+REALTOR | Phil's line of work | casual
+LAWYER | Mitchell's profession | casual
+CLOSETS | Main products of Jay's company | casual
+VIETNAM | Country Lily was adopted from | casual
+ABC | US network that aired the sitcom | casual
+LION KING | Film Cam recreates when presenting Lily (4,4) | casual
+MAGIC | Phil's favourite hobby, involving tricks | casual
+CAMERA | Characters often speak straight to it | casual
+ACCENT | Gloria's strong ___, a source of many mix-ups | casual
+STEPSON | What Manny is to Jay | casual
+SPANISH | Gloria's first language | casual
+DYLAN | Haley's dim but sweet boyfriend | casual
+STELLA | Jay's beloved dog | casual
+SOFIA VERGARA | Actress who plays Gloria (5,7) | casual
+ED ONEILL | Former Al Bundy actor who plays Jay (2,6) | casual
+EMMYS | Awards the show won for best comedy five years running | casual
+THREE | Number of related households the show follows | casual
+SITCOM | TV genre of the show | casual
+CLOWN | Cam's sideline career, in face paint and big shoes | casual
+FOOTBALL | Sport Cam coaches at the high school | fan
+HALLOWEEN | Claire's favourite, most competitive holiday | casual
+STEP | Broken stair Phil keeps tripping on | fan
+FIZBO | Name of Cam's clown alter ego | fan
+DEDE | Jay's first wife, Claire and Mitchell's mother | fan
+JAVIER | Gloria's charming, unreliable ex-husband | fan
+FRANK | Phil's father | fan
+ANDY | Joe's male nanny, who falls for Haley | fan
+PEPPER | Mitchell and Cam's flamboyant party-planner friend | fan
+CHEERLEADER | Phil's role at college, which he still celebrates | fan
+POETRY | Manny's favourite form of self-expression | fan
+MUSIC | Subject Cam teaches at school | fan
+WEDDING | Mitchell and Cam's big day in season five | fan
+TWINS | Haley gives birth to these in season ten | fan
+BB GUN | Toy Luke fires at his sister in the pilot (2,3) | fan
+BURRELL | Ty ___, who plays Phil | fan
+BOWEN | Julie ___, who plays Claire | fan
+FERGUSON | Jesse Tyler ___, who plays Mitchell | fan
+STONESTREET | Eric ___, who plays Cam | fan
+HYLAND | Sarah ___, who plays Haley | fan
+WINTER | Ariel ___, who plays Alex | fan
+GOULD | Nolan ___, who plays Luke | fan
+RODRIGUEZ | Rico ___, who plays Manny | fan
+LANE | Nathan ___, who plays Pepper | fan
+LONG | Shelley ___, who plays DeDe | fan
+WILLARD | Fred ___, who plays Phil's father | fan
+BRATT | Benjamin ___, who plays Javier | fan
+THORPE | Gil ___, Phil's rival realtor | fan
+MISSOURI | Cam's home state, where he and Mitchell move in the end | fan
+FARM | Kind of place Cam grew up on | fan
+COUNCIL | Local body Claire runs for a seat on | fan
+HAWAII | Island destination of season one's family trip | fan
+SHORTY | Jay's long-time buddy | fan
+OLD SOUL | What Manny is often called (3,4) | fan
+SIMBA | Lion cub Lily is held up as in the pilot | fan
+REXFORD | Boy Mitchell and Cam adopt in the finale | superfan
+FULGENCIO | Joe's legal first name, chosen by Gloria | superfan
+ARVIN | Haley's nerdy scientist boyfriend | superfan
+SANJAY | Alex's academic rival | superfan
+RAINER | Weatherman Haley dates, ___ Shine | superfan
+SAL | Mitchell and Cam's wild friend, played by Elizabeth Banks | superfan
+SALTZMAN | Pepper's surname | superfan
+GRACE | Phil's late mother | superfan
+MERLE | Cam's father | superfan
+BARB | Cam's mother | superfan
+PAMERON | Nickname for Cam's sister Pam | superfan
+BIXBY | Clive ___, Phil's role-play alter ego | superfan
+MOONLIGHT | Dylan's song: In the ___ (Do Me) | superfan
+BLINDS | Pritchett's Closets & ___ | superfan
+BULLDOG | Breed of Jay's pampered pet | superfan
+CELLO | Instrument Alex plays | superfan
+POPPY | Haley's daughter, twin of George | superfan
+GEORGE | Haley's son, twin of Poppy | superfan
+SONIA | Gloria's sister | superfan
+PILAR | Gloria's mother | superfan
+ELEVEN | Number of seasons the show ran | superfan
+WYOMING | Dude ranch state of the season three opener | superfan
+AUSTRALIA | Destination of a season five family trip | superfan
+CALTECH | University Alex attends | superfan
+LARRY | Mitchell and Cam's cat | superfan
+MAGUIRE | Jeremy ___, who plays Joe | superfan
+BEATRIZ | Stephanie ___, who plays Gloria's sister | superfan
+LEVITAN | Steven ___, co-creator of the show | superfan
+LLOYD | Christopher ___, co-creator of the show | superfan
+EWING | Reid ___, who plays Dylan | superfan
+DEVINE | Adam ___, who plays Andy | superfan
+ANDERSON EMMONS | Aubrey ___, who plays Lily from season three (8-6) | superfan
+PHILSOSOPHY | Phil's punny guide to parenting wisdom | superfan

@@ -1,0 +1,135 @@
+# Disney Animation: unofficial fan crossword clues
+@title Disney Animation
+@category movies
+@blurb Princesses, sidekicks and songs from Disney's animated classics.
+@icon film
+SNOW WHITE | Heroine of Disney's first animated feature (4,5) | casual
+DUMBO | Baby circus elephant who learns to fly | casual
+BAMBI | Fawn who becomes the Great Prince of the Forest | casual
+PINOCCHIO | Wooden puppet whose nose grows when he lies | casual
+CINDERELLA | Heroine who loses a glass slipper at midnight | casual
+PETER PAN | Boy who never grows up (5,3) | casual
+TINKER BELL | Jealous pixie of Never Land (6,4) | casual
+CRUELLA | Villain who covets spotted puppy fur | casual
+MALEFICENT | Horned fairy who curses a baby princess | casual
+AURORA | Princess pricked by a spinning wheel | casual
+MOWGLI | Man-cub raised by wolves | casual
+SIMBA | Lion cub who flees after his father's death | casual
+MUFASA | Lion king voiced by James Earl Jones | casual
+SCAR | Treacherous lion uncle in a 1994 hit | casual
+TIMON | Meerkat with a carefree philosophy | casual
+RAFIKI | Wise mandrill who presents the newborn cub | casual
+HAKUNA MATATA | Swahili phrase Timon and Pumbaa sing about (6,6) | casual
+ARIEL | Mermaid who trades her voice for legs | casual
+URSULA | Sea witch with octopus tentacles | casual
+SEBASTIAN | Crab court composer under the sea | casual
+BELLE | Bookworm who falls for a Beast | casual
+GASTON | Vain hunter who woos the bookish heroine | casual
+ALADDIN | Street rat who finds a magic lamp | casual
+GENIE | Blue lamp-dweller voiced by Robin Williams | casual
+JAFAR | Scheming royal vizier with a snake staff | casual
+JASMINE | Princess of Agrabah | casual
+MULAN | Heroine who disguises herself to join the army | casual
+MUSHU | Tiny dragon voiced by Eddie Murphy | casual
+POCAHONTAS | Powhatan heroine who befriends John Smith | casual
+QUASIMODO | Bell-ringer of Notre Dame | casual
+HERCULES | Son of Zeus who must prove himself a true hero | casual
+TARZAN | Jungle man raised by gorillas | casual
+STITCH | Blue alien also known as Experiment 626 | casual
+TIANA | New Orleans waitress who dreams of a restaurant | casual
+RAPUNZEL | Princess with 70 feet of magic hair | casual
+ELSA | Snow Queen with icy powers | casual
+OLAF | Snowman who likes warm hugs | casual
+LET IT GO | Oscar-winning Frozen anthem (3,2,2) | casual
+MOANA | Voyager from Motunui chosen by the ocean | casual
+MAUI | Shapeshifting demigod with a magic fish hook | casual
+ENCANTO | 2021 film about the Madrigal family | casual
+MIRABEL | Only Madrigal grandchild without a gift | casual
+BAYMAX | Inflatable healthcare robot | casual
+RALPH | Arcade bad guy who wants to be a hero | casual
+GEPPETTO | Woodcarver who longs for a son | fan
+JIMINY CRICKET | Puppet's appointed conscience (6,7) | fan
+MONSTRO | Giant whale that swallows a woodcarver | fan
+FANTASIA | 1940 concert feature set to classical music | fan
+THUMPER | Foot-tapping rabbit pal of a fawn | fan
+LUCIFER | Wicked stepmother's cat | fan
+MERLIN | Wizard in The Sword in the Stone | fan
+BALOO | Easygoing bear who sings The Bare Necessities | fan
+BAGHEERA | Black panther who guards the man-cub | fan
+SHERE KHAN | Tiger who hates man (5,4) | fan
+ROBIN HOOD | 1973 film starring a fox outlaw (5,4) | fan
+BASIL | Mouse detective of Baker Street | fan
+FLOUNDER | Mermaid's fish friend | fan
+TRITON | King of Atlantica with a trident | fan
+LUMIERE | Candelabra who sings Be Our Guest | fan
+COGSWORTH | Mantel-clock majordomo in the Beast's castle | fan
+IAGO | Wisecracking parrot voiced by Gilbert Gottfried | fan
+ZAZU | Hornbill majordomo to the lion king | fan
+PRIDE ROCK | Royal lions' lookout (5,4) | fan
+FROLLO | Judge who raises the bell-ringer | fan
+ESMERALDA | Romani dancer in Paris | fan
+HADES | Blue-flamed lord of the underworld | fan
+KUZCO | Selfish emperor turned into a llama | fan
+YZMA | Villainous adviser to an emperor | fan
+JUMBA | Four-eyed evil genius who chases his alien creation | fan
+KENAI | Brother Bear hero transformed into a bear | fan
+PASCAL | Princess's chameleon companion in Tangled | fan
+MAXIMUS | Palace horse who hunts Flynn Rider | fan
+GOTHEL | Mother ___, villain of Tangled | fan
+NAVEEN | Prince of Maldonia turned into a frog | fan
+FACILIER | Doctor ___, the Shadow Man | fan
+VANELLOPE | Glitchy racer from Sugar Rush | fan
+HIRO | Teen robotics prodigy in Big Hero 6 | fan
+KRISTOFF | Ice harvester with a reindeer pal | fan
+ARENDELLE | Kingdom ruled by the Snow Queen | fan
+TE FITI | Island goddess whose heart was stolen (2,4) | fan
+TAMATOA | Giant crab obsessed with shiny things | fan
+ZOOTOPIA | 2016 film about a bunny police officer | fan
+SISU | Water dragon voiced by Awkwafina | fan
+LUISA | Super-strong Madrigal sister | fan
+IDINA MENZEL | Voice of the Snow Queen (5,6) | fan
+JODI BENSON | Voice of the Little Mermaid (4,6) | fan
+ALAN MENKEN | Composer of many Disney Renaissance scores (4,6) | fan
+CLEO | Woodcarver's pet goldfish in Pinocchio | superfan
+FIGARO | Woodcarver's pet kitten in Pinocchio | superfan
+STROMBOLI | Puppet-show owner who cages his star | superfan
+LAMPWICK | Boy turned into a donkey on Pleasure Island | superfan
+CHERNABOG | Demon of Bald Mountain in Fantasia | superfan
+YEN SID | Sorcerer whose name is Disney backwards (3,3) | superfan
+CASEY JUNIOR | Circus train in Dumbo (5,6) | superfan
+TIMOTHY | Mouse who befriends the flying elephant | superfan
+DRIZELLA | One of Cinderella's stepsisters | superfan
+MERRYWEATHER | Blue-clad good fairy in Sleeping Beauty | superfan
+BERLIOZ | Piano-playing kitten in The Aristocats | superfan
+ARCHIMEDES | Merlin's talking owl | superfan
+MADAM MIM | Shapeshifting witch who duels Merlin (5,3) | superfan
+TARAN | Assistant pig-keeper hero of The Black Cauldron | superfan
+HORNED KING | Villain of The Black Cauldron (6,4) | superfan
+RATIGAN | Professor villain of The Great Mouse Detective | superfan
+DODGER | Street dog voiced by Billy Joel | superfan
+FLOTSAM | One of Ursula's twin moray eels | superfan
+CAVE OF WONDERS | Tiger-headed treasure trove (4,2,7) | superfan
+SHENZI | Hyena voiced by Whoopi Goldberg | superfan
+RATCLIFFE | Greedy governor in Pocahontas | superfan
+DJALI | Pet goat of the Romani dancer in Hunchback | superfan
+SHAN YU | Hun leader in Mulan (4,2) | superfan
+KERCHAK | Silverback leader of the gorilla troop | superfan
+CLAYTON | Hunter villain of Tarzan | superfan
+KIDA | Atlantean princess in The Lost Empire | superfan
+PLEAKLEY | One-eyed Earth expert in Lilo & Stitch | superfan
+KODA | Chatty bear cub in Brother Bear | superfan
+RHINO | Hamster in a ball who idolizes Bolt | superfan
+MAMA ODIE | Blind bayou priestess with a pet snake (4,4) | superfan
+TADASHI | Elder Hamada brother in Big Hero 6 | superfan
+OAKEN | Owner of a trading post and sauna | superfan
+MARSHMALLOW | Giant snow monster guarding the ice palace | superfan
+AHTOHALLAN | Mythical river of memory in Frozen II | superfan
+BRUNI | Fire spirit salamander in Frozen II | superfan
+GRAMMA TALA | Voyager's grandmother reborn as a manta ray (6,4) | superfan
+KAKAMORA | Coconut-armoured pirates | superfan
+FINNICK | Fennec fox con artist with a deep voice | superfan
+CLAWHAUSER | Donut-loving cheetah desk officer | superfan
+TUK TUK | Raya's giant rolling pill bug (3,3) | superfan
+MAGNIFICO | King of Rosas in Wish | superfan
+HOWARD ASHMAN | Lyricist of The Little Mermaid (6,6) | superfan
+BURBANK | California city home to Disney Animation | superfan

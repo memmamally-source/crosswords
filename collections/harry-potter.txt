@@ -1,0 +1,137 @@
+# Harry Potter: unofficial fan crossword clues
+@title Harry Potter
+@category movies
+@blurb Hogwarts, house points and the boy who lived.
+@icon film
+HOGWARTS | School of Witchcraft and Wizardry | casual
+HARRY POTTER | The boy who lived (5,6) | casual
+HERMIONE | Bookish friend of Harry, surname Granger | casual
+RON WEASLEY | Harry's red-haired best friend (3,7) | casual
+DUMBLEDORE | Long-bearded headmaster, Albus | casual
+VOLDEMORT | He Who Must Not Be Named | casual
+SNAPE | Potions master Severus | casual
+HAGRID | Half-giant gamekeeper with a pink umbrella | casual
+QUIDDITCH | Wizarding sport played on broomsticks | casual
+GRYFFINDOR | Harry's house, with a lion emblem | casual
+SLYTHERIN | House with a serpent emblem | casual
+HUFFLEPUFF | House represented by a badger | casual
+RAVENCLAW | House represented by an eagle | casual
+MUGGLE | Non-magical person | casual
+HEDWIG | Harry's snowy owl | casual
+SNITCH | Golden ball worth 150 points | casual
+WAND | Ollivander's stock-in-trade, holly and phoenix feather for Harry | casual
+DOBBY | House-elf freed with a sock | casual
+DRACO | Malfoy who taunts Harry | casual
+SORTING HAT | It places first-years in their houses (7,3) | casual
+DIAGON ALLEY | Wizarding shopping street in London (6,5) | casual
+GRINGOTTS | Goblin-run wizarding bank | casual
+HOGSMEADE | All-wizarding village near the school | casual
+SCAR | Lightning-bolt mark on Harry's forehead | casual
+MCGONAGALL | Transfiguration professor Minerva | casual
+PATRONUS | Silvery guardian charm, a stag for Harry | casual
+DEMENTOR | Hooded Azkaban guard that drains happiness | casual
+AZKABAN | Wizarding prison on a remote island | casual
+HORCRUX | Object hiding a fragment of a soul | casual
+ALOHOMORA | Unlocking charm | casual
+LUMOS | Wand-lighting charm | casual
+EXPELLIARMUS | Harry's trademark disarming spell | casual
+DANIEL RADCLIFFE | Actor who played the boy wizard (6,9) | casual
+EMMA WATSON | Actress who played Hermione (4,6) | casual
+ROWLING | Author J.K. | casual
+PRIVET DRIVE | Dursleys' street in Little Whinging (6,5) | casual
+BUTTERBEER | Frothy drink served at the Three Broomsticks | casual
+TROLL | Creature loose in the dungeons on Halloween | casual
+DEATH EATERS | Voldemort's masked followers (5,6) | casual
+SIRIUS | Harry's godfather, Black | casual
+FORBIDDEN FOREST | Woods near Hagrid's hut, off-limits to students (9,6) | casual
+LILY | Harry's mother | casual
+PETUNIA | Harry's aunt | casual
+DUDLEY | Harry's spoiled cousin | casual
+QUAFFLE | Red ball thrown through the hoops | fan
+BLUDGER | Ball that tries to knock players off brooms | fan
+SEEKER | Harry's Quidditch position | fan
+FIREBOLT | Top racing broom Sirius gives Harry | fan
+LUPIN | Remus, werewolf Defence teacher | fan
+TONKS | Metamorphmagus Nymphadora | fan
+BELLATRIX | Death Eater Lestrange, Sirius's cousin | fan
+LUNA | Dreamy Ravenclaw, Lovegood | fan
+NEVILLE | Longbottom, a whiz at Herbology | fan
+GINNY | Youngest Weasley, and only daughter | fan
+CROOKSHANKS | Hermione's ginger cat | fan
+SCABBERS | Ron's pet rat | fan
+BUCKBEAK | Hippogriff rescued in book three | fan
+FAWKES | Dumbledore's phoenix | fan
+NAGINI | Voldemort's snake | fan
+FLUFFY | Hagrid's three-headed dog | fan
+ARAGOG | Giant spider living in the woods | fan
+BASILISK | Serpent in the Chamber of Secrets | fan
+THESTRAL | Winged horse seen only by those who've seen death | fan
+ACCIO | Summoning charm | fan
+RIDDIKULUS | Spell that defeats a boggart | fan
+POLYJUICE | ___ Potion, lets you take another's form | fan
+PENSIEVE | Stone basin for viewing memories | fan
+MARAUDERS MAP | Parchment showing everyone in the castle (9,3) | fan
+UMBRIDGE | Dolores, pink-clad Ministry meddler | fan
+LOCKHART | Gilderoy, vain celebrity author | fan
+QUIRRELL | Turban-wearing professor in book one | fan
+SLUGHORN | Horace, Potions master returning in book six | fan
+TRELAWNEY | Divination teacher Sybill | fan
+FILCH | Caretaker with a cat called Mrs Norris | fan
+CEDRIC | Diggory, Hufflepuff champion | fan
+KRUM | Viktor, Bulgarian Seeker | fan
+BEAUXBATONS | French school of magic | fan
+ALAN RICKMAN | Actor who played Snape (4,7) | fan
+MAGGIE SMITH | Actress who played McGonagall (6,5) | fan
+RUPERT GRINT | Actor who played Ron (6,5) | fan
+RALPH FIENNES | Actor who played Voldemort (5,7) | fan
+GALLEON | Gold wizarding coin | fan
+MOANING MYRTLE | Ghost who haunts a girls' bathroom (7,6) | fan
+BURROW | Weasley family home, The ___ | fan
+OLLIVANDER | Wandmaker in Diagon Alley | fan
+ERISED | Mirror of ___ | fan
+FLEUR | Beauxbatons champion Delacour | fan
+GARY OLDMAN | Actor who played Sirius (4,6) | fan
+PADFOOT | Sirius's Marauder nickname | superfan
+MOONY | Remus's Marauder nickname | superfan
+PRONGS | James's Marauder nickname | superfan
+WORMTAIL | Pettigrew's Marauder nickname | superfan
+MARVOLO | Tom Riddle's middle name | superfan
+ARIANA | Dumbledore's younger sister | superfan
+ABERFORTH | Dumbledore's brother, a goat-loving barman | superfan
+GRINDELWALD | Gellert, dark wizard defeated in 1945 | superfan
+NURMENGARD | Prison built by Grindelwald | superfan
+MEROPE | Voldemort's mother, a Gaunt | superfan
+SMELTINGS | Dudley's private school | superfan
+GRUNNINGS | Drill firm where Vernon works | superfan
+MARGE | Vernon's sister, inflated in book three | superfan
+HOLLY | Wood of Harry's wand | superfan
+PIGWIDGEON | Ron's tiny owl, a gift from Sirius | superfan
+WITHERWINGS | Buckbeak's alias while in hiding | superfan
+STAN SHUNPIKE | Knight Bus conductor (4,8) | superfan
+SCRIMGEOUR | Minister Rufus, Fudge's successor | superfan
+GRINDYLOW | Water demon studied in Lupin's class | superfan
+ACROMANTULA | Giant spider species of Aragog | superfan
+MORSMORDRE | Incantation that conjures the Dark Mark | superfan
+LEVICORPUS | Spell that hoists a person up by the ankle | superfan
+AMORTENTIA | Most powerful love potion | superfan
+WOLFSBANE | Potion Snape brews for Remus | superfan
+PEVERELL | Family of the three brothers in the tale | superfan
+BEEDLE | ___ the Bard, author of wizarding tales | superfan
+GODRIC | Gryffindor founder's first name | superfan
+SALAZAR | Slytherin founder's first name | superfan
+BLOODY BARON | Slytherin house ghost (6,5) | superfan
+BINNS | Ghost who teaches History of Magic | superfan
+FIRENZE | Centaur who teaches Divination | superfan
+REGULUS | Sirius's brother, signed R.A.B. | superfan
+DENTISTS | Profession of Hermione's parents | superfan
+ROSMERTA | Madam who runs the Three Broomsticks | superfan
+CHUDLEY CANNONS | Ron's favourite Quidditch team (7,7) | superfan
+HOLYHEAD HARPIES | Ginny's professional team (8,7) | superfan
+WRONSKI | ___ Feint, a Seeker's dive | superfan
+SPINNERS END | Street where Snape lives (8,3) | superfan
+SHELL COTTAGE | Bill and Fleur's seaside home (5,7) | superfan
+CAPUT DRACONIS | First password to Gryffindor Tower (5,8) | superfan
+ALNWICK | Castle used for flying lesson scenes | superfan
+GLENFINNAN | Viaduct the train crosses in the films | superfan
+ALFONSO CUARÓN | Director of Prisoner of Azkaban (7,6) | superfan
+DAVID YATES | Director of the final four films (5,5) | superfan
