@@ -5,6 +5,11 @@
 //
 //   node tools/freeze-puzzles.js                 # freeze through 6 months ahead
 //   node tools/freeze-puzzles.js --through 2027-06
+//   node tools/freeze-puzzles.js --refreeze-from 2026-10-19
+//
+// --refreeze-from rebuilds the Dailies from that date on, after a change to
+// the Daily's schedule. It refuses any date up to today (South African
+// time), so a puzzle that has been published is never changed.
 //
 // Writes one file per month, puzzles/YYYY-MM.json (Dailies and Minis) and
 // puzzles/brutal-YYYY-MM.json (the Brutal Challenges of weeks starting that
@@ -72,6 +77,32 @@ function buildBrutalMonth(month) {
   return `{\n  "version": 1,\n  "month": ${JSON.stringify(month)},\n  "brutal": {\n${block}\n  }\n}\n`;
 }
 
+const sastToday = () => new Date(Date.now() + 2 * 3600 * 1000).toISOString().slice(0, 10);
+
+// Rebuilds the not-yet-published Dailies from `from` on, keeping every
+// earlier day exactly as it was frozen.
+function refreeze(from, index) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(from)) throw new Error('--refreeze-from needs a date like 2026-10-19');
+  if (from <= sastToday()) throw new Error(`${from} may already be published (today is ${sastToday()} in South Africa)`);
+  for (const month of Object.keys(index.months).filter((m) => m >= from.slice(0, 7))) {
+    const file = path.join(dir, `${month}.json`);
+    const text = fs.readFileSync(file, 'utf8');
+    const data = JSON.parse(text);
+    if (render(month, data.daily, data.mini) !== text) throw new Error(`${month}.json doesn't round-trip; not touching it`);
+    let changed = 0;
+    for (const date of Object.keys(data.daily)) {
+      if (date < from) continue;
+      const db = dailyBuild(date);
+      data.daily[date] = freeze(generate(db.bank, db.options));
+      changed++;
+    }
+    const next = render(month, data.daily, data.mini);
+    fs.writeFileSync(file, next);
+    index.months[month] = fingerprint(next);
+    console.log(`Rebuilt ${changed} Dailies in ${month}`);
+  }
+}
+
 function readIndex() {
   return fs.existsSync(indexFile) ? JSON.parse(fs.readFileSync(indexFile, 'utf8')) : { version: 1, months: {} };
 }
@@ -82,6 +113,8 @@ function main() {
   if (!/^\d{4}-\d{2}$/.test(through)) throw new Error('--through needs a month like 2027-06');
   fs.mkdirSync(dir, { recursive: true });
   const index = readIndex();
+  const from = process.argv.indexOf('--refreeze-from');
+  if (from > 0) refreeze(process.argv[from + 1], index);
   let added = 0;
   for (let month = LAUNCH_MONTH; month <= through; month = nextMonth(month)) {
     const file = path.join(dir, `${month}.json`);

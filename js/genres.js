@@ -344,7 +344,11 @@ const DAILY_SOURCES = BASE_GENRES.filter(
 const DAILY_BANK = mixGenre('daily', 'The Daily', '', '', DAILY_SOURCES).words;
 
 // Indexed by Date.getDay(): 0 = Sunday.
-const DAILY_SCHEDULE = [
+// From 19 October 2026 the Daily is smaller and gentler. Earlier Dailies keep
+// the original sizes (DAILY_SCHEDULE_ORIGINAL) so their frozen grids and
+// labels still match.
+const EASIER_DAILY_FROM = '2026-10-19';
+const DAILY_SCHEDULE_ORIGINAL = [
   { day: 'Sunday', level: 'Grand', count: 40, maxSize: 23, maxLen: 15, hard: 8 },
   { day: 'Monday', level: 'Gentle', count: 22, maxSize: 17, maxLen: 8, hard: 3 },
   { day: 'Tuesday', level: 'Moderate', count: 25, maxSize: 17, maxLen: 9, hard: 4 },
@@ -352,6 +356,15 @@ const DAILY_SCHEDULE = [
   { day: 'Thursday', level: 'Tricky', count: 30, maxSize: 21, maxLen: 15, hard: 6 },
   { day: 'Friday', level: 'Challenging', count: 32, maxSize: 21, maxLen: 15, hard: 7 },
   { day: 'Saturday', level: 'Fiendish', count: 34, maxSize: 21, maxLen: 15, hard: 8 },
+];
+const DAILY_SCHEDULE = [
+  { day: 'Sunday', level: 'Grand', count: 34, maxSize: 21, maxLen: 15, hard: 4 },
+  { day: 'Monday', level: 'Gentle', count: 18, maxSize: 15, maxLen: 8, hard: 1 },
+  { day: 'Tuesday', level: 'Gentle', count: 20, maxSize: 15, maxLen: 9, hard: 2 },
+  { day: 'Wednesday', level: 'Moderate', count: 22, maxSize: 17, maxLen: 10, hard: 2 },
+  { day: 'Thursday', level: 'Moderate', count: 24, maxSize: 17, maxLen: 12, hard: 3 },
+  { day: 'Friday', level: 'Tricky', count: 26, maxSize: 19, maxLen: 15, hard: 4 },
+  { day: 'Saturday', level: 'Challenging', count: 28, maxSize: 19, maxLen: 15, hard: 5 },
 ];
 
 // The Mini is a quick warm-up of short everyday and pop-culture answers.
@@ -374,7 +387,7 @@ function dayNumberOf(date) {
 }
 function scheduleFor(date) {
   const [y, m, d] = date.split('-').map(Number);
-  return DAILY_SCHEDULE[new Date(Date.UTC(y, m - 1, d)).getUTCDay()];
+  return (date < EASIER_DAILY_FROM ? DAILY_SCHEDULE_ORIGINAL : DAILY_SCHEDULE)[new Date(Date.UTC(y, m - 1, d)).getUTCDay()];
 }
 function dailyBuild(date) {
   const day = dayNumberOf(date);
@@ -415,7 +428,7 @@ function brutalBuild(week) {
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
-    GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW,
+    GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, EASIER_DAILY_FROM, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW,
     scheduleFor, dailyBuild, miniBuild, COLLECTIONS, THEMED_LEVELS, themedBank, levelsFor, bankFor,
     weekOf, brutalBuild,
   };

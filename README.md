@@ -22,9 +22,12 @@ draws the app icons.
 
 - **The Daily:** an academic crossword drawn from 23 subjects and about
   10,000 answers. Like a newspaper crossword it gets harder through the week:
-  Monday is gentle, with 22 clues and shorter answers; Saturday is the
-  toughest, with 34; Sunday has the largest grid, with 40 clues. Each clue shows its subject (this can be
-  switched off in settings).
+  Monday is gentle, with 18 clues, shorter answers and one tough answer;
+  Saturday is the toughest, with 28 clues and 5 tough answers; Sunday has the
+  largest grid, with 34 clues. (Until 18 October 2026 the Daily was bigger and
+  harder: 22 to 40 clues with 3 to 8 tough answers. Those Dailies keep their
+  original sizes.) Each clue shows its subject (this can be switched off in
+  settings).
 - **The Mini:** six quick clues of everyday and pop-culture answers.
 - **Archive:** a calendar of every Daily and Mini since launch
   (1 September 2026), with solved, in-progress and finished-with-help marks.
@@ -42,8 +45,7 @@ draws the app icons.
   | Expert | 32 | 12 |
   | Brutal | 34 | 16, and no easy answers at all |
 - **A mix of easy and hard clues:** every puzzle has a set number of tough
-  answers (see the table; 3 on a Monday Daily rising to 8 on Saturday and
-  Sunday), and the rest lean towards easier ones. The Mini has no hard
+  answers (see the table; 1 on a Monday Daily rising to 5 on Saturday), and the rest lean towards easier ones. The Mini has no hard
   answers.
   - *Mixed:* Mixed Bag, Pop & Fun Mix, Academic Mix.
   - *Everyday:* Animal Kingdom, Food & Drink, World Geography, Science Lab,
@@ -117,7 +119,10 @@ the site for offline use. The icons in `icons/` are drawn by
   fingerprint, and the tests fail if a frozen month is edited or if fewer
   than 60 days ahead are frozen. To freeze more months:
   `node tools/freeze-puzzles.js` (or `--through 2027-12`). It only adds new
-  months and never rewrites existing ones.
+  months and never rewrites existing ones. After a change to the Daily's
+  schedule, `node tools/freeze-puzzles.js --refreeze-from YYYY-MM-DD`
+  rebuilds the Dailies from that date on. It refuses any date up to today
+  (South African time), so nothing already published changes.
 - **One official day for everyone:** a new Daily and Mini at midnight South
   African time (00:00 SAST, UTC+2). The time comes from the web server's
   clock, so a device set to the wrong date or time zone still gets the same
