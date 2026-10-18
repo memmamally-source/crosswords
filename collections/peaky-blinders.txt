@@ -14,14 +14,13 @@ BIRMINGHAM | English city where the gang rules | casual
 SMALL HEATH | District the Shelbys call home (5,5) | casual
 GARRISON | Pub at the centre of Shelby business | casual
 RAZOR | Blade sewn into the gang's caps | casual
-CAP | Flat ___, the gang's trademark headgear | casual
 CILLIAN MURPHY | Actor who played Tommy (7,6) | casual
 TOM HARDY | Actor who played Alfie (3,5) | casual
-ALFIE | Camden gangster and rum baker | casual
+ALFIE | Unpredictable London gangster with a distillery | casual
 GRACE | Barmaid and spy who wins Tommy's heart | casual
 ORDER | "By ___ of the..." (gang's warning) | casual
 HORSES | Animals Tommy loves and races | casual
-BOOKMAKER | The family's legal betting trade | casual
+BOOKMAKER | Trade of the family's legitimate shop, taking wagers | casual
 PARLIAMENT | Where Tommy takes a seat as an MP | casual
 FRANCE | Country where the brothers fought in WWI | casual
 IRA | Irish republican group Tommy deals with | casual
@@ -40,26 +39,26 @@ LIZZIE | Secretary who marries Tommy | casual
 MICHAEL | Polly's son, who joins the business | casual
 LABOUR | Party Tommy represents as an MP | casual
 FLAT CAP | Peaked headgear of the gang (4,3) | casual
-CAMPBELL | Inspector sent from Belfast | casual
+CAMPBELL | Ruthless Northern Irish policeman of series one and two | casual
 SHELL SHOCK | Lasting war trauma many characters carry (5,5) | casual
 NARROWBOAT | Canal craft the Shelbys use for smuggling | casual
 TUNNELLER | Tommy's underground role in the war | casual
 UNCLE | Charlie's relation to Tommy | casual
 SOLOMONS | Alfie's surname | fan
-MOSLEY | Fascist leader Tommy infiltrates | fan
-EPSOM | Racecourse of the Derby in series two | fan
+MOSLEY | Real-life politician Tommy works to bring down | fan
+EPSOM | Surrey racecourse of series two's climax | fan
 DERBY | Big race at Epsom in series two | fan
 BILLY KIMBER | Racecourse boss of series one (5,6) | fan
-SABINI | Italian gangster boss of series two | fan
-CHANGRETTA | Luca, the American mafioso of series four | fan
+SABINI | London gang boss of series two | fan
+CHANGRETTA | Surname of series four's American villain | fan
 LUCA | First name of the vengeful New York mafioso | fan
 ADRIEN BRODY | Oscar winner who played Luca (6,5) | fan
 GINA | Michael's American wife | fan
-ESME | John's wife, of the Lee family | fan
+ESME | John's fiery wife from an arranged match | fan
 LINDA | Arthur's devout wife | fan
 JOHNNY DOGS | Tommy's Romani friend (6,4) | fan
 CURLY | Horse-whispering helper at the yard | fan
-CHARLIE | Uncle who runs the boat yard | fan
+CHARLIE | Tommy's relative who runs the boat yard | fan
 TATIANA | Russian grand duchess of series three | superfan
 FREDDIE | Ada's communist husband | fan
 RUBY | Tommy and Lizzie's daughter | fan
@@ -83,7 +82,7 @@ MAY CARLETON | Wealthy widow who trains Tommy's horse (3,8) | superfan
 RUBEN | Painter who falls for Polly | superfan
 JESSIE EDEN | Union organiser Tommy meets (6,4) | superfan
 BONNIE | Young boxer son of Aberama | superfan
-ABERAMA | Romani assassin, father of Bonnie | superfan
+ABERAMA | Romani assassin played by Aidan Gillen | superfan
 BELFAST | City Campbell comes from | superfan
 DIANA | Mitford who appears beside Mosley | superfan
 GRAY | Polly's married surname | superfan
@@ -111,13 +110,12 @@ MOSS | Police sergeant in Tommy's pocket | superfan
 TUBERCULOMA | Condition Tommy is told he has in series six | superfan
 BURGESS | Grace's maiden surname | superfan
 BLACK STAR DAY | Planned purge in series two (5,4,3) | superfan
-STRONG | Uncle Charlie's surname | superfan
-HUGHES | Father John, sinister priest of series three | superfan
+STRONG | Surname of the boat-yard boss | superfan
+HUGHES | Sinister priest of series three, Father ___ | superfan
 PADDY CONSIDINE | Actor who played the scheming priest (5,9) | superfan
 DARBY | Sabini's first name | superfan
 MAJOR | Campbell's army rank by series two | superfan
 COCAINE | Drug that grips Arthur in series two | superfan
-BINGLEY HALL | Venue of Mosley's series-five rally (7,4) | superfan
 BAD SEEDS | Nick Cave's band on the theme (3,5) | superfan
 HARRY KIRTON | Actor who played Finn (5,6) | superfan
 FINN COLE | Actor who played Michael (4,4) | superfan
@@ -128,8 +126,7 @@ JEWISH | Alfie's faith | fan
 GOLD | Aberama's surname | fan
 BOXING | Sport of Aberama's son | fan
 MAFIA | Luca's criminal organisation | fan
-RACECOURSE | Kimber's turf, where pitches are fought over | fan
+RACECOURSE | Gambling venue where pitches are fought over | fan
 FASCISM | Mosley's movement, which Tommy opposes | fan
 RUSSIANS | Exiled aristocrats in series three's deal | fan
 ITALIAN | Heritage of Sabini's gang | fan
-UNION | Labour body Jessie Eden organises | fan

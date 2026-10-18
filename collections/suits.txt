@@ -3,15 +3,15 @@
 @category tv
 @blurb A star Manhattan closer hires a brilliant associate with a secret.
 @icon tv
-HARVEY | Specter, the firm's best closer | casual
-MIKE | Ross, brilliant associate with a secret | casual
+HARVEY | Cocky star litigator who plays the man, not the odds | casual
+MIKE | Brilliant dropout who bluffs his way into the firm | casual
 DONNA | Harvey's all-knowing secretary | casual
-JESSICA | Pearson, the firm's managing partner | casual
-LOUIS | Litt, the firm's prickly financial partner | casual
-RACHEL | Zane, paralegal who wins Mike's heart | casual
+JESSICA | Formidable founder at the head of the firm | casual
+LOUIS | Prickly lawyer who loves ballet and mud baths | casual
+RACHEL | Aspiring lawyer who wins Mike's heart | casual
 HARVARD | Law school Mike claims he attended | casual
-MANHATTAN | New York borough where the firm sits | casual
-LAWYER | What Mike pretends to be, legally | casual
+MANHATTAN | Borough where the firm's tower stands | casual
+LAWYER | What Mike pretends to be without a licence | casual
 PARALEGAL | Rachel's job at the start | casual
 ASSOCIATE | Mike's role at the firm at first | casual
 CLOSER | Harvey's reputation: best ___ in the city | casual
@@ -28,7 +28,7 @@ SEATTLE | City Mike and Rachel move to | casual
 LITT UP | Gloating catchphrase: "You just got ___!" (4,2) | casual
 USA | Cable network that aired the show | casual
 NEW YORK | City where the firm is based (3,4) | casual
-LAW FIRM | Pearson Hardman, for one (3,4) | casual
+LAW FIRM | Partnership of attorneys, like the show's (3,4) | casual
 DEGREE | Credential Mike never actually earned | casual
 SUIT | Harvey's sharp everyday wear | casual
 BICYCLE | Mike's way around town | casual
@@ -42,21 +42,21 @@ PAULSEN | Donna's surname | casual
 MARIJUANA | Contents of the briefcase at Mike's interview | casual
 LSAT | Law exam Mike took for others for cash | casual
 PARTNER | Rank every associate wants to make | casual
-WEDDING | Mike and Rachel's big day, with Harvey there | casual
+WEDDING | Mike and Rachel's big day in the season-seven finale | casual
 LEGAL DRAMA | Genre of the show (5,5) | casual
 SECRETARY | Donna's job title at the start | casual
 NINE | Number of seasons it ran | casual
 SCOTTIE | Harvey's ex and courtroom rival | fan
-KATRINA | Bennett, associate who rises to partner | fan
-ALEX | Williams, Harvey's old friend who joins as partner | fan
-SAMANTHA | Wheeler, tough newcomer partner | fan
-ROBERT | Zane, Rachel's powerful father | fan
+KATRINA | Louis's ambitious protegee who rises to partner | fan
+ALEX | Harvey's old friend who joins as a partner in season eight | fan
+SAMANTHA | Hard-charging partner who arrives in season eight | fan
+ROBERT | Rachel's powerful father, later a name partner | fan
 HARDMAN | Daniel, the ousted co-founder | fan
-TRAVIS | Tanner, Harvey's slick rival lawyer | fan
+TRAVIS | Harvey's slick rival lawyer, played by Eric Close | fan
 DARBY | Edward, the British merger partner | fan
-SHEILA | Sazs, Harvard admissions officer Louis loves | fan
+SHEILA | Harvard admissions officer Louis loves | fan
 HAROLD | Hapless associate Louis torments | fan
-PAULA | Agard, Harvey's therapist | fan
+PAULA | Harvey's therapist, later his girlfriend | fan
 CAHILL | Sean, the SEC lawyer | fan
 MUDDING | Louis's beloved spa ritual | fan
 EIDETIC | Type of memory Mike has | fan
@@ -68,7 +68,7 @@ DULE HILL | Actor who played Alex (4,4) | fan
 COLUMBIA | Law school Rachel attends | fan
 NAME PARTNER | Title whose surname goes on the door (4,7) | fan
 GRAMMY | Mike's beloved grandmother, to him | fan
-LOGAN | Rachel's ex, ___ Sanders | fan
+LOGAN | Rachel's wealthy ex who resurfaces | fan
 FORSTMAN | Charles, the ruthless investor | fan
 DANBURY | Federal prison where Mike is held | fan
 SOLOFF | Jack, partner who schemes against Jessica | fan
@@ -77,7 +77,7 @@ KORSH | Aaron, creator of the show | fan
 TORONTO | Canadian city where it was filmed | fan
 NORMA | Louis's longtime assistant | fan
 CAN OPENER | Harvey and Donna's victory ritual (3,6) | fan
-CLINIC | Legal aid office Mike runs after prison | fan
+CLINIC | Legal aid office where Mike works after prison | fan
 DISBARRED | Jessica's fate after leaving the firm | fan
 GRETCHEN | Harvey's no-nonsense later assistant | fan
 JENNY | Trevor's girlfriend, who dates Mike | fan
@@ -96,30 +96,30 @@ KEVIN | Mike's cellmate who needs a deal | superfan
 ESTHER | Louis's sister | superfan
 LILY | Harvey's mother | superfan
 SAXOPHONE | Instrument of Harvey's father | superfan
-TARA | Messer, the architect Louis dates | superfan
-OLIVER | Grady, Mike's protege at the clinic | superfan
+TARA | Architect Louis falls for in season seven | superfan
+OLIVER | Mike's eager protege at the legal clinic | superfan
 GIBBS | Anita, prosecutor who pursues Mike | superfan
-FAYE | Richardson, the bar watchdog of season eight | superfan
+FAYE | Strict bar watchdog of season eight | superfan
 CAMERON | Dennis, Harvey's old DA boss | superfan
 SIDWELL | Jonathan, investment banker who hires Mike | superfan
 RAY | Harvey's trusted driver | superfan
-AVA | Hessington, oil executive client | superfan
+AVA | Oil executive client of season three | superfan
 HESSINGTON | Ava's surname, also her oil firm's name | superfan
 VINYL | Format of Harvey's record collection | superfan
-WENDELL PIERCE | Actor who played Robert Zane (7,6) | superfan
+WENDELL PIERCE | Actor who played Rachel's father (7,6) | superfan
 AMANDA SCHULL | Actress who played Katrina (6,6) | superfan
-DAVID COSTABILE | Actor who played Daniel Hardman (5,9) | superfan
-DENNIS | Cameron's surname | superfan
+DAVID COSTABILE | Actor who played the ousted co-founder (5,9) | superfan
+DENNIS | Surname of Harvey's corrupt former DA boss | superfan
 MALONE | Jeff, Jessica's SEC boyfriend | superfan
 BODINSKI | Gretchen's surname | superfan
 GUNDERSON | Harold's surname | superfan
-AGARD | Paula's surname | superfan
-MESSER | Tara's surname | superfan
+AGARD | Surname of Harvey's therapist | superfan
+MESSER | Surname of the architect Louis dates | superfan
 GRADY | Oliver's surname | superfan
-SANDERS | Logan's surname | superfan
+SANDERS | Surname of Rachel's wealthy ex | superfan
 RICHARDSON | Faye's surname | superfan
-SCOTT | Dana ___, Harvey's Harvard Law rival | superfan
-DANA | Scottie's real first name | superfan
+SCOTT | Surname of Harvey's Harvard Law rival | superfan
+DANA | Real first name of Harvey's courtroom rival and ex | superfan
 BRATTON GOULD | Rival firm Alex leaves to join Harvey (7,5) | superfan
 ZOE | Lawford, Harvey's romance in season three | superfan
 CLIFFORD | Danner, wrongly convicted man Harvey helps | superfan
