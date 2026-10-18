@@ -19,5 +19,5 @@ window.FIREBASE_CONFIG = {
   // Multiplayer (Help me solve): the Realtime Database URL from Firebase
   // console → Build → Realtime Database. While this is empty, the "Help me
   // solve" button stays hidden.
-  databaseURL: '',
+  databaseURL: 'https://crossword-hub-default-rtdb.europe-west1.firebasedatabase.app',
 };

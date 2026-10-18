@@ -19,7 +19,7 @@ What is built and live today, what's unfinished, and how it compares with the
 | 3 — Hints, scoring, assisted status, No-Hint Club | ✅ Core complete; wrap-up needed for the 18 October decisions | #16 |
 | 3.5 — Free-access alignment and Stage 3 wrap-up | ✅ Complete | #17 |
 | 4 — Growth and social sharing | ✅ Complete (#18, #19); new category collections to follow | #18, #19 |
-| 5 — Multiplayer (Help me solve) | 🔄 Built, PR awaiting approval; switches on once the Realtime Database exists | — |
+| 5 — Multiplayer (Help me solve) | ✅ Built (#20); switched on by the database URL PR | #20 |
 | 6 — Verified leaderboards | Not started | — |
 | 7 — Gifts | Not started | — |
 | 8 — Monetisation preparation (design only) | Not started | — |
@@ -148,8 +148,9 @@ What is built and live today, what's unfinished, and how it compares with the
   - same-square races, offline typing and the five-player limit
   - removing, leaving, and finishing together
   - eight kinds of misuse, all refused by the database
-- **⚠️ Off until the owner creates the Realtime Database**, publishes the
-  rules and adds its URL (see the README, Multiplayer).
+- **Database:** `crossword-hub-default-rtdb` (europe-west1), with the rules
+  published; its URL was added after Stage 5 was merged, which switches the
+  button on.
 
 ### Accounts and Firebase
 
