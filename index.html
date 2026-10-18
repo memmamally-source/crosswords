@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=19" />
+  <link rel="stylesheet" href="css/styles.css?v=20" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -185,6 +185,7 @@
           <div class="menu">
             <button class="tool" data-menu="reveal">Reveal</button>
             <div class="menu-list" data-menu-list="reveal" hidden>
+              <button data-action="rephrase" id="rephrase-item" hidden>Rephrase clue</button>
               <button data-action="reveal-cell">Square</button>
               <button data-action="reveal-word">Word</button>
               <button data-action="reveal-all">Puzzle</button>
@@ -263,6 +264,10 @@
       <p class="kicker">Your record</p>
       <h2 id="stats-title">Statistics</h2>
       <div class="stat-tiles" id="stat-tiles"></div>
+      <h3>The No-Hint Club</h3>
+      <p class="club-lede">Finish without revealing, rephrasing or checking anything to count. Fewer hint points is better.</p>
+      <div class="stat-tiles" id="club-tiles"></div>
+      <ul class="badges" id="club-badges"></ul>
       <h3>The Daily by day of the week</h3>
       <div class="weekday-table" id="weekday-table"></div>
     </div>
@@ -303,14 +308,15 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=19"></script>
-  <script src="js/words.js?v=19"></script>
-  <script src="js/collections.js?v=19"></script>
-  <script src="js/genres.js?v=19"></script>
-  <script src="js/sync.js?v=19"></script>
-  <script src="js/featured.js?v=19"></script>
-  <script src="js/app.js?v=19"></script>
-  <script src="js/firebase-config.js?v=19"></script>
-  <script type="module" src="js/account.js?v=19"></script>
+  <script src="js/generator.js?v=20"></script>
+  <script src="js/words.js?v=20"></script>
+  <script src="js/collections.js?v=20"></script>
+  <script src="js/genres.js?v=20"></script>
+  <script src="js/sync.js?v=20"></script>
+  <script src="js/featured.js?v=20"></script>
+  <script src="js/hints.js?v=20"></script>
+  <script src="js/app.js?v=20"></script>
+  <script src="js/firebase-config.js?v=20"></script>
+  <script type="module" src="js/account.js?v=20"></script>
 </body>
 </html>
