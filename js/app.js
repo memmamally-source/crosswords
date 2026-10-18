@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED */
+/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED */
 (function () {
   'use strict';
 
@@ -24,7 +24,7 @@
       v: 2,
       settings: { theme: 'system', skipFilled: old.skipFilled !== false, autocheck: !!old.autocheck, showTags: true, showTimer: true },
       difficulty: old.difficulty || 'medium',
-      category: 'academic',
+      category: 'tv',
       saves: {},
       solves: {},
       best: old.best || {},
@@ -43,6 +43,7 @@
   const store = migrate(loadStore());
   // Phones and tablets, which type with the device keyboard.
   const touchScreen = window.matchMedia('(pointer: coarse)');
+  if (!store.themedLevel) store.themedLevel = 'fan';
   store.settings = Object.assign({ theme: 'system', skipFilled: true, autocheck: false, showTags: true, showTimer: true, vibrate: true }, store.settings);
   const storeListeners = [];
   function saveStore() {
@@ -198,9 +199,14 @@
     return words.length ? words : null;
   }
 
+  // The level a genre is played at: Casual/Fan/Superfan for themed
+  // collections, Easy/Medium/Hard for the rest.
+  const levelFor = (genre) => (genre.themed ? store.themedLevel : store.difficulty);
+
   function genreSpec(genre, difficulty, seed, pool) {
-    const cfg = DIFFICULTIES[difficulty];
+    const cfg = levelsFor(genre)[difficulty];
     const cat = categoryById(genre.category);
+    const words = decodePool(genre, pool) || genre.words;
     return {
       kind: 'genre',
       key: `play:${genre.id}/${difficulty}/${seed}/${pool || ''}`,
@@ -209,10 +215,10 @@
       genre,
       difficulty,
       pool,
-      kicker: cat ? cat.name : 'Genre puzzle',
+      kicker: cat ? (genre.themed && cat.id !== 'sport' ? `${cat.name} · Unofficial fan crossword` : cat.name) : 'Genre puzzle',
       title: genre.name,
       meta: `${cfg.label} · ${cfg.count} clues`,
-      bank: decodePool(genre, pool) || genre.words,
+      bank: genre.themed ? themedBank(words, difficulty) : words,
       count: cfg.count,
       maxSize: cfg.maxSize,
       hard: cfg.hard,
@@ -260,7 +266,7 @@
   }
 
   function freshGenreSpec(genre, difficulty) {
-    const cfg = DIFFICULTIES[difficulty];
+    const cfg = levelsFor(genre)[difficulty];
     const all = genre.words.map((_, i) => i);
     let seen = new Set(store.seen[genre.id] || []);
     let unseen = all.filter((i) => !seen.has(genre.words[i].answer));
@@ -442,7 +448,10 @@
     law: 'scales', religion: 'candle', linguistics: 'speech', earthscience: 'mountain', classics: 'urn',
   };
   // One chip colour per genre group.
-  const CATEGORY_COLOURS = { mixed: '#1b2540', classic: '#2b4a3f', fun: '#5a2f4f', academic: '#24456b' };
+  const CATEGORY_COLOURS = {
+    mixed: '#1b2540', classic: '#2b4a3f', fun: '#5a2f4f', academic: '#24456b',
+    tv: '#5a2f4f', movies: '#7a2e2e', anime: '#3b2f5c', gaming: '#24456b', sport: '#2b4a3f', music: '#6b3a24',
+  };
 
   // ---------- Home ----------
   function statusLine(key, playLabel) {
@@ -530,7 +539,6 @@
       strip.appendChild(li);
     }
 
-    $$('#difficulty button').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.difficulty === store.difficulty)));
     renderContinue();
     renderTrending();
     renderGenreTabs();
@@ -571,9 +579,9 @@
     if (kind === 'play') {
       const [genreId, difficulty] = rest.split('/');
       const genre = genreById(genreId);
-      if (!genre || !DIFFICULTIES[difficulty]) return null;
+      if (!genre || !levelsFor(genre)[difficulty]) return null;
       const cat = categoryById(genre.category);
-      return { kicker: `${cat ? cat.name : 'Genre'} · ${DIFFICULTIES[difficulty].label}`, title: genre.name, url: `#/play/${rest}` };
+      return { kicker: `${cat ? cat.name : 'Genre'} · ${levelsFor(genre)[difficulty].label}`, title: genre.name, url: `#/play/${rest}` };
     }
     return null;
   }
@@ -601,6 +609,16 @@
   }
 
   function renderGenreTabs() {
+    if (!categoryById(store.category)) store.category = CATEGORIES[0].id;
+    const cat = categoryById(store.category);
+    // Themed collections are played at Casual, Fan or Superfan.
+    const levels = cat.themed ? THEMED_LEVELS : DIFFICULTIES;
+    const current = cat.themed ? store.themedLevel : store.difficulty;
+    $('#difficulty').innerHTML = Object.entries(levels)
+      .map(([id, l]) => `<button role="radio" data-difficulty="${id}" aria-checked="${id === current}">${esc(l.label)}</button>`).join('');
+    $('#genres-deck').textContent = cat.themed
+      ? `${cat.blurb} Casual is for anyone who's watched or played; Superfan is for the obsessed.`
+      : 'A fresh grid every time. You won\'t meet the same clue twice in a genre until you\'ve worked through its whole word bank.';
     const tabs = $('#category-tabs');
     tabs.innerHTML = '';
     for (const cat of CATEGORIES) {
@@ -617,18 +635,19 @@
   function renderGenreGrid() {
     const grid = $('#genre-grid');
     grid.innerHTML = '';
-    const cfg = DIFFICULTIES[store.difficulty];
     for (const g of GENRES.filter((x) => x.category === store.category)) {
-      const best = store.best[`${g.id}:${store.difficulty}`];
+      const level = levelFor(g);
+      const cfg = levelsFor(g)[level];
+      const best = store.best[`${g.id}:${level}`];
       const card = document.createElement('button');
       card.className = 'genre-card';
       card.dataset.genre = g.id;
       card.innerHTML = `
-        <span class="genre-icon" style="background:${CATEGORY_COLOURS[g.category] || '#1b2540'}">${icon(GENRE_ICONS[g.id])}</span>
+        <span class="genre-icon" style="background:${CATEGORY_COLOURS[g.category] || '#1b2540'}">${icon(GENRE_ICONS[g.id] || g.icon)}</span>
         <span>
           <h3>${esc(g.name)}</h3>
           <p>${esc(g.blurb)}</p>
-          <span class="meta"><span>${g.words.length} words</span>${best ? `<span class="best">Best ${formatTime(best)}</span>` : ''}</span>
+          <span class="meta"><span>${g.words.length} ${g.themed ? 'clues' : 'words'}</span>${best ? `<span class="best">Best ${formatTime(best)}</span>` : ''}</span>
         </span>`;
       card.setAttribute('aria-label', `${g.name}. ${g.blurb} ${cfg.label}, ${cfg.count} clues.`);
       grid.appendChild(card);
@@ -1385,7 +1404,7 @@
       stats = `<div><b>${current}</b><span>Current streak</span></div><div><b>${longest}</b><span>Longest streak</span></div>`;
       if (!clean) stats += `<div><b>${game.reveals}</b><span>Letters revealed</span></div><div><b>${game.revealWords}</b><span>Words revealed</span></div>`;
     } else if (spec.kind === 'genre' && store.best[`${spec.genre.id}:${spec.difficulty}`]) {
-      stats = `<div><b>${formatTime(store.best[`${spec.genre.id}:${spec.difficulty}`])}</b><span>Best ${esc(DIFFICULTIES[spec.difficulty].label)} time</span></div>`;
+      stats = `<div><b>${formatTime(store.best[`${spec.genre.id}:${spec.difficulty}`])}</b><span>Best ${esc(levelsFor(spec.genre)[spec.difficulty].label)} time</span></div>`;
     }
     $('#win-stats').innerHTML = stats;
     typeInput.blur(); // close the device keyboard so the result is visible
@@ -1398,7 +1417,7 @@
 
   function shareText() {
     const { spec } = game;
-    const name = spec.kind === 'genre' ? `${spec.title} (${DIFFICULTIES[spec.difficulty].label})` : `${spec.kicker.split(' · ')[0]}, ${shortDate(spec.date)}`;
+    const name = spec.kind === 'genre' ? `${spec.title} (${levelsFor(spec.genre)[spec.difficulty].label})` : `${spec.kicker.split(' · ')[0]}, ${shortDate(spec.date)}`;
     const how = game.reveals ? `finished with ${revealSummary(game.reveals, game.revealWords)} revealed` : 'solved with no reveals';
     let text = `Crossword Hub · ${name}\n${formatTime(game.elapsed)}, ${how}`;
     let framed = true;
@@ -1562,14 +1581,16 @@
     }
     const genreCard = e.target.closest('[data-genre]');
     if (genreCard) {
-      navigate(freshGenreSpec(genreById(genreCard.dataset.genre), store.difficulty).url);
+      const genre = genreById(genreCard.dataset.genre);
+      navigate(freshGenreSpec(genre, levelFor(genre)).url);
       return;
     }
     const diff = e.target.closest('[data-difficulty]');
     if (diff) {
-      store.difficulty = diff.dataset.difficulty;
+      if (categoryById(store.category).themed) store.themedLevel = diff.dataset.difficulty;
+      else store.difficulty = diff.dataset.difficulty;
       saveStore();
-      $$('#difficulty button').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.difficulty === store.difficulty)));
+      renderGenreTabs();
       renderGenreGrid();
       return;
     }
@@ -1742,7 +1763,7 @@
     }
     if (parts[0] === 'play') {
       const genre = genreById(parts[1]);
-      const difficulty = DIFFICULTIES[parts[2]] ? parts[2] : 'medium';
+      const difficulty = genre && levelsFor(genre)[parts[2]] ? parts[2] : genre && genre.themed ? 'fan' : 'medium';
       const seed = Number(parts[3]);
       if (genre && Number.isFinite(seed)) {
         showView('game');

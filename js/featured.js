@@ -1,6 +1,7 @@
 /*
  * Trending Now: the puzzles featured on the home page, chosen by hand.
- * Edit this list to change what's featured; the first four show on phones.
+ * Edit this list to change what's featured. A card only shows if its genre or
+ * collection exists.
  *
  * Each item:
  *   genre:  the genre a card opens (an id from js/genres.js), or
@@ -14,10 +15,12 @@
  * generated automatically.
  */
 const FEATURED = [
-  { genre: 'movies', kicker: 'Film & TV', title: 'Think you know your movies and TV?', colour: '#5a2f4f', icon: 'film' },
-  { genre: 'sports', kicker: 'Sport', title: 'Games, gear and glory', colour: '#2b4a3f', icon: 'ball' },
-  { genre: 'popculture', kicker: 'Pop culture', title: 'Stars, streaming and memes', colour: '#6b3a24', icon: 'star' },
-  { genre: 'gaming', kicker: 'Video games', title: 'Consoles, characters and gamer slang', colour: '#24456b', icon: 'gamepad' },
+  { genre: 'friends', kicker: 'TV · Fan crossword', title: 'Could this BE any more Friends?', colour: '#5a2f4f', icon: 'tv' },
+  { genre: 'formula-1', kicker: 'Sport', title: 'Think you know Formula 1?', colour: '#2b4a3f', icon: 'flame' },
+  { genre: 'harry-potter', kicker: 'Movies · Fan crossword', title: 'Harry Potter: are you a true wizard?', colour: '#3b2f5c', icon: 'film' },
+  { genre: 'pokemon', kicker: 'Gaming · Fan crossword', title: 'Pokémon: gotta solve them all', colour: '#24456b', icon: 'gamepad' },
+  { genre: 'game-of-thrones', kicker: 'TV · Fan crossword', title: 'The Game of Thrones Superfan test', colour: '#4a4235', icon: 'tv' },
+  { genre: 'rugby', kicker: 'Sport', title: 'Springboks, scrums and World Cup glory', colour: '#2b4a3f', icon: 'ball' },
 ];
 
 if (typeof module !== 'undefined' && module.exports) module.exports = { FEATURED };

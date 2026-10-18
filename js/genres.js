@@ -259,6 +259,44 @@ function mixGenre(id, name, icon, blurb, sources) {
   return { id, category: 'mixed', name, icon, blurb, words };
 }
 
+// ---------- Themed collections ----------
+// Fan crosswords about one show, film series, game, sport or artist, from
+// collections/*.txt (compiled into js/collections.js). Each clue is Casual,
+// Fan or Superfan, and puzzles come at those three levels.
+const COLLECTION_DATA = typeof CROSSWORD_COLLECTIONS !== 'undefined'
+  ? CROSSWORD_COLLECTIONS
+  : (() => { try { return require('./collections.js'); } catch (e) { return []; } })();
+const TIER_OF_LEVEL = { easy: 'casual', medium: 'fan', hard: 'superfan' };
+const COLLECTIONS = COLLECTION_DATA.map((c) => ({
+  id: c.id,
+  category: c.category,
+  name: c.title,
+  icon: c.icon,
+  blurb: c.blurb,
+  themed: true,
+  words: parseList(c.words).map((w) => ({ answer: w.answer, clue: w.clue, tier: TIER_OF_LEVEL[w.level] })),
+}));
+
+// Puzzle sizes per level, and how many tough answers each mixes in.
+const THEMED_LEVELS = {
+  casual: { label: 'Casual', count: 12, maxSize: 13, hard: 0 },
+  fan: { label: 'Fan', count: 16, maxSize: 15, hard: 3 },
+  superfan: { label: 'Superfan', count: 20, maxSize: 17, hard: 9 },
+};
+// A collection's clues ranked for one level: the level's own clues are
+// preferred ("easy" to the generator), the level below fills in, and the
+// level above supplies the few tough answers ("hard"). Casual leaves out
+// Superfan clues altogether.
+function themedBank(words, level) {
+  const rank = {
+    casual: { casual: 'easy', fan: 'medium' },
+    fan: { fan: 'easy', casual: 'medium', superfan: 'hard' },
+    superfan: { superfan: 'hard', fan: 'easy', casual: 'medium' },
+  }[level];
+  return words.filter((w) => rank[w.tier]).map((w) => ({ ...w, level: rank[w.tier] }));
+}
+const levelsFor = (genre) => (genre && genre.themed ? THEMED_LEVELS : DIFFICULTIES);
+
 const GENRES = [
   mixGenre('mixed', 'Mixed Bag', '🎲', 'A bit of everything from every genre.', BASE_GENRES),
   mixGenre('mixed-fun', 'Pop & Fun Mix', '🍿', 'Pop culture, movies, games, food, sport and more.',
@@ -266,9 +304,16 @@ const GENRES = [
   mixGenre('mixed-academic', 'Academic Mix', '🎓', 'A tough blend of every academic subject.',
     BASE_GENRES.filter((g) => g.category === 'academic' || g.id === 'science')),
   ...BASE_GENRES,
+  ...COLLECTIONS,
 ];
 
 const CATEGORIES = [
+  { id: 'tv', name: 'TV & streaming', blurb: 'Unofficial fan crosswords about the shows you binge.', themed: true },
+  { id: 'movies', name: 'Movies', blurb: 'Unofficial fan crosswords about film franchises.', themed: true },
+  { id: 'anime', name: 'Anime', blurb: 'Unofficial fan crosswords about anime.', themed: true },
+  { id: 'gaming', name: 'Gaming', blurb: 'Unofficial fan crosswords about video games.', themed: true },
+  { id: 'sport', name: 'Sport', blurb: 'Teams, legends and famous moments.', themed: true },
+  { id: 'music', name: 'Music', blurb: 'Unofficial fan crosswords about artists and bands.', themed: true },
   { id: 'mixed', name: 'Mixed puzzles', blurb: 'Clues drawn from many genres at once.' },
   { id: 'classic', name: 'Everyday themes', blurb: 'Friendly topics for every solver.' },
   { id: 'fun', name: 'Pop culture & fun', blurb: 'Screens, stars, games and celebrations.' },
@@ -345,6 +390,6 @@ function miniBuild(date) {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
     GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW,
-    scheduleFor, dailyBuild, miniBuild,
+    scheduleFor, dailyBuild, miniBuild, COLLECTIONS, THEMED_LEVELS, themedBank, levelsFor,
   };
 }
