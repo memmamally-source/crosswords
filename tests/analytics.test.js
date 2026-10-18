@@ -3,7 +3,7 @@ const assert = require('assert');
 const { clean, ALLOWED } = require('../js/analytics.js');
 
 // The events the site sends, and nothing else.
-assert.deepStrictEqual(Object.keys(ALLOWED).sort(), ['autocheck_on', 'challenge_open', 'check_used', 'hint_used', 'page_view', 'puzzle_complete', 'puzzle_start', 'return_visit', 'share'].sort());
+assert.deepStrictEqual(Object.keys(ALLOWED).sort(), ['autocheck_on', 'challenge_open', 'check_used', 'hint_used', 'page_view', 'puzzle_complete', 'puzzle_start', 'return_visit', 'room_create', 'room_join', 'share'].sort());
 
 // Unknown events are dropped.
 assert.strictEqual(clean('gift_created', { story: 'We met in Paris' }), null);

@@ -463,6 +463,9 @@ The owner approved this order on 18 October 2026.
 | 18 Oct 2026 | Everything free now; after monetisation the weekly Brutal Challenge stays free; archives may become Premium | Confirmed |
 | 18 Oct 2026 | Keep prices, marketing budgets and revenue targets out of public documentation | Confirmed |
 | 18 Oct 2026 | Analytics: Google Analytics 4 via Firebase, loaded only after the player agrees (consent prompt) | Confirmed; built in Stage 4 |
+| 18 Oct 2026 | Multiplayer runs on Firebase Realtime Database (free plan); guests use anonymous sign-in | Built in Stage 5 |
+| 18 Oct 2026 | Multiplayer defaults: players choose a display name (prefilled with a random one, max 20 safe characters); rooms last 7 days; the host can remove players, who can't rejoin; no chat, so names are the only text to moderate | Built in Stage 5; easy to change |
+| 18 Oct 2026 | Shared solves are collaborative results: team hints add up; they count for the daily streak, never for the No-Hint Club or best times | Built in Stage 5 |
 | 18 Oct 2026 | Roadmap approved: 3.5 wrap-up, 4 Growth, 5 Multiplayer, 6 Verified leaderboards, 7 Gifts (manual builder first), 8 Monetisation preparation, 9 Teams and expansion | Confirmed |
 
 ## 9. Open decisions
@@ -484,8 +487,5 @@ settled on 18 October 2026; see the decision log.
    - the provider
    - a monthly spend cap
    - a per-account limit (for example 3 gifts a month)
-6. **Multiplayer details** (needed by Stage 5):
-   - guest display names
-   - room lifetime
-   - whether the host can remove a player
-   - basic moderation
+6. ~~Multiplayer details~~: settled with sensible defaults in Stage 5 (see
+   the decision log); change any of them on request.

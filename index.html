@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=24" />
+  <link rel="stylesheet" href="css/styles.css?v=25" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -173,6 +173,17 @@
         <h1 class="puzzle-title" id="game-title"></h1>
         <p class="puzzle-meta" id="game-meta"></p>
         <p class="challenge-banner" id="challenge-banner" hidden></p>
+        <button class="room-start" id="room-start" data-action="room-start" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2" /><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 11.5a3 3 0 100-6M18 20c0-2.4-1-4.4-2.6-5.5" /></svg>
+          Help me solve: invite friends
+        </button>
+      </div>
+
+      <div class="room-bar" id="room-bar" hidden>
+        <div class="room-players" id="room-players"></div>
+        <span class="room-status" id="room-status" role="status"></span>
+        <button class="btn btn-sm" data-action="room-invite">Invite</button>
+        <button class="link-btn" data-action="room-leave">Leave</button>
       </div>
 
       <div class="toolbar" role="toolbar" aria-label="Puzzle tools">
@@ -284,6 +295,38 @@
     </div>
   </div>
 
+  <dialog id="name-dialog" aria-labelledby="name-title">
+    <form method="dialog" class="name-form">
+      <p class="kicker">Help me solve</p>
+      <h2 id="name-title"></h2>
+      <p id="name-text"></p>
+      <label>Your name<input id="name-input" maxlength="20" autocomplete="nickname" spellcheck="false" /></label>
+      <p class="name-note">Shown to the others in this puzzle. Letters, numbers and spaces.</p>
+      <div class="name-actions">
+        <button class="btn" value="cancel">Cancel</button>
+        <button class="btn btn-primary" value="ok" id="name-submit"></button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="room-dialog" aria-labelledby="room-title">
+    <div class="room-invite">
+      <p class="kicker">Help me solve</p>
+      <h2 id="room-title">Invite friends</h2>
+      <p>Anyone with this link can join and fill in the grid with you, live: no account needed. Up to 5 players; the link works for 7 days.</p>
+      <input class="room-link" id="room-link" readonly aria-label="Invite link" />
+      <div class="win-share">
+        <button class="btn btn-whatsapp" data-action="room-whatsapp">WhatsApp</button>
+        <button class="btn" data-action="room-copy">Copy link</button>
+        <button class="btn btn-primary" data-action="room-share">Share</button>
+      </div>
+      <h3 id="room-seats"></h3>
+      <ul class="room-list" id="room-list"></ul>
+      <button class="link-btn" data-action="room-leave">Leave this shared puzzle</button>
+    </div>
+    <button class="dialog-close" data-action="close-dialog" aria-label="Close">✕</button>
+  </dialog>
+
   <dialog id="privacy-dialog" aria-labelledby="privacy-title">
     <div class="privacy">
       <p class="kicker">Your data</p>
@@ -293,6 +336,7 @@
         <li><b>If you sign in,</b> your progress is also kept in your Crossword Hub account (Google Firebase) so it syncs between devices. Only you can read it. Sign-in uses your email address or Google account, and nothing else about you.</li>
         <li><b>Usage statistics are optional.</b> If you allow them, Google Analytics counts visits and which puzzles are started, finished and shared, with times, levels and hint points. It never receives your name, email or answers, and advertising features are off. You can switch it off any time in Settings, which also removes its cookies.</li>
         <li><b>Challenge links</b> carry only your time and hint points for that puzzle.</li>
+        <li><b>Shared puzzles (Help me solve)</b> store the grid, the name you choose and where each player is in the grid (Google Firebase), for 7 days. Guests get a temporary anonymous account, so no sign-up or email is needed.</li>
       </ul>
     </div>
     <button class="dialog-close" data-action="close-dialog" aria-label="Close">✕</button>
@@ -349,19 +393,22 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=24"></script>
-  <script src="js/words.js?v=24"></script>
-  <script src="js/collections.js?v=24"></script>
-  <script src="js/genres.js?v=24"></script>
-  <script src="js/sync.js?v=24"></script>
-  <script src="js/featured.js?v=24"></script>
-  <script src="js/hints.js?v=24"></script>
-  <script src="js/stats.js?v=24"></script>
-  <script src="js/access.js?v=24"></script>
-  <script src="js/share.js?v=24"></script>
-  <script src="js/firebase-config.js?v=24"></script>
-  <script src="js/analytics.js?v=24"></script>
-  <script src="js/app.js?v=24"></script>
-  <script type="module" src="js/account.js?v=24"></script>
+  <script src="js/generator.js?v=25"></script>
+  <script src="js/words.js?v=25"></script>
+  <script src="js/collections.js?v=25"></script>
+  <script src="js/genres.js?v=25"></script>
+  <script src="js/sync.js?v=25"></script>
+  <script src="js/featured.js?v=25"></script>
+  <script src="js/hints.js?v=25"></script>
+  <script src="js/stats.js?v=25"></script>
+  <script src="js/access.js?v=25"></script>
+  <script src="js/share.js?v=25"></script>
+  <script src="js/rooms.js?v=25"></script>
+  <script src="js/firebase-config.js?v=25"></script>
+  <script src="js/analytics.js?v=25"></script>
+  <script src="js/app.js?v=25"></script>
+  <script type="module" src="js/firebase.js?v=25"></script>
+  <script type="module" src="js/account.js?v=25"></script>
+  <script type="module" src="js/room.js?v=25"></script>
 </body>
 </html>

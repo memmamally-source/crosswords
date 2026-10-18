@@ -26,13 +26,15 @@
   const ALLOWED = {
     page_view: ['page_path', 'page_location', 'page_title'],
     puzzle_start: [...PUZZLE, 'resumed'],
-    puzzle_complete: [...PUZZLE, 'seconds', 'hint_points', 'assisted', 'no_hint', 'challenge'],
+    puzzle_complete: [...PUZZLE, 'seconds', 'hint_points', 'assisted', 'no_hint', 'challenge', 'collab'],
     hint_used: ['hint', 'puzzle_kind'],
     check_used: ['scope', 'puzzle_kind'],
     autocheck_on: ['puzzle_kind'],
     share: ['method', 'content_type', 'item_id'],
     challenge_open: ['page'],
     return_visit: ['days_since_last_visit'],
+    room_create: ['puzzle_kind'],
+    room_join: ['puzzle_kind'],
   };
   const EMAIL = /[^\s@]+@[^\s@]+\.[^\s@]+/;
 

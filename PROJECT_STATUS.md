@@ -6,10 +6,9 @@ What is built and live today, what's unfinished, and how it compares with the
 - **Snapshot:** 18 October 2026.
 - **Live site:** https://memmamally-source.github.io/crosswords/ (GitHub
   Pages, deployed from `main` when a PR is merged).
-- **Code checked:** `main` at `2a460fc` (PR #17, Stage 3.5, merged), plus
-  the Stage 4 work on the `claude/crossword-game-website-48cduv` branch, in
-  a PR waiting for approval. Items marked "Stage 4" below go live when that
-  PR is merged.
+- **Code checked:** `main` at `c19ed83` (Stage 4 and analytics merged, #18 and #19), plus
+  the Stage 5 work on the `claude/crossword-game-website-48cduv` branch, in a
+  PR waiting for approval.
 
 ## 1. Stages at a glance
 
@@ -19,8 +18,8 @@ What is built and live today, what's unfinished, and how it compares with the
 | 2 — Content: collections, Expert and Brutal, Brutal Challenge, gentler Daily | ✅ Complete | #13, #14, #15 |
 | 3 — Hints, scoring, assisted status, No-Hint Club | ✅ Core complete; wrap-up needed for the 18 October decisions | #16 |
 | 3.5 — Free-access alignment and Stage 3 wrap-up | ✅ Complete | #17 |
-| 4 — Growth and social sharing | 🔄 Built, PR awaiting approval; new category collections to follow | — |
-| 5 — Multiplayer | Not started | — |
+| 4 — Growth and social sharing | ✅ Complete (#18, #19); new category collections to follow | #18, #19 |
+| 5 — Multiplayer (Help me solve) | 🔄 Built, PR awaiting approval; switches on once the Realtime Database exists | — |
 | 6 — Verified leaderboards | Not started | — |
 | 7 — Gifts | Not started | — |
 | 8 — Monetisation preparation (design only) | Not started | — |
@@ -122,6 +121,36 @@ What is built and live today, what's unfinished, and how it compares with the
   - link-preview tags and image
   - The new `#/new/<genre>/<level>` address opens a fresh puzzle.
 
+### Multiplayer: Help me solve (Stage 5)
+
+- **Rooms:** up to five players fill in any puzzle together, live, through an
+  invite link (WhatsApp, copy or the share sheet). No sign-up: guests use
+  anonymous sign-in. The letters already in the grid carry over.
+- **Seeing each other:** coloured outlines, word underlines and clue dots
+  show where each player is.
+- **Edits:** if two people change a square at once, the last one wins and
+  everyone converges on the same grid.
+- **Shared clock:** it can't be paused.
+- **Losing connection:** offline typing syncs on reconnect. Reloading or
+  Continue playing rejoins the room.
+- **Host controls, and limits:** the host can remove players, who can't
+  rejoin. Rooms close after 7 days and hold at most five players.
+- **Collaborative results:** team hints add up; they count for the streak,
+  never for the No-Hint Club or best times.
+- **Security rules** (`database.rules.json`):
+  - only people with a room's link can read it, and nobody can list rooms
+  - only seated players can change letters, one capital letter per square
+  - at most five seats; only the host can remove players
+  - display names limited to safe characters, and nothing else can be
+    written
+- **Tested against the Firebase emulators with the real rules:**
+  - joining, live sync both ways, cursors and reloading
+  - same-square races, offline typing and the five-player limit
+  - removing, leaving, and finishing together
+  - eight kinds of misuse, all refused by the database
+- **⚠️ Off until the owner creates the Realtime Database**, publishes the
+  rules and adds its URL (see the README, Multiplayer).
+
 ### Accounts and Firebase
 
 - **Accounts are optional:** sign in with Google or email and password
@@ -131,9 +160,10 @@ What is built and live today, what's unfinished, and how it compares with the
   - Rules let a player read and write only their own document, capped at
     900 KB.
   - Merging keeps the better record from each device.
+- **Anonymous (guest) sign-in:** enabled, for multiplayer guests, with auto
+  clean-up after 30 days.
+- **Realtime Database:** used by multiplayer rooms, once created.
 - **Not used yet:**
-  - Anonymous (guest) sign-in
-  - Realtime Database
   - Cloud Functions
   - Cloud Storage
 - **Firebase plan:** presumed Spark (free), since nothing needs Blaze. Check
@@ -182,7 +212,7 @@ What is built and live today, what's unfinished, and how it compares with the
 | Streak: Daily or Mini, once a day | ✅ Stage 3.5 | |
 | Daily reset time | ✅ Settled | Midnight South African time, reconfirmed 18 October 2026 |
 | Leaderboards and server verification | ❌ | Stage 6; needs the Blaze plan |
-| Help Me Solve multiplayer | ❌ | Stage 5; needs Anonymous Auth enabled |
+| Help Me Solve multiplayer | ✅ Stage 5 | Live rooms of up to 5; switches on once the Realtime Database exists |
 | Teams and tournaments | ❌ | Stage 9 |
 | Gifts | ❌ | Stage 7 (7A manual, 7B AI) |
 | Result cards, WhatsApp challenge links, Instagram images | ✅ Stage 4 | Share sheet with image, WhatsApp, challenge links, image download |
@@ -219,13 +249,14 @@ What is built and live today, what's unfinished, and how it compares with the
 
 ## 6. Recommended next step
 
-1. **Review and merge the Stage 4 PR.**
-2. **Finish the Google Analytics settings:** under Enhanced measurement,
-   switch off history-based page views, site search and form interactions;
-   keep Google signals off; set data retention to 2 months.
+1. **Review and merge the Stage 5 PR.** Then create the Realtime Database,
+   publish `database.rules.json` and send the database URL, to switch
+   multiplayer on.
+2. **Mobile solving layout** (requested 18 October 2026): keep the grid and
+   current clue on screen without scrolling. That means a fixed clue bar
+   with big previous and next buttons and swipe, a clue-list panel, and
+   clues beside the grid on wider screens.
 3. **Stage 4 follow-up: new category collections** (travel, medicine,
-   technology, general knowledge), written and fact-checked like the
-   existing 50.
-4. **Then Stage 5: real-time multiplayer.** First enable Anonymous Auth in
-   the Firebase console and settle the multiplayer details (MASTER_PLAN
-   Open decision 6).
+   technology, general knowledge).
+4. **Stage 6: verified leaderboards.** This needs the Firebase Blaze plan
+   decision.
