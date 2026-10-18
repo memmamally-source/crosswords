@@ -72,7 +72,7 @@ FRANCE | Hosts of the 2007 and 2023 World Cups | fan
 JOHNSON | Martin, England's 2003 World Cup captain | fan
 WOODWARD | Sir Clive, England's 2003 World Cup coach | fan
 CAMPESE | David, Wallaby wing of the 1991 world champions | fan
-O'DRISCOLL | Brian, Irish centre and record Lions tourist | fan
+O'DRISCOLL | Brian, Irish centre who captained the 2005 Lions | fan
 SEXTON | Johnny, Irish fly-half and 2018 world player of the year | fan
 DUPONT | Antoine, French scrum-half | fan
 ITOJE | Maro, England and Lions lock | fan
@@ -120,7 +120,6 @@ BLOOD BIN | Temporary replacement for a bleeding player (5,3) | superfan
 CAPTAIN'S RUN | Final training session before a Test (8,3) | superfan
 PRINCIPALITY | Sponsor's name for Cardiff's national stadium | superfan
 LES BLEUS | Nickname of the French team (3,5) | superfan
-SHARKS | Durban franchise | superfan
 MARK | Clean catch claimed inside your own 22 | superfan
 AZZURRI | Nickname of Italy's national team | superfan
 TWELVE | Points in South Africa's winning 2023 final score | superfan
@@ -128,4 +127,4 @@ FIFTEEN | Points in South Africa's winning 1995 and 2007 final scores | superfan
 ELEVEN | New Zealand's points in the 2023 final | superfan
 LANCASTER | Stuart, England's coach at the 2015 home World Cup | superfan
 TELSTRA | Sydney stadium name at the 2003 final | superfan
-RUGBY | Warwickshire town where the game began | superfan
+RUGBY | Warwickshire town where the game is said to have begun | superfan

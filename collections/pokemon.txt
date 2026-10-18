@@ -61,7 +61,7 @@ PALDEA | Iberia-inspired region of Scarlet and Violet | fan
 MASTER BALL | Capture device that never fails (6,4) | fan
 RARE CANDY | Treat that raises a level instantly (4,5) | fan
 LUGIA | Legendary diving bird on the Silver box | fan
-HO-OH | Rainbow legendary bird on the Gold box | fan
+HO-OH | Rainbow legendary bird on the Gold box (2,2) | fan
 RAYQUAZA | Green sky-dwelling dragon legend of Hoenn | fan
 GROUDON | Land-shaping legend on the Ruby box | fan
 KYOGRE | Sea-expanding legend on the Sapphire box | fan
@@ -85,28 +85,22 @@ DRAGONITE | Friendly orange Dragon/Flying evolved from Dragonair | fan
 ELITE FOUR | Quartet faced before the Champion (5,4) | fan
 EVERSTONE | Held item that prevents evolving | fan
 FIRE STONE | Item that evolves Vulpix and Growlithe (4,5) | fan
-LUCKY EGG | Held item that boosts experience gained (5,3) | fan
-MAREEP | Woolly Electric sheep of Johto | fan
 TYRANITAR | Rock/Dark pseudo-legendary of Johto | fan
 PORYGON | Digital Pokémon made of computer code | fan
 CUBONE | Lonely Pokémon that wears its mother's skull | fan
-THUNDERBOLT | Signature Electric attack of the anime hero's partner | fan
 HYPER BEAM | Powerful Normal move needing a recharge turn (5,4) | fan
 SPLASH | Move that does absolutely nothing | fan
 METRONOME | Move that uses a random move | fan
 SOLAR BEAM | Grass move charged by sunlight (5,4) | fan
-ROTOM | Ghost/Electric that possesses appliances | fan
-DAY CARE | Place where Pokémon Eggs are found (3,4) | fan
 MISSINGNO | Glitch Pokémon of Red and Blue | superfan
 SILPH CO | Corporate HQ the villains occupy in Red and Blue (5,2) | superfan
 SAFFRON | Central Kanto city with a Psychic Gym | superfan
-LAVENDER TOWN | Kanto town with a haunted Pokémon Tower (8,4) | superfan
+LAVENDER TOWN | Kanto settlement with a haunted Pokémon Tower (8,4) | superfan
 CINNABAR | Volcanic Kanto island with a Fire Gym | superfan
 SABRINA | Psychic Gym Leader in Kanto | superfan
 KOGA | Ninja Poison Gym Leader of Fuchsia | superfan
 BLAINE | Quiz-loving Fire Gym Leader | superfan
 ERIKA | Grass Gym Leader of Celadon | superfan
-VERMILION | Port city where the S.S. Anne docks | superfan
 WHITNEY | Normal Gym Leader of Goldenrod with a Miltank | superfan
 MILTANK | Cow Pokémon whose Rollout tormented Johto players | superfan
 CLAIR | Blackthorn City's Dragon Gym Leader | superfan
@@ -115,7 +109,6 @@ FALKNER | Flying Gym Leader of Violet City | superfan
 BUGSY | Bug Gym Leader of Azalea Town | superfan
 JASMINE | Steel Gym Leader of Olivine | superfan
 PRYCE | Ice Gym Leader of Mahogany | superfan
-CHUCK | Fighting Gym Leader of Cianwood | superfan
 STEVEN | Hoenn Champion in Ruby and Sapphire | superfan
 WALLACE | Hoenn Champion in Emerald | superfan
 TEAM AQUA | Sea-loving villains of Hoenn (4,4) | superfan
@@ -123,7 +116,6 @@ TEAM MAGMA | Land-loving villains of Hoenn (4,5) | superfan
 MAXIE | Leader of Hoenn's land-loving villains | superfan
 ARCHIE | Leader of Hoenn's sea-loving villains | superfan
 UNOWN | Letter-shaped Psychic-type of the Ruins of Alph | superfan
-SHUCKLE | Bug/Rock that ferments berries in its shell | superfan
 SMEARGLE | Painter that permanently copies moves with Sketch | superfan
 SPINDA | Normal-type whose spot pattern is unique to each one | superfan
 CELEBI | Time-travelling Mythical of Ilex Forest | superfan
@@ -137,10 +129,8 @@ POKÉ FLUTE | Instrument that wakes a sleeping road-blocker (4,5) | superfan
 EXP SHARE | Item that splits experience points (3,5) | superfan
 SAFARI ZONE | Fuchsia attraction where you throw bait and rocks (6,4) | superfan
 BILL | Pokémaniac who invented the PC storage system | superfan
-WURMPLE | Bug that evolves into Silcoon or Cascoon | superfan
 NINCADA | Bug that can leave a Shedinja behind when evolving | superfan
 SHEDINJA | Bug/Ghost with only 1 HP and Wonder Guard | superfan
-TYROGUE | Baby that evolves based on Attack versus Defense | superfan
 SLOWBRO | Pokémon with a Shellder biting its tail | superfan
 FARFETCH'D | Wild duck that carries a leek | superfan
 GOLDENROD | Johto's largest city, home of the Radio Tower | superfan

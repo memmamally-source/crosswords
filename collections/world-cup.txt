@@ -14,7 +14,7 @@ URUGUAY | Hosts and winners of the first World Cup, in 1930 | casual
 QATAR | Hosts of the 2022 men's tournament | casual
 RUSSIA | Hosts of the 2018 men's tournament | casual
 MEXICO | Men's hosts in 1970 and 1986 | casual
-SOUTH AFRICA | Africa's first hosts, in 2010 (5,6) | casual
+SOUTH AFRICA | Hosts in 2010, the first from their continent (5,6) | casual
 CROATIA | Beaten finalists in 2018 | casual
 USA | Women's champions in 1991, 1999, 2015 and 2019 | casual
 JAPAN | Women's champions in 2011 | casual
@@ -63,7 +63,6 @@ CAFU | Brazil's captain in 2002, a player in three straight finals | fan
 RONALDINHO | Lobbed David Seaman from a free kick in 2002 | fan
 DESCHAMPS | Didier ___, won as France captain in 1998 and coach in 2018 | fan
 RAMSEY | Sir Alf ___, England's 1966 manager | fan
-SOUTHGATE | Gareth ___, England manager at the 2018 semi-final | fan
 DEL BOSQUE | Vicente ___, Spain's 2010 coach (3,6) | fan
 SCOLARI | Luiz Felipe ___, Brazil's coach in 2002 | fan
 GASCOIGNE | Paul ___, whose tears marked Italia 90 | fan
@@ -90,11 +89,8 @@ MOROCCO | First African side to reach a semi-final, in 2022 | fan
 MIRACLE OF BERN | West Germany's shock 1954 final win (7,2,4) | fan
 TOTAL FOOTBALL | Fluid Dutch style of the 1970s (5,8) | fan
 PICKLES | Dog who found the stolen trophy in 1966 | fan
-JABULANI | Much-criticised match ball of 2010 | fan
 SHAKIRA | Singer of Waka Waka for 2010 | fan
 INFANTINO | Gianni ___, FIFA president from 2016 | fan
-SHOOTOUT | Penalty tiebreak first used at the tournament in 1982 | fan
-WILLIE | World Cup ___, the lion mascot of 1966 | fan
 FONTAINE | Just ___, scored a record 13 goals in one tournament, 1958 | superfan
 KEMPES | Mario ___, top scorer and final scorer in 1978 | superfan
 SALENKO | Oleg ___, scored five against Cameroon in 1994 | superfan
@@ -133,12 +129,9 @@ CZECHOSLOVAKIA | Beaten finalists in 1934 and 1962 | superfan
 SWITZERLAND | Hosts of the 1954 tournament | superfan
 CENTENARIO | Montevideo stadium of the 1930 final | superfan
 SOCCER CITY | Johannesburg stadium of the 2010 final (6,4) | superfan
-YOKOHAMA | Japanese city that staged the 2002 final | superfan
 LUZHNIKI | Moscow stadium of the 2018 final | superfan
 GOLDEN GOAL | Sudden-death extra-time rule used in 1998 and 2002 (6,4) | superfan
 TELSTAR | Adidas ball of 1970 | superfan
 AL RIHLA | Adidas ball of 2022 (2,5) | superfan
 FULECO | Armadillo mascot of 2014 | superfan
 ZABIVAKA | Wolf mascot of 2018 | superfan
-FOOTIX | Cockerel mascot of 1998 | superfan
-NARANJITO | Orange mascot of 1982 | superfan
