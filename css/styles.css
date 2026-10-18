@@ -651,9 +651,9 @@ dialog[open]::backdrop { animation: fade-in 0.2s ease; }
 .confetti { position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 1000; }
 
 /* Puzzle progress */
-.progress { height: 4px; margin-bottom: 10px; border-radius: 2px; background: var(--wash); overflow: hidden; }
-.progress i { display: block; height: 100%; width: 0; background: var(--ink); border-radius: 2px; transition: width 0.25s ease; }
-.progress.done i { background: #4caf7a; }
+.puzzle-progress { height: 4px; margin-bottom: 10px; border-radius: 2px; background: var(--wash); overflow: hidden; }
+.puzzle-progress i { display: block; height: 100%; width: 0; background: var(--ink); border-radius: 2px; transition: width 0.25s ease; }
+.puzzle-progress.done i { background: #4caf7a; }
 
 /* Daily streak badge */
 .streak-chip {

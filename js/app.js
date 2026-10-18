@@ -416,7 +416,7 @@
         <h2>${esc(daily.sched.day)}'s Crossword</h2>
         <p class="deck" id="daily-deck">An academic crossword drawn from ${DAILY_SUBJECTS} subjects, from chemistry and classics to law, linguistics and philosophy.</p>
         <ul class="facts">
-          <li><b>${daily.count}</b> clues</li>
+          <li><b>${daily.sched.count}</b> clues</li>
           <li><b>${esc(daily.sched.level)}</b> difficulty</li>
           <li>New every day at midnight SAST</li>
         </ul>
@@ -440,7 +440,7 @@
         <p class="kicker">The Mini</p>
         <h2>A six-clue warm-up</h2>
         <p class="deck">Short everyday and pop-culture answers. A good start before the Daily.</p>
-        <ul class="facts"><li><b>${mini.count}</b> clues</li><li>Small grid</li></ul>
+        <ul class="facts"><li><b>${MINI_CONFIG.count}</b> clues</li><li>Small grid</li></ul>
         <button class="btn" data-open="${mini.url}">${ms.label}</button>
         ${ms.text ? `<p class="status ${ms.cls}">${esc(ms.text)}</p>` : ''}
       </div>
@@ -837,9 +837,9 @@
       total++;
       if (game.entries[r][c]) filled++;
     }));
-    $('#progress i').style.width = `${(filled / total) * 100}%`;
-    $('#progress').setAttribute('aria-valuenow', Math.round((filled / total) * 100));
-    $('#progress').classList.toggle('done', !!game.solved);
+    $('#puzzle-progress i').style.width = `${(filled / total) * 100}%`;
+    $('#puzzle-progress').setAttribute('aria-valuenow', Math.round((filled / total) * 100));
+    $('#puzzle-progress').classList.toggle('done', !!game.solved);
     const { puzzle, sel, entries, revealed, wrong, pencil } = game;
     const wi = currentWordIndex();
     const word = puzzle.words[wi];
