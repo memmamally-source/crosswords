@@ -7,8 +7,13 @@ Pages from the repository root).
 
 ## What's on the site
 
-The home page leads with today's Daily and Mini, a Brutal Challenge banner
-(coming soon), your puzzles in progress (**Continue playing**), hand-picked
+**Everything is free and nothing needs an account:** every puzzle, level and
+archive opens straight away. Signing in is optional, for syncing progress.
+Every puzzle opens through one check, `canAccess` in `js/access.js`, which
+always allows; `tests/access.test.js` keeps it that way.
+
+The home page leads with today's Daily and Mini, the weekly Brutal Challenge,
+your puzzles in progress (**Continue playing**), hand-picked
 **Trending now** cards, this week's Dailies, every genre, and your stats.
 
 **Changing Trending now:** edit the list in `js/featured.js`. Each card opens a
@@ -56,9 +61,20 @@ draws the app icons.
     History, Economics, Human Anatomy, Art & Architecture, Chemistry, Physics,
     Biology, Psychology, Computer Science, Law & Government, World Religions,
     Language & Linguistics, Earth Science, Latin & the Ancient World.
-- **Statistics:** puzzles solved, Daily streaks, average Daily time by day
-  of the week, Dailies solved with no help, and how many letters and words
-  you've revealed in Dailies.
+- **Statistics:**
+  - totals: puzzles solved and Dailies finished
+  - streaks: the daily streak and the longest streak
+  - times: the average across all puzzles, the average Daily, and the Daily
+    by day of the week
+  - hints: total hints used, Dailies with no help, and letters and words
+    revealed in Dailies
+  - your favourite genres and collections
+  - the No-Hint Club
+- **The daily streak:** finishing the Daily or the Mini, with or without
+  hints or checks, keeps the streak going. Finishing both on the same day
+  counts once. The No-Hint streak is separate and counts only Dailies
+  finished with no reveals or checks. Streaks are worked out from saved
+  solves (`js/stats.js`), so they follow these rules for past days too.
 
 ## Solving
 
@@ -80,7 +96,8 @@ and the clue bar.
 - **Pause** (click the timer) hides the grid and stops the clock.
 - **Settings** (the sun icon): light, dark or system theme; skip filled
   squares; auto-check; subject labels; show or hide the timer.
-- Finishing shows your time, your streak for the Daily, and a **Share
+- Finishing shows your time, hint points, your streak for the Daily and
+  Mini, and a **Share
   result** button that copies a summary.
 
 - **Feel:**
@@ -93,30 +110,27 @@ and the clue bar.
 
 ### Hints, hint points and the No-Hint Club
 
-Every hint has two separate costs, both set in `js/hints.js` so they're easy
-to change:
+There are two hints, **Reveal Letter** and **Reveal Word** (Reveal →
+Square or Word; Reveal → Puzzle counts each unfinished word). Each has two
+separate costs, both set in `js/hints.js` so they're easy to change:
 
 | Hint | Hint credits | Competitive hint points |
 |---|---|---|
 | Reveal a letter | 1 | 2 |
-| Rephrase the clue | 2 | 1 |
 | Reveal a word | 3 | 5 |
 
-- **Hint credits** are what a hint costs the player. They're counted on each
-  solve and in Statistics, but nothing is charged yet: a credit balance and
-  credit packs need payments, which aren't switched on.
+- **Hints are free.** Hint credits are what a hint will cost once credits
+  exist. They're counted on each solve and in Statistics, but nothing is
+  charged or limited.
 - **Hint points** are the competitive score: fewer is better. They show on
   the result, the share text, Continue playing and in Statistics.
 - **Check and auto-check are free** on both scales, but mark the puzzle as
   assisted. Auto-check counts if it was on at any point during the puzzle.
-- **The No-Hint Club:** a puzzle finished with no reveals, rephrasing or
+- **The No-Hint Club:** a puzzle finished with no reveals or
   checks is a No-Hint solve. Statistics shows No-Hint solves, the No-Hint
   Daily streak, average hint points and badges (First No-Hint solve, Three,
   Seven and Thirty Days, Ten and Fifty No-Hint solves, Brutal Finisher).
   Solves from before hint points existed don't count.
-- **Rephrase clue** appears under Reveal only for answers that have a second
-  wording in `REPHRASED_CLUES` (in `js/hints.js`). That list is empty until
-  the rephrased clues are written, so the option doesn't show yet.
 - A puzzle solved again, or on two devices, keeps its better record: No-Hint,
   then no reveals, then fewer hint points, then the faster time.
 
@@ -152,6 +166,11 @@ the site for offline use. The icons in `icons/` are drawn by
   schedule, `node tools/freeze-puzzles.js --refreeze-from YYYY-MM-DD`
   rebuilds the Dailies from that date on. It refuses any date up to today
   (South African time), so nothing already published changes.
+- **⏰ Next freeze due by 1 March 2027.** Everything is frozen through April
+  2027, and the tests fail once fewer than 60 days ahead are frozen. Before
+  1 March 2027, run `node tools/freeze-puzzles.js`, run the tests and merge
+  the new files. `node tests/puzzles.test.js` prints the due date on every
+  run and warns when it's less than a month away.
 - **One official day for everyone:** a new Daily and Mini at midnight South
   African time (00:00 SAST, UTC+2). The time comes from the web server's
   clock, so a device set to the wrong date or time zone still gets the same
@@ -276,6 +295,8 @@ node tests/generator.test.js # takes about 10 minutes
 node tests/sync.test.js      # merging progress between devices
 node tests/puzzles.test.js   # frozen puzzles are unchanged and far enough ahead
 node tests/hints.test.js     # hint credits and hint points
+node tests/stats.test.js     # streaks, hints used, averages and favourites
+node tests/access.test.js    # every puzzle and level stays free
 ```
 
 `rate-words.py` writes `words/levels.json`, rating each answer by how common
@@ -309,7 +330,10 @@ that `js/words.js` is up to date.
 | `js/account.js`, `js/sync.js`, `js/firebase-config.js`, `firestore.rules` | Optional sign-in and syncing progress |
 | `collections/*.txt`, `js/collections.js` | Themed fan collections, and their compiled form |
 | `js/featured.js` | The Trending now cards on the home page (edit by hand) |
-| `js/hints.js` | Hint credits, competitive hint points and rephrased clues |
+| `js/hints.js` | Hint credits and competitive hint points |
+| `js/stats.js` | Streaks, hints used, average time and favourites, from saved solves |
+| `js/access.js` | `canAccess`: who may play what (everything is free) |
+| `MASTER_PLAN.md`, `PROJECT_STATUS.md` | The roadmap and what's built |
 | `css/styles.css` | Styles, light and dark themes |
 | `puzzles/` | Frozen Daily, Mini and Brutal Challenge puzzles, one file per month, and their fingerprints |
 | `words/*.txt` | Word lists, one file per genre |

@@ -941,6 +941,10 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
 .badge small { font-size: 0.74rem; }
 .badge.earned { border-color: var(--gold); background: color-mix(in srgb, var(--gold) 12%, transparent); }
 .badge.earned .icon { color: var(--gold); }
+.fav-list { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 6px; }
+.fav-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 0.92rem; }
+.fav-list li span { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.fav-list .empty { color: var(--ink-soft); }
 .weekday-table { display: grid; gap: 6px; }
 .weekday-row { display: grid; grid-template-columns: 6.5em minmax(0, 1fr) 4.5em; align-items: center; gap: 10px; font-size: 0.88rem; }
 .weekday-row .bar { height: 10px; background: var(--wash); border-radius: 2px; overflow: hidden; }

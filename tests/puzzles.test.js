@@ -86,4 +86,12 @@ function checkGrid(p, tag) {
   }
   assert.strictEqual(seen.size, filled.length, `${tag}: grid is not connected`);
 }
+// When the next freeze is due: the tests start failing once fewer than 60
+// days ahead are frozen. Warn a month before that.
+const lastDay = (m) => { const [y, mo] = m.split('-').map(Number); return new Date(Date.UTC(y, mo, 0)); };
+const lastFrozen = new Date(Math.min(lastDay(months[months.length - 1]), lastDay(brutalMonths[brutalMonths.length - 1])));
+const due = new Date(lastFrozen.getTime() - 60 * 86400 * 1000).toISOString().slice(0, 10);
+const daysLeft = Math.floor((Date.parse(due) - (Date.now() + 2 * 3600 * 1000)) / 86400000);
+console.log(`Next freeze due by ${due} (${daysLeft} days): run node tools/freeze-puzzles.js and merge the result.`);
+if (daysLeft <= 30) console.log('WARNING: the freeze is due within a month.');
 console.log(`OK: ${total} frozen puzzles in ${months.length} months, unchanged and valid, frozen through ${months[months.length - 1]} (Brutal Challenges through ${brutalMonths[brutalMonths.length - 1]})`);
