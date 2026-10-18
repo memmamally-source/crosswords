@@ -250,13 +250,13 @@ What is built and live today, what's unfinished, and how it compares with the
 
 ## 6. Recommended next step
 
-1. **Review and merge the Stage 5 PR.** Then create the Realtime Database,
-   publish `database.rules.json` and send the database URL, to switch
-   multiplayer on.
-2. **Mobile solving layout** (requested 18 October 2026): keep the grid and
-   current clue on screen without scrolling. That means a fixed clue bar
-   with big previous and next buttons and swipe, a clue-list panel, and
-   clues beside the grid on wider screens.
+1. **Multiplayer is live** (#20 and #21, tested by the owner on two devices).
+2. **Mobile solving layout and a polished invite screen** (requested
+   18 October 2026), in a PR waiting for approval:
+   - a docked clue bar with big previous and next buttons and swipe
+   - the All clues panel, and auto-scroll to the square being typed in
+   - clues beside the grid when held sideways
+   - redesigned invite and name dialogs
 3. **Stage 4 follow-up: new category collections** (travel, medicine,
    technology, general knowledge).
 4. **Stage 6: verified leaderboards.** This needs the Firebase Blaze plan

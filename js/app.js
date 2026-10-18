@@ -865,6 +865,7 @@
   const grid2 = (rows, cols, v) => Array.from({ length: rows }, () => Array(cols).fill(v));
 
   function startGame(spec) {
+    $('#game-view').classList.remove('joining');
     // Everything is free for now, so this always allows (see js/access.js).
     if (!canAccess(spec).allowed) {
       toast('This puzzle isn’t available');
@@ -1108,17 +1109,24 @@
   const withLength = (w) => (/\([\d,\- ]+\)$/.test(w.clue) ? w.clue : `${w.clue} (${w.answer.length})`);
 
   const BOARD_PAD = 6; // keep in step with --pad in css/styles.css
+  // Grid and clues side by side: wide screens, and tablets or phones held
+  // sideways (keep in step with the layout rules in css/styles.css).
+  const sideBySide = window.matchMedia('(min-width: 901px), (min-width: 700px) and (orientation: landscape)');
+  // Phones held upright: the clue bar docks to the bottom, above the keyboard.
+  const docked = window.matchMedia('(pointer: coarse) and (max-width: 900px) and (orientation: portrait)');
   function sizeBoard() {
     if (!game) return;
     const { rows, cols } = game.puzzle;
     const view = $('#game-view');
     const inner = view.clientWidth - 32;
-    const wide = window.innerWidth > 900;
+    const wide = sideBySide.matches;
     const availW = wide ? Math.min(inner - Math.min(460, inner * 0.4) - 28, 720) : inner;
     // Fit the grid in the window. On touch screens only the width counts, so
     // the grid doesn't shrink each time the keyboard opens.
     const top = $('#board-wrap').getBoundingClientRect().top + window.scrollY;
-    const availH = touchScreen.matches ? Infinity : Math.max(wide ? 360 : 240, window.innerHeight - top - 24);
+    // Phones held sideways have little height: fit the grid to it.
+    const shortLandscape = touchScreen.matches && wide && window.innerHeight < 520;
+    const availH = shortLandscape ? Math.max(200, window.innerHeight - 24) : touchScreen.matches ? Infinity : Math.max(wide ? 360 : 240, window.innerHeight - top - 24);
     const cap = game.spec.kind === 'mini' ? 72 : 52;
     // Big grids may run past the window's height rather than shrink below a
     // comfortable size; on narrow phones they scroll sideways if needed.
@@ -1140,6 +1148,7 @@
     if (!game) return;
     placeTyping();
     syncRoomCursor();
+    requestAnimationFrame(keepActiveInView);
     let total = 0;
     let filled = 0;
     game.puzzle.solution.forEach((row, r) => row.forEach((ch, c) => {
@@ -1751,6 +1760,73 @@
         : ` The challenge stands at ${theirs}. Fewer hint points wins, then the faster time.`;
   }
 
+  // ---------- Phone layout: docked clue bar and the clue panel ----------
+  // On phones held upright the clue bar sits at the bottom, just above the
+  // device keyboard, with big previous and next buttons; swiping it changes
+  // clue, and tapping the clue opens every clue in a panel. The grid scrolls
+  // to keep the square being typed in visible above it.
+  function placeDock() {
+    const vv = window.visualViewport;
+    const gap = vv ? Math.max(0, document.documentElement.clientHeight - (vv.offsetTop + vv.height)) : 0;
+    document.documentElement.style.setProperty('--dock-bottom', `${Math.round(gap)}px`);
+  }
+  function keepActiveInView() {
+    if (!game || !docked.matches || $('#game-view').hidden || game.solved || !cellEls.length) return;
+    const el = cellEls[game.sel.r] && cellEls[game.sel.r][game.sel.c];
+    if (!el) return;
+    const vv = window.visualViewport;
+    const viewTop = (vv ? vv.offsetTop : 0) + $('.toolbar').getBoundingClientRect().height + 8;
+    const viewBottom = (vv ? vv.offsetTop + vv.height : window.innerHeight) - $('#clue-bar').getBoundingClientRect().height - 12;
+    const rect = el.getBoundingClientRect();
+    if (rect.bottom > viewBottom) window.scrollBy({ top: rect.bottom - viewBottom, behavior: 'smooth' });
+    else if (rect.top < viewTop) window.scrollBy({ top: rect.top - viewTop, behavior: 'smooth' });
+  }
+  if (window.visualViewport) {
+    visualViewport.addEventListener('resize', () => {
+      placeDock();
+      keepActiveInView();
+    });
+    visualViewport.addEventListener('scroll', placeDock);
+  }
+  placeDock();
+
+  function openClueSheet() {
+    if (!game) return;
+    const { puzzle, entries } = game;
+    const wi = currentWordIndex();
+    $('#sheet-lists').innerHTML = ['across', 'down'].map((dir) => `<section><h3>${dir === 'across' ? 'Across' : 'Down'}</h3><ol>${puzzle.words.map((w, i) => [w, i]).filter(([w]) => w.dir === dir).map(([w, i]) => `<li data-sheet-index="${i}" class="${i === wi ? 'current' : ''}${w.cells.every(([r, c]) => entries[r][c]) ? ' done' : ''}"><strong>${w.number}</strong><span>${esc(withLength(w))}</span></li>`).join('')}</ol></section>`).join('');
+    $('#clue-sheet').showModal();
+    const current = $('#sheet-lists li.current');
+    if (current) current.scrollIntoView({ block: 'center' });
+  }
+  $('#clue-sheet').addEventListener('click', (e) => {
+    const li = e.target.closest('[data-sheet-index]');
+    if (!li || !game) return;
+    const i = Number(li.dataset.sheetIndex);
+    game.sel = { ...firstEmptyCell(i), dir: game.puzzle.words[i].dir };
+    $('#clue-sheet').close();
+    refresh();
+    focusTyping();
+  });
+  // Swipe the clue bar: left for the next clue, right for the previous one.
+  let swipeStart = null;
+  let swipedAt = 0;
+  $('#clue-bar').addEventListener('touchstart', (e) => {
+    const t = e.touches[0];
+    swipeStart = { x: t.clientX, y: t.clientY };
+  }, { passive: true });
+  $('#clue-bar').addEventListener('touchend', (e) => {
+    if (!swipeStart || !game || game.paused) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - swipeStart.x;
+    const dy = t.clientY - swipeStart.y;
+    swipeStart = null;
+    if (Math.abs(dx) < 45 || Math.abs(dy) > 35) return;
+    swipedAt = Date.now();
+    jumpWord(dx < 0 ? 1 : -1, false);
+    refresh();
+  });
+
   // ---------- Multiplayer rooms (Help me solve) ----------
   // Up to five players fill in one grid together, live. The connection is in
   // js/room.js (Firebase Realtime Database); it's switched on by a
@@ -1833,6 +1909,7 @@
 
   // Opens an invite link: #/room/<id>.
   async function openRoom(id, routeNow) {
+    $('#game-view').classList.add('joining'); // only the heading until the puzzle opens
     $('#game-kicker').textContent = 'Help me solve';
     $('#game-title').textContent = 'Joining the puzzle…';
     const home = (message) => {
@@ -2011,15 +2088,23 @@
   function openInvite() {
     if (!game || !game.room) return;
     $('#room-link').value = roomUrl();
+    $('#room-link-text').textContent = roomUrl().replace(/^https?:\/\//, '');
+    $('#room-share-btn').hidden = !navigator.share;
     renderInvitePlayers();
+    $('#toast').hidden = true;
     $('#room-dialog').showModal();
   }
   function renderInvitePlayers() {
     const room = game.room;
     const host = room.meta && room.meta.host === room.uid;
     const players = roomPlayers();
-    $('#room-seats').textContent = `${players.length} of ${Rooms.MAX_PLAYERS} players`;
-    $('#room-list').innerHTML = players.map((p) => `<li style="--peer:${p.colour}"><i></i><span>${esc(p.name)}${p.me ? ' (you)' : ''}${p.host ? ' · host' : ''}${p.online ? '' : ' · away'}</span>${host && !p.me ? `<button class="link-btn" data-action="room-remove" data-uid="${esc(p.uid)}">Remove</button>` : ''}</li>`).join('');
+    $('#room-seats').textContent = `${players.length} of ${Rooms.MAX_PLAYERS}`;
+    const initial = (name) => esc((name.trim()[0] || '?').toUpperCase());
+    $('#room-list').innerHTML = players.map((p) => `<li style="--peer:${p.colour}">
+        <span class="room-avatar${p.online ? '' : ' away'}">${initial(p.name)}</span>
+        <span class="room-name">${esc(p.name)}${p.me ? ' <em>You</em>' : ''}${p.host ? ' <em>Host</em>' : ''}${p.online ? '' : ' <small>away</small>'}</span>
+        ${host && !p.me ? `<button class="link-btn room-remove" data-action="room-remove" data-uid="${esc(p.uid)}">Remove</button>` : ''}
+      </li>`).join('') + (players.length < Rooms.MAX_PLAYERS ? `<li class="room-empty"><span class="room-seats-free">${'<i></i>'.repeat(Rooms.MAX_PLAYERS - players.length)}</span><span class="room-name">${plural(Rooms.MAX_PLAYERS - players.length, 'seat')} free</span></li>` : '');
   }
   const inviteText = () => `Help me solve this crossword on Crossword Hub (${game.room && game.room.meta ? game.room.meta.title : resultName(game.spec)}): ${roomUrl()}`;
   function inviteWhatsApp() {
@@ -2260,6 +2345,7 @@
       case 'prev-word': if (!game.paused) { jumpWord(-1, false); refresh(); focusTyping(); } break;
       case 'share': share(); break;
       case 'room-start': startRoom(); break;
+      case 'clue-sheet': if (docked.matches && Date.now() - swipedAt > 400) openClueSheet(); break;
       case 'room-invite': openInvite(); break;
       case 'room-leave': leaveRoom(); break;
       case 'room-remove': removePlayer(actionEl.dataset.uid); break;

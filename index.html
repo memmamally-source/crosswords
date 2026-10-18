@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=26" />
+  <link rel="stylesheet" href="css/styles.css?v=27" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -230,7 +230,7 @@
           <div class="puzzle-progress" id="puzzle-progress" role="progressbar" aria-label="Squares filled" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
           <div class="clue-bar" id="clue-bar">
             <button class="clue-nav" data-action="prev-word" aria-label="Previous clue">‹</button>
-            <p aria-live="polite"><strong id="clue-bar-num"></strong><span id="clue-bar-text"></span></p>
+            <p aria-live="polite" data-action="clue-sheet"><strong id="clue-bar-num"></strong><span id="clue-bar-text"></span><span class="sheet-hint" aria-hidden="true">All clues</span></p>
             <button class="clue-nav" data-action="next-word" aria-label="Next clue">›</button>
           </div>
           <div class="board-wrap" id="board-wrap">
@@ -295,13 +295,24 @@
     </div>
   </div>
 
+  <dialog id="clue-sheet" class="sheet" aria-labelledby="sheet-title">
+    <div class="sheet-head">
+      <h2 id="sheet-title">Clues</h2>
+      <button class="dialog-close" data-action="close-dialog" aria-label="Close">✕</button>
+    </div>
+    <div class="sheet-lists" id="sheet-lists"></div>
+  </dialog>
+
   <dialog id="name-dialog" aria-labelledby="name-title">
     <form method="dialog" class="name-form">
-      <p class="kicker">Help me solve</p>
+      <span class="room-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" /><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 11.5a3 3 0 100-6M18 20c0-2.4-1-4.4-2.6-5.5" /></svg></span>
       <h2 id="name-title"></h2>
-      <p id="name-text"></p>
-      <label>Your name<input id="name-input" maxlength="20" autocomplete="nickname" spellcheck="false" /></label>
-      <p class="name-note">Shown to the others in this puzzle. Letters, numbers and spaces.</p>
+      <p class="room-lede" id="name-text"></p>
+      <label class="name-field">
+        <span>Your name</span>
+        <input id="name-input" maxlength="20" autocomplete="nickname" spellcheck="false" autofocus />
+      </label>
+      <p class="name-note">Shown to the other players. Letters, numbers and spaces.</p>
       <div class="name-actions">
         <button class="btn" value="cancel">Cancel</button>
         <button class="btn btn-primary" value="ok" id="name-submit"></button>
@@ -311,18 +322,22 @@
 
   <dialog id="room-dialog" aria-labelledby="room-title">
     <div class="room-invite">
-      <p class="kicker">Help me solve</p>
+      <span class="room-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" /><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 11.5a3 3 0 100-6M18 20c0-2.4-1-4.4-2.6-5.5" /></svg></span>
       <h2 id="room-title">Invite friends</h2>
-      <p>Anyone with this link can join and fill in the grid with you, live: no account needed. Up to 5 players; the link works for 7 days.</p>
-      <input class="room-link" id="room-link" readonly aria-label="Invite link" />
-      <div class="win-share">
-        <button class="btn btn-whatsapp" data-action="room-whatsapp">WhatsApp</button>
-        <button class="btn" data-action="room-copy">Copy link</button>
-        <button class="btn btn-primary" data-action="room-share">Share</button>
+      <p class="room-lede">Send this link and solve the grid together, live. No account needed.</p>
+      <div class="room-link-row">
+        <span class="room-link" id="room-link-text"></span>
+        <button class="room-copy" data-action="room-copy">Copy</button>
       </div>
-      <h3 id="room-seats"></h3>
+      <input type="hidden" id="room-link" />
+      <button class="btn btn-whatsapp btn-wide" data-action="room-whatsapp" autofocus>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.2-1.3c-.1-.1-.3-.2-.6-.3z" /></svg>
+        Send on WhatsApp
+      </button>
+      <button class="btn btn-wide" data-action="room-share" id="room-share-btn">More ways to share</button>
+      <div class="room-players-head"><h3>Players</h3><span id="room-seats"></span></div>
       <ul class="room-list" id="room-list"></ul>
-      <button class="link-btn" data-action="room-leave">Leave this shared puzzle</button>
+      <p class="room-foot">The link works for 7 days. <button class="link-btn room-leave" data-action="room-leave">Leave this puzzle</button></p>
     </div>
     <button class="dialog-close" data-action="close-dialog" aria-label="Close">✕</button>
   </dialog>
@@ -393,22 +408,22 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=26"></script>
-  <script src="js/words.js?v=26"></script>
-  <script src="js/collections.js?v=26"></script>
-  <script src="js/genres.js?v=26"></script>
-  <script src="js/sync.js?v=26"></script>
-  <script src="js/featured.js?v=26"></script>
-  <script src="js/hints.js?v=26"></script>
-  <script src="js/stats.js?v=26"></script>
-  <script src="js/access.js?v=26"></script>
-  <script src="js/share.js?v=26"></script>
-  <script src="js/rooms.js?v=26"></script>
-  <script src="js/firebase-config.js?v=26"></script>
-  <script src="js/analytics.js?v=26"></script>
-  <script src="js/app.js?v=26"></script>
-  <script type="module" src="js/firebase.js?v=26"></script>
-  <script type="module" src="js/account.js?v=26"></script>
-  <script type="module" src="js/room.js?v=26"></script>
+  <script src="js/generator.js?v=27"></script>
+  <script src="js/words.js?v=27"></script>
+  <script src="js/collections.js?v=27"></script>
+  <script src="js/genres.js?v=27"></script>
+  <script src="js/sync.js?v=27"></script>
+  <script src="js/featured.js?v=27"></script>
+  <script src="js/hints.js?v=27"></script>
+  <script src="js/stats.js?v=27"></script>
+  <script src="js/access.js?v=27"></script>
+  <script src="js/share.js?v=27"></script>
+  <script src="js/rooms.js?v=27"></script>
+  <script src="js/firebase-config.js?v=27"></script>
+  <script src="js/analytics.js?v=27"></script>
+  <script src="js/app.js?v=27"></script>
+  <script type="module" src="js/firebase.js?v=27"></script>
+  <script type="module" src="js/account.js?v=27"></script>
+  <script type="module" src="js/room.js?v=27"></script>
 </body>
 </html>

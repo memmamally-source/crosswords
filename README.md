@@ -88,6 +88,14 @@ and the clue bar.
   to the next clue, Backspace erases. On phones and tablets, tap a square to
   type with the device's own keyboard; tap the square again to switch
   direction.
+- **On phones held upright** the clue bar is docked at the bottom, just
+  above the keyboard:
+  - Its big ‹ › buttons and a swipe left or right move between clues.
+  - Tapping the clue opens **All clues**, a panel listing every clue; tap
+    one to jump to it.
+  - The grid scrolls by itself to keep the square you're typing in visible.
+  - On tablets and phones held sideways, the clues sit beside the grid and
+    the header is compact.
 - **Pencil** enters tentative letters in grey.
 - **Check** and **Reveal** work on a square, a word or the whole puzzle.
   **Check → Auto-check** stays on, marking wrong letters as you type, until
