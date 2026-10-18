@@ -12,4 +12,8 @@ window.FIREBASE_CONFIG = {
   storageBucket: 'crossword-hub.firebasestorage.app',
   messagingSenderId: '427785979209',
   appId: '1:427785979209:web:2d630373040f9b6a2a8698',
+  // Google Analytics (optional): the measurement ID (G-…) from Firebase
+  // console → Project settings → Integrations → Google Analytics. While this
+  // is empty, analytics stays off and players are never asked about it.
+  measurementId: '',
 };

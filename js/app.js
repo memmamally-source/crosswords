@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, hintTotal, CrosswordStats, canAccess */
+/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, hintTotal, CrosswordStats, canAccess, CrosswordShare, HubAnalytics */
 (function () {
   'use strict';
 
@@ -335,6 +335,45 @@
   // with or without help (see js/stats.js).
   const dailyStreaks = () => CrosswordStats.dailyStreak(store.solves, todayKey(), LAUNCH);
 
+  // ---------- Analytics (optional; see js/analytics.js) ----------
+  // Off unless a measurement ID is configured and the player allows it.
+  const analytics = typeof HubAnalytics !== 'undefined' ? HubAnalytics : { available: false, start() {}, stop() {}, track() {}, page() {} };
+  if (analytics.available && store.settings.analytics === true) analytics.start();
+  // Return visits are noted only while analytics is on, so a visit made
+  // without consent is never reported later.
+  function setAnalytics(on) {
+    store.settings.analytics = on;
+    saveStore();
+    if (on) analytics.start();
+    else analytics.stop();
+    if (on) noteVisit();
+    $('#consent').hidden = true;
+    syncSettingsUI();
+  }
+  // Asked once, on the home page only, so it never gets in the way of a puzzle.
+  function offerConsent(view) {
+    $('#consent').hidden = !(analytics.available && store.settings.analytics == null && view === 'home');
+  }
+  // What a puzzle is, for analytics: kind, category, level and genre only.
+  function puzzleParams(spec) {
+    if (spec.kind === 'genre') return { puzzle_kind: 'genre', category: spec.genre.category, level: spec.difficulty, genre: spec.genre.id };
+    const level = spec.kind === 'daily' ? scheduleFor(spec.date).level.toLowerCase() : spec.kind;
+    return { puzzle_kind: spec.kind, category: spec.kind, level };
+  }
+  // Return visits: once a day, how many days since the last visit. Google
+  // Analytics also reports new and returning players itself.
+  function noteVisit() {
+    const today = todayKey();
+    const last = store.lastVisit;
+    if (last === today) return;
+    if (last) {
+      const days = Math.round((Date.parse(today) - Date.parse(last)) / 86400000);
+      if (days > 0) analytics.track('return_visit', { days_since_last_visit: days });
+    }
+    store.lastVisit = today;
+    saveStore();
+  }
+
   // ---------- Settings & theme ----------
   function applyTheme() {
     const t = store.settings.theme;
@@ -358,6 +397,8 @@
     $('#set-timer').checked = store.settings.showTimer;
     $('#set-vibrate').checked = store.settings.vibrate;
     $('#set-vibrate').closest('.switch').hidden = !canVibrate;
+    $('#set-analytics-row').hidden = !analytics.available;
+    $('#set-analytics').checked = store.settings.analytics === true;
     $('#timer').classList.toggle('hidden-time', !store.settings.showTimer);
     applyTheme();
   }
@@ -475,8 +516,11 @@
     const streaks = dailyStreaks();
     const pill = $('#streak-pill');
     pill.hidden = false;
+    const doneToday = store.solves[`daily:${today}`] || store.solves[`mini:${today}`];
     pill.innerHTML = streaks.current
-      ? `${icon('flame', 'flame')}<b>${plural(streaks.current, 'day')}</b> <span>Daily streak · best ${streaks.longest}</span>`
+      ? `${icon('flame', 'flame')}<b>${plural(streaks.current, 'day')}</b> <span>${doneToday
+        ? `Daily streak · best ${streaks.longest} · done for today`
+        : 'Keep your streak going: finish today’s Daily or Mini'}</span>`
       : `${icon('flame', 'flame')}<span>Finish today's Daily or Mini to start a streak</span>`;
     $('#daily-feature').innerHTML = `
       <div>
@@ -840,6 +884,9 @@
       autochecked: false,
     };
 
+    game.challenge = routeChallenge;
+    showChallenge();
+    if (!store.solves[spec.key]) analytics.track('puzzle_start', { ...puzzleParams(spec), resumed: !!store.saves[spec.key] });
     const save = store.saves[spec.key];
     const solve = store.solves[spec.key];
     if (save && fitsPuzzle(save, puzzle)) {
@@ -1256,6 +1303,7 @@
   function check(scope) {
     if (game.solved) return;
     game.checks++;
+    analytics.track('check_used', { scope, puzzle_kind: game.spec.kind });
     let bad = 0;
     let empty = 0;
     for (const [r, c] of targetCells(scope)) {
@@ -1287,6 +1335,7 @@
       return;
     }
     revealArmed = 0;
+    analytics.track('hint_used', { hint: { cell: 'letter', word: 'word', all: 'puzzle' }[scope], puzzle_kind: game.spec.kind });
     // Count whole words given away (Reveal → Word or Puzzle), for the stats.
     if (scope !== 'cell') {
       const words = scope === 'all' ? game.puzzle.words : [game.puzzle.words[currentWordIndex()]];
@@ -1462,7 +1511,6 @@
       }
       actions.push({ label: spec.date === today ? 'Back to today' : 'Back to the archive', attr: `data-nav="${spec.date === today ? 'home' : 'archive'}"` });
     }
-    actions.push({ label: 'Share result', attr: 'data-action="share"' });
     return actions;
   }
 
@@ -1501,12 +1549,21 @@
     $('#win-title').textContent = clean ? 'Solved' : 'Puzzle complete';
     $('#win-time').textContent = formatTime(time);
     const newBadges = earnedBadges(noHintRecord()).filter((b) => !badgesBefore.includes(b));
+    analytics.track('puzzle_complete', {
+      ...puzzleParams(spec), seconds: Math.round(time), hint_points: points, assisted: !noHint, no_hint: noHint, challenge: !!game.challenge,
+    });
     $('#win-text').textContent = (clean
       ? noHint
         ? `A No-Hint solve: no hints and no checks.${newBest ? ' And a new personal best.' : ''}`
         : `0 hint points${newBest ? ' and a new personal best' : ''}. ${game.autochecked ? 'Auto-check' : 'Checking'} keeps this one out of the No-Hint Club.`
       : `${plural(points, 'hint point')} (${hintSummary(gameHints())}), so this one doesn't count toward best times or the No-Hint Club.`)
-      + (newBadges.length ? ` New badge: ${newBadges.join(', ')}!` : '');
+      + (newBadges.length ? ` New badge: ${newBadges.join(', ')}!` : '') + challengeOutcome();
+    const next = $('#win-next');
+    next.hidden = !((spec.kind === 'daily' || spec.kind === 'mini') && spec.date === todayKey());
+    if (!next.hidden) {
+      const mins = Math.ceil(CrosswordShare.msUntilNextDay(now()) / 60000);
+      next.textContent = `New Daily and Mini in ${Math.floor(mins / 60)}h ${mins % 60}m.`;
+    }
     let stats = `<div><b>${points}</b><span>Hint points</span></div>`;
     const credits = hintTotal('credits', gameHints());
     if (credits) stats += `<div><b>${credits}</b><span>Hint credits used</span></div>`;
@@ -1526,26 +1583,58 @@
     }, 700);
   }
 
-  function shareText() {
-    const { spec } = game;
-    const name = spec.kind === 'genre' ? `${spec.title} (${levelsFor(spec.genre)[spec.difficulty].label})` : `${spec.kicker.split(' · ')[0]}, ${shortDate(spec.date)}`;
-    const points = gamePoints();
-    const how = points ? plural(points, 'hint point') : game.checks || game.autochecked ? '0 hint points' : 'No-Hint solve 🏅';
-    let text = `Crossword Hub · ${name}\n${formatTime(game.elapsed)}, ${how}`;
+  // ---------- Sharing and challenges ----------
+  // Links are added only when the site is opened directly (not embedded).
+  function canLink() {
     let framed = true;
     try {
       framed = window.top !== window.self;
     } catch (e) {
       framed = true;
     }
-    // Only link to the puzzle when the site is opened directly (not embedded).
-    if (!framed && /^https?:/.test(location.protocol)) text += `\n${location.origin}${location.pathname}${spec.url}`;
+    return !framed && /^https?:/.test(location.protocol);
+  }
+  const siteUrl = () => `${location.origin}${location.pathname}`;
+  function result() {
+    const points = gamePoints();
+    return { time: game.elapsed, points, noHint: game.reveals === 0 && !points && !game.checks && !game.autochecked };
+  }
+  const challengeUrl = () => `${siteUrl()}${game.spec.url}?c=${CrosswordShare.encodeChallenge(result())}`;
+  const resultName = (spec) => (spec.kind === 'genre' ? `${spec.title} (${levelsFor(spec.genre)[spec.difficulty].label})` : `${spec.kicker.split(' · ')[0]}, ${shortDate(spec.date)}`);
+  function describeResult(r) {
+    return r.noHint ? 'as a No-Hint solve' : `with ${plural(r.points, 'hint point')}`;
+  }
+
+  function shareText() {
+    const r = result();
+    const how = r.noHint ? 'No-Hint solve 🏅' : r.points ? plural(r.points, 'hint point') : '0 hint points';
+    let text = `Crossword Hub · ${resultName(game.spec)}\n${formatTime(r.time)}, ${how}`;
+    if (canLink()) text += `\nCan you beat it? ${challengeUrl()}`;
     return text;
   }
 
-  function share() {
-    const text = shareText();
-    const done = () => toast('Result copied to your clipboard');
+  // The spoiler-free result image (see js/share.js).
+  function resultCard() {
+    const { spec, puzzle } = game;
+    const r = result();
+    const streak = spec.kind === 'daily' || spec.kind === 'mini' ? dailyStreaks().current : 0;
+    return CrosswordShare.drawCard(document.createElement('canvas'), {
+      kicker: spec.kind === 'genre' ? `${spec.kicker} · ${levelsFor(spec.genre)[spec.difficulty].label}` : spec.kicker,
+      title: spec.kind === 'genre' ? spec.title : spec.kind === 'brutal' ? spec.title : longDate(spec.date),
+      time: formatTime(r.time),
+      points: r.points,
+      noHint: r.noHint,
+      assisted: !r.noHint,
+      streak,
+      grid: { rows: puzzle.rows, cols: puzzle.cols, filled: puzzle.solution.map((row) => row.map(Boolean)), revealed: game.revealed },
+      cta: 'Can you beat it?',
+      site: `${location.host}${location.pathname}`.replace(/\/$/, ''),
+    });
+  }
+  const cardBlob = () => new Promise((resolve) => resultCard().toBlob(resolve, 'image/png'));
+
+  function copyText(text, message) {
+    const done = () => toast(message);
     const fallback = () => {
       const ta = document.createElement('textarea');
       ta.value = text;
@@ -1568,6 +1657,63 @@
     } catch (e) {
       fallback();
     }
+  }
+
+  // The phone's share sheet, with the image where the device allows it.
+  const trackShare = (method) => analytics.track('share', { method, content_type: game.spec.kind, item_id: CrosswordShare.pagePath(game.spec.url) });
+  async function share() {
+    trackShare('native');
+    const text = shareText();
+    try {
+      if (navigator.share) {
+        const blob = await cardBlob();
+        const file = blob && new File([blob], 'crossword-hub-result.png', { type: 'image/png' });
+        if (file && navigator.canShare && navigator.canShare({ files: [file] })) await navigator.share({ files: [file], text });
+        else await navigator.share({ text });
+        return;
+      }
+    } catch (e) {
+      if (e && e.name === 'AbortError') return; // the player closed the share sheet
+    }
+    copyText(text, 'Result copied to your clipboard');
+  }
+  function shareWhatsApp() {
+    trackShare('whatsapp');
+    window.open(`https://wa.me/?text=${encodeURIComponent(shareText())}`, '_blank', 'noopener');
+  }
+  function copyChallenge() {
+    trackShare('copy_link');
+    if (canLink()) copyText(`Can you beat my ${formatTime(game.elapsed)} on ${resultName(game.spec)}? ${challengeUrl()}`, 'Challenge link copied');
+    else copyText(shareText(), 'Result copied to your clipboard');
+  }
+  async function saveImage() {
+    trackShare('image');
+    const blob = await cardBlob();
+    if (!blob) return toast('Saving images isn’t available here');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'crossword-hub-result.png';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  }
+
+  // A friend's result from a challenge link, shown above the puzzle.
+  function showChallenge() {
+    const banner = $('#challenge-banner');
+    const c = game && game.challenge;
+    banner.hidden = !c;
+    if (c) banner.textContent = `Challenge: a friend finished this in ${formatTime(c.time)} ${describeResult(c)}. Can you beat it?`;
+  }
+  function challengeOutcome() {
+    const c = game.challenge;
+    if (!c) return '';
+    const outcome = CrosswordShare.compareChallenge(result(), c);
+    const theirs = `${formatTime(c.time)} ${describeResult(c)}`;
+    return outcome === 'beat' ? ` You beat the challenge (${theirs})!`
+      : outcome === 'tie' ? ` A dead heat with the challenge (${theirs}).`
+        : ` The challenge stands at ${theirs}. Fewer hint points wins, then the faster time.`;
   }
 
   // ---------- Toast ----------
@@ -1727,6 +1873,9 @@
     const action = actionEl.dataset.action;
     switch (action) {
       case 'close-dialog': closeDialogs(); return;
+      case 'privacy': closeMenus(); $('#privacy-dialog').showModal(); return;
+      case 'consent-yes': setAnalytics(true); return;
+      case 'consent-no': setAnalytics(false); return;
       case 'stats': openStats(); return;
       case 'install': promptInstall(); return;
       case 'install-dismiss': dismissInstall(); return;
@@ -1761,6 +1910,9 @@
       case 'next-word': if (!game.paused) { jumpWord(1, false); refresh(); focusTyping(); } break;
       case 'prev-word': if (!game.paused) { jumpWord(-1, false); refresh(); focusTyping(); } break;
       case 'share': share(); break;
+      case 'share-whatsapp': shareWhatsApp(); break;
+      case 'share-copy': copyChallenge(); break;
+      case 'share-image': saveImage(); break;
       case 'new':
         if (game.spec.kind === 'genre') {
           closeDialogs();
@@ -1792,7 +1944,10 @@
       game.puzzle.solution.forEach((row, r) => row.forEach((ch, c) => {
         game.wrong[r][c] = on && !!ch && !!game.entries[r][c] && !game.pencil[r][c] && game.entries[r][c] !== ch;
       }));
-      if (on) game.autochecked = true;
+      if (on) {
+        game.autochecked = true;
+        analytics.track('autocheck_on', { puzzle_kind: game.spec.kind });
+      }
       refresh();
       persist();
     }
@@ -1810,6 +1965,7 @@
     saveStore();
     if (game && !$('#game-view').hidden) { renderGame(); refresh(); }
   });
+  $('#set-analytics').addEventListener('change', (e) => setAnalytics(e.target.checked));
   $('#set-vibrate').addEventListener('change', (e) => {
     store.settings.vibrate = e.target.checked;
     saveStore();
@@ -1825,6 +1981,7 @@
   // The route lives in memory and is mirrored to the URL hash when the host
   // allows it, so puzzle links can be shared on a normal web host.
   let currentRoute = location.hash || '#/';
+  let routeChallenge = null; // a friend's result from a challenge link (?c=…)
   function navigate(hash) {
     currentRoute = hash;
     try {
@@ -1856,11 +2013,16 @@
     const navName = name === 'game' ? null : name;
     if (navName) $(`.masthead-nav [data-nav="${navName}"]`).setAttribute('aria-current', 'page');
     if (name !== 'game') document.title = 'Crossword Hub';
+    offerConsent(name);
   }
 
   async function route() {
     const routeNow = currentRoute;
-    const parts = currentRoute.replace(/^#\/?/, '').split('/');
+    const { path, challenge } = CrosswordShare.splitRoute(currentRoute);
+    routeChallenge = challenge;
+    analytics.page(CrosswordShare.pagePath(currentRoute));
+    if (challenge) analytics.track('challenge_open', { page: CrosswordShare.pagePath(currentRoute) });
+    const parts = path.replace(/^#\/?/, '').split('/');
     leaveGame();
     const today = todayKey();
     $('#dateline').textContent = `${longDate(today)} · Today's Daily: ${scheduleFor(today).level}`;
@@ -1882,6 +2044,22 @@
       if (currentRoute !== routeNow) return;
       startGame(brutalSpec(week));
       return;
+    }
+    // #/new/<genre>/<level>: a fresh puzzle (used by the genre pages in play/).
+    if (parts[0] === 'new') {
+      const genre = genreById(parts[1]);
+      if (genre) {
+        const level = levelsFor(genre)[parts[2]] ? parts[2] : levelFor(genre);
+        const url = freshGenreSpec(genre, level).url;
+        currentRoute = url;
+        try {
+          history.replaceState(null, '', url);
+        } catch (e) {
+          /* sandboxed frame: keep the route in memory only */
+        }
+        route();
+        return;
+      }
     }
     if (parts[0] === 'play') {
       const genre = genreById(parts[1]);
@@ -1982,5 +2160,6 @@
   showInstallCard();
   withTimeout(syncClock(), 1500)
     .then(() => withTimeout(loadMonth(todayKey().slice(0, 7)), 2500))
-    .then(route);
+    .then(route)
+    .then(() => { if (analytics.available && store.settings.analytics === true) noteVisit(); });
 })();

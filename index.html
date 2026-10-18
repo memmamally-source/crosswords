@@ -3,8 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Crossword Hub</title>
-  <meta name="description" content="A crossword for every obsession: a daily crossword, a quick daily Mini, and themed puzzles in 33 genres from pop culture to philosophy." />
+  <title>Crossword Hub: free daily and themed crosswords</title>
+  <meta name="description" content="A crossword for every obsession: free daily crosswords, a quick daily Mini, a weekly Brutal Challenge and themed puzzles from TV, film and sport to philosophy. No sign-up." />
+  <link rel="canonical" href="https://memmamally-source.github.io/crosswords/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Crossword Hub" />
+  <meta property="og:title" content="Crossword Hub: a crossword for every obsession" />
+  <meta property="og:description" content="Free daily crosswords, a quick daily Mini, a weekly Brutal Challenge and themed puzzles. How few hints will you need?" />
+  <meta property="og:url" content="https://memmamally-source.github.io/crosswords/" />
+  <meta property="og:image" content="https://memmamally-source.github.io/crosswords/icons/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231b2540'/><rect x='6' y='19' width='13' height='13' fill='%23fffdf8'/><rect x='19' y='19' width='13' height='13' fill='%23fffdf8'/><rect x='33' y='19' width='13' height='13' fill='%23d4a12a'/><rect x='46' y='19' width='12' height='13' fill='%23fffdf8'/><rect x='33' y='6' width='13' height='13' fill='%23fffdf8'/><rect x='33' y='32' width='13' height='13' fill='%23fffdf8'/><rect x='33' y='45' width='13' height='13' fill='%23fffdf8'/></svg>" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
@@ -17,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=21" />
+  <link rel="stylesheet" href="css/styles.css?v=23" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -56,6 +64,8 @@
             <label class="switch"><input type="checkbox" id="set-tags" /><span>Show subject labels on clues</span></label>
             <label class="switch"><input type="checkbox" id="set-timer" /><span>Show timer</span></label>
             <label class="switch"><input type="checkbox" id="set-vibrate" /><span>Vibrate on taps and wins</span></label>
+            <label class="switch" id="set-analytics-row" hidden><input type="checkbox" id="set-analytics" /><span>Share anonymous usage statistics</span></label>
+            <button class="link-btn panel-link" data-action="privacy">Privacy</button>
           </div>
         </div>
       </div>
@@ -162,6 +172,7 @@
         <p class="kicker" id="game-kicker"></p>
         <h1 class="puzzle-title" id="game-title"></h1>
         <p class="puzzle-meta" id="game-meta"></p>
+        <p class="challenge-banner" id="challenge-banner" hidden></p>
       </div>
 
       <div class="toolbar" role="toolbar" aria-label="Puzzle tools">
@@ -252,10 +263,39 @@
       <p class="win-time" id="win-time"></p>
       <p class="win-text" id="win-text"></p>
       <div class="win-stats" id="win-stats"></div>
+      <p class="win-next" id="win-next" hidden></p>
+      <div class="win-share" role="group" aria-label="Share your result">
+        <button class="btn btn-primary" data-action="share">Share</button>
+        <button class="btn btn-whatsapp" data-action="share-whatsapp">WhatsApp</button>
+        <button class="btn" data-action="share-copy">Copy challenge link</button>
+        <button class="btn" data-action="share-image">Save image</button>
+      </div>
       <div class="win-actions" id="win-actions"></div>
       <button class="link-btn" data-action="close-dialog">View the completed grid</button>
     </div>
     <button class="dialog-close" data-action="close-dialog" aria-label="Close and view the grid">✕</button>
+  </dialog>
+
+  <div class="consent" id="consent" role="region" aria-label="Analytics choice" hidden>
+    <p><b>Help improve Crossword Hub?</b> Allow anonymous usage statistics (Google Analytics) about which puzzles are played. No names, emails or answers. <button class="link-btn" data-action="privacy">Privacy</button></p>
+    <div class="consent-actions">
+      <button class="btn" data-action="consent-no">No thanks</button>
+      <button class="btn btn-primary" data-action="consent-yes">Allow</button>
+    </div>
+  </div>
+
+  <dialog id="privacy-dialog" aria-labelledby="privacy-title">
+    <div class="privacy">
+      <p class="kicker">Your data</p>
+      <h2 id="privacy-title">Privacy</h2>
+      <ul>
+        <li><b>Playing needs no account.</b> Your progress, times and streaks are saved in this browser.</li>
+        <li><b>If you sign in,</b> your progress is also kept in your Crossword Hub account (Google Firebase) so it syncs between devices. Only you can read it. Sign-in uses your email address or Google account, and nothing else about you.</li>
+        <li><b>Usage statistics are optional.</b> If you allow them, Google Analytics counts visits and which puzzles are started, finished and shared, with times, levels and hint points. It never receives your name, email or answers, and advertising features are off. You can switch it off any time in Settings, which also removes its cookies.</li>
+        <li><b>Challenge links</b> carry only your time and hint points for that puzzle.</li>
+      </ul>
+    </div>
+    <button class="dialog-close" data-action="close-dialog" aria-label="Close">✕</button>
   </dialog>
 
   <dialog id="stats-dialog" aria-labelledby="stats-title">
@@ -309,17 +349,19 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=21"></script>
-  <script src="js/words.js?v=21"></script>
-  <script src="js/collections.js?v=21"></script>
-  <script src="js/genres.js?v=21"></script>
-  <script src="js/sync.js?v=21"></script>
-  <script src="js/featured.js?v=21"></script>
-  <script src="js/hints.js?v=21"></script>
-  <script src="js/stats.js?v=21"></script>
-  <script src="js/access.js?v=21"></script>
-  <script src="js/app.js?v=21"></script>
-  <script src="js/firebase-config.js?v=21"></script>
-  <script type="module" src="js/account.js?v=21"></script>
+  <script src="js/generator.js?v=23"></script>
+  <script src="js/words.js?v=23"></script>
+  <script src="js/collections.js?v=23"></script>
+  <script src="js/genres.js?v=23"></script>
+  <script src="js/sync.js?v=23"></script>
+  <script src="js/featured.js?v=23"></script>
+  <script src="js/hints.js?v=23"></script>
+  <script src="js/stats.js?v=23"></script>
+  <script src="js/access.js?v=23"></script>
+  <script src="js/share.js?v=23"></script>
+  <script src="js/firebase-config.js?v=23"></script>
+  <script src="js/analytics.js?v=23"></script>
+  <script src="js/app.js?v=23"></script>
+  <script type="module" src="js/account.js?v=23"></script>
 </body>
 </html>

@@ -6,10 +6,10 @@ What is built and live today, what's unfinished, and how it compares with the
 - **Snapshot:** 18 October 2026.
 - **Live site:** https://memmamally-source.github.io/crosswords/ (GitHub
   Pages, deployed from `main` when a PR is merged).
-- **Code checked:** `main` at `c871e22` (PR #16 merged), plus the Stage 3.5
-  work on the `claude/crossword-game-website-48cduv` branch, in a PR waiting
-  for approval. Items marked "Stage 3.5" below go live when that PR is
-  merged.
+- **Code checked:** `main` at `2a460fc` (PR #17, Stage 3.5, merged), plus
+  the Stage 4 work on the `claude/crossword-game-website-48cduv` branch, in
+  a PR waiting for approval. Items marked "Stage 4" below go live when that
+  PR is merged.
 
 ## 1. Stages at a glance
 
@@ -18,8 +18,8 @@ What is built and live today, what's unfinished, and how it compares with the
 | 1 — Foundation and redesign | ✅ Complete | #12 |
 | 2 — Content: collections, Expert and Brutal, Brutal Challenge, gentler Daily | ✅ Complete | #13, #14, #15 |
 | 3 — Hints, scoring, assisted status, No-Hint Club | ✅ Core complete; wrap-up needed for the 18 October decisions | #16 |
-| 3.5 — Free-access alignment and Stage 3 wrap-up | 🔄 Built, PR awaiting approval | — |
-| 4 — Growth | Not started | — |
+| 3.5 — Free-access alignment and Stage 3 wrap-up | ✅ Complete | #17 |
+| 4 — Growth and social sharing | 🔄 Built, PR awaiting approval; new category collections to follow | — |
 | 5 — Multiplayer | Not started | — |
 | 6 — Verified leaderboards | Not started | — |
 | 7 — Gifts | Not started | — |
@@ -93,6 +93,35 @@ What is built and live today, what's unfinished, and how it compares with the
   (`js/access.js`), which always allows; `tests/access.test.js` checks all
   324 puzzle and level combinations, signed in or not.
 
+### Sharing, growth and analytics (Stage 4)
+
+- **Sharing a result:**
+  - **Share** uses the phone's share sheet with a spoiler-free result image
+    (1080 × 1350: time, hint points or No-Hint badge, streak, and the grid's
+    shape with no letters).
+  - **WhatsApp**, **Copy challenge link** and **Save image** sit alongside.
+- **Challenge links** (`?c=` on any puzzle link) show the friend's time and
+  hint points above the puzzle, and say on finishing whether you beat it.
+  No sign-up needed.
+- **Retention:**
+  - a home-page note to keep the streak going until today's Daily or Mini is
+    done
+  - a countdown to the next Daily and Mini on the result screen
+- **Analytics:** Google Analytics 4, only after the player taps Allow on a
+  one-time prompt.
+  - Events: page views, puzzle starts and completions, hints, checks, shares
+    and challenge opens.
+  - No names, emails or answers, and no advertising features.
+  - A Privacy note sits in Settings.
+  - **Off until the owner adds the measurement ID** to
+    `js/firebase-config.js` (see the README, Analytics).
+- **Search pages:**
+  - `play/` plus one page per genre and collection (83 in all), with
+    descriptions, sample clues and Play buttons
+  - `sitemap.xml`, `robots.txt`
+  - link-preview tags and image
+  - The new `#/new/<genre>/<level>` address opens a fresh puzzle.
+
 ### Accounts and Firebase
 
 - **Accounts are optional:** sign in with Google or email and password
@@ -107,7 +136,7 @@ What is built and live today, what's unfinished, and how it compares with the
   - Realtime Database
   - Cloud Functions
   - Cloud Storage
-  - Analytics
+  - Analytics (built in Stage 4, waiting for a measurement ID)
 - **Firebase plan:** presumed Spark (free), since nothing needs Blaze. Check
   in the Firebase console.
 - **Public config:** the web config in `js/firebase-config.js` is public by
@@ -157,9 +186,10 @@ What is built and live today, what's unfinished, and how it compares with the
 | Help Me Solve multiplayer | ❌ | Stage 5; needs Anonymous Auth enabled |
 | Teams and tournaments | ❌ | Stage 9 |
 | Gifts | ❌ | Stage 7 (7A manual, 7B AI) |
-| Result cards, WhatsApp challenge links, Instagram images | ⚠️ Partly | Share result copies a text summary with a link to the clipboard. No share sheet, WhatsApp button, image card or challenge flow yet. → Stage 4 |
-| Analytics | ❌ | Stage 4; provider undecided |
-| SEO (real addresses, sitemap, previews) | ❌ | Stage 4; the site uses `#/` addresses |
+| Result cards, WhatsApp challenge links, Instagram images | ✅ Stage 4 | Share sheet with image, WhatsApp, challenge links, image download |
+| Analytics | ✅ Stage 4 (dormant) | Google Analytics with consent; switches on once the measurement ID is added |
+| SEO (pages, sitemap, previews) | ✅ Stage 4 | Real pages per genre and collection link into the app; puzzles themselves stay on `#/` addresses |
+| Custom domain | ⏳ Open decision | `SITE` in `tools/build-pages.js` and the preview tags change when it's set |
 | Monetisation (Premium, credits, ads, gift purchases) | ❌ Deliberately not built | Documented as future only |
 
 ## 5. Risks and housekeeping
@@ -190,8 +220,12 @@ What is built and live today, what's unfinished, and how it compares with the
 
 ## 6. Recommended next step
 
-1. **Review and merge the Stage 3.5 PR.**
-2. **Stage 4: Growth and social sharing.** Result cards, WhatsApp challenge
-   links, the phone's share sheet, analytics, SEO and retention. It needs
-   the analytics provider decision (MASTER_PLAN Open decision 3) and is
-   free to run.
+1. **Review and merge the Stage 4 PR.**
+2. **Switch analytics on:** enable Google Analytics in Firebase and send me
+   the measurement ID (`G-…`). It's a one-line change.
+3. **Stage 4 follow-up: new category collections** (travel, medicine,
+   technology, general knowledge), written and fact-checked like the
+   existing 50.
+4. **Then Stage 5: real-time multiplayer.** First enable Anonymous Auth in
+   the Firebase console and settle the multiplayer details (MASTER_PLAN
+   Open decision 6).

@@ -462,6 +462,7 @@ The owner approved this order on 18 October 2026.
 | 18 Oct 2026 | Reveals, Check or auto-check make a result assisted; assisted results never on unassisted boards | Confirmed |
 | 18 Oct 2026 | Everything free now; after monetisation the weekly Brutal Challenge stays free; archives may become Premium | Confirmed |
 | 18 Oct 2026 | Keep prices, marketing budgets and revenue targets out of public documentation | Confirmed |
+| 18 Oct 2026 | Analytics: Google Analytics 4 via Firebase, loaded only after the player agrees (consent prompt) | Confirmed; built in Stage 4 |
 | 18 Oct 2026 | Roadmap approved: 3.5 wrap-up, 4 Growth, 5 Multiplayer, 6 Verified leaderboards, 7 Gifts (manual builder first), 8 Monetisation preparation, 9 Teams and expansion | Confirmed |
 
 ## 9. Open decisions
@@ -475,13 +476,8 @@ settled on 18 October 2026; see the decision log.
 2. **The Firebase Blaze plan** (card on file, pay-as-you-go with free quotas,
    and budget alerts). This is needed for verified leaderboards, AI gifts,
    gift photos and later payments. Needed by Stage 6.
-3. **Analytics provider** (needed by Stage 4). Options:
-   - Firebase Analytics: free, but needs a cookie notice in some markets.
-   - Cloudflare Web Analytics: free and cookie-free, but no retention
-     cohorts.
-   - Plausible: paid.
-
-   Retention cohorts need an anonymous player ID.
+3. ~~Analytics provider~~ — settled 18 October 2026: Google Analytics 4
+   with a consent prompt.
 4. **Custom domain:** name and timing (for example crosswordhub.co.za or
    .com, after a trademark check).
 5. **AI gift testing budget and limits** (needed by Stage 7B):
