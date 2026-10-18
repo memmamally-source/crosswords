@@ -385,8 +385,10 @@ main { flex: 1; }
 .brutal-copy { flex: 1 1 420px; }
 .brutal-kicker { margin: 0 0 8px; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #e0b13d; }
 .brutal h2 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.1; }
-.brutal p:last-child { margin: 10px 0 0; color: #c9cfdd; max-width: 62ch; }
-.brutal-badge { padding: 10px 20px; border-radius: 999px; border: 1px solid #e0b13d; color: #e0b13d; font-weight: 800; font-size: 0.92rem; }
+.brutal-copy p:not(.brutal-kicker) { margin: 10px 0 0; color: #c9cfdd; max-width: 62ch; }
+.brutal-copy .brutal-status { color: #e0b13d; font-weight: 700; }
+.btn-gold { background: #e0b13d; color: #1b2540; border-color: #e0b13d; }
+.btn-gold:hover { background: #ecc35a; border-color: #ecc35a; }
 
 /* Continue playing */
 .continue-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }

@@ -296,6 +296,11 @@ function themedBank(words, level) {
   return words.filter((w) => rank[w.tier]).map((w) => ({ ...w, level: rank[w.tier] }));
 }
 const levelsFor = (genre) => (genre && genre.themed ? THEMED_LEVELS : DIFFICULTIES);
+// The clues a puzzle at this level draws from. Brutal leaves out easy answers.
+function bankFor(genre, words, level) {
+  if (genre.themed) return themedBank(words, level);
+  return level === 'brutal' ? words.filter((w) => w.level !== 'easy') : words;
+}
 
 const GENRES = [
   mixGenre('mixed', 'Mixed Bag', '🎲', 'A bit of everything from every genre.', BASE_GENRES),
@@ -325,6 +330,8 @@ const DIFFICULTIES = {
   easy: { label: 'Easy', count: 12, maxSize: 13, hard: 2 },
   medium: { label: 'Medium', count: 20, maxSize: 17, hard: 5 },
   hard: { label: 'Hard', count: 30, maxSize: 21, hard: 8 },
+  expert: { label: 'Expert', count: 32, maxSize: 21, hard: 12 },
+  brutal: { label: 'Brutal', count: 34, maxSize: 21, hard: 16 },
 };
 
 // ---------- Daily puzzles ----------
@@ -387,9 +394,29 @@ function miniBuild(date) {
   };
 }
 
+// ---------- The Brutal Challenge ----------
+// One Brutal puzzle a week, the same for everyone: answers from every genre,
+// none of them easy. Weeks start on Monday and are named by that date. Like
+// the Daily, published weeks are frozen in puzzles/brutal-YYYY-MM.json.
+const BRUTAL_BANK = mixGenre('brutal', 'The Brutal Challenge', '', '', BASE_GENRES).words.filter((w) => w.level !== 'easy');
+const BRUTAL_WINDOW = 400;
+// The Monday (YYYY-MM-DD) of the week a date falls in.
+function weekOf(date) {
+  const day = dayNumberOf(date);
+  const monday = day - ((new Date(day * 86400000).getUTCDay() + 6) % 7);
+  return new Date(monday * 86400000).toISOString().slice(0, 10);
+}
+function brutalBuild(week) {
+  const n = Math.floor(dayNumberOf(week) / 7);
+  const rotate = (typeof CrosswordGenerator !== 'undefined' ? CrosswordGenerator : require('./generator.js')).rotatingPool;
+  const { count, maxSize, hard } = DIFFICULTIES.brutal;
+  return { bank: rotate(BRUTAL_BANK, n, BRUTAL_WINDOW, 3), options: { count, maxSize, hard, seed: n * 13 + 5 } };
+}
+
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
     GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW,
-    scheduleFor, dailyBuild, miniBuild, COLLECTIONS, THEMED_LEVELS, themedBank, levelsFor,
+    scheduleFor, dailyBuild, miniBuild, COLLECTIONS, THEMED_LEVELS, themedBank, levelsFor, bankFor,
+    weekOf, brutalBuild,
   };
 }

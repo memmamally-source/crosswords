@@ -1,21 +1,24 @@
 #!/usr/bin/env node
-// Saves ("freezes") every Daily and Mini so a published puzzle never changes,
-// even when the word lists or the generator change later.
+// Saves ("freezes") every Daily, Mini and weekly Brutal Challenge so a
+// published puzzle never changes, even when the word lists or the generator
+// change later.
 //
 //   node tools/freeze-puzzles.js                 # freeze through 6 months ahead
 //   node tools/freeze-puzzles.js --through 2027-06
 //
-// Writes one file per month, puzzles/YYYY-MM.json, and records each file's
-// fingerprint in puzzles/index.json. Months that are already frozen are never
+// Writes one file per month, puzzles/YYYY-MM.json (Dailies and Minis) and
+// puzzles/brutal-YYYY-MM.json (the Brutal Challenges of weeks starting that
+// month), and records each file's fingerprint in puzzles/index.json. Months that are already frozen are never
 // rewritten: only new months are added. The tests fail if a frozen file is
 // edited, or if fewer than 60 days ahead are frozen.
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { generate, freeze } = require('../js/generator.js');
-const { dailyBuild, miniBuild } = require('../js/genres.js');
+const { dailyBuild, miniBuild, brutalBuild } = require('../js/genres.js');
 
 const LAUNCH_MONTH = '2026-09';
+const BRUTAL_LAUNCH_MONTH = '2026-10';
 const dir = path.join(__dirname, '..', 'puzzles');
 const indexFile = path.join(dir, 'index.json');
 
@@ -56,6 +59,19 @@ function buildMonth(month) {
   return render(month, daily, mini);
 }
 
+// The Mondays in a month, each starting a Brutal Challenge week.
+function buildBrutalMonth(month) {
+  const weeks = {};
+  for (let d = 1; d <= daysIn(month); d++) {
+    const date = `${month}-${pad(d)}`;
+    if (new Date(`${date}T00:00:00Z`).getUTCDay() !== 1) continue;
+    const b = brutalBuild(date);
+    weeks[date] = freeze(generate(b.bank, b.options));
+  }
+  const block = Object.entries(weeks).map(([date, p]) => `    ${JSON.stringify(date)}: ${JSON.stringify(p)}`).join(',\n');
+  return `{\n  "version": 1,\n  "month": ${JSON.stringify(month)},\n  "brutal": {\n${block}\n  }\n}\n`;
+}
+
 function readIndex() {
   return fs.existsSync(indexFile) ? JSON.parse(fs.readFileSync(indexFile, 'utf8')) : { version: 1, months: {} };
 }
@@ -76,10 +92,21 @@ function main() {
     added++;
     console.log(`Froze ${month}`);
   }
+  index.brutal = index.brutal || {};
+  for (let month = BRUTAL_LAUNCH_MONTH; month <= through; month = nextMonth(month)) {
+    const file = path.join(dir, `brutal-${month}.json`);
+    if (index.brutal[month] || fs.existsSync(file)) continue; // frozen: never rewrite
+    const text = buildBrutalMonth(month);
+    fs.writeFileSync(file, text);
+    index.brutal[month] = fingerprint(text);
+    added++;
+    console.log(`Froze Brutal Challenges for ${month}`);
+  }
   index.months = Object.fromEntries(Object.entries(index.months).sort());
+  index.brutal = Object.fromEntries(Object.entries(index.brutal).sort());
   fs.writeFileSync(indexFile, JSON.stringify(index, null, 2) + '\n');
   console.log(added ? `Added ${added} month(s); frozen through ${Object.keys(index.months).pop()}` : 'Nothing new to freeze');
 }
 
 if (require.main === module) main();
-module.exports = { fingerprint, dir, indexFile, LAUNCH_MONTH };
+module.exports = { fingerprint, dir, indexFile, LAUNCH_MONTH, BRUTAL_LAUNCH_MONTH };

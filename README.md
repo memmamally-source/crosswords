@@ -28,12 +28,23 @@ draws the app icons.
 - **The Mini:** six quick clues of everyday and pop-culture answers.
 - **Archive:** a calendar of every Daily and Mini since launch
   (1 September 2026), with solved, in-progress and finished-with-help marks.
-- **Genre puzzles:** 33 genres in four groups, each with about 500 words.
-  Easy puzzles have 12 clues, Medium 20 and Hard 30.
+- **The Brutal Challenge:** one Brutal puzzle a week, the same for everyone:
+  34 clues from every genre and no easy answers. A new one starts each Monday
+  (South African time), at `#/brutal`.
+- **Genre puzzles:** 33 genres in four groups, each with about 500 words, at
+  five levels:
+
+  | Level | Clues | Tough answers |
+  |---|---|---|
+  | Easy | 12 | 2 |
+  | Medium | 20 | 5 |
+  | Hard | 30 | 8 |
+  | Expert | 32 | 12 |
+  | Brutal | 34 | 16, and no easy answers at all |
 - **A mix of easy and hard clues:** every puzzle has a set number of tough
-  answers (2 on Easy, 5 on Medium, 8 on Hard; 3 on a Monday Daily rising to 8
-  on Saturday and Sunday), and the rest lean towards easier ones. The Mini has
-  no hard answers.
+  answers (see the table; 3 on a Monday Daily rising to 8 on Saturday and
+  Sunday), and the rest lean towards easier ones. The Mini has no hard
+  answers.
   - *Mixed:* Mixed Bag, Pop & Fun Mix, Academic Mix.
   - *Everyday:* Animal Kingdom, Food & Drink, World Geography, Science Lab,
     Sports Arena, Music Hall, Outer Space, Myths & Legends.
@@ -97,9 +108,11 @@ the site for offline use. The icons in `icons/` are drawn by
 
 ## Published puzzles never change
 
-- **The Daily and the Mini are frozen.** Every date from launch (1 September
-  2026) through at least 60 days ahead is saved in `puzzles/YYYY-MM.json`,
-  and the site plays those saved grids. Editing word lists or the generator
+- **The Daily, the Mini and the Brutal Challenge are frozen.** Every date
+  from launch (1 September 2026) through at least 60 days ahead is saved in
+  `puzzles/YYYY-MM.json`, and every Brutal Challenge week (from October 2026)
+  in `puzzles/brutal-YYYY-MM.json`, filed by the month its Monday falls in.
+  The site plays those saved grids. Editing word lists or the generator
   never changes a published puzzle. `puzzles/index.json` holds each month's
   fingerprint, and the tests fail if a frozen month is edited or if fewer
   than 60 days ahead are frozen. To freeze more months:
@@ -262,7 +275,7 @@ that `js/words.js` is up to date.
 | `collections/*.txt`, `js/collections.js` | Themed fan collections, and their compiled form |
 | `js/featured.js` | The Trending now cards on the home page (edit by hand) |
 | `css/styles.css` | Styles, light and dark themes |
-| `puzzles/` | Frozen Daily and Mini puzzles, one file per month, and their fingerprints |
+| `puzzles/` | Frozen Daily, Mini and Brutal Challenge puzzles, one file per month, and their fingerprints |
 | `words/*.txt` | Word lists, one file per genre |
 | `words/levels.json` | Easy and hard answers, from `tools/rate-words.py` |
 | `js/words.js` | Word lists compiled by `tools/build-words.js` (don't edit by hand) |
