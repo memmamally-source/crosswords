@@ -1,14 +1,14 @@
 {
   "name": "Crossword Hub",
   "short_name": "Crosswords",
-  "description": "A daily academic crossword, a quick daily Mini, and themed puzzles in 33 genres.",
+  "description": "A crossword for every obsession: a daily crossword, a quick daily Mini, and themed puzzles in 33 genres.",
   "id": "./",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "background_color": "#f7f4ec",
+  "theme_color": "#fffdf8",
   "categories": ["games", "education", "entertainment"],
   "icons": [
     { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },

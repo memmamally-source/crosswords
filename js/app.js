@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild */
+/* global CrosswordGenerator, GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED */
 (function () {
   'use strict';
 
@@ -393,6 +393,57 @@
     }
   }
 
+  // ---------- Icons ----------
+  // Simple stroke icons (24×24) for genres and featured cards.
+  const ICONS = {
+    dice: '<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.3" fill="currentColor"/><circle cx="16" cy="16" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/>',
+    popcorn: '<path d="M5 9l2 12h10l2-12"/><path d="M5 9a3 3 0 015-2.5 3 3 0 014 0A3 3 0 0119 9z"/><path d="M10 9l.5 12M14 9l-.5 12"/>',
+    cap: '<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5M22 9v6"/>',
+    paw: '<circle cx="8" cy="7" r="2"/><circle cx="16" cy="7" r="2"/><circle cx="4.5" cy="12" r="1.8"/><circle cx="19.5" cy="12" r="1.8"/><path d="M12 12c-3 0-5 3-5 5.5 0 1.6 1.5 2.5 3 2l2-.6 2 .6c1.5.5 3-.4 3-2C17 15 15 12 12 12z"/>',
+    utensils: '<path d="M7 3v8M5 3v4a2 2 0 004 0V3M7 11v10M17 3c-2 1-3 4-3 7h3v11"/>',
+    globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',
+    flask: '<path d="M9 3h6M10 3v6L4.5 18.5A2 2 0 006.2 21h11.6a2 2 0 001.7-2.5L14 9V3M7 15h10"/>',
+    ball: '<circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 5h-5L8 10z"/>',
+    note: '<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>',
+    planet: '<circle cx="12" cy="12" r="6"/><path d="M4.5 16.5C2 19 6 19.5 12 16s10-8.5 7.5-11"/>',
+    bolt: '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+    star: '<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>',
+    film: '<rect x="3" y="8" width="18" height="12" rx="1.5"/><path d="M3 8l3-4h3l-3 4M10 8l3-4h3l-3 4"/>',
+    tv: '<rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/>',
+    gamepad: '<rect x="2" y="7" width="20" height="10" rx="5"/><path d="M7 10v4M5 12h4M16 11h.01M18 13h.01"/>',
+    gift: '<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8c-2-4-6-4-6-1 0 1 1 1 6 1zM12 8c2-4 6-4 6-1 0 1-1 1-6 1z"/>',
+    columns: '<path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M3 10l9-6 9 6z"/>',
+    book: '<path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2zM4 19V5M8 7h7"/>',
+    sigma: '<path d="M18 5H6l7 7-7 7h12"/>',
+    pen: '<path d="M4 20l4-1 11-11-3-3L5 16zM14 6l3 3"/>',
+    scroll: '<path d="M8 3h11v13a3 3 0 01-3 3H6a3 3 0 01-3-3v-1h11v1a3 3 0 003 3M8 3a3 3 0 00-3 3v9M10 8h6M10 12h6"/>',
+    chart: '<path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6"/>',
+    heart: '<path d="M12 20s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.5-7 10-7 10z"/>',
+    palette: '<path d="M12 3a9 9 0 100 18c1.5 0 2-1 2-2 0-1.5-1-2-1-3s1-2 2.5-2H18a3 3 0 003-3c0-4.5-4-8-9-8z"/><circle cx="7.5" cy="11" r="1.2" fill="currentColor"/><circle cx="9.5" cy="7" r="1.2" fill="currentColor"/><circle cx="14.5" cy="7" r="1.2" fill="currentColor"/>',
+    beaker: '<path d="M6 3h12M7 3v16a2 2 0 002 2h6a2 2 0 002-2V3M7 12h10"/>',
+    atom: '<circle cx="12" cy="12" r="1.6" fill="currentColor"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/>',
+    leaf: '<path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15zM5 19l8-8"/>',
+    eye: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+    chip: '<rect x="7" y="7" width="10" height="10" rx="1"/><path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"/>',
+    scales: '<path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6a3 3 0 006 0zM19 7l-3 6a3 3 0 006 0z"/>',
+    candle: '<path d="M12 3c1.5 2 1.5 3.5 0 5-1.5-1.5-1.5-3 0-5z"/><rect x="9" y="10" width="6" height="11" rx="1"/>',
+    speech: '<path d="M4 5h16v11H9l-5 4z"/>',
+    mountain: '<path d="M3 20l6-10 4 6 3-4 5 8z"/>',
+    urn: '<path d="M8 3h8M9 3c0 3-4 4-4 9a7 7 0 0014 0c0-5-4-6-4-9M7 21h10"/>',
+    flame: '<path d="M12 22c4 0 7-2.7 7-7 0-3.6-2.4-6-4.3-8.1-.5 2.4-1.7 3.6-3 4.1.3-3.3-1.2-6.4-3.7-8C8.2 6.4 5 9.4 5 15c0 4.3 3 7 7 7z"/>',
+  };
+  const icon = (name, cls = '') => `<svg class="icon ${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[name] || ICONS.dice}</svg>`;
+  const GENRE_ICONS = {
+    mixed: 'dice', 'mixed-fun': 'popcorn', 'mixed-academic': 'cap',
+    animals: 'paw', food: 'utensils', geography: 'globe', science: 'flask', sports: 'ball', music: 'note', space: 'planet', mythology: 'bolt',
+    popculture: 'star', movies: 'film', gaming: 'gamepad', holidays: 'gift',
+    philosophy: 'columns', literature: 'book', mathematics: 'sigma', vocabulary: 'pen', history: 'scroll', economics: 'chart',
+    anatomy: 'heart', art: 'palette', chemistry: 'beaker', physics: 'atom', biology: 'leaf', psychology: 'eye', computing: 'chip',
+    law: 'scales', religion: 'candle', linguistics: 'speech', earthscience: 'mountain', classics: 'urn',
+  };
+  // One chip colour per genre group.
+  const CATEGORY_COLOURS = { mixed: '#1b2540', classic: '#2b4a3f', fun: '#5a2f4f', academic: '#24456b' };
+
   // ---------- Home ----------
   function statusLine(key, playLabel) {
     const st = statusOf(key);
@@ -408,19 +459,27 @@
     const daily = dailySpec(today);
     const mini = miniSpec(today);
 
-    const ds = statusLine(daily.key, 'Play');
-    const streakNow = dailyStreaks().current;
+    const ds = statusLine(daily.key, 'Play the Daily');
+    const streaks = dailyStreaks();
+    const pill = $('#streak-pill');
+    pill.hidden = false;
+    pill.innerHTML = streaks.current
+      ? `${icon('flame', 'flame')}<b>${plural(streaks.current, 'day')}</b> <span>Daily streak · best ${streaks.longest}</span>`
+      : `${icon('flame', 'flame')}<span>Solve today's Daily to start a streak</span>`;
     $('#daily-feature').innerHTML = `
       <div>
-        <p class="kicker">${esc(daily.kicker)}${streakNow ? `<span class="streak-chip" title="Daily streak">🔥 ${plural(streakNow, 'day')}</span>` : ''}</p>
+        <p class="kicker">${esc(daily.kicker)}</p>
         <h2>${esc(daily.sched.day)}'s Crossword</h2>
         <p class="deck" id="daily-deck">An academic crossword drawn from ${DAILY_SUBJECTS} subjects, from chemistry and classics to law, linguistics and philosophy.</p>
-        <ul class="facts">
-          <li><b>${daily.sched.count}</b> clues</li>
-          <li><b>${esc(daily.sched.level)}</b> difficulty</li>
-          <li>New every day at midnight SAST</li>
+        <ul class="chips">
+          <li>${daily.sched.count} clues</li>
+          <li>${esc(daily.sched.level)} difficulty</li>
+          <li>Same puzzle for everyone</li>
         </ul>
-        <button class="btn btn-primary" data-open="${daily.url}">${ds.label}</button>
+        <div class="feature-actions">
+          <button class="btn btn-primary btn-lg" data-open="${daily.url}">${ds.label}</button>
+          <button class="btn btn-lg" data-nav="archive">This week</button>
+        </div>
         ${ds.text ? `<p class="status ${ds.cls}">${esc(ds.text)}</p>` : ''}
       </div>
       <canvas class="thumb" aria-hidden="true"></canvas>`;
@@ -440,8 +499,8 @@
         <p class="kicker">The Mini</p>
         <h2>A six-clue warm-up</h2>
         <p class="deck">Short everyday and pop-culture answers. A good start before the Daily.</p>
-        <ul class="facts"><li><b>${MINI_CONFIG.count}</b> clues</li><li>Small grid</li></ul>
-        <button class="btn" data-open="${mini.url}">${ms.label}</button>
+        <ul class="chips"><li>${MINI_CONFIG.count} clues</li><li>A few minutes</li></ul>
+        <button class="btn btn-lg" data-open="${mini.url}">${ms.label}</button>
         ${ms.text ? `<p class="status ${ms.cls}">${esc(ms.text)}</p>` : ''}
       </div>
       <canvas class="thumb" aria-hidden="true"></canvas>`;
@@ -472,8 +531,73 @@
     }
 
     $$('#difficulty button').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.difficulty === store.difficulty)));
+    renderContinue();
+    renderTrending();
     renderGenreTabs();
     renderGenreGrid();
+    renderHomeStats();
+  }
+
+  // Puzzles in progress, most recent first, from the saved games.
+  function renderContinue() {
+    const items = Object.entries(store.saves)
+      .filter(([, sv]) => sv.entries && sv.entries.some((row) => row.some(Boolean)))
+      .sort((a, b) => (b[1].updated || 0) - (a[1].updated || 0))
+      .map(([key, sv]) => ({ key, sv, info: describeSave(key) }))
+      .filter((x) => x.info)
+      .slice(0, 4);
+    $('#continue-section').hidden = !items.length;
+    $('#continue-row').innerHTML = items.map(({ sv, info }) => {
+      const pct = sv.total ? Math.round((100 * (sv.filled || 0)) / sv.total) : null;
+      const bits = [pct != null ? `${pct}% filled` : 'In progress', formatTime(sv.elapsed || 0)];
+      if (sv.reveals) bits.push(`${plural(sv.reveals, 'letter')} revealed`);
+      return `<button class="continue-card" data-open="${esc(info.url)}">
+        <span class="continue-kicker">${esc(info.kicker)}</span>
+        <span class="continue-title">${esc(info.title)}</span>
+        <span class="bar" aria-hidden="true"><i style="width:${pct || 4}%"></i></span>
+        <span class="continue-meta">${esc(bits.join(' · '))}</span>
+      </button>`;
+    }).join('');
+  }
+  // Title and link for a saved game's key, or null if it can't be opened.
+  function describeSave(key) {
+    const [kind, rest] = [key.slice(0, key.indexOf(':')), key.slice(key.indexOf(':') + 1)];
+    if ((kind === 'daily' || kind === 'mini') && validDate(rest)) {
+      const day = DAILY_SCHEDULE[parseKey(rest).getDay()].day;
+      return kind === 'daily'
+        ? { kicker: `Daily · ${shortDate(rest)}`, title: `${day}'s Crossword`, url: `#/daily/${rest}` }
+        : { kicker: `Mini · ${shortDate(rest)}`, title: 'The Mini', url: `#/mini/${rest}` };
+    }
+    if (kind === 'play') {
+      const [genreId, difficulty] = rest.split('/');
+      const genre = genreById(genreId);
+      if (!genre || !DIFFICULTIES[difficulty]) return null;
+      const cat = categoryById(genre.category);
+      return { kicker: `${cat ? cat.name : 'Genre'} · ${DIFFICULTIES[difficulty].label}`, title: genre.name, url: `#/play/${rest}` };
+    }
+    return null;
+  }
+
+  // Trending Now cards, from js/featured.js.
+  function renderTrending() {
+    const list = (typeof FEATURED !== 'undefined' ? FEATURED : []).filter((f) => (f.genre ? genreById(f.genre) : f.link));
+    $('#trending-row').closest('section').hidden = !list.length;
+    $('#trending-row').innerHTML = list.map((f) => `
+      <button class="trend-card" style="background:${esc(f.colour || '#1b2540')}" ${f.genre ? `data-genre="${esc(f.genre)}"` : `data-open="${esc(f.link)}"`}>
+        ${icon(f.icon || 'star')}
+        <span><span class="trend-kicker">${esc(f.kicker || '')}</span><span class="trend-title">${esc(f.title)}</span></span>
+      </button>`).join('');
+  }
+
+  function renderHomeStats() {
+    const dailies = Object.entries(store.solves).filter(([k]) => k.startsWith('daily:'));
+    const { current, longest } = dailyStreaks();
+    $('#home-stats').innerHTML = [
+      [current, 'Day streak'],
+      [longest, 'Longest streak'],
+      [store.solvedCount || 0, 'Puzzles solved'],
+      [dailies.filter(([, x]) => x.clean).length, 'Dailies with no help'],
+    ].map(([v, l]) => `<div><b>${v}</b><span>${l}</span></div>`).join('');
   }
 
   function renderGenreTabs() {
@@ -500,7 +624,7 @@
       card.className = 'genre-card';
       card.dataset.genre = g.id;
       card.innerHTML = `
-        <canvas class="thumb" aria-hidden="true"></canvas>
+        <span class="genre-icon" style="background:${CATEGORY_COLOURS[g.category] || '#1b2540'}">${icon(GENRE_ICONS[g.id])}</span>
         <span>
           <h3>${esc(g.name)}</h3>
           <p>${esc(g.blurb)}</p>
@@ -508,7 +632,6 @@
         </span>`;
       card.setAttribute('aria-label', `${g.name}. ${g.blurb} ${cfg.label}, ${cfg.count} clues.`);
       grid.appendChild(card);
-      queueThumb($('canvas', card), () => puzzleFor(genreSpec(g, 'easy', 1, '')));
     }
   }
 
@@ -666,6 +789,8 @@
     } else if (game.entries.some((row) => row.some(Boolean)) || store.saves[game.spec.key]) {
       store.saves[game.spec.key] = {
         sig: layoutSig(game.puzzle),
+        filled: game.entries.reduce((n, row) => n + row.filter(Boolean).length, 0),
+        total: game.puzzle.solution.reduce((n, row) => n + row.filter(Boolean).length, 0),
         entries: game.entries,
         revealed: game.revealed,
         pencil: game.pencil,

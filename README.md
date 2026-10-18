@@ -7,6 +7,19 @@ Pages from the repository root).
 
 ## What's on the site
 
+The home page leads with today's Daily and Mini, a Brutal Challenge banner
+(coming soon), your puzzles in progress (**Continue playing**), hand-picked
+**Trending now** cards, this week's Dailies, every genre, and your stats.
+
+**Changing Trending now:** edit the list in `js/featured.js`. Each card opens a
+genre (or any site link) and has a short label, a spoiler-free title, a
+colour and an icon. Nothing is featured automatically.
+
+**Brand:** deep navy, charcoal, a warm paper white and gold. Headlines use
+Newsreader; everything else uses Public Sans. The logo is an across word and a
+down word crossing at one gold square (the "hub"). `tools/make-icons.py`
+draws the app icons.
+
 - **The Daily:** an academic crossword drawn from 23 subjects and about
   10,000 answers. Like a newspaper crossword it gets harder through the week:
   Monday is gentle, with 22 clues and shorter answers; Saturday is the
@@ -210,6 +223,7 @@ that `js/words.js` is up to date.
 | `index.html` | Page structure: masthead, home, archive, solving view, dialogs |
 | `manifest.webmanifest`, `sw.js`, `icons/` | Installing as an app and working offline |
 | `js/account.js`, `js/sync.js`, `js/firebase-config.js`, `firestore.rules` | Optional sign-in and syncing progress |
+| `js/featured.js` | The Trending now cards on the home page (edit by hand) |
 | `css/styles.css` | Styles, light and dark themes |
 | `puzzles/` | Frozen Daily and Mini puzzles, one file per month, and their fingerprints |
 | `words/*.txt` | Word lists, one file per genre |
