@@ -6,7 +6,7 @@
  * stored as one document, users/{uid}, holding a JSON copy of the syncable
  * part of their saved progress (see js/sync.js).
  */
-const SDK = 'https://www.gstatic.com/firebasejs/10.12.2';
+const { SDK, getApp, getAuth, isRealUser } = window.CrosswordFirebase;
 const config = window.FIREBASE_CONFIG;
 const hub = window.CrosswordHub;
 const { mergeStores, syncable, differs } = window.CrosswordSync;
@@ -16,13 +16,11 @@ const $ = (sel) => document.querySelector(sel);
 if (config && hub) start().catch(() => { /* sign-in unavailable (e.g. offline): the site works as before */ });
 
 async function start() {
-  const [{ initializeApp }, authLib, db] = await Promise.all([
-    import(`${SDK}/firebase-app.js`),
-    import(`${SDK}/firebase-auth.js`),
+  const [app, { lib: authLib, auth }, db] = await Promise.all([
+    getApp(),
+    getAuth(),
     import(`${SDK}/firebase-firestore.js`),
   ]);
-  const app = initializeApp(config);
-  const auth = authLib.getAuth(app);
   const firestore = db.getFirestore(app);
 
   let user = null;
@@ -94,7 +92,10 @@ async function start() {
   window.addEventListener('online', () => pull());
 
   // ---------- Signed in or out ----------
-  authLib.onAuthStateChanged(auth, (u) => {
+  // Guests in a multiplayer room sign in anonymously; to the account they
+  // count as signed out, so nothing is synced for them.
+  authLib.onAuthStateChanged(auth, (signedIn) => {
+    const u = isRealUser(signedIn) ? signedIn : null;
     user = u;
     const name = u && (u.displayName || u.email || 'Player');
     button.setAttribute('aria-label', u ? `Account: ${name}` : 'Sign in');

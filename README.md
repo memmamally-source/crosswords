@@ -289,6 +289,67 @@ advertising features are off. `tests/analytics.test.js` checks the fixed
 list. A **Privacy** note, linked from Settings and the prompt, explains all
 this to players.
 
+## Multiplayer: Help me solve
+
+Any puzzle can become a shared puzzle that up to five people fill in together,
+live and free.
+
+**For players:**
+- **Start:** tap **Help me solve: invite friends** above the grid, choose a
+  display name, and share the link (WhatsApp, copy or the share sheet). The
+  letters already in the grid carry over.
+- **Join:** friends open the link and pick a name. No account or sign-up is
+  needed; behind the scenes they get a temporary anonymous Firebase account.
+- **Playing together:**
+  - Everyone types at once. Each player has a colour; their square is
+    outlined, their word underlined, and a dot sits by the clue they're on.
+  - If two people change a square at the same moment, the last one wins and
+    everyone sees the same grid.
+  - The clock is shared and can't be paused.
+- **Losing connection:** letters typed offline are sent when the connection
+  returns. Reloading the page, or reopening the puzzle from Continue playing,
+  rejoins the room.
+- **The host** can remove a player, who can't rejoin that room.
+- **Limits:** a room holds five players and closes after 7 days. Anyone who
+  arrives after that can still solve the puzzle on their own.
+- **Results:** a shared solve is recorded as collaborative, with everyone's
+  hints added together. It counts towards the daily streak, but never
+  towards the No-Hint Club or best times. Leaderboards will rank it
+  separately.
+
+**How it works:**
+- **Firebase Realtime Database:** `js/room.js` handles the live connection,
+  `js/rooms.js` the shared helpers, and `database.rules.json` the security
+  rules.
+- **Why not Firestore:** Realtime Database charges nothing per keystroke and
+  shows who's online. Its free plan allows 100 people connected at once,
+  1 GB stored and 10 GB downloaded a month.
+- **What the rules allow:**
+  - Rooms can be read only by someone who has the link (12 random
+    characters); nobody can list rooms.
+  - Only seated players can change letters, and only one capital letter per
+    square.
+  - Seats are limited to five.
+  - Only the host can remove players.
+  - Display names are limited to safe characters.
+  - Nothing else can be written.
+- **Shared start-up:** `js/firebase.js` starts Firebase once for sign-in and
+  rooms. Anonymous guests count as signed out, so nothing is synced for them.
+
+**Switching it on** (it stays hidden until then):
+1. **Create the database:** in the Firebase console, open **Build →
+   Realtime Database → Create Database**. Choose **Belgium
+   (europe-west1)**, the closest location to South Africa, then **Start in
+   locked mode**.
+2. **Paste the rules:** on the database's **Rules** tab, replace everything
+   with the contents of `database.rules.json` and press **Publish**.
+3. **Add the address:** copy the database URL shown at the top of the
+   **Data** tab, for example
+   `https://crossword-hub-default-rtdb.europe-west1.firebasedatabase.app`,
+   into `databaseURL` in `js/firebase-config.js`.
+4. **Allow guests:** under **Authentication → Sign-in method**,
+   **Anonymous** must be enabled. Tick **Auto clean-up** too.
+
 ## Search pages
 
 Search engines can't read the app's `#/` addresses, so
@@ -389,6 +450,7 @@ node tests/access.test.js    # every puzzle and level stays free
 node tests/share.test.js     # challenge links, countdown, analytics page names
 node tests/pages.test.js     # search pages and sitemap are up to date
 node tests/analytics.test.js # analytics sends only allowed, non-personal fields
+node tests/rooms.test.js     # multiplayer room helpers
 ```
 
 `rate-words.py` writes `words/levels.json`, rating each answer by how common
@@ -427,6 +489,7 @@ that `js/words.js` is up to date.
 | `js/access.js` | `canAccess`: who may play what (everything is free) |
 | `js/share.js` | Challenge links and the shareable result image |
 | `js/analytics.js` | Optional Google Analytics, only with the player's consent |
+| `js/rooms.js`, `js/room.js`, `js/firebase.js`, `database.rules.json` | Multiplayer rooms (Help me solve): helpers, live connection, shared Firebase start-up, security rules |
 | `play/`, `sitemap.xml`, `robots.txt` | Search pages, made by `tools/build-pages.js` (don't edit by hand) |
 | `MASTER_PLAN.md`, `PROJECT_STATUS.md` | The roadmap and what's built |
 | `css/styles.css` | Styles, light and dark themes |

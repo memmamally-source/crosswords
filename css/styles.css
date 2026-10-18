@@ -1131,3 +1131,34 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
 .landing-links a:hover { border-color: var(--ink); }
 .landing-foot { max-width: 760px; margin: 0 auto; padding: 24px 16px 40px; border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: 0.9rem; }
 .landing-foot a { color: var(--ink); }
+
+/* Multiplayer: Help me solve */
+.room-start { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; padding: 8px 14px; border: 1px solid var(--rule); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-size: 0.88rem; font-weight: 700; cursor: pointer; }
+.room-start:hover { border-color: var(--ink); }
+.room-start svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.room-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0 0 12px; padding: 10px 12px; border: 1px solid var(--rule); border-radius: 12px; background: var(--card); }
+.room-players { display: flex; flex-wrap: wrap; gap: 6px; flex: 1 1 auto; min-width: 0; }
+.room-player { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 6px; border-radius: 999px; background: color-mix(in srgb, var(--peer) 14%, transparent); font-size: 0.82rem; font-weight: 700; max-width: 100%; }
+.room-player i, .room-list i { width: 10px; height: 10px; border-radius: 50%; background: var(--peer); flex: none; }
+.room-player.away { opacity: 0.55; }
+.room-status { font-size: 0.82rem; color: var(--ink-soft); }
+.btn-sm { padding: 6px 12px; font-size: 0.82rem; }
+.cell.peer { outline: 3px solid var(--peer); outline-offset: -3px; z-index: 1; }
+.cell.peer-word { box-shadow: inset 0 -4px 0 var(--peer); }
+.clue-list .peer-dots { display: inline-flex; gap: 3px; margin-left: 6px; vertical-align: middle; }
+.clue-list .peer-dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--peer); }
+.name-form { display: grid; gap: 10px; }
+.name-form h2 { margin: 0; font-family: var(--font-display); }
+.name-form p { margin: 0; color: var(--ink-soft); }
+.name-form label { display: grid; gap: 6px; font-weight: 700; font-size: 0.9rem; }
+.name-form input, .room-link { padding: 10px 12px; border: 1px solid var(--rule); border-radius: 10px; background: var(--paper); color: var(--ink); font: inherit; font-size: 1rem; }
+.name-note { font-size: 0.82rem; }
+.name-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 6px; }
+.room-invite { display: grid; gap: 12px; }
+.room-invite h2 { margin: 0; font-family: var(--font-display); }
+.room-invite p { margin: 0; color: var(--ink-soft); }
+.room-invite h3 { margin: 6px 0 0; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.room-link { width: 100%; font-size: 0.88rem; }
+.room-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.room-list li { display: flex; align-items: center; gap: 8px; font-size: 0.92rem; }
+.room-list li span { flex: 1; }

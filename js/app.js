@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, hintTotal, CrosswordStats, canAccess, CrosswordShare, HubAnalytics */
+/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, hintTotal, CrosswordStats, canAccess, CrosswordShare, HubAnalytics, CrosswordRooms */
 (function () {
   'use strict';
 
@@ -607,9 +607,14 @@
   // Puzzles in progress, most recent first, from the saved games.
   function renderContinue() {
     const items = Object.entries(store.saves)
-      .filter(([, sv]) => sv.entries && sv.entries.some((row) => row.some(Boolean)))
+      .filter(([, sv]) => sv.entries && (sv.room || sv.entries.some((row) => row.some(Boolean))))
       .sort((a, b) => (b[1].updated || 0) - (a[1].updated || 0))
-      .map(([key, sv]) => ({ key, sv, info: describeSave(key) }))
+      .map(([key, sv]) => {
+        const info = describeSave(key);
+        // A shared puzzle reopens its room.
+        if (info && sv.room && CrosswordRooms.validRoomId(sv.room)) Object.assign(info, { url: `#/room/${sv.room}`, kicker: `${info.kicker} · Shared` });
+        return { key, sv, info };
+      })
       .filter((x) => x.info)
       .slice(0, 4);
     $('#continue-section').hidden = !items.length;
@@ -761,7 +766,14 @@
   // Saves from before hint points counted every revealed letter together.
   const savedCells = (sv) => (sv.revealCells != null ? sv.revealCells : sv.revealWords ? 0 : sv.reveals || 0);
   const savedHints = (sv) => ({ letter: savedCells(sv), word: sv.revealWords || 0 });
-  const gameHints = () => ({ letter: game.revealCells, word: game.revealWords });
+  // In a shared puzzle, everyone's hints count together.
+  function gameHints() {
+    if (game.room) {
+      const t = CrosswordRooms.sumHints(game.room.hints);
+      return { letter: t.letter, word: t.word };
+    }
+    return { letter: game.revealCells, word: game.revealWords };
+  }
   const gamePoints = () => hintTotal('penalties', gameHints());
   // "2 letters and 1 word"
   function hintSummary(used) {
@@ -882,10 +894,12 @@
       revealWords: 0,
       checks: 0,
       autochecked: false,
+      room: null, // a shared puzzle's room (see Multiplayer rooms)
     };
 
     game.challenge = routeChallenge;
     showChallenge();
+    $('#room-start').hidden = !multiplayer || !!store.solves[spec.key];
     if (!store.solves[spec.key]) analytics.track('puzzle_start', { ...puzzleParams(spec), resumed: !!store.saves[spec.key] });
     const save = store.saves[spec.key];
     const solve = store.solves[spec.key];
@@ -926,6 +940,8 @@
 
   function leaveGame() {
     if (!game) return;
+    if (game.room) game.room.service.away();
+    $('#room-bar').hidden = true;
     stopTimer();
     persist();
     $('#win-dialog').open && $('#win-dialog').close();
@@ -945,7 +961,7 @@
     if (game.solved) {
       delete store.saves[game.spec.key];
     } else if (game.entries.some((row) => row.some(Boolean)) || store.saves[game.spec.key]
-      || game.checks || game.autochecked) { // keep help used before any typing
+      || game.checks || game.autochecked || game.room) { // keep help used before any typing, and shared puzzles
       store.saves[game.spec.key] = {
         sig: layoutSig(game.puzzle),
         filled: game.entries.reduce((n, row) => n + row.filter(Boolean).length, 0),
@@ -959,6 +975,7 @@
         revealWords: game.revealWords,
         checks: game.checks,
         autochecked: game.autochecked,
+        room: game.room ? game.room.id : undefined,
         updated: Date.now(),
       };
       // Keep storage small: hold on to the 40 most recent unfinished puzzles.
@@ -975,6 +992,11 @@
   let tick = null;
   function currentElapsed() {
     if (!game) return 0;
+    // A shared puzzle runs on the room's clock, the same for everyone.
+    const room = game.room;
+    if (room && room.meta && typeof room.meta.createdAt === 'number' && !game.solved) {
+      return CrosswordRooms.roomElapsed(room.meta.base, room.meta.createdAt, Date.now() + room.offset);
+    }
     return game.elapsed + (game.startedAt ? Math.floor((Date.now() - game.startedAt) / 1000) : 0);
   }
   function showTime() {
@@ -997,6 +1019,7 @@
   }
   function setPaused(paused) {
     if (!game || game.solved) return;
+    if (game.room) return toast('The clock keeps running in a shared puzzle');
     game.paused = paused;
     if (paused) {
       typeInput.blur();
@@ -1116,6 +1139,7 @@
   function refresh() {
     if (!game) return;
     placeTyping();
+    syncRoomCursor();
     let total = 0;
     let filled = 0;
     game.puzzle.solution.forEach((row, r) => row.forEach((ch, c) => {
@@ -1304,6 +1328,7 @@
     if (game.solved) return;
     game.checks++;
     analytics.track('check_used', { scope, puzzle_kind: game.spec.kind });
+    syncRoomHints();
     let bad = 0;
     let empty = 0;
     for (const [r, c] of targetCells(scope)) {
@@ -1354,6 +1379,7 @@
       game.wrong[r][c] = false;
     }
     afterChange();
+    syncRoomHints();
     if (!game.solved) animateCells(popped, 'pop');
   }
 
@@ -1479,6 +1505,7 @@
   }
 
   function afterChange() {
+    syncRoomCells();
     if (!game.solved && isSolved()) {
       win();
     } else if (!game.solved) {
@@ -1519,9 +1546,13 @@
     game.solved = true;
     const { spec } = game;
     const time = game.elapsed;
-    const clean = game.reveals === 0;
+    // A shared puzzle is a collaborative result: everyone's hints count, and
+    // it never counts for the No-Hint Club or best times.
+    const team = game.room ? CrosswordRooms.sumHints(game.room.hints) : null;
+    const others = team ? roomPlayers().filter((p) => !p.me).map((p) => p.name) : [];
+    const clean = team ? !team.letter && !team.word && !game.revealed.some((row) => row.some(Boolean)) : game.reveals === 0;
     const points = gamePoints();
-    const noHint = clean && !points && !game.checks && !game.autochecked;
+    const noHint = !team && clean && !points && !game.checks && !game.autochecked;
     const badgesBefore = earnedBadges(noHintRecord());
     let newBest = false;
     store.solvedCount = (store.solvedCount || 0) + 1;
@@ -1531,9 +1562,10 @@
     store.solves[spec.key] = CrosswordSync.betterSolve(prev, {
       time, clean, at: Date.now(), letters: game.reveals, words: game.revealWords,
       points, credits: hintTotal('credits', gameHints()), hints: gameHints(),
-      checked: game.checks > 0, autochecked: game.autochecked, noHint,
+      checked: team ? team.checks > 0 : game.checks > 0, autochecked: team ? team.autocheck : game.autochecked, noHint,
+      ...(team ? { collab: true, players: others.length + 1 } : {}),
     });
-    if (spec.kind === 'genre' && clean) {
+    if (spec.kind === 'genre' && clean && !team) {
       const k = `${spec.genre.id}:${spec.difficulty}`;
       if (!store.best[k] || time < store.best[k]) {
         store.best[k] = time;
@@ -1550,9 +1582,11 @@
     $('#win-time').textContent = formatTime(time);
     const newBadges = earnedBadges(noHintRecord()).filter((b) => !badgesBefore.includes(b));
     analytics.track('puzzle_complete', {
-      ...puzzleParams(spec), seconds: Math.round(time), hint_points: points, assisted: !noHint, no_hint: noHint, challenge: !!game.challenge,
+      ...puzzleParams(spec), seconds: Math.round(time), hint_points: points, assisted: !noHint, no_hint: noHint, challenge: !!game.challenge, collab: !!team,
     });
-    $('#win-text').textContent = (clean
+    $('#win-text').textContent = (team
+      ? `Solved together${others.length ? ` with ${listNames(others)}` : ''}: ${points ? `${plural(points, 'hint point')} between you` : 'no hints between you'}. Shared puzzles are recorded separately from solo solves.`
+      : clean
       ? noHint
         ? `A No-Hint solve: no hints and no checks.${newBest ? ' And a new personal best.' : ''}`
         : `0 hint points${newBest ? ' and a new personal best' : ''}. ${game.autochecked ? 'Auto-check' : 'Checking'} keeps this one out of the No-Hint Club.`
@@ -1570,7 +1604,8 @@
     if (spec.kind === 'daily' || spec.kind === 'mini') {
       const { current, longest } = dailyStreaks();
       stats += `<div><b>${current}</b><span>Current streak</span></div><div><b>${longest}</b><span>Longest streak</span></div>`;
-      if (!clean) stats += `<div><b>${game.reveals}</b><span>Letters revealed</span></div><div><b>${game.revealWords}</b><span>Words revealed</span></div>`;
+      const used = gameHints(); // the team's, in a shared puzzle
+      if (!clean) stats += `<div><b>${team ? used.letter : game.reveals}</b><span>Letters revealed</span></div><div><b>${used.word}</b><span>Words revealed</span></div>`;
     } else if (spec.kind === 'genre' && store.best[`${spec.genre.id}:${spec.difficulty}`]) {
       stats += `<div><b>${formatTime(store.best[`${spec.genre.id}:${spec.difficulty}`])}</b><span>Best ${esc(levelsFor(spec.genre)[spec.difficulty].label)} time</span></div>`;
     }
@@ -1597,7 +1632,7 @@
   const siteUrl = () => `${location.origin}${location.pathname}`;
   function result() {
     const points = gamePoints();
-    return { time: game.elapsed, points, noHint: game.reveals === 0 && !points && !game.checks && !game.autochecked };
+    return { time: game.elapsed, points, noHint: !game.room && game.reveals === 0 && !points && !game.checks && !game.autochecked };
   }
   const challengeUrl = () => `${siteUrl()}${game.spec.url}?c=${CrosswordShare.encodeChallenge(result())}`;
   const resultName = (spec) => (spec.kind === 'genre' ? `${spec.title} (${levelsFor(spec.genre)[spec.difficulty].label})` : `${spec.kicker.split(' · ')[0]}, ${shortDate(spec.date)}`);
@@ -1714,6 +1749,320 @@
     return outcome === 'beat' ? ` You beat the challenge (${theirs})!`
       : outcome === 'tie' ? ` A dead heat with the challenge (${theirs}).`
         : ` The challenge stands at ${theirs}. Fewer hint points wins, then the faster time.`;
+  }
+
+  // ---------- Multiplayer rooms (Help me solve) ----------
+  // Up to five players fill in one grid together, live. The connection is in
+  // js/room.js (Firebase Realtime Database); it's switched on by a
+  // databaseURL in js/firebase-config.js. Guests need no account.
+  const Rooms = CrosswordRooms;
+  const multiplayer = !!(window.FIREBASE_CONFIG && window.FIREBASE_CONFIG.databaseURL);
+  let roomServicePromise = null;
+  function roomService() {
+    if (window.CrosswordRoomService) return Promise.resolve(window.CrosswordRoomService);
+    if (!roomServicePromise) {
+      roomServicePromise = new Promise((resolve, reject) => {
+        window.addEventListener('roomservice', () => resolve(window.CrosswordRoomService), { once: true });
+        setTimeout(() => {
+          roomServicePromise = null;
+          reject(new Error('Multiplayer didn’t load'));
+        }, 15000);
+      });
+    }
+    return roomServicePromise;
+  }
+  const listNames = (names) => (names.length > 1 ? `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}` : names[0] || '');
+
+  // Asks for the name shown to the other players (remembered on this device).
+  function askName(heading, text, action) {
+    const d = $('#name-dialog');
+    $('#name-title').textContent = heading;
+    $('#name-text').textContent = text;
+    $('#name-submit').textContent = action;
+    $('#name-input').value = store.settings.playerName || Rooms.randomName();
+    d.returnValue = '';
+    d.showModal();
+    return new Promise((resolve) => d.addEventListener('close', () => {
+      if (d.returnValue !== 'ok') return resolve(null);
+      const name = Rooms.cleanName($('#name-input').value) || Rooms.randomName();
+      store.settings.playerName = name;
+      saveStore();
+      resolve(name);
+    }, { once: true }));
+  }
+
+  // Players in seat order: { uid, name, colour, me, host, online }.
+  function roomPlayers() {
+    const room = game && game.room;
+    if (!room) return [];
+    return Object.entries(room.slots || {}).filter(([, s]) => s && s.uid).sort(([a], [b]) => a - b).map(([seat, s]) => ({
+      uid: s.uid,
+      name: s.name,
+      colour: Rooms.COLOURS[(Number(seat) - 1) % Rooms.COLOURS.length],
+      me: s.uid === room.uid,
+      host: room.meta && s.uid === room.meta.host,
+      online: s.uid === room.uid ? room.connected : !!(room.presence && room.presence[s.uid]),
+    }));
+  }
+
+  // The host starts a room from the puzzle in progress, letters and all.
+  async function startRoom() {
+    if (!game || game.room || game.solved || !multiplayer) return;
+    const g = game;
+    const name = await askName('Solve this one together', `Invite up to ${Rooms.MAX_PLAYERS - 1} friends to fill in this grid with you, live. They don’t need an account.`, 'Start');
+    if (!name || game !== g) return;
+    toast('Starting a shared puzzle…');
+    try {
+      const service = await roomService();
+      const id = await service.create({
+        puzzle: g.spec.url.split('?')[0],
+        title: resultName(g.spec),
+        base: currentElapsed(),
+        cells: Rooms.gridToCells(g.entries, g.revealed),
+        name,
+      });
+      if (game !== g) return;
+      enterRoom(id, service);
+      replaceRoute(`#/room/${id}`);
+      analytics.track('room_create', { puzzle_kind: g.spec.kind });
+      openInvite();
+    } catch (e) {
+      toast('Couldn’t start a shared puzzle. Check your connection and try again.');
+    }
+  }
+
+  // Opens an invite link: #/room/<id>.
+  async function openRoom(id, routeNow) {
+    $('#game-kicker').textContent = 'Help me solve';
+    $('#game-title').textContent = 'Joining the puzzle…';
+    const home = (message) => {
+      toast(message);
+      navigate('#/');
+    };
+    if (!multiplayer || !Rooms.validRoomId(id)) return home('That invite link isn’t valid.');
+    let service;
+    let info;
+    try {
+      service = await roomService();
+      info = await service.peek(id);
+    } catch (e) {
+      if (currentRoute === routeNow) home('Couldn’t reach the shared puzzle. Check your connection and try again.');
+      return;
+    }
+    if (currentRoute !== routeNow) return;
+    if (!info) return home('That shared puzzle doesn’t exist.');
+    const spec = await specForPath(info.meta.puzzle);
+    if (currentRoute !== routeNow) return;
+    if (!spec) return home('That shared puzzle can’t be opened any more.');
+    const solo = (message) => {
+      toast(message);
+      replaceRoute(spec.url);
+      startGame(spec);
+    };
+    if (info.expired) return solo('This shared puzzle has closed. You can still solve it on your own.');
+    if (info.banned) return solo('You can’t rejoin this shared puzzle, but you can solve it on your own.');
+    if (!info.member) {
+      if (info.full) return solo(`This puzzle already has ${Rooms.MAX_PLAYERS} players. You can solve it on your own.`);
+      const host = Object.values(info.slots).find((x) => x && x.uid === info.meta.host);
+      const name = await askName(`Join ${host ? `${host.name}’s` : 'a shared'} puzzle`, `${info.meta.title}: fill in the grid together, live. No account needed.`, 'Join');
+      if (currentRoute !== routeNow) return;
+      if (!name) return navigate('#/');
+      let result;
+      try {
+        result = await service.join(id, name);
+      } catch (e) {
+        return home('Couldn’t join the shared puzzle. Check your connection and try again.');
+      }
+      if (currentRoute !== routeNow) return;
+      if (result === 'full') return solo(`This puzzle already has ${Rooms.MAX_PLAYERS} players. You can solve it on your own.`);
+      analytics.track('room_join', { puzzle_kind: spec.kind });
+    }
+    startGame(spec);
+    enterRoom(id, service);
+  }
+
+  function enterRoom(id, service) {
+    // ready: the room's letters have arrived, so this player's changes can be
+    // sent without overwriting them with letters only this device had.
+    game.room = { id, service, uid: service.uid(), meta: null, slots: {}, presence: {}, hints: {}, sent: {}, ready: false, connected: true, offset: 0, cursor: null };
+    $('#room-bar').hidden = false;
+    $('#room-start').hidden = true;
+    service.attach(id, onRoomState);
+    syncRoomHints();
+    syncRoomCursor(); // show as here straight away
+    renderRoomBar();
+  }
+
+  function onRoomState(state) {
+    const room = game && game.room;
+    if (!room || room.id !== state.id) return;
+    Object.assign(room, { meta: state.meta, slots: state.slots, presence: state.presence, hints: state.hints, connected: state.connected, offset: state.serverNow - Date.now() });
+    if (state.removed) return roomEnded('The host removed you from this shared puzzle. Your grid stays here to finish on your own.');
+    if (!state.meta) return;
+    applyRoomCells(state.cells);
+    if (!room.ready) {
+      room.ready = true;
+      syncRoomCells(); // anything typed while connecting
+    }
+    renderRoomBar();
+    renderPeers();
+  }
+
+  // The room's letters, applied to this grid.
+  function applyRoomCells(cells) {
+    const { puzzle } = game;
+    const sent = {};
+    let changed = false;
+    for (let r = 0; r < puzzle.rows; r++) {
+      for (let c = 0; c < puzzle.cols; c++) {
+        if (!puzzle.solution[r][c]) continue;
+        const cell = cells[Rooms.cellKey(r, c)];
+        const v = cell && /^[A-Z]$/.test(cell.v) ? cell.v : '';
+        const rev = !!(v && cell.rev);
+        if (v) sent[Rooms.cellKey(r, c)] = rev ? { v, rev } : { v };
+        if (game.entries[r][c] !== v || game.revealed[r][c] !== rev) {
+          game.entries[r][c] = v;
+          game.revealed[r][c] = rev;
+          game.pencil[r][c] = false;
+          game.wrong[r][c] = !!v && store.settings.autocheck && v !== puzzle.solution[r][c];
+          changed = true;
+        }
+      }
+    }
+    game.room.sent = sent;
+    if (changed) afterChange();
+  }
+
+  // This player's changes, sent to the room (pencil marks stay on this device).
+  function syncRoomCells() {
+    const room = game && game.room;
+    if (!room || !room.ready) return;
+    const diff = Rooms.diffCells(room.sent, game.entries, game.revealed);
+    if (!Object.keys(diff).length) return;
+    for (const [k, cell] of Object.entries(diff)) {
+      if (cell) room.sent[k] = cell;
+      else delete room.sent[k];
+    }
+    room.service.sendCells(diff);
+  }
+  let cursorTimer = null;
+  function syncRoomCursor() {
+    const room = game && game.room;
+    if (!room) return;
+    const { r, c, dir } = game.sel;
+    if (room.cursor && room.cursor.r === r && room.cursor.c === c && room.cursor.dir === dir) return;
+    room.cursor = { r, c, dir };
+    clearTimeout(cursorTimer);
+    cursorTimer = setTimeout(() => game && game.room === room && room.service.sendCursor(room.cursor), 250);
+  }
+  function syncRoomHints() {
+    const room = game && game.room;
+    if (room) room.service.sendHints({ letter: game.revealCells, word: game.revealWords, checks: game.checks, autocheck: game.autochecked });
+  }
+
+  // Who's here, and where the others are working.
+  function renderRoomBar() {
+    const room = game && game.room;
+    if (!room) return;
+    const players = roomPlayers();
+    $('#room-players').innerHTML = players.map((p) => `<span class="room-player${p.online ? '' : ' away'}" style="--peer:${p.colour}" title="${esc(p.name)}${p.host ? ' (host)' : ''}${p.online ? '' : ' (away)'}"><i></i>${esc(p.me ? `${p.name} (you)` : p.name)}</span>`).join('');
+    const expired = room.meta && room.meta.expiresAt <= Date.now() + room.offset;
+    $('#room-status').textContent = expired ? 'This room has closed; finish on your own.' : !room.connected ? 'Reconnecting… your letters are saved.' : '';
+    if ($('#room-dialog').open) renderInvitePlayers();
+  }
+  function renderPeers() {
+    const room = game && game.room;
+    $$('.cell.peer, .cell.peer-word').forEach((el) => {
+      el.classList.remove('peer', 'peer-word');
+      el.style.removeProperty('--peer');
+      el.removeAttribute('data-peer');
+    });
+    $$('.clue-list .peer-dots').forEach((el) => el.remove());
+    if (!room) return;
+    for (const p of roomPlayers()) {
+      const at = room.presence && room.presence[p.uid];
+      if (p.me || !at || !game.puzzle.solution[at.r] || !game.puzzle.solution[at.r][at.c]) continue;
+      const wi = game.wordAt[at.r][at.c][at.d];
+      if (wi != null) {
+        for (const [r, c] of game.puzzle.words[wi].cells) {
+          cellEls[r][c].classList.add('peer-word');
+          cellEls[r][c].style.setProperty('--peer', p.colour);
+        }
+        const li = $(`.clue-list li[data-index="${wi}"]`);
+        if (li) {
+          let dots = $('.peer-dots', li);
+          if (!dots) {
+            dots = document.createElement('span');
+            dots.className = 'peer-dots';
+            li.appendChild(dots);
+          }
+          dots.insertAdjacentHTML('beforeend', `<i style="--peer:${p.colour}" title="${esc(p.name)} is working on this"></i>`);
+        }
+      }
+      const el = cellEls[at.r][at.c];
+      el.classList.add('peer');
+      el.style.setProperty('--peer', p.colour);
+      el.dataset.peer = p.name;
+    }
+  }
+
+  // The invite: link, WhatsApp, copy, share, and the players.
+  const roomUrl = () => `${siteUrl()}#/room/${game.room.id}`;
+  function openInvite() {
+    if (!game || !game.room) return;
+    $('#room-link').value = roomUrl();
+    renderInvitePlayers();
+    $('#room-dialog').showModal();
+  }
+  function renderInvitePlayers() {
+    const room = game.room;
+    const host = room.meta && room.meta.host === room.uid;
+    const players = roomPlayers();
+    $('#room-seats').textContent = `${players.length} of ${Rooms.MAX_PLAYERS} players`;
+    $('#room-list').innerHTML = players.map((p) => `<li style="--peer:${p.colour}"><i></i><span>${esc(p.name)}${p.me ? ' (you)' : ''}${p.host ? ' · host' : ''}${p.online ? '' : ' · away'}</span>${host && !p.me ? `<button class="link-btn" data-action="room-remove" data-uid="${esc(p.uid)}">Remove</button>` : ''}</li>`).join('');
+  }
+  const inviteText = () => `Help me solve this crossword on Crossword Hub (${game.room && game.room.meta ? game.room.meta.title : resultName(game.spec)}): ${roomUrl()}`;
+  function inviteWhatsApp() {
+    window.open(`https://wa.me/?text=${encodeURIComponent(inviteText())}`, '_blank', 'noopener');
+  }
+  async function inviteShare() {
+    try {
+      if (navigator.share) return await navigator.share({ text: inviteText() });
+    } catch (e) {
+      if (e && e.name === 'AbortError') return;
+    }
+    copyText(roomUrl(), 'Invite link copied');
+  }
+
+  async function leaveRoom() {
+    if (!game || !game.room) return;
+    const { service } = game.room;
+    service.leave(); // frees the seat, then stops following the room
+    roomEnded('You left the shared puzzle. Your grid stays here to finish on your own.');
+  }
+  async function removePlayer(uid) {
+    const room = game && game.room;
+    if (!room) return;
+    try {
+      await room.service.remove(uid);
+    } catch (e) {
+      toast('Couldn’t remove that player. Check your connection and try again.');
+    }
+  }
+  // Back to playing alone, keeping the letters.
+  function roomEnded(message) {
+    if (!game || !game.room) return;
+    game.room.service.detach();
+    game.room = null;
+    $('#room-bar').hidden = true;
+    $('#room-start').hidden = !multiplayer || game.solved;
+    $('#room-dialog').open && $('#room-dialog').close();
+    renderPeers();
+    replaceRoute(game.spec.url);
+    stopTimer();
+    startTimer();
+    persist();
+    toast(message);
   }
 
   // ---------- Toast ----------
@@ -1910,6 +2259,13 @@
       case 'next-word': if (!game.paused) { jumpWord(1, false); refresh(); focusTyping(); } break;
       case 'prev-word': if (!game.paused) { jumpWord(-1, false); refresh(); focusTyping(); } break;
       case 'share': share(); break;
+      case 'room-start': startRoom(); break;
+      case 'room-invite': openInvite(); break;
+      case 'room-leave': leaveRoom(); break;
+      case 'room-remove': removePlayer(actionEl.dataset.uid); break;
+      case 'room-whatsapp': inviteWhatsApp(); break;
+      case 'room-copy': copyText($('#room-link').value, 'Invite link copied'); break;
+      case 'room-share': inviteShare(); break;
       case 'share-whatsapp': shareWhatsApp(); break;
       case 'share-copy': copyChallenge(); break;
       case 'share-image': saveImage(); break;
@@ -1947,6 +2303,7 @@
       if (on) {
         game.autochecked = true;
         analytics.track('autocheck_on', { puzzle_kind: game.spec.kind });
+        syncRoomHints();
       }
       refresh();
       persist();
@@ -2016,6 +2373,45 @@
     offerConsent(name);
   }
 
+  // Addresses that open a puzzle: #/daily/<date>, #/mini/<date>,
+  // #/brutal/<date> and #/play/<genre>/<level>/<seed>/<pool or L code>.
+  function isPuzzlePath(parts) {
+    if (parts[0] === 'daily' || parts[0] === 'mini' || parts[0] === 'brutal') return true;
+    return parts[0] === 'play' && !!genreById(parts[1]) && Number.isFinite(Number(parts[3]));
+  }
+  // The puzzle an address points to, or null (for example a genre link whose
+  // words have since been retired). Loads frozen months or old word orders.
+  async function specForPath(path) {
+    const parts = path.replace(/^#\/?/, '').split('?')[0].split('/');
+    if (!isPuzzlePath(parts)) return null;
+    const today = todayKey();
+    if (parts[0] === 'daily' || parts[0] === 'mini') {
+      const date = parts[1] && validDate(parts[1]) ? parts[1] : today;
+      await withTimeout(loadMonth(date.slice(0, 7)), 4000);
+      return parts[0] === 'daily' ? dailySpec(date) : miniSpec(date);
+    }
+    if (parts[0] === 'brutal') {
+      const week = weekOf(parts[1] && validDate(parts[1]) ? parts[1] : today);
+      await withTimeout(loadMonth(frozenFile('brutal', week)), 4000);
+      return brutalSpec(week);
+    }
+    const genre = genreById(parts[1]);
+    const difficulty = levelsFor(genre)[parts[2]] ? parts[2] : genre.themed ? 'fan' : 'medium';
+    const pool = parts[4] || '';
+    if (pool && pool[0] !== 'L' && !legacyLists) legacyLists = await withTimeout(loadLegacyOrder(), 6000) || null;
+    const spec = genreSpec(genre, difficulty, Number(parts[3]), pool);
+    return puzzleFor(spec) ? spec : null;
+  }
+  // Changes the address without adding a history step.
+  function replaceRoute(url) {
+    currentRoute = url;
+    try {
+      history.replaceState(null, '', url);
+    } catch (e) {
+      /* sandboxed frame: keep the route in memory only */
+    }
+  }
+
   async function route() {
     const routeNow = currentRoute;
     const { path, challenge } = CrosswordShare.splitRoute(currentRoute);
@@ -2027,22 +2423,24 @@
     const today = todayKey();
     $('#dateline').textContent = `${longDate(today)} · Today's Daily: ${scheduleFor(today).level}`;
 
-    if (parts[0] === 'daily' || parts[0] === 'mini') {
-      const date = parts[1] && validDate(parts[1]) ? parts[1] : today;
+    if (parts[0] === 'room') {
       showView('game');
       window.scrollTo(0, 0);
-      await withTimeout(loadMonth(date.slice(0, 7)), 4000);
-      if (currentRoute !== routeNow) return;
-      startGame(parts[0] === 'daily' ? dailySpec(date) : miniSpec(date));
+      await openRoom(parts[1], routeNow);
       return;
     }
-    if (parts[0] === 'brutal') {
-      const week = weekOf(parts[1] && validDate(parts[1]) ? parts[1] : today);
+    if (isPuzzlePath(parts)) {
       showView('game');
       window.scrollTo(0, 0);
-      await withTimeout(loadMonth(frozenFile('brutal', week)), 4000);
+      const spec = await specForPath(path);
       if (currentRoute !== routeNow) return;
-      startGame(brutalSpec(week));
+      if (spec) {
+        startGame(spec);
+        return;
+      }
+      const genre = genreById(parts[1]);
+      toast('That puzzle used words that have since been retired. Here’s a new one.');
+      navigate(freshGenreSpec(genre, levelsFor(genre)[parts[2]] ? parts[2] : levelFor(genre)).url);
       return;
     }
     // #/new/<genre>/<level>: a fresh puzzle (used by the genre pages in play/).
@@ -2050,36 +2448,8 @@
       const genre = genreById(parts[1]);
       if (genre) {
         const level = levelsFor(genre)[parts[2]] ? parts[2] : levelFor(genre);
-        const url = freshGenreSpec(genre, level).url;
-        currentRoute = url;
-        try {
-          history.replaceState(null, '', url);
-        } catch (e) {
-          /* sandboxed frame: keep the route in memory only */
-        }
+        replaceRoute(freshGenreSpec(genre, level).url);
         route();
-        return;
-      }
-    }
-    if (parts[0] === 'play') {
-      const genre = genreById(parts[1]);
-      const difficulty = genre && levelsFor(genre)[parts[2]] ? parts[2] : genre && genre.themed ? 'fan' : 'medium';
-      const seed = Number(parts[3]);
-      if (genre && Number.isFinite(seed)) {
-        showView('game');
-        window.scrollTo(0, 0);
-        const pool = parts[4] || '';
-        if (pool && pool[0] !== 'L' && !legacyLists) {
-          legacyLists = await withTimeout(loadLegacyOrder(), 6000) || null;
-          if (currentRoute !== routeNow) return;
-        }
-        const spec = genreSpec(genre, difficulty, seed, pool);
-        if (!puzzleFor(spec)) {
-          toast('That puzzle used words that have since been retired. Here’s a new one.');
-          navigate(freshGenreSpec(genre, difficulty).url);
-          return;
-        }
-        startGame(spec);
         return;
       }
     }
