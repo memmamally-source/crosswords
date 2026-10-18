@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, REPHRASED_CLUES, hintTotal */
+/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, hintTotal, CrosswordStats, canAccess */
 (function () {
   'use strict';
 
@@ -331,29 +331,9 @@
     return 'none';
   }
 
-  function dailyStreaks() {
-    const solved = (k) => {
-      const s = store.solves[`daily:${k}`];
-      return s && s.clean;
-    };
-    let day = todayKey();
-    if (!solved(day)) day = addDays(day, -1);
-    let current = 0;
-    while (day >= LAUNCH && solved(day)) {
-      current++;
-      day = addDays(day, -1);
-    }
-    const keys = Object.keys(store.solves).filter((k) => k.startsWith('daily:') && store.solves[k].clean).map((k) => k.slice(6)).sort();
-    let longest = 0;
-    let run = 0;
-    let prev = null;
-    for (const k of keys) {
-      run = prev && addDays(prev, 1) === k ? run + 1 : 1;
-      longest = Math.max(longest, run);
-      prev = k;
-    }
-    return { current, longest };
-  }
+  // The daily streak: a day counts once if its Daily or Mini was finished,
+  // with or without help (see js/stats.js).
+  const dailyStreaks = () => CrosswordStats.dailyStreak(store.solves, todayKey(), LAUNCH);
 
   // ---------- Settings & theme ----------
   function applyTheme() {
@@ -497,7 +477,7 @@
     pill.hidden = false;
     pill.innerHTML = streaks.current
       ? `${icon('flame', 'flame')}<b>${plural(streaks.current, 'day')}</b> <span>Daily streak · best ${streaks.longest}</span>`
-      : `${icon('flame', 'flame')}<span>Solve today's Daily to start a streak</span>`;
+      : `${icon('flame', 'flame')}<span>Finish today's Daily or Mini to start a streak</span>`;
     $('#daily-feature').innerHTML = `
       <div>
         <p class="kicker">${esc(daily.kicker)}</p>
@@ -729,39 +709,25 @@
   }
 
   // ---------- Hint points and the No-Hint Club ----------
-  // Each hint adds competitive hint points (fewer is better) and uses hint
-  // credits; both scales are set in js/hints.js. Checking and auto-check are
+  // Each hint (Reveal Letter, Reveal Word) adds competitive hint points
+  // (fewer is better) and records hint credits; both scales are set in
+  // js/hints.js. Hints are free: credits are counted, never charged. Checking and auto-check are
   // free but mark the puzzle assisted, which keeps it out of the No-Hint
   // Club. Solves from before hint points existed don't count towards the Club.
   // Saves from before hint points counted every revealed letter together.
   const savedCells = (sv) => (sv.revealCells != null ? sv.revealCells : sv.revealWords ? 0 : sv.reveals || 0);
-  const savedHints = (sv) => ({ letter: savedCells(sv), rephrase: (sv.rephrased || []).length, word: sv.revealWords || 0 });
-  const gameHints = () => ({ letter: game.revealCells, rephrase: game.rephrased.length, word: game.revealWords });
+  const savedHints = (sv) => ({ letter: savedCells(sv), word: sv.revealWords || 0 });
+  const gameHints = () => ({ letter: game.revealCells, word: game.revealWords });
   const gamePoints = () => hintTotal('penalties', gameHints());
-  // "2 letters, 1 rephrased clue and 1 word"
+  // "2 letters and 1 word"
   function hintSummary(used) {
-    const parts = [[used.letter, 'letter'], [used.rephrase, 'rephrased clue'], [used.word, 'word']].filter(([n]) => n).map(([n, w]) => plural(n, w));
+    const parts = [[used.letter, 'letter'], [used.word, 'word']].filter(([n]) => n).map(([n, w]) => plural(n, w));
     return parts.length > 1 ? `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}` : parts[0] || 'no hints';
   }
 
   function noHintRecord() {
     const solves = Object.entries(store.solves);
-    const noHint = (k) => !!(store.solves[k] && store.solves[k].noHint);
-    let day = todayKey();
-    if (!noHint(`daily:${day}`)) day = addDays(day, -1);
-    let current = 0;
-    while (day >= LAUNCH && noHint(`daily:${day}`)) {
-      current++;
-      day = addDays(day, -1);
-    }
-    let longest = 0;
-    let run = 0;
-    let prev = null;
-    for (const k of solves.filter(([k, x]) => k.startsWith('daily:') && x.noHint).map(([k]) => k.slice(6)).sort()) {
-      run = prev && addDays(prev, 1) === k ? run + 1 : 1;
-      longest = Math.max(longest, run);
-      prev = k;
-    }
+    const { current, longest } = CrosswordStats.noHintStreak(store.solves, todayKey(), LAUNCH);
     const scored = solves.filter(([, x]) => x.points != null);
     return {
       total: solves.filter(([, x]) => x.noHint).length,
@@ -789,12 +755,15 @@
     const clean = dailies.filter(([, s]) => s.clean);
     const { current, longest } = dailyStreaks();
     const avg = clean.length ? clean.reduce((t, [, s]) => t + s.time, 0) / clean.length : 0;
+    const all = CrosswordStats.totals(store.solves);
     $('#stat-tiles').innerHTML = [
       [store.solvedCount || 0, 'Puzzles solved'],
       [dailies.length, 'Dailies finished'],
       [current, 'Current streak'],
       [longest, 'Longest streak'],
+      [all.averageTime == null ? '—' : formatTime(all.averageTime), 'Average time, all puzzles'],
       [clean.length ? formatTime(avg) : '—', 'Average Daily'],
+      [all.hints, 'Hints used'],
       [clean.length, 'Dailies with no help'],
       [dailies.reduce((t, [, s]) => t + (s.letters || 0), 0), 'Letters revealed in Dailies'],
       [dailies.reduce((t, [, s]) => t + (s.words || 0), 0), 'Words revealed in Dailies'],
@@ -813,6 +782,11 @@
       return `<li class="badge${got ? ' earned' : ''}">${icon(got ? 'star' : 'lock')}<span><b>${esc(b.name)}</b>
         <small>${got ? 'Earned' : `${b.value(club)} of ${b.goal} · ${esc(b.need)}`}</small></span></li>`;
     }).join('');
+
+    const favs = CrosswordStats.favourites(store.solves).filter((f) => genreById(f.id));
+    $('#fav-list').innerHTML = favs.length
+      ? favs.map((f) => `<li><button class="link-btn" data-genre="${esc(f.id)}">${esc(genreById(f.id).name)}</button><span>${plural(f.count, 'puzzle')}</span></li>`).join('')
+      : '<li class="empty">Finish a few genre or collection puzzles to see your favourites here.</li>';
 
     const order = [1, 2, 3, 4, 5, 6, 0];
     const byDay = order.map((d) => {
@@ -835,6 +809,12 @@
   const grid2 = (rows, cols, v) => Array.from({ length: rows }, () => Array(cols).fill(v));
 
   function startGame(spec) {
+    // Everything is free for now, so this always allows (see js/access.js).
+    if (!canAccess(spec).allowed) {
+      toast('This puzzle isn’t available');
+      navigate('#/');
+      return;
+    }
     leaveGame();
     const puzzle = puzzleFor(spec);
     const { rows, cols } = puzzle;
@@ -856,7 +836,6 @@
       reveals: 0,
       revealCells: 0,
       revealWords: 0,
-      rephrased: [],
       checks: 0,
       autochecked: false,
     };
@@ -871,7 +850,6 @@
       game.reveals = save.reveals || 0;
       game.revealCells = savedCells(save);
       game.revealWords = save.revealWords || 0;
-      game.rephrased = (save.rephrased || []).filter((a) => REPHRASED_CLUES[a]);
       game.checks = save.checks || 0;
       game.autochecked = !!save.autochecked;
     } else if (solve) {
@@ -920,7 +898,7 @@
     if (game.solved) {
       delete store.saves[game.spec.key];
     } else if (game.entries.some((row) => row.some(Boolean)) || store.saves[game.spec.key]
-      || game.checks || game.autochecked || game.rephrased.length) { // keep help used before any typing
+      || game.checks || game.autochecked) { // keep help used before any typing
       store.saves[game.spec.key] = {
         sig: layoutSig(game.puzzle),
         filled: game.entries.reduce((n, row) => n + row.filter(Boolean).length, 0),
@@ -932,7 +910,6 @@
         reveals: game.reveals,
         revealCells: game.revealCells,
         revealWords: game.revealWords,
-        rephrased: game.rephrased,
         checks: game.checks,
         autochecked: game.autochecked,
         updated: Date.now(),
@@ -1058,12 +1035,7 @@
 
   // Clue text with the answer length, unless the clue already gives one, as
   // in "(3,5)" for a two-word answer.
-  // A rephrased clue replaces the original once that hint is used.
-  const clueOf = (w) => (game && game.rephrased.includes(w.answer) && REPHRASED_CLUES[w.answer]) || w.clue;
-  const withLength = (w) => {
-    const clue = clueOf(w);
-    return /\([\d,\- ]+\)$/.test(clue) ? clue : `${clue} (${w.answer.length})`;
-  };
+  const withLength = (w) => (/\([\d,\- ]+\)$/.test(w.clue) ? w.clue : `${w.clue} (${w.answer.length})`);
 
   const BOARD_PAD = 6; // keep in step with --pad in css/styles.css
   function sizeBoard() {
@@ -1306,18 +1278,6 @@
     }
   }
 
-  // Swap the current clue for its rephrased wording (a hint, counted once).
-  function rephrase() {
-    if (game.solved) return;
-    const w = game.puzzle.words[currentWordIndex()];
-    if (!REPHRASED_CLUES[w.answer]) return toast('No rephrased clue for this one yet');
-    if (game.rephrased.includes(w.answer)) return toast('This clue is already rephrased');
-    game.rephrased.push(w.answer);
-    const li = $(`.clue-list li[data-index="${currentWordIndex()}"] .text`);
-    if (li) li.textContent = withLength(w);
-    afterChange();
-  }
-
   let revealArmed = 0;
   function reveal(scope) {
     if (game.solved) return;
@@ -1544,15 +1504,13 @@
     $('#win-text').textContent = (clean
       ? noHint
         ? `A No-Hint solve: no hints and no checks.${newBest ? ' And a new personal best.' : ''}`
-        : points
-          ? `${plural(points, 'hint point')} from rephrased clues, so this one isn't a No-Hint solve.${newBest ? ' A new personal best, though.' : ''}`
-          : `0 hint points${newBest ? ' and a new personal best' : ''}. ${game.autochecked ? 'Auto-check' : 'Checking'} keeps this one out of the No-Hint Club.`
-      : `${plural(points, 'hint point')} (${hintSummary(gameHints())}), so this one doesn't count toward streaks or best times.`)
+        : `0 hint points${newBest ? ' and a new personal best' : ''}. ${game.autochecked ? 'Auto-check' : 'Checking'} keeps this one out of the No-Hint Club.`
+      : `${plural(points, 'hint point')} (${hintSummary(gameHints())}), so this one doesn't count toward best times or the No-Hint Club.`)
       + (newBadges.length ? ` New badge: ${newBadges.join(', ')}!` : '');
     let stats = `<div><b>${points}</b><span>Hint points</span></div>`;
     const credits = hintTotal('credits', gameHints());
     if (credits) stats += `<div><b>${credits}</b><span>Hint credits used</span></div>`;
-    if (spec.kind === 'daily') {
+    if (spec.kind === 'daily' || spec.kind === 'mini') {
       const { current, longest } = dailyStreaks();
       stats += `<div><b>${current}</b><span>Current streak</span></div><div><b>${longest}</b><span>Longest streak</span></div>`;
       if (!clean) stats += `<div><b>${game.reveals}</b><span>Letters revealed</span></div><div><b>${game.revealWords}</b><span>Words revealed</span></div>`;
@@ -1705,11 +1663,6 @@
     if (menuBtn) {
       const list = $(`[data-menu-list="${menuBtn.dataset.menu}"]`);
       closeMenus(list);
-      // Rephrase is offered only for clues that have a second wording.
-      if (menuBtn.dataset.menu === 'reveal' && game) {
-        const w = game.puzzle.words[currentWordIndex()];
-        $('#rephrase-item').hidden = !REPHRASED_CLUES[w.answer] || game.rephrased.includes(w.answer);
-      }
       list.hidden = !list.hidden;
       return;
     }
@@ -1741,6 +1694,7 @@
     const genreCard = e.target.closest('[data-genre]');
     if (genreCard) {
       const genre = genreById(genreCard.dataset.genre);
+      closeDialogs(); // a favourite picked in Statistics
       navigate(freshGenreSpec(genre, levelFor(genre)).url);
       return;
     }
@@ -1798,7 +1752,6 @@
       case 'check-word': check('word'); break;
       case 'check-all': check('all'); break;
       case 'toggle-autocheck': setAutocheck(!store.settings.autocheck); break;
-      case 'rephrase': rephrase(); break;
       case 'reveal-cell': reveal('cell'); break;
       case 'reveal-word': reveal('word'); break;
       case 'reveal-all': reveal('all'); break;
