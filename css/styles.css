@@ -1192,9 +1192,10 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
 .room-foot { margin: 4px 0 0; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 0.82rem; color: var(--ink-soft); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .room-leave { color: var(--wrong); font-size: 0.85rem; }
 
-/* Phones held upright: the clue bar docks to the bottom, above the keyboard
-   (--dock-bottom is set from the visual viewport in js/app.js). */
+/* Phones held upright: the clue bar docks to the bottom, above the game's
+   own letter keys (--dock-bottom is set in js/app.js). */
 .sheet-hint { display: none; }
+.phone-keys { display: none; }
 @media (pointer: coarse) and (max-width: 900px) and (orientation: portrait) {
   .clue-bar {
     position: fixed;
@@ -1206,7 +1207,7 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
     margin: 0;
     grid-template-columns: 56px minmax(0, 1fr) 56px;
     min-height: 68px;
-    padding: 6px 6px calc(6px + env(safe-area-inset-bottom, 0px));
+    padding: 6px;
     border-radius: 0;
     border-top: 1px solid var(--rule);
     box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.12);
@@ -1214,9 +1215,41 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   }
   .clue-bar .clue-nav { width: 52px; height: 52px; font-size: 2rem; background: var(--card); }
   .clue-bar p { cursor: pointer; padding: 4px 2px; }
+  body.in-game .phone-keys:not([hidden]) {
+    display: grid;
+    gap: 7px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    padding: 7px 4px calc(7px + env(safe-area-inset-bottom, 0px));
+    background: var(--wash);
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .keys-row { display: flex; justify-content: center; gap: 5px; }
+  .keys-row button {
+    flex: 0 1 calc((100% - 45px) / 10);
+    min-width: 0;
+    height: 46px;
+    padding: 0;
+    border: 0;
+    border-radius: 7px;
+    background: var(--card);
+    color: var(--ink);
+    font: 600 1.25rem var(--font-ui);
+    box-shadow: 0 1px 0 var(--rule);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .keys-row button:active { background: var(--hl-word); color: var(--on-hl-cell); }
+  .keys-row .key-wide { flex-basis: calc((100% - 45px) / 10 * 1.5); background: var(--rule); font-size: 1.3rem; }
   .sheet-hint { display: block; margin-top: 2px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
   .sheet-hint::after { content: ' ▴'; }
-  body.in-game #game-view { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+  /* Room below the grid for the clue bar and, while it's open, the device
+     keyboard, so the bottom rows can always be scrolled up above both. */
+  body.in-game #game-view { padding-bottom: calc(96px + var(--dock-bottom, 0px) + env(safe-area-inset-bottom, 0px)); }
 }
 
 /* The clue panel (phones) */
@@ -1247,3 +1280,7 @@ dialog.sheet { width: 100%; max-width: 560px; max-height: 78vh; margin: auto aut
   body.in-game .game-layout { margin-top: 8px; }
   body.in-game .clues { top: 8px; max-height: calc(100vh - 24px); }
 }
+
+/* Zoom for big grids on phones (pinch the grid, or the Zoom tool) */
+.board-wrap { touch-action: pan-x pan-y; }
+#zoom-btn[aria-pressed='true'] .zoom-plus { display: none; }

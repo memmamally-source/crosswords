@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=27" />
+  <link rel="stylesheet" href="css/styles.css?v=28" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -192,6 +192,10 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12" /></svg>
         </button>
         <div class="toolbar-group">
+          <button class="tool" id="zoom-btn" data-action="zoom" aria-label="Zoom in" aria-pressed="false" title="Zoom the grid (or pinch it)" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="M15.5 15.5L21 21M7.5 10.5h6" /><path class="zoom-plus" d="M10.5 7.5v6" /></svg>
+            <span>Zoom</span>
+          </button>
           <button class="tool" id="pencil-btn" data-action="pencil" aria-pressed="false" title="Pencil mode: enter tentative letters in grey">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16l-1 4zM14 6l3 3" /></svg>
             <span>Pencil</span>
@@ -241,6 +245,11 @@
               <p class="pause-title">Your puzzle is waiting.</p>
               <button class="btn btn-primary" data-action="resume">Resume</button>
             </div>
+          </div>
+          <div class="phone-keys" id="phone-keys" role="group" aria-label="Letter keys" hidden>
+            <div class="keys-row"><button type="button" data-key="Q">Q</button><button type="button" data-key="W">W</button><button type="button" data-key="E">E</button><button type="button" data-key="R">R</button><button type="button" data-key="T">T</button><button type="button" data-key="Y">Y</button><button type="button" data-key="U">U</button><button type="button" data-key="I">I</button><button type="button" data-key="O">O</button><button type="button" data-key="P">P</button></div>
+            <div class="keys-row"><button type="button" data-key="A">A</button><button type="button" data-key="S">S</button><button type="button" data-key="D">D</button><button type="button" data-key="F">F</button><button type="button" data-key="G">G</button><button type="button" data-key="H">H</button><button type="button" data-key="J">J</button><button type="button" data-key="K">K</button><button type="button" data-key="L">L</button></div>
+            <div class="keys-row"><button type="button" class="key-wide" data-key="turn" aria-label="Switch between across and down">⇅</button><button type="button" data-key="Z">Z</button><button type="button" data-key="X">X</button><button type="button" data-key="C">C</button><button type="button" data-key="V">V</button><button type="button" data-key="B">B</button><button type="button" data-key="N">N</button><button type="button" data-key="M">M</button><button type="button" class="key-wide" data-key="back" aria-label="Delete">⌫</button></div>
           </div>
           <div class="done-bar" id="done-bar" hidden>
             <span id="done-text"></span>
@@ -408,22 +417,22 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=27"></script>
-  <script src="js/words.js?v=27"></script>
-  <script src="js/collections.js?v=27"></script>
-  <script src="js/genres.js?v=27"></script>
-  <script src="js/sync.js?v=27"></script>
-  <script src="js/featured.js?v=27"></script>
-  <script src="js/hints.js?v=27"></script>
-  <script src="js/stats.js?v=27"></script>
-  <script src="js/access.js?v=27"></script>
-  <script src="js/share.js?v=27"></script>
-  <script src="js/rooms.js?v=27"></script>
-  <script src="js/firebase-config.js?v=27"></script>
-  <script src="js/analytics.js?v=27"></script>
-  <script src="js/app.js?v=27"></script>
-  <script type="module" src="js/firebase.js?v=27"></script>
-  <script type="module" src="js/account.js?v=27"></script>
-  <script type="module" src="js/room.js?v=27"></script>
+  <script src="js/generator.js?v=28"></script>
+  <script src="js/words.js?v=28"></script>
+  <script src="js/collections.js?v=28"></script>
+  <script src="js/genres.js?v=28"></script>
+  <script src="js/sync.js?v=28"></script>
+  <script src="js/featured.js?v=28"></script>
+  <script src="js/hints.js?v=28"></script>
+  <script src="js/stats.js?v=28"></script>
+  <script src="js/access.js?v=28"></script>
+  <script src="js/share.js?v=28"></script>
+  <script src="js/rooms.js?v=28"></script>
+  <script src="js/firebase-config.js?v=28"></script>
+  <script src="js/analytics.js?v=28"></script>
+  <script src="js/app.js?v=28"></script>
+  <script type="module" src="js/firebase.js?v=28"></script>
+  <script type="module" src="js/account.js?v=28"></script>
+  <script type="module" src="js/room.js?v=28"></script>
 </body>
 </html>
