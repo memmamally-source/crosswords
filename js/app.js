@@ -1572,7 +1572,8 @@
       if (!store.solves[otherKey]) {
         actions.push({ label: otherKind === 'mini' ? 'Play the Mini' : 'Play the Daily', primary: true, attr: `data-open="#/${otherKind}/${spec.date}"` });
       }
-      actions.push({ label: 'Try the Arcade: 60-second Clue Blitz', attr: 'data-open="#/arcade/blitz"' });
+      if (arcadeAllowed('blitz')) actions.push({ label: 'Try the Arcade: 60-second Clue Blitz', attr: 'data-open="#/arcade/blitz"' });
+      else if (arcadeAllowed('survival')) actions.push({ label: 'Try the Arcade: Survival', attr: 'data-open="#/arcade/survival"' });
       actions.push({ label: spec.date === today ? 'Back to today' : 'Back to the archive', attr: `data-nav="${spec.date === today ? 'home' : 'archive'}"` });
     }
     return actions;
@@ -2416,7 +2417,8 @@
       case 'close-dialog': closeDialogs(); return;
       case 'gift': closeDialogs(); openGifts(); return;
       case 'arcade-start': startArcade(); return;
-      case 'arcade-again': closeDialogs(); navigate(`#/arcade/${arcadeLast ? arcadeLast.mode : 'blitz'}`); startArcade(arcadeLast && arcadeLast.mode); return;
+      case 'arcade-again': startArcade(arcadeLast && arcadeLast.mode); return;
+      case 'arcade-other': navigate(`#/arcade/${otherMode(arcadeLast ? arcadeLast.mode : 'blitz')}`); return;
       case 'arcade-submit': arcadeSubmit(); return;
       case 'arcade-skip': arcadeSkip(); return;
       case 'arcade-share': shareArcade(); return;
@@ -2716,6 +2718,7 @@
         'From your third correct answer in a row, each one earns 25 bonus points.',
         'Skip whenever you like: it’s free, but it ends your combo. So does a wrong answer.',
         'The clock keeps running once you start, even if you leave the page.',
+        'One game a day: a new one unlocks at midnight South African time.',
       ],
     },
     survival: {
@@ -2724,9 +2727,10 @@
       tagline: 'Three lives. The clues get harder. How far can you go?',
       rules: [
         'Rounds 1–5 are Easy, 6–12 Medium, 13–20 Hard, then Expert and tougher still.',
-        'A wrong answer or a skip costs a life and shows you the answer.',
+        'A wrong answer or a skip costs a life.',
         'Typing is never a mistake: only Submit counts.',
         'Leave whenever you like: your run waits for you until midnight South African time.',
+        'One run a day: a new one unlocks at midnight South African time.',
       ],
     },
   };
@@ -2734,6 +2738,18 @@
   let arcade = null; // the run on screen: { mode, run, guess, timer, busy }
   let arcadeLast = null; // the last finished run, for the results screen
   const arcadePlaying = () => !!(arcade && arcade.run && !$('#arcade-play').hidden);
+
+  // The daily allowance: one Blitz and one Survival a day (js/arcade.js).
+  const arcadeAllowed = (mode) => Arcade.canStart(mode, arcadeData().attempts, todayKey()).allowed;
+  const untilNextGame = () => {
+    const mins = Math.max(1, Math.ceil(CrosswordShare.msUntilNextDay(now()) / 60000));
+    return mins >= 60 ? `${Math.floor(mins / 60)}h ${mins % 60}m` : `${mins}m`;
+  };
+  const otherMode = (mode) => (mode === 'blitz' ? 'survival' : 'blitz');
+  const liveRun = (mode) => {
+    const run = arcadeData().runs[mode];
+    return run && !run.finished ? run : null;
+  };
 
   function arcadeBestLine(mode) {
     const best = arcadeData().best[mode];
@@ -2747,9 +2763,12 @@
     const runs = arcadeData().runs;
     el.innerHTML = Object.entries(ARCADE_MODES).map(([mode, m]) => {
       const live = runs[mode] && !runs[mode].finished;
+      const played = !live && !arcadeAllowed(mode);
       const status = live
         ? (mode === 'survival' ? `Run in progress: round ${runs.survival.round}` : 'Run in progress')
-        : arcadeBestLine(mode).replace('Personal best: ', 'Best: ').replace('No personal best yet.', 'Free to play');
+        : played
+          ? `Played today · next game in ${untilNextGame()}`
+          : arcadeBestLine(mode).replace('Personal best: ', 'Best: ').replace('No personal best yet.', 'Free to play: one game a day');
       return `<button class="arcade-mode arcade-${mode}" data-open="#/arcade/${mode}">
         <span class="arcade-badge">${m.icon}</span>
         <span class="arcade-mode-copy">
@@ -2757,7 +2776,7 @@
           <span class="arcade-mode-tag">${esc(m.tagline)}</span>
           <span class="arcade-mode-best${live ? ' live' : ''}">${esc(status)}</span>
         </span>
-        <span class="arcade-mode-go" aria-hidden="true">${live ? 'Resume' : 'Play'}</span>
+        <span class="arcade-mode-go${played ? ' done' : ''}" aria-hidden="true">${live ? 'Resume' : played ? 'Done' : 'Play'}</span>
       </button>`;
     }).join('');
   }
@@ -2797,6 +2816,14 @@
     $('#arcade-start-tagline').textContent = m.tagline;
     $('#arcade-start-rules').innerHTML = m.rules.map((r) => `<li>${esc(r)}</li>`).join('');
     $('#arcade-start-best').textContent = arcadeBestLine(mode);
+    const allowed = arcadeAllowed(mode);
+    $('#arcade-go').hidden = !allowed;
+    $('#arcade-start-next').hidden = allowed;
+    if (!allowed) {
+      const other = otherMode(mode);
+      $('#arcade-start-next').innerHTML = `You’ve played today’s ${esc(m.name)}. The next one unlocks in <b>${untilNextGame()}</b>, at midnight South African time.${
+        arcadeAllowed(other) || liveRun(other) ? ` <button class="link-btn" data-open="#/arcade/${other}">Play ${esc(ARCADE_MODES[other].name)} instead →</button>` : ''}`;
+    }
     arcadeScreen('start');
   }
 
@@ -2809,7 +2836,10 @@
     const existing = data.runs[mode];
     if (existing && !existing.finished && !Arcade.finish(existing, now(), todayKey())) return playArcade(mode, existing, true);
     const allowed = Arcade.canStart(mode, data.attempts, todayKey()); // always allowed while testing
-    if (!allowed.allowed) return toast('That’s today’s free game. Come back after midnight.');
+    if (!allowed.allowed) {
+      toast(`You’ve played today’s ${ARCADE_MODES[mode].name}. Next game in ${untilNextGame()}.`);
+      return showArcadeStart(mode);
+    }
     let run;
     try {
       run = Arcade.newRun(mode, arcadeBank(), { seed: Math.floor(Math.random() * 2 ** 31), now: now(), day: todayKey(), recent: data.recent });
@@ -2893,8 +2923,23 @@
         return `<span class="arcade-box${cls}${reveal ? ' revealed' : ''}">${esc(ch)}</span>`;
       }).join('')
     }</span>`).join('');
+    fitArcadeBoxes(clue);
     $('#arcade-boxes').setAttribute('aria-label', `Your answer, ${clue.answer.length} letters${clue.lengths.length > 1 ? ` (${clue.lengths.join(', ')})` : ''}: ${arcade.guess || 'empty'}`);
   }
+  // Box size from the space available and the longest word, so long
+  // answers (up to 15 letters) fit on the narrowest phones.
+  function fitArcadeBoxes(clue = arcade && arcade.run && arcade.run.clue) {
+    if (!clue) return;
+    const wrap = $('#arcade-boxes');
+    const longest = Math.max(...clue.lengths);
+    const gap = longest > 10 ? 2 : 4;
+    const avail = wrap.clientWidth || 300;
+    const size = Math.max(14, Math.min(40, Math.floor((avail - gap * (longest - 1)) / longest)));
+    wrap.style.setProperty('--box', `${size}px`);
+    wrap.style.setProperty('--box-gap', `${gap}px`);
+  }
+  window.addEventListener('resize', () => fitArcadeBoxes());
+
   function arcadeFeedback(text, kind) {
     const el = $('#arcade-feedback');
     el.textContent = text;
@@ -2953,24 +2998,25 @@
         renderArcadeBoxes();
         shake($('#arcade-boxes'));
       } else {
-        arcadeFeedback(`Skipped: it was ${res.answer}.`, 'info');
+        arcadeFeedback('Skipped.', 'info');
         renderArcadeClue();
       }
       renderArcadeHud();
       return;
     }
-    // Survival: show the answer for a moment, then the next round (or the end).
+    // Survival: a moment to register the lost life, then the next round (or
+    // the end). The answer isn't revealed.
     buzz([30, 40, 30]);
     arcade.busy = true;
-    renderArcadeBoxes(res.answer, clue);
-    arcadeFeedback(`${res.result === 'skipped' ? 'Skipped' : 'Not quite'}: the answer was ${res.answer}.`, 'bad');
+    shake($('#arcade-boxes'));
+    arcadeFeedback(res.result === 'skipped' ? 'Skipped: one life gone.' : 'Not quite: one life gone.', 'bad');
     renderArcadeHud();
     setTimeout(() => {
       if (!arcade || arcade.run !== run) return;
       arcade.busy = false;
       if (res.over) return endArcade(mode, run);
       renderArcadeClue();
-    }, 1600);
+    }, 1100);
   }
   function shake(el) {
     el.classList.remove('shake');
@@ -3002,14 +3048,23 @@
     $('#arcade-results-title').textContent = mode === 'blitz' ? 'Time’s up!' : run.endedBy === 'reset' ? 'Run ended at midnight' : 'Game over';
     $('#arcade-results-score').textContent = `${run.score.toLocaleString()} points`;
     $('#arcade-results-pb').hidden = !isNew;
+    // One game of each a day: point to the other mode, or to tomorrow.
+    const other = otherMode(mode);
+    const again = arcadeAllowed(mode);
+    const otherOpen = arcadeAllowed(other) || !!liveRun(other);
+    $('#arcade-again').hidden = !again;
+    $('#arcade-other').hidden = again || !otherOpen;
+    $('#arcade-other').textContent = `${liveRun(other) ? 'Resume' : 'Play'} ${ARCADE_MODES[other].name}`;
+    $('#arcade-results-next').hidden = again;
+    $('#arcade-results-next').textContent = `That’s today’s ${ARCADE_MODES[mode].name}. The next one unlocks in ${untilNextGame()}, at midnight South African time.`;
     const best = arcadeData().best[mode];
     const stat = (n, label) => `<div><b>${n}</b><span>${esc(label)}</span></div>`;
     $('#arcade-results-stats').innerHTML = mode === 'blitz'
       ? stat(run.correct, 'Correct') + stat(`×${run.bestCombo}`, 'Best combo') + stat(run.skips, 'Skipped') + stat(best ? best.score.toLocaleString() : 0, 'Personal best')
       : stat(Arcade.roundReached(run), 'Round reached') + stat(run.correct, 'Correct') + stat(best ? best.round : 0, 'Best round') + stat(best ? best.score.toLocaleString() : 0, 'Best score');
-    $('#arcade-recap').hidden = !run.log.length;
+    $('#arcade-recap').hidden = !run.log.some((l) => l.ok);
     $('#arcade-recap').open = false;
-    $('#arcade-recap-list').innerHTML = run.log.map((l) => `<li class="${l.ok ? 'ok' : 'missed'}"><b>${esc(l.answer)}</b> <span>${esc(l.clue)}</span></li>`).join('');
+    $('#arcade-recap-list').innerHTML = run.log.filter((l) => l.ok).map((l) => `<li class="ok"><b>${esc(l.answer)}</b> <span>${esc(l.clue)}</span></li>`).join('');
     arcadeScreen('results');
     window.scrollTo(0, 0);
   }

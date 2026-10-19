@@ -10,15 +10,22 @@
  * Runs are plain objects saved after every move, so refreshing or coming
  * back never resets a clock, restores lives or rerolls a clue.
  *
- * Daily allowances (one free Blitz and one free Survival a day, MASTER_PLAN
- * §3.3) are built but switched off: LIMITS_ACTIVE stays false during
- * testing, and when they're launched they'll be enforced by a server, not
- * by this file alone (§3.6).
+ * Daily allowance: one Blitz and one Survival a day (MASTER_PLAN §3.3),
+ * reset at midnight South African time. It's counted in the browser (and the
+ * account, when signed in), which stops ordinary replaying; server-side
+ * enforcement comes with Premium (§3.6).
+ *
+ * Answers are never revealed during or after a run (only the ones the
+ * player got right), and missed answers aren't stored, so the clue bank
+ * isn't given away one skip at a time.
  */
 (function (root) {
   'use strict';
 
-  const LIMITS_ACTIVE = false;
+  // On since 20 October 2026 (owner's decision): one Clue Blitz and one
+  // Survival a day for everyone, counted on the device and in a signed-in
+  // player's account. There's no Premium yet, so no one gets more.
+  const LIMITS_ACTIVE = true;
   const FREE_ATTEMPTS = { blitz: 1, survival: 1 };
 
   const BLITZ = { seconds: 60, points: 100, comboFrom: 3, comboBonus: 25 };
@@ -202,28 +209,25 @@
     if (run.mode === 'blitz') {
       run.skips++;
       run.combo = 0;
-      note(run, { answer, clue: run.clue.clue, ok: false });
       advance(run, pool);
-      return { result: 'skipped', answer };
+      return { result: 'skipped' };
     }
     return loseLife(run, pool, now, day, 'skipped');
   }
 
-  // Survival: a wrong answer or a skip costs a life, shows the answer and
-  // moves on to the next round.
+  // Survival: a wrong answer or a skip costs a life and moves on to the
+  // next round. The answer isn't revealed.
   function loseLife(run, pool, now, day, result) {
-    const answer = run.clue.answer;
     run.lives--;
     run.misses++;
-    note(run, { answer, clue: run.clue.clue, ok: false });
     if (run.lives <= 0) {
       run.finished = true;
       run.endedAt = now;
-      return { result, answer, over: true };
+      return { result, over: true };
     }
     run.round++;
     advance(run, pool);
-    return { result, answer, over: false };
+    return { result, over: false };
   }
 
   // The round a Survival run reached (the one it ended on).

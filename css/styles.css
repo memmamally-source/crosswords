@@ -1395,6 +1395,9 @@ dialog.sheet { width: 100%; max-width: 560px; max-height: 78vh; margin: auto aut
 .arcade-mode-tag { color: var(--ink-soft); font-size: 0.9rem; }
 .arcade-mode-best { margin-top: 4px; font-size: 0.8rem; font-weight: 700; color: var(--ink-soft); }
 .arcade-mode-best.live { color: var(--good); }
+.arcade-mode-go.done { background: var(--wash); color: var(--ink-soft); }
+.arcade-next { margin: 0; padding: 12px 14px; border-radius: 12px; background: var(--wash); max-width: 52ch; }
+.arcade-next .link-btn { margin-top: 4px; }
 .arcade-mode-go { flex: none; padding: 8px 14px; border-radius: 999px; background: var(--primary); color: var(--on-primary); font-weight: 800; font-size: 0.85rem; }
 
 .arcade-start, .arcade-results { display: grid; justify-items: start; gap: 12px; max-width: 620px; padding: 12px 0 24px; }
@@ -1418,21 +1421,23 @@ dialog.sheet { width: 100%; max-width: 560px; max-height: 78vh; margin: auto aut
 .hud-lives { display: flex; justify-content: center; align-items: center; gap: 4px; }
 .hud-lives .life svg { width: 28px; height: 28px; fill: var(--accent); stroke: var(--accent); stroke-width: 1.5; }
 .hud-lives .life.lost svg { fill: none; stroke: var(--rule); }
-.arcade-card { display: grid; gap: 14px; padding: 20px 18px; border-radius: 18px; background: var(--card); border: 1px solid var(--rule); box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06); }
+.arcade-card { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 20px 18px; border-radius: 18px; background: var(--card); border: 1px solid var(--rule); box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06); }
 .arcade-meta { margin: 0; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
 .arcade-clue { margin: 0; font-family: var(--font-display); font-size: clamp(1.35rem, 5vw, 1.8rem); line-height: 1.25; min-height: 2.5em; }
 .arcade-boxes { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 14px; }
-.arcade-word { display: flex; gap: 4px; }
+.arcade-word { display: flex; gap: var(--box-gap, 4px); }
+/* --box is set in js/app.js from the space available and the longest word. */
 .arcade-box {
   display: grid;
   place-items: center;
-  width: clamp(22px, 7.4vw, 40px);
+  width: var(--box, 34px);
   aspect-ratio: 1;
   border: 2px solid var(--rule);
-  border-radius: 8px;
+  border-radius: min(8px, calc(var(--box, 34px) / 4));
   background: var(--paper);
   font-weight: 800;
-  font-size: clamp(0.95rem, 4.4vw, 1.4rem);
+  font-size: max(11px, calc(var(--box, 34px) * 0.55));
+  border-width: clamp(1px, calc(var(--box, 34px) / 16), 2px);
 }
 .arcade-box.current { border-color: var(--primary); }
 .arcade-box.revealed { border-color: var(--wrong); color: var(--wrong); }

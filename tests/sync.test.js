@@ -91,4 +91,12 @@ assert.deepStrictEqual(Object.keys(syncable(arcadeMerged)).includes('arcadeBest'
 assert.ok(!JSON.stringify(syncable(arcadeMerged)).includes('PARIS'), 'runs and recent clues stay on the device');
 assert.ok(!differs(syncable(arcadeMerged), arcadeMerged), 'an account copy compares equal to the store it came from');
 
+// The Arcade's daily allowance holds across devices for signed-in players.
+const { mergeArcadeAttempts } = require('../js/sync.js');
+const tried = mergeStores({ solves: {}, saves: {}, arcade: { attempts: { day: '2026-10-20', blitz: 1, survival: 0 } } }, { arcadeAttempts: { day: '2026-10-20', blitz: 0, survival: 1 } });
+assert.deepStrictEqual(tried.arcade.attempts, { day: '2026-10-20', blitz: 1, survival: 1 });
+assert.deepStrictEqual(mergeArcadeAttempts({ day: '2026-10-19', blitz: 1 }, { day: '2026-10-20', survival: 1 }), { day: '2026-10-20', survival: 1 }, 'the later day wins');
+assert.strictEqual(mergeArcadeAttempts(null, undefined), null);
+assert.deepStrictEqual(syncable(tried).arcadeAttempts, { day: '2026-10-20', blitz: 1, survival: 1 });
+
 console.log('OK: sync merge tests passed');

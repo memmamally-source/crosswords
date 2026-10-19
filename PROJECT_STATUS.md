@@ -23,7 +23,7 @@ What is built and live today, what's unfinished, and how it compares with the
 | 7 — Gifts | 7A manual builder built; shows "Coming soon" until switched on | #25 |
 | 8 — Monetisation preparation (design only) | Not started; now also covers the entitlement switches and server design for Brutal and the Arcade | — |
 | 9 — Expansion | Not started | — |
-| 10 — Crossword Hub Arcade (Clue Blitz, Survival) | 10A built (free, unlimited), in a PR awaiting approval; 10B (enforcement) later | — |
+| 10 — Crossword Hub Arcade (Clue Blitz, Survival) | 10A live (#27); one game of each a day and no revealed answers (20 Oct); 10B (server enforcement, Premium) later | #27 |
 
 (Stage numbers 4 onwards follow the revised order in MASTER_PLAN.md §7.)
 
@@ -227,7 +227,7 @@ What is built and live today, what's unfinished, and how it compares with the
 | Always free: Daily, Mini, streaks, basic stats, play without registering | ✅ True today | Must stay free after monetisation (confirmed 19 October 2026) |
 | Brutal as a future Premium feature (visible, not playable for free players) | ❌ Not built, by design | Stage 8 adds the switch and a hidden Premium marker; Brutal stays free while testing. `canAccess` already sees every puzzle's kind and level, so the rule fits there |
 | Arcade: Clue Blitz and Survival | ✅ Stage 10A (awaiting approval) | `js/arcade.js` (game logic) and the Arcade screens in `js/app.js`; 20,432 unique answers from the existing clue bank, no new content or AI |
-| Free Arcade allowance (1 Blitz + 1 Survival a day) | 🔒 Built, switched off | `LIMITS_ACTIVE` in `js/arcade.js` is false; attempts are counted on the device only. Enforced on the server in 10B, with approval |
+| Arcade allowance (1 Blitz + 1 Survival a day) | ✅ On for everyone since 20 October 2026 | `LIMITS_ACTIVE` in `js/arcade.js`; counted in the browser and in a signed-in account. Clearing browser data resets it for guests; server enforcement comes with Premium (10B) |
 | Server-side entitlements and Arcade runs | ❌ Not built | Stage 10B with Stage 8; needs the Blaze plan and payments |
 
 ## 5. Risks and housekeeping

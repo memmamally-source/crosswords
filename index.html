@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=32" />
+  <link rel="stylesheet" href="css/styles.css?v=33" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -179,7 +179,8 @@
         <p class="arcade-tagline" id="arcade-start-tagline"></p>
         <ul class="arcade-rules" id="arcade-start-rules"></ul>
         <p class="arcade-best" id="arcade-start-best"></p>
-        <button class="btn btn-primary arcade-go" data-action="arcade-start">Start</button>
+        <button class="btn btn-primary arcade-go" data-action="arcade-start" id="arcade-go">Start</button>
+        <p class="arcade-next" id="arcade-start-next" hidden></p>
       </section>
 
       <section class="arcade-play" id="arcade-play" aria-label="Game" hidden>
@@ -203,13 +204,15 @@
         <p class="arcade-score" id="arcade-results-score"></p>
         <p class="arcade-pb" id="arcade-results-pb" hidden>New personal best!</p>
         <div class="win-stats" id="arcade-results-stats"></div>
+        <p class="arcade-next" id="arcade-results-next" hidden></p>
         <div class="arcade-result-actions">
-          <button class="btn btn-primary" data-action="arcade-again">Play again</button>
+          <button class="btn btn-primary" data-action="arcade-again" id="arcade-again">Play again</button>
+          <button class="btn btn-primary" data-action="arcade-other" id="arcade-other" hidden></button>
           <button class="btn" data-action="arcade-share">Share</button>
           <button class="btn" data-nav="arcade">Arcade</button>
         </div>
         <details class="arcade-recap" id="arcade-recap">
-          <summary>Answers from this run</summary>
+          <summary>Your correct answers</summary>
           <ol id="arcade-recap-list"></ol>
         </details>
       </section>
@@ -555,24 +558,24 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=32"></script>
-  <script src="js/words.js?v=32"></script>
-  <script src="js/collections.js?v=32"></script>
-  <script src="js/genres.js?v=32"></script>
-  <script src="js/sync.js?v=32"></script>
-  <script src="js/featured.js?v=32"></script>
-  <script src="js/hints.js?v=32"></script>
-  <script src="js/stats.js?v=32"></script>
-  <script src="js/access.js?v=32"></script>
-  <script src="js/share.js?v=32"></script>
-  <script src="js/gifts.js?v=32"></script>
-  <script src="js/arcade.js?v=32"></script>
-  <script src="js/rooms.js?v=32"></script>
-  <script src="js/firebase-config.js?v=32"></script>
-  <script src="js/analytics.js?v=32"></script>
-  <script src="js/app.js?v=32"></script>
-  <script type="module" src="js/firebase.js?v=32"></script>
-  <script type="module" src="js/account.js?v=32"></script>
-  <script type="module" src="js/room.js?v=32"></script>
+  <script src="js/generator.js?v=33"></script>
+  <script src="js/words.js?v=33"></script>
+  <script src="js/collections.js?v=33"></script>
+  <script src="js/genres.js?v=33"></script>
+  <script src="js/sync.js?v=33"></script>
+  <script src="js/featured.js?v=33"></script>
+  <script src="js/hints.js?v=33"></script>
+  <script src="js/stats.js?v=33"></script>
+  <script src="js/access.js?v=33"></script>
+  <script src="js/share.js?v=33"></script>
+  <script src="js/gifts.js?v=33"></script>
+  <script src="js/arcade.js?v=33"></script>
+  <script src="js/rooms.js?v=33"></script>
+  <script src="js/firebase-config.js?v=33"></script>
+  <script src="js/analytics.js?v=33"></script>
+  <script src="js/app.js?v=33"></script>
+  <script type="module" src="js/firebase.js?v=33"></script>
+  <script type="module" src="js/account.js?v=33"></script>
+  <script type="module" src="js/room.js?v=33"></script>
 </body>
 </html>

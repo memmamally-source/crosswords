@@ -29,6 +29,8 @@
       saves: Object.fromEntries(saves),
       // Arcade personal bests only; a run in progress stays on its device.
       arcadeBest: (store.arcade && store.arcade.best) || store.arcadeBest || {},
+      // Today's Arcade games, so the daily allowance holds across devices.
+      arcadeAttempts: (store.arcade && store.arcade.attempts) || store.arcadeAttempts || null,
     };
   }
 
@@ -66,6 +68,7 @@
     out.lastWords = Object.assign({}, remote.lastWords, local.lastWords);
     out.arcade = Object.assign({}, local.arcade, {
       best: mergeArcadeBest((local.arcade && local.arcade.best) || local.arcadeBest, remote.arcadeBest || (remote.arcade && remote.arcade.best)),
+      attempts: mergeArcadeAttempts((local.arcade && local.arcade.attempts) || local.arcadeAttempts, remote.arcadeAttempts || (remote.arcade && remote.arcade.attempts)),
     });
     out.solvedCount = Math.max(local.solvedCount || 0, remote.solvedCount || 0);
 
@@ -102,12 +105,20 @@
     return out;
   }
 
+  // Arcade games played: the later day wins; on the same day, the higher
+  // count for each mode.
+  function mergeArcadeAttempts(a, b) {
+    if (!a || !b) return a || b || null;
+    if (a.day !== b.day) return a.day > b.day ? a : b;
+    return { day: a.day, blitz: Math.max(a.blitz || 0, b.blitz || 0), survival: Math.max(a.survival || 0, b.survival || 0) };
+  }
+
   // True when merging would change the account's copy.
   function differs(a, b) {
     return JSON.stringify(syncable(a)) !== JSON.stringify(syncable(b));
   }
 
-  const api = { syncable, mergeStores, differs, betterSolve, mergeArcadeBest, MAX_SYNCED_SAVES };
+  const api = { syncable, mergeStores, differs, betterSolve, mergeArcadeBest, mergeArcadeAttempts, MAX_SYNCED_SAVES };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CrosswordSync = api;
 })(typeof window !== 'undefined' ? window : globalThis);

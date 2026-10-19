@@ -323,7 +323,7 @@ the screens are the Arcade section of `js/app.js`.
 | Goal | As many clues as possible in 60 seconds | Last as long as you can on three lives |
 | Clues | Mostly Easy, some Medium | Rounds 1–5 Easy, 6–12 Medium, 13–20 Hard, then Expert (longer answers from round 31 and 41) |
 | Scoring | 100 per correct answer, plus 25 for each one from the third in a row | 100, 150, 200, 300, 350 or 400 per correct answer, by stage |
-| Wrong answer | Ends the combo; try again or skip | Costs a life; the answer is shown |
+| Wrong answer | Ends the combo; try again or skip | Costs a life |
 | Skip | Free, ends the combo | Costs a life |
 
 - A full, correct answer is accepted as soon as it's typed; anything else waits
@@ -333,16 +333,23 @@ the screens are the Arcade section of `js/app.js`.
   screen stays the same. A Survival run can be resumed until midnight South
   African time.
 - No clue repeats within a run, and the last 800 answers seen are avoided.
+- Answers are never revealed: not after a wrong answer or a skip, and the
+  results list only the answers the player got right. Missed answers aren't
+  stored either.
+- Answer boxes size themselves to the longest word, so 15-letter answers fit
+  on the narrowest phones.
 - Personal bests are kept on the device and synced for signed-in players; runs
   in progress and recently seen clues stay on the device.
 - Analytics receive only the mode and numbers (score, correct answers,
   round), never clues or answers.
 
-**Daily allowances (built, off).** The future rule (one free Blitz and one free
-Survival a day, unlimited for Premium) is in `js/arcade.js` (`canStart`,
-`recordAttempt`), with `LIMITS_ACTIVE = false`. An attempt is counted only
-once a run's first clue is on screen. When launched, allowances and Premium
-must be enforced by a server (MASTER_PLAN.md §3.6), not by this switch alone.
+**One game of each a day.** Everyone gets one Clue Blitz and one Survival a
+day, reset at midnight South African time (`LIMITS_ACTIVE` in `js/arcade.js`,
+with `canStart` and `recordAttempt`). An attempt is counted only once a run's
+first clue is on screen. The count is kept in the browser and synced to a
+signed-in account, so a second device doesn't give extra games; a guest who
+clears their browser data could play again. Unlimited Premium play and
+server-side enforcement come later (MASTER_PLAN.md §3.6).
 
 ## Multiplayer: Help me solve
 
