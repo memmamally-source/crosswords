@@ -52,7 +52,10 @@ assert.strictEqual(A.submit(run, pool, answer(), T0 + 8000, DAY).points, 100, 'c
 assert.strictEqual(A.submit(run, pool, answer(), T0 + 8500, DAY).points, 100);
 // Skipping is free but ends the combo.
 const skipped = run.clue.answer;
-assert.strictEqual(A.skip(run, pool, T0 + 9000, DAY).result, 'skipped');
+const skip1 = A.skip(run, pool, T0 + 9000, DAY);
+assert.strictEqual(skip1.result, 'skipped');
+assert.strictEqual(skip1.answer, undefined, 'a skip never reveals the answer');
+assert.ok(!run.log.some((l) => l.answer === skipped), 'skipped answers aren’t stored');
 assert.notStrictEqual(run.clue.answer, skipped);
 assert.strictEqual(run.combo, 0);
 assert.strictEqual(run.score, 775);
@@ -123,14 +126,15 @@ assert.strictEqual(run.lives, 3);
 // A wrong answer costs a life, shows the answer and moves on.
 let c = run.clue.answer;
 let res = A.submit(run, pool, 'Z'.repeat(c.length) === c ? 'Y'.repeat(c.length) : 'Z'.repeat(c.length), T0, DAY);
-assert.deepStrictEqual([res.result, res.answer, res.over], ['wrong', c, false]);
+assert.deepStrictEqual([res.result, res.answer, res.over], ['wrong', undefined, false], 'the answer isn’t revealed');
 assert.strictEqual(run.lives, 2);
 assert.strictEqual(run.round, 47);
 assert.notStrictEqual(run.clue.answer, c);
 // Skipping costs a life too.
 c = run.clue.answer;
 res = A.skip(run, pool, T0, DAY);
-assert.deepStrictEqual([res.result, res.answer, res.over], ['skipped', c, false]);
+assert.deepStrictEqual([res.result, res.answer, res.over], ['skipped', undefined, false]);
+assert.ok(run.log.every((l) => l.ok), 'only correct answers are kept for the recap');
 assert.strictEqual(run.lives, 1);
 const roundBefore = run.round;
 res = A.skip(run, pool, T0, DAY);
@@ -173,16 +177,16 @@ const merged = mergeArcadeBest({ blitz: { score: 500, correct: 5 }, survival: { 
 assert.deepStrictEqual([merged.blitz.score, merged.survival.score, merged.survival.round], [800, 900, 14]);
 assert.deepStrictEqual(mergeArcadeBest(undefined, undefined), {});
 
-// ---------- Daily allowances: built, switched off ----------
-assert.strictEqual(A.LIMITS_ACTIVE, false, 'the Arcade stays unlimited until the owner approves limits');
+// ---------- Daily allowance: one Blitz and one Survival a day ----------
+assert.strictEqual(A.LIMITS_ACTIVE, true, 'one game of each a day (owner’s decision, 20 October 2026)');
 let ledger;
-for (let i = 0; i < 5; i++) {
-  assert.ok(A.canStart('blitz', ledger, DAY).allowed, 'unlimited during testing');
-  ledger = A.recordAttempt(ledger, 'blitz', DAY);
-}
-assert.strictEqual(A.attemptsToday(ledger, 'blitz', DAY), 5);
-assert.strictEqual(A.attemptsToday(ledger, 'survival', DAY), 0, 'separate allowances');
-// The future rule, when switched on (one a day, separate, reset daily, unlimited for Premium).
+assert.ok(A.canStart('blitz', ledger, DAY).allowed);
+ledger = A.recordAttempt(ledger, 'blitz', DAY);
+assert.strictEqual(A.canStart('blitz', ledger, DAY).allowed, false, 'one Blitz a day');
+assert.strictEqual(A.canStart('survival', ledger, DAY).allowed, true, 'separate allowances');
+assert.strictEqual(A.attemptsToday(ledger, 'survival', DAY), 0);
+// Switched off, it's unlimited.
+assert.ok(A.canStart('blitz', ledger, DAY, { limitsActive: false }).allowed);
 const on = { limitsActive: true };
 ledger = undefined;
 assert.deepStrictEqual(A.canStart('blitz', ledger, DAY, on), { allowed: true, limited: true, remaining: 1, used: 0 });

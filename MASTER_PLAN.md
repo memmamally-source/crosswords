@@ -55,7 +55,8 @@ reconfirmed 19 October 2026.*
 Two things must never be confused:
 
 - **Now (the testing phase):** everything below applies. No payments or
-  subscriptions exist, and no limit is enforced.
+  subscriptions exist, and the only limit is the Arcade's one game of each
+  a day.
 - **Later (the approved future rules in §3):** Brutal becomes Premium and the
   Arcade has daily allowances for free players. None of it is switched on
   until the owner explicitly approves the launch.
@@ -81,9 +82,11 @@ explicitly approves monetisation:
 7. **Personalised crossword gifts are free during testing**, with reasonable
    generation limits to control AI costs.
 8. **Leaderboards and achievements are free.**
-9. **The Arcade is unlimited during testing.** Clue Blitz and Survival can be
-   played as often as anyone likes; daily allowances are designed and built
-   (§3.3) but not enforced.
+9. **The Arcade allows one Clue Blitz and one Survival a day** for everyone
+   (owner's decision, 20 October 2026), so the clue bank isn't used up. It's
+   counted in the browser and, for signed-in players, in their account;
+   server enforcement comes with Premium (§3.6). There's no Premium yet, so
+   no one can unlock more.
 10. **Brutal is free during testing**, including the weekly Brutal Challenge.
     Premium markers for Brutal stay hidden until the owner approves the
     launch.
@@ -404,6 +407,9 @@ generated during play, and no AI is involved.
 - No clue repeats within a run, and recently seen clues are avoided across
   runs.
 - Answers are compared letter by letter, ignoring spaces and punctuation.
+- **Answers are never revealed** (owner's decision, 20 October 2026): not
+  after a wrong answer or a skip, and not in the results, which list only the
+  answers the player got right. This protects the clue bank.
 - **Play Again** at the end.
 - Free and Premium players play under identical rules and scoring.
 - Separate Arcade leaderboards later, with the verified leaderboards stage.
@@ -665,6 +671,7 @@ or with the app-store versions.
 | 19 Oct 2026 | Future free allowance: one Clue Blitz and one Survival attempt a day, separate, reset at midnight SAST; an attempt is used only when play starts | Confirmed (interruption policy proposed) |
 | 19 Oct 2026 | Premium: unlimited Arcade, Brutal, and the earlier library features; never a scoring advantage | Confirmed |
 | 19 Oct 2026 | Testing phase: no paywalls, limits or checkout until the owner approves the launch; build so restrictions can be switched on later; enforce on the server, not in the browser alone | Confirmed |
+| 20 Oct 2026 | Arcade limited to one Clue Blitz and one Survival a day for everyone (no Premium yet), and answers are never revealed, so the clue bank isn't used up | Built |
 | 19 Oct 2026 | Stage 10A approved: Blitz 100 points plus 25 per consecutive correct answer from the third, skip free but resets the combo; Survival three lives, skip costs a life, rounds 1–5 Easy, 6–12 Medium, 13–20 Hard, 21+ Expert and harder; runs survive refreshes; no attempt used before a run starts | Built in Stage 10A |
 
 ## 9. Open decisions
