@@ -39,7 +39,8 @@ What is built and live today, what's unfinished, and how it compares with the
 - **Daily Mini:** six quick everyday clues, also frozen.
 - **The Brutal Challenge:** one shared Brutal puzzle a week, starting each
   Monday, frozen through April 2027.
-- **30 regular genres:** about 15,200 answers, at Easy, Medium, Hard, Expert
+- **34 regular genres:** about 17,200 answers (Travel, Medicine, Technology
+  and General Knowledge added in October 2026), at Easy, Medium, Hard, Expert
   and Brutal.
 - **50 themed collections:** 6,432 fact-checked clues, at Casual, Fan and
   Superfan.
@@ -115,7 +116,7 @@ What is built and live today, what's unfinished, and how it compares with the
   - Measurement ID `G-RN1ZYN9RSC` is set (added after Stage 4 was
     merged), so the consent prompt appears once that change is live.
 - **Search pages:**
-  - `play/` plus one page per genre and collection (83 in all), with
+  - `play/` plus one page per genre and collection (87 in all), with
     descriptions, sample clues and Play buttons
   - `sitemap.xml`, `robots.txt`
   - link-preview tags and image
@@ -205,7 +206,7 @@ What is built and live today, what's unfinished, and how it compares with the
 | Everything free, no paywalls | ✅ True | Nothing is gated. Stage 3.5 adds one `canAccess` check that always allows, plus a test, so future rules are a one-place change |
 | Play without registering; accounts optional | ✅ Already true | The sign-in button never blocks play |
 | Categories: TV, movies, sport, music, gaming, pop culture, history, geography, science, literature, food | ✅ Live | As genres or collections |
-| Categories: technology, medicine, travel, general knowledge | ⚠️ Partly | Computing, Anatomy and the mixed genres exist; no travel genre, and no collections for these yet. → Stage 4 content |
+| Categories: technology, medicine, travel, general knowledge | ✅ Live | As genres: Technology & Gadgets, Medicine & Health, Travel & Landmarks, General Knowledge (about 500 fact-checked clues each) |
 | Levels Easy to Brutal; Casual, Fan, Superfan | ✅ Live | |
 | Trending Now from reliable sources | ✅ Live (manual) | Hand-edited list; no automatic topics |
 | Published dailies identical for everyone | ✅ Live | Frozen files and tests |

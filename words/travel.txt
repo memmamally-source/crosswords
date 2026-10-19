@@ -1,0 +1,509 @@
+# Travel & Landmarks — one entry per line: ANSWER | clue
+EIFFELTOWER | Iron lattice landmark on the Champ de Mars (6,5)
+BIGBEN | Nickname of the great bell in London's Elizabeth Tower (3,3)
+TOWERBRIDGE | Victorian bascule crossing beside London's medieval fortress (5,6)
+STATUEOFLIBERTY | Copper lady holding a torch in New York Harbor (6,2,7)
+GOLDENGATE | San Francisco suspension bridge opened in 1937 (6,4)
+PYRAMIDS | Giza's ancient royal tombs
+SAGRADAFAMILIA | Gaudi's long-unfinished Barcelona basilica (7,7)
+REDSQUARE | Moscow plaza in front of St Basil's Cathedral (3,6)
+PISA | Tuscan city with a famous leaning bell tower
+SISTINECHAPEL | Room with Michelangelo's ceiling frescoes (7,6)
+TREVIFOUNTAIN | Rome spot where coins are tossed to ensure a return (5,8)
+BRANDENBURGGATE | Berlin's neoclassical portal, symbol of reunification (11,4)
+ATOMIUM | Brussels structure modelled on an iron crystal
+MANNEKENPIS | Small bronze fountain statue of a boy in Brussels (8,3)
+CNTOWER | Toronto's 553 m communications spire (2,5)
+OPERAHOUSE | Sydney landmark with sail-like shells (5,5)
+HARBOURBRIDGE | Sydney's "Coathanger" (7,6)
+EMPIRESTATE | Art Deco New York skyscraper, the ___ Building (6,5)
+CENTRALPARK | Manhattan's great green space by Olmsted and Vaux (7,4)
+BROOKLYNBRIDGE | Suspension span over the East River, opened 1883 (8,6)
+MOUNTRUSHMORE | South Dakota carving of four presidents (5,8)
+GRANDCANYON | Arizona chasm carved by the Colorado River (5,6)
+YELLOWSTONE | World's first national park, established in 1872
+YOSEMITE | California park with El Capitan and Half Dome
+ALCATRAZ | Former island prison in San Francisco Bay
+LINCOLNMEMORIAL | Washington temple with a seated statue of the 16th president (7,8)
+SMITHSONIAN | Washington museum group founded with a British scientist's bequest
+GATEWAYARCH | St Louis stainless-steel monument (7,4)
+SPACENEEDLE | Seattle tower built for the 1962 World's Fair (5,6)
+HORSESHOEFALLS | Canadian side of the Niagara cataracts (9,5)
+BUCKINGHAM | London palace, the monarch's official residence
+STPAULS | Wren's domed cathedral in the City of London (2,5)
+TRAFALGARSQUARE | London plaza with Nelson's Column (9,6)
+LONDONEYE | Giant Thames observation wheel opened in 2000 (6,3)
+ROYALMILE | Edinburgh street running from castle to Holyrood (5,4)
+GIANTSCAUSEWAY | Coast of basalt columns in County Antrim (6,8)
+SNOWDON | Highest peak in Wales, Yr Wyddfa
+BLARNEY | Irish castle with a stone kissed for eloquence
+CLIFFSOFMOHER | County Clare sea precipices facing the Atlantic (6,2,5)
+LOCHNESS | Scottish lake of monster legend (4,4)
+BATH | Somerset spa city with Roman remains and Georgian crescents
+OXFORD | English "city of dreaming spires"
+LAKEDISTRICT | Cumbrian national park beloved of Wordsworth (4,8)
+COTSWOLDS | English hills dotted with honey-coloured stone villages
+TABLEMOUNTAIN | Flat-topped peak above the Mother City (5,8)
+ROBBENISLAND | Prison isle where Mandela spent 18 of his 27 years jailed (6,6)
+KRUGER | South Africa's flagship national park, the ___
+CAPEPOINT | Rocky tip of the peninsula south of the Mother City (4,5)
+CAPEOFGOODHOPE | Headland rounded by Bartolomeu Dias in 1488 (4,2,4,4)
+DRAKENSBERG | South Africa's highest range, the "Dragon Mountains"
+VILAKAZISTREET | Soweto road where two Nobel Peace laureates lived (8,6)
+UNIONBUILDINGS | Herbert Baker's seat of government in Pretoria (5,9)
+APARTHEIDMUSEUM | Johannesburg exhibition site next to Gold Reef City (9,6)
+BLYDE | River whose Mpumalanga canyon holds the Three Rondavels
+GODSWINDOW | Mpumalanga viewpoint on the Panorama Route (4,6)
+SUNCITY | North West casino resort near Pilanesberg (3,4)
+GARDENROUTE | Scenic coastal stretch from Mossel Bay to Storms River (6,5)
+KNYSNA | Garden Route town with its Heads and lagoon
+TSITSIKAMMA | Park with a suspension bridge at Storms River Mouth
+STELLENBOSCH | Cape Winelands university town
+FRANSCHHOEK | Cape valley town settled by French Huguenots
+WATERFRONT | Cape Town's V&A ___
+BOKAAP | Cape Town quarter of brightly painted houses (2-4)
+CHAPMANSPEAK | Cliff-hugging Cape Peninsula drive (8,4)
+LIONSHEAD | Cape Town peak beside Signal Hill (5,4)
+BOULDERS | Simon's Town beach famed for African penguins
+SIMONSTOWN | False Bay naval base on the Cape Peninsula (6,4)
+HERMANUS | Western Cape town famed for land-based whale watching
+ADDO | Eastern Cape national park founded to protect elephants
+PILANESBERG | Game reserve set in an ancient volcanic crater, North West
+ISIMANGALISO | KwaZulu-Natal wetland park around Lake St Lucia
+STERKFONTEIN | Cradle of Humankind caves where "Mrs Ples" was found
+MAPUNGUBWE | Limpopo hill kingdom site famed for a golden rhino
+WILDCOAST | Eastern Cape shoreline with the Hole in the Wall (4,5)
+AUGRABIES | Northern Cape falls on the Orange River
+BIGHOLE | Kimberley's vast hand-dug diamond mine (3,4)
+KIMBERLEY | Diamond city, capital of the Northern Cape
+NAMAQUALAND | Arid region famed for spring wildflower displays
+CEDERBERG | Western Cape wilderness range of rock art and rooibos
+KAROO | Semi-desert plateau of South Africa's interior
+GOLDREEFCITY | Johannesburg theme park built on an old mine (4,4,4)
+DURBAN | KwaZulu-Natal port city with the Golden Mile
+MOSESMABHIDA | Durban stadium with a soaring arch (5,7)
+SODWANA | KwaZulu-Natal bay famous for scuba diving
+SANIPASS | Steep mountain road from KwaZulu-Natal into Lesotho (4,4)
+BLUETRAIN | Luxury rail service between Pretoria and Cape Town (4,5)
+GAUTRAIN | Rapid rail link serving Johannesburg, Pretoria and OR Tambo
+ORTAMBO | Johannesburg's main international airport (2,5)
+VICTORIAFALLS | Zambezi cataract, "the Smoke that Thunders" (8,5)
+OKAVANGO | Botswana's great inland delta
+CHOBE | Botswana park famed for huge elephant herds
+ETOSHA | Namibian park around a vast salt pan
+SOSSUSVLEI | Namibian clay pan amid giant red dunes
+DEADVLEI | Namibian pan of skeletal camel thorn trees
+SKELETONCOAST | Namibia's shipwreck-strewn Atlantic shore (8,5)
+FISHRIVER | Namibia's ___ Canyon, one of Africa's largest (4,5)
+NGORONGORO | Tanzanian volcanic crater teeming with wildlife
+ZANZIBAR | Spice island off Tanzania, home of Stone Town
+MASAIMARA | Kenyan reserve famed for the Great Migration (5,4)
+AMBOSELI | Kenyan park with views of Kilimanjaro
+LAMU | Swahili island town off Kenya, a UNESCO site
+BWINDI | Ugandan "Impenetrable" forest of mountain gorillas
+LALIBELA | Ethiopian town of rock-hewn churches
+GONDAR | Ethiopian city with the castles of Fasil Ghebbi
+DJENNE | Malian town with the world's largest mud-brick building
+ABUSIMBEL | Rameses II's temples moved to escape Lake Nasser (3,6)
+KARNAK | Vast temple complex of ancient Thebes
+LUXOR | Egyptian city on the site of ancient Thebes
+ASWAN | Egyptian city of the High Dam
+SAQQARA | Site of Djoser's step pyramid
+FEZ | Moroccan city that named a tasselled hat
+CHEFCHAOUEN | Moroccan mountain town painted blue
+LEPTISMAGNA | Roman ruins on Libya's coast (6,5)
+GOREE | Senegalese island memorial to the Atlantic slave trade
+RWENZORI | "Mountains of the Moon" on the Uganda-DRC border
+GREATZIMBABWE | Medieval stone city that gave a nation its name (5,8)
+MANAPOOLS | Zimbabwean park on the Zambezi floodplain (4,5)
+HWANGE | Zimbabwe's largest national park
+SOUTHLUANGWA | Zambian park famed for walking safaris (5,7)
+TSINGY | Madagascar's "forest" of razor-sharp limestone pinnacles
+AVENUEOFBAOBABS | Road lined with giant trees near Morondava (6,2,7)
+UHURUPEAK | Kilimanjaro's summit (5,4)
+GAMEDRIVE | Safari outing in an open vehicle (4,5)
+RONDAVEL | Round thatched hut, often a safari chalet
+ARCDETRIOMPHE | Napoleonic arch at the head of the Champs-Elysees (3,2,8)
+MONTMARTRE | Paris hill district beloved of painters
+SACRECOEUR | White-domed Paris basilica consecrated in 1919 (5-5)
+MONTSAINTMICHEL | Tidal island abbey off Normandy (4-5-6)
+CHAMPSELYSEES | Paris avenue from Concorde to the Etoile (6-7)
+LASCAUX | Dordogne caves with Palaeolithic paintings
+CARCASSONNE | Walled medieval city in the Languedoc
+CHAMONIX | French Alpine resort beneath Mont Blanc
+RIVIERA | Mediterranean coast of south-east France and Liguria
+ROMANFORUM | Ruins between the Palatine and Capitoline hills (5,5)
+SPANISHSTEPS | Rome staircase up to Trinita dei Monti (7,5)
+AMALFI | Coast south of Naples famed for cliffside towns
+CINQUETERRE | Five Ligurian cliff villages (6,5)
+DOLOMITES | Pale limestone peaks of north-east Italy
+RIALTO | Venice's oldest bridge over its main waterway
+GRANDCANAL | Venice's main waterway (5,5)
+GONDOLA | Black Venetian boat propelled by a single oar
+BRIDGEOFSIGHS | Venetian span leading to the old prisons (6,2,5)
+STMARKS | Venice square with a basilica and campanile (2,5)
+DUOMO | Italian cathedral, e.g. Brunelleschi's in Florence
+PONTEVECCHIO | Florence bridge lined with jewellers' shops (5,7)
+SANGIMIGNANO | Tuscan hill town of medieval towers (3,9)
+LAKECOMO | Lombardy water of Bellagio and Varenna (4,4)
+CAPRI | Island off Naples with the Blue Grotto
+PARKGUELL | Gaudi's mosaic-covered garden on Barcelona's Carmel Hill (4,5)
+RAMBLAS | Barcelona's tree-lined promenade, Las ___
+MEZQUITA | Cordoba's Mosque-Cathedral
+CAMINO | Pilgrim route to Santiago de Compostela, the ___
+SINTRA | Portuguese town with the colourful Pena Palace
+BELEM | Lisbon district with a tower and the Jeronimos Monastery
+ALGARVE | Portugal's sunny southern coast
+SANTORINI | Cycladic island with whitewashed Oia
+MYKONOS | Cycladic party island with windmills
+METEORA | Greek monasteries perched on rock pillars
+CORFU | Ionian island called Kerkyra in Greek
+RHODES | Largest of the Dodecanese islands
+BLUEMOSQUE | Istanbul's Sultan Ahmed place of worship, with six minarets (4,6)
+GRANDBAZAAR | Istanbul's huge covered market (5,6)
+CAPPADOCIA | Turkish region of fairy chimneys and balloon flights
+PAMUKKALE | Turkish travertine terraces, the "Cotton Castle"
+EPHESUS | Ancient city with the Library of Celsus
+CHARLESBRIDGE | Prague's statue-lined Gothic span (7,6)
+SCHONBRUNN | Habsburg summer palace in Vienna
+HOFBURG | Vienna's imperial palace complex
+SALZBURG | Austrian city where Mozart was born
+HALLSTATT | Austrian lakeside village replicated in China
+COLOGNE | German city of a twin-spired Gothic cathedral
+REICHSTAG | Berlin parliament building with a glass dome
+BLACKFOREST | German wooded region of cuckoo clocks (5,6)
+ROMANTICROAD | Bavarian tourist route from Wurzburg to Fussen (8,4)
+ZUGSPITZE | Germany's highest peak
+JUNGFRAU | Bernese Alps peak that forms a famous trio with the Eiger and Monch
+GLACIEREXPRESS | Slow Swiss train from Zermatt to St Moritz (7,7)
+ZERMATT | Car-free Swiss resort beneath the Matterhorn
+STMORITZ | Engadin resort that hosted the 1928 and 1948 Winter Olympics (2,6)
+LUCERNE | Swiss lake city with the Chapel Bridge
+INTERLAKEN | Swiss resort between the Thunersee and the Brienzersee
+KEUKENHOF | Dutch spring garden of millions of tulips
+ANNEFRANKHOUSE | Prinsengracht museum of a wartime diarist (4,5,5)
+KINDERDIJK | Dutch village famed for its 19 windmills
+BRUGES | Medieval Flemish canal city with a famous Belfry
+GRANDPLACE | Brussels' gilded main square (5,5)
+LITTLEMERMAID | Copenhagen harbour statue from Andersen's tale (6,7)
+TIVOLI | Copenhagen pleasure gardens opened in 1843
+NYHAVN | Copenhagen's colourful canal-side quay
+VASA | Stockholm museum of a warship that sank in 1628
+GEIRANGER | Norwegian fjord famed for the Seven Sisters waterfall
+PREIKESTOLEN | Norway's Pulpit Rock
+BLUELAGOON | Icelandic geothermal spa (4,6)
+GOLDENCIRCLE | Popular Icelandic day-trip loop from Reykjavik (6,6)
+GULLFOSS | Two-tiered Icelandic waterfall on the Hvita
+GEYSIR | Icelandic hot spring that named all the others
+THINGVELLIR | Icelandic rift valley where the national parliament first met in 930
+NORTHERNLIGHTS | Aurora borealis (8,6)
+LAPLAND | Arctic Finnish region of reindeer and Rovaniemi
+PETERHOF | Tsarist palace of fountains on the Gulf of Finland
+TRANSSIBERIAN | Moscow-Vladivostok railway (5-8)
+DUBROVNIK | Croatian walled city, "Pearl of the Adriatic"
+PLITVICE | Croatian park of terraced lakes and waterfalls
+LAKEBLED | Slovenian Alpine water with an island church (4,4)
+WIELICZKA | Polish salt mine with underground chapels
+BRAN | Transylvanian castle marketed as Dracula's
+NEWGRANGE | Neolithic passage tomb in Ireland's Boyne Valley
+RINGOFKERRY | Irish scenic drive around the Iveragh Peninsula (4,2,5)
+TEMPLEBAR | Dublin's cultural and nightlife quarter (6,3)
+SKELLIGMICHAEL | Monastic island off Kerry, a Star Wars location (7,7)
+BRIGHTON | Seaside city with a Royal Pavilion
+BLACKPOOL | Lancashire resort famed for its illuminations
+JURASSICCOAST | Dorset and East Devon shoreline of fossils (8,5)
+DURDLEDOOR | Natural limestone arch in Dorset (6,4)
+LANDSEND | Cornish headland paired with John o' Groats (5,3)
+STMICHAELSMOUNT | Cornish tidal island with a castle (2,8,5)
+EDENPROJECT | Cornish biomes built in a former clay pit (4,7)
+ANGELOFTHENORTH | Gormley's giant steel figure at Gateshead (5,2,3,5)
+CLIFTON | Bristol suspension bridge designed by Brunel
+IRONBRIDGE | Shropshire gorge town named after its 1779 span
+CUTTYSARK | Clipper ship preserved at Greenwich (5,4)
+BRITISHMUSEUM | Bloomsbury home of the Rosetta Stone (7,6)
+TATEMODERN | London gallery in a former power station (4,6)
+NATIONALGALLERY | London art museum founded in 1824 (8,7)
+PICCADILLY | London circus with giant illuminated screens
+COVENTGARDEN | London piazza on a former fruit and vegetable market (6,6)
+HYDEPARK | London royal green space with Speakers' Corner (4,4)
+KENSINGTON | London royal palace and gardens
+STRATFORD | Warwickshire town of Shakespeare's birth
+YORKMINSTER | Gothic cathedral in a northern walled city (4,7)
+DOVER | Kent port with white cliffs
+HAMPTONCOURT | Henry VIII's Thames palace with a maze (7,5)
+HOLYROOD | Edinburgh royal palace and Scottish Parliament site
+SKYE | Hebridean isle with the Old Man of Storr
+GLENCOE | Highland valley of a 1692 massacre
+BENNEVIS | Britain's highest mountain (3,5)
+FALKIRKWHEEL | Rotating Scottish boat lift (7,5)
+CAERNARFON | Welsh castle where Prince Charles was invested in 1969
+PORTMEIRION | Italianate Welsh village, setting of The Prisoner
+BRECONBEACONS | Welsh national park renamed Bannau Brycheiniog (6,7)
+SNOWDONIA | North Welsh national park, officially Eryri
+PEAKDISTRICT | Britain's first national park, designated 1951 (4,8)
+DARTMOOR | Devon national park of granite tors
+CAIRNGORMS | The UK's largest national park, in Scotland
+SKARABRAE | Neolithic stone village uncovered by a storm in 1850 (5,4)
+ORKNEY | Scottish archipelago with Kirkwall and Scapa Flow
+SHETLAND | The UK's northernmost archipelago
+LINDISFARNE | Holy Island off the Northumberland coast
+IONA | Hebridean isle where St Columba founded a monastery
+BAGAN | Myanmar plain of thousands of temples
+HALONGBAY | Vietnamese bay of limestone karsts (2,4,3)
+FORBIDDENCITY | Beijing's Ming and Qing imperial palace (9,4)
+TERRACOTTAARMY | Xi'an's buried clay warriors (10,4)
+THEBUND | Shanghai's colonial-era riverside promenade (3,4)
+POTALA | Lhasa palace, former winter home of the Dalai Lamas
+VICTORIAPEAK | Highest point on Hong Kong Island (8,4)
+STARFERRY | Hong Kong harbour crossing service since 1888 (4,5)
+GUILIN | Chinese city of karst scenery on the Li River
+ZHANGJIAJIE | Chinese park whose pillars inspired Avatar's floating peaks
+THREEGORGES | Scenic Yangtze stretch with a giant dam (5,6)
+KYOTO | Japan's former imperial capital, city of temples
+FUSHIMIINARI | Kyoto shrine with thousands of vermilion torii (7,5)
+KINKAKUJI | Kyoto's Golden Pavilion
+ARASHIYAMA | Kyoto district with a famous bamboo grove
+NARA | Japanese city of free-roaming deer
+HIMEJI | Japan's "White Heron" castle
+MIYAJIMA | Island with a "floating" torii at Itsukushima Shrine
+SHIBUYA | Tokyo district of a famous scramble crossing
+SENSOJI | Tokyo's oldest temple, in Asakusa
+SHINKANSEN | Japanese bullet train
+RYOKAN | Traditional Japanese inn
+ONSEN | Japanese hot-spring soak
+HOKKAIDO | Northernmost main island of Japan
+OKINAWA | Japan's southern island prefecture
+REDFORT | Mughal citadel in Old Delhi (3,4)
+QUTUBMINAR | Delhi's 13th-century brick victory tower (5,5)
+GATEWAYOFINDIA | Mumbai's harbourside arch completed in 1924 (7,2,5)
+GOLDENTEMPLE | Sikh shrine in Amritsar (6,6)
+HAWAMAHAL | Jaipur's "Palace of the Winds" (4,5)
+JAIPUR | Rajasthan's "Pink City"
+UDAIPUR | Rajasthan's "City of Lakes"
+KERALA | Indian state famous for backwaters and houseboats
+HAMPI | Karnataka ruins of the Vijayanagara capital
+AJANTA | Maharashtra caves of ancient Buddhist murals
+ELLORA | Maharashtra caves with the rock-cut Kailasa temple
+DARJEELING | Himalayan hill station with a "toy train"
+SIGIRIYA | Sri Lanka's Lion Rock fortress
+BALI | Indonesia's "Island of the Gods"
+PHIPHI | Thai islands of Maya Bay (3,3)
+CHIANGMAI | Northern Thai city of temples (6,3)
+GRANDPALACE | Bangkok royal complex with the Emerald Buddha (5,6)
+WATARUN | Bangkok's Temple of Dawn (3,4)
+MARINABAY | Singapore harbourside with a three-tower hotel (6,3)
+GARDENSBYTHEBAY | Singapore park of Supertrees (7,2,3,3)
+RAFFLES | Singapore colonial hotel, birthplace of the Sling
+SENTOSA | Singapore's resort island
+BORACAY | Philippine island famed for White Beach
+PALAWAN | Philippine island with an underground river
+WADIRUM | Jordanian desert, the "Valley of the Moon" (4,3)
+MASADA | Herod's clifftop fortress by the Dead Sea
+WAILINGWALL | Jerusalem holy site also called the Kotel (7,4)
+DOMEOFTHEROCK | Gilded Islamic shrine on Jerusalem's Temple Mount (4,2,3,4)
+ISFAHAN | Iranian city of Naqsh-e Jahan Square
+BURJALARAB | Sail-shaped Dubai hotel on its own island (4,2,4)
+PALMJUMEIRAH | Dubai's tree-shaped artificial island (4,8)
+SAMARKAND | Silk Road city of the Registan
+BASECAMP | Starting point for summit attempts (4,4)
+ANNAPURNA | Nepalese massif with a famous circuit trek
+TIGERSNEST | Bhutan's cliffside Paro Taktsang monastery (6,4)
+KATATJUTA | Domed rock group near Uluru, once called the Olgas (4,5)
+BARRIERREEF | Queensland coral system, the Great ___ (7,4)
+KAKADU | Northern Territory park of rock art and wetlands
+DAINTREE | Queensland's ancient tropical rainforest
+WHITSUNDAYS | Queensland islands with Whitehaven Beach
+BONDI | Sydney's famous surf beach
+BLUEMOUNTAINS | NSW range with the Three Sisters (4,9)
+TWELVEAPOSTLES | Limestone sea stacks near Port Campbell, Victoria (6,8)
+GREATOCEANROAD | Victorian coastal drive built by WWI veterans (5,5,4)
+ROTTNEST | Island off Perth famed for quokkas
+BUNGLEBUNGLE | Striped beehive domes of Purnululu (6,6)
+GHAN | Train from Adelaide to Darwin, The ___
+INDIANPACIFIC | Train crossing Australia from Sydney to Perth (6,7)
+MILFORDSOUND | Fiordland's most famous inlet (7,5)
+ROTORUA | NZ city of geysers and Maori culture
+HOBBITON | Movie-set village near Matamata, NZ
+QUEENSTOWN | NZ adventure-sports hub on Lake Wakatipu
+FIORDLAND | NZ's largest national park
+WAITOMO | NZ caves lit by glowworms
+TONGARIRO | NZ's first national park, with a famous alpine crossing
+BORABORA | French Polynesian lagoon island (4,4)
+TAHITI | Largest island of French Polynesia
+EASTERISLAND | Rapa Nui, home of the moai (6,6)
+TEOTIHUACAN | Mexican city of the Pyramids of the Sun and Moon
+TULUM | Mayan clifftop ruins above the Caribbean
+CORCOVADO | Rio peak topped by a giant Christ statue
+SUGARLOAF | Rio granite peak reached by cable car
+COPACABANA | Rio's famous crescent beach
+IGUAZU | Falls on the Argentina-Brazil border
+NAZCALINES | Peruvian desert geoglyphs (5,5)
+CUSCO | Former capital of the Inca Empire
+SACREDVALLEY | Urubamba river region of the Incas near Cusco (6,6)
+INCATRAIL | Classic four-day trek to a Peruvian citadel (4,5)
+UYUNI | Bolivian town beside the world's largest salt flat
+TORRESDELPAINE | Chilean Patagonian park of granite towers (6,3,5)
+PERITOMORENO | Argentine glacier near El Calafate (6,6)
+USHUAIA | Argentine city billed as the "End of the World"
+PANAMACANAL | Waterway opened in 1914 linking two oceans (6,5)
+CARTAGENA | Colombian walled city on the Caribbean
+MALECON | Havana's seafront esplanade
+TIKAL | Guatemalan Mayan city in the jungle
+BANFF | Canada's first national park, in Alberta
+LAKELOUISE | Turquoise glacial tarn in Alberta's Rockies (4,6)
+CABOTTRAIL | Cape Breton scenic highway (5,5)
+BAYOFFUNDY | Inlet with the world's highest tides (3,2,5)
+GRANDCENTRAL | Manhattan rail terminal with a celestial ceiling (5,7)
+HIGHLINE | Elevated park on old Manhattan rail tracks (4,4)
+ELLISISLAND | Immigration station in New York Harbor (5,6)
+FRENCHQUARTER | New Orleans' Vieux Carre (6,7)
+GRACELAND | Elvis's Memphis mansion
+DEATHVALLEY | California's hottest, lowest national park (5,6)
+ARCHES | Utah park near Moab with over 2,000 natural spans
+BRYCECANYON | Utah park of hoodoos (5,6)
+MONUMENTVALLEY | Navajo tribal park of sandstone buttes (8,6)
+HORSESHOEBEND | Colorado River meander near Page, Arizona (9,4)
+ANTELOPECANYON | Arizona slot gorge famed for light beams (8,6)
+OLDFAITHFUL | Yellowstone's famously regular geyser (3,8)
+EVERGLADES | Florida's subtropical wetland park
+KEYWEST | Southernmost city of the contiguous US (3,4)
+NAPAVALLEY | Northern California wine region (4,6)
+BIGSUR | California's rugged central coast (3,3)
+WALKOFFAME | Hollywood Boulevard pavement of stars (4,2,4)
+FISHERMANSWHARF | San Francisco quayside with sea lions at Pier 39 (10,5)
+CABLECAR | San Francisco's hill-climbing street tram (5,3)
+HOOVERDAM | Concrete arch dam on the Nevada-Arizona border (6,3)
+WAIKIKI | Honolulu's famous beach
+LIBERTYBELL | Cracked Philadelphia icon (7,4)
+FREEDOMTRAIL | Boston's red-lined heritage walk (7,5)
+CLOUDGATE | Chicago's "Bean" sculpture (5,4)
+MOUNTVERNON | George Washington's Potomac estate (5,6)
+MONTICELLO | Jefferson's Virginia home
+ACADIA | Maine national park on Mount Desert Island
+JOSHUATREE | California desert park named for a yucca (6,4)
+CARLSBAD | New Mexico caverns
+MAMMOTHCAVE | Kentucky park with the world's longest known underground system (7,4)
+CRATERLAKE | Oregon's deep blue caldera-filled water (6,4)
+HANGINGGARDENS | Babylon's legendary terraces (7,7)
+STPETERS | Vatican basilica (2,6)
+ESCORIAL | Philip II's monastery-palace near Madrid
+PONTDUGARD | Roman aqueduct bridge in southern France (4,2,4)
+ORESUND | Bridge-tunnel linking Copenhagen and Malmo
+FORTHBRIDGE | Red cantilever railway span of 1890 in Scotland (5,6)
+PONTNEUF | Paris's oldest standing bridge, despite its name (4,4)
+CHAINBRIDGE | Budapest's Szechenyi span over the Danube (5,6)
+STARIMOST | Rebuilt 16th-century Ottoman bridge in Herzegovina (5,4)
+ISLEOFMAN | Crown dependency of the TT motorcycle races (4,2,3)
+JERSEY | Largest of the Channel Islands
+GUERNSEY | Channel Island whose capital is St Peter Port
+MALLORCA | Largest Balearic island
+IBIZA | Balearic party island
+MADEIRA | Portuguese Atlantic island of Funchal
+TENERIFE | Canary island with Mount Teide
+LANZAROTE | Volcanic Canary isle shaped by Cesar Manrique
+STLUCIA | Caribbean island of the twin Pitons (2,5)
+FAROE | North Atlantic islands between Iceland and Shetland
+STHELENA | Napoleon's final island of exile (2,6)
+LUGGAGE | Bags and cases a traveller carries
+SUITCASE | Wheeled travel bag with a handle
+CARRYON | Bag allowed in the cabin (5-2)
+BACKPACK | Rucksack
+ITINERARY | Planned route of a journey
+BOARDINGPASS | Document to show at the gate (8,4)
+DEPARTURES | Board listing outgoing flights
+ARRIVALS | Airport hall where travellers are met
+DUTYFREE | Tax-exempt airport shopping (4-4)
+LAYOVER | Stop between connecting flights
+STOPOVER | Planned break in a long journey
+REDEYE | Overnight flight (3-3)
+TARMAC | Airport surface, informally
+CONCOURSE | Large open hall in an airport
+CAROUSEL | Baggage reclaim belt
+CHECKIN | Desk where bags are dropped (5-2)
+FIRSTCLASS | Top tier of travel (5,5)
+UPGRADE | Move to a better seat or room
+TURBULENCE | Bumpy air
+CABINCREW | Flight attendants collectively (5,4)
+BOEING | Seattle-founded maker of the 747
+JUMBOJET | Nickname of the 747 (5,3)
+CONCORDE | Supersonic airliner retired in 2003
+HOTAIRBALLOON | Basket-carrying craft lifted by a burner (3,3,7)
+QANTAS | Australia's "Flying Kangaroo" airline
+LUFTHANSA | German flag carrier with a crane logo
+EMIRATES | Dubai-based international airline
+KLM | Dutch airline founded in 1919
+AERLINGUS | Irish airline with a shamrock logo (3,6)
+ETIHAD | Abu Dhabi's flag carrier
+RYANAIR | Dublin-based low-cost airline
+EASYJET | Orange-branded British low-cost airline
+ALITALIA | Rome-based flag carrier that ceased flying in 2021
+HEATHROW | London's busiest airport
+GATWICK | London airport in West Sussex
+JFK | New York airport named after a president (abbr.)
+LAX | Los Angeles airport code
+OHARE | Chicago's main airport
+SCHIPHOL | Amsterdam's airport
+CHANGI | Singapore's airport
+NARITA | Tokyo airport in Chiba
+CHARLESDEGAULLE | Paris's main airport at Roissy (7,2,6)
+HOSTEL | Budget dormitory lodging
+MOTEL | Roadside lodging for drivers
+CONCIERGE | Hotel guest-services attendant
+BELLHOP | Hotel porter
+ROOMSERVICE | Meals delivered to a hotel guest's door (4,7)
+FERRY | Regular passenger boat service
+PORTHOLE | Ship's round window
+GANGWAY | Passage for boarding a ship
+STARBOARD | Right side of a ship facing forward
+SLEEPER | Overnight train with beds
+COUCHETTE | Railway sleeping berth, especially in Europe
+EURAIL | Train pass for non-European visitors to Europe
+INTERRAIL | Train pass for European residents
+EUROSTAR | Channel Tunnel passenger train
+CHUNNEL | Informal name for the Channel Tunnel
+ORIENTEXPRESS | Luxury train famously from Paris to Istanbul (6,7)
+FLYINGSCOTSMAN | LNER locomotive 4472 (6,8)
+MAGLEV | Train levitated by magnets
+FUNICULAR | Cable railway on a steep slope
+MONORAIL | Train system running on a single beam
+TUKTUK | Thai auto rickshaw (3-3)
+JEEPNEY | Philippine shared minibus
+MATATU | Kenyan shared minibus taxi
+VAPORETTO | Venice water bus
+DHOW | Arab lateen-sailed vessel
+FELUCCA | Nile sailing boat
+CAMPERVAN | Motorhome
+BACKPACKER | Budget traveller with a rucksack
+GAPYEAR | Break between school and university (3,4)
+WANDERLUST | Strong desire to travel
+GLOBETROTTER | Seasoned traveller
+TOURIST | Sightseer
+GUIDEBOOK | Lonely Planet volume, e.g.
+BAEDEKER | Classic German series of travel handbooks
+BUREAUDECHANGE | Office for swapping currency (6,2,6)
+ADAPTOR | Plug converter for foreign sockets
+SCHENGEN | European zone of open borders
+DAYTRIP | Outing there and back in a day (3,4)
+VOYAGE | Long sea journey
+PACKAGEHOLIDAY | All-in-one trip deal (7,7)
+ALLINCLUSIVE | Resort deal covering meals and drinks (3-9)
+OFFSEASON | Quieter, cheaper time to travel (3-6)
+STANDBY | Waiting for an unclaimed seat
+NOSHOW | Booked passenger who fails to appear (2-4)
+CODESHARE | Airline deal to sell seats on partners' flights
+AIRMILES | Frequent-flyer reward points (3,5)
+OPENJAW | Return ticket flying into one city and out of another (4-3)
+FIFTHFREEDOM | Air right to fly passengers between two foreign countries (5,7)
+PURSER | Ship's officer in charge of passengers' welfare
+TRAYTABLE | Fold-down surface on a seatback (4,5)
+JETBRIDGE | Covered walkway from gate to plane (3,6)
+GLAMPING | Luxury stay under canvas
+HOMESTAY | Lodging with a local family
+PARADOR | Spanish state-run hotel in a historic building
+GITE | French holiday cottage
+POUSADA | Portuguese inn, often in a historic building
+CARAVANSERAI | Silk Road roadside inn
+RIAD | Moroccan courtyard house, often a guesthouse
+TRAVELOGUE | Film or talk about a journey
+SHERPA | Himalayan people renowned as mountain guides
+TRAVELINSURANCE | Cover for lost bags and medical bills abroad (6,9)

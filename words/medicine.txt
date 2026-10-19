@@ -1,0 +1,517 @@
+# Medicine & Health — one entry per line: ANSWER | clue
+PARACETAMOL | Painkiller called acetaminophen in the US
+IBUPROFEN | Common anti-inflammatory painkiller developed by Boots in the 1960s
+CODEINE | Opioid found in opium, used for pain and coughs
+FENTANYL | Very potent synthetic opioid painkiller
+METHADONE | Synthetic opioid used to treat opioid dependence
+NALOXONE | Drug that rapidly reverses an opioid overdose
+AMOXICILLIN | Widely prescribed penicillin-type antibiotic
+VANCOMYCIN | Glycopeptide antibiotic long held in reserve for MRSA
+STREPTOMYCIN | First effective antibiotic against TB, discovered in 1943
+RIFAMPICIN | TB antibiotic known for turning urine orange-red
+ACICLOVIR | Antiviral drug used against herpes and cold sores
+OSELTAMIVIR | Influenza antiviral sold as Tamiflu
+ZIDOVUDINE | First approved HIV drug (1987), also known as AZT
+CHLOROQUINE | Synthetic antimalarial first made in the 1930s
+ARTEMISININ | Antimalarial from sweet wormwood; won Tu Youyou a Nobel
+IVERMECTIN | Antiparasitic used against river blindness; Nobel 2015
+METFORMIN | First-line tablet for type 2 diabetes
+WARFARIN | Anticoagulant first developed as a rat poison
+HEPARIN | Injected anticoagulant first found in liver tissue
+DIGOXIN | Heart drug derived from the foxglove
+ATROPINE | Drug from deadly nightshade that speeds the heart
+PROPRANOLOL | Beta blocker developed by James Black in the 1960s
+SALBUTAMOL | Blue-inhaler asthma reliever, albuterol in the US
+OMEPRAZOLE | Proton pump inhibitor that cuts stomach acid
+LORATADINE | Non-drowsy antihistamine for hay fever
+HYDROCORTISONE | Steroid hormone also called cortisol
+FLUOXETINE | SSRI antidepressant sold as Prozac
+DIAZEPAM | Benzodiazepine sold as Valium
+CHLORPROMAZINE | First widely used antipsychotic, introduced in the 1950s
+LEVODOPA | Dopamine precursor used to treat Parkinson's disease
+TAMOXIFEN | Hormone-blocking drug used in breast cancer
+VINCRISTINE | Chemotherapy drug from the Madagascar periwinkle
+THALIDOMIDE | Sedative withdrawn in 1961 after causing birth defects
+SILDENAFIL | Drug first tested for angina, later sold as Viagra
+LIDOCAINE | Local anaesthetic, also called lignocaine
+KETAMINE | Dissociative anaesthetic used in emergencies and by vets
+PROPOFOL | Milky-white intravenous anaesthetic
+CURARE | South American arrow poison, once used to relax muscles in surgery
+COLCHICINE | Gout drug from the autumn crocus
+EPINEPHRINE | US name for adrenaline, injected for anaphylaxis
+SALVARSAN | Ehrlich's 1910 arsenic drug for syphilis
+PRONTOSIL | First sulfonamide drug, found by Domagk in the 1930s
+BCG | Tuberculosis vaccine first used in 1921 (abbr.)
+MMR | Combined measles, mumps and rubella jab (abbr.)
+TOXOID | Inactivated toxin used as a vaccine, as for tetanus
+ADJUVANT | Vaccine additive that boosts the immune response
+ATTENUATED | Weakened, as a live virus in some vaccines
+MRNA | Vaccine technology behind Pfizer's and Moderna's Covid jabs (abbr.)
+ANTIVENOM | Treatment for snakebite
+ANTITOXIN | Antibody serum used against diphtheria or botulism
+ANTIHISTAMINE | Allergy drug that blocks a chemical released by mast cells
+ANTACID | Indigestion remedy such as milk of magnesia
+LAXATIVE | Medicine that relieves constipation
+SEDATIVE | Calming drug
+ANTIEMETIC | Drug that prevents vomiting
+ANTIPYRETIC | Drug that brings down a fever
+ANTICOAGULANT | Blood thinner such as warfarin
+OPIOID | Class of painkillers including morphine
+NSAID | Ibuprofen or naproxen, for short
+BETABLOCKER | Heart drug such as propranolol (4,7)
+DIURETIC | Water pill
+BRONCHODILATOR | Drug that widens the airways
+DECONGESTANT | Remedy for a blocked nose
+STATIN | Cholesterol-lowering drug class
+GENERIC | Non-branded version of a drug
+OINTMENT | Greasy preparation for the skin
+INHALER | Puffer for asthma
+LOZENGE | Medicated sweet for a sore throat
+TINCTURE | Medicine dissolved in alcohol
+POULTICE | Warm, moist mass applied to a sore
+ENEMA | Fluid injected into the rectum
+EMETIC | Substance that causes vomiting
+INTRAVENOUS | Into a vein
+SUBCUTANEOUS | Just under the skin, as insulin injections
+OVERDOSE | Excessive amount of a drug
+SIDEEFFECT | Unwanted reaction to a medicine (4,6)
+PROPHYLAXIS | Preventive treatment
+HEADACHE | Cephalalgia, in everyday terms
+NAUSEA | Queasy feeling of wanting to be sick
+DIARRHOEA | Frequent loose bowel movements
+CONSTIPATION | Difficulty passing stools
+INDIGESTION | Dyspepsia
+HEARTBURN | Pyrosis, a common symptom of acid reflux
+DEHYDRATION | Excessive loss of body water
+SUNBURN | Skin reddening from UV rays
+HEATSTROKE | Dangerous overheating of the body
+FROSTBITE | Freezing injury to fingers and toes
+HYPOTHERMIA | Dangerously low body temperature
+SORETHROAT | Painful pharynx (4,6)
+COMMONCOLD | Rhinovirus infection (6,4)
+FLU | Seasonal viral illness, for short
+MUMPS | Viral illness that swells the salivary glands
+CHICKENPOX | Itchy childhood illness caused by varicella-zoster
+RUBELLA | German measles
+HAYFEVER | Seasonal allergy to pollen (3,5)
+HIVES | Itchy raised welts, urticaria
+SHINGLES | Painful rash from reactivated chickenpox virus
+PNEUMONIA | Lung infection filling the air sacs with fluid
+BRONCHITIS | Inflammation of the airways
+SINUSITIS | Inflammation of the facial air cavities
+TONSILLITIS | Throat infection that can lead to quinsy
+LARYNGITIS | Inflamed voice box causing hoarseness
+CONJUNCTIVITIS | Pink eye
+MENINGITIS | Inflammation of the membranes around the brain
+ENCEPHALITIS | Inflammation of the brain
+SEPSIS | Life-threatening response to infection
+GANGRENE | Tissue death from lost blood supply
+TYPHOID | Fever famously carried by the cook Mary Mallon
+TYPHUS | Rickettsial disease spread by lice
+LEPROSY | Hansen's disease
+DIPHTHERIA | Disease that forms a grey membrane in the throat
+TETANUS | Lockjaw
+PERTUSSIS | Whooping cough
+RABIES | Viral disease Pasteur vaccinated against in 1885
+EBOLA | Haemorrhagic fever named after a Congolese river
+DENGUE | Mosquito-borne "breakbone fever"
+ZIKA | Virus named after a Ugandan forest
+YELLOWFEVER | Mosquito-borne disease that causes jaundice (6,5)
+HEPATITIS | Inflammation of the liver
+CIRRHOSIS | Scarring of the liver
+SYPHILIS | STI caused by Treponema pallidum
+GONORRHOEA | STI caused by Neisseria bacteria
+CHLAMYDIA | Common bacterial STI, often without symptoms
+HIV | Virus that attacks CD4 cells (abbr.)
+AIDS | Late stage of untreated HIV infection
+HERPES | Virus family that causes cold sores
+GLANDULARFEVER | Mononucleosis (9,5)
+LUPUS | Autoimmune disease named from the Latin for wolf
+GOUT | Arthritis caused by uric acid crystals
+LEUKAEMIA | Cancer of the blood-forming cells
+LYMPHOMA | Cancer such as Hodgkin's
+MELANOMA | Skin cancer of pigment cells
+CARCINOMA | Cancer arising in epithelial tissue
+SARCOMA | Cancer of bone or connective tissue
+GLIOMA | Tumour arising from the brain's supporting cells
+JAUNDICE | Yellowing of the skin and eyes
+COELIAC | Autoimmune reaction to gluten
+CROHNS | Inflammatory bowel disease named after a US doctor
+ULCER | Open sore, as in the stomach
+HERNIA | Organ bulging through a weak muscle wall
+HAEMORRHOIDS | Piles
+VARICOSEVEINS | Swollen, twisted vessels in the legs (8,5)
+CYSTICFIBROSIS | Inherited disease affecting the CFTR gene (6,8)
+HAEMOPHILIA | Bleeding disorder called the "royal disease"
+THALASSAEMIA | Inherited disorder of haemoglobin production
+SICKLECELL | Inherited anaemia named for crescent-shaped blood corpuscles (6,4)
+HUNTINGTONS | Inherited disease caused by repeated CAG triplets
+APNOEA | Pause in breathing, as during sleep
+ANAPHYLAXIS | Severe, life-threatening allergic reaction
+OTITIS | Inflammation of the ear
+IMPETIGO | Contagious skin infection with honey-coloured crusts
+RINGWORM | Fungal skin infection, despite its name
+SCABIES | Itchy infestation by burrowing mites
+BOTULISM | Paralysing illness from a Clostridium toxin
+SALMONELLA | Common cause of food poisoning
+ANTHRAX | Bacterial disease caught from livestock spores
+LYMEDISEASE | Tick-borne infection named after a Connecticut town (4,7)
+SCARLETFEVER | Streptococcal illness with a red rash (7,5)
+KWASHIORKOR | Protein malnutrition; its name comes from Ghana
+PELLAGRA | Niacin deficiency disease
+ACROMEGALY | Enlargement from excess adult growth hormone
+GRAVESDISEASE | Autoimmune cause of an overactive thyroid (6,7)
+ADDISONS | Adrenal insufficiency, a disease JFK had
+CUSHINGS | Syndrome of excess cortisol
+HYPOGLYCAEMIA | Abnormally low blood sugar
+HYPOTHYROIDISM | Condition of an underactive gland in the neck
+OSTEOARTHRITIS | Wear-and-tear joint disease
+SCIATICA | Pain running down the back of the leg
+LUMBAGO | Old term for lower back pain
+TENNISELBOW | Lateral epicondylitis (6,5)
+SHINSPLINTS | Pain along the tibia in runners (4,7)
+RSI | Repetitive strain injury, briefly
+TACHYCARDIA | Abnormally fast heart rate
+BRADYCARDIA | Abnormally slow heart rate
+FIBRILLATION | Rapid, chaotic quivering of heart muscle
+CARDIOMYOPATHY | Disease of the heart muscle
+HEARTATTACK | Myocardial infarction (5,6)
+HYPOTENSION | Low blood pressure
+ISCHAEMIA | Inadequate blood supply to tissue
+COPD | Chronic lung disease including emphysema (abbr.)
+EMPHYSEMA | Lung disease that destroys the air sacs
+PLEURISY | Painful inflammation of the lung lining
+PNEUMOTHORAX | Collapsed lung from air in the chest cavity
+ASBESTOSIS | Lung scarring from inhaled mineral fibres
+CYSTITIS | Bladder infection
+KIDNEYSTONE | Hard mineral deposit in the urinary tract (6,5)
+STRABISMUS | Squint
+AMBLYOPIA | Lazy eye
+PRESBYOPIA | Age-related loss of close focus
+HYPEROPIA | Long-sightedness
+TRACHOMA | Leading infectious cause of blindness
+DALTONISM | Colour blindness, named after a chemist who had it
+ALS | Lou Gehrig's disease, for short
+BELLSPALSY | Sudden weakness on one side of the face (5,5)
+NEUROPATHY | Damage to peripheral nerves
+ATAXIA | Loss of coordination
+DELIRIUM | Acute confused state
+COMA | State of prolonged unconsciousness
+SEIZURE | Fit
+TREMOR | Involuntary shaking
+HYDROCEPHALUS | Build-up of fluid in the brain
+SPINABIFIDA | Birth defect of incomplete closure of the spine (5,6)
+MRSA | Drug-resistant staph "superbug" (abbr.)
+ABSCESS | Collection of pus
+WART | Small growth caused by HPV
+VERRUCA | Plantar wart
+STYE | Infected eyelid gland
+COLDSORE | Blister caused by herpes simplex (4,4)
+HALITOSIS | Bad breath
+GINGIVITIS | Inflammation of the gums
+CARIES | Tooth decay
+PLAQUE | Bacterial film on teeth
+PREECLAMPSIA | Pregnancy condition of high blood pressure (3-9)
+HYPOXIA | Shortage of oxygen in tissues
+CYANOSIS | Bluish skin from lack of oxygen
+OEDEMA | Swelling from excess fluid
+NECROSIS | Death of cells or tissue
+METASTASIS | Spread of cancer to distant sites
+CARCINOGEN | Substance that causes cancer
+CHAGAS | Parasitic disease spread by kissing bugs
+LEISHMANIASIS | Parasitic disease spread by sandflies
+BILHARZIA | Schistosomiasis, caught from freshwater snails' parasites
+ONCHOCERCIASIS | River blindness
+DRACUNCULIASIS | Guinea worm disease, close to eradication
+HOOKWORM | Intestinal parasite that enters through bare feet
+TOXOPLASMOSIS | Parasitic infection often caught from cats
+MPOX | Viral disease renamed by the WHO in 2022
+SARS | Coronavirus disease of 2002–03 (abbr.)
+NOROVIRUS | "Winter vomiting bug"
+ROTAVIRUS | Leading cause of severe diarrhoea in infants
+RHINOVIRUS | Main cause of the common cold
+HPV | Virus targeted by a cervical cancer vaccine (abbr.)
+SCROFULA | "King's evil", TB of the neck glands
+DROPSY | Old name for oedema
+APOPLEXY | Old name for a stroke
+QUINSY | Abscess beside a tonsil
+AGUE | Old word for a malarial fever
+CROUP | Barking cough in young children
+KURU | Prion disease studied among the Fore of Papua New Guinea
+CJD | Prion brain disease, for short
+SUPERBUG | Bacterium resistant to many antibiotics
+PAEDIATRICS | Medicine of children
+GERIATRICS | Medicine of older people
+OBSTETRICS | Medicine of pregnancy and childbirth
+GYNAECOLOGY | Medicine of the female reproductive system
+UROLOGY | Medicine of the urinary tract
+NEPHROLOGY | Medicine of the kidneys
+HAEMATOLOGY | Medicine of the blood
+ENDOCRINOLOGY | Medicine of hormones and glands
+RHEUMATOLOGY | Medicine of joints and autoimmune disease
+PSYCHIATRY | Medicine of the mind
+OTOLARYNGOLOGY | Ear, nose and throat medicine
+ANAESTHESIOLOGY | Medical specialty of putting patients to sleep for surgery
+ORTHODONTICS | Dentistry that straightens teeth
+NEUROSURGERY | Operations on the brain and spine
+PLASTICSURGERY | Reconstructive or cosmetic operations (7,7)
+NUCLEARMEDICINE | Specialty using radioactive tracers (7,8)
+PALLIATIVECARE | Comfort-focused treatment in serious illness (10,4)
+DOCTOR | Physician
+MIDWIFE | Professional who assists at births
+DENTIST | Tooth doctor
+OPTICIAN | Glasses fitter
+OPTOMETRIST | Eye examiner
+CHIROPRACTOR | Spine manipulator
+DIETITIAN | Registered expert on therapeutic diets
+ANAESTHETIST | Doctor who puts patients to sleep for surgery
+PATHOLOGIST | Doctor who examines tissues and performs autopsies
+PHYSIOTHERAPY | Treatment by exercise and manipulation
+EPIDEMIOLOGIST | Scientist who tracks disease patterns in populations
+MEDIC | Informal term for a doctor
+CONSULTANT | Senior hospital specialist in the UK
+REGISTRAR | UK doctor in specialist training
+INTERN | First-year US hospital doctor
+MATRON | Senior nurse in charge
+HIPPOCRATIC | Kind of oath taken by doctors
+RHAZES | Persian physician who told smallpox from measles
+VESALIUS | Author of "De humani corporis fabrica" (1543)
+HARVEY | William, who described blood circulation in 1628
+PARE | Ambroise, French barber-surgeon who used ligatures
+PARACELSUS | Swiss pioneer of chemical medicine (16th century)
+LISTER | Joseph, pioneer of antiseptic surgery in the 1860s
+SEMMELWEIS | Ignaz, who cut childbed fever by handwashing (1847)
+BARNARD | Christiaan, who performed the first human-to-human heart transplant (1967)
+GROOTESCHUUR | Cape Town hospital of the 1967 heart transplant (6,6)
+WASHKANSKY | Louis, recipient of the first human-to-human heart transplant (1967)
+CORMACK | South African-born physicist who shared a 1979 Nobel for CT
+THEILER | Pretoria-born winner of a 1951 Nobel for a yellow fever vaccine
+HOUNSFIELD | Godfrey, British engineer who built the first CT scanner
+BANTING | Frederick, co-discoverer of insulin in 1921
+FLOREY | Howard, who turned penicillin into a usable drug
+CHAIN | Ernst, Nobel winner for purifying penicillin
+SALK | Jonas, developer of the injected polio vaccine (1955)
+SABIN | Albert, developer of the oral polio vaccine
+RONTGEN | Wilhelm, discoverer of X-rays in 1895
+EHRLICH | Paul, who sought a "magic bullet" against disease
+DOMAGK | Gerhard, discoverer of the first sulfa drug
+BEHRING | Emil von, first Nobel laureate in medicine (1901)
+CUSHING | Harvey, pioneering American neurosurgeon
+OSLER | William, Canadian who helped found Johns Hopkins medicine
+LAENNEC | René, inventor of the stethoscope (1816)
+MORTON | William, who demonstrated ether anaesthesia in 1846
+BLACKWELL | Elizabeth, first woman to earn a US medical degree (1849)
+GARRETTANDERSON | Elizabeth, first woman to qualify as a doctor in Britain (7,8)
+FORSSMANN | Werner, who catheterised his own heart in 1929
+EINTHOVEN | Willem, inventor of the practical ECG
+KOLFF | Willem, builder of the first artificial kidney (1943)
+LANDSTEINER | Karl, discoverer of the ABO blood groups (1901)
+STEPTOE | Patrick, IVF pioneer with Robert Edwards
+CAJAL | Santiago Ramón y ___, father of modern neuroscience
+PARKINSON | James, author of "An Essay on the Shaking Palsy" (1817)
+HEIMLICH | Henry, deviser of an anti-choking manoeuvre (1974)
+APGAR | Virginia, who devised a newborn score in 1952
+TUYOUYOU | Chinese discoverer of artemisinin, Nobel 2015 (2,6)
+SAUNDERS | Cicely, founder of the modern hospice movement
+CHARNLEY | John, British pioneer of the modern hip replacement
+WITHERING | William, who described foxglove for dropsy in 1785
+MONTAGU | Lady Mary Wortley, who promoted smallpox inoculation in 1721
+HUMOURS | Four bodily fluids of ancient medical theory
+MIASMA | "Bad air" once blamed for disease
+APOTHECARY | Old-time pharmacist
+BARBERSURGEON | Medieval hair-cutter who also let blood (6,7)
+QUACK | Fraudulent healer
+GERMTHEORY | Idea that microbes cause disease (4,6)
+ANTISEPSIS | Lister's method of killing germs in wounds
+ASEPSIS | Freedom from contamination
+CARBOLIC | Acid Lister sprayed in operating rooms
+TREPANATION | Ancient practice of boring a hole in the skull
+BLOODLETTING | Old cure-all often performed with leeches
+VARIOLATION | Pre-Jenner method of smallpox protection
+INOCULATION | Introduction of material to produce immunity
+TUSKEGEE | Alabama site of an unethical 1932–72 syphilis study
+NUREMBERGCODE | 1947 rules on ethical human experiments (9,4)
+INFORMEDCONSENT | Patient's agreement after full explanation (8,7)
+IRONLUNG | Polio-era breathing machine (4,4)
+NHS | UK health service founded in 1948 (abbr.)
+ERADICATION | Total elimination, as of smallpox in 1980
+SANITATION | Clean water and sewage disposal
+FLUORIDATION | Adding a mineral to water to protect teeth
+IMMUNISATION | Protection by vaccination
+SCREENING | Testing healthy people for hidden disease
+CONTACTTRACING | Finding people exposed to an infected person (7,7)
+PREVALENCE | Proportion of a population with a condition
+MORBIDITY | Rate or state of illness
+MORTALITY | Death rate
+LIFEEXPECTANCY | Average years a newborn may live (4,10)
+ENDEMIC | Constantly present in a region
+OUTBREAK | Sudden rise in cases
+CLINICALTRIAL | Test of a treatment on human volunteers (8,5)
+CONTROLGROUP | Comparison set in a trial, often given a placebo (7,5)
+METAANALYSIS | Statistical pooling of many studies (4-8)
+BMI | Weight-to-height measure (abbr.)
+SMOKING | Leading preventable cause of lung cancer
+HARMREDUCTION | Public health approach such as needle exchanges (4,9)
+LOCKDOWN | Stay-at-home restrictions in an epidemic
+PRIMARYCARE | First point of contact, such as a GP (7,4)
+PATIENTZERO | First known case in an outbreak (7,4)
+INDEXCASE | First identified patient in a cluster (5,4)
+SUPERSPREADER | Person who infects unusually many others
+ASYMPTOMATIC | Showing no signs of illness
+INCUBATION | Period between infection and first symptoms
+VIRULENCE | Severity or harmfulness of a pathogen
+SANITISER | Alcohol gel for the hands
+KILOJOULE | Energy unit on food labels, about 0.24 kcal
+MACRONUTRIENT | Carbohydrate, fat or protein
+MICRONUTRIENT | Vitamin or mineral needed in tiny amounts
+TRANSFAT | Unhealthy fat from partial hydrogenation (5,3)
+FOLICACID | Synthetic form of vitamin B9 (5,4)
+THIAMINE | Vitamin B1, lack of which causes beriberi
+RIBOFLAVIN | Vitamin B2
+NIACIN | Vitamin B3
+COBALAMIN | Vitamin B12
+RETINOL | Vitamin A
+ASCORBICACID | Vitamin C (8,4)
+CALCIFEROL | Vitamin D
+PROBIOTIC | Live bacteria taken for gut health
+GLYCAEMICINDEX | Ranking of how fast foods raise blood sugar (9,5)
+KETOSIS | Burning fat for fuel when carbs are scarce
+EXERCISE | Physical activity for fitness
+PILATES | Core-strengthening exercise method named after its German creator
+CARDIO | Exercise that raises your heart rate
+PUSHUP | Press-up (4-2)
+SITUP | Abdominal curl from lying flat (3-2)
+SQUAT | Knee-bending leg exercise
+DEADLIFT | Weightlifting move from floor to hips
+BENCHPRESS | Chest exercise lying flat (5,5)
+KETTLEBELL | Ball-shaped weight with a handle
+DUMBBELL | Hand-held weight
+CALISTHENICS | Bodyweight exercises
+HEARTRATE | Beats per minute (5,4)
+PEDOMETER | Step counter
+HIIT | Short bursts of intense exercise (abbr.)
+LACTICACID | Substance once blamed for muscle burn (6,4)
+HYPERTROPHY | Growth in muscle size
+SYRINGE | Needle-tipped injector
+BANDAGE | Strip of fabric wrapped around a wound
+PLASTER | Sticky dressing for a small cut (UK)
+WHEELCHAIR | Mobility aid that may be self-propelled or powered
+GURNEY | Wheeled hospital trolley (US)
+LARYNGOSCOPE | Instrument used to view the voice box
+OTOSCOPE | Ear examination instrument
+OPHTHALMOSCOPE | Instrument for viewing the back of the eye
+ARTHROSCOPE | Instrument for looking inside a joint
+CATHETER | Tube inserted to drain or deliver fluid
+CANNULA | Thin tube inserted into a vein
+DRIP | Intravenous infusion
+NEBULISER | Device turning liquid medicine into mist
+VENTILATOR | Machine that breathes for a patient
+OXIMETER | Fingertip blood-oxygen gauge
+ECG | Heart trace (abbr.)
+EEG | Brainwave recording (abbr.)
+MRI | Magnetic body scan (abbr.)
+FORCEPS | Pincers used in surgery or childbirth
+RETRACTOR | Instrument that holds an incision open
+LANCET | Small blade; also a British medical journal
+TROCAR | Sharp pointed instrument used with a cannula
+SPECULUM | Instrument to widen a body opening for examination
+PROSTHESIS | Artificial body part
+HEARINGAID | Sound amplifier worn in the ear (7,3)
+DENTURES | False teeth
+CONTACTLENS | Eye correction worn on the cornea (7,4)
+SLING | Arm support
+SWAB | Absorbent pad for taking samples
+STENT | Mesh tube that props open an artery
+SHUNT | Passage diverting fluid, as from the brain
+AUTOCLAVE | Steam steriliser for instruments
+HYPODERMIC | Beneath the skin, as a needle
+GAMMAKNIFE | Radiosurgery device for brain tumours (5,5)
+COCHLEARIMPLANT | Device giving sound to the profoundly deaf (8,7)
+AED | Public-access heart shock device (abbr.)
+MAMMOGRAM | Breast X-ray
+ECHOCARDIOGRAM | Ultrasound scan of the heart
+ANGIOGRAM | X-ray image of blood vessels
+SPIROMETER | Lung function measurer
+FIRSTAID | Immediate care of the injured (5,3)
+CPR | Chest compressions and rescue breaths (abbr.)
+OPERATION | Surgical procedure
+ANAESTHESIA | Loss of sensation induced for surgery
+APPENDICECTOMY | Operation to remove the vermiform organ (UK spelling)
+TONSILLECTOMY | Operation to remove glands at the back of the throat
+MASTECTOMY | Removal of a breast
+HYSTERECTOMY | Removal of the womb
+VASECTOMY | Male sterilisation procedure
+CHOLECYSTECTOMY | Removal of the gallbladder
+TRACHEOSTOMY | Opening made in the windpipe
+COLOSTOMY | Opening of the colon onto the abdomen
+ANGIOPLASTY | Balloon widening of a narrowed artery
+BYPASS | Operation rerouting blood around a blockage
+AMPUTATION | Removal of a limb
+LAPAROSCOPY | Keyhole examination of the abdomen
+KEYHOLESURGERY | Minimally invasive operation (7,7)
+ENDOSCOPY | Internal examination with a camera tube
+COLONOSCOPY | Camera examination of the large bowel
+LUMBARPUNCTURE | Spinal tap (6,8)
+INTUBATION | Insertion of a breathing tube
+RESUSCITATION | Reviving someone from apparent death
+CARDIOVERSION | Restoring normal heart rhythm with a shock
+LASIK | Laser eye surgery
+CHEMOTHERAPY | Cancer treatment with drugs
+IMMUNOTHERAPY | Cancer treatment such as CAR-T or checkpoint inhibitors
+ACUPUNCTURE | Traditional Chinese needle therapy
+CAESAREAN | Surgical delivery of a baby
+EPIDURAL | Spinal anaesthetic used in labour
+AMNIOCENTESIS | Sampling of the fluid around a foetus
+IVF | Test-tube baby technique (abbr.)
+BLOODTEST | Lab analysis of a sample from a vein (5,4)
+CRANIOTOMY | Surgical opening of the skull
+LITHOTRIPSY | Shattering of kidney stones by shock waves
+RHINOPLASTY | Nose job
+SKINGRAFT | Transplanted tissue used to cover a burn (4,5)
+CAUTERY | Burning tissue to stop bleeding
+ANASTOMOSIS | Surgical joining of two tubes, such as vessels
+PHLEBOTOMY | Drawing blood from a vein
+AUSCULTATION | Listening to body sounds with a stethoscope
+PALPATION | Examination by touch
+HIPREPLACEMENT | Operation pioneered by John Charnley (3,11)
+INFIRMARY | Old name for a hospital
+SANATORIUM | Institution for long-term convalescence
+HOSPICE | Care home for the terminally ill
+SICKBAY | Medical room on a ship or at school (4,3)
+MATERNITY | Ward for childbirth
+MORTUARY | Place where bodies are kept
+AUTOPSY | Post-mortem examination
+INTENSIVECARE | ICU (9,4)
+CASUALTY | UK term for an emergency department
+OUTPATIENT | Person attending a clinic without being admitted
+WARDROUND | Doctors' daily visit to each bed (4,5)
+BEDSIDEMANNER | Doctor's way with patients (7,6)
+ONCALL | Available for emergencies (2,4)
+REFERRAL | Sending a patient to a specialist
+SICKNOTE | Doctor's certificate for time off (4,4)
+STAT | Immediately, in hospital shorthand
+CODEBLUE | Hospital alert for cardiac arrest (4,4)
+CRASHCART | Resuscitation trolley (5,4)
+VITALSIGNS | Pulse, breathing rate and temperature, for example (5,5)
+BLOODPRESSURE | Reading such as 120/80 (5,8)
+BLOODSUGAR | Glucose level (5,5)
+HAEMATOCRIT | Proportion of blood volume that is red cells
+AUTOIMMUNE | Of a disease where the body attacks itself
+ALLERGEN | Substance such as pollen that triggers hay fever
+IDIOPATHIC | Of unknown cause
+IATROGENIC | Caused by medical treatment
+NOSOCOMIAL | Acquired in hospital
+PALLIATIVE | Relieving symptoms without curing
+AETIOLOGY | Cause of a disease
+COMORBIDITY | Coexisting condition
+SEQUELA | Condition resulting from an earlier illness
+CONVALESCENCE | Recovery period
+LESION | Area of damaged tissue
+CONTUSION | Bruise, medically
+LACERATION | Jagged cut
+HAEMATOMA | Pooled blood outside vessels
+PUS | Yellowish fluid from infection
+FEBRILE | Feverish
+PYREXIA | Fever, medically
+DYSPNOEA | Shortness of breath
+PRURITUS | Itching, medically
