@@ -1,0 +1,127 @@
+# One Piece: unofficial fan crossword clues
+@title One Piece
+@category anime
+@blurb Straw Hats, devil fruits and the hunt for the ultimate treasure.
+@icon star
+LUFFY | Rubber-bodied captain who dreams of being King of the Pirates | casual
+ZORO | Green-haired swordsman of the Straw Hat crew | casual
+NAMI | Orange-haired navigator who loves tangerines and money | casual
+USOPP | Long-nosed sniper and teller of tall tales | casual
+SANJI | Cook who fights only with his legs | casual
+CHOPPER | Reindeer doctor who ate the Human-Human Fruit | casual
+ROBIN | Archaeologist of the crew who can read Poneglyphs | casual
+FRANKY | Cyborg shipwright who loves to shout "Super!" | casual
+BROOK | Skeleton musician with an afro | casual
+JINBE | Fish-Man helmsman and former Warlord | casual
+SHANKS | Red-haired Emperor who gave Luffy his hat | casual
+ACE | Portgas D. ___, Luffy's fire-wielding brother | casual
+SABO | Luffy's other sworn brother, of the Revolutionary Army | casual
+DRAGON | Monkey D. ___, Luffy's revolutionary father | casual
+GARP | Luffy's grandfather, a Marine hero | casual
+ROGER | Gol D. ___, the executed Pirate King | casual
+DEVIL FRUIT | Cursed snack that grants powers but robs swimming (5,5) | casual
+STRAW HAT | Luffy's treasured headwear (5,3) | casual
+ONE PIECE | Legendary treasure left by Gol D. Roger (3,5) | casual
+GOING MERRY | The crew's first ship, a gift from Kaya (5,5) | casual
+THOUSAND SUNNY | Lion-headed ship built by Franky (8,5) | casual
+PIRATE KING | Title Luffy is determined to claim (6,4) | casual
+GRAND LINE | Perilous ocean route that circles the world (5,4) | casual
+EAST BLUE | Weakest sea, where Luffy's journey begins (4,4) | casual
+MARINES | Military force of the World Government | casual
+WARLORD | One of the Seven ___ of the Sea, a sanctioned pirate | casual
+BUGGY | Clown pirate whose body splits into pieces | casual
+BLACKBEARD | Treacherous pirate Marshall D. Teach | casual
+KAIDO | Dragon-form Emperor who ruled Wano | casual
+BIG MOM | Nickname of Emperor Charlotte Linlin (3,3) | casual
+WHITEBEARD | Edward Newgate, once called the strongest man in the world | casual
+MIHAWK | Dracule ___, the world's greatest swordsman | casual
+LAW | Trafalgar ___, the Surgeon of Death | casual
+CROCODILE | Sand-controlling Warlord who plotted to seize Alabasta | casual
+DOFLAMINGO | String-wielding Warlord in a pink feather coat | casual
+WANO | Samurai country closed off from the world | casual
+ALABASTA | Desert kingdom of Princess Vivi | casual
+VIVI | Princess who sailed with the crew to save her desert home | casual
+HAKI | Willpower: Armament, Observation or Conqueror's | casual
+JOLLY ROGER | Skull-and-crossbones pirate flag (5,5) | casual
+SEA KING | Giant monster of the Calm Belt (3,4) | casual
+ARLONG | Saw-nosed Fish-Man who ruled Nami's village | fan
+SKYPIEA | Sky island nation reached via the Knock Up Stream | fan
+DRESSROSA | Toy-filled kingdom ruled by Doflamingo | fan
+MARINEFORD | Marine headquarters, site of the Paramount War | fan
+IMPEL DOWN | Great underwater prison (5,4) | fan
+ENIES LOBBY | Judicial island where CP9 held Robin (5,5) | fan
+THRILLER BARK | Gecko Moria's gigantic ghost ship (8,4) | fan
+FISH-MAN ISLAND | Undersea kingdom 10,000 metres down (4-3,6) | fan
+PUNK HAZARD | Island split between scorching fire and ice (4,6) | fan
+WHOLE CAKE | ___ Island, Big Mom's territory (5,4) | fan
+ZOU | Island on the back of a giant elephant | fan
+EGGHEAD | Futuristic island laboratory of Dr. Vegapunk | fan
+VEGAPUNK | Genius scientist who worked for the World Government | fan
+NIKA | Sun God tied to the true name of Luffy's fruit | fan
+SMOKER | White Hunter Marine with a jitte and two cigars | fan
+AKAINU | Magma Admiral who killed Ace | fan
+AOKIJI | Ice Admiral whose real name is Kuzan | fan
+SENGOKU | Fleet Admiral called the Buddha | fan
+DON KRIEG | Armored pirate admiral who attacked the Baratie (3,5) | fan
+BARATIE | Floating restaurant where Sanji worked | fan
+PONEGLYPH | Indestructible stone carved with ancient text | fan
+LOG POSE | Wrist compass needed on the Grand Line (3,4) | fan
+WORST GENERATION | Rookie class including Luffy, Law and Kid (5,10) | fan
+KID | Eustass ___, magnetism-wielding captain | fan
+HANCOCK | Boa ___, the Pirate Empress | fan
+RAYLEIGH | Dark King, Roger's first mate who trained Luffy | fan
+ODEN | Wano samurai lord boiled alive, father of Momonosuke | fan
+MOMONOSUKE | Oden's young son who became shogun of Wano | fan
+YAMATO | Kaido's child who claims to be Oden | fan
+KATAKURI | Big Mom's mochi-wielding son with future sight | fan
+KUMA | Bartholomew ___, paw-wielding Warlord | fan
+ROB LUCCI | Leopard-form CP9 assassin (3,5) | fan
+WATER SEVEN | City of canals famed for its shipwrights (5,5) | fan
+LABOON | Giant whale waiting for Brook at Reverse Mountain | fan
+BAROQUE WORKS | Crocodile's secret crime syndicate (7,5) | fan
+SHIRAHOSHI | Giant mermaid princess revealed as Poseidon | fan
+JOY BOY | Legendary figure of the Void Century (3,3) | fan
+VOID CENTURY | Erased hundred years of history (4,7) | fan
+LAUGH TALE | Final island reached by Roger (5,4) | fan
+RED LINE | Continent that rings the world (3,4) | fan
+SOGEKING | Usopp's masked sniper alter ego | fan
+CLIMA-TACT | Nami's weather-making staff (5-4) | fan
+HILULUK | Quack doctor whose cherry blossom dream inspired Chopper | superfan
+NOJIKO | Nami's tattooed adoptive sister | superfan
+MAKINO | Barmaid who looked after young Luffy | superfan
+KUINA | Zoro's childhood rival who died young | superfan
+HELMEPPO | Son of Axe-Hand Morgan who joined the Marines | superfan
+MORGAN | Axe-Hand Marine captain of Shells Town | superfan
+KILLER | Kid's masked first mate | superfan
+SHAKKY | Rayleigh's bar-owning companion at Sabaody | superfan
+KINEMON | Samurai with fox-fire and a knack for disguises | superfan
+KING | Kaido's pteranodon-form right-hand man | superfan
+QUEEN | Kaido's brachiosaurus-form All-Star | superfan
+JACK | Kaido's mammoth-form All-Star nicknamed Drought | superfan
+PEROSPERO | Candy-wielding eldest son of Big Mom | superfan
+GERMA | ___ 66, the Vinsmoke family army | superfan
+JUDGE | Vinsmoke patriarch, Sanji's father | superfan
+REIJU | Sanji's pink-haired, poison-eating sister | superfan
+SPANDAM | Cowardly CP9 director at Enies Lobby | superfan
+ICEBURG | Water Seven mayor and Galley-La president | superfan
+NOLAND | Montblanc ___, explorer branded a liar | superfan
+BON CLAY | Okama dancer who can copy faces (3,4) | superfan
+IVANKOV | Okama queen of Kamabakka with hormone powers | superfan
+MAGELLAN | Poison-wielding warden of Impel Down | superfan
+REBECCA | Gladiator princess of Dressrosa | superfan
+BARTOLOMEO | Barrier-making pirate who idolizes Luffy | superfan
+CAVENDISH | White Horse pirate jealous of Luffy's fame | superfan
+TOM | Fish-Man shipwright who built Roger's ship | superfan
+RED FORCE | Shanks's ship (3,5) | superfan
+POLAR TANG | Law's yellow submarine (5,4) | superfan
+MARY GEOISE | Holy Land atop the Red Line (4,6) | superfan
+DIABLE JAMBE | Sanji's flaming leg technique (6,5) | superfan
+WADO ICHIMONJI | Kuina's white sword, carried by Zoro (4,9) | superfan
+ENMA | Oden's sword, entrusted to Zoro in Wano | superfan
+ZEUS | Thundercloud homie Nami claimed from Big Mom | superfan
+SOUL KING | Brook's stage name as a rock star (4,4) | superfan
+DAVY BACK FIGHT | Crew-stealing pirate contest (4,4,5) | superfan
+LITTLE GARDEN | Prehistoric island of the giants Dorry and Brogy (6,6) | superfan
+FOXY | Silver Fox captain who loves the Davy Back Fight | superfan
+COBRA | King of Alabasta, Vivi's father | superfan
+PARAMECIA | Broadest class of devil fruit, not Zoan or Logia | superfan
