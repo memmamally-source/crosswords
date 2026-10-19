@@ -3,12 +3,11 @@
 What is built and live today, what's unfinished, and how it compares with the
 [master plan](MASTER_PLAN.md).
 
-- **Snapshot:** 18 October 2026.
+- **Snapshot:** 19 October 2026 (updated for the Arcade and Free-versus-Premium
+  decisions).
 - **Live site:** https://memmamally-source.github.io/crosswords/ (GitHub
   Pages, deployed from `main` when a PR is merged).
-- **Code checked:** `main` at `c19ed83` (Stage 4 and analytics merged, #18 and #19), plus
-  the Stage 5 work on the `claude/crossword-game-website-48cduv` branch, in a
-  PR waiting for approval.
+- **Code checked:** `main` at `25f819c` (everything up to #26 merged).
 
 ## 1. Stages at a glance
 
@@ -21,9 +20,10 @@ What is built and live today, what's unfinished, and how it compares with the
 | 4 — Growth and social sharing | ✅ Complete (#18, #19); new category collections to follow | #18, #19 |
 | 5 — Multiplayer (Help me solve) | ✅ Built (#20); switched on by the database URL PR | #20 |
 | 6 — Verified leaderboards | Postponed (19 Oct) until there are more players | — |
-| 7 — Gifts | 7A manual builder built; shows "Coming soon" until switched on | this PR |
-| 8 — Monetisation preparation (design only) | Not started | — |
+| 7 — Gifts | 7A manual builder built; shows "Coming soon" until switched on | #25 |
+| 8 — Monetisation preparation (design only) | Not started; now also covers the entitlement switches and server design for Brutal and the Arcade | — |
 | 9 — Expansion | Not started | — |
+| 10 — Crossword Hub Arcade (Clue Blitz, Survival) | 10A built (free, unlimited), in a PR awaiting approval; 10B (enforcement) later | — |
 
 (Stage numbers 4 onwards follow the revised order in MASTER_PLAN.md §7.)
 
@@ -224,6 +224,11 @@ What is built and live today, what's unfinished, and how it compares with the
 | SEO (pages, sitemap, previews) | ✅ Stage 4 | Real pages per genre and collection link into the app; puzzles themselves stay on `#/` addresses |
 | Custom domain | ⏳ Open decision | `SITE` in `tools/build-pages.js` and the preview tags change when it's set |
 | Monetisation (Premium, credits, ads, gift purchases) | ❌ Deliberately not built | Documented as future only |
+| Always free: Daily, Mini, streaks, basic stats, play without registering | ✅ True today | Must stay free after monetisation (confirmed 19 October 2026) |
+| Brutal as a future Premium feature (visible, not playable for free players) | ❌ Not built, by design | Stage 8 adds the switch and a hidden Premium marker; Brutal stays free while testing. `canAccess` already sees every puzzle's kind and level, so the rule fits there |
+| Arcade: Clue Blitz and Survival | ✅ Stage 10A (awaiting approval) | `js/arcade.js` (game logic) and the Arcade screens in `js/app.js`; 20,432 unique answers from the existing clue bank, no new content or AI |
+| Free Arcade allowance (1 Blitz + 1 Survival a day) | 🔒 Built, switched off | `LIMITS_ACTIVE` in `js/arcade.js` is false; attempts are counted on the device only. Enforced on the server in 10B, with approval |
+| Server-side entitlements and Arcade runs | ❌ Not built | Stage 10B with Stage 8; needs the Blaze plan and payments |
 
 ## 5. Risks and housekeeping
 
@@ -238,6 +243,10 @@ What is built and live today, what's unfinished, and how it compares with the
 - **Client-side answers.** Every puzzle's answers are in the browser, so any
   leaderboard without server checks can be faked. This is fine for casual
   stats, but not for prizes or trusted rankings.
+- **Premium gates on a static site.** The whole clue bank ships with the
+  website, so a browser-only gate can be bypassed by a technical user. The
+  planned design (MASTER_PLAN.md §3.6) keeps entitlements and Arcade runs on
+  the server; the browser gate is only a fair-use barrier.
 - **Firebase free-plan limits** for multiplayer: Firestore allows 50,000
   reads and 20,000 writes a day; Realtime Database allows 100 simultaneous
   connections. Write batching and monitoring are needed from day one.
@@ -257,9 +266,16 @@ Done since 18 October: the phone layout and invite screen (#22), the
 built-in letter keys and grid zoom (#23), and the Travel, Medicine,
 Technology and General Knowledge genres (#24).
 
-1. **Switch on gift crosswords** when ready: set `GIFTS_LIVE` to true in
+Also merged: 8 new collections (#26), taking the site to 58 collections.
+
+1. **Stage 10A: the Arcade** (Clue Blitz and Survival) is built, free and
+   unlimited, with allowances built but switched off. In a PR awaiting the
+   owner's approval.
+2. **Switch on gift crosswords** when ready: set `GIFTS_LIVE` to true in
    `js/gifts.js` (and the matching line in `tests/gifts.test.js`). Ideally
    before Valentine's Day.
-2. **Freeze the next batch of Dailies, Minis and Brutals** by 1 March 2027.
-3. **Stage 8: monetisation preparation** (design only).
-4. Verified leaderboards (Stage 6) are postponed until there are more players.
+3. **Stage 8: monetisation preparation** (design only), including the
+   Brutal and Arcade switches and the server design.
+4. **Freeze the next batch of Dailies, Minis and Brutals** by 1 March 2027.
+5. Verified leaderboards (Stage 6) stay postponed until there are more
+   players; Arcade boards join them then.

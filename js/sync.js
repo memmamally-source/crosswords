@@ -27,6 +27,8 @@
       lastWords: store.lastWords || {},
       solvedCount: store.solvedCount || 0,
       saves: Object.fromEntries(saves),
+      // Arcade personal bests only; a run in progress stays on its device.
+      arcadeBest: (store.arcade && store.arcade.best) || store.arcadeBest || {},
     };
   }
 
@@ -62,6 +64,9 @@
     }
 
     out.lastWords = Object.assign({}, remote.lastWords, local.lastWords);
+    out.arcade = Object.assign({}, local.arcade, {
+      best: mergeArcadeBest((local.arcade && local.arcade.best) || local.arcadeBest, remote.arcadeBest || (remote.arcade && remote.arcade.best)),
+    });
     out.solvedCount = Math.max(local.solvedCount || 0, remote.solvedCount || 0);
 
     // Puzzles in progress: the most recently played copy wins, and a puzzle
@@ -78,12 +83,31 @@
     return out;
   }
 
+  // Arcade bests from two devices: the higher Blitz score, and the higher
+  // Survival score and round.
+  function mergeArcadeBest(a, b) {
+    a = a || {};
+    b = b || {};
+    const out = {};
+    const blitz = [a.blitz, b.blitz].filter(Boolean).sort((x, y) => (y.score || 0) - (x.score || 0) || (y.correct || 0) - (x.correct || 0));
+    if (blitz.length) out.blitz = blitz[0];
+    const survival = [a.survival, b.survival].filter(Boolean);
+    if (survival.length) {
+      out.survival = {
+        score: Math.max(...survival.map((x) => x.score || 0)),
+        round: Math.max(...survival.map((x) => x.round || 0)),
+        at: Math.max(...survival.map((x) => x.at || 0)),
+      };
+    }
+    return out;
+  }
+
   // True when merging would change the account's copy.
   function differs(a, b) {
     return JSON.stringify(syncable(a)) !== JSON.stringify(syncable(b));
   }
 
-  const api = { syncable, mergeStores, differs, betterSolve, MAX_SYNCED_SAVES };
+  const api = { syncable, mergeStores, differs, betterSolve, mergeArcadeBest, MAX_SYNCED_SAVES };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CrosswordSync = api;
 })(typeof window !== 'undefined' ? window : globalThis);

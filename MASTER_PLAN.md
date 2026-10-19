@@ -17,8 +17,8 @@ Commercial figures (prices, budgets, revenue targets) are deliberately kept
 out of this public document and live in the owner's private notes. Future
 monetisation is described here only in general terms.
 
-Last updated: 18 October 2026, after the owner approved the roadmap and
-decisions (Stage 3.5 under way).
+Last updated: 19 October 2026, after the owner's Arcade and Free-versus-Premium
+decisions (see §2, §3 and §4.11). These take priority over earlier plans.
 
 ---
 
@@ -33,7 +33,7 @@ Four pillars:
 
 | Pillar | What it means |
 |---|---|
-| **Play** | Free daily puzzles and themed crosswords |
+| **Play** | Free daily puzzles, themed crosswords and the Arcade (Clue Blitz and Survival) |
 | **Compete** | Leaderboards, achievements, streaks and tournaments |
 | **Create** | Personalised crossword gifts (AI-assisted) |
 | **Share** | Invite friends, solve together, send gifts |
@@ -47,9 +47,18 @@ Four pillars:
   to every day, technically reliable, affordable to run, and able to earn
   revenue later.
 
-## 2. Current access policy: everything is free
+## 2. Current access policy: everything is free (testing phase)
 
-This is the most important current rule. *Confirmed, 18 October 2026.*
+This is the most important current rule. *Confirmed 18 October 2026;
+reconfirmed 19 October 2026.*
+
+Two things must never be confused:
+
+- **Now (the testing phase):** everything below applies. No payments or
+  subscriptions exist, and no limit is enforced.
+- **Later (the approved future rules in §3):** Brutal becomes Premium and the
+  Arcade has daily allowances for free players. None of it is switched on
+  until the owner explicitly approves the launch.
 
 Crossword Hub is in its development and audience-growth phase. Until the owner
 explicitly approves monetisation:
@@ -72,40 +81,108 @@ explicitly approves monetisation:
 7. **Personalised crossword gifts are free during testing**, with reasonable
    generation limits to control AI costs.
 8. **Leaderboards and achievements are free.**
-9. **Never restrict existing functionality by accident.** Every change is
-   checked against this list.
+9. **The Arcade is unlimited during testing.** Clue Blitz and Survival can be
+   played as often as anyone likes; daily allowances are designed and built
+   (§3.3) but not enforced.
+10. **Brutal is free during testing**, including the weekly Brutal Challenge.
+    Premium markers for Brutal stay hidden until the owner approves the
+    launch.
+11. **No checkout or subscription screen** is shown until payments are fully
+    built and tested, and the owner has approved them.
+12. **Never restrict existing functionality by accident.** Every change is
+    checked against this list.
 
 Engineering rule: future Premium rules must be possible to switch on without
 redesigning the system. Every access check goes through one entitlement
-function, which today always answers "allowed" (see Stage 3.5).
+function, which today always answers "allowed" (see Stage 3.5). Restrictions
+are switched on by configuration, not by rewriting features, and paid access
+is never decided by the browser alone (§3.6).
 
 ## 3. Future monetisation model (documented, not enforced)
 
 Nothing in this section is active, and none of it may be activated without the
-owner's explicit approval. *The model is proposed.* Proposed prices are in the
-owner's private notes and are subject to testing.
+owner's explicit approval. Proposed prices are in the owner's private notes
+and are subject to testing. *The Free and Premium rules in §3.1 to §3.3 were
+confirmed by the owner on 19 October 2026 as the future model; their launch
+still needs separate approval.*
 
 ### 3.1 Always free, even after monetisation
 
-- The Daily Crossword and the Daily Mini.
+*Confirmed 19 October 2026:*
+
+- **The Daily Crossword:** one new puzzle every day.
+- **The Daily Mini:** one new Mini every day.
+- **Daily streaks and basic statistics.**
+- **Basic gameplay without mandatory registration.**
+- **The Arcade's daily allowance:** one Clue Blitz attempt and one Survival
+  attempt a day (§3.3).
+
+The Daily and the Mini must never be locked behind Premium.
+
+*From the earlier plan, not contradicted (proposed):*
+
 - One permanently free sample crossword per category.
 - Free puzzles and their multiplayer rooms.
 - Joining a Premium host's puzzle through an authorised guest invitation.
   The guest gets that room only, not the Premium library.
-- The weekly Brutal Challenge. *Confirmed 18 October 2026.*
 
-### 3.2 Premium (a monthly subscription)
+*Superseded:* the 18 October decision that the weekly Brutal Challenge stays
+free (see the decision log). It becomes Premium with the rest of Brutal.
 
-- The full crossword library: all categories and levels, including Hard,
-  Expert and Brutal library puzzles.
-- Archives. *Confirmed as an acceptable future Premium benefit; nothing is
-  restricted now.*
-- Advanced statistics.
-- Ad-free play.
-- Hosting Premium multiplayer puzzles with free guests.
-- Personalised crossword creation within a monthly limit.
+### 3.2 Premium (a subscription)
 
-### 3.3 Hint credits
+*Confirmed 19 October 2026:*
+
+- **Brutal difficulty:** Brutal-level genre puzzles and the weekly Brutal
+  Challenge.
+  - Free players can still **see** Brutal puzzles (cards, titles and the
+    week's Brutal Challenge banner) but can't play them once Premium
+    restrictions are active.
+  - A tasteful Premium marker and a short explanation of the benefit. The
+    site must not feel commercial: no pop-ups, countdowns or pressure.
+  - The Daily is never treated as Brutal, whatever its difficulty that day.
+- **Unlimited Clue Blitz and Survival attempts.**
+- **The library features planned earlier** (*proposed*): the wider library,
+  archives (*confirmed as an acceptable future Premium benefit*), advanced
+  statistics, ad-free play, hosting Premium multiplayer puzzles with free
+  guests, and personalised crossword creation within a monthly limit.
+
+**Fairness (confirmed):** Premium never gives a scoring advantage. Free and
+Premium players play by identical rules and scoring. Premium only adds more
+attempts and more puzzles.
+
+### 3.3 Arcade allowances for free players
+
+*Confirmed 19 October 2026: one Clue Blitz and one Survival attempt per day,
+as separate allowances, resetting at midnight South African time
+(Africa/Johannesburg). The attempt and interruption rules were confirmed
+(with the owner's adjustments) when Stage 10A was approved on 19 October 2026;
+whether the allowance needs an account remains Open decision 7.*
+
+**What counts as an attempt**
+
+- An attempt is used only when **play actually starts**: the first clue
+  appears and, in Clue Blitz, the clock starts.
+- Opening the Arcade page, reading the rules, or refreshing before pressing
+  Start never uses an attempt.
+
+**Interruptions (confirmed)**
+
+- **Clue Blitz:** the 60 seconds run on real time and don't pause once a run
+  has started. Refreshing or leaving never resets the timer or creates a
+  fresh run: coming back while the minute is running carries on, and after it
+  the run ends with the score reached.
+- **Survival:** the round, clue, lives and score are saved after every move.
+  A player can resume the **same run, on the same clue**, until midnight
+  South African time. Refreshing never adds lives, resets difficulty or brings
+  a new clue, so leaving can't be used to skip a hard one. An unfinished run
+  ends at the reset and keeps its score.
+- **Failures before a run starts** never use an attempt: an attempt is only
+  recorded once the first clue is on screen.
+- **No unlimited retries:** abandoning a run, refreshing or closing the app
+  never gives a fresh attempt.
+
+### 3.4 Hint credits
 
 | | Detail |
 |---|---|
@@ -116,7 +193,7 @@ owner's private notes and are subject to testing.
 | Packs | A few credit packs at low prices (proposed amounts in the private notes) |
 | Fairness | Paying for hints never improves a competitive ranking. Credits and competitive penalties are separate scales. |
 
-### 3.4 Other future revenue
+### 3.5 Other future revenue
 
 | Stream | Notes |
 |---|---|
@@ -125,13 +202,39 @@ owner's private notes and are subject to testing.
 | Sponsored puzzles | Branded or sponsored collections |
 | Special content | Premium competitions or special events |
 
-### 3.5 Before anything is switched on
+### 3.6 Enforcement: how restrictions will work once approved
+
+- **Never the browser alone.** Local storage can be edited, so it is never
+  trusted for paid access or allowances.
+- **Entitlements live on the server.** A Premium subscription is recorded in
+  the player's account by a server function that receives the payment
+  provider's confirmation (a webhook). The browser can only read it.
+- **Arcade runs are issued by the server.** A server function checks the
+  player's entitlement and that day's allowance, records the attempt, then
+  hands out the run (its clues and an expiry time). Answers are checked and
+  scores recorded on the server, which also lets the same runs feed future
+  leaderboards.
+- **Premium and allowances need an account.** Guests can always play the
+  free modes; a free account would be needed to use the daily Arcade
+  allowance once it's enforced, so it can't be reset by clearing the browser.
+  *Proposed (Open decision 7).*
+- **Brutal content:** the clue bank is part of the public website, so a
+  determined technical user could always build their own Brutal grid. The
+  gate is a fair-use barrier for normal players, while anything of value
+  (recorded results, rankings, the Brutal Challenge record) is checked on the
+  server.
+- **One switch per rule.** Each restriction (Brutal, Blitz allowance,
+  Survival allowance) has its own setting, so they can launch separately.
+
+### 3.7 Before anything is switched on
 
 - A balance kept on the server, so it can't be edited in the browser.
 - A South African payment provider (for example PayFast, Yoco, Paystack or
   Peach Payments), tested in test mode first.
+- Server functions for entitlements and Arcade runs (§3.6), which need the
+  Blaze plan (Open decision 2).
 - Terms and refund policy.
-- The owner's written approval of every price and rule.
+- The owner's written approval of every price and rule, and of each launch.
 
 ## 4. Product rules
 
@@ -286,6 +389,49 @@ friends-only competitions; seasonal leagues.
 - **Feel premium while free,** with no unnecessary steps between opening the
   site and solving.
 
+### 4.11 Crossword Hub Arcade (*confirmed 19 October 2026*)
+
+Two quick-fire modes that use single clues from the existing, validated clue
+bank (about 24,650 clues across the genres and collections). No new content is
+generated during play, and no AI is involved.
+
+**Shared rules**
+
+- One clue at a time, with letter boxes showing the answer's length (and word
+  lengths for phrases). Typed with the phone's letter keys or a keyboard.
+- Mobile-first, playable as a guest, with personal bests saved on the device
+  and synced for signed-in players.
+- No clue repeats within a run, and recently seen clues are avoided across
+  runs.
+- Answers are compared letter by letter, ignoring spaces and punctuation.
+- **Play Again** at the end.
+- Free and Premium players play under identical rules and scoring.
+- Separate Arcade leaderboards later, with the verified leaderboards stage.
+
+**A. Clue Blitz**
+
+- A 60-second countdown. Answer as many clues as possible.
+- **100 points** per correct answer, plus **25 bonus points** for each
+  consecutive correct answer from the third onwards.
+- **Skip** is free but resets the combo; so does a wrong submitted answer
+  (the clue stays, to try again or skip).
+- Score and current combo shown clearly throughout.
+- Clues are drawn at random across topics, mostly easy and medium.
+- Personal best tracked. *Confirmed 19 October 2026.*
+
+**B. Survival**
+
+- Start with **three lives**. A wrong submitted answer costs one life, and so
+  does a **skip**; either way the answer is shown and the next round starts.
+  The game ends when all three are gone.
+- Typing is never penalised: only Submit counts, and part-filled answers are
+  never marked wrong.
+- Rounds 1–5 **Easy**, 6–12 **Medium**, 13–20 **Hard**, then **Expert**,
+  growing harder (longer answers from round 31, longer still from 41). Every
+  player can reach the toughest clues. Points rise with each stage.
+- Tracks the highest round reached and the personal best score. *Confirmed
+  19 October 2026.*
+
 ## 5. Technical principles and guardrails
 
 These are standing rules from the owner and apply to every stage.
@@ -332,6 +478,8 @@ These are standing rules from the owner and apply to every stage.
 | Custom domain | Domain registration | A small yearly fee |
 | Analytics | Provider choice (Open decision 3) | Free options exist |
 | Payments (later) | A South African payment provider, plus server functions | A per-transaction fee; app stores take 15–30% |
+| Arcade (testing phase) | Nothing new: runs entirely in the browser from the existing clue bank | Free |
+| Arcade allowances and Premium enforcement (later) | Cloud Functions to issue runs and check entitlements; Firestore for attempts and results | Needs Blaze. About two function calls and a few database writes per run, which stays within the free quotas for thousands of runs a day |
 
 ## 7. Roadmap
 
@@ -350,6 +498,18 @@ The recommended order below changes it as follows:
   Blaze decision.
 
 The owner approved this order on 18 October 2026.
+
+**Order from 19 October 2026 (recommended; awaiting the owner's approval):**
+
+1. **Stage 10A: Arcade games** (free, unlimited, no restrictions): next.
+2. **Switch on gift crosswords** (Stage 7A is built) whenever the owner says.
+3. **Stage 8: Monetisation preparation**, now including the entitlement
+   switches and the server design for Arcade runs and Brutal.
+4. **Stage 10B: Arcade enforcement and launch of Premium rules**, only with the
+   owner's approval, after payments are built and tested.
+5. **Stage 6: verified leaderboards**, including Arcade boards, when there
+   are enough players.
+6. **Stage 9: Expansion.**
 
 ### Stage 3.5: Free-access alignment and Stage 3 wrap-up (in progress)
 
@@ -436,13 +596,29 @@ or with the app-store versions.
 
 ### Stage 8: Monetisation preparation (design, nothing activated)
 
-- Premium entitlements mapped onto the `canAccess` function.
+- Premium entitlements mapped onto the `canAccess` function, with one switch
+  per rule (Brutal, Blitz allowance, Survival allowance), all off.
+- A tasteful Premium marker for Brutal, hidden while testing.
+- The server design from §3.6: entitlements written only by the payment
+  webhook, and Arcade runs issued and scored by server functions.
 - A credit-wallet design: free daily credits, streak credits with expiry, and
   purchased credits.
 - Payment provider comparison and test-mode plan.
 - Terms and refund policy drafts.
 - Ad placement plan.
 - **Activation is a separate, owner-approved step.**
+
+### Stage 10: Crossword Hub Arcade
+
+- **10A, the games (free, nothing enforced): built, awaiting approval.** Clue Blitz and Survival as in
+  §4.11, played in the browser from the existing clue bank, with personal
+  bests on the device and synced for signed-in players. The allowance rules
+  (§3.3) are built into the game logic but switched off, and attempts are
+  only counted locally for testing. **Needs:** nothing new. **Cost:** free.
+- **10B, enforcement (later, owner-approved):** server-issued runs, daily
+  allowances, Premium unlimited play and verified scores (§3.6).
+  **Needs:** the Blaze plan, payments and an account for allowance use.
+  **Cost:** within free quotas at launch scale; payment fees apply.
 
 ### Stage 9: Expansion
 
@@ -483,6 +659,13 @@ or with the app-store versions.
 | 18 Oct 2026 | Roadmap approved: 3.5 wrap-up, 4 Growth, 5 Multiplayer, 6 Verified leaderboards, 7 Gifts (manual builder first), 8 Monetisation preparation, 9 Teams and expansion | Confirmed |
 | 19 Oct 2026 | Verified leaderboards (Stage 6) postponed until there are more players | Confirmed |
 | 19 Oct 2026 | Gift builder (7A) built but shown as "Coming soon" until the owner switches it on; gifts live inside their links, with no sign-in or server storage | Built; awaiting activation |
+| 19 Oct 2026 | Always free, even after monetisation: the Daily, the Mini, daily streaks and basic statistics, and basic play without registration | Confirmed |
+| 19 Oct 2026 | Brutal difficulty, including the weekly Brutal Challenge, becomes a future Premium feature; free players can see it but not play it once restrictions launch; tasteful marker, never pushy | Confirmed; supersedes the 18 Oct decision that the Brutal Challenge stays free |
+| 19 Oct 2026 | Crossword Hub Arcade: Clue Blitz (60 seconds) and Survival (three lives, rising difficulty), using the existing clue bank | Confirmed |
+| 19 Oct 2026 | Future free allowance: one Clue Blitz and one Survival attempt a day, separate, reset at midnight SAST; an attempt is used only when play starts | Confirmed (interruption policy proposed) |
+| 19 Oct 2026 | Premium: unlimited Arcade, Brutal, and the earlier library features; never a scoring advantage | Confirmed |
+| 19 Oct 2026 | Testing phase: no paywalls, limits or checkout until the owner approves the launch; build so restrictions can be switched on later; enforce on the server, not in the browser alone | Confirmed |
+| 19 Oct 2026 | Stage 10A approved: Blitz 100 points plus 25 per consecutive correct answer from the third, skip free but resets the combo; Survival three lives, skip costs a life, rounds 1–5 Easy, 6–12 Medium, 13–20 Hard, 21+ Expert and harder; runs survive refreshes; no attempt used before a run starts | Built in Stage 10A |
 
 ## 9. Open decisions
 
@@ -505,3 +688,8 @@ settled on 18 October 2026; see the decision log.
    - a per-account limit (for example 3 gifts a month)
 6. ~~Multiplayer details~~: settled with sensible defaults in Stage 5 (see
    the decision log); change any of them on request.
+7. **Arcade allowance and accounts** (needed before 10B): whether using the
+   free daily allowance needs a free account once it's enforced.
+8. ~~Arcade tuning~~ — settled 19 October 2026 (§4.11). Survival points per
+   stage (100, 150, 200, 300, 350, 400) were set in 10A and can be tuned.
+9. ~~The Arcade's place in the roadmap~~ — Stage 10A approved 19 October 2026.
