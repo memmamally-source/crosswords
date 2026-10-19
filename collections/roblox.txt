@@ -1,0 +1,132 @@
+# Roblox: unofficial fan crossword clues
+@title Roblox
+@category gaming
+@blurb Robux, obbies, Studio and the experiences millions play.
+@icon gamepad
+ROBUX | Virtual currency spent on avatar items and passes | casual
+NOOB | Newcomer, or the classic yellow-head, blue-torso avatar | casual
+OOF | Classic death sound effect, replaced in 2022 | casual
+OBBY | Obstacle course experience, in player slang | casual
+AVATAR | Your customizable character on the platform | casual
+STUDIO | Free tool creators use to build experiences | casual
+SCRIPT | Code object that makes a part move or react | casual
+ROBLOXIAN | Nickname for any player of the platform | casual
+BACON HAIR | Nickname for a player with the default brown hairdo (5,4) | casual
+ADOPT ME | Hit where you hatch eggs and raise pets (5,2) | casual
+BROOKHAVEN | Huge town roleplay hit with free houses and cars | casual
+JAILBREAK | Cops-and-robbers hit where you escape prison | casual
+BLOX FRUITS | Pirate adventure where eating a magic snack grants powers (4,6) | casual
+TOWER OF HELL | Timed climbing obby where one fall can send you back to the start (5,2,4) | casual
+MURDER MYSTERY | Whodunit with a Sheriff and Innocents, known as MM2 (6,7) | casual
+DOORS | Hotel horror hit where each room is numbered | casual
+PET SIMULATOR | Pet-collecting series with X and 99 editions (3,9) | casual
+PIGGY | Chapter-based horror hit with a bat-wielding farmyard foe | casual
+TYCOON | Genre where you build a business and collect cash | casual
+SIMULATOR | Genre of clicking, collecting and upgrading | casual
+EMOTE | Dance or gesture your avatar can perform | casual
+HAT | Classic accessory worn on top of the head | casual
+PREMIUM | Monthly subscription that gives a Robux stipend | casual
+BADGE | Award earned for an achievement in an experience | casual
+GROUP | Player club with ranks, roles and a shout, by its classic name | casual
+HEADLESS | Horseman bundle famous for its missing noggin | casual
+KNIFE | Weapon the Murderer carries in MM2 | casual
+SHERIFF | MM2 role that starts with the gun | casual
+MURDERER | MM2 role that must eliminate everyone else | casual
+POLICE | Jailbreak team that arrests escaping criminals | casual
+EGG | Hatch one of these to get a new pet | casual
+DEVELOPER | Creator who builds experiences, or dev for short | casual
+CHAT | Text feature with speech bubbles over avatars | casual
+SERVER | Instance of an experience that players join together | casual
+FRIEND | Player you add to your list to join their games | casual
+OUTFIT | Saved avatar look you can switch to | casual
+ROLEPLAY | Pretend-life genre, often shortened to RP | casual
+SHIRT | Classic clothing item made from a template | casual
+BLOXBURG | Welcome to ___: life sim where you build homes | casual
+PRISONER | Jailbreak team you start on before escaping | casual
+LUA | Scripting language that Roblox code is built on | fan
+LUAU | Roblox's typed version of Lua, open-sourced in 2021 | fan
+TIX | Second currency retired in 2016 | fan
+BUILDERS CLUB | Membership replaced by Premium in 2019 (8,4) | fan
+GUEST | Account-free visitor option removed in 2017 | fan
+STUDS | Unit of length in Roblox worlds | fan
+BASEPLATE | Flat gray template many Studio builds start on | fan
+EXPLORER | Studio window listing every object in a place | fan
+TOOLBOX | Studio panel full of free models and assets | fan
+FREE MODEL | Ready-made asset anyone can drop into a build (4,5) | fan
+BLOXY COLA | Fizzy drink gear your avatar can sip (5,4) | fan
+GRAVITY COIL | Springy gear that lets you jump extra high (7,4) | fan
+EGG HUNT | Long-running springtime event with collectible eggs (3,4) | fan
+BLOXYS | Community awards show honoring top creators | fan
+LIL NAS X | Rapper whose 2020 virtual concert drew millions (3,3,1) | fan
+THE HUNT | 2024 event with badges spread across many games (3,4) | fan
+BUILDERMAN | Co-founder's classic username, with a hard-hat avatar | fan
+DAVID BASZUCKI | Co-founder and longtime CEO (5,8) | fan
+KORBLOX | Deathspeaker bundle famous for its thin bony leg | fan
+DOMINUS | Series of rare hooded limited hats | fan
+NEON | Adopt Me! pet made from four fully grown ones | fan
+BUCKS | Currency used in Adopt Me! | fan
+FROST DRAGON | Icy winged legendary Adopt Me! pet (5,6) | fan
+CHECKPOINTS | Obby save spots you respawn at after falling | fan
+INNOCENT | MM2 role that just tries to survive | fan
+FIGURE | Blind Doors giant that hunts by sound in the library | fan
+SEEK | Doors entity with one big eye that chases you | fan
+RUSH | Doors entity that flickers lights; hide in a closet! | fan
+SCREECH | Doors entity that says "Psst" in dark rooms | fan
+ARSENAL | ROLVe shooter where each elimination swaps your weapon | fan
+ROYALE HIGH | Fantasy school roleplay with dresses and halos (6,4) | fan
+MEEPCITY | Hangout hit with pet Meeps and furnished homes | fan
+PIZZA PLACE | Work at a ___: Dued1's job roleplay classic (5,5) | fan
+NIL | Lua's value for nothing at all | fan
+PRINT | Lua function that sends text to the Output window | fan
+HUMANOID | Object that gives a character health and walking | fan
+ANCHORED | Property that keeps a part from falling | fan
+WORKSPACE | Service holding everything visible in the 3D world | fan
+TERRAIN | Studio feature for sculpting hills, water and grass | fan
+KILL BRICK | Obby hazard that resets you on touch (4,5) | fan
+MARKETPLACE | Avatar item store once called the Catalog | fan
+UGC | Initials for creator-made avatar items | fan
+LIMITED | Item with a capped supply that can be traded | fan
+EXPERIENCES | Word Roblox adopted for its games in 2021 | fan
+SAN MATEO | California city where the company is headquartered (3,5) | fan
+DYNABLOCKS | The platform's original name during its 2004 beta | superfan
+ERIK CASSEL | Co-founder alongside David Baszucki (4,6) | superfan
+SHEDLETSKY | Early staffer behind Sword Fights on the Heights | superfan
+RDC | Annual developer conference, by initials | superfan
+DEVEX | Program that turns earned Robux into real money | superfan
+RBLX | Stock ticker since the 2021 NYSE listing | superfan
+RTHRO | Taller, more realistic body type added in 2018 | superfan
+MOON | What Lua means in Portuguese | superfan
+BRAZIL | Country where Lua was created | superfan
+IPAIRS | Lua iterator that walks an array in order | superfan
+CFRAME | Data type for a part's position and rotation | superfan
+CANCOLLIDE | Property that lets players walk through a part when off | superfan
+TEAM CREATE | Studio feature for building with others live (4,6) | superfan
+DATASTORE | Storage that saves player progress between visits | superfan
+LEADERSTATS | Folder name whose values show in the in-game player list | superfan
+MODULESCRIPT | Reusable code object loaded with require() | superfan
+LOCALSCRIPT | Code object that runs on the player's device, not the server | superfan
+REMOTE EVENT | Object for one-way client-server messages (6,5) | superfan
+TWEENSERVICE | Engine feature for smoothly animating properties between values | superfan
+PROXIMITYPROMPT | Object that pops up a "press E" style action near parts | superfan
+WALKSPEED | Humanoid property that defaults to 16 | superfan
+BADIMO | Studio behind Jailbreak | superfan
+BLOX PIECE | Original title of the pirate fruit-power hit (4,5) | superfan
+BELI | Main currency in Blox Fruits | superfan
+MUTATORS | Tower of Hell effects you can buy, like low gravity | superfan
+GODLY | MM2 weapon rarity above Legendary | superfan
+NIKILIS | Creator of Murder Mystery 2 | superfan
+HALT | Doors corridor entity that makes you keep turning back | superfan
+AMBUSH | Doors entity that rushes past again and again | superfan
+TIMOTHY | Spider that jumps out of Doors drawers | superfan
+GUIDING LIGHT | Blue voice that gives Doors tips after you die (7,5) | superfan
+KNOBS | Currency earned in Doors runs | superfan
+LSPLASH | Studio that made Doors | superfan
+MINES | Setting of Doors' Floor 2 | superfan
+CRUCIFIX | Rare Doors item that can stop an entity | superfan
+UPLIFT GAMES | Studio behind Adopt Me! (6,5) | superfan
+MEGA NEON | Rainbow Adopt Me! pet fused from four glowing ones (4,4) | superfan
+BIG GAMES | Studio behind Pet Simulator (3,5) | superfan
+MINITOON | Creator of Piggy | superfan
+COEPTUS | Creator of Welcome to Bloxburg | superfan
+WOLFPAQ | Creator of Brookhaven RP | superfan
+STICKMASTERLUKE | Creator of Natural Disaster Survival | superfan
