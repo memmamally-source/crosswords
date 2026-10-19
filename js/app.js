@@ -896,6 +896,7 @@
       checks: 0,
       autochecked: false,
       room: null, // a shared puzzle's room (see Multiplayer rooms)
+      zoom: 1, // phones: grid zoom (1 = fit the screen)
     };
 
     game.challenge = routeChallenge;
@@ -1022,6 +1023,7 @@
     if (!game || game.solved) return;
     if (game.room) return toast('The clock keeps running in a shared puzzle');
     game.paused = paused;
+    updateKeys();
     if (paused) {
       typeInput.blur();
       stopTimer();
@@ -1114,6 +1116,7 @@
   const sideBySide = window.matchMedia('(min-width: 901px), (min-width: 700px) and (orientation: landscape)');
   // Phones held upright: the clue bar docks to the bottom, above the keyboard.
   const docked = window.matchMedia('(pointer: coarse) and (max-width: 900px) and (orientation: portrait)');
+  const phoneKeys = $('#phone-keys');
   function sizeBoard() {
     if (!game) return;
     const { rows, cols } = game.puzzle;
@@ -1132,8 +1135,15 @@
     // comfortable size; on narrow phones they scroll sideways if needed.
     const fitH = Math.max(Math.floor(availH / rows), Math.min(28, cap));
     const frame = 2 * BOARD_PAD + 1; // the dark board's padding around the squares
-    const size = Math.max(14, Math.min(cap, Math.floor((availW - 4 - frame) / cols), fitH));
+    const fit = Math.max(14, Math.min(cap, Math.floor((availW - 4 - frame) / cols), fitH));
+    // Zoom (phones): pinch or the zoom button makes squares bigger; the grid
+    // then scrolls sideways, following the square being typed in.
+    game.fitSize = fit;
+    const size = Math.round(Math.min(56, Math.max(fit, fit * (game.zoom || 1))));
     const board = $('#board');
+    $('#zoom-btn').hidden = !touchScreen.matches || fit >= 34;
+    $('#zoom-btn').setAttribute('aria-pressed', String(size > fit));
+    $('#zoom-btn').setAttribute('aria-label', size > fit ? 'Zoom out' : 'Zoom in');
     board.style.setProperty('--size', size + 'px');
     board.classList.toggle('compact', size < 30);
     // Centre on a whole pixel: a half-pixel offset blurs the grid lines.
@@ -1146,6 +1156,7 @@
 
   function refresh() {
     if (!game) return;
+    updateKeys();
     placeTyping();
     syncRoomCursor();
     requestAnimationFrame(keepActiveInView);
@@ -1761,30 +1772,99 @@
   }
 
   // ---------- Phone layout: docked clue bar and the clue panel ----------
-  // On phones held upright the clue bar sits at the bottom, just above the
-  // device keyboard, with big previous and next buttons; swiping it changes
-  // clue, and tapping the clue opens every clue in a panel. The grid scrolls
-  // to keep the square being typed in visible above it.
+  // On phones held upright the clue bar sits at the bottom, above the game's
+  // own letter keys (the device keyboard isn't used: it covers the grid in
+  // ways a page can't reliably work around), with big previous and next
+  // buttons; swiping it changes clue, and tapping the clue opens every clue
+  // in a panel. The grid scrolls to keep the square being typed in visible.
   function placeDock() {
-    const vv = window.visualViewport;
-    const gap = vv ? Math.max(0, document.documentElement.clientHeight - (vv.offsetTop + vv.height)) : 0;
+    let gap = 0;
+    if (docked.matches && !phoneKeys.hidden) gap = phoneKeys.getBoundingClientRect().height;
+    else if (window.visualViewport) gap = Math.max(0, document.documentElement.clientHeight - (visualViewport.offsetTop + visualViewport.height));
     document.documentElement.style.setProperty('--dock-bottom', `${Math.round(gap)}px`);
   }
+  function updateKeys() {
+    const show = !!game && !game.solved && !game.paused;
+    if (phoneKeys.hidden === !show) return;
+    phoneKeys.hidden = !show;
+    placeDock();
+  }
+  phoneKeys.addEventListener('pointerdown', (e) => e.preventDefault()); // keep focus where it is
+  phoneKeys.addEventListener('click', (e) => {
+    const key = e.target.closest('[data-key]');
+    if (!key || !game || game.paused || game.solved) return;
+    const k = key.dataset.key;
+    if (k === 'back') backspace();
+    else if (k === 'turn') { toggleDir(); refresh(); }
+    else typeLetter(k);
+  });
+  docked.addEventListener('change', placeDock);
   function keepActiveInView() {
     if (!game || !docked.matches || $('#game-view').hidden || game.solved || !cellEls.length) return;
     const el = cellEls[game.sel.r] && cellEls[game.sel.r][game.sel.c];
     if (!el) return;
     const vv = window.visualViewport;
     const viewTop = (vv ? vv.offsetTop : 0) + $('.toolbar').getBoundingClientRect().height + 8;
-    const viewBottom = (vv ? vv.offsetTop + vv.height : window.innerHeight) - $('#clue-bar').getBoundingClientRect().height - 12;
+    const viewBottom = Math.min((vv ? vv.offsetTop + vv.height : window.innerHeight) - $('#clue-bar').getBoundingClientRect().height, $('#clue-bar').getBoundingClientRect().top) - 12;
+    followHorizontally(el);
     const rect = el.getBoundingClientRect();
     if (rect.bottom > viewBottom) window.scrollBy({ top: rect.bottom - viewBottom, behavior: 'smooth' });
     else if (rect.top < viewTop) window.scrollBy({ top: rect.top - viewTop, behavior: 'smooth' });
   }
+  // When zoomed in, scroll the grid sideways to keep a square in view.
+  function followHorizontally(el) {
+    const wrap = $('#board-wrap');
+    if (wrap.scrollWidth <= wrap.clientWidth) return;
+    const w = wrap.getBoundingClientRect();
+    const r = el.getBoundingClientRect();
+    const margin = r.width * 1.5;
+    if (r.right > w.right - margin) wrap.scrollBy({ left: r.right - w.right + margin, behavior: 'smooth' });
+    else if (r.left < w.left + margin) wrap.scrollBy({ left: r.left - w.left - margin, behavior: 'smooth' });
+  }
+  function setZoom(zoom) {
+    if (!game) return;
+    game.zoom = Math.max(1, Math.min(4, zoom));
+    sizeBoard();
+    if (game.zoom === 1) $('#board-wrap').scrollLeft = 0;
+    const el = cellEls[game.sel.r] && cellEls[game.sel.r][game.sel.c];
+    if (el) {
+      followHorizontally(el);
+      keepActiveInView();
+    }
+  }
+  // The zoom button: between fitting the screen and comfortable squares.
+  function toggleZoom() {
+    if (!game || !game.fitSize) return;
+    setZoom((game.zoom || 1) > 1.05 ? 1 : 40 / game.fitSize);
+  }
+  // Pinch the grid with two fingers to zoom.
+  let pinch = null;
+  const touchGap = (t) => Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
+  $('#board-wrap').addEventListener('touchstart', (e) => {
+    if (e.touches.length === 2 && game) pinch = { gap: touchGap(e.touches), zoom: game.zoom || 1 };
+  }, { passive: true });
+  $('#board-wrap').addEventListener('touchmove', (e) => {
+    if (!pinch || e.touches.length !== 2) return;
+    e.preventDefault(); // zoom the grid, not the page
+    game.zoom = Math.max(1, Math.min(4, pinch.zoom * (touchGap(e.touches) / pinch.gap)));
+    sizeBoard();
+  }, { passive: false });
+  $('#board-wrap').addEventListener('touchend', (e) => {
+    if (pinch && e.touches.length < 2) {
+      pinch = null;
+      setZoom(game.zoom);
+    }
+  });
+
   if (window.visualViewport) {
+    // The keyboard opening or closing. Browsers scroll the page themselves
+    // as it slides in, so check again once that has settled.
+    let settle = null;
     visualViewport.addEventListener('resize', () => {
       placeDock();
       keepActiveInView();
+      clearTimeout(settle);
+      settle = setTimeout(() => { placeDock(); keepActiveInView(); }, 350);
     });
     visualViewport.addEventListener('scroll', placeDock);
   }
@@ -2199,6 +2279,7 @@
   }
   function focusTyping() {
     if (!touchScreen.matches || !game || game.solved || game.paused) return;
+    if (docked.matches) return; // phones held upright use the letter keys
     placeTyping();
     resetTyping();
     typeInput.focus();
@@ -2345,6 +2426,7 @@
       case 'prev-word': if (!game.paused) { jumpWord(-1, false); refresh(); focusTyping(); } break;
       case 'share': share(); break;
       case 'room-start': startRoom(); break;
+      case 'zoom': toggleZoom(); break;
       case 'clue-sheet': if (docked.matches && Date.now() - swipedAt > 400) openClueSheet(); break;
       case 'room-invite': openInvite(); break;
       case 'room-leave': leaveRoom(); break;
@@ -2452,6 +2534,10 @@
       el.hidden = !showing;
     }
     document.body.classList.toggle('in-game', name === 'game');
+    if (name === 'game') {
+      placeDock();
+      setTimeout(keepActiveInView, 400); // once the view has settled
+    }
     $$('.masthead-nav button').forEach((b) => b.removeAttribute('aria-current'));
     const navName = name === 'game' ? null : name;
     if (navName) $(`.masthead-nav [data-nav="${navName}"]`).setAttribute('aria-current', 'page');
