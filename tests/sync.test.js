@@ -75,4 +75,10 @@ const kept = Object.keys(syncable(many).saves);
 assert.strictEqual(kept.length, MAX_SYNCED_SAVES);
 assert.ok(kept.includes('play:x/easy/29/') && !kept.includes('play:x/easy/0/'));
 
+// Gift crosswords stay on the device: never copied to the account.
+const withGift = syncable({ saves: { 'gift:abc': { entries: [], gift: 'zSECRET', updated: 9 }, 'daily:2026-10-01': { entries: [], updated: 1 } }, solves: { 'gift:abc': { time: 60 }, 'mini:2026-10-01': { time: 30 } } });
+assert.deepStrictEqual(Object.keys(withGift.saves), ['daily:2026-10-01']);
+assert.deepStrictEqual(Object.keys(withGift.solves), ['mini:2026-10-01']);
+assert.ok(!JSON.stringify(withGift).includes('SECRET'));
+
 console.log('OK: sync merge tests passed');

@@ -35,6 +35,7 @@
     return_visit: ['days_since_last_visit'],
     room_create: ['puzzle_kind'],
     room_join: ['puzzle_kind'],
+    gift_create: ['words'], // how many answers only: never the gift itself
   };
   const EMAIL = /[^\s@]+@[^\s@]+\.[^\s@]+/;
 

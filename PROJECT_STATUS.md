@@ -20,8 +20,8 @@ What is built and live today, what's unfinished, and how it compares with the
 | 3.5 — Free-access alignment and Stage 3 wrap-up | ✅ Complete | #17 |
 | 4 — Growth and social sharing | ✅ Complete (#18, #19); new category collections to follow | #18, #19 |
 | 5 — Multiplayer (Help me solve) | ✅ Built (#20); switched on by the database URL PR | #20 |
-| 6 — Verified leaderboards | Not started | — |
-| 7 — Gifts | Not started | — |
+| 6 — Verified leaderboards | Postponed (19 Oct) until there are more players | — |
+| 7 — Gifts | 7A manual builder built; shows "Coming soon" until switched on | this PR |
 | 8 — Monetisation preparation (design only) | Not started | — |
 | 9 — Expansion | Not started | — |
 
@@ -196,7 +196,7 @@ What is built and live today, what's unfinished, and how it compares with the
 | Rephrase-clue hint | ✅ Removed in Stage 3.5 (menu item, data, config and tests). Saves that carry the old field still load |
 | Streak counts the Daily **or** the Mini, once per day, assisted or not | ✅ Stage 3.5 |
 | Stats: overall average time, total hints used, favourite categories | ✅ Stage 3.5 |
-| Leaderboards (solo unassisted, solo assisted, collaborative) | ❌ Not built. Trusted rankings need server checks (Blaze plan). → Stage 6 |
+| Leaderboards (solo unassisted, solo assisted, collaborative) | ⏸ Postponed. Trusted rankings need server checks (Blaze plan). → Stage 6, later |
 | Credit balance, free daily credits, streak credits | ❌ Deliberately not built (everything free). → Stage 8 design |
 
 ## 4. New specification compared with what exists
@@ -213,10 +213,10 @@ What is built and live today, what's unfinished, and how it compares with the
 | Hints: Reveal Letter and Reveal Word only | ✅ Stage 3.5 | |
 | Streak: Daily or Mini, once a day | ✅ Stage 3.5 | |
 | Daily reset time | ✅ Settled | Midnight South African time, reconfirmed 18 October 2026 |
-| Leaderboards and server verification | ❌ | Stage 6; needs the Blaze plan |
+| Leaderboards and server verification | ⏸ Postponed | Stage 6; needs the Blaze plan |
 | Help Me Solve multiplayer | ✅ Stage 5 | Live rooms of up to 5; switches on once the Realtime Database exists |
 | Teams and tournaments | ❌ | Stage 9 |
-| Gifts | ❌ | Stage 7 (7A manual, 7B AI) |
+| Gifts | 🔒 7A built, "Coming soon" | Switch on with `GIFTS_LIVE` in `js/gifts.js`; 7B (AI) not started |
 | Result cards, WhatsApp challenge links, Instagram images | ✅ Stage 4 | Share sheet with image, WhatsApp, challenge links, image download |
 | Analytics | ✅ Stage 4 | Google Analytics with consent; measurement ID set |
 | SEO (pages, sitemap, previews) | ✅ Stage 4 | Real pages per genre and collection link into the app; puzzles themselves stay on `#/` addresses |
@@ -251,14 +251,13 @@ What is built and live today, what's unfinished, and how it compares with the
 
 ## 6. Recommended next step
 
-1. **Multiplayer is live** (#20 and #21, tested by the owner on two devices).
-2. **Mobile solving layout and a polished invite screen** (requested
-   18 October 2026), in a PR waiting for approval:
-   - a docked clue bar with big previous and next buttons and swipe
-   - the All clues panel, and auto-scroll to the square being typed in
-   - clues beside the grid when held sideways
-   - redesigned invite and name dialogs
-3. **Stage 4 follow-up: new category collections** (travel, medicine,
-   technology, general knowledge).
-4. **Stage 6: verified leaderboards.** This needs the Firebase Blaze plan
-   decision.
+Done since 18 October: the phone layout and invite screen (#22), the
+built-in letter keys and grid zoom (#23), and the Travel, Medicine,
+Technology and General Knowledge genres (#24).
+
+1. **Switch on gift crosswords** when ready: set `GIFTS_LIVE` to true in
+   `js/gifts.js` (and the matching line in `tests/gifts.test.js`). Ideally
+   before Valentine's Day.
+2. **Freeze the next batch of Dailies, Minis and Brutals** by 1 March 2027.
+3. **Stage 8: monetisation preparation** (design only).
+4. Verified leaderboards (Stage 6) are postponed until there are more players.

@@ -395,7 +395,14 @@ The owner approved this order on 18 October 2026.
   (Firestore on the free plan to start, with limits monitored).
   **Cost:** free at launch scale.
 
-### Stage 6: Competitive and verified leaderboards
+### Stage 6: Competitive and verified leaderboards (postponed)
+
+**Postponed on 19 October 2026:** there aren't yet enough players for
+rankings to feel worthwhile, challenge links already cover friendly
+competition, and it would need the Blaze plan. Solve records already keep
+the time and assisted status, so boards can be added later without
+changing anything else. Revisit once analytics show a regular daily crowd,
+or with the app-store versions.
 
 - Daily and weekly boards: solo unassisted, solo assisted and collaborative.
 - Server-checked submissions (Cloud Functions issue a start token and verify
@@ -406,12 +413,19 @@ The owner approved this order on 18 October 2026.
 
 ### Stage 7: Crossword Hub Gifts
 
-- **7A, manual builder (no AI, free):**
-  - The creator enters answers and clues, and the site builds the grid.
-  - Title, welcome and surprise messages, and a theme.
-  - A private, unguessable link that isn't indexed by search engines.
-  - Revoking the link and deleting the gift.
-  - Signing in is required to create a gift but not to solve one.
+- **7A, manual builder (no AI, free): built, waiting to be switched on.**
+  - The creator enters 4 to 24 answers and clues, plus optional To, From,
+    title and a message shown once it's solved; the site builds the grid.
+  - The whole gift travels inside its link (compressed, so the answers
+    aren't readable in it). Nothing is stored on a server, so no sign-in is
+    needed and there's nothing to revoke or delete; anyone with the link can
+    open it. Gift progress stays on the solver's device and is never synced,
+    and analytics only ever see how many answers a gift has.
+  - "Coming soon" on the home page until `GIFTS_LIVE` in `js/gifts.js` is
+    set to true. `#/gift/unlock` opens the builder on one device to try it
+    (`#/gift/lock` closes it). Gift links always open.
+  - Possible later additions: themes, a welcome message, and stored gifts
+    with revocable links (these would need a database).
 - **7B, AI generation:**
   - Story to answers and clues via a Cloud Function, with validation and
     "no invented facts" checks.
@@ -467,6 +481,8 @@ The owner approved this order on 18 October 2026.
 | 18 Oct 2026 | Multiplayer defaults: players choose a display name (prefilled with a random one, max 20 safe characters); rooms last 7 days; the host can remove players, who can't rejoin; no chat, so names are the only text to moderate | Built in Stage 5; easy to change |
 | 18 Oct 2026 | Shared solves are collaborative results: team hints add up; they count for the daily streak, never for the No-Hint Club or best times | Built in Stage 5 |
 | 18 Oct 2026 | Roadmap approved: 3.5 wrap-up, 4 Growth, 5 Multiplayer, 6 Verified leaderboards, 7 Gifts (manual builder first), 8 Monetisation preparation, 9 Teams and expansion | Confirmed |
+| 19 Oct 2026 | Verified leaderboards (Stage 6) postponed until there are more players | Confirmed |
+| 19 Oct 2026 | Gift builder (7A) built but shown as "Coming soon" until the owner switches it on; gifts live inside their links, with no sign-in or server storage | Built; awaiting activation |
 
 ## 9. Open decisions
 

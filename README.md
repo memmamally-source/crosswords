@@ -39,6 +39,15 @@ draws the app icons.
 - **The Brutal Challenge:** one Brutal puzzle a week, the same for everyone:
   34 clues from every genre and no easy answers. A new one starts each Monday
   (South African time), at `#/brutal`.
+- **Gift crosswords (built, shown as "Coming soon"):** make a crossword from
+  your own answers and clues (4 to 24), with an optional To, From, title and
+  a message shown once it's solved, and send it as a link. The whole gift
+  lives inside the link, compressed: nothing is stored on a server, no
+  sign-in is needed, and gift progress is never synced or sent to analytics.
+  Switch it on for everyone by setting `GIFTS_LIVE` to true in
+  `js/gifts.js` (and in `tests/gifts.test.js`). Until then, `#/gift/unlock`
+  opens the builder on one device and `#/gift/lock` closes it again; gift
+  links always open.
 - **Genre puzzles:** 37 genres in four groups, each with about 500 words, at
   five levels:
 
@@ -292,6 +301,7 @@ like an email address:
 | `check_used`, `autocheck_on` | scope; puzzle kind |
 | `share` | method (share sheet, WhatsApp, link, image); puzzle kind and page |
 | `challenge_open` | page |
+| `gift_create` | how many answers the gift has (nothing else) |
 | `return_visit` | days since the last visit (once a day) |
 
 It never sends answers, clues, gift stories, names or email addresses, and
