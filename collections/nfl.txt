@@ -1,0 +1,132 @@
+# NFL: unofficial fan crossword clues
+@title NFL
+@category sport
+@blurb Pro American football: teams, legends, Super Bowls and the rulebook.
+@icon ball
+BRADY | Tom ___, quarterback with seven Super Bowl rings | casual
+MAHOMES | Patrick ___, Kansas City QB who was a three-time Super Bowl MVP by 2024 | casual
+MANNING | Peyton or Eli, quarterback brothers who both won Super Bowls | casual
+MONTANA | Joe ___, 49ers quarterback of the 1980s | casual
+RICE | Jerry ___, 49ers wide receiver great | casual
+PAYTON | Walter ___, Bears running back nicknamed Sweetness | casual
+BELICHICK | Bill ___, coach of six Super Bowl winners in New England | casual
+LOMBARDI | Vince ___, Packers coach whose name is on the trophy | casual
+CHIEFS | Kansas City franchise | casual
+PATRIOTS | New England franchise | casual
+COWBOYS | Dallas franchise known as America's Team | casual
+PACKERS | Green Bay franchise owned by thousands of shareholders | casual
+STEELERS | Pittsburgh franchise | casual
+EAGLES | Philadelphia franchise | casual
+GIANTS | New York franchise in blue that shares a stadium with the Jets | casual
+BEARS | Chicago franchise | casual
+RAIDERS | Las Vegas franchise that once played in Oakland | casual
+DOLPHINS | Miami franchise | casual
+SEAHAWKS | Seattle franchise | casual
+RAVENS | Baltimore franchise named after a Poe poem | casual
+BRONCOS | Denver franchise | casual
+VIKINGS | Minnesota franchise | casual
+TOUCHDOWN | Six-point score | casual
+FIELD GOAL | Three-point kick through the uprights (5,4) | casual
+QUARTERBACK | Player who takes the snap and throws most passes | casual
+HUDDLE | Team gathering to call the next play | casual
+SUPER BOWL | NFL title game, first played in January 1967 (5,4) | casual
+SACK | Tackle of the passer behind the line of scrimmage | casual
+INTERCEPTION | Pass caught by the defense | casual
+FUMBLE | Ball dropped by a runner, up for grabs | casual
+PUNT | Kick away to the other team, often on fourth down | casual
+KICKOFF | Boot that starts each half | casual
+END ZONE | Area where touchdowns are scored (3,4) | casual
+REFEREE | Head official on the field | casual
+HELMET | Protective headgear with a face mask | casual
+GRIDIRON | Nickname for a football field, from its yard lines | casual
+HAIL MARY | Long, desperate pass as time runs out (4,4) | casual
+TAILGATE | Pre-game party in the stadium parking lot | casual
+SAFETY | Two-point score, or a deep defender | casual
+HALFTIME | Break known for a famous Super Bowl show | casual
+PIGSKIN | Slang name for the football itself | casual
+DOWN | One of four tries to advance ten yards | casual
+ELWAY | John ___, Broncos QB who won two Super Bowls late in his career | fan
+MARINO | Dan ___, Dolphins passer who never won a Super Bowl | fan
+FAVRE | Brett ___, Packers QB famed for his streak of consecutive starts | fan
+RODGERS | Aaron ___, Packers QB and Super Bowl XLV MVP | fan
+BRADSHAW | Terry ___, Steelers QB who won four Super Bowls in six seasons | fan
+STAUBACH | Roger ___, Navy grad and Cowboys QB called Captain America | fan
+UNITAS | Johnny ___, Baltimore Colts QB of the 1950s and 60s | fan
+SMITH | Emmitt ___, Cowboys back who passed Walter Payton's rushing mark in 2002 | fan
+TAYLOR | Lawrence ___, Giants linebacker known as LT | fan
+BUTKUS | Dick ___, fearsome Bears linebacker of the 1960s | fan
+KELCE | Travis ___, tight end on Kansas City's 2020s title teams | fan
+GRONKOWSKI | Rob ___, Patriots tight end who later won a ring with Tampa Bay | fan
+LANDRY | Tom ___, longtime Cowboys coach in a fedora | fan
+SHULA | Don ___, coach of Miami's 1972 unbeaten team | fan
+WALSH | Bill ___, 49ers coach linked to the West Coast offense | fan
+MADDEN | John ___, Raiders coach whose name went on a video game | fan
+REID | Andy ___, coach who led the Eagles and then the Chiefs | fan
+NAMATH | Broadway Joe, who guaranteed a Super Bowl III win | fan
+LINEBACKER | Defender lined up just behind the front line | fan
+TIGHT END | Blocker and receiver lined up beside a tackle (5,3) | fan
+CORNERBACK | Defender who covers wide receivers on the outside | fan
+RUNNING BACK | Ball carrier who takes handoffs (7,4) | fan
+BLITZ | Extra pass rushers sent after the quarterback | fan
+TOUCHBACK | Kick downed in the end zone, restarting from a set yard line | fan
+ONSIDE KICK | Short restart aimed at winning back possession (6,4) | fan
+PICK SIX | Interception returned for a touchdown (4,3) | fan
+AUDIBLE | Play change called at the line of scrimmage | fan
+SHOTGUN | Formation with the QB several yards behind the center | fan
+RED ZONE | Area inside the opponent's 20-yard line (3,4) | fan
+FAIR CATCH | Punt return given up by waving an arm (4,5) | fan
+PYLON | Orange marker at each corner of the end zone | fan
+LAMBEAU | ___ Field, Green Bay's stadium | fan
+ARROWHEAD | Kansas City's famously loud stadium | fan
+SOLDIER FIELD | Chicago's lakefront stadium (7,5) | fan
+CANTON | Ohio city of the Pro Football Hall of Fame | fan
+BILLS | Buffalo team that lost four straight Super Bowls | fan
+JETS | New York team that won Super Bowl III | fan
+LIONS | Detroit franchise | fan
+SAINTS | New Orleans franchise, Super Bowl XLIV winners | fan
+BUCCANEERS | Tampa Bay franchise, champions after the 2020 season | fan
+COMMANDERS | Washington franchise, so named in 2022 | fan
+PERFECT SEASON | Feat of the 17-0 Miami Dolphins of 1972 (7,6) | fan
+CHEESEHEADS | Green Bay fans in foam wedge hats | fan
+TERRIBLE TOWEL | Yellow cloth waved by Steelers fans (8,5) | fan
+THANKSGIVING | Holiday with traditional Lions and Cowboys games | fan
+FRANCO | ___ Harris, Steeler who made the Immaculate Reception | superfan
+THE CATCH | Dwight Clark's grab in the January 1982 NFC title game (3,5) | superfan
+ICE BOWL | Frigid 1967 NFL title game, Cowboys at Packers (3,4) | superfan
+HALAS | George ___, Bears founder and coach called Papa Bear | superfan
+NOLL | Chuck ___, coach of four 1970s Steelers champions | superfan
+GIBBS | Joe ___, who coached Washington to three Super Bowl wins | superfan
+PARCELLS | Bill ___, the Big Tuna, two titles with the Giants | superfan
+DITKA | Mike ___, head coach of the 1985 Bears | superfan
+PERRY | William ___, 1985 Bears lineman called the Refrigerator | superfan
+TARKENTON | Fran ___, scrambling Vikings quarterback | superfan
+SAYERS | Gale ___, Bears back who scored six TDs in a 1965 game | superfan
+DICKERSON | Eric ___, Rams back with 2,105 rushing yards in 1984 | superfan
+WHITE | Reggie ___, pass rusher called the Minister of Defense | superfan
+LYNCH | Marshawn ___, Seattle running back known as Beast Mode | superfan
+NITSCHKE | Ray ___, Lombardi-era Packers linebacker | superfan
+STARR | Bart ___, MVP of the first two Super Bowls | superfan
+VINATIERI | Adam ___, whose last-second kicks won two Patriots Super Bowls | superfan
+TYREE | David ___, Giant who made the Super Bowl XLII helmet catch | superfan
+WARNER | Kurt ___, grocery shelf-stocker turned Rams Super Bowl MVP | superfan
+FOLES | Nick ___, Eagles backup QB and Super Bowl LII MVP | superfan
+MOSS | Randy ___, who caught 23 TD passes for the 2007 Patriots | superfan
+HUNT | Lamar ___, AFL founder who gave the Super Bowl its name | superfan
+ROZELLE | Pete ___, NFL commissioner when the Super Bowl began | superfan
+HEIDI | ___ Game, 1968 Jets-Raiders broadcast cut off for a movie | superfan
+ROONEY | ___ Rule, requiring interviews of minority candidates for head coaching jobs | superfan
+AFL | Rival league that merged into the NFL in 1970 | superfan
+OILERS | Houston franchise that moved and became the Titans | superfan
+STEEL CURTAIN | Pittsburgh's dominant 1970s defensive line (5,7) | superfan
+LEGION OF BOOM | Seattle's hard-hitting 2010s secondary (6,2,4) | superfan
+FROZEN TUNDRA | Nickname for Lambeau Field in winter (6,6) | superfan
+TUCK RULE | Snowy January 2002 ruling that helped the Patriots beat the Raiders (4,4) | superfan
+HOLY ROLLER | Raiders' 1978 fumble-forward play against San Diego (4,6) | superfan
+NEUTRAL ZONE | Gap between the lines before the snap (7,4) | superfan
+NICKEL | Defense with five defensive backs | superfan
+DIME | Defense with six defensive backs | superfan
+WILDCAT | Formation where a running back takes the direct snap | superfan
+FLEA FLICKER | Trick play: handoff, pitch back to the QB, then a deep pass (4,7) | superfan
+STATUE OF LIBERTY | Trick play where a back grabs the ball from a QB's raised hand (6,2,7) | superfan
+HASH MARKS | Inbound lines where the ball is spotted between plays (4,5) | superfan
+ROSE BOWL | Pasadena stadium that hosted five NFL championship games from 1977 to 1993 (4,4) | superfan

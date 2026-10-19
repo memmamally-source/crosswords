@@ -1,0 +1,133 @@
+# Demon Slayer: unofficial fan crossword clues
+@title Demon Slayer
+@category anime
+@blurb Slayers, Hashira and the demons of Muzan's Twelve Kizuki.
+@icon star
+TANJIRO | Kind-hearted hero who carries his sister in a box on his back | casual
+NEZUKO | Demon sister who wears a bamboo muzzle | casual
+ZENITSU | Cowardly blond swordsman who fights best while asleep | casual
+INOSUKE | Wild swordsman raised by boars in the mountains | casual
+GIYU | Stoic Water Hashira who first meets the hero in the snow | casual
+RENGOKU | Fiery Hashira who stands his ground aboard the Mugen Train | casual
+MUZAN | Demon King, the first of his kind | casual
+SHINOBU | Smiling Insect Hashira who kills with poison | casual
+TENGEN | Flamboyant Sound Hashira with three wives | casual
+MITSURI | Pink-and-green-haired Love Hashira | casual
+HASHIRA | The Corps' elite swordsmen, literally "pillars" | casual
+NICHIRIN | Kind of blade that changes colour for its wielder | casual
+MUGEN TRAIN | Locomotive arc that became a record-breaking film (5,5) | casual
+UPPER MOONS | Muzan's six strongest servants (5,5) | casual
+WISTERIA | Purple flower whose scent demons cannot bear | casual
+SUNLIGHT | Daybreak's deadly gift to any demon | casual
+CROW | Talking black bird that relays orders to slayers | casual
+BAMBOO | Material of Nezuko's muzzle | casual
+BOX | Wooden carrier that shades Nezuko from daylight | casual
+AKAZA | Upper Moon Three who fights Rengoku | casual
+KAMADO | Family name of the hero and his demon sister | casual
+KIMETSU | "___ no Yaiba", the series' Japanese title | casual
+YAIBA | "Kimetsu no ___", the series' Japanese title | casual
+JUMP | Weekly Shonen ___, the manga's home | casual
+BREATHING | Total Concentration ___, the slayers' core technique | casual
+WATER BREATHING | Style taught by Urokodaki on Mount Sagiri (5,9) | casual
+THUNDER | Zenitsu's breathing style | casual
+ONI | Japanese word for what the slayers hunt | casual
+BOAR | Animal whose head Inosuke wears as a mask | casual
+CHARCOAL | What Tanjiro's family sold for a living | casual
+SPIDER | Rui's demon family on Mount Natagumo mimics this creature | casual
+FLAME | Rengoku's breathing style | casual
+DEMON | Man-eating creature beheaded by the Corps | casual
+SWORD | Slayer's weapon, forged by masked smiths | casual
+HINOKAMI KAGURA | Fire God dance Tanjiro learned from his father (8,6) | casual
+RUI | Spider-thread demon, Lower Moon Five | casual
+KATANA | Style of Japanese sword a Nichirin blade takes | casual
+DOMA | Smiling cult leader, Upper Moon Two, who wields fans | fan
+KOKUSHIBO | Six-eyed Upper Moon One | fan
+GYUTARO | Sickle-wielding Upper Moon Six who shares the rank with Daki | fan
+DAKI | Sash-wielding Upper Moon Six, Gyutaro's sister | fan
+HAGANEZUKA | Hyottoko-masked smith who chases Tanjiro with knives | fan
+YOSHIWARA | Entertainment district where Tengen hunts Upper Six | fan
+GOTOUGE | Koyoharu ___, creator of the manga | fan
+UFOTABLE | Animation studio behind the anime | fan
+UROKODAKI | Tengu-masked former Water Hashira who trains Tanjiro | fan
+SABITO | Fox-masked spirit who duels Tanjiro until he splits the boulder | fan
+FINAL SELECTION | Seven-day exam on a wisteria-ringed mountain (5,9) | fan
+HAND DEMON | Many-armed foe who killed Urokodaki's pupils (4,5) | fan
+KANAO | Coin-flipping girl, Shinobu's Tsuguko | fan
+GENYA | Gun-toting slayer who eats demons to gain their power | fan
+SANEMI | Scarred, short-tempered Wind Hashira | fan
+OBANAI | Serpent Hashira with a white snake on his shoulders | fan
+MUICHIRO | Forgetful young Mist Hashira | fan
+GYOMEI | Blind, weeping Stone Hashira | fan
+KAGAYA | Ubuyashiki head the slayers call "Oyakata-sama" | fan
+TAMAYO | Demon doctor who seeks a cure for Nezuko | fan
+YUSHIRO | Tamayo's devoted, jealous assistant | fan
+ASAKUSA | Tokyo district where Tanjiro first meets Muzan | fan
+TAISHO | Japanese era in which the story is set | fan
+KYOJURO | Rengoku's given name | fan
+ENMU | Dream-weaving Lower Moon One | fan
+KYOGAI | Former Lower Moon who drums to spin his house's rooms | fan
+HANTENGU | Cowering Upper Four who splits into emotion clones | fan
+GYOKKO | Vase-dwelling Upper Moon Five | fan
+NAKIME | Lute-playing demon who controls Muzan's fortress | fan
+INFINITY CASTLE | Muzan's shifting fortress and final battleground (8,6) | fan
+THUNDERCLAP | First Form of Zenitsu's style, ___ and Flash | fan
+SUN BREATHING | Original style from which all others derive (3,9) | fan
+BEAST | Inosuke's self-taught breathing style | fan
+MIST | Muichiro's breathing style | fan
+BLOOD DEMON ART | Special power of a strong Kizuki, like Rui's threads (5,5,3) | fan
+LOWER MOONS | Six weaker ranks of the Twelve Kizuki (5,5) | fan
+HANAFUDA | Card-style earrings passed to Tanjiro by his father | fan
+NATAGUMO | Mount ___, home of Rui's family | fan
+KOCHO | Shinobu's surname | fan
+BUTTERFLY | ___ Mansion, the Corps' infirmary | fan
+KIBUTSUJI | Muzan's surname | fan
+TOMIOKA | Giyu's surname | fan
+KANROJI | Mitsuri's surname | fan
+UZUI | Tengen's surname | fan
+AGATSUMA | Zenitsu's surname | fan
+GURENGE | LiSA's hit theme for the first anime season | fan
+LISA | J-pop singer of Gurenge | fan
+HAORI | Coat; Giyu's is split into two patterns | fan
+BLUE SPIDER LILY | Rare flower Muzan seeks to conquer daylight (4,6,4) | fan
+BIWA | Japanese lute played by Nakime | fan
+MAKOMO | Fox-masked girl who helps Tanjiro train | superfan
+SAGIRI | Mount ___, where Urokodaki trains pupils | superfan
+FUJIKASANE | Mount ___, site of the Final Selection | superfan
+TSUGUKO | Term for a Hashira's chosen successor | superfan
+KABURAMARU | Obanai's pet snake | superfan
+UBUYASHIKI | Family that leads the Corps | superfan
+YORIICHI | Sun-breathing legend, twin of Kokushibo | superfan
+TSUGIKUNI | Surname of the Sengoku-era twin swordsmen | superfan
+MICHIKATSU | Kokushibo's human name | superfan
+SHINJURO | Rengoku's drunken father, a former Flame Hashira | superfan
+SENJURO | Rengoku's gentle younger brother | superfan
+HAKUJI | Akaza's human name | superfan
+KOYUKI | Akaza's fiancee from his human life | superfan
+KEIZO | Dojo master who took in Akaza as a human | superfan
+KAIGAKU | Zenitsu's fellow pupil who became Upper Six | superfan
+JIGORO | Zenitsu's master, a former Thunder Hashira | superfan
+KANAE | Shinobu's late sister, the Flower Hashira | superfan
+AOI | Stern helper at the Butterfly Mansion | superfan
+MURATA | Rank-and-file slayer who survives Mount Natagumo | superfan
+KOTETSU | Masked boy whose family owns the Yoriichi Type Zero | superfan
+ZOHAKUTEN | Hatred clone of Upper Four | superfan
+SUSAMARU | Temari-throwing demon who attacks Tamayo's home | superfan
+YAHABA | Arrow-wielding demon partnered with Susamaru | superfan
+TANJURO | Tanjiro's late father, who danced for the Fire God | superfan
+KIE | Tanjiro's mother | superfan
+SABURO | Old man who warns Tanjiro of night-walking demons | superfan
+HIMEJIMA | Gyomei's surname | superfan
+SHINAZUGAWA | Surname of Sanemi and Genya | superfan
+IGURO | Obanai's surname | superfan
+HASHIBIRA | Inosuke's surname | superfan
+HINATSURU | One of Tengen's three kunoichi wives | superfan
+WARABIHIME | Daki's courtesan alias in the pleasure district | superfan
+HOMURA | LiSA's theme song for the Mugen Train film | superfan
+ICHIMATSU | Checkered pattern of Tanjiro's green-and-black haori | superfan
+MIZUNOTO | Lowest of the slayers' ten ranks | superfan
+KINOE | Highest of the slayers' ten ranks | superfan
+TWELVE KIZUKI | Muzan's elite dozen, split into Upper and Lower (6,6) | superfan
+TSUZUMI | Hand drums embedded in Kyogai's body | superfan
+GOURD | Vessel Tanjiro must burst by breathing into it | superfan
+DEAD CALM | Giyu's own Eleventh Form of his style (4,4) | superfan
+CONSTANT FLUX | Tenth Form of Water Breathing, a flowing dragon (8,4) | superfan

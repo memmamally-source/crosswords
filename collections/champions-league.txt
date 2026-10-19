@@ -1,0 +1,133 @@
+# UEFA Champions League: unofficial fan crossword clues
+@title UEFA Champions League
+@category sport
+@blurb Europe's elite club competition: finals, giants and legends since 1955.
+@icon ball
+REAL MADRID | Spanish giants who won the trophy in 2022 and 2024 (4,6) | casual
+BARCELONA | Catalan club that won in 2009, 2011 and 2015 | casual
+BAYERN | Munich club that won three in a row from 1974 to 1976 | casual
+AC MILAN | Rossoneri who won in 2003 and 2007 (2,5) | casual
+INTER | Nerazzurri who completed a treble in 2010 | casual
+JUVENTUS | Turin's Old Lady, winners in 1985 and 1996 | casual
+AJAX | Amsterdam club that won three straight titles from 1971 | casual
+PORTO | Portuguese club that won in 1987 and 2004 | casual
+BENFICA | Lisbon club that won in 1961 and 1962 | casual
+CELTIC | Glasgow club, first British winners in 1967 | casual
+MAN CITY | Club that won its first title in Istanbul in 2023 (3,4) | casual
+MAN UNITED | English winners in 1968, 1999 and 2008 (3,6) | casual
+DORTMUND | Borussia club that won the 1997 final | casual
+PSG | Parisian club beaten by Bayern in the 2020 final | casual
+ANTHEM | Handel-inspired tune played as the teams line up | casual
+BIG EARS | Trophy's nickname, thanks to its huge handles (3,4) | casual
+ISTANBUL | City of the 2005 and 2023 finals | casual
+CAMP NOU | Barcelona's home, scene of the 1999 final (4,3) | casual
+BERNABEU | Real Madrid's stadium, named after a former club president | casual
+GROUP STAGE | Autumn phase scrapped after the 2023-24 season (5,5) | casual
+KNOCKOUT | Phase of elimination rounds that follows the league phase | casual
+SHOOTOUT | Way the 2008 Moscow final was finally settled | casual
+SEMI FINAL | Last-four round, played over two legs (4,5) | casual
+QUARTER FINAL | Last-eight round (7,5) | casual
+UEFA | European governing body that runs the competition | casual
+WEDNESDAY | Tuesday's partner as a midweek matchnight | casual
+EUROPEAN CUP | Competition's name before the 1992 rebrand (8,3) | casual
+ROUND OF SIXTEEN | Knockout stage contested by 16 clubs (5,2,7) | casual
+DRAW | Ceremony that pairs up the clubs in each round | casual
+HOME AND AWAY | Two-legged format of knockout ties before the final (4,3,4) | casual
+SECOND LEG | Return match of a two-game tie (6,3) | casual
+EXTRA TIME | Thirty more minutes when a final is level (5,4) | casual
+BALE | Welshman whose overhead kick lit up the 2018 final | casual
+KAKA | Brazilian playmaker of Milan's 2007 winners | casual
+XAVI | Barcelona midfield maestro who won it four times | casual
+LEWANDOWSKI | Polish striker of Bayern's 2020 winners | casual
+ROBBEN | Dutch winger who scored Bayern's late 2013 final winner | casual
+BENZEMA | Real's French striker, Ballon d'Or winner in 2022 | casual
+VINICIUS | Brazilian who scored Real's winner in the 2022 final | casual
+CLOUGH | Brian, who won back-to-back titles with Nottingham Forest | casual
+RAMOS | Real defender whose stoppage-time header rescued the 2014 final | casual
+CASILLAS | Real Madrid's goalkeeping captain in 2014 | casual
+MALDINI | Milan defender who scored inside a minute of the 2005 final | casual
+FOREST | Nottingham club that won in 1979 and 1980 | fan
+ASTON VILLA | Birmingham club that beat Bayern in the 1982 final (5,5) | fan
+MARSEILLE | First French winners, in 1993 | fan
+FEYENOORD | First Dutch winners, beating Celtic in 1970 | fan
+PSV | Eindhoven club that won on penalties in 1988 | fan
+VALENCIA | Spanish side beaten in both the 2000 and 2001 finals | fan
+LEVERKUSEN | Bayer side beaten in the 2002 Glasgow final | fan
+ATLETICO | Madrid side beaten by their neighbours in 2014 and 2016 | fan
+STARBALL | Logo of eight five-pointed shapes forming a sphere | fan
+SAN SIRO | Milan stadium that hosted the 2001 and 2016 finals (3,4) | fan
+ALLIANZ ARENA | Munich ground where Chelsea won the 2012 final (7,5) | fan
+HAMPDEN | Glasgow ground of the 7-3 final in 1960 | fan
+LISBON LIONS | Nickname of Celtic's 1967 winners (6,5) | fan
+AWAY GOALS | Tie-breaking rule scrapped from 2021-22 (4,5) | fan
+LEAGUE PHASE | 36-team format introduced for 2024-25 (6,5) | fan
+DI STEFANO | Real star who scored in each of the first five finals (2,7) | fan
+KROOS | German midfielder whose last club game was the 2024 final | fan
+CARVAJAL | Real right-back who headed the opener in the 2024 final | fan
+SHEVCHENKO | Ukrainian who scored the winning penalty in the 2003 final | fan
+INZAGHI | Filippo, scorer of both Milan goals in the 2007 final | fan
+VAN BASTEN | Dutchman who scored twice in Milan's 1989 final win (3,6) | fan
+RIJKAARD | Scored Milan's 1990 winner, then coached Barcelona to 2006 glory | fan
+CAPELLO | Coach of the Milan side that won 4-0 in the 1994 final | fan
+ETO'O | Cameroonian who scored in the 2006 and 2009 finals | fan
+LUIS ENRIQUE | Coach of Barcelona's 2015 treble winners (4,7) | fan
+NEUER | Bayern goalkeeper in the 2013 and 2020 winning sides | fan
+SHERINGHAM | Teddy, who equalised in stoppage time in the 1999 final | fan
+VAN DER SAR | Dutch keeper who won with Ajax in 1995 and United in 2008 (3,3,3) | fan
+DI MATTEO | Roberto, Chelsea's interim coach in 2012 (2,6) | fan
+CECH | Chelsea keeper who saved a Robben penalty in the 2012 final | fan
+HAVERTZ | German who scored Chelsea's 2021 final winner | fan
+DUDEK | Polish keeper who was the 2005 shootout hero | fan
+PAISLEY | Bob, who won three European Cups with Liverpool | fan
+ROME | City where Liverpool won the finals of 1977 and 1984 | fan
+MOSCOW | City of the rain-soaked all-English final of 2008 | fan
+LA DECIMA | Real Madrid's tenth title, won in Lisbon in 2014 (2,6) | fan
+KOEMAN | Ronald, whose free-kick won the 1992 final for Barcelona | fan
+DREAM TEAM | Nickname of Barcelona's 1992 winners under Cruyff (5,4) | fan
+VAN GAAL | Louis, coach of Ajax's 1995 winners (3,4) | fan
+KLUIVERT | Teenager who scored Ajax's winner in the 1995 final | fan
+PLATINI | Frenchman who scored Juventus's penalty in the 1985 final | fan
+MILITO | Diego, scorer of both Inter goals in the 2010 final | fan
+BUSBY | Sir Matt, manager of United's 1968 winners | fan
+SEEDORF | Clarence, who won it with Ajax, Real Madrid and Milan | fan
+ZADOK THE PRIEST | Handel anthem adapted for the tournament's theme (5,3,6) | superfan
+BRITTEN | Tony, who arranged the competition's anthem in 1992 | superfan
+NYON | Swiss town on Lake Geneva where UEFA is based | superfan
+SWISS MODEL | Nickname for the 36-team format from 2024-25 (5,5) | superfan
+GENTO | Paco, Real winger who won six European Cups by 1966 | superfan
+DESAILLY | Won in 1993 with Marseille and scored for Milan in 1994 | superfan
+BOLI | Basile, whose header won Marseille the 1993 final | superfan
+EFFENBERG | Stefan, Bayern's captain in the 2001 final | superfan
+HEYNCKES | Coach who won it with Real in 1998 and Bayern in 2013 | superfan
+HITZFELD | Ottmar, winning coach with Dortmund and Bayern | superfan
+RIEDLE | Karl-Heinz, who scored twice in the 1997 final | superfan
+RICKEN | Lars, who lobbed in a 1997 final goal with his first touch | superfan
+SMICER | Czech midfielder who scored in the 2005 final | superfan
+GROBBELAAR | Bruce, Liverpool keeper of the 1984 shootout | superfan
+FRANCIS | Trevor, who headed Forest's 1979 final winner | superfan
+MALMO | Swedish side beaten by Forest in the 1979 final | superfan
+HAMBURG | German club beaten in 1980, then winners in 1983 | superfan
+WITHE | Peter, scorer of Villa's 1982 final winner | superfan
+STEAUA | Bucharest club that won the 1986 final on penalties | superfan
+DUCKADAM | Romanian keeper who saved four penalties in the 1986 final | superfan
+RED STAR | Belgrade club that won the 1991 final in Bari (3,4) | superfan
+SAMPDORIA | Genoa club beaten by Barcelona in the 1992 final | superfan
+CLUB BRUGGE | Belgian side beaten by Liverpool in the 1978 final (4,6) | superfan
+GLADBACH | Borussia side beaten by Liverpool in the 1977 final | superfan
+BELLETTI | Brazilian full-back who scored Barcelona's 2006 winner | superfan
+CAMPBELL | Sol, who headed Arsenal's opener in the 2006 final | superfan
+MIJATOVIC | Montenegrin-born striker who scored Real's 1998 final winner | superfan
+MCMANAMAN | Steve, who volleyed in the 2000 final for Real | superfan
+DECO | Porto playmaker who scored in the 2004 final | superfan
+MADJER | Algerian whose backheel helped Porto win in 1987 | superfan
+GUTTMANN | Bela, Benfica coach whose 'curse' is part of club folklore | superfan
+EINTRACHT | Frankfurt side beaten 7-3 by Real in 1960 | superfan
+REIMS | French club beaten by Real in the 1956 and 1959 finals | superfan
+HANOT | Gabriel, the journalist who championed a European club cup | superfan
+L'EQUIPE | French sports paper behind the original cup idea | superfan
+HERRERA | Helenio, coach of Inter's 1964 and 1965 winners | superfan
+MAZZOLA | Sandro, who scored twice for Inter in the 1964 final | superfan
+DRAGAO | Porto stadium that hosted the 2021 final | superfan
+METROPOLITANO | Atletico's ground, host of the 2019 final | superfan
+ATATURK | Istanbul stadium of the 2005 and 2023 finals | superfan
+MICHELS | Rinus, coach of Ajax's 1971 winners | superfan

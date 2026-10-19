@@ -42,10 +42,12 @@ What is built and live today, what's unfinished, and how it compares with the
 - **34 regular genres:** about 17,200 answers (Travel, Medicine, Technology
   and General Knowledge added in October 2026), at Easy, Medium, Hard, Expert
   and Brutal.
-- **50 themed collections:** 6,432 fact-checked clues, at Casual, Fan and
-  Superfan.
-  - Categories: TV and streaming 15, movies 11, anime 3, gaming 10, sport 8,
-    music 3.
+- **58 themed collections:** about 7,450 fact-checked clues, at Casual, Fan
+  and Superfan.
+  - Categories: TV and streaming 15, movies 12, anime 5, gaming 11, sport 10,
+    music 5.
+  - Added 19 October 2026: Michael Jackson, Beyoncé, One Piece, Demon Slayer,
+    Fast & Furious, UEFA Champions League, NFL and Roblox.
 - **3 mixed genres** (Mixed Bag, Pop & Fun, Academic) and an archive calendar
   of every Daily and Mini since launch (1 September 2026).
 - **Trending Now:** six hand-picked cards, edited in `js/featured.js`.
