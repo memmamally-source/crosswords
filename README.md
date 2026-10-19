@@ -1,7 +1,7 @@
 # Crossword Hub
 
 A browser-based crossword site with an academic daily puzzle, a quick daily
-Mini, and themed puzzles in 33 genres. Everything is static HTML, CSS and
+Mini, and themed puzzles in 37 genres. Everything is static HTML, CSS and
 JavaScript with no build step, so it can be hosted anywhere (it runs on GitHub
 Pages from the repository root).
 
@@ -39,7 +39,7 @@ draws the app icons.
 - **The Brutal Challenge:** one Brutal puzzle a week, the same for everyone:
   34 clues from every genre and no easy answers. A new one starts each Monday
   (South African time), at `#/brutal`.
-- **Genre puzzles:** 33 genres in four groups, each with about 500 words, at
+- **Genre puzzles:** 37 genres in four groups, each with about 500 words, at
   five levels:
 
   | Level | Clues | Tough answers |
@@ -54,13 +54,15 @@ draws the app icons.
   answers.
   - *Mixed:* Mixed Bag, Pop & Fun Mix, Academic Mix.
   - *Everyday:* Animal Kingdom, Food & Drink, World Geography, Science Lab,
-    Sports Arena, Music Hall, Outer Space, Myths & Legends.
+    Sports Arena, Music Hall, Outer Space, Myths & Legends, Travel & Landmarks,
+    General Knowledge.
   - *Pop culture & fun:* Pop Culture, Movies & TV, Video Games, Holidays &
-    Festivals.
+    Festivals, Technology & Gadgets.
   - *Academic:* Philosophy, Literature, Mathematics, Advanced Vocabulary, World
     History, Economics, Human Anatomy, Art & Architecture, Chemistry, Physics,
     Biology, Psychology, Computer Science, Law & Government, World Religions,
-    Language & Linguistics, Earth Science, Latin & the Ancient World.
+    Language & Linguistics, Earth Science, Latin & the Ancient World, Medicine &
+    Health.
 - **Statistics:**
   - totals: puzzles solved and Dailies finished
   - streaks: the daily streak and the longest streak

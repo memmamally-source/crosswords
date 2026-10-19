@@ -241,6 +241,38 @@ const BASE_GENRES = [
     icon: '🏺',
     blurb: 'Rome, Greece and the phrases they left us.',
   },
+  {
+    id: 'travel',
+    subject: 'Travel',
+    category: 'classic',
+    name: 'Travel & Landmarks',
+    icon: '✈️',
+    blurb: 'Famous sights, journeys and places to go.',
+  },
+  {
+    id: 'medicine',
+    subject: 'Medicine',
+    category: 'academic',
+    name: 'Medicine & Health',
+    icon: '🩺',
+    blurb: 'Doctors, discoveries and the human body in sickness and health.',
+  },
+  {
+    id: 'technology',
+    subject: 'Technology',
+    category: 'fun',
+    name: 'Technology & Gadgets',
+    icon: '📱',
+    blurb: 'Inventions, gadgets and the companies behind them.',
+  },
+  {
+    id: 'general',
+    subject: 'General Knowledge',
+    category: 'classic',
+    name: 'General Knowledge',
+    icon: '💡',
+    blurb: 'A pub-quiz mix of everything, with plenty from Mzansi.',
+  },
 ]
   .map((g) => ({ ...g, words: parseList(WORD_LISTS[g.id]) }));
 
