@@ -3,7 +3,10 @@ const assert = require('assert');
 const { clean, ALLOWED } = require('../js/analytics.js');
 
 // The events the site sends, and nothing else.
-assert.deepStrictEqual(Object.keys(ALLOWED).sort(), ['autocheck_on', 'challenge_open', 'check_used', 'hint_used', 'page_view', 'puzzle_complete', 'puzzle_start', 'return_visit', 'room_create', 'room_join', 'share'].sort());
+assert.deepStrictEqual(Object.keys(ALLOWED).sort(), ['autocheck_on', 'challenge_open', 'check_used', 'gift_create', 'hint_used', 'page_view', 'puzzle_complete', 'puzzle_start', 'return_visit', 'room_create', 'room_join', 'share'].sort());
+
+// A gift sends only how many answers it has: never its clues, names or message.
+assert.deepStrictEqual(clean('gift_create', { words: 8, title: 'For Alex', message: 'Love you', answer: 'PARIS' }), { words: 8 });
 
 // Unknown events are dropped.
 assert.strictEqual(clean('gift_created', { story: 'We met in Paris' }), null);

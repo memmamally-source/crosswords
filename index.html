@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=29" />
+  <link rel="stylesheet" href="css/styles.css?v=30" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -101,6 +101,18 @@
         <article class="brutal" id="brutal-feature" aria-labelledby="brutal-title"></article>
       </section>
 
+      <section class="home-section gift-promo" aria-label="Gift a crossword">
+        <button class="gift-card" data-action="gift" id="gift-card">
+          <span class="gift-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1" /><path d="M5 12v8h14v-8M12 8v12M12 8c-1.5-3-5-4-5.5-2S9 8 12 8zM12 8c1.5-3 5-4 5.5-2S15 8 12 8z" /></svg></span>
+          <span class="gift-copy">
+            <span class="kicker">Gift a crossword <span class="soon-badge" id="gift-soon-badge">Coming soon</span></span>
+            <span class="gift-head">A crossword about someone you love</span>
+            <span class="gift-deck">Your memories and in-jokes as the clues, sent as a link. Free.</span>
+          </span>
+          <span class="gift-go" aria-hidden="true">→</span>
+        </button>
+      </section>
+
       <section class="home-section" id="continue-section" aria-labelledby="continue-title" hidden>
         <h2 class="section-title" id="continue-title">Continue playing</h2>
         <div class="continue-row" id="continue-row"></div>
@@ -136,6 +148,55 @@
           <button class="link-btn" data-action="stats">All statistics →</button>
         </div>
         <div class="home-stats" id="home-stats"></div>
+      </section>
+    </div>
+
+    <!-- ================= Gift builder ================= -->
+    <div id="gift-view" class="view" hidden>
+      <div class="page-head">
+        <p class="kicker">Gift a crossword</p>
+        <h1 class="page-title">Make a crossword for someone</h1>
+        <p class="section-deck">Use your own memories, places and in-jokes as the answers. We build the grid; you send the link. The gift lives only in its link: nothing about it is stored on our servers.</p>
+      </div>
+      <form class="gift-form" id="gift-form" novalidate>
+        <div class="gift-fields">
+          <label class="field"><span>To <small>(optional)</small></span><input id="gift-to" maxlength="30" autocomplete="off" placeholder="Alex" /></label>
+          <label class="field"><span>From <small>(optional)</small></span><input id="gift-from" maxlength="30" autocomplete="off" placeholder="Sam" /></label>
+          <label class="field field-wide"><span>Title</span><input id="gift-title" maxlength="40" autocomplete="off" placeholder="Happy anniversary!" /></label>
+        </div>
+        <h2 class="gift-step">Answers and clues</h2>
+        <p class="gift-help">Add 4 to 24. Answers can be names, places or short phrases of 3 to 15 letters (spaces are fine). Answers that share letters fit together best.</p>
+        <ol class="gift-rows" id="gift-rows"></ol>
+        <button type="button" class="btn" data-action="gift-add" id="gift-add">+ Add another</button>
+        <label class="field field-wide gift-message"><span>A message for the end <small>(optional)</small></span><textarea id="gift-message" maxlength="400" rows="3" placeholder="Shown once the crossword is solved."></textarea></label>
+        <div class="gift-problems" id="gift-problems" role="alert"></div>
+        <div class="gift-submit">
+          <button type="submit" class="btn btn-primary">Build my crossword</button>
+          <button type="button" class="link-btn" data-action="gift-clear">Start again</button>
+        </div>
+      </form>
+      <section class="gift-result" id="gift-result" aria-labelledby="gift-result-title" hidden>
+        <p class="kicker">Ready to send</p>
+        <h2 id="gift-result-title">Your crossword</h2>
+        <div class="gift-result-body">
+          <canvas class="gift-thumb" id="gift-thumb" aria-hidden="true"></canvas>
+          <div>
+            <p id="gift-summary"></p>
+            <p class="gift-missing" id="gift-missing" hidden></p>
+            <div class="gift-result-actions">
+              <button class="btn" data-action="gift-shuffle">Try another layout</button>
+              <button class="btn" data-action="gift-edit">Edit</button>
+            </div>
+          </div>
+        </div>
+        <h3 class="gift-step">Send it</h3>
+        <p class="gift-help">Anyone with the link can play it, so send it only to the person it’s for.</p>
+        <div class="win-share" role="group" aria-label="Send your gift">
+          <button class="btn btn-primary" data-action="gift-share">Share</button>
+          <button class="btn btn-whatsapp" data-action="gift-whatsapp">WhatsApp</button>
+          <button class="btn" data-action="gift-copy">Copy link</button>
+          <button class="btn" data-action="gift-try">Try it yourself</button>
+        </div>
       </section>
     </div>
 
@@ -284,7 +345,8 @@
       <p class="win-text" id="win-text"></p>
       <div class="win-stats" id="win-stats"></div>
       <p class="win-next" id="win-next" hidden></p>
-      <div class="win-share" role="group" aria-label="Share your result">
+      <blockquote class="gift-note" id="win-gift" hidden></blockquote>
+      <div class="win-share" id="win-share" role="group" aria-label="Share your result">
         <button class="btn btn-primary" data-action="share">Share</button>
         <button class="btn btn-whatsapp" data-action="share-whatsapp">WhatsApp</button>
         <button class="btn" data-action="share-copy">Copy challenge link</button>
@@ -351,6 +413,17 @@
     <button class="dialog-close" data-action="close-dialog" aria-label="Close">✕</button>
   </dialog>
 
+  <dialog id="gift-soon-dialog" aria-labelledby="gift-soon-title">
+    <div class="gift-soon">
+      <span class="room-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1" /><path d="M5 12v8h14v-8M12 8v12M12 8c-1.5-3-5-4-5.5-2S9 8 12 8zM12 8c1.5-3 5-4 5.5-2S15 8 12 8z" /></svg></span>
+      <p class="kicker">Coming soon</p>
+      <h2 id="gift-soon-title">Gift a crossword</h2>
+      <p>Soon you’ll be able to make a crossword about someone you love, with your own memories and in-jokes as the clues, and send it to them as a link. Perfect for birthdays, anniversaries and Valentine’s Day. Free, like everything here.</p>
+      <button class="btn btn-primary" data-action="close-dialog">Can’t wait</button>
+    </div>
+    <button class="dialog-close" data-action="close-dialog" aria-label="Close">✕</button>
+  </dialog>
+
   <dialog id="privacy-dialog" aria-labelledby="privacy-title">
     <div class="privacy">
       <p class="kicker">Your data</p>
@@ -360,6 +433,7 @@
         <li><b>If you sign in,</b> your progress is also kept in your Crossword Hub account (Google Firebase) so it syncs between devices. Only you can read it. Sign-in uses your email address or Google account, and nothing else about you.</li>
         <li><b>Usage statistics are optional.</b> If you allow them, Google Analytics counts visits and which puzzles are started, finished and shared, with times, levels and hint points. It never receives your name, email or answers, and advertising features are off. You can switch it off any time in Settings, which also removes its cookies.</li>
         <li><b>Challenge links</b> carry only your time and hint points for that puzzle.</li>
+        <li><b>Gift crosswords</b> live only inside their link: the clues, names and message are never stored on our servers or sent to Google Analytics. Anyone with the link can open it.</li>
         <li><b>Shared puzzles (Help me solve)</b> store the grid, the name you choose and where each player is in the grid (Google Firebase), for 7 days. Guests get a temporary anonymous account, so no sign-up or email is needed.</li>
       </ul>
     </div>
@@ -417,22 +491,23 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=29"></script>
-  <script src="js/words.js?v=29"></script>
-  <script src="js/collections.js?v=29"></script>
-  <script src="js/genres.js?v=29"></script>
-  <script src="js/sync.js?v=29"></script>
-  <script src="js/featured.js?v=29"></script>
-  <script src="js/hints.js?v=29"></script>
-  <script src="js/stats.js?v=29"></script>
-  <script src="js/access.js?v=29"></script>
-  <script src="js/share.js?v=29"></script>
-  <script src="js/rooms.js?v=29"></script>
-  <script src="js/firebase-config.js?v=29"></script>
-  <script src="js/analytics.js?v=29"></script>
-  <script src="js/app.js?v=29"></script>
-  <script type="module" src="js/firebase.js?v=29"></script>
-  <script type="module" src="js/account.js?v=29"></script>
-  <script type="module" src="js/room.js?v=29"></script>
+  <script src="js/generator.js?v=30"></script>
+  <script src="js/words.js?v=30"></script>
+  <script src="js/collections.js?v=30"></script>
+  <script src="js/genres.js?v=30"></script>
+  <script src="js/sync.js?v=30"></script>
+  <script src="js/featured.js?v=30"></script>
+  <script src="js/hints.js?v=30"></script>
+  <script src="js/stats.js?v=30"></script>
+  <script src="js/access.js?v=30"></script>
+  <script src="js/share.js?v=30"></script>
+  <script src="js/gifts.js?v=30"></script>
+  <script src="js/rooms.js?v=30"></script>
+  <script src="js/firebase-config.js?v=30"></script>
+  <script src="js/analytics.js?v=30"></script>
+  <script src="js/app.js?v=30"></script>
+  <script type="module" src="js/firebase.js?v=30"></script>
+  <script type="module" src="js/account.js?v=30"></script>
+  <script type="module" src="js/room.js?v=30"></script>
 </body>
 </html>

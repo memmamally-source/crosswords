@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, hintTotal, CrosswordStats, canAccess, CrosswordShare, HubAnalytics, CrosswordRooms */
+/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, hintTotal, CrosswordStats, canAccess, CrosswordShare, HubAnalytics, CrosswordRooms, CrosswordGifts */
 (function () {
   'use strict';
 
@@ -260,6 +260,9 @@
         const file = frozenFile(spec.kind, spec.date);
         keep = !monthLoads.has(file) || frozenMonths.has(file);
       }
+    } else if (spec.kind === 'gift') {
+      puzzle = CrosswordGenerator.fromLayoutCode(spec.layout, spec.gift.words);
+      if (!puzzle) return null;
     } else if (spec.layout) {
       puzzle = CrosswordGenerator.fromLayoutCode(spec.layout, spec.genre.words);
       if (!puzzle) return null; // a word in the link is no longer in the bank
@@ -356,6 +359,7 @@
   }
   // What a puzzle is, for analytics: kind, category, level and genre only.
   function puzzleParams(spec) {
+    if (spec.kind === 'gift') return { puzzle_kind: 'gift', category: 'gift', level: 'gift' }; // never the gift's contents
     if (spec.kind === 'genre') return { puzzle_kind: 'genre', category: spec.genre.category, level: spec.difficulty, genre: spec.genre.id };
     const level = spec.kind === 'daily' ? scheduleFor(spec.date).level.toLowerCase() : spec.kind;
     return { puzzle_kind: spec.kind, category: spec.kind, level };
@@ -513,6 +517,7 @@
   }
 
   function renderHome() {
+    renderGiftCard();
     const today = todayKey();
     const daily = dailySpec(today);
     const mini = miniSpec(today);
@@ -615,7 +620,7 @@
       .filter(([, sv]) => sv.entries && (sv.room || sv.entries.some((row) => row.some(Boolean))))
       .sort((a, b) => (b[1].updated || 0) - (a[1].updated || 0))
       .map(([key, sv]) => {
-        const info = describeSave(key);
+        const info = describeSave(key, sv);
         // A shared puzzle reopens its room.
         if (info && sv.room && CrosswordRooms.validRoomId(sv.room)) Object.assign(info, { url: `#/room/${sv.room}`, kicker: `${info.kicker} · Shared` });
         return { key, sv, info };
@@ -636,8 +641,9 @@
     }).join('');
   }
   // Title and link for a saved game's key, or null if it can't be opened.
-  function describeSave(key) {
+  function describeSave(key, sv) {
     const [kind, rest] = [key.slice(0, key.indexOf(':')), key.slice(key.indexOf(':') + 1)];
+    if (kind === 'gift') return sv && sv.gift ? { kicker: 'Gift crossword', title: 'A crossword made for you', url: `#/gift/${sv.gift}` } : null;
     if ((kind === 'daily' || kind === 'mini') && validDate(rest)) {
       const day = DAILY_SCHEDULE[parseKey(rest).getDay()].day;
       return kind === 'daily'
@@ -906,7 +912,7 @@
 
     game.challenge = routeChallenge;
     showChallenge();
-    $('#room-start').hidden = !multiplayer || !!store.solves[spec.key];
+    $('#room-start').hidden = !multiplayer || !!store.solves[spec.key] || spec.kind === 'gift'; // gifts stay off our servers
     if (!store.solves[spec.key]) analytics.track('puzzle_start', { ...puzzleParams(spec), resumed: !!store.saves[spec.key] });
     const save = store.saves[spec.key];
     const solve = store.solves[spec.key];
@@ -983,6 +989,7 @@
         checks: game.checks,
         autochecked: game.autochecked,
         room: game.room ? game.room.id : undefined,
+        gift: game.spec.kind === 'gift' ? game.spec.code : undefined,
         updated: Date.now(),
       };
       // Keep storage small: hold on to the 40 most recent unfinished puzzles.
@@ -1062,7 +1069,7 @@
     $('#pause-overlay').hidden = true;
     $('.game-layout').classList.remove('paused');
     $('#pencil-btn').setAttribute('aria-pressed', 'false');
-    document.title = `${spec.kind === 'genre' ? spec.title : spec.kicker.split(' · ')[0] + ', ' + shortDate(spec.date)} · Crossword Hub`;
+    document.title = `${spec.kind === 'genre' ? spec.title : spec.kind === 'gift' ? 'Gift crossword' : spec.kicker.split(' · ')[0] + ', ' + shortDate(spec.date)} · Crossword Hub`;
 
     const board = $('#board');
     board.classList.remove('solved');
@@ -1550,7 +1557,10 @@
     const { spec } = game;
     const today = todayKey();
     const actions = [];
-    if (spec.kind === 'genre') {
+    if (spec.kind === 'gift') {
+      if (giftsOpen()) actions.push({ label: 'Make one back', primary: true, attr: 'data-action="gift"' });
+      actions.push({ label: 'Explore Crossword Hub', primary: !giftsOpen(), attr: 'data-nav="home"' });
+    } else if (spec.kind === 'genre') {
       actions.push({ label: 'Play another', primary: true, attr: 'data-action="new"' });
       actions.push({ label: 'Back to genres', attr: 'data-nav="genres"' });
     } else if (spec.kind === 'brutal') {
@@ -1617,6 +1627,15 @@
         : `0 hint points${newBest ? ' and a new personal best' : ''}. ${game.autochecked ? 'Auto-check' : 'Checking'} keeps this one out of the No-Hint Club.`
       : `${plural(points, 'hint point')} (${hintSummary(gameHints())}), so this one doesn't count toward best times or the No-Hint Club.`)
       + (newBadges.length ? ` New badge: ${newBadges.join(', ')}!` : '') + challengeOutcome();
+    const gift = spec.kind === 'gift' ? spec.gift : null;
+    $('#win-share').hidden = !!gift; // a gift's link is for the person it was made for
+    $('#win-gift').hidden = !(gift && gift.message);
+    if (gift) {
+      $('#win-text').textContent = gift.from ? `${gift.from} made this crossword just for you.` : 'This crossword was made just for you.';
+      if (gift.message) {
+        $('#win-gift').innerHTML = `<p>${esc(gift.message).replace(/\n/g, '<br>')}</p>${gift.from ? `<cite>${esc(gift.from)}</cite>` : ''}`;
+      }
+    }
     const next = $('#win-next');
     next.hidden = !((spec.kind === 'daily' || spec.kind === 'mini') && spec.date === todayKey());
     if (!next.hidden) {
@@ -1634,7 +1653,7 @@
     } else if (spec.kind === 'genre' && store.best[`${spec.genre.id}:${spec.difficulty}`]) {
       stats += `<div><b>${formatTime(store.best[`${spec.genre.id}:${spec.difficulty}`])}</b><span>Best ${esc(levelsFor(spec.genre)[spec.difficulty].label)} time</span></div>`;
     }
-    $('#win-stats').innerHTML = stats;
+    $('#win-stats').innerHTML = spec.kind === 'gift' ? '' : stats; // a gift ends on its message, not the score
     typeInput.blur(); // close the device keyboard so the result is visible
     $('#win-actions').innerHTML = nextActions().map((a) => `<button class="btn ${a.primary ? 'btn-primary' : ''}" ${a.attr}>${esc(a.label)}</button>`).join('');
     refresh();
@@ -2393,6 +2412,16 @@
     const action = actionEl.dataset.action;
     switch (action) {
       case 'close-dialog': closeDialogs(); return;
+      case 'gift': closeDialogs(); openGifts(); return;
+      case 'gift-add': addGiftRow(); return;
+      case 'gift-remove': removeGiftRow(actionEl.closest('.gift-row')); return;
+      case 'gift-clear': clearGift(); return;
+      case 'gift-shuffle': buildGift(giftBuilt ? giftBuilt.attempt + 1 : 0); return;
+      case 'gift-edit': editGift(); return;
+      case 'gift-share': shareGift(); return;
+      case 'gift-whatsapp': giftWhatsApp(); return;
+      case 'gift-copy': if (giftBuilt) copyText(giftUrl(), 'Gift link copied'); return;
+      case 'gift-try': if (giftBuilt) navigate(`#/gift/${giftBuilt.code}`); return;
       case 'privacy': closeMenus(); $('#privacy-dialog').showModal(); return;
       case 'consent-yes': setAnalytics(true); return;
       case 'consent-no': setAnalytics(false); return;
@@ -2528,7 +2557,7 @@
 
   function showView(name) {
     if (name !== 'game') typeInput.blur();
-    for (const v of ['home', 'archive', 'game']) {
+    for (const v of ['home', 'archive', 'game', 'gift']) {
       const el = $(`#${v}-view`);
       const showing = v === name;
       if (showing && el.hidden && !reduceMotion.matches) {
@@ -2545,8 +2574,9 @@
     }
     $$('.masthead-nav button').forEach((b) => b.removeAttribute('aria-current'));
     const navName = name === 'game' ? null : name;
-    if (navName) $(`.masthead-nav [data-nav="${navName}"]`).setAttribute('aria-current', 'page');
-    if (name !== 'game') document.title = 'Crossword Hub';
+    const navBtn = navName && $(`.masthead-nav [data-nav="${navName}"]`);
+    if (navBtn) navBtn.setAttribute('aria-current', 'page');
+    if (name !== 'game') document.title = name === 'gift' ? 'Gift a crossword · Crossword Hub' : 'Crossword Hub';
     offerConsent(name);
   }
 
@@ -2600,6 +2630,10 @@
     const today = todayKey();
     $('#dateline').textContent = `${longDate(today)} · Today's Daily: ${scheduleFor(today).level}`;
 
+    if (parts[0] === 'gift') {
+      await openGiftRoute(parts[1] || 'new', routeNow);
+      return;
+    }
     if (parts[0] === 'room') {
       showView('game');
       window.scrollTo(0, 0);
@@ -2646,6 +2680,224 @@
       $('.masthead-nav [data-nav="genres"]').setAttribute('aria-current', 'page');
     }
     else window.scrollTo(0, 0);
+  }
+
+  // ---------- Gift crosswords ----------
+  // Made here from the player's own answers and clues and sent as a link
+  // (see js/gifts.js). The builder shows "Coming soon" until GIFTS_LIVE is
+  // switched on, except on a device opened with #/gift/unlock. Gift links
+  // always open.
+  const Gifts = window.CrosswordGifts;
+  const giftsOpen = () => Gifts.GIFTS_LIVE || !!store.giftPreview;
+  let giftBuilt = null; // { attempt, code, puzzle, count }
+  function renderGiftCard() {
+    $('#gift-soon-badge').hidden = giftsOpen();
+  }
+  function openGifts() {
+    if (giftsOpen()) navigate('#/gift/new');
+    else $('#gift-soon-dialog').showModal();
+  }
+
+  function giftSpec(code, gift) {
+    const title = gift.title || (gift.to ? `A crossword for ${gift.to}` : 'A crossword for you');
+    return {
+      kind: 'gift',
+      key: `gift:${Gifts.giftId(code)}`,
+      url: `#/gift/${code}`,
+      code,
+      gift,
+      layout: gift.layout,
+      kicker: gift.from ? `A gift crossword from ${gift.from}` : 'A gift crossword',
+      title,
+      meta: `${plural(gift.words.length, 'clue')}${gift.to ? ` · made for ${gift.to}` : ''}`,
+    };
+  }
+
+  // #/gift/new (the builder), #/gift/unlock and #/gift/lock (try the builder
+  // on this device before it's live) and #/gift/<code> (a gift to solve).
+  async function openGiftRoute(what, routeNow) {
+    if (what === 'unlock' || what === 'lock') {
+      store.giftPreview = what === 'unlock';
+      saveStore();
+      toast(what === 'unlock' ? 'Gift builder unlocked on this device' : 'Gift builder locked on this device');
+      replaceRoute(what === 'unlock' ? '#/gift/new' : '#/');
+      route();
+      return;
+    }
+    if (what === 'new') {
+      if (!giftsOpen()) {
+        replaceRoute('#/');
+        route();
+        $('#gift-soon-dialog').showModal();
+        return;
+      }
+      game = null;
+      showView('gift');
+      window.scrollTo(0, 0);
+      renderGiftBuilder();
+      return;
+    }
+    showView('game');
+    window.scrollTo(0, 0);
+    const gift = await Gifts.decodeGift(what);
+    if (currentRoute !== routeNow) return;
+    const spec = gift && giftSpec(what, gift);
+    if (spec && puzzleFor(spec)) {
+      startGame(spec);
+      return;
+    }
+    toast('That gift link looks incomplete. Ask the sender to copy it again.');
+    replaceRoute('#/');
+    route();
+  }
+
+  // ---- The builder ----
+  const giftRowHtml = (row, i) => `<li class="gift-row">
+      <span class="gift-num" aria-hidden="true">${i + 1}</span>
+      <input class="gift-answer" maxlength="24" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Answer" aria-label="Answer ${i + 1}" value="${esc(row.answer || '')}" />
+      <input class="gift-clue" maxlength="${Gifts.LIMITS.clue}" autocomplete="off" placeholder="Clue" aria-label="Clue ${i + 1}" value="${esc(row.clue || '')}" />
+      <button type="button" class="icon-btn gift-remove" data-action="gift-remove" aria-label="Remove line ${i + 1}">✕</button>
+    </li>`;
+  const GIFT_EXAMPLES = [
+    { answer: 'e.g. Paris', clue: 'e.g. Where we went on our first holiday' },
+    { answer: 'e.g. Biscuit', clue: 'e.g. Our scruffy dog' },
+  ];
+  function renderGiftBuilder() {
+    const d = store.giftDraft || {};
+    $('#gift-to').value = d.to || '';
+    $('#gift-from').value = d.from || '';
+    $('#gift-title').value = d.title || '';
+    $('#gift-message').value = d.message || '';
+    const rows = (d.rows || []).filter((r) => r.answer || r.clue);
+    while (rows.length < 6) rows.push({ answer: '', clue: '' });
+    $('#gift-rows').innerHTML = rows.map(giftRowHtml).join('');
+    $$('.gift-row').slice(0, 2).forEach((li, i) => {
+      $('.gift-answer', li).placeholder = GIFT_EXAMPLES[i].answer;
+      $('.gift-clue', li).placeholder = GIFT_EXAMPLES[i].clue;
+    });
+    $('#gift-problems').innerHTML = '';
+    showGiftForm();
+  }
+  function showGiftForm() {
+    $('#gift-form').hidden = false;
+    $('#gift-result').hidden = true;
+    $('#gift-add').hidden = $$('.gift-row').length >= Gifts.LIMITS.maxWords;
+  }
+  function readGiftForm() {
+    return {
+      to: $('#gift-to').value,
+      from: $('#gift-from').value,
+      title: $('#gift-title').value,
+      message: $('#gift-message').value,
+      rows: $$('.gift-row').map((li) => ({ answer: $('.gift-answer', li).value, clue: $('.gift-clue', li).value })),
+    };
+  }
+  // The draft is kept in this browser only (never synced or sent anywhere).
+  let giftDraftTimer = null;
+  function saveGiftDraft() {
+    clearTimeout(giftDraftTimer);
+    store.giftDraft = readGiftForm();
+    saveStore();
+  }
+  $('#gift-form').addEventListener('input', () => {
+    clearTimeout(giftDraftTimer);
+    giftDraftTimer = setTimeout(saveGiftDraft, 400);
+  });
+  $('#gift-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    buildGift(0);
+  });
+  function addGiftRow() {
+    const rows = $$('.gift-row');
+    if (rows.length >= Gifts.LIMITS.maxWords) return;
+    $('#gift-rows').insertAdjacentHTML('beforeend', giftRowHtml({}, rows.length));
+    $('#gift-add').hidden = rows.length + 1 >= Gifts.LIMITS.maxWords;
+    $('.gift-row:last-child .gift-answer').focus();
+  }
+  function removeGiftRow(li) {
+    if (!li) return;
+    if ($$('.gift-row').length > 1) li.remove();
+    else $$('input', li).forEach((x) => (x.value = ''));
+    $$('.gift-row').forEach((row, i) => {
+      $('.gift-num', row).textContent = i + 1;
+      $('.gift-answer', row).setAttribute('aria-label', `Answer ${i + 1}`);
+      $('.gift-clue', row).setAttribute('aria-label', `Clue ${i + 1}`);
+      $('.gift-remove', row).setAttribute('aria-label', `Remove line ${i + 1}`);
+    });
+    $('#gift-add').hidden = false;
+    saveGiftDraft();
+  }
+  function clearGift() {
+    if (!confirm('Clear everything and start a new gift?')) return;
+    delete store.giftDraft;
+    saveStore();
+    giftBuilt = null;
+    renderGiftBuilder();
+  }
+  function editGift() {
+    showGiftForm();
+    $('#gift-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  function giftProblems(list) {
+    $('#gift-problems').innerHTML = list.length ? `<ul>${list.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>` : '';
+  }
+  async function buildGift(attempt) {
+    saveGiftDraft();
+    const form = store.giftDraft;
+    const { words, problems } = Gifts.cleanEntries(form.rows);
+    const rows = $$('.gift-row');
+    rows.forEach((li, i) => li.classList.toggle('has-problem', problems.some((p) => p.row === i)));
+    if (problems.length) {
+      showGiftForm();
+      giftProblems(problems.map((p) => p.text));
+      const first = problems.find((p) => p.row >= 0);
+      (first ? $('.gift-answer', rows[first.row]) : $('#gift-problems')).scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    const { puzzle, missing } = Gifts.buildGrid(CrosswordGenerator, words, attempt);
+    if (puzzle.words.length < Gifts.LIMITS.minWords) {
+      showGiftForm();
+      giftProblems(['These answers don’t share enough letters to make a crossword. Add a few more, ideally ones with common letters like E, A, R and S.']);
+      $('#gift-problems').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    const placed = words.filter((w) => !missing.includes(w.answer));
+    const code = await Gifts.encodeGift({ title: form.title, from: form.from, to: form.to, message: form.message, words: placed, layout: CrosswordGenerator.layoutCode(puzzle) });
+    giftBuilt = { attempt, code, puzzle, count: placed.length };
+    giftProblems([]);
+    $('#gift-form').hidden = true;
+    $('#gift-result').hidden = false;
+    $('#gift-summary').textContent = `${plural(placed.length, 'answer')} in a ${puzzle.cols} × ${puzzle.rows} grid.`;
+    $('#gift-missing').hidden = !missing.length;
+    $('#gift-missing').textContent = missing.length
+      ? `${missing.join(', ')} didn’t fit: ${missing.length === 1 ? 'it shares' : 'they share'} no letters with the rest of the grid in this layout. Try another layout, or edit to add answers that share letters.`
+      : '';
+    drawThumb($('#gift-thumb'), puzzle);
+    analytics.track('gift_create', { words: placed.length });
+    window.scrollTo(0, 0);
+  }
+  const giftUrl = () => `${siteUrl()}#/gift/${giftBuilt.code}`;
+  function giftMessage() {
+    const from = (store.giftDraft && store.giftDraft.from || '').trim();
+    return `${from ? `${from} made` : 'I made'} you a crossword 🎁`;
+  }
+  async function shareGift() {
+    if (!giftBuilt) return;
+    analytics.track('share', { method: 'native', content_type: 'gift' });
+    try {
+      if (navigator.share) {
+        await navigator.share({ text: giftMessage(), url: giftUrl() });
+        return;
+      }
+    } catch (e) {
+      if (e && e.name === 'AbortError') return;
+    }
+    copyText(`${giftMessage()} ${giftUrl()}`, 'Gift link copied');
+  }
+  function giftWhatsApp() {
+    if (!giftBuilt) return;
+    analytics.track('share', { method: 'whatsapp', content_type: 'gift' });
+    window.open(`https://wa.me/?text=${encodeURIComponent(`${giftMessage()} ${giftUrl()}`)}`, '_blank', 'noopener');
   }
 
   // ---------- Installing as an app ----------

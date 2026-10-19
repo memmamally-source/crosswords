@@ -10,12 +10,18 @@
 
   // The part of the local store that belongs to the player rather than the
   // device. Settings, the chosen difficulty and tab stay per device.
+  // Gift crosswords stay on the device that opened them: their saved
+  // progress and results aren't copied to the account.
+  const local = (key) => key.startsWith('gift:');
+  const withoutGifts = (map) => Object.fromEntries(Object.entries(map || {}).filter(([k]) => !local(k)));
+
   function syncable(store) {
     const saves = Object.entries(store.saves || {})
+      .filter(([k]) => !local(k))
       .sort((a, b) => (b[1].updated || 0) - (a[1].updated || 0))
       .slice(0, MAX_SYNCED_SAVES);
     return {
-      solves: store.solves || {},
+      solves: withoutGifts(store.solves),
       best: store.best || {},
       seen: store.seen || {},
       lastWords: store.lastWords || {},
