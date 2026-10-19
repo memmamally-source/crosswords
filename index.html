@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=31" />
+  <link rel="stylesheet" href="css/styles.css?v=32" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,6 +37,7 @@
         <button data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 12h16M12 4v16" /></svg><span>Today</span></button>
         <button data-nav="archive"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M4 10h16M9 3v4M15 3v4" /></svg><span>Archive</span></button>
         <button data-nav="genres"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5" /><rect x="13" y="4" width="7" height="7" rx="1.5" /><rect x="4" y="13" width="7" height="7" rx="1.5" /><rect x="13" y="13" width="7" height="7" rx="1.5" /></svg><span>Collections</span></button>
+        <button data-nav="arcade"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></svg><span>Arcade</span></button>
         <button data-action="stats" class="nav-stats"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V4M19 20v-6" /></svg><span>Stats</span></button>
       </nav>
       <div class="masthead-tools">
@@ -101,6 +102,15 @@
         <article class="brutal" id="brutal-feature" aria-labelledby="brutal-title"></article>
       </section>
 
+      <section class="home-section arcade-promo" aria-labelledby="arcade-home-title">
+        <div class="section-head">
+          <h2 class="section-title" id="arcade-home-title">Arcade</h2>
+          <button class="link-btn" data-nav="arcade">How it works →</button>
+        </div>
+        <p class="section-deck">Quick-fire clue games: no grid, just you, the clues and the clock.</p>
+        <div class="arcade-cards" id="arcade-home-cards"></div>
+      </section>
+
       <section class="home-section gift-promo" aria-label="Gift a crossword">
         <button class="gift-card" data-action="gift" id="gift-card">
           <span class="gift-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1" /><path d="M5 12v8h14v-8M12 8v12M12 8c-1.5-3-5-4-5.5-2S9 8 12 8zM12 8c1.5-3 5-4 5.5-2S15 8 12 8z" /></svg></span>
@@ -148,6 +158,60 @@
           <button class="link-btn" data-action="stats">All statistics →</button>
         </div>
         <div class="home-stats" id="home-stats"></div>
+      </section>
+    </div>
+
+    <!-- ================= Arcade ================= -->
+    <div id="arcade-view" class="view" hidden>
+      <section id="arcade-hub" aria-labelledby="arcade-hub-title">
+        <div class="page-head">
+          <p class="kicker">Crossword Hub Arcade</p>
+          <h1 class="page-title" id="arcade-hub-title">Quick-fire clue games</h1>
+          <p class="section-deck">One clue at a time from our fact-checked clue bank. Free to play, as often as you like.</p>
+        </div>
+        <div class="arcade-cards arcade-cards-hub" id="arcade-hub-cards"></div>
+      </section>
+
+      <section class="arcade-start" id="arcade-start" aria-labelledby="arcade-start-title" hidden>
+        <button class="link-btn arcade-back" data-nav="arcade">← Arcade</button>
+        <span class="arcade-badge" id="arcade-start-badge" aria-hidden="true"></span>
+        <h1 id="arcade-start-title"></h1>
+        <p class="arcade-tagline" id="arcade-start-tagline"></p>
+        <ul class="arcade-rules" id="arcade-start-rules"></ul>
+        <p class="arcade-best" id="arcade-start-best"></p>
+        <button class="btn btn-primary arcade-go" data-action="arcade-start">Start</button>
+      </section>
+
+      <section class="arcade-play" id="arcade-play" aria-label="Game" hidden>
+        <div class="arcade-hud" id="arcade-hud"></div>
+        <div class="arcade-card">
+          <p class="arcade-meta" id="arcade-meta"></p>
+          <p class="arcade-clue" id="arcade-clue" aria-live="polite"></p>
+          <div class="arcade-boxes" id="arcade-boxes" aria-label="Your answer"></div>
+          <p class="arcade-feedback" id="arcade-feedback" role="status" aria-live="assertive"></p>
+        </div>
+        <div class="arcade-controls">
+          <button class="btn" data-action="arcade-skip" id="arcade-skip">Skip</button>
+          <button class="btn btn-primary" data-action="arcade-submit" id="arcade-submit">Submit</button>
+        </div>
+        <div class="arcade-keys" id="arcade-keys" role="group" aria-label="Letter keys"></div>
+      </section>
+
+      <section class="arcade-results" id="arcade-results" aria-labelledby="arcade-results-title" hidden>
+        <p class="kicker" id="arcade-results-kicker"></p>
+        <h1 id="arcade-results-title"></h1>
+        <p class="arcade-score" id="arcade-results-score"></p>
+        <p class="arcade-pb" id="arcade-results-pb" hidden>New personal best!</p>
+        <div class="win-stats" id="arcade-results-stats"></div>
+        <div class="arcade-result-actions">
+          <button class="btn btn-primary" data-action="arcade-again">Play again</button>
+          <button class="btn" data-action="arcade-share">Share</button>
+          <button class="btn" data-nav="arcade">Arcade</button>
+        </div>
+        <details class="arcade-recap" id="arcade-recap">
+          <summary>Answers from this run</summary>
+          <ol id="arcade-recap-list"></ol>
+        </details>
       </section>
     </div>
 
@@ -491,23 +555,24 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=31"></script>
-  <script src="js/words.js?v=31"></script>
-  <script src="js/collections.js?v=31"></script>
-  <script src="js/genres.js?v=31"></script>
-  <script src="js/sync.js?v=31"></script>
-  <script src="js/featured.js?v=31"></script>
-  <script src="js/hints.js?v=31"></script>
-  <script src="js/stats.js?v=31"></script>
-  <script src="js/access.js?v=31"></script>
-  <script src="js/share.js?v=31"></script>
-  <script src="js/gifts.js?v=31"></script>
-  <script src="js/rooms.js?v=31"></script>
-  <script src="js/firebase-config.js?v=31"></script>
-  <script src="js/analytics.js?v=31"></script>
-  <script src="js/app.js?v=31"></script>
-  <script type="module" src="js/firebase.js?v=31"></script>
-  <script type="module" src="js/account.js?v=31"></script>
-  <script type="module" src="js/room.js?v=31"></script>
+  <script src="js/generator.js?v=32"></script>
+  <script src="js/words.js?v=32"></script>
+  <script src="js/collections.js?v=32"></script>
+  <script src="js/genres.js?v=32"></script>
+  <script src="js/sync.js?v=32"></script>
+  <script src="js/featured.js?v=32"></script>
+  <script src="js/hints.js?v=32"></script>
+  <script src="js/stats.js?v=32"></script>
+  <script src="js/access.js?v=32"></script>
+  <script src="js/share.js?v=32"></script>
+  <script src="js/gifts.js?v=32"></script>
+  <script src="js/arcade.js?v=32"></script>
+  <script src="js/rooms.js?v=32"></script>
+  <script src="js/firebase-config.js?v=32"></script>
+  <script src="js/analytics.js?v=32"></script>
+  <script src="js/app.js?v=32"></script>
+  <script type="module" src="js/firebase.js?v=32"></script>
+  <script type="module" src="js/account.js?v=32"></script>
+  <script type="module" src="js/room.js?v=32"></script>
 </body>
 </html>

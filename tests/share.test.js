@@ -28,6 +28,8 @@ assert.strictEqual(msUntilNextDay(Date.UTC(2026, 9, 18, 10, 30)), 11.5 * 3600 * 
 // Analytics page names drop seeds, grid codes and challenges.
 assert.strictEqual(pagePath('#/play/friends/fan/0/L0abc123.def?c=1.0.0'), '/play/friends/fan');
 assert.strictEqual(pagePath('#/daily/2026-10-19?c=60.0.1'), '/daily');
+assert.strictEqual(pagePath('#/arcade/blitz'), '/arcade/blitz');
+assert.strictEqual(pagePath('#/arcade/whatever'), '/arcade');
 assert.strictEqual(pagePath('#/brutal/2026-10-19'), '/brutal');
 assert.strictEqual(pagePath('#/'), '/');
 assert.strictEqual(pagePath('#/archive/mini'), '/archive');

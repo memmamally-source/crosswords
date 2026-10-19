@@ -46,6 +46,7 @@
     const parts = splitRoute(hash || '#/').path.replace(/^#\/?/, '').split('/').filter(Boolean);
     if (parts[0] === 'play') return `/play/${parts[1] || ''}/${parts[2] || ''}`.replace(/\/+$/, '');
     if (parts[0] === 'daily' || parts[0] === 'mini' || parts[0] === 'brutal') return `/${parts[0]}`;
+    if (parts[0] === 'arcade') return `/arcade${parts[1] === 'blitz' || parts[1] === 'survival' ? `/${parts[1]}` : ''}`;
     return `/${parts[0] || ''}`;
   }
 

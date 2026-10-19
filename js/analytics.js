@@ -36,6 +36,8 @@
     room_create: ['puzzle_kind'],
     room_join: ['puzzle_kind'],
     gift_create: ['words'], // how many answers only: never the gift itself
+    arcade_start: ['mode'],
+    arcade_end: ['mode', 'score', 'correct', 'round'],
   };
   const EMAIL = /[^\s@]+@[^\s@]+\.[^\s@]+/;
 

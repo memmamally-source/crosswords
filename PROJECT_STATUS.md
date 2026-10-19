@@ -23,7 +23,7 @@ What is built and live today, what's unfinished, and how it compares with the
 | 7 — Gifts | 7A manual builder built; shows "Coming soon" until switched on | #25 |
 | 8 — Monetisation preparation (design only) | Not started; now also covers the entitlement switches and server design for Brutal and the Arcade | — |
 | 9 — Expansion | Not started | — |
-| 10 — Crossword Hub Arcade (Clue Blitz, Survival) | Planned (19 Oct); 10A recommended next, awaiting approval | — |
+| 10 — Crossword Hub Arcade (Clue Blitz, Survival) | 10A built (free, unlimited), in a PR awaiting approval; 10B (enforcement) later | — |
 
 (Stage numbers 4 onwards follow the revised order in MASTER_PLAN.md §7.)
 
@@ -226,8 +226,8 @@ What is built and live today, what's unfinished, and how it compares with the
 | Monetisation (Premium, credits, ads, gift purchases) | ❌ Deliberately not built | Documented as future only |
 | Always free: Daily, Mini, streaks, basic stats, play without registering | ✅ True today | Must stay free after monetisation (confirmed 19 October 2026) |
 | Brutal as a future Premium feature (visible, not playable for free players) | ❌ Not built, by design | Stage 8 adds the switch and a hidden Premium marker; Brutal stays free while testing. `canAccess` already sees every puzzle's kind and level, so the rule fits there |
-| Arcade: Clue Blitz and Survival | ❌ Not built | Stage 10A. The existing clue bank (about 24,650 standalone clues with difficulty levels) is enough; no new content needed |
-| Free Arcade allowance (1 Blitz + 1 Survival a day) | ❌ Not built | Built switched off in 10A; enforced on the server only in 10B, with approval |
+| Arcade: Clue Blitz and Survival | ✅ Stage 10A (awaiting approval) | `js/arcade.js` (game logic) and the Arcade screens in `js/app.js`; 20,432 unique answers from the existing clue bank, no new content or AI |
+| Free Arcade allowance (1 Blitz + 1 Survival a day) | 🔒 Built, switched off | `LIMITS_ACTIVE` in `js/arcade.js` is false; attempts are counted on the device only. Enforced on the server in 10B, with approval |
 | Server-side entitlements and Arcade runs | ❌ Not built | Stage 10B with Stage 8; needs the Blaze plan and payments |
 
 ## 5. Risks and housekeeping
@@ -268,8 +268,9 @@ Technology and General Knowledge genres (#24).
 
 Also merged: 8 new collections (#26), taking the site to 58 collections.
 
-1. **Stage 10A: the Arcade** (Clue Blitz and Survival), free and unlimited,
-   with allowances built but switched off. Awaiting the owner's approval.
+1. **Stage 10A: the Arcade** (Clue Blitz and Survival) is built, free and
+   unlimited, with allowances built but switched off. In a PR awaiting the
+   owner's approval.
 2. **Switch on gift crosswords** when ready: set `GIFTS_LIVE` to true in
    `js/gifts.js` (and the matching line in `tests/gifts.test.js`). Ideally
    before Valentine's Day.

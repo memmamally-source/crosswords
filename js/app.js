@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, hintTotal, CrosswordStats, canAccess, CrosswordShare, HubAnalytics, CrosswordRooms, CrosswordGifts */
+/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, hintTotal, CrosswordStats, canAccess, CrosswordShare, HubAnalytics, CrosswordRooms, CrosswordGifts, CrosswordArcade */
 (function () {
   'use strict';
 
@@ -518,6 +518,7 @@
 
   function renderHome() {
     renderGiftCard();
+    renderArcadeCards($('#arcade-home-cards'));
     const today = todayKey();
     const daily = dailySpec(today);
     const mini = miniSpec(today);
@@ -1571,6 +1572,7 @@
       if (!store.solves[otherKey]) {
         actions.push({ label: otherKind === 'mini' ? 'Play the Mini' : 'Play the Daily', primary: true, attr: `data-open="#/${otherKind}/${spec.date}"` });
       }
+      actions.push({ label: 'Try the Arcade: 60-second Clue Blitz', attr: 'data-open="#/arcade/blitz"' });
       actions.push({ label: spec.date === today ? 'Back to today' : 'Back to the archive', attr: `data-nav="${spec.date === today ? 'home' : 'archive'}"` });
     }
     return actions;
@@ -2373,7 +2375,7 @@
     if (nav) {
       e.preventDefault();
       closeDialogs();
-      navigate({ home: '#/', archive: '#/archive', genres: '#/genres' }[nav.dataset.nav]);
+      navigate({ home: '#/', archive: '#/archive', genres: '#/genres', arcade: '#/arcade' }[nav.dataset.nav]);
       return;
     }
     const genreCard = e.target.closest('[data-genre]');
@@ -2413,6 +2415,11 @@
     switch (action) {
       case 'close-dialog': closeDialogs(); return;
       case 'gift': closeDialogs(); openGifts(); return;
+      case 'arcade-start': startArcade(); return;
+      case 'arcade-again': closeDialogs(); navigate(`#/arcade/${arcadeLast ? arcadeLast.mode : 'blitz'}`); startArcade(arcadeLast && arcadeLast.mode); return;
+      case 'arcade-submit': arcadeSubmit(); return;
+      case 'arcade-skip': arcadeSkip(); return;
+      case 'arcade-share': shareArcade(); return;
       case 'gift-add': addGiftRow(); return;
       case 'gift-remove': removeGiftRow(actionEl.closest('.gift-row')); return;
       case 'gift-clear': clearGift(); return;
@@ -2557,7 +2564,7 @@
 
   function showView(name) {
     if (name !== 'game') typeInput.blur();
-    for (const v of ['home', 'archive', 'game', 'gift']) {
+    for (const v of ['home', 'archive', 'game', 'gift', 'arcade']) {
       const el = $(`#${v}-view`);
       const showing = v === name;
       if (showing && el.hidden && !reduceMotion.matches) {
@@ -2576,7 +2583,8 @@
     const navName = name === 'game' ? null : name;
     const navBtn = navName && $(`.masthead-nav [data-nav="${navName}"]`);
     if (navBtn) navBtn.setAttribute('aria-current', 'page');
-    if (name !== 'game') document.title = name === 'gift' ? 'Gift a crossword · Crossword Hub' : 'Crossword Hub';
+    if (name !== 'game') document.title = { gift: 'Gift a crossword · Crossword Hub', arcade: 'Arcade · Crossword Hub' }[name] || 'Crossword Hub';
+    if (name !== 'arcade') leaveArcade();
     offerConsent(name);
   }
 
@@ -2634,6 +2642,11 @@
       await openGiftRoute(parts[1] || 'new', routeNow);
       return;
     }
+    if (parts[0] === 'arcade') {
+      game = null;
+      openArcade(parts[1]);
+      return;
+    }
     if (parts[0] === 'room') {
       showView('game');
       window.scrollTo(0, 0);
@@ -2681,6 +2694,363 @@
     }
     else window.scrollTo(0, 0);
   }
+
+  // ---------- Arcade: Clue Blitz and Survival ----------
+  // One clue at a time from the existing clue bank (see js/arcade.js for the
+  // rules). Runs are saved after every move, so leaving or refreshing never
+  // resets the Blitz clock, restores Survival lives or rerolls a clue. Free
+  // and unlimited during testing; the daily allowances are built into
+  // js/arcade.js but switched off.
+  const Arcade = window.CrosswordArcade;
+  let arcadePool = null;
+  const arcadeBank = () => arcadePool || (arcadePool = Arcade.buildPool(GENRES));
+  const arcadeData = () => (store.arcade = Object.assign({ best: {}, runs: {}, recent: [], attempts: null }, store.arcade));
+  const ARCADE_MODES = {
+    blitz: {
+      name: 'Clue Blitz',
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></svg>',
+      tagline: '60 seconds. How many clues can you crack?',
+      rules: [
+        'One clue at a time, mostly easy and medium.',
+        '100 points for each correct answer.',
+        'From your third correct answer in a row, each one earns 25 bonus points.',
+        'Skip whenever you like: it’s free, but it ends your combo. So does a wrong answer.',
+        'The clock keeps running once you start, even if you leave the page.',
+      ],
+    },
+    survival: {
+      name: 'Survival',
+      icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z" /></svg>',
+      tagline: 'Three lives. The clues get harder. How far can you go?',
+      rules: [
+        'Rounds 1–5 are Easy, 6–12 Medium, 13–20 Hard, then Expert and tougher still.',
+        'A wrong answer or a skip costs a life and shows you the answer.',
+        'Typing is never a mistake: only Submit counts.',
+        'Leave whenever you like: your run waits for you until midnight South African time.',
+      ],
+    },
+  };
+  const LEVEL_LABEL = Arcade.LEVEL_LABEL;
+  let arcade = null; // the run on screen: { mode, run, guess, timer, busy }
+  let arcadeLast = null; // the last finished run, for the results screen
+  const arcadePlaying = () => !!(arcade && arcade.run && !$('#arcade-play').hidden);
+
+  function arcadeBestLine(mode) {
+    const best = arcadeData().best[mode];
+    if (!best) return 'No personal best yet.';
+    return mode === 'blitz'
+      ? `Personal best: ${best.score.toLocaleString()} points (${plural(best.correct, 'correct answer')}).`
+      : `Personal best: round ${best.round}, ${best.score.toLocaleString()} points.`;
+  }
+  function renderArcadeCards(el) {
+    if (!el) return;
+    const runs = arcadeData().runs;
+    el.innerHTML = Object.entries(ARCADE_MODES).map(([mode, m]) => {
+      const live = runs[mode] && !runs[mode].finished;
+      const status = live
+        ? (mode === 'survival' ? `Run in progress: round ${runs.survival.round}` : 'Run in progress')
+        : arcadeBestLine(mode).replace('Personal best: ', 'Best: ').replace('No personal best yet.', 'Free to play');
+      return `<button class="arcade-mode arcade-${mode}" data-open="#/arcade/${mode}">
+        <span class="arcade-badge">${m.icon}</span>
+        <span class="arcade-mode-copy">
+          <span class="arcade-mode-name">${esc(m.name)}</span>
+          <span class="arcade-mode-tag">${esc(m.tagline)}</span>
+          <span class="arcade-mode-best${live ? ' live' : ''}">${esc(status)}</span>
+        </span>
+        <span class="arcade-mode-go" aria-hidden="true">${live ? 'Resume' : 'Play'}</span>
+      </button>`;
+    }).join('');
+  }
+
+  function arcadeScreen(which) {
+    for (const id of ['hub', 'start', 'play', 'results']) $(`#arcade-${id}`).hidden = id !== which;
+    document.body.classList.toggle('arcade-playing', which === 'play');
+  }
+
+  // #/arcade, #/arcade/blitz and #/arcade/survival. A run in progress is
+  // picked up where it was; one that ended while away shows its result.
+  function openArcade(mode) {
+    showView('arcade');
+    window.scrollTo(0, 0);
+    if (!ARCADE_MODES[mode]) {
+      if (mode) replaceRoute('#/arcade');
+      renderArcadeCards($('#arcade-hub-cards'));
+      arcadeScreen('hub');
+      return;
+    }
+    const run = arcadeData().runs[mode];
+    if (run && !run.finished) {
+      if (Arcade.finish(run, now(), todayKey())) endArcade(mode, run);
+      else playArcade(mode, run, true);
+      return;
+    }
+    showArcadeStart(mode);
+  }
+
+  function showArcadeStart(mode) {
+    const m = ARCADE_MODES[mode];
+    arcade = { mode };
+    $('#arcade-start').dataset.mode = mode;
+    $('#arcade-start').className = `arcade-start arcade-${mode}`;
+    $('#arcade-start-badge').innerHTML = m.icon;
+    $('#arcade-start-title').textContent = m.name;
+    $('#arcade-start-tagline').textContent = m.tagline;
+    $('#arcade-start-rules').innerHTML = m.rules.map((r) => `<li>${esc(r)}</li>`).join('');
+    $('#arcade-start-best').textContent = arcadeBestLine(mode);
+    arcadeScreen('start');
+  }
+
+  // Starts a run. It counts as an attempt only once its first clue is on
+  // screen, so a failure before that (or opening and leaving the page)
+  // never uses one up.
+  function startArcade(mode = arcade && arcade.mode) {
+    if (!ARCADE_MODES[mode]) return;
+    const data = arcadeData();
+    const existing = data.runs[mode];
+    if (existing && !existing.finished && !Arcade.finish(existing, now(), todayKey())) return playArcade(mode, existing, true);
+    const allowed = Arcade.canStart(mode, data.attempts, todayKey()); // always allowed while testing
+    if (!allowed.allowed) return toast('That’s today’s free game. Come back after midnight.');
+    let run;
+    try {
+      run = Arcade.newRun(mode, arcadeBank(), { seed: Math.floor(Math.random() * 2 ** 31), now: now(), day: todayKey(), recent: data.recent });
+      playArcade(mode, run, false);
+    } catch (e) {
+      arcadeScreen('start');
+      toast('The game couldn’t start. Please try again.');
+      return;
+    }
+    data.runs[mode] = run;
+    data.attempts = Arcade.recordAttempt(data.attempts, mode, todayKey());
+    saveStore();
+    analytics.track('arcade_start', { mode });
+  }
+
+  function playArcade(mode, run, resumed) {
+    leaveArcadeTimer();
+    arcade = { mode, run, guess: '', busy: false, timer: null };
+    $('#arcade-play').className = `arcade-play arcade-${mode}`;
+    $('#arcade-keys').hidden = !touchScreen.matches;
+    $('#arcade-skip').textContent = mode === 'survival' ? 'Skip (−1 life)' : 'Skip';
+    arcadeScreen('play');
+    window.scrollTo(0, 0);
+    renderArcadeClue();
+    renderArcadeHud();
+    if (resumed) arcadeFeedback(mode === 'survival' ? `Welcome back: round ${run.round}.` : 'Welcome back: the clock kept running.', 'info');
+    if (mode === 'blitz') arcade.timer = setInterval(arcadeTick, 200);
+  }
+  function leaveArcadeTimer() {
+    if (arcade && arcade.timer) clearInterval(arcade.timer);
+  }
+  // Leaving the Arcade (another page): the run stays saved.
+  function leaveArcade() {
+    leaveArcadeTimer();
+    arcade = null;
+    document.body.classList.remove('arcade-playing');
+  }
+
+  function arcadeTick() {
+    if (!arcade || !arcade.run) return;
+    const { run } = arcade;
+    if (Arcade.finish(run, now(), todayKey())) return endArcade(arcade.mode, run);
+    renderArcadeHud();
+  }
+
+  function renderArcadeHud() {
+    const { mode, run } = arcade;
+    if (mode === 'blitz') {
+      const left = Math.ceil(Arcade.timeLeft(run, now()) / 1000);
+      const bonus = run.combo + 1 >= Arcade.BLITZ.comboFrom;
+      $('#arcade-hud').innerHTML = `
+        <div class="hud-item hud-time${left <= 10 ? ' low' : ''}"><b>${left}</b><span>seconds</span></div>
+        <div class="hud-item"><b>${run.score.toLocaleString()}</b><span>points</span></div>
+        <div class="hud-item hud-combo${run.combo >= 2 ? ' hot' : ''}"><b>×${run.combo}</b><span>${bonus ? 'combo: +25 next' : 'combo'}</span></div>
+        <div class="hud-bar" aria-hidden="true"><i style="width:${(100 * Arcade.timeLeft(run, now())) / (Arcade.BLITZ.seconds * 1000)}%"></i></div>`;
+    } else {
+      const lives = Array.from({ length: Arcade.SURVIVAL.lives }, (_, i) => `<span class="life${i < run.lives ? '' : ' lost'}">${ARCADE_MODES.survival.icon}</span>`).join('');
+      $('#arcade-hud').innerHTML = `
+        <div class="hud-item hud-lives" aria-label="${plural(run.lives, 'life')} left">${lives}</div>
+        <div class="hud-item"><b>${run.round}</b><span>round</span></div>
+        <div class="hud-item"><b>${run.score.toLocaleString()}</b><span>points</span></div>`;
+    }
+  }
+
+  function renderArcadeClue() {
+    const { run } = arcade;
+    const { clue } = run;
+    $('#arcade-meta').textContent = `${run.mode === 'survival' ? `${LEVEL_LABEL[clue.level]} · ` : ''}${clue.source}`;
+    $('#arcade-clue').textContent = clue.clue;
+    arcade.guess = '';
+    renderArcadeBoxes();
+  }
+  function renderArcadeBoxes(reveal, clue = arcade.run.clue) {
+    const shown = reveal || arcade.guess;
+    let i = 0;
+    $('#arcade-boxes').innerHTML = clue.lengths.map((len) => `<span class="arcade-word">${
+      Array.from({ length: len }, () => {
+        const ch = shown[i] || '';
+        const cls = i === arcade.guess.length && !reveal ? ' current' : '';
+        i++;
+        return `<span class="arcade-box${cls}${reveal ? ' revealed' : ''}">${esc(ch)}</span>`;
+      }).join('')
+    }</span>`).join('');
+    $('#arcade-boxes').setAttribute('aria-label', `Your answer, ${clue.answer.length} letters${clue.lengths.length > 1 ? ` (${clue.lengths.join(', ')})` : ''}: ${arcade.guess || 'empty'}`);
+  }
+  function arcadeFeedback(text, kind) {
+    const el = $('#arcade-feedback');
+    el.textContent = text;
+    el.className = `arcade-feedback ${kind || ''}`;
+  }
+
+  function arcadeType(ch) {
+    if (!arcadePlaying() || arcade.busy) return;
+    const len = arcade.run.clue.answer.length;
+    if (arcade.guess.length >= len) return;
+    arcade.guess += ch;
+    arcadeFeedback('');
+    renderArcadeBoxes();
+    // A full, correct answer counts straight away; a wrong one waits for Submit.
+    if (arcade.guess.length === len && arcade.guess === arcade.run.clue.answer) arcadeSubmit();
+  }
+  function arcadeBack() {
+    if (!arcadePlaying() || arcade.busy || !arcade.guess) return;
+    arcade.guess = arcade.guess.slice(0, -1);
+    renderArcadeBoxes();
+  }
+
+  function arcadeSubmit() {
+    if (!arcadePlaying() || arcade.busy) return;
+    const { mode, run } = arcade;
+    const clue = run.clue;
+    const res = Arcade.submit(run, arcadeBank(), arcade.guess, now(), todayKey());
+    arcadeOutcome(mode, run, res, clue);
+  }
+  function arcadeSkip() {
+    if (!arcadePlaying() || arcade.busy) return;
+    const { mode, run } = arcade;
+    const clue = run.clue;
+    arcadeOutcome(mode, run, Arcade.skip(run, arcadeBank(), now(), todayKey()), clue);
+  }
+  // `clue` is the clue that was answered (the run has moved on by now).
+  function arcadeOutcome(mode, run, res, clue) {
+    if (res.result === 'over') return endArcade(mode, run);
+    if (res.result === 'empty' || res.result === 'incomplete') {
+      arcadeFeedback(res.result === 'empty' ? 'Type your answer first.' : 'Fill every box, then submit.', 'info');
+      return;
+    }
+    arcadeData().runs[mode] = run; // (a sync may have replaced the saved copy)
+    saveStore(); // after every move, so a refresh carries on from here
+    if (res.result === 'correct') {
+      buzz(15);
+      arcadeFeedback(`Correct! +${res.points}`, 'good');
+      renderArcadeClue();
+      renderArcadeHud();
+      return;
+    }
+    if (mode === 'blitz') {
+      if (res.result === 'wrong') {
+        arcadeFeedback('Not quite. Try again or skip.', 'bad');
+        arcade.guess = '';
+        renderArcadeBoxes();
+        shake($('#arcade-boxes'));
+      } else {
+        arcadeFeedback(`Skipped: it was ${res.answer}.`, 'info');
+        renderArcadeClue();
+      }
+      renderArcadeHud();
+      return;
+    }
+    // Survival: show the answer for a moment, then the next round (or the end).
+    buzz([30, 40, 30]);
+    arcade.busy = true;
+    renderArcadeBoxes(res.answer, clue);
+    arcadeFeedback(`${res.result === 'skipped' ? 'Skipped' : 'Not quite'}: the answer was ${res.answer}.`, 'bad');
+    renderArcadeHud();
+    setTimeout(() => {
+      if (!arcade || arcade.run !== run) return;
+      arcade.busy = false;
+      if (res.over) return endArcade(mode, run);
+      renderArcadeClue();
+    }, 1600);
+  }
+  function shake(el) {
+    el.classList.remove('shake');
+    void el.offsetWidth;
+    el.classList.add('shake');
+  }
+
+  // A finished run: personal best, recently seen answers, the results screen.
+  function endArcade(mode, run) {
+    leaveArcadeTimer();
+    Arcade.finish(run, now(), todayKey());
+    if (!run.finished) run.finished = true;
+    const data = arcadeData();
+    const { best, isNew } = Arcade.updateBest(data.best, run);
+    data.best = best;
+    data.recent = Arcade.remember(data.recent, run);
+    if (data.runs[mode] === run || (data.runs[mode] && data.runs[mode].startedAt === run.startedAt)) delete data.runs[mode];
+    arcadeLast = { mode, run, isNew };
+    saveStore();
+    analytics.track('arcade_end', { mode, score: run.score, correct: run.correct, round: mode === 'survival' ? Arcade.roundReached(run) : 0 });
+    showArcadeResults();
+  }
+
+  function showArcadeResults() {
+    const { mode, run, isNew } = arcadeLast;
+    arcade = { mode };
+    $('#arcade-results').className = `arcade-results arcade-${mode}`;
+    $('#arcade-results-kicker').textContent = ARCADE_MODES[mode].name;
+    $('#arcade-results-title').textContent = mode === 'blitz' ? 'Time’s up!' : run.endedBy === 'reset' ? 'Run ended at midnight' : 'Game over';
+    $('#arcade-results-score').textContent = `${run.score.toLocaleString()} points`;
+    $('#arcade-results-pb').hidden = !isNew;
+    const best = arcadeData().best[mode];
+    const stat = (n, label) => `<div><b>${n}</b><span>${esc(label)}</span></div>`;
+    $('#arcade-results-stats').innerHTML = mode === 'blitz'
+      ? stat(run.correct, 'Correct') + stat(`×${run.bestCombo}`, 'Best combo') + stat(run.skips, 'Skipped') + stat(best ? best.score.toLocaleString() : 0, 'Personal best')
+      : stat(Arcade.roundReached(run), 'Round reached') + stat(run.correct, 'Correct') + stat(best ? best.round : 0, 'Best round') + stat(best ? best.score.toLocaleString() : 0, 'Best score');
+    $('#arcade-recap').hidden = !run.log.length;
+    $('#arcade-recap').open = false;
+    $('#arcade-recap-list').innerHTML = run.log.map((l) => `<li class="${l.ok ? 'ok' : 'missed'}"><b>${esc(l.answer)}</b> <span>${esc(l.clue)}</span></li>`).join('');
+    arcadeScreen('results');
+    window.scrollTo(0, 0);
+  }
+
+  function shareArcade() {
+    if (!arcadeLast) return;
+    const { mode, run } = arcadeLast;
+    const what = mode === 'blitz'
+      ? `${run.score.toLocaleString()} points in 60 seconds (${plural(run.correct, 'correct answer')})`
+      : `round ${Arcade.roundReached(run)} with ${run.score.toLocaleString()} points`;
+    const text = `Crossword Hub Arcade · ${ARCADE_MODES[mode].name}: ${what}. Can you beat it?`;
+    const url = canLink() ? `${siteUrl()}#/arcade/${mode}` : '';
+    analytics.track('share', { method: navigator.share ? 'native' : 'copy_link', content_type: `arcade_${mode}` });
+    if (navigator.share) {
+      navigator.share({ text, url: url || undefined }).catch(() => {});
+      return;
+    }
+    copyText(url ? `${text} ${url}` : text, 'Result copied to your clipboard');
+  }
+
+  // On-screen letter keys (phones and tablets) and the keyboard.
+  const KEY_ROWS = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM'];
+  $('#arcade-keys').innerHTML = KEY_ROWS.map((row, i) => `<div class="keys-row">${
+    row.split('').map((k) => `<button type="button" data-arcade-key="${k}">${k}</button>`).join('')
+  }${i === 2 ? '<button type="button" class="key-wide" data-arcade-key="back" aria-label="Delete">⌫</button>' : ''}</div>`).join('');
+  $('#arcade-keys').addEventListener('pointerdown', (e) => e.preventDefault());
+  $('#arcade-keys').addEventListener('click', (e) => {
+    const key = e.target.closest('[data-arcade-key]');
+    if (!key) return;
+    if (key.dataset.arcadeKey === 'back') arcadeBack();
+    else arcadeType(key.dataset.arcadeKey);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!arcadePlaying() || e.ctrlKey || e.metaKey || e.altKey) return;
+    if (e.target.matches && e.target.matches('input, textarea')) return;
+    if (/^[a-z]$/i.test(e.key)) arcadeType(e.key.toUpperCase());
+    else if (e.key === 'Backspace') arcadeBack();
+    else if (e.key === 'Enter') arcadeSubmit();
+    else return;
+    e.preventDefault();
+  });
 
   // ---------- Gift crosswords ----------
   // Made here from the player's own answers and clues and sent as a link
@@ -2950,7 +3320,7 @@
       Object.assign(store, next);
       saveStore();
       // Refresh what's on screen, but leave a puzzle being played alone.
-      if ($('#game-view').hidden) route();
+      if ($('#game-view').hidden && !arcadePlaying()) route();
     },
     onSave: (fn) => storeListeners.push(fn),
   };

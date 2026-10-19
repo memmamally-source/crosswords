@@ -155,8 +155,9 @@ attempts and more puzzles.
 
 *Confirmed 19 October 2026: one Clue Blitz and one Survival attempt per day,
 as separate allowances, resetting at midnight South African time
-(Africa/Johannesburg). The attempt and interruption policy below is proposed
-(Open decision 7).*
+(Africa/Johannesburg). The attempt and interruption rules were confirmed
+(with the owner's adjustments) when Stage 10A was approved on 19 October 2026;
+whether the allowance needs an account remains Open decision 7.*
 
 **What counts as an attempt**
 
@@ -165,21 +166,21 @@ as separate allowances, resetting at midnight South African time
 - Opening the Arcade page, reading the rules, or refreshing before pressing
   Start never uses an attempt.
 
-**Interruptions (proposed)**
+**Interruptions (confirmed)**
 
-- **Clue Blitz:** the 60 seconds run on real time and don't pause. If a player
-  leaves or loses connection and comes back while the minute is still running,
-  they carry on. Once it's over, the run ends with the score reached.
-- **Survival:** the run is saved after every answer, including the clue on
-  screen. A player who leaves or disconnects can resume the **same run, on
-  the same clue**, any time before the daily reset. Coming back never brings a
-  new clue, so leaving can't be used to skip a hard one. An unfinished run
+- **Clue Blitz:** the 60 seconds run on real time and don't pause once a run
+  has started. Refreshing or leaving never resets the timer or creates a
+  fresh run: coming back while the minute is running carries on, and after it
+  the run ends with the score reached.
+- **Survival:** the round, clue, lives and score are saved after every move.
+  A player can resume the **same run, on the same clue**, until midnight
+  South African time. Refreshing never adds lives, resets difficulty or brings
+  a new clue, so leaving can't be used to skip a hard one. An unfinished run
   ends at the reset and keeps its score.
-- **Technical failures:** if a run is used up without a single answer being
-  submitted in its first 15 seconds (for example, the page failed to load),
-  the attempt is returned **once per mode per day**.
+- **Failures before a run starts** never use an attempt: an attempt is only
+  recorded once the first clue is on screen.
 - **No unlimited retries:** abandoning a run, refreshing or closing the app
-  never gives a fresh attempt beyond that one refund.
+  never gives a fresh attempt.
 
 ### 3.4 Hint credits
 
@@ -410,19 +411,26 @@ generated during play, and no AI is involved.
 **A. Clue Blitz**
 
 - A 60-second countdown. Answer as many clues as possible.
-- Correct answers earn points; **Skip** moves on with no points.
-- Optional combo bonus for consecutive correct answers. A skip or wrong
-  answer ends the combo. *Point values proposed (Open decision 8).*
+- **100 points** per correct answer, plus **25 bonus points** for each
+  consecutive correct answer from the third onwards.
+- **Skip** is free but resets the combo; so does a wrong submitted answer
+  (the clue stays, to try again or skip).
+- Score and current combo shown clearly throughout.
 - Clues are drawn at random across topics, mostly easy and medium.
-- Personal best tracked.
+- Personal best tracked. *Confirmed 19 October 2026.*
 
 **B. Survival**
 
-- Start with **three lives**. A wrong submitted answer costs one life; the
-  game ends when all three are gone.
-- Difficulty rises as rounds go by: easy clues first, then medium, hard and
-  finally the rarest answers. *The exact curve is proposed (Open decision 8).*
-- Tracks the highest round reached and the personal best score.
+- Start with **three lives**. A wrong submitted answer costs one life, and so
+  does a **skip**; either way the answer is shown and the next round starts.
+  The game ends when all three are gone.
+- Typing is never penalised: only Submit counts, and part-filled answers are
+  never marked wrong.
+- Rounds 1–5 **Easy**, 6–12 **Medium**, 13–20 **Hard**, then **Expert**,
+  growing harder (longer answers from round 31, longer still from 41). Every
+  player can reach the toughest clues. Points rise with each stage.
+- Tracks the highest round reached and the personal best score. *Confirmed
+  19 October 2026.*
 
 ## 5. Technical principles and guardrails
 
@@ -602,7 +610,7 @@ or with the app-store versions.
 
 ### Stage 10: Crossword Hub Arcade
 
-- **10A, the games (free, nothing enforced):** Clue Blitz and Survival as in
+- **10A, the games (free, nothing enforced): built, awaiting approval.** Clue Blitz and Survival as in
   §4.11, played in the browser from the existing clue bank, with personal
   bests on the device and synced for signed-in players. The allowance rules
   (§3.3) are built into the game logic but switched off, and attempts are
@@ -657,6 +665,7 @@ or with the app-store versions.
 | 19 Oct 2026 | Future free allowance: one Clue Blitz and one Survival attempt a day, separate, reset at midnight SAST; an attempt is used only when play starts | Confirmed (interruption policy proposed) |
 | 19 Oct 2026 | Premium: unlimited Arcade, Brutal, and the earlier library features; never a scoring advantage | Confirmed |
 | 19 Oct 2026 | Testing phase: no paywalls, limits or checkout until the owner approves the launch; build so restrictions can be switched on later; enforce on the server, not in the browser alone | Confirmed |
+| 19 Oct 2026 | Stage 10A approved: Blitz 100 points plus 25 per consecutive correct answer from the third, skip free but resets the combo; Survival three lives, skip costs a life, rounds 1–5 Easy, 6–12 Medium, 13–20 Hard, 21+ Expert and harder; runs survive refreshes; no attempt used before a run starts | Built in Stage 10A |
 
 ## 9. Open decisions
 
@@ -679,15 +688,8 @@ settled on 18 October 2026; see the decision log.
    - a per-account limit (for example 3 gifts a month)
 6. ~~Multiplayer details~~: settled with sensible defaults in Stage 5 (see
    the decision log); change any of them on request.
-7. **Arcade attempt policy** (needed before 10B): the interruption rules in
-   §3.3, the once-a-day refund for failed runs, and whether using the free
-   daily allowance needs a free account once enforced.
-8. **Arcade tuning** (needed for 10A, can be adjusted after testing):
-   - Clue Blitz points (proposed: 100 per correct answer, plus 25 for each
-     answer in a combo of 3 or more; Skip unlimited and free)
-   - the Survival difficulty curve (proposed: rounds 1–5 easy, 6–12 medium,
-     13–20 hard, then the rarest answers) and its scoring
-   - whether free players' Survival runs may reach the rarest "Brutal-level"
-     clues (proposed: yes, since Arcade difficulty isn't the Brutal
-     crossword level)
-9. **Approve the Arcade's place in the roadmap** (Stage 10A next).
+7. **Arcade allowance and accounts** (needed before 10B): whether using the
+   free daily allowance needs a free account once it's enforced.
+8. ~~Arcade tuning~~ — settled 19 October 2026 (§4.11). Survival points per
+   stage (100, 150, 200, 300, 350, 400) were set in 10A and can be tuned.
+9. ~~The Arcade's place in the roadmap~~ — Stage 10A approved 19 October 2026.

@@ -39,6 +39,8 @@ draws the app icons.
 - **The Brutal Challenge:** one Brutal puzzle a week, the same for everyone:
   34 clues from every genre and no easy answers. A new one starts each Monday
   (South African time), at `#/brutal`.
+- **Arcade:** quick-fire clue games at `#/arcade`, one clue at a time from
+  the existing clue bank (see [Arcade](#arcade-clue-blitz-and-survival)).
 - **Gift crosswords (built, shown as "Coming soon"):** make a crossword from
   your own answers and clues (4 to 24), with an optional To, From, title and
   a message shown once it's solved, and send it as a link. The whole gift
@@ -308,6 +310,39 @@ It never sends answers, clues, gift stories, names or email addresses, and
 advertising features are off. `tests/analytics.test.js` checks the fixed
 list. A **Privacy** note, linked from Settings and the prompt, explains all
 this to players.
+
+## Arcade: Clue Blitz and Survival
+
+Two single-clue games at `#/arcade`, drawing on every genre and collection
+(20,432 unique answers; no new content or AI during play). The rules and
+scoring are in `js/arcade.js` (pure logic, tested by `tests/arcade.test.js`);
+the screens are the Arcade section of `js/app.js`.
+
+| | Clue Blitz | Survival |
+|---|---|---|
+| Goal | As many clues as possible in 60 seconds | Last as long as you can on three lives |
+| Clues | Mostly Easy, some Medium | Rounds 1–5 Easy, 6–12 Medium, 13–20 Hard, then Expert (longer answers from round 31 and 41) |
+| Scoring | 100 per correct answer, plus 25 for each one from the third in a row | 100, 150, 200, 300, 350 or 400 per correct answer, by stage |
+| Wrong answer | Ends the combo; try again or skip | Costs a life; the answer is shown |
+| Skip | Free, ends the combo | Costs a life |
+
+- A full, correct answer is accepted as soon as it's typed; anything else waits
+  for Submit, and part-filled answers are never marked wrong.
+- Runs are saved after every move. Refreshing or leaving never resets the Blitz
+  clock (it keeps running) or gives Survival lives back, and the clue on
+  screen stays the same. A Survival run can be resumed until midnight South
+  African time.
+- No clue repeats within a run, and the last 800 answers seen are avoided.
+- Personal bests are kept on the device and synced for signed-in players; runs
+  in progress and recently seen clues stay on the device.
+- Analytics receive only the mode and numbers (score, correct answers,
+  round), never clues or answers.
+
+**Daily allowances (built, off).** The future rule (one free Blitz and one free
+Survival a day, unlimited for Premium) is in `js/arcade.js` (`canStart`,
+`recordAttempt`), with `LIMITS_ACTIVE = false`. An attempt is counted only
+once a run's first clue is on screen. When launched, allowances and Premium
+must be enforced by a server (MASTER_PLAN.md §3.6), not by this switch alone.
 
 ## Multiplayer: Help me solve
 

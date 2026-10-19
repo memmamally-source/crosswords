@@ -81,4 +81,14 @@ assert.deepStrictEqual(Object.keys(withGift.saves), ['daily:2026-10-01']);
 assert.deepStrictEqual(Object.keys(withGift.solves), ['mini:2026-10-01']);
 assert.ok(!JSON.stringify(withGift).includes('SECRET'));
 
+// Arcade: personal bests sync (the better of each); runs in progress don't.
+const arcadeLocal = { solves: {}, saves: {}, arcade: { best: { blitz: { score: 900, correct: 9 } }, runs: { blitz: { mode: 'blitz', score: 300 } }, recent: ['PARIS'] } };
+const arcadeRemote = { arcadeBest: { blitz: { score: 700, correct: 7 }, survival: { score: 1200, round: 11, at: 5 } } };
+const arcadeMerged = mergeStores(arcadeLocal, arcadeRemote);
+assert.deepStrictEqual(arcadeMerged.arcade.best, { blitz: { score: 900, correct: 9 }, survival: { score: 1200, round: 11, at: 5 } });
+assert.deepStrictEqual(arcadeMerged.arcade.runs, arcadeLocal.arcade.runs, 'this device keeps its run');
+assert.deepStrictEqual(Object.keys(syncable(arcadeMerged)).includes('arcadeBest'), true);
+assert.ok(!JSON.stringify(syncable(arcadeMerged)).includes('PARIS'), 'runs and recent clues stay on the device');
+assert.ok(!differs(syncable(arcadeMerged), arcadeMerged), 'an account copy compares equal to the store it came from');
+
 console.log('OK: sync merge tests passed');
