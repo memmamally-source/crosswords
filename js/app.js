@@ -1651,7 +1651,7 @@
       if (!store.solves[otherKey]) {
         actions.push({ label: otherKind === 'mini' ? 'Play the Mini' : 'Play the Daily', primary: true, attr: `data-open="#/${otherKind}/${spec.date}"` });
       }
-      if (arcadeAllowed('blitz')) actions.push({ label: 'Try the Arcade: 60-second Clue Blitz', attr: 'data-open="#/arcade/blitz"' });
+      if (arcadeAllowed('blitz')) actions.push({ label: 'Try Clue Blitz: 60 seconds', attr: 'data-open="#/arcade/blitz"' });
       else if (arcadeAllowed('survival')) actions.push({ label: 'Try the Arcade: Survival', attr: 'data-open="#/arcade/survival"' });
       actions.push({ label: spec.date === today ? 'Back to today' : 'Back to the archive', attr: `data-nav="${spec.date === today ? 'home' : 'archive'}"` });
     }

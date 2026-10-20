@@ -1987,3 +1987,40 @@ body {
   .win-stats:has(> :nth-child(4):last-child) > div:nth-child(n + 3) { border-top: 1px solid var(--rule); }
   .win-stats span { letter-spacing: 0.04em; }
 }
+
+/* Dialogs fit the screen you can actually see: on iPhones 100vh includes the
+   space behind Safari's toolbars, so use the dynamic viewport where it's
+   supported and keep clear of the notch and home bar. Anything taller
+   scrolls inside the dialog. */
+dialog {
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 24px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+/* Opening the dialog focuses its top, not the first button. */
+.win:focus { outline: none; }
+/* The completion dialog, tighter on phones so it usually fits without
+   scrolling. */
+@media (max-width: 560px) {
+  .win { padding: 24px 18px 18px; }
+  .win-art { margin: -6px 0 2px; }
+  .win-art svg { width: 128px; }
+  .win h2 { font-size: 2.1rem; }
+  .win-time { margin-top: 6px; font-size: 2.7rem; }
+  .win-text { font-size: 0.92rem; }
+  .win-stats { margin-top: 12px; }
+  .win-stats div { padding: 6px 4px; }
+  .win-stats b { font-size: 1.3rem; }
+  .win-next { margin-top: 10px; }
+  .win .win-share { margin-top: 14px; padding: 10px; gap: 8px; }
+  /* The main next step full width; the others side by side beneath it. */
+  .win-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 16px 0 4px; }
+  .win-actions .btn { min-height: 44px; }
+  .win-actions .btn-primary, .win-actions > .btn-primary + .btn:last-child, .win-actions > .btn:only-child { grid-column: 1 / -1; }
+  .win-actions .btn:not(.btn-primary) { padding: 6px 10px; white-space: normal; line-height: 1.2; font-size: 0.86rem; }
+}
+@media (max-width: 560px) and (max-height: 760px) {
+  .win-art svg { width: 88px; }
+  .win-time { font-size: 2.3rem; }
+}
