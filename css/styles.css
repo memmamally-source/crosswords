@@ -1464,6 +1464,7 @@ dialog.sheet { width: 100%; max-width: 560px; max-height: 78vh; margin: auto aut
 .arcade-box.current { border-color: var(--primary); }
 .arcade-box.revealed { border-color: var(--wrong); color: var(--wrong); }
 .arcade-boxes.shake { animation: arcade-shake 0.35s; }
+.duel-note.shake { animation: arcade-shake 0.35s; }
 @keyframes arcade-shake { 25% { transform: translateX(-6px); } 50% { transform: translateX(6px); } 75% { transform: translateX(-3px); } }
 @media (prefers-reduced-motion: reduce) { .arcade-boxes.shake { animation: none; } }
 .arcade-feedback { margin: 0; min-height: 1.4em; text-align: center; font-weight: 700; }
@@ -2154,7 +2155,13 @@ dialog {
 .duel-note { grid-column: 1 / -1; margin: 0; font-size: 0.8rem; color: var(--accent); }
 .duel-note:empty { display: none; }
 .duel-resign { grid-column: 1 / -1; justify-self: end; font-size: 0.8rem; }
-#game-view.duel-mode [data-menu="reveal"], #game-view.duel-mode [data-menu="check"], #game-view.duel-mode #new-btn,
+/* In a duel Reveal is the last tool (Check is hidden), so its menu opens
+   leftwards to stay on screen. */
+#game-view.duel-mode [data-menu-list="reveal"] { left: auto; right: 0; min-width: 240px; }
+/* Frozen after a duel hint: the grid dims and ignores typing. */
+#game-view.duel-frozen #board { opacity: 0.45; filter: grayscale(0.6); transition: opacity 0.2s; }
+#game-view.duel-frozen .duel-note { color: var(--accent); font-weight: 800; }
+#game-view.duel-mode [data-menu="check"], #game-view.duel-mode #new-btn,
 #game-view.duel-mode #room-start, #game-view.duel-mode .challenge-banner { display: none !important; }
 @media (pointer: coarse) and (max-width: 900px) and (orientation: portrait) {
   .duel-bar { margin-bottom: 6px; padding: 6px 10px; }
