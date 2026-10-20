@@ -2303,13 +2303,35 @@
     else typeLetter(k);
   });
   docked.addEventListener('change', placeDock);
+  // Typing with the phone's own keyboard on a phone held upright. Phones
+  // (iPhones above all) can't reliably keep a bar pinned just above their
+  // keyboard, and their own bars take room there too, so while it's open the
+  // clue bar moves up under the tools and the header steps aside, giving the
+  // grid the space between them and the keyboard (css: body.keyboard-open).
+  const keyboardOpen = () => document.body.classList.contains('keyboard-open');
+  function setKeyboardOpen() {
+    const on = !!game && docked.matches && !appKeys() && document.activeElement === typeInput && !$('#game-view').hidden;
+    if (on === keyboardOpen()) return;
+    document.body.classList.toggle('keyboard-open', on);
+    if (on) document.documentElement.style.setProperty('--tools-height', `${$('.toolbar').offsetHeight}px`);
+    requestAnimationFrame(keepActiveInView);
+  }
+
   function keepActiveInView() {
     if (!game || !docked.matches || $('#game-view').hidden || game.solved || !cellEls.length) return;
     const el = cellEls[game.sel.r] && cellEls[game.sel.r][game.sel.c];
     if (!el) return;
     const vv = window.visualViewport;
-    const viewTop = (vv ? vv.offsetTop : 0) + $('.toolbar').getBoundingClientRect().height + 8;
-    const viewBottom = Math.min((vv ? vv.offsetTop + vv.height : window.innerHeight) - $('#clue-bar').getBoundingClientRect().height, $('#clue-bar').getBoundingClientRect().top) - 12;
+    const visibleBottom = vv ? vv.offsetTop + vv.height : window.innerHeight;
+    // With the phone's keyboard open the clue bar sits under the tools, and
+    // the browser may float its own controls (Safari's address bar) just
+    // above the keyboard, so keep a margin there.
+    const viewTop = keyboardOpen()
+      ? $('#clue-bar').getBoundingClientRect().bottom + 8
+      : (vv ? vv.offsetTop : 0) + $('.toolbar').getBoundingClientRect().height + 8;
+    const viewBottom = keyboardOpen()
+      ? visibleBottom - 64
+      : Math.min(visibleBottom - $('#clue-bar').getBoundingClientRect().height, $('#clue-bar').getBoundingClientRect().top) - 12;
     followHorizontally(el);
     const rect = el.getBoundingClientRect();
     if (rect.bottom > viewBottom) window.scrollBy({ top: rect.bottom - viewBottom, behavior: 'smooth' });
@@ -2814,6 +2836,8 @@
     if (!e.isComposing) resetTyping();
   });
   typeInput.addEventListener('compositionend', () => setTimeout(resetTyping));
+  typeInput.addEventListener('focus', setKeyboardOpen);
+  typeInput.addEventListener('blur', () => setTimeout(setKeyboardOpen, 60)); // (not while focus moves straight back)
   // Moving between clues shouldn't close the device keyboard: stop these
   // controls from taking focus away from the text box.
   document.addEventListener('pointerdown', (e) => {
