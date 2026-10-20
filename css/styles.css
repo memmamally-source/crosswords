@@ -1728,7 +1728,7 @@ body {
 .win-share-row .link-btn { font-size: 0.9rem; }
 .win-share-row [aria-expanded='true']::after { content: ' ▴'; }
 .win-share-row [aria-expanded='false']::after { content: ' ▾'; }
-@media (max-width: 340px) { .win-share-extra { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 340px) { .win-share-extra { grid-template-columns: repeat(2, minmax(0, 1fr)); } .win-share-extra .btn:last-child { grid-column: 1 / -1; } }
 
 /* Arcade: ink-drawn mode cards on a sunburst. */
 #arcade-hub .page-head { position: relative; overflow: hidden; }
