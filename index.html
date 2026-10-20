@@ -25,8 +25,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600;1,6..72,700&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=34" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600;1,6..72,700&family=Public+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=35" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -168,7 +168,7 @@
         <div class="page-head">
           <p class="kicker">Crossword Hub Arcade</p>
           <h1 class="page-title" id="arcade-hub-title">Quick-fire clue games</h1>
-          <p class="section-deck">One clue at a time from our fact-checked clue bank. Free to play, as often as you like.</p>
+          <p class="section-deck">One clue at a time from our fact-checked clue bank. Free to play: one game of each a day.</p>
         </div>
         <div class="arcade-cards arcade-cards-hub" id="arcade-hub-cards"></div>
       </section>
@@ -407,6 +407,7 @@
 
   <dialog id="win-dialog" aria-labelledby="win-title">
     <div class="win">
+      <div class="win-art" aria-hidden="true"><svg viewBox="0 0 230 130" width="200" height="113"><g fill="#6e8f4e" stroke="#2a241c" stroke-width="1.4"><ellipse cx="62" cy="110" rx="8" ry="4" transform="rotate(-30 62 110)"/><ellipse cx="52" cy="94" rx="9" ry="4" transform="rotate(-50 52 94)"/><ellipse cx="46" cy="76" rx="9" ry="4" transform="rotate(-70 46 76)"/><ellipse cx="46" cy="58" rx="9" ry="4" transform="rotate(-95 46 58)"/><ellipse cx="52" cy="42" rx="8" ry="4" transform="rotate(-120 52 42)"/><ellipse cx="168" cy="110" rx="8" ry="4" transform="rotate(30 168 110)"/><ellipse cx="178" cy="94" rx="9" ry="4" transform="rotate(50 178 94)"/><ellipse cx="184" cy="76" rx="9" ry="4" transform="rotate(70 184 76)"/><ellipse cx="184" cy="58" rx="9" ry="4" transform="rotate(95 184 58)"/><ellipse cx="178" cy="42" rx="8" ry="4" transform="rotate(120 178 42)"/></g><path d="M72 116C50 96 46 68 56 38M158 116c22-20 26-48 16-78" fill="none" stroke="#2a241c" stroke-width="1.8"/><g transform="translate(69 18)"><path d="M24 14h44v20c0 16-10 28-22 28S24 50 24 34z" fill="#e3b64c" stroke="#2a241c" stroke-width="3"/><path d="M24 20H12c0 14 8 22 16 22M68 20h12c0 14-8 22-16 22" fill="none" stroke="#2a241c" stroke-width="3"/><path d="M40 62h12v12H40z" fill="#b98a22" stroke="#2a241c" stroke-width="2.5"/><path d="M28 74h36v10H28z" fill="#2f5a43" stroke="#2a241c" stroke-width="2.5"/><path d="M22 84h48v10H22z" fill="#2a241c"/><path d="M46 24l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7z" fill="#f7efdc" stroke="#2a241c" stroke-width="1.5"/></g><path d="M30 24l3 6 6 1-5 4 1 6-5-3-5 3 1-6-5-4 6-1zM196 16l3 6 6 1-5 4 1 6-5-3-5 3 1-6-5-4 6-1zM206 88l2 5 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1zM22 84l2 5 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1z" fill="#e3b64c" stroke="#2a241c" stroke-width="1"/></svg></div>
       <p class="kicker" id="win-kicker"></p>
       <h2 id="win-title"></h2>
       <p class="win-time" id="win-time"></p>
@@ -414,11 +415,21 @@
       <div class="win-stats" id="win-stats"></div>
       <p class="win-next" id="win-next" hidden></p>
       <blockquote class="gift-note" id="win-gift" hidden></blockquote>
-      <div class="win-share" id="win-share" role="group" aria-label="Share your result">
-        <button class="btn btn-primary" data-action="share">Share</button>
-        <button class="btn btn-whatsapp" data-action="share-whatsapp">WhatsApp</button>
-        <button class="btn" data-action="share-copy">Copy challenge link</button>
-        <button class="btn" data-action="share-image">Save image</button>
+      <div class="win-share" id="win-share" role="group" aria-labelledby="win-share-title">
+        <p class="win-share-title" id="win-share-title">Share your result.</p>
+        <div class="win-share-main">
+          <button class="btn btn-whatsapp" data-action="share-whatsapp">WhatsApp</button>
+          <button class="btn btn-primary" data-action="share-copy">Copy link</button>
+        </div>
+        <div class="win-share-row">
+          <button class="link-btn" data-action="share" id="share-native" hidden>Share…</button>
+          <button class="link-btn" data-action="share-more" aria-expanded="false" aria-controls="share-extra">More sharing options</button>
+        </div>
+        <div class="win-share-extra" id="share-extra" hidden>
+          <button class="btn" data-action="share-facebook">Facebook</button>
+          <button class="btn" data-action="share-x">X</button>
+          <button class="btn" data-action="share-image">Save image</button>
+        </div>
       </div>
       <div class="win-actions" id="win-actions"></div>
       <button class="link-btn" data-action="close-dialog">View the completed grid</button>
@@ -559,24 +570,24 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=34"></script>
-  <script src="js/words.js?v=34"></script>
-  <script src="js/collections.js?v=34"></script>
-  <script src="js/genres.js?v=34"></script>
-  <script src="js/sync.js?v=34"></script>
-  <script src="js/featured.js?v=34"></script>
-  <script src="js/hints.js?v=34"></script>
-  <script src="js/stats.js?v=34"></script>
-  <script src="js/access.js?v=34"></script>
-  <script src="js/share.js?v=34"></script>
-  <script src="js/gifts.js?v=34"></script>
-  <script src="js/arcade.js?v=34"></script>
-  <script src="js/rooms.js?v=34"></script>
-  <script src="js/firebase-config.js?v=34"></script>
-  <script src="js/analytics.js?v=34"></script>
-  <script src="js/app.js?v=34"></script>
-  <script type="module" src="js/firebase.js?v=34"></script>
-  <script type="module" src="js/account.js?v=34"></script>
-  <script type="module" src="js/room.js?v=34"></script>
+  <script src="js/generator.js?v=35"></script>
+  <script src="js/words.js?v=35"></script>
+  <script src="js/collections.js?v=35"></script>
+  <script src="js/genres.js?v=35"></script>
+  <script src="js/sync.js?v=35"></script>
+  <script src="js/featured.js?v=35"></script>
+  <script src="js/hints.js?v=35"></script>
+  <script src="js/stats.js?v=35"></script>
+  <script src="js/access.js?v=35"></script>
+  <script src="js/share.js?v=35"></script>
+  <script src="js/gifts.js?v=35"></script>
+  <script src="js/arcade.js?v=35"></script>
+  <script src="js/rooms.js?v=35"></script>
+  <script src="js/firebase-config.js?v=35"></script>
+  <script src="js/analytics.js?v=35"></script>
+  <script src="js/app.js?v=35"></script>
+  <script type="module" src="js/firebase.js?v=35"></script>
+  <script type="module" src="js/account.js?v=35"></script>
+  <script type="module" src="js/room.js?v=35"></script>
 </body>
 </html>

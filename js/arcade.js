@@ -129,7 +129,7 @@
       used: [], recent: recent.slice(-RECENT_LIMIT), log: [], finished: false,
     };
     if (mode === 'blitz') Object.assign(run, { endsAt: now + BLITZ.seconds * 1000, combo: 0, bestCombo: 0, skips: 0, wrong: 0 });
-    else Object.assign(run, { round: 1, lives: SURVIVAL.lives, misses: 0 });
+    else Object.assign(run, { round: 1, lives: SURVIVAL.lives, misses: 0, sheet: [] });
     run.clue = nextClue(run, pool);
     run.used.push(run.clue.answer);
     return run;
@@ -162,6 +162,12 @@
     run.log.push(entry);
     if (run.log.length > LOG_LIMIT) run.log.shift();
   };
+  // Survival's score sheet: one line per round played (never the answer).
+  const mark = (run, ok, points) => {
+    if (!run.sheet) run.sheet = []; // runs saved before the score sheet
+    run.sheet.push({ round: run.round, level: run.clue.level, ok, points });
+    if (run.sheet.length > LOG_LIMIT) run.sheet.shift();
+  };
 
   // Points for a correct Blitz answer: 100, plus 25 from the third answer in
   // a row onwards.
@@ -187,6 +193,7 @@
         points = blitzPoints(run.combo);
       } else {
         points = tierFor(run.round).points;
+        mark(run, true, points);
         run.round++;
       }
       run.score += points;
@@ -218,6 +225,7 @@
   // Survival: a wrong answer or a skip costs a life and moves on to the
   // next round. The answer isn't revealed.
   function loseLife(run, pool, now, day, result) {
+    mark(run, false, 0);
     run.lives--;
     run.misses++;
     if (run.lives <= 0) {

@@ -1682,3 +1682,122 @@ body {
   .hero-title { font-size: 2.6rem; }
   .genre-card .meta { padding-right: 70px; }
 }
+
+/* ---------- Visual refresh, part 2 ---------- */
+
+/* The crossword: a crisp, inked board on parchment. */
+.board { border-radius: 4px; box-shadow: 3px 3px 0 var(--rule); }
+.cell { font-weight: 700; }
+.clue-bar { background: var(--cell); border: 1px solid var(--ink); border-radius: 8px; box-shadow: 0 2px 0 var(--rule); }
+.clue-bar strong { font-family: var(--font-head); font-style: italic; }
+.clue-nav:hover { background: var(--wash); }
+@media (pointer: coarse) and (max-width: 900px) and (orientation: portrait) {
+  .clue-bar { border: 0; border-top: 1.5px solid var(--ink); border-radius: 0; box-shadow: 0 -6px 18px rgba(42, 36, 28, 0.12); }
+  .clue-bar .clue-nav { border: 1px solid var(--rule); border-radius: 8px; background: var(--paper); }
+  body.in-game .phone-keys:not([hidden]) { border-top: 1px solid var(--ink); }
+}
+/* Keys as typeset tiles, on the game screens. */
+.keys-row button, .arcade-keys .keys-row button {
+  border: 1px solid #c2b28c;
+  border-radius: 6px;
+  background: var(--cell);
+  font-weight: 700;
+  box-shadow: 0 2px 0 #b9a77e;
+}
+.keys-row button:active, .arcade-keys .keys-row button:active { transform: translateY(1px); box-shadow: 0 1px 0 #b9a77e; }
+.keys-row .key-wide, .arcade-keys .key-wide { background: var(--wash) !important; }
+:root[data-theme='dark'] .keys-row button { border-color: #4a4337; box-shadow: 0 2px 0 #0b0a08; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .keys-row button { border-color: #4a4337; box-shadow: 0 2px 0 #0b0a08; } }
+
+/* The completion dialog: a trophy, a ruled score line, and sharing. */
+.win-art { display: flex; justify-content: center; margin: -4px 0 6px; }
+.win-art svg { width: 180px; height: auto; }
+.win-time { font-family: var(--font-display); font-weight: 400; font-size: 3.2rem; letter-spacing: 0; line-height: 1; }
+.win-stats { gap: 0; margin: 18px 0 0; border-block: 1px solid var(--ink); }
+.win-stats div { flex: 1; padding: 8px 6px; }
+.win-stats div + div { border-left: 1px solid var(--rule); }
+.win-stats b { font-family: var(--font-head); font-weight: 700; }
+.win-stats span { text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; font-size: 0.66rem; }
+.win .win-share { display: grid; grid-template-columns: none; gap: 10px; margin-top: 20px; padding: 14px; border: 1px dashed var(--ink-soft); border-radius: 10px; background: var(--cell); }
+.win-share-title { margin: 0; font-family: var(--font-head); font-style: italic; font-weight: 700; font-size: 1.15rem; }
+.win-share-main, .win-share-extra { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.win-share-extra { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.win-share-extra[hidden] { display: none; }
+.win-share-main .btn, .win-share-extra .btn { justify-content: center; padding-inline: 8px; }
+.win-share-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 18px; }
+.win-share-row .link-btn { font-size: 0.9rem; }
+.win-share-row [aria-expanded='true']::after { content: ' ▴'; }
+.win-share-row [aria-expanded='false']::after { content: ' ▾'; }
+@media (max-width: 340px) { .win-share-extra { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Arcade: ink-drawn mode cards on a sunburst. */
+#arcade-hub .page-head { position: relative; overflow: hidden; }
+#arcade-hub .page-head::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 100%;
+  width: 900px;
+  height: 900px;
+  transform: translate(-50%, -50%);
+  background: repeating-conic-gradient(from 0deg, rgba(227, 182, 76, 0.16) 0deg 7deg, transparent 7deg 14deg);
+  -webkit-mask-image: radial-gradient(circle, #000 25%, transparent 60%);
+  mask-image: radial-gradient(circle, #000 25%, transparent 60%);
+  pointer-events: none;
+}
+.arcade-mode { position: relative; gap: 14px; border: 1.5px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); }
+.arcade-mode:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--ink); }
+.arcade-mode.arcade-blitz { background: color-mix(in srgb, var(--mustard) 26%, var(--cell)); }
+.arcade-mode.arcade-survival { background: color-mix(in srgb, var(--coral) 20%, var(--cell)); }
+.arcade-art { flex: none; display: grid; place-items: center; width: 64px; height: 64px; }
+.arcade-art svg, .arcade-start .arcade-badge svg { width: 100%; height: 100%; }
+.arcade-mode-name { font-weight: 400; font-size: 1.7rem; }
+.arcade-mode-go { border: 1.5px solid var(--ink); box-shadow: 0 2px 0 var(--forest-deep); }
+.arcade-mode-go.done { box-shadow: none; }
+.arcade-start .arcade-badge { width: 76px; height: 76px; padding: 0; border-radius: 0; background: none; }
+.arcade-start h1, .arcade-results h1 { font-size: clamp(2.4rem, 7vw, 3.2rem); }
+.arcade-rules li::marker { color: var(--accent); }
+
+/* Pencil marks (Caveat): scores and annotations in the Arcade only. */
+.pencil-mark { font-family: 'Caveat', 'Bradley Hand', 'Segoe Print', cursive; font-weight: 700; letter-spacing: 0; }
+
+/* Clue Blitz: a ruled scoreboard with a stopwatch. */
+.hud-item { border: 1px solid var(--ink); border-radius: 6px; background: var(--cell); }
+.hud-item b.pencil-mark { font-size: 2rem; line-height: 1; }
+.hud-time { grid-template-columns: auto auto; grid-template-areas: 'w t' 'l l'; align-items: center; column-gap: 6px; background: var(--mustard); color: #2a241c; }
+.hud-time .stopwatch { grid-area: w; width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; }
+.hud-time b { grid-area: t; }
+.hud-time span { grid-area: l; color: #3b3122; }
+.hud-time.low { background: var(--coral); }
+.hud-time.low b { color: #2a241c; }
+.hud-combo.hot { border-color: var(--ink); background: color-mix(in srgb, var(--mustard) 30%, var(--cell)); }
+.hud-bar { background: var(--rule); }
+.hud-bar i { background: #2f5a43; }
+.arcade-card { border: 1.5px solid var(--ink); border-radius: 10px; background: var(--cell); box-shadow: 0 3px 0 var(--rule); }
+.arcade-meta { font-family: var(--font-head); font-style: italic; font-weight: 600; font-size: 0.95rem; letter-spacing: 0; text-transform: none; color: var(--ink-soft); }
+.arcade-clue { font-family: var(--font-head); font-weight: 500; }
+.arcade-box { border-color: var(--ink); border-radius: 3px; background: var(--paper); }
+.arcade-box.current { border-color: var(--primary); box-shadow: inset 0 -3px 0 var(--primary); }
+.arcade-score { font-family: var(--font-display); font-weight: 400; }
+
+/* Survival: the official score sheet. */
+.arcade-hud:has(.score-sheet) { padding-bottom: 0; }
+.score-sheet { flex: 1; border: 1.5px solid var(--ink); background: var(--cell); box-shadow: 0 3px 0 var(--rule); font-size: 0.85rem; }
+.sheet-head { display: flex; align-items: center; justify-content: space-between; padding: 6px 10px; background: #2f5a43; color: #f7efdc; border-bottom: 2px solid var(--ink); font-family: var(--font-head); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.82rem; }
+.sheet-head .hud-lives { gap: 3px; }
+.sheet-head .life svg { width: 20px; height: 20px; fill: var(--coral); stroke: #f7efdc; stroke-width: 1.6; }
+.sheet-head .life.lost svg { fill: none; stroke: rgba(247, 239, 220, 0.6); }
+.score-sheet table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.score-sheet th { padding: 3px 8px; background: var(--wash); border-bottom: 1px solid var(--ink); font-size: 0.66rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; text-align: left; }
+.score-sheet th:first-child { width: 3em; }
+.score-sheet th:nth-child(3), .score-sheet th:nth-child(4) { width: 4.2em; text-align: center; white-space: nowrap; letter-spacing: 0; }
+.score-sheet td { padding: 0 8px; border-bottom: 1px solid var(--rule); }
+.score-sheet td + td, .score-sheet th + th { border-left: 1px solid var(--ink); }
+.score-sheet td.pencil-mark { font-size: 1.25rem; line-height: 1.3; text-align: center; }
+.score-sheet td.ok { color: var(--good); }
+.score-sheet td.miss { color: var(--accent); }
+.sheet-foot { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 4px 10px; font-family: var(--font-head); font-weight: 700; font-size: 1rem; }
+.sheet-foot .pencil-mark { font-size: 1.45rem; }
+@media (max-height: 700px) { .score-sheet table { display: none; } }
+.hud-item span { text-align: center; }

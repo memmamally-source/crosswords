@@ -1620,7 +1620,9 @@
     $('#board').classList.add('solved');
     celebrate(clean);
     $('#win-kicker').textContent = spec.kicker;
-    $('#win-title').textContent = clean ? 'Solved' : 'Puzzle complete';
+    $('#win-title').textContent = clean ? 'Puzzle solved!' : 'Puzzle complete';
+    $('#share-extra').hidden = true;
+    $('[data-action="share-more"]').setAttribute('aria-expanded', 'false');
     $('#win-time').textContent = formatTime(time);
     const newBadges = earnedBadges(noHintRecord()).filter((b) => !badgesBefore.includes(b));
     analytics.track('puzzle_complete', {
@@ -1717,7 +1719,13 @@
       site: `${location.host}${location.pathname}`.replace(/\/$/, ''),
     });
   }
-  const cardBlob = () => new Promise((resolve) => resultCard().toBlob(resolve, 'image/png'));
+  // The card's fonts must be loaded before it's drawn (canvas won't wait).
+  async function cardBlob() {
+    try {
+      await Promise.all(['400 112px "Instrument Serif"', 'italic 700 40px Newsreader', 'italic 400 32px Newsreader', '800 28px "Public Sans"'].map((f) => document.fonts.load(f)));
+    } catch (e) { /* draw with fallback fonts */ }
+    return new Promise((resolve) => resultCard().toBlob(resolve, 'image/png'));
+  }
 
   function copyText(text, message) {
     const done = () => toast(message);
@@ -1763,6 +1771,27 @@
     }
     copyText(text, 'Result copied to your clipboard');
   }
+  // Less-used platforms, under "More sharing options". Both need a link.
+  function shareFacebook() {
+    if (!canLink()) return copyText(shareText(), 'Result copied to your clipboard');
+    trackShare('facebook');
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(challengeUrl())}`, '_blank', 'noopener');
+  }
+  function shareX() {
+    trackShare('x');
+    const r = result();
+    const text = `Crossword Hub · ${resultName(game.spec)}: ${formatTime(r.time)}${r.noHint ? ', a No-Hint solve' : ''}. Can you beat it?`;
+    const url = canLink() ? `&url=${encodeURIComponent(challengeUrl())}` : '';
+    window.open(`https://x.com/intent/post?text=${encodeURIComponent(text)}${url}`, '_blank', 'noopener');
+  }
+  function toggleShareMore(btn) {
+    const open = $('#share-extra').hidden;
+    $('#share-extra').hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+  }
+  // The phone's own share sheet, where there is one.
+  $('#share-native').hidden = typeof navigator.share !== 'function';
+
   function shareWhatsApp() {
     trackShare('whatsapp');
     window.open(`https://wa.me/?text=${encodeURIComponent(shareText())}`, '_blank', 'noopener');
@@ -2484,6 +2513,9 @@
       case 'share-whatsapp': shareWhatsApp(); break;
       case 'share-copy': copyChallenge(); break;
       case 'share-image': saveImage(); break;
+      case 'share-facebook': shareFacebook(); break;
+      case 'share-x': shareX(); break;
+      case 'share-more': toggleShareMore(actionEl); break;
       case 'new':
         if (game.spec.kind === 'genre') {
           closeDialogs();
@@ -2716,6 +2748,8 @@
       name: 'Clue Blitz',
       icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></svg>',
       tagline: '60 seconds. How many clues can you crack?',
+      // Ink drawings for the mode cards: a stopwatch, and a heart with a trophy.
+      art: '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M27 4h10v6H27z" fill="#e3b64c" stroke="#2a241c" stroke-width="2.4"/><path d="M48 12l5-5 4 4-5 5" fill="#e3b64c" stroke="#2a241c" stroke-width="2.4" stroke-linejoin="round"/><circle cx="32" cy="36" r="23" fill="#fbf5e6" stroke="#2a241c" stroke-width="3"/><circle cx="32" cy="36" r="18" fill="none" stroke="#2a241c" stroke-width="1.2" stroke-dasharray="1.5 7.9"/><path d="M34 18L24 38h8l-2 16 11-21h-8z" fill="#e3b64c" stroke="#2a241c" stroke-width="2.2" stroke-linejoin="round"/></svg>',
       rules: [
         'One clue at a time, mostly easy and medium.',
         '100 points for each correct answer.',
@@ -2729,6 +2763,7 @@
       name: 'Survival',
       icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z" /></svg>',
       tagline: 'Three lives. The clues get harder. How far can you go?',
+      art: '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M30 56S6 41 6 22a13 13 0 0124-7 13 13 0 0124 7c0 4-1 8-3 11" fill="#da6a4f" stroke="#2a241c" stroke-width="3" stroke-linejoin="round"/><path d="M14 20a7 7 0 016-6" fill="none" stroke="#f7efdc" stroke-width="2.4" stroke-linecap="round"/><g transform="translate(36 30)"><path d="M4 2h18v8c0 6-4 10-9 10S4 16 4 10z" fill="#e3b64c" stroke="#2a241c" stroke-width="2.2"/><path d="M4 5H0c0 5 3 8 6 8M22 5h4c0 5-3 8-6 8" fill="none" stroke="#2a241c" stroke-width="2"/><path d="M10 20h6v4h-6zM6 24h14v5H6z" fill="#2f5a43" stroke="#2a241c" stroke-width="2"/></g></svg>',
       rules: [
         'Rounds 1–5 are Easy, 6–12 Medium, 13–20 Hard, then Expert and tougher still.',
         'A wrong answer or a skip costs a life.',
@@ -2739,6 +2774,7 @@
     },
   };
   const LEVEL_LABEL = Arcade.LEVEL_LABEL;
+  const STOPWATCH = '<svg class="stopwatch" viewBox="0 0 40 40" aria-hidden="true"><path d="M17 3h6M20 3v5M31 9l3-3" /><circle cx="20" cy="23" r="14" /><path d="M20 23V14" /></svg>';
   let arcade = null; // the run on screen: { mode, run, guess, timer, busy }
   let arcadeLast = null; // the last finished run, for the results screen
   const arcadePlaying = () => !!(arcade && arcade.run && !$('#arcade-play').hidden);
@@ -2774,7 +2810,7 @@
           ? `Played today · next game in ${untilNextGame()}`
           : arcadeBestLine(mode).replace('Personal best: ', 'Best: ').replace('No personal best yet.', 'Free to play: one game a day');
       return `<button class="arcade-mode arcade-${mode}" data-open="#/arcade/${mode}">
-        <span class="arcade-badge">${m.icon}</span>
+        <span class="arcade-art">${m.art}</span>
         <span class="arcade-mode-copy">
           <span class="arcade-mode-name">${esc(m.name)}</span>
           <span class="arcade-mode-tag">${esc(m.tagline)}</span>
@@ -2815,7 +2851,7 @@
     arcade = { mode };
     $('#arcade-start').dataset.mode = mode;
     $('#arcade-start').className = `arcade-start arcade-${mode}`;
-    $('#arcade-start-badge').innerHTML = m.icon;
+    $('#arcade-start-badge').innerHTML = m.art;
     $('#arcade-start-title').textContent = m.name;
     $('#arcade-start-tagline').textContent = m.tagline;
     $('#arcade-start-rules').innerHTML = m.rules.map((r) => `<li>${esc(r)}</li>`).join('');
@@ -2895,16 +2931,23 @@
       const left = Math.ceil(Arcade.timeLeft(run, now()) / 1000);
       const bonus = run.combo + 1 >= Arcade.BLITZ.comboFrom;
       $('#arcade-hud').innerHTML = `
-        <div class="hud-item hud-time${left <= 10 ? ' low' : ''}"><b>${left}</b><span>seconds</span></div>
-        <div class="hud-item"><b>${run.score.toLocaleString()}</b><span>points</span></div>
-        <div class="hud-item hud-combo${run.combo >= 2 ? ' hot' : ''}"><b>×${run.combo}</b><span>${bonus ? 'combo: +25 next' : 'combo'}</span></div>
+        <div class="hud-item hud-time${left <= 10 ? ' low' : ''}">${STOPWATCH}<b>${left}</b><span>seconds</span></div>
+        <div class="hud-item"><b class="pencil-mark">${run.score.toLocaleString()}</b><span>points</span></div>
+        <div class="hud-item hud-combo${run.combo >= 2 ? ' hot' : ''}"><b class="pencil-mark">×${run.combo}</b><span>${bonus ? 'combo: +25 next' : 'combo'}</span></div>
         <div class="hud-bar" aria-hidden="true"><i style="width:${(100 * Arcade.timeLeft(run, now())) / (Arcade.BLITZ.seconds * 1000)}%"></i></div>`;
     } else {
+      // An old-fashioned score sheet: the last few rounds (never the answers).
       const lives = Array.from({ length: Arcade.SURVIVAL.lives }, (_, i) => `<span class="life${i < run.lives ? '' : ' lost'}">${ARCADE_MODES.survival.icon}</span>`).join('');
+      const lines = (run.sheet || []).slice(-3).map((l) => `<tr>
+          <td>${l.round}</td><td>${esc(LEVEL_LABEL[l.level] || l.level)}</td>
+          <td class="pencil-mark ${l.ok ? 'ok' : 'miss'}"><span aria-hidden="true">${l.ok ? '✓' : '✗'}</span><span class="visually-hidden">${l.ok ? 'correct' : 'missed'}</span></td>
+          <td class="pencil-mark">${l.ok ? l.points : '–'}</td></tr>`).join('');
       $('#arcade-hud').innerHTML = `
-        <div class="hud-item hud-lives" aria-label="${plural(run.lives, 'life')} left">${lives}</div>
-        <div class="hud-item"><b>${run.round}</b><span>round</span></div>
-        <div class="hud-item"><b>${run.score.toLocaleString()}</b><span>points</span></div>`;
+        <div class="score-sheet">
+          <div class="sheet-head"><span>Official score sheet</span><span class="hud-lives" role="img" aria-label="${plural(run.lives, 'life')} left">${lives}</span></div>
+          ${lines ? `<table><thead><tr><th scope="col">Rd</th><th scope="col">Level</th><th scope="col">✓/✗</th><th scope="col">Pts</th></tr></thead><tbody>${lines}</tbody></table>` : ''}
+          <div class="sheet-foot"><span>Round ${run.round} · ${esc(LEVEL_LABEL[run.clue.level] || '')}</span><b class="pencil-mark">Total ${run.score.toLocaleString()}</b></div>
+        </div>`;
     }
   }
 
