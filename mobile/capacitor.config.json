@@ -1,0 +1,19 @@
+{
+  "appId": "app.crosswordhub",
+  "appName": "Crossword Hub",
+  "webDir": "www",
+  "backgroundColor": "#efe5cc",
+  "android": {
+    "webContentsDebuggingEnabled": false
+  },
+  "ios": {
+    "contentInset": "never",
+    "scheme": "Crossword Hub"
+  },
+  "plugins": {
+    "SystemBars": {
+      "insetsHandling": "css",
+      "initialViewportFitValueHint": "cover"
+    }
+  }
+}

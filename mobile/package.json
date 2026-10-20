@@ -1,0 +1,20 @@
+{
+  "name": "crossword-hub-app",
+  "private": true,
+  "description": "Crossword Hub for Android and iOS (Capacitor): the website's files packaged as an app. See README.md in this folder.",
+  "scripts": {
+    "web": "node copy-web.js",
+    "sync": "node copy-web.js && cap sync",
+    "assets": "capacitor-assets generate --iconBackgroundColor '#efe5cc' --iconBackgroundColorDark '#1c1915' --splashBackgroundColor '#efe5cc' --splashBackgroundColorDark '#1c1915'"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.3",
+    "@capacitor/core": "8.5.3",
+    "@capacitor/ios": "8.5.3"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "3.0.5",
+    "@capacitor/cli": "8.5.3",
+    "firebase": "10.12.2"
+  }
+}

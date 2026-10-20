@@ -3,6 +3,11 @@
   'use strict';
 
   const $ = (sel, el = document) => el.querySelector(sel);
+  // Running as the Android or iOS app (mobile/): the same page, without
+  // what only makes sense on the web (installing it, the service worker).
+  const inApp = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+  const SITE = 'https://crosswordhub.app/'; // where links to share point from the app
+  if (inApp) document.documentElement.classList.add('in-app');
   const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -2117,9 +2122,11 @@
     } catch (e) {
       framed = true;
     }
-    return !framed && /^https?:/.test(location.protocol);
+    return inApp || (!framed && /^https?:/.test(location.protocol));
   }
-  const siteUrl = () => `${location.origin}${location.pathname}`;
+  // In the app the page's own address is local to the phone, so shared
+  // links use the website's.
+  const siteUrl = () => (inApp ? SITE : `${location.origin}${location.pathname}`);
   function result() {
     const points = gamePoints();
     return { time: game.elapsed, points, noHint: !game.room && game.reveals === 0 && !points && !game.checks && !game.autochecked };
@@ -4848,7 +4855,7 @@
   const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   function showInstallCard() {
     const card = $('#install-card');
-    if (standalone() || store.installDismissed) { card.hidden = true; return; }
+    if (inApp || standalone() || store.installDismissed) { card.hidden = true; return; }
     if (installEvent) {
       $('#install-btn').hidden = false;
       card.hidden = false;
@@ -4876,7 +4883,9 @@
     showInstallCard();
   });
   window.addEventListener('appinstalled', () => { $('#install-card').hidden = true; });
-  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+  // In the app the files are already on the phone: no service worker.
+  if (inApp) $$('.privacy-more a[href]').forEach((a) => { if (!a.href.startsWith('mailto:')) a.href = `${SITE}${a.getAttribute('href')}`; });
+  else if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
     window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
   }
 

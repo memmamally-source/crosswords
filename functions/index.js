@@ -9,7 +9,8 @@
  *
  *   Wallets:  walletSync, spendHint, claimSolve
  *   Duels:    duelCreate, duelJoin, duelQuick, duelQuickCancel, duelReady,
- *             duelProgress, duelLeave, duelSettle
+ *             duelState, duelHint, duelProgress, duelLeave, duelSettle
+ *   Account:  accountDelete
  *
  * Collections (all written only by this server):
  *   wallets/{uid}                 balances, totals and today's duel rewards
@@ -555,4 +556,50 @@ exports.duelSettle = onCall(async (req) => {
     }
     return { status: 'live', waitMs: Math.max(0, E.DUELS.reconnectMs - (ms - lastSeen)) };
   });
+});
+
+// ---------- Deleting an account ----------
+// Everything kept for a player: synced progress, wallet (with its history,
+// hints bought and rewards claimed), duel record, and the sign-in itself.
+// Past duels stay for the other player, with this player's name replaced.
+// The page asks the player to sign in again first; this checks it was
+// within the last 10 minutes, so an unattended phone can't delete an account.
+const RECENT_SIGN_IN_S = 600;
+exports.accountDelete = onCall(async (req) => {
+  const uid = account(req);
+  const signedInAt = req.auth.token.auth_time || 0;
+  if (Date.now() / 1000 - signedInAt > RECENT_SIGN_IN_S) fail('unauthenticated', 'For your safety, confirm your password (or sign in again) first.');
+  // Duels: leave any that are still going, then anonymise the rest.
+  const duels = await db.collection('duels').where('uids', 'array-contains', uid).get();
+  for (const snap of duels.docs) {
+    const d = snap.data();
+    if (['open', 'lobby'].includes(d.status) || (d.status === 'live' && d.startAt > now())) {
+      await snap.ref.update({ status: 'cancelled', [`players.${uid}.name`]: 'Deleted player' });
+    } else if (d.status === 'live') {
+      await db.runTransaction(async (t) => {
+        const fresh = await t.get(snap.ref);
+        const f = fresh.data();
+        if (f.status !== 'live') return;
+        const reads = await readForFinish(t, f);
+        finish(t, fresh, reads, { winner: f.uids.find((u) => u !== uid) || null, reason: 'forfeit', ms: now() });
+      });
+      await snap.ref.update({ [`players.${uid}.name`]: 'Deleted player' });
+    } else {
+      await snap.ref.update({ [`players.${uid}.name`]: 'Deleted player' });
+    }
+    await db.doc(`duels/${snap.id}/presence/${uid}`).delete();
+  }
+  for (const mode of Object.keys(E.DUELS).filter((m) => E.DUELS[m] && E.DUELS[m].minutes)) {
+    await db.runTransaction(async (t) => {
+      const q = await t.get(db.doc(`quick/${mode}`));
+      if (q.exists && q.data().uid === uid) t.delete(q.ref);
+    });
+  }
+  await Promise.all([
+    db.recursiveDelete(walletRef(uid)),
+    db.recursiveDelete(playerRef(uid)),
+    db.recursiveDelete(db.doc(`users/${uid}`)),
+  ]);
+  await admin.auth().deleteUser(uid);
+  return { ok: true };
 });

@@ -117,7 +117,7 @@ ${list.map((g) => `      <li><a href="${g.id}/">${esc(g.name)}</a></li>`).join('
 function build() {
   const files = { 'play/index.html': hubPage() };
   for (const g of GENRES) files[`play/${g.id}/index.html`] = genrePage(g);
-  const urls = [SITE, `${SITE}play/`, ...GENRES.map((g) => `${SITE}play/${g.id}/`)];
+  const urls = [SITE, `${SITE}play/`, ...GENRES.map((g) => `${SITE}play/${g.id}/`), `${SITE}privacy/`, `${SITE}support/`];
   files['sitemap.xml'] = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${u}</loc></url>`).join('\n')}

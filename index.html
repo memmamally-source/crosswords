@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600;1,6..72,700&family=Public+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=40" />
+  <link rel="stylesheet" href="css/styles.css?v=41" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -643,7 +643,10 @@
         <li><b>Challenge links</b> carry only your time and hint points for that puzzle.</li>
         <li><b>Gift crosswords</b> live only inside their link: the clues, names and message are never stored on our servers or sent to Google Analytics. Anyone with the link can open it.</li>
         <li><b>Shared puzzles (Help me solve)</b> store the grid, the name you choose and where each player is in the grid (Google Firebase), for 7 days. Guests get a temporary anonymous account, so no sign-up or email is needed.</li>
+        <li><b>Hint credits and duels</b> keep your balance, its history and your duel record with your account. In a duel your opponent sees the name you choose, your progress as a percentage and how many hints you used, never your letters.</li>
+        <li><b>Delete your account</b> any time: open your account and choose Delete account. It removes your progress, credits, duel record and sign-in.</li>
       </ul>
+      <p class="privacy-more"><a href="privacy/" target="_blank" rel="noopener">Full privacy policy</a> · <a href="support/" target="_blank" rel="noopener">Help and support</a> · <a href="mailto:crosswordhub@gmail.com">crosswordhub@gmail.com</a></p>
     </div>
     <button class="dialog-close" data-action="close-dialog" aria-label="Close">✕</button>
   </dialog>
@@ -712,6 +715,15 @@
         <p class="account-status" id="account-status"></p>
         <button class="btn" data-account="signout">Sign out</button>
         <p class="account-note">Signing out keeps your progress on this device.</p>
+        <button class="link-btn account-delete-link" type="button" data-account="delete-start">Delete account…</button>
+        <div class="account-delete" id="account-delete" hidden>
+          <p><b>Delete your account?</b> This permanently deletes your synced progress, your hint credits (earned ones too), your duel record and your sign-in. Progress saved on this device stays. This can’t be undone.</p>
+          <label id="account-delete-pw-row">Confirm with your password<input type="password" id="account-delete-password" autocomplete="current-password" /></label>
+          <div class="account-delete-actions">
+            <button class="btn btn-danger" type="button" data-account="delete-confirm" id="account-delete-confirm">Delete my account</button>
+            <button class="btn" type="button" data-account="delete-cancel">Keep it</button>
+          </div>
+        </div>
       </div>
       <p class="account-message" id="account-message" role="alert"></p>
     </div>
@@ -720,27 +732,27 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=40"></script>
-  <script src="js/words.js?v=40"></script>
-  <script src="js/collections.js?v=40"></script>
-  <script src="js/genres.js?v=40"></script>
-  <script src="js/ladder.js?v=40"></script>
-  <script src="js/economy.js?v=40"></script>
-  <script src="js/sync.js?v=40"></script>
-  <script src="js/featured.js?v=40"></script>
-  <script src="js/hints.js?v=40"></script>
-  <script src="js/stats.js?v=40"></script>
-  <script src="js/access.js?v=40"></script>
-  <script src="js/share.js?v=40"></script>
-  <script src="js/gifts.js?v=40"></script>
-  <script src="js/arcade.js?v=40"></script>
-  <script src="js/rooms.js?v=40"></script>
-  <script src="js/firebase-config.js?v=40"></script>
-  <script src="js/analytics.js?v=40"></script>
-  <script src="js/app.js?v=40"></script>
-  <script type="module" src="js/firebase.js?v=40"></script>
-  <script type="module" src="js/account.js?v=40"></script>
-  <script type="module" src="js/room.js?v=40"></script>
-  <script type="module" src="js/online.js?v=40"></script>
+  <script src="js/generator.js?v=41"></script>
+  <script src="js/words.js?v=41"></script>
+  <script src="js/collections.js?v=41"></script>
+  <script src="js/genres.js?v=41"></script>
+  <script src="js/ladder.js?v=41"></script>
+  <script src="js/economy.js?v=41"></script>
+  <script src="js/sync.js?v=41"></script>
+  <script src="js/featured.js?v=41"></script>
+  <script src="js/hints.js?v=41"></script>
+  <script src="js/stats.js?v=41"></script>
+  <script src="js/access.js?v=41"></script>
+  <script src="js/share.js?v=41"></script>
+  <script src="js/gifts.js?v=41"></script>
+  <script src="js/arcade.js?v=41"></script>
+  <script src="js/rooms.js?v=41"></script>
+  <script src="js/firebase-config.js?v=41"></script>
+  <script src="js/analytics.js?v=41"></script>
+  <script src="js/app.js?v=41"></script>
+  <script type="module" src="js/firebase.js?v=41"></script>
+  <script type="module" src="js/account.js?v=41"></script>
+  <script type="module" src="js/room.js?v=41"></script>
+  <script type="module" src="js/online.js?v=41"></script>
 </body>
 </html>
