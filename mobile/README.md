@@ -14,6 +14,7 @@ offline.
 | `assets/` | The icon and splash-screen sources. `npm run assets` makes every size from them. |
 | `store/` | Listing text, privacy answers and screenshots for both stores. See [store/LISTING.md](store/LISTING.md). |
 | `../.github/workflows/android.yml` | Builds the Android app on GitHub. |
+| `../.github/workflows/ios.yml` | Builds the iPhone app on GitHub's Macs and uploads it to App Store Connect, so no Mac is needed. |
 
 In the app the page knows it's in the app (`window.Capacitor`). It:
 - offers email sign-in only
@@ -128,34 +129,31 @@ That copies the key, as text, to the clipboard.
    4. Send them the opt-in link.
 5. After 14 days: Dashboard → **Apply for production** (a short questionnaire about the test), then create a Production release with the latest `.aab`. Google reviews it, usually within a few days.
 
-## 2. Apple App Store
+## 2. Apple App Store (all from your iPhone)
 
-### 2a. 💳 Apple Developer Program
+GitHub builds and uploads the iPhone app on its own Mac computers
+(`.github/workflows/ios.yml`), so you don't need a Mac. Everything below
+works in Safari on your iPhone (if a page is cramped, tap **aA → Request
+Desktop Website**).
 
-1. Enroll at https://developer.apple.com/programs/enroll/:
+### 2a. 💳 Join the Apple Developer Program
+
+1. Install the free **Apple Developer** app from the App Store.
+2. Open it → **Account** → sign in with your Apple ID → **Enroll Now**:
    - as an **Individual**
-   - with your Apple ID
-   - $99 a year
-2. Approval usually takes a day or two.
+   - $99 a year, paid like any App Store purchase
+3. Approval usually takes a day or two. Apple emails you.
 
-### 2b. Build on your Mac (once set up, about 10 minutes each release)
+### 2b. Register the app's ID (once)
 
-1. Install **Xcode** from the Mac App Store (it's large, so leave it to download).
-2. Open Xcode once and accept the licence. Then, in Terminal:
-   ```
-   cd ~/crosswords
-   git pull
-   cd mobile
-   npm install
-   npm run sync
-   npx cap open ios
-   ```
-3. In Xcode:
-   1. Click **App** in the left sidebar, then **Signing & Capabilities**.
-   2. Tick **Automatically manage signing** and choose your **Team** (your name, from the developer account).
-   3. To try it on your iPhone, plug it in, pick it at the top of the window, and press ▶. You may need to turn on Developer Mode in the iPhone's Settings → Privacy & Security.
+1. Open https://developer.apple.com/account/resources/identifiers/list
+2. Tap **+** → **App IDs** → **App** → Continue.
+3. Fill in:
+   - **Description:** Crossword Hub
+   - **Bundle ID:** Explicit, `app.crosswordhub`
+4. Continue → **Register**. No capabilities are needed.
 
-### 2c. App Store Connect
+### 2c. Create the app in App Store Connect (once)
 
 1. Open https://appstoreconnect.apple.com → **Apps → + → New App**:
    - iOS
@@ -166,17 +164,44 @@ That copies the key, as text, to the clipboard.
 2. Fill in from [store/LISTING.md](store/LISTING.md):
    - subtitle, description and keywords
    - support and privacy URLs
-   - screenshots (the `ios-` ones)
+   - screenshots (the `ios-` ones from `store/screenshots/`; on your phone, open each file on GitHub and save the image)
    - App Privacy
    - age rating
    - price (Free)
    - review notes with the demo account
-3. Upload the build from Xcode:
-   1. At the top, choose **Any iOS Device (arm64)**.
-   2. **Product → Archive**.
-   3. When it opens the Organizer: **Distribute App → App Store Connect → Upload**.
-4. After about 15 minutes the build appears under **TestFlight**. You can install it on your phone with the TestFlight app to check it.
-5. On the app's version page, choose that build and press **Add for Review → Submit**. Reviews usually take a day or two.
+
+### 2d. Let GitHub upload for you (once)
+
+1. In App Store Connect: **Users and Access → Integrations → App Store Connect API → Team Keys → +**:
+   - name: GitHub
+   - access: **Admin** (needed so it can create the signing certificate)
+   - **Generate**
+2. On that page, note the **Issuer ID** (above the list) and the new key's **Key ID**.
+3. Tap **Download** next to the key. You can download it **only once**, so keep the file safe. It's a short text file named `AuthKey_XXXXXXXXXX.p8`.
+4. Find your **Team ID**: https://developer.apple.com/account → Membership details.
+5. Open https://github.com/memmamally-source/crosswords/settings/secrets/actions and add four secrets with **New repository secret**:
+
+| Name | Value |
+|---|---|
+| `APPSTORE_KEY_ID` | the Key ID |
+| `APPSTORE_ISSUER_ID` | the Issuer ID |
+| `APPSTORE_KEY` | the whole text of the `.p8` file, from `-----BEGIN PRIVATE KEY-----` to `-----END PRIVATE KEY-----` |
+| `APPLE_TEAM_ID` | the Team ID |
+
+To copy the `.p8` text on an iPhone, open the file in the **Files** app (tap it to preview), then select all and copy. If your phone won't show it as text, do this one step on your Mac: open the file in TextEdit and copy.
+
+### 2e. Build and test (each release, about 15 minutes, no Mac)
+
+1. Open https://github.com/memmamally-source/crosswords/actions/workflows/ios.yml → **Run workflow → Run workflow**.
+2. When it's green (about 10 minutes), wait another 10–15 minutes for Apple to process the build.
+3. Install the free **TestFlight** app. In App Store Connect → your app → **TestFlight**, add yourself as an internal tester, then open the invitation on your iPhone and install Crossword Hub.
+
+### 2f. Submit for review
+
+1. In App Store Connect → your app → the **1.0** version page → **Build**, choose the build GitHub uploaded.
+2. Press **Add for Review → Submit**. Reviews usually take a day or two, and Apple emails you the result.
+
+*(Prefer your Mac? Run `cd ~/crosswords/mobile && npm install && npm run sync && npx cap open ios`, choose your Team under Signing & Capabilities, then Product → Archive → Distribute App.)*
 
 ## If a store rejects the app
 
