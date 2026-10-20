@@ -1431,7 +1431,7 @@ dialog.sheet { width: 100%; max-width: 560px; max-height: 78vh; margin: auto aut
 .arcade-go { min-width: 200px; justify-content: center; font-size: 1.1rem; padding-block: 14px; }
 .arcade-back { margin-bottom: 4px; }
 
-.arcade-play { display: flex; flex-direction: column; gap: 14px; max-width: 620px; margin: 0 auto; padding-top: 8px; }
+.arcade-play { position: relative; display: flex; flex-direction: column; gap: 14px; max-width: 620px; margin: 0 auto; padding-top: 8px; }
 .arcade-hud { position: relative; display: flex; align-items: stretch; justify-content: space-between; gap: 10px; padding-bottom: 10px; }
 .hud-item { display: grid; justify-items: center; flex: 1; padding: 8px 4px; border-radius: 12px; background: var(--card); border: 1px solid var(--rule); }
 .hud-item b { font-size: 1.6rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
@@ -1464,6 +1464,7 @@ dialog.sheet { width: 100%; max-width: 560px; max-height: 78vh; margin: auto aut
 .arcade-box.current { border-color: var(--primary); }
 .arcade-box.revealed { border-color: var(--wrong); color: var(--wrong); }
 .arcade-boxes.shake { animation: arcade-shake 0.35s; }
+.duel-note.shake { animation: arcade-shake 0.35s; }
 @keyframes arcade-shake { 25% { transform: translateX(-6px); } 50% { transform: translateX(6px); } 75% { transform: translateX(-3px); } }
 @media (prefers-reduced-motion: reduce) { .arcade-boxes.shake { animation: none; } }
 .arcade-feedback { margin: 0; min-height: 1.4em; text-align: center; font-weight: 700; }
@@ -1824,6 +1825,9 @@ body {
 
 /* ---------- Word Ladder ---------- */
 .ladder-home, .ladder-play, .ladder-done { display: grid; gap: 12px; max-width: 620px; margin: 0 auto; padding: 12px 0 24px; }
+.ladder-play { position: relative; }
+/* Tapping the answer brings up the phone's keyboard. */
+.arcade-boxes, .ladder-rungs { cursor: text; }
 .ladder-home { justify-items: start; }
 .ladder-home[hidden], .ladder-play[hidden], .ladder-done[hidden] { display: none; }
 .ladder-home h1, .ladder-done h1 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: clamp(2.4rem, 7vw, 3.2rem); line-height: 1.05; }
@@ -2151,7 +2155,13 @@ dialog {
 .duel-note { grid-column: 1 / -1; margin: 0; font-size: 0.8rem; color: var(--accent); }
 .duel-note:empty { display: none; }
 .duel-resign { grid-column: 1 / -1; justify-self: end; font-size: 0.8rem; }
-#game-view.duel-mode [data-menu="reveal"], #game-view.duel-mode [data-menu="check"], #game-view.duel-mode #new-btn,
+/* In a duel Reveal is the last tool (Check is hidden), so its menu opens
+   leftwards to stay on screen. */
+#game-view.duel-mode [data-menu-list="reveal"] { left: auto; right: 0; min-width: 240px; }
+/* Frozen after a duel hint: the grid dims and ignores typing. */
+#game-view.duel-frozen #board { opacity: 0.45; filter: grayscale(0.6); transition: opacity 0.2s; }
+#game-view.duel-frozen .duel-note { color: var(--accent); font-weight: 800; }
+#game-view.duel-mode [data-menu="check"], #game-view.duel-mode #new-btn,
 #game-view.duel-mode #room-start, #game-view.duel-mode .challenge-banner { display: none !important; }
 @media (pointer: coarse) and (max-width: 900px) and (orientation: portrait) {
   .duel-bar { margin-bottom: 6px; padding: 6px 10px; }

@@ -111,8 +111,10 @@ and the clue bar.
 
 - Type to fill. Arrow keys move, Space or Enter switches direction, Tab jumps
   to the next clue, Backspace erases. On phones and tablets, tap a square to
-  type with the device's own keyboard; tap the square again to switch
-  direction.
+  type with the device's own keyboard (in every game, including Word Ladder,
+  Clue Blitz and Survival); tap the square again to switch direction.
+  Settings → "Use Crossword Hub's letter keys" brings back the site's own
+  on-screen keys instead.
 - **On phones held upright** the clue bar is docked at the bottom, just
   above the keyboard:
   - Its big ‹ › buttons and a swipe left or right move between clues.
@@ -128,7 +130,13 @@ and the clue bar.
   **Clear** removes incorrect squares, a word or everything.
 - **Pause** (click the timer) hides the grid and stops the clock.
 - **Settings** (the sun icon): light, dark or system theme; skip filled
-  squares; auto-check; subject labels; show or hide the timer.
+  squares; auto-check; subject labels; show or hide the timer; sounds; on
+  phones and tablets, the site's own letter keys instead of the phone's
+  keyboard.
+- **Sounds** (on unless switched off in Settings) are made in the page, with
+  no audio files: a soft tap for each letter, ticks for the duel countdown
+  and Clue Blitz's last five seconds, and a fanfare for a solve or a win.
+  On iPhones they follow the silent switch and don't stop music playing.
 - Finishing shows your time, hint points, your streak for the Daily and
   Mini, and, for today's Daily or Mini, when the next ones arrive.
 - **Sharing a result:**
@@ -481,9 +489,15 @@ time to the next allowance, ways to earn and recent transactions.
   duel has ended.
 - **Playing:** the page gets the layout and clues only, never the answers.
   It sends the grid as you type; the server works out how much is right and
-  shares only that percentage with your opponent (never letters). No hints,
-  no checks, no pausing. The first all-correct grid wins: the server decides,
-  in a transaction, so two near-simultaneous finishes still give one winner.
+  shares only that percentage with your opponent (never letters). No checks
+  and no pausing. The first all-correct grid wins: the server decides, in a
+  transaction, so two near-simultaneous finishes still give one winner.
+- **Hints in a duel** (`duelHint`, signed-in players only): Reveal Letter or
+  Word costs credits as usual and **freezes your board**, 10 seconds for a
+  letter and 30 for a word (`DUELS.hintFreezeMs` in `js/economy.js`). The
+  server sends the letters and sets the freeze, and grids sent while frozen
+  don't count, so it can't be skipped. Your opponent sees how many hints you
+  used, never which letters.
 - **Endings:** out of time is a draw; Resign gives your opponent the win; a
   player gone for more than a minute loses (a shorter drop-out is forgiven;
   letters are kept in the tab, so a reload carries on).

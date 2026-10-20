@@ -31,6 +31,9 @@
     lobbyHours: 24, // an unstarted challenge expires after this
     quickWaitMs: 45000, // a Quick Match search is dropped if not renewed
     reconnectMs: 60000, // how long a dropped player has to come back
+    // A hint in a duel costs credits as usual and freezes your board for a
+    // while, so it's never a free shortcut.
+    hintFreezeMs: { letter: 10000, word: 30000 },
   };
 
   const DAY = 86400000;

@@ -399,6 +399,10 @@ exports.duelProgress = onCall(async (req) => {
     const d = snap.data();
     if (d.status !== 'live') return { status: d.status, percent: p.percent };
     if (ms < d.startAt) return { status: 'countdown', percent: 0 };
+    // Frozen after a hint: this grid doesn't count (the page sends it again
+    // once the freeze is over).
+    const frozenUntil = d.players[uid].frozenUntil || 0;
+    if (ms < frozenUntil && ms <= d.endsAt) return { status: 'frozen', percent: d.players[uid].progress || 0, frozenUntil };
     if (ms > d.endsAt + 3000) {
       // Out of time: a draw (whoever reports first settles it).
       const reads = await readForFinish(t, d);
@@ -414,6 +418,62 @@ exports.duelProgress = onCall(async (req) => {
     }
     t.update(snap.ref, { [`players.${uid}.progress`]: p.percent, [`players.${uid}.filled`]: p.filled === p.total });
     return { status: 'live', percent: p.percent, full: p.filled === p.total };
+  });
+});
+
+// A hint in a duel: Reveal Letter or Reveal Word, for signed-in players. It
+// costs credits as usual and freezes your board for a while
+// (DUELS.hintFreezeMs): grids sent while frozen don't count, so the freeze
+// can't be skipped. Asking again for one already bought costs nothing and
+// doesn't freeze. Your opponent sees how many hints you used, never where.
+exports.duelHint = onCall(async (req) => {
+  const uid = account(req);
+  const { id, kind, r, c, dir } = req.data || {};
+  if (kind !== 'letter' && kind !== 'word') fail('invalid-argument', 'Unknown hint.');
+  const secret = await secretRef(String(id)).get();
+  if (!secret.exists) fail('not-found', 'That duel isn’t yours.');
+  const solution = P.unpack(secret.data().rows);
+  const filled = (y, x) => y >= 0 && x >= 0 && y < solution.length && x < solution[0].length && !!solution[y][x];
+  if (!Number.isInteger(r) || !Number.isInteger(c) || !filled(r, c)) fail('invalid-argument', 'Unknown square.');
+  let cells = [[r, c]];
+  let target = `${r}_${c}`;
+  if (kind === 'word') {
+    if (dir !== 'across' && dir !== 'down') fail('invalid-argument', 'Unknown word.');
+    const [dy, dx] = dir === 'across' ? [0, 1] : [1, 0];
+    let [y, x] = [r, c];
+    while (filled(y - dy, x - dx)) [y, x] = [y - dy, x - dx];
+    target = `${dir[0]}${y}_${x}`;
+    cells = [];
+    for (; filled(y, x); y += dy, x += dx) cells.push([y, x]);
+    if (cells.length < 2) fail('invalid-argument', 'Unknown word.');
+  }
+  const letters = cells.map(([y, x]) => [y, x, solution[y][x]]);
+  const cost = E.ECONOMY.cost[kind];
+  const ms = now();
+  return db.runTransaction(async (t) => {
+    const [snap, wSnap] = await Promise.all([t.get(duelRef(String(id))), t.get(walletRef(uid))]);
+    if (!snap.exists || !isParticipant(snap.data(), uid)) fail('not-found', 'That duel isn’t yours.');
+    const d = snap.data();
+    if (d.status !== 'live' || ms < d.startAt || ms > d.endsAt) fail('failed-precondition', 'Hints work only while the duel is on.');
+    const me = d.players[uid];
+    if ((me.frozenUntil || 0) > ms) fail('failed-precondition', 'Your board is frozen for a moment.');
+    const { wallet, granted } = withDaily(t, uid, wSnap.exists ? wSnap.data() : null, ms);
+    const bought = me.hints || [];
+    if (bought.includes(target)) {
+      if (granted) t.set(walletRef(uid), wallet);
+      return { ok: true, charged: 0, cells: letters, frozenUntil: 0, wallet: view(wallet, ms) };
+    }
+    if (bought.length >= 200) fail('resource-exhausted', 'Too many hints in one duel.');
+    const paid = E.spend(wallet, cost, today(ms));
+    if (!paid) {
+      if (granted) t.set(walletRef(uid), wallet);
+      return { ok: false, reason: 'insufficient', charged: 0, wallet: view(wallet, ms) };
+    }
+    const frozenUntil = ms + E.DUELS.hintFreezeMs[kind];
+    t.set(walletRef(uid), { ...paid.wallet, updatedAt: FieldValue.serverTimestamp() });
+    ledgerEntry(t, uid, { type: 'spend', amount: -cost, daily: -paid.fromDaily, earned: -paid.fromEarned, note: kind === 'letter' ? 'Revealed a letter in a duel' : 'Revealed a word in a duel' });
+    t.update(snap.ref, { [`players.${uid}.hints`]: [...bought, target], [`players.${uid}.frozenUntil`]: frozenUntil });
+    return { ok: true, charged: cost, cells: letters, frozenUntil, wallet: view(paid.wallet, ms) };
   });
 });
 

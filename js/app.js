@@ -402,6 +402,9 @@
     $('#set-timer').checked = store.settings.showTimer;
     $('#set-vibrate').checked = store.settings.vibrate;
     $('#set-vibrate').closest('.switch').hidden = !canVibrate;
+    $('#set-appkeys').checked = store.settings.appKeys === true;
+    $('#set-sound').checked = store.settings.sound !== false;
+    $('#set-appkeys-row').hidden = !touchDevice();
     $('#set-analytics-row').hidden = !analytics.available;
     $('#set-analytics').checked = store.settings.analytics === true;
     $('#timer').classList.toggle('hidden-time', !store.settings.showTimer);
@@ -829,6 +832,7 @@
   // Reveal Letter costs 1 and Reveal Word 3, charged by the server before
   // anything is revealed. Until then, and for duels, hints work as before.
   const Econ = window.CrosswordEconomy;
+  const DUEL_FREEZE = Econ.DUELS.hintFreezeMs; // a duel hint freezes your board this long
   let online = window.CrosswordOnline || null;
   let me = { uid: null, account: false };
   let wallet = null; // the server's view: { daily, earned, total, totals, resetIn, at, recent }
@@ -905,8 +909,9 @@
   function renderRevealMenu() {
     const on = creditsOn();
     const duel = !!(game && game.duel);
-    $('#reveal-cell-btn').textContent = on ? 'Letter · 1 credit' : 'Square';
-    $('#reveal-word-btn').textContent = on ? 'Word · 3 credits' : 'Word';
+    const freeze = (kind) => (duel ? ` · ${DUEL_FREEZE[kind] / 1000} s freeze` : '');
+    $('#reveal-cell-btn').textContent = on ? `Letter · 1 credit${freeze('letter')}` : 'Square';
+    $('#reveal-word-btn').textContent = on ? `Word · 3 credits${freeze('word')}` : 'Word';
     $('#reveal-all-btn').hidden = on || duel;
     $('#reveal-note').hidden = !on;
     $('#reveal-note').textContent = !on ? '' : me.account
@@ -956,6 +961,82 @@
       spending = false;
     }
   }
+  // A hint in a duel: costs credits as usual and freezes your board for a
+  // while (the server sets the freeze and sends the letters, which the page
+  // doesn't have).
+  async function duelReveal(scope) {
+    const dd = duel;
+    if (scope === 'all' || !dd || !game || !game.duel) return;
+    if (!me.account) {
+      openWallet();
+      return;
+    }
+    if (duelFrozen()) return frozenNudge();
+    const t = hintTarget(scope);
+    if (t.cells.every(([r, c]) => game.revealed[r][c])) {
+      toast(scope === 'cell' ? 'That letter is already revealed' : 'That word is already revealed');
+      return;
+    }
+    if (wallet && wallet.total < Econ.ECONOMY.cost[t.kind]) return noCredits();
+    if (spending) return;
+    spending = true;
+    const g = game;
+    const w = scope === 'cell' ? null : game.puzzle.words[currentWordIndex()];
+    try {
+      const res = await online.call('duelHint', {
+        id: dd.id, kind: t.kind, r: w ? w.row : game.sel.r, c: w ? w.col : game.sel.c, dir: w ? w.dir : undefined,
+      });
+      setWallet(res.wallet);
+      if (!res.ok) return noCredits();
+      if (game !== g || game.solved || duel !== dd) return;
+      for (const [r, c, ch] of res.cells) {
+        game.entries[r][c] = ch;
+        game.revealed[r][c] = true;
+        game.pencil[r][c] = false;
+      }
+      game.reveals++;
+      analytics.track('hint_used', { hint: t.kind, puzzle_kind: 'duel' });
+      if (res.frozenUntil) dd.frozenUntil = res.frozenUntil;
+      animateCells(res.cells.map(([r, c]) => [r, c]), 'pop');
+      afterChange();
+      showFreeze();
+      if (res.charged) toast(`${plural(res.charged, 'credit')} used · board frozen for ${Math.round((res.frozenUntil - duelNow()) / 1000)} seconds`);
+    } catch (e) {
+      toast(`${e.message} No credits were used.`);
+    } finally {
+      spending = false;
+    }
+  }
+  // Frozen after a duel hint (until the server's time in frozenUntil).
+  function frozenUntil() {
+    const d = duel && duel.data;
+    if (!game || !game.duel || !d) return 0;
+    return Math.max(duel.frozenUntil || 0, (d.players[duelMe()] && d.players[duelMe()].frozenUntil) || 0);
+  }
+  const duelFrozen = () => frozenUntil() > duelNow();
+  let nudgedAt = 0;
+  function frozenNudge() {
+    if (Date.now() - nudgedAt < 1500) return;
+    nudgedAt = Date.now();
+    shake($('#duel-note'));
+    buzz(20);
+  }
+  // The freeze on screen: a dimmed grid and the seconds left. When it ends,
+  // the grid goes to the server again.
+  function showFreeze() {
+    const until = frozenUntil();
+    const left = Math.ceil((until - duelNow()) / 1000);
+    const on = left > 0;
+    $('#game-view').classList.toggle('duel-frozen', on);
+    if (on) $('#duel-note').textContent = `Hint used: your board is frozen for ${plural(left, 'second')}.`;
+    else if (duel && duel.wasFrozen) $('#duel-note').textContent = '';
+    if (duel && duel.wasFrozen && !on) {
+      duel.wasFrozen = false;
+      sendDuelGrid();
+    }
+    if (duel && on) duel.wasFrozen = true;
+  }
+
   // A first No-Hint solve of a published puzzle: the server checks the grid
   // and pays 1 (Mini) or 3 (Daily, Brutal) credits, once.
   async function claimReward(spec, entries) {
@@ -1412,6 +1493,10 @@
   const sideBySide = window.matchMedia('(min-width: 901px), (min-width: 700px) and (orientation: landscape)');
   // Phones held upright: the clue bar docks to the bottom, above the keyboard.
   const docked = window.matchMedia('(pointer: coarse) and (max-width: 900px) and (orientation: portrait)');
+  // Phones and tablets type with their own keyboard, unless the player has
+  // chosen Crossword Hub's letter keys in Settings.
+  const touchDevice = () => touchScreen.matches || navigator.maxTouchPoints > 0;
+  const appKeys = () => touchDevice() && store.settings.appKeys === true;
   const phoneKeys = $('#phone-keys');
   function sizeBoard() {
     if (!game) return;
@@ -1587,6 +1672,8 @@
 
   function typeLetter(ch) {
     if (game.solved || game.paused) return;
+    if (duelFrozen()) return frozenNudge();
+    sound.tap();
     const { sel, entries } = game;
     const typedAt = [sel.r, sel.c];
     const wordsHere = ['across', 'down'].map((d) => game.wordAt[sel.r][sel.c][d]).filter((i) => i != null);
@@ -1613,6 +1700,7 @@
 
   function backspace() {
     if (game.solved || game.paused) return;
+    if (duelFrozen()) return frozenNudge();
     const { sel, entries, revealed } = game;
     if (entries[sel.r][sel.c] && !revealed[sel.r][sel.c]) {
       setCell(sel.r, sel.c, '');
@@ -1669,7 +1757,11 @@
 
   let revealArmed = 0;
   function reveal(scope) {
-    if (game.solved || game.duel) return;
+    if (game.solved) return;
+    if (game.duel) {
+      duelReveal(scope);
+      return;
+    }
     if (creditsOn()) {
       creditReveal(scope);
       return;
@@ -1743,6 +1835,55 @@
     if (!canVibrate || !store.settings.vibrate) return;
     try { navigator.vibrate(pattern); } catch (e) { /* not allowed right now */ }
   }
+  // Sounds, made in the page (no audio files): a soft tap for each letter,
+  // ticks for countdowns and a fanfare for wins. Settings → Sounds turns
+  // them off. On iPhones they follow the silent switch and leave other audio
+  // (music, podcasts) playing.
+  const sound = (() => {
+    let ctx = null;
+    const on = () => store.settings.sound !== false;
+    function audio() {
+      if (!ctx) {
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) return null;
+        try { if (navigator.audioSession) navigator.audioSession.type = 'ambient'; } catch (e) { /* older browsers */ }
+        ctx = new AC();
+      }
+      if (ctx.state === 'suspended') ctx.resume().catch(() => {});
+      return ctx;
+    }
+    // Browsers allow sound only after a tap or a key press.
+    const wake = () => { if (on()) audio(); };
+    document.addEventListener('pointerdown', wake, { passive: true });
+    document.addEventListener('keydown', wake);
+    function tone(freq, start, length, { type = 'sine', gain = 0.12, to } = {}) {
+      const a = audio();
+      if (!a || a.state !== 'running') return;
+      const t = a.currentTime + start;
+      const osc = a.createOscillator();
+      const vol = a.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, t);
+      if (to) osc.frequency.exponentialRampToValueAtTime(to, t + length);
+      vol.gain.setValueAtTime(0.0001, t);
+      vol.gain.exponentialRampToValueAtTime(gain, t + 0.006);
+      vol.gain.exponentialRampToValueAtTime(0.0001, t + length);
+      osc.connect(vol).connect(a.destination);
+      osc.start(t);
+      osc.stop(t + length + 0.02);
+    }
+    const play = (fn) => () => {
+      if (!on()) return;
+      try { fn(); } catch (e) { /* never let a sound break the game */ }
+    };
+    return {
+      tap: play(() => tone(1500, 0, 0.03, { type: 'triangle', gain: 0.045, to: 950 })),
+      tick: play(() => tone(880, 0, 0.06, { type: 'square', gain: 0.035 })),
+      go: play(() => { tone(660, 0, 0.12); tone(990, 0.1, 0.3); }),
+      win: play(() => [523.25, 659.25, 783.99, 1046.5].forEach((f, i) => tone(f, i * 0.11, i === 3 ? 0.7 : 0.18, { type: 'triangle', gain: 0.13 }))),
+      over: play(() => [587.33, 440].forEach((f, i) => tone(f, i * 0.16, 0.32, { type: 'triangle', gain: 0.09 }))),
+    };
+  })();
   // Restart a CSS animation on some squares; --i staggers them in order.
   function animateCells(cells, cls) {
     if (reduceMotion.matches) return;
@@ -1879,6 +2020,7 @@
   function win() {
     stopTimer();
     game.solved = true;
+    sound.win();
     const { spec } = game;
     const time = game.elapsed;
     // A shared puzzle is a collaborative result: everyone's hints count, and
@@ -2127,11 +2269,11 @@
   }
 
   // ---------- Phone layout: docked clue bar and the clue panel ----------
-  // On phones held upright the clue bar sits at the bottom, above the game's
-  // own letter keys (the device keyboard isn't used: it covers the grid in
-  // ways a page can't reliably work around), with big previous and next
-  // buttons; swiping it changes clue, and tapping the clue opens every clue
-  // in a panel. The grid scrolls to keep the square being typed in visible.
+  // On phones held upright the clue bar sits at the bottom, above the
+  // phone's keyboard (or Crossword Hub's own letter keys, if chosen in
+  // Settings), with big previous and next buttons; swiping it changes clue,
+  // and tapping the clue opens every clue in a panel. The grid scrolls to
+  // keep the square being typed in visible above the keyboard.
   function placeDock() {
     let gap = 0;
     if (docked.matches && !phoneKeys.hidden) gap = phoneKeys.getBoundingClientRect().height;
@@ -2139,7 +2281,7 @@
     document.documentElement.style.setProperty('--dock-bottom', `${Math.round(gap)}px`);
   }
   function updateKeys() {
-    const show = !!game && !game.solved && !game.paused;
+    const show = !!game && !game.solved && !game.paused && appKeys();
     if (phoneKeys.hidden === !show) return;
     phoneKeys.hidden = !show;
     placeDock();
@@ -2634,7 +2776,7 @@
   }
   function focusTyping() {
     if (!touchScreen.matches || !game || game.solved || game.paused) return;
-    if (docked.matches) return; // phones held upright use the letter keys
+    if (docked.matches && appKeys()) return; // the player chose the letter keys
     placeTyping();
     resetTyping();
     typeInput.focus();
@@ -2882,6 +3024,23 @@
     saveStore();
     buzz(20);
   });
+  $('#set-sound').addEventListener('change', (e) => {
+    store.settings.sound = e.target.checked;
+    saveStore();
+    sound.win();
+  });
+  $('#set-appkeys').addEventListener('change', (e) => {
+    store.settings.appKeys = e.target.checked;
+    saveStore();
+    // Takes effect in the game on screen too.
+    if (game && !$('#game-view').hidden) {
+      updateKeys();
+      if (store.settings.appKeys) typeInput.blur();
+      else focusTyping();
+    }
+    if (arcadePlaying()) $('#arcade-keys').hidden = !appKeys();
+    if (ladderPlaying()) $('#ladder-keys').hidden = !appKeys();
+  });
   $('#set-timer').addEventListener('change', (e) => {
     store.settings.showTimer = e.target.checked;
     saveStore();
@@ -2930,6 +3089,8 @@
     if (navBtn) navBtn.setAttribute('aria-current', 'page');
     if (name !== 'game') document.title = { gift: 'Gift a crossword · Crossword Hub', arcade: 'Arcade · Crossword Hub', stats: 'Statistics · Crossword Hub', duel: 'Crossword Duel · Crossword Hub' }[name] || 'Crossword Hub';
     if (name !== 'arcade') {
+      arcadeTyping.blur();
+      ladderTyping.blur();
       leaveArcade();
       leaveLadder();
     }
@@ -3162,6 +3323,8 @@
   }
 
   function arcadeScreen(which) {
+    if (which !== 'play') arcadeTyping.blur();
+    if (which !== 'ladder-play') ladderTyping.blur();
     for (const id of ['hub', 'start', 'play', 'results']) $(`#arcade-${id}`).hidden = id !== which;
     for (const id of ['home', 'play', 'done']) $(`#ladder-${id}`).hidden = `ladder-${id}` !== which;
     document.body.classList.toggle('arcade-playing', which === 'play' || which === 'ladder-play');
@@ -3246,12 +3409,13 @@
     leaveArcadeTimer();
     arcade = { mode, run, guess: '', busy: false, timer: null };
     $('#arcade-play').className = `arcade-play arcade-${mode}`;
-    $('#arcade-keys').hidden = !touchScreen.matches;
+    $('#arcade-keys').hidden = !appKeys();
     $('#arcade-skip').textContent = mode === 'survival' ? 'Skip (−1 life)' : 'Skip';
     arcadeScreen('play');
     window.scrollTo(0, 0);
     renderArcadeClue();
     renderArcadeHud();
+    arcadeTyping.focus($('#arcade-boxes'));
     if (resumed) arcadeFeedback(mode === 'survival' ? `Welcome back: round ${run.round}.` : 'Welcome back: the clock kept running.', 'info');
     if (mode === 'blitz') arcade.timer = setInterval(arcadeTick, 200);
   }
@@ -3276,6 +3440,9 @@
     const { mode, run } = arcade;
     if (mode === 'blitz') {
       const left = Math.ceil(Arcade.timeLeft(run, now()) / 1000);
+      // The last five seconds tick.
+      if (left > 0 && left <= 5 && arcade.lastTick !== left) sound.tick();
+      arcade.lastTick = left;
       const bonus = run.combo + 1 >= Arcade.BLITZ.comboFrom;
       $('#arcade-hud').innerHTML = `
         <div class="hud-item hud-time${left <= 10 ? ' low' : ''}">${STOPWATCH}<b>${left}</b><span>seconds</span></div>
@@ -3344,6 +3511,7 @@
     if (!arcadePlaying() || arcade.busy) return;
     const len = arcade.run.clue.answer.length;
     if (arcade.guess.length >= len) return;
+    sound.tap();
     arcade.guess += ch;
     arcadeFeedback('');
     renderArcadeBoxes();
@@ -3429,6 +3597,7 @@
     data.recent = Arcade.remember(data.recent, run);
     if (data.runs[mode] === run || (data.runs[mode] && data.runs[mode].startedAt === run.startedAt)) delete data.runs[mode];
     arcadeLast = { mode, run, isNew };
+    (isNew ? sound.win : sound.over)();
     saveStore();
     analytics.track('arcade_end', { mode, score: run.score, correct: run.correct, round: mode === 'survival' ? Arcade.roundReached(run) : 0 });
     showArcadeResults();
@@ -3479,7 +3648,64 @@
     copyText(url ? `${text} ${url}` : text, 'Result copied to your clipboard');
   }
 
-  // On-screen letter keys (phones and tablets) and the keyboard.
+  // Typing on phones and tablets: the device's own keyboard, through a
+  // hidden text box (as for the crosswords). It always holds one placeholder
+  // character, so deleting it means Backspace. Returns { focus, blur }.
+  function deviceTyping(input, { active, type, back, enter }) {
+    let held = PLACEHOLDER;
+    const reset = () => {
+      input.value = held = PLACEHOLDER;
+      try { input.setSelectionRange(1, 1); } catch (e) { /* not focused */ }
+    };
+    input.addEventListener('input', (e) => {
+      const value = input.value;
+      const before = held;
+      held = value;
+      if (!active()) return reset();
+      if (value.length < before.length && before.startsWith(value)) {
+        for (let i = value.length; i < before.length; i++) back();
+      } else {
+        const added = value.startsWith(before) ? value.slice(before.length) : (e.data || '');
+        for (const ch of added.toUpperCase().replace(/[^A-Z]/g, '')) type(ch);
+      }
+      if (!e.isComposing) reset();
+    });
+    input.addEventListener('compositionend', () => setTimeout(reset));
+    input.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter') return;
+      e.preventDefault();
+      enter();
+    });
+    // The buttons beside the answer shouldn't close the keyboard.
+    input.closest('section').addEventListener('pointerdown', (e) => {
+      if (document.activeElement === input && e.target.closest('button:not([data-open])')) e.preventDefault();
+    });
+    return {
+      // Opens the keyboard, with the text box over `anchor` so the page
+      // keeps it in view.
+      focus(anchor) {
+        if (!touchDevice() || appKeys()) return;
+        if (anchor) input.style.top = `${anchor.getBoundingClientRect().top - input.offsetParent.getBoundingClientRect().top}px`;
+        reset();
+        input.focus();
+      },
+      blur() {
+        if (document.activeElement === input) input.blur();
+      },
+      // Keeps the text box over `anchor` while typing (so it stays in view).
+      follow(anchor) {
+        if (anchor && document.activeElement === input) input.style.top = `${anchor.getBoundingClientRect().top - input.offsetParent.getBoundingClientRect().top}px`;
+      },
+    };
+  }
+  const arcadeTyping = deviceTyping($('#arcade-type'), {
+    active: () => arcadePlaying(), type: (ch) => arcadeType(ch), back: () => arcadeBack(), enter: () => arcadeSubmit(),
+  });
+  $('#arcade-play').addEventListener('click', (e) => {
+    if (e.target.closest('#arcade-boxes, .arcade-card')) arcadeTyping.focus($('#arcade-boxes'));
+  });
+
+  // On-screen letter keys (if chosen in Settings) and the keyboard.
   const KEY_ROWS = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM'];
   $('#arcade-keys').innerHTML = KEY_ROWS.map((row, i) => `<div class="keys-row">${
     row.split('').map((k) => `<button type="button" data-arcade-key="${k}">${k}</button>`).join('')
@@ -3611,12 +3837,13 @@
     ladder = { game, guess: '', busy: false, timer: setInterval(ladderTick, 500) };
     saveStore();
     if (!resumed) analytics.track('arcade_start', { mode: `ladder_${game.mode}` });
-    $('#ladder-keys').hidden = !(touchScreen.matches || navigator.maxTouchPoints > 0);
+    $('#ladder-keys').hidden = !appKeys();
     $('#ladder-play-title').textContent = game.mode === 'daily' ? (game.replay ? 'Daily Ladder (replay)' : 'Daily Ladder') : 'Practice ladder';
     arcadeScreen('ladder-play');
     window.scrollTo(0, 0);
     ladderFeedback(resumed ? 'Welcome back: carry on from where you were.' : `Change one letter at a time to turn ${game.from.toUpperCase()} into ${game.to.toUpperCase()}.`, 'info');
     renderLadder();
+    ladderTyping.focus($('#ladder-rungs .entry'));
   }
   // Leaving the ladder screen: the game stays saved, and its clock stops.
   function leaveLadder() {
@@ -3662,6 +3889,7 @@
     $('#ladder-undo').textContent = guess ? 'Clear' : 'Step back';
     ladderTick();
     fitLadderTiles();
+    ladderTyping.follow($('#ladder-rungs .entry'));
   }
   function fitLadderTiles() {
     const el = $('#ladder-rungs');
@@ -3680,6 +3908,7 @@
   function ladderType(ch) {
     if (!ladderPlaying() || ladder.busy) return;
     if (ladder.guess.length >= ladder.game.from.length) return;
+    sound.tap();
     ladder.guess += ch.toLowerCase();
     ladderFeedback('');
     renderLadder();
@@ -3749,6 +3978,7 @@
     analytics.track('arcade_end', { mode: `ladder_${game.mode}`, score: game.score });
     ladderLast = { game, isNew };
     buzz([20, 40, 20]);
+    sound.win();
     // A moment on the finished ladder, then the result.
     ladder.busy = true;
     renderLadder();
@@ -3813,6 +4043,10 @@
     copyText(url ? `${text} ${url}` : text, 'Result copied to your clipboard');
   }
 
+  const ladderTyping = deviceTyping($('#ladder-type'), {
+    active: () => ladderPlaying(), type: (ch) => ladderType(ch), back: () => ladderBack(), enter: () => ladderSubmit(),
+  });
+  $('#ladder-rungs').addEventListener('click', () => ladderTyping.focus($('#ladder-rungs .entry')));
   $('#ladder-keys').innerHTML = KEY_ROWS.map((row, i) => `<div class="keys-row">${
     row.split('').map((k) => `<button type="button" data-ladder-key="${k}">${k}</button>`).join('')
   }${i === 2 ? '<button type="button" class="key-wide" data-ladder-key="back" aria-label="Delete">⌫</button>' : ''}</div>`).join('');
@@ -4135,11 +4369,13 @@
         <button class="btn" data-action="duel-leave">${d.host === mine && !opp ? 'Cancel challenge' : 'Leave'}</button>
       </div>
       ${opp ? `<p class="duel-small">${meReady && !p[opp].ready ? `Waiting for ${esc(p[opp].name)} to get ready… Tap the switch again if you need a moment.` : !meReady && p[opp].ready ? `${esc(p[opp].name)} is ready. Flip the switch when you are.` : `Flip the switch when you’re ready. The duel starts ${DUELS.countdownMs / 1000} seconds after you both are.`}</p>` : ''}
-      <ul class="duel-rules"><li>The same crossword for both of you; first to fill it in correctly wins.</li><li>No hints and no checking. You see each other’s progress, never the letters.</li><li>${esc(label)}s last up to ${DUELS[d.mode].minutes} minutes; if time runs out, it’s a draw.</li><li>The winner earns 3 Hint Credits (signed-in players, up to 3 rewarded wins a day).</li></ul>`);
+      <ul class="duel-rules"><li>The same crossword for both of you; first to fill it in correctly wins.</li><li>No checking. Hints cost credits as usual and freeze your board: ${DUEL_FREEZE.letter / 1000} seconds for a letter, ${DUEL_FREEZE.word / 1000} for a word.</li><li>You see each other’s progress and number of hints, never the letters.</li><li>${esc(label)}s last up to ${DUELS[d.mode].minutes} minutes; if time runs out, it’s a draw.</li><li>The winner earns 3 Hint Credits (signed-in players, up to 3 rewarded wins a day).</li></ul>`);
   }
   function renderCountdown(d) {
     if (!$('#game-view').hidden) showView('duel');
     const left = Math.max(0, Math.ceil((d.startAt - duelNow()) / 1000));
+    if (left && duel.lastCount !== left) sound.tick();
+    duel.lastCount = left;
     const opp = duelOpp(d);
     duelPanel(`<p class="kicker">${esc(DUELS[d.mode].label)}</p><h1>You vs ${esc(d.players[opp].name)}</h1>
       <p class="duel-count" aria-live="assertive">${left || 'Go!'}</p>
@@ -4150,12 +4386,13 @@
     const opp = duelOpp(d);
     const spec = {
       kind: 'duel', key: `duel:${duel.id}`, url: `#/duel/${duel.id}`,
-      kicker: DUELS[d.mode].label, title: `You vs ${d.players[opp].name}`, meta: 'First to fill it in correctly wins. No hints or checks.', frozen: JSON.parse(d.puzzle),
+      kicker: DUELS[d.mode].label, title: `You vs ${d.players[opp].name}`, meta: `First to fill it in correctly wins. No checks; a hint freezes your board (${DUEL_FREEZE.letter / 1000} s a letter, ${DUEL_FREEZE.word / 1000} s a word).`, frozen: JSON.parse(d.puzzle),
     };
     showView('game');
     window.scrollTo(0, 0);
     startGame(spec);
     game.duel = { id: duel.id };
+    if (duel.lastCount != null) sound.go(); // straight after the countdown
     if (duel.entries && duel.entries.length === game.puzzle.rows) {
       game.entries = duel.entries.map((row, r) => row.map((v, c) => (game.puzzle.solution[r][c] && /^[A-Z]$/.test(v) ? v : '')));
       refresh();
@@ -4175,6 +4412,8 @@
     const my = Math.max(mine, duel.myPct || 0);
     const opp = d.players[duelOpp(d)];
     const theirs = opp.progress || 0;
+    const oppHints = (opp.hints || []).length;
+    $('#duel-opp-name').textContent = oppHints ? `${opp.name} · ${plural(oppHints, 'hint')}` : opp.name;
     $('#duel-me-pct').textContent = `${my}%`;
     $('#duel-me-bar').style.width = `${my}%`;
     $('#duel-opp-pct').textContent = `${theirs}%`;
@@ -4189,6 +4428,7 @@
     if (d.status === 'live' && (duelNow() < d.startAt || !d.puzzle) && $('#game-view').hidden) return renderCountdown(d);
     if (d.status === 'live' && !(game && game.duel && game.duel.id === duel.id) && d.puzzle && duelNow() >= d.startAt) return renderDuel();
     if (d.status !== 'live' || $('#duel-bar').hidden) return;
+    showFreeze();
     const left = Math.max(0, d.endsAt - duelNow());
     $('#duel-clock').textContent = formatTime(left / 1000);
     $('#duel-clock').classList.toggle('low', left < 30000);
@@ -4225,6 +4465,7 @@
   async function sendDuelGrid() {
     const dd = duel;
     if (!dd || !game || !game.duel || game.duel.id !== dd.id || game.solved) return;
+    if (duelFrozen()) return; // sent when the freeze ends (duelTick)
     if (dd.sending) {
       dd.again = true;
       return;
@@ -4237,6 +4478,7 @@
       // Finished (by you, or already by your opponent): show the result now
       // rather than waiting for the live copy to catch up.
       if (res.status === 'done') return refreshDuel(dd);
+      if (res.status === 'frozen') dd.frozenUntil = Math.max(dd.frozenUntil || 0, res.frozenUntil);
       renderDuelBar();
       if (res.full && !res.won && res.status === 'live') toast('The grid is full, but something isn’t right yet');
     } catch (e) {
@@ -4308,6 +4550,7 @@
     if (won) $('.duel-trophy').innerHTML = $('#win-dialog .win-art').innerHTML;
     if (!duel.reported) {
       duel.reported = true;
+      (won ? sound.win : sound.over)();
       analytics.track('duel_end', { mode: d.mode, outcome: won ? 'win' : lost ? 'loss' : 'draw', reason: r.reason || '' });
       if (me.account) {
         loadDuelRecord();
