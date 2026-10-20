@@ -2584,7 +2584,10 @@
       me: s.uid === room.uid,
       host: room.meta && s.uid === room.meta.host,
       online: s.uid === room.uid ? room.connected : !!(room.presence && room.presence[s.uid]),
-    }));
+      joinedAt: s.joinedAt || 0,
+    })).filter((p, i, all) => p.me || !all.some((q) => q !== p && q.name === p.name && (q.me || q.joinedAt > p.joinedAt)));
+    // (Two seats with one name: the older is that player's seat from before
+    // they signed in or out, so only the newer one is shown. See rejoinRoom.)
   }
 
   // The host starts a room from the puzzle in progress, letters and all.
@@ -2678,18 +2681,64 @@
 
   function onRoomState(state) {
     const room = game && game.room;
-    if (!room || room.id !== state.id) return;
+    if (!room || room.id !== state.id || state.uid !== room.uid) return;
     Object.assign(room, { meta: state.meta, slots: state.slots, presence: state.presence, hints: state.hints, connected: state.connected, offset: state.serverNow - Date.now() });
     if (state.removed) return roomEnded('The host removed you from this shared puzzle. Your grid stays here to finish on your own.');
     if (!state.meta) return;
     applyRoomCells(state.cells);
     if (!room.ready) {
       room.ready = true;
+      // Changes the room didn't get before a rejoin (see rejoinRoom).
+      for (const [k, cell] of Object.entries(room.pending || {})) {
+        const [r, c] = k.split('_').map(Number);
+        game.entries[r][c] = cell ? cell.v : '';
+        game.revealed[r][c] = !!(cell && cell.rev);
+      }
+      room.pending = null;
       syncRoomCells(); // anything typed while connecting
+      refresh();
+      if (!game.solved && isSolved()) win();
     }
     renderRoomBar();
     renderPeers();
   }
+
+  // Signing in or out during a shared puzzle changes this player's Firebase
+  // ID (a guest who signs in to use a hint, say), and the room only takes
+  // letters from its members' IDs. So rejoin under the new one, and send
+  // the changes the room didn't get. Also tried when the room refuses
+  // letters for any reason.
+  let rejoining = null;
+  function rejoinRoom() {
+    const room = game && game.room;
+    if (!room || rejoining) return;
+    const { service } = room;
+    if (service.uid() === room.uid) {
+      // Refused for another reason (the room has closed, say): say so once.
+      if (!room.refusedNotice) toast('Your letters couldn’t be shared with the others. They’re saved on this device.');
+      room.refusedNotice = true;
+      return;
+    }
+    const name = (Object.values(room.slots || {}).find((s) => s && s.uid === room.uid) || {}).name || store.settings.playerName || Rooms.randomName();
+    const pending = Rooms.diffCells(room.sent, game.entries, game.revealed);
+    rejoining = (async () => {
+      const result = await service.join(room.id, name);
+      if (!game || game.room !== room) return;
+      if (result !== 'joined') return roomEnded(`This puzzle already has ${Rooms.MAX_PLAYERS} players, so you can’t rejoin it. Your grid stays here to finish on your own.`);
+      Object.assign(room, { uid: service.uid(), ready: false, pending, sent: {} });
+      await service.attach(room.id, onRoomState);
+      syncRoomHints();
+      room.cursor = null;
+      syncRoomCursor();
+    })().catch(() => {
+      toast('Your letters couldn’t be shared. Check your connection: they’re saved on this device.');
+    }).finally(() => { rejoining = null; });
+  }
+  document.addEventListener('online:user', () => {
+    const room = game && game.room;
+    if (room && room.service.uid() !== room.uid) rejoinRoom();
+  });
+  window.addEventListener('roomrefused', rejoinRoom);
 
   // The room's letters, applied to this grid.
   function applyRoomCells(cells) {

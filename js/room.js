@@ -24,24 +24,31 @@
   let lib = null;
   let db = null;
   let auth = null;
+  let authLib = null;
   let offset = 0;
   let current = null; // { id, uid, unsubscribe: [], state }
 
   async function connect() {
     if (db) return;
-    const [app, { lib: authLib, auth: a }, dbLib] = await Promise.all([
+    const [app, { lib: aLib, auth: a }, dbLib] = await Promise.all([
       fb.getApp(), fb.getAuth(), import(`${fb.SDK}/firebase-database.js`),
     ]);
     lib = dbLib;
     auth = a;
+    authLib = aLib;
     db = lib.getDatabase(app, config.databaseURL);
     const emu = window.FIREBASE_EMULATORS;
     if (emu && emu.database) lib.connectDatabaseEmulator(db, emu.database.host, emu.database.port);
     lib.onValue(lib.ref(db, '.info/serverTimeOffset'), (s) => { offset = s.val() || 0; });
+    await signedIn();
+  }
+  // Rooms need a sign-in of some kind: guests (and anyone who signs out
+  // mid-puzzle) get an anonymous one.
+  async function signedIn() {
     await auth.authStateReady();
     if (!auth.currentUser) await authLib.signInAnonymously(auth);
   }
-  const uid = () => auth.currentUser.uid;
+  const uid = () => (auth && auth.currentUser ? auth.currentUser.uid : null);
   const roomRef = (id, path = '') => lib.ref(db, `rooms/${id}${path ? `/${path}` : ''}`);
   const serverNow = () => Date.now() + offset;
 
@@ -85,6 +92,7 @@
   // else takes it at the same moment.
   async function join(id, name) {
     await connect();
+    await signedIn();
     const me = uid();
     for (let attempt = 0; attempt < R.MAX_PLAYERS; attempt++) {
       const slots = (await lib.get(roomRef(id, 'slots'))).val() || {};
@@ -152,7 +160,11 @@
     if (!current) return;
     const updates = {};
     for (const [k, cell] of Object.entries(changes)) updates[`cells/${k}`] = cell ? { ...cell, by: current.uid } : null;
-    lib.update(roomRef(current.id), updates).catch(() => {});
+    // A refusal (this player isn't a member under their current sign-in)
+    // is reported to the page, which rejoins and sends again.
+    lib.update(roomRef(current.id), updates).catch((e) => {
+      if (/permission/i.test(String(e && (e.code || e.message)))) window.dispatchEvent(new Event('roomrefused'));
+    });
   }
   const sendCursor = (pos) => current && send(`presence/${current.uid}`, { r: pos.r, c: pos.c, d: pos.dir, at: lib.serverTimestamp() });
   const sendHints = (h) => current && send(`hints/${current.uid}`, { letter: h.letter, word: h.word, checks: h.checks, autocheck: !!h.autocheck });
