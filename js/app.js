@@ -1289,7 +1289,7 @@
   function currentElapsed() {
     if (!game) return 0;
     // A shared puzzle runs on the room's clock, the same for everyone.
-    if (game.duel && duel && duel.data && duel.data.startAt) return Math.max(0, Math.floor((now() - duel.data.startAt) / 1000));
+    if (game.duel && duel && duel.data && duel.data.startAt) return Math.max(0, Math.floor((duelNow() - duel.data.startAt) / 1000));
     const room = game.room;
     if (room && room.meta && typeof room.meta.createdAt === 'number' && !game.solved) {
       return CrosswordRooms.roomElapsed(room.meta.base, room.meta.createdAt, Date.now() + room.offset);
@@ -4006,7 +4006,10 @@
   const duelMe = () => online.who().uid;
   const duelStore = (id) => `crosswordhub:duel:${id}`;
   function watchDuel(id) {
-    duel = { id, data: null, unsub: null, timers: [], entries: null, myPct: 0, sending: false, again: false, rematchMine: false, settling: false };
+    duel = {
+      id, data: null, unsub: null, timers: [], entries: null, myPct: 0, sending: false, again: false, rematchMine: false, settling: false,
+      seq: 0, heard: 0, offset: null, rtt: Infinity, readyWant: null,
+    };
     const dd = duel;
     try {
       dd.entries = JSON.parse(sessionStorage.getItem(duelStore(id)) || 'null');
@@ -4015,6 +4018,8 @@
     online.watch(`duels/${id}`, (data) => {
       if (duel !== dd) return;
       if (!data) return duelProblem('Duel not found', 'This duel doesn’t exist, or it isn’t one of yours.');
+      dd.seq++;
+      dd.heard = Date.now();
       dd.data = data;
       renderDuel();
     }, () => {
@@ -4023,9 +4028,51 @@
     const beat = () => online.heartbeat(id).catch(() => {});
     beat();
     dd.timers.push(setInterval(beat, 15000));
-    dd.timers.push(setInterval(duelTick, 500));
+    // Ask the server for the duel and its clock straight away, and once more
+    // shortly after for a better reading of the clock.
+    refreshDuel(dd);
+    dd.timers.push(setTimeout(() => refreshDuel(dd), 2500));
+    dd.timers.push(setInterval(duelTick, 250));
     dd.timers.push(setInterval(() => duelSettle(false), 25000));
+    // The live copy can stall on phones (especially after switching apps),
+    // so ask the server every few seconds while it's quiet.
+    dd.timers.push(setInterval(() => {
+      const d = dd.data;
+      if (document.hidden || !d || !['open', 'lobby', 'live'].includes(d.status)) return;
+      const live = d.status === 'live' && duelNow() >= d.startAt;
+      if (Date.now() - dd.heard > (live ? 8000 : 3000)) refreshDuel(dd);
+    }, 3000));
   }
+  // The server's clock as seen from here (see watchDuel).
+  const duelNow = () => (duel && duel.offset != null ? Date.now() + duel.offset : now());
+  const DUEL_STAGE = { open: 0, lobby: 1, live: 2, done: 3, cancelled: 3 };
+  // Asks the server for the duel (see duelState in functions/index.js) and
+  // shows it, unless the live copy has moved on meanwhile. Also reads the
+  // server's clock, keeping the reading from the quickest reply.
+  async function refreshDuel(dd = duel) {
+    if (!dd || dd.refreshing) return;
+    dd.refreshing = true;
+    const seq = dd.seq;
+    try {
+      const sent = Date.now();
+      const res = await online.call('duelState', { id: dd.id });
+      const back = Date.now();
+      if (duel !== dd || !res || !res.duel) return;
+      if (back - sent < dd.rtt) Object.assign(dd, { rtt: back - sent, offset: res.now - (sent + back) / 2 });
+      const data = res.duel;
+      const was = dd.data ? DUEL_STAGE[dd.data.status] : -1;
+      if (DUEL_STAGE[data.status] > was || (DUEL_STAGE[data.status] === was && seq === dd.seq)) {
+        dd.heard = Date.now();
+        dd.data = data;
+        renderDuel();
+      }
+    } catch (e) { /* offline, or a server without duelState: the live copy carries on */ } finally {
+      dd.refreshing = false;
+    }
+  }
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && duel) refreshDuel(duel);
+  });
   function leaveDuel() {
     stopQuick();
     if (!duel) return;
@@ -4046,7 +4093,7 @@
     if (d.status === 'open' || d.status === 'lobby') return renderLobby(d);
     if (d.status === 'cancelled') return duelProblem('This duel was called off', 'The challenge was cancelled or ran out of time before it started.');
     if (d.status === 'live') {
-      if (now() < d.startAt || !d.puzzle) return renderCountdown(d);
+      if (duelNow() < d.startAt || !d.puzzle) return renderCountdown(d);
       if (!(game && game.duel && game.duel.id === duel.id)) startDuelBoard(d);
       return renderDuelBar();
     }
@@ -4063,7 +4110,9 @@
     const p = d.players;
     const label = DUELS[d.mode].label;
     const title = d.rematchOf ? 'Rematch' : d.code ? 'Challenge a friend' : 'Quick Match';
-    const row = (uid) => `<li class="${p[uid].ready ? 'ready' : ''}"><span class="duel-avatar" aria-hidden="true">${esc(p[uid].name[0].toUpperCase())}</span><span>${esc(p[uid].name)}${uid === mine ? ' <small>(you)</small>' : ''}</span><b>${p[uid].ready ? 'Ready' : 'Not ready'}</b></li>`;
+    const meReady = duel.readyWant != null ? duel.readyWant : p[mine].ready;
+    const isReady = (uid) => (uid === mine ? meReady : p[uid].ready);
+    const row = (uid) => `<li class="${isReady(uid) ? 'ready' : ''}"><span class="duel-avatar" aria-hidden="true">${esc(p[uid].name[0].toUpperCase())}</span><span>${esc(p[uid].name)}${uid === mine ? ' <small>(you)</small>' : ''}</span><b>${isReady(uid) ? 'Ready ✓' : 'Not ready'}</b></li>`;
     const waiting = d.invited ? 'Waiting for your opponent to accept…' : 'Waiting for your friend to join…';
     const link = d.code ? duelShareLink(d) : '';
     duelPanel(`<p class="kicker">${esc(label)} · ${esc(title)}</p>
@@ -4080,15 +4129,17 @@
         <p class="duel-small">Only someone with this link can join. It expires in ${DUELS.lobbyHours} hours.</p>
       </div>` : ''}
       <div class="duel-buttons">
-        ${opp ? `<button class="btn ${p[mine].ready ? '' : 'btn-primary'} duel-ready" data-action="duel-ready">${p[mine].ready ? 'Not ready yet' : 'I’m ready'}</button>` : ''}
+        ${opp ? `<button type="button" class="duel-toggle${meReady ? ' on' : ''}" role="switch" aria-checked="${meReady}" data-action="duel-ready">
+          <span class="duel-toggle-track" aria-hidden="true"><span class="duel-toggle-knob"></span></span>
+          <span class="duel-toggle-label">${meReady ? 'I’m ready' : 'Ready?'}</span></button>` : ''}
         <button class="btn" data-action="duel-leave">${d.host === mine && !opp ? 'Cancel challenge' : 'Leave'}</button>
       </div>
-      ${opp ? `<p class="duel-small">${p[mine].ready && !p[opp].ready ? `Waiting for ${esc(p[opp].name)}…` : `The duel starts ${DUELS.countdownMs / 1000} seconds after you’re both ready.`}</p>` : ''}
+      ${opp ? `<p class="duel-small">${meReady && !p[opp].ready ? `Waiting for ${esc(p[opp].name)} to get ready… Tap the switch again if you need a moment.` : !meReady && p[opp].ready ? `${esc(p[opp].name)} is ready. Flip the switch when you are.` : `Flip the switch when you’re ready. The duel starts ${DUELS.countdownMs / 1000} seconds after you both are.`}</p>` : ''}
       <ul class="duel-rules"><li>The same crossword for both of you; first to fill it in correctly wins.</li><li>No hints and no checking. You see each other’s progress, never the letters.</li><li>${esc(label)}s last up to ${DUELS[d.mode].minutes} minutes; if time runs out, it’s a draw.</li><li>The winner earns 3 Hint Credits (signed-in players, up to 3 rewarded wins a day).</li></ul>`);
   }
   function renderCountdown(d) {
     if (!$('#game-view').hidden) showView('duel');
-    const left = Math.max(0, Math.ceil((d.startAt - now()) / 1000));
+    const left = Math.max(0, Math.ceil((d.startAt - duelNow()) / 1000));
     const opp = duelOpp(d);
     duelPanel(`<p class="kicker">${esc(DUELS[d.mode].label)}</p><h1>You vs ${esc(d.players[opp].name)}</h1>
       <p class="duel-count" aria-live="assertive">${left || 'Go!'}</p>
@@ -4135,10 +4186,10 @@
   function duelTick() {
     const d = duel && duel.data;
     if (!d) return;
-    if (d.status === 'live' && (now() < d.startAt || !d.puzzle) && $('#game-view').hidden) return renderCountdown(d);
-    if (d.status === 'live' && !(game && game.duel && game.duel.id === duel.id) && d.puzzle && now() >= d.startAt) return renderDuel();
+    if (d.status === 'live' && (duelNow() < d.startAt || !d.puzzle) && $('#game-view').hidden) return renderCountdown(d);
+    if (d.status === 'live' && !(game && game.duel && game.duel.id === duel.id) && d.puzzle && duelNow() >= d.startAt) return renderDuel();
     if (d.status !== 'live' || $('#duel-bar').hidden) return;
-    const left = Math.max(0, d.endsAt - now());
+    const left = Math.max(0, d.endsAt - duelNow());
     $('#duel-clock').textContent = formatTime(left / 1000);
     $('#duel-clock').classList.toggle('low', left < 30000);
     if (left === 0 && !duel.settling) duelSettle(true);
@@ -4147,11 +4198,12 @@
   // too long); it says how long an absent opponent has left to come back.
   async function duelSettle(force) {
     const dd = duel;
-    if (!dd || !dd.data || dd.data.status !== 'live' || (!force && now() < dd.data.startAt)) return;
+    if (!dd || !dd.data || dd.data.status !== 'live' || (!force && duelNow() < dd.data.startAt)) return;
     dd.settling = true;
     try {
       const res = await online.call('duelSettle', { id: dd.id });
       if (duel !== dd) return;
+      if (res.status !== 'live') return refreshDuel(dd);
       const opp = dd.data.players[duelOpp(dd.data)];
       $('#duel-note').textContent = res.status === 'live' && res.waitMs < 40000
         ? `${opp.name} has lost connection. If they’re not back within ${Math.ceil(res.waitMs / 1000)} seconds, you win.` : '';
@@ -4182,6 +4234,9 @@
       const res = await online.call('duelProgress', { id: dd.id, grid: game.entries });
       if (duel !== dd) return;
       dd.myPct = res.percent;
+      // Finished (by you, or already by your opponent): show the result now
+      // rather than waiting for the live copy to catch up.
+      if (res.status === 'done') return refreshDuel(dd);
       renderDuelBar();
       if (res.full && !res.won && res.status === 'live') toast('The grid is full, but something isn’t right yet');
     } catch (e) {
@@ -4271,8 +4326,21 @@
       }
       if (!d) return;
       if (action === 'duel-ready') {
-        const ready = !d.players[duelMe()].ready;
-        await online.call('duelReady', { id: dd.id, ready });
+        // Flips at once on screen; the server confirms a moment later.
+        if (dd.readyBusy) return;
+        const ready = !(dd.readyWant != null ? dd.readyWant : d.players[duelMe()].ready);
+        dd.readyWant = ready;
+        dd.readyBusy = true;
+        buzz(10);
+        renderDuel();
+        try {
+          await online.call('duelReady', { id: dd.id, ready });
+          await refreshDuel(dd);
+        } finally {
+          dd.readyBusy = false;
+          dd.readyWant = null;
+          if (duel === dd) renderDuel();
+        }
       } else if (action === 'duel-leave') {
         await online.call('duelLeave', { id: dd.id });
         navigate('#/arcade');
