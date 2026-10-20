@@ -14,7 +14,7 @@ const path = require('path');
 const { GENRES, CATEGORIES, levelsFor } = require('../js/genres.js');
 
 // The live site's address. Change it here if the site moves to its own domain.
-const SITE = 'https://memmamally-source.github.io/crosswords/';
+const SITE = 'https://crosswordhub.app/';
 const root = path.join(__dirname, '..');
 const VERSION = fs.readFileSync(path.join(root, 'sw.js'), 'utf8').match(/const VERSION = (\d+);/)[1];
 const OG_IMAGE = `${SITE}icons/og-image.png`;
