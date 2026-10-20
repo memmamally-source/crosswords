@@ -1,14 +1,73 @@
-// Firestore security rules for Crossword Hub sign-in.
-// Paste these into Firebase console → Firestore Database → Rules → Publish.
-// Each signed-in player can read and write only their own progress document.
+// Firestore security rules for Crossword Hub.
+// Deployed with `firebase deploy --only firestore:rules` (see README → Hint
+// credits and duels), or pasted into Firebase console → Firestore Database →
+// Rules → Publish.
+//
+// Players can read their own progress, wallet, records and duels. Wallets,
+// records and duel results are written only by the trusted server
+// (functions/index.js), which these rules don't restrict, so nobody can edit
+// a balance or declare themselves a winner.
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function isUser(uid) { return signedIn() && request.auth.uid == uid; }
+
+    // Synced progress (js/account.js): each player's own document.
     match /users/{uid} {
-      allow read: if request.auth != null && request.auth.uid == uid;
-      allow create, update: if request.auth != null && request.auth.uid == uid
+      allow read: if isUser(uid);
+      allow create, update: if isUser(uid)
         && request.resource.data.progress is string
         && request.resource.data.progress.size() < 900000;
+    }
+
+    // Hint credits: read your own balance and history; never write.
+    match /wallets/{uid} {
+      allow read: if isUser(uid);
+      allow write: if false;
+      match /ledger/{entry} {
+        allow read: if isUser(uid);
+        allow write: if false;
+      }
+      match /{rest=**} {
+        allow read, write: if false;
+      }
+    }
+
+    // Duel records, and a Quick Match the server found for you.
+    match /players/{uid} {
+      allow read: if isUser(uid);
+      allow write: if false;
+    }
+
+    // A duel: readable by its two players only. The answers are in a
+    // sub-document nobody can read.
+    match /duels/{duel} {
+      function inDuel() {
+        return signedIn() && request.auth.uid in get(/databases/$(database)/documents/duels/$(duel)).data.uids;
+      }
+      allow read: if signedIn() && request.auth.uid in resource.data.uids;
+      allow write: if false;
+      match /secret/{doc} {
+        allow read, write: if false;
+      }
+      // "Still here" heartbeats: each player writes only their own, stamped
+      // with the server's clock.
+      match /presence/{uid} {
+        allow read: if inDuel();
+        allow create, update: if isUser(uid) && inDuel()
+          && request.resource.data.keys().hasOnly(['at'])
+          && request.resource.data.at == request.time;
+        allow delete: if false;
+      }
+    }
+
+    // Challenge codes and the Quick Match line: server only.
+    match /duelCodes/{code} {
+      allow read, write: if false;
+    }
+    match /quick/{mode} {
+      allow read, write: if false;
     }
   }
 }
