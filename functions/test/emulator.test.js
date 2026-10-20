@@ -170,6 +170,14 @@ const ok = (label) => console.log(`  ✓ ${label}`);
   assert.strictEqual(duel.endsAt - duel.startAt, E.DUELS.mini.minutes * 60000);
   const hidden = JSON.parse(duel.puzzle);
   assert.ok(hidden.words.length >= 4 && hidden.words.every((w) => /^\?+$/.test(w[0])), 'at the start: clues and layout, never the answers');
+  // The duel and the server's clock, for a page whose live copy has stalled.
+  const before = Date.now();
+  r = await b.call('duelState', { id: d1.id });
+  assert.strictEqual(r.duel.status, 'live');
+  assert.strictEqual(r.duel.startAt, duel.startAt);
+  assert.ok(Math.abs(r.now - before) < 5000, 'the server’s clock');
+  assert.ok(!JSON.stringify(r).includes(sol[0].filter(Boolean).join('')) && !('rows' in r.duel), 'never the answers');
+  await rejects(c.call('duelState', { id: d1.id }), 'not-found', 'outsiders can’t read a duel');
   r = await a.call('duelProgress', { id: d1.id, grid: sol });
   assert.strictEqual(r.status, 'countdown', 'nothing counts before the start');
   await wait(duel.startAt - Date.now() + 200);

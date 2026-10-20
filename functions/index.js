@@ -452,6 +452,18 @@ exports.duelLeave = onCall(async (req) => {
   });
 });
 
+// The duel as the server has it, with the server's clock. Pages ask when
+// their live copy may have stalled (phones often pause it, for example after
+// switching apps), and use the clock so both players count down to the same
+// moment, however their own phones' clocks are set.
+exports.duelState = onCall(async (req) => {
+  const uid = caller(req);
+  const { id } = req.data || {};
+  const snap = await duelRef(String(id)).get();
+  if (!snap.exists || !isParticipant(snap.data(), uid)) fail('not-found', 'That duel isn’t yours.');
+  return { duel: snap.data(), now: now() };
+});
+
 // Settles a duel that has stalled: out of time (a draw), or an opponent who
 // has been gone longer than the reconnection window (you win, without
 // credits). Anyone in the duel can ask; the server checks the clocks.

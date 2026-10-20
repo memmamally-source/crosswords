@@ -468,9 +468,17 @@ time to the next allowance, ways to earn and recent transactions.
   link or the phone's Share sheet. **Quick Match** pairs you with someone
   else looking for the same kind of duel, or keeps looking (never a pretend
   opponent), with Cancel and "Challenge a friend instead".
-- **Lobby:** both names and Ready buttons. When both are ready the server
-  sets a start time 5 seconds ahead, and both grids appear at that moment.
-  The clues aren't sent to anyone before then.
+- **Lobby:** both names and a Ready switch (it flips at once; the server
+  confirms). When both are ready the server sets a start time 5 seconds
+  ahead, and both grids appear at that moment. The clues aren't sent to
+  anyone before then.
+- **Staying in step:** each page reads the server's clock (`duelState`, the
+  quickest of a few replies), so both count down to the same moment however
+  the phones' clocks are set. Phones often pause Firestore's live updates
+  (for example after switching to WhatsApp to send the link), so while the
+  live copy is quiet the page also asks `duelState` every few seconds, at
+  once when it comes back to the screen, and as soon as the server says a
+  duel has ended.
 - **Playing:** the page gets the layout and clues only, never the answers.
   It sends the grid as you type; the server works out how much is right and
   shares only that percentage with your opponent (never letters). No hints,
