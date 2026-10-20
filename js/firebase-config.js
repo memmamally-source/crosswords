@@ -24,5 +24,5 @@ window.FIREBASE_CONFIG = {
   // deployed to (it uses 'europe-west1'). While this is empty, hints stay
   // free as before and duels show "Coming soon". Set it only after deploying
   // the server: README → Hint credits and duels.
-  functionsRegion: '',
+  functionsRegion: 'europe-west1',
 };
