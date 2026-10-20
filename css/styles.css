@@ -1971,3 +1971,19 @@ body {
   .week-track { padding: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { .stats-panel > summary::after { transition: none; } }
+
+/* Results with four or more figures wrap into a ruled grid on phones, so
+   long labels (LETTERS REVEALED) never run off the edge. */
+.win-stats div { min-width: 0; }
+.win-stats span { overflow-wrap: anywhere; }
+@media (max-width: 560px) {
+  .win-stats:has(> :nth-child(4)) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .win-stats:has(> :nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .win-stats:has(> :nth-child(4)) > div { border-left: 0; }
+  .win-stats:has(> :nth-child(4)) > div:not(:nth-child(3n + 1)) { border-left: 1px solid var(--rule); }
+  .win-stats:has(> :nth-child(4)) > div:nth-child(n + 4) { border-top: 1px solid var(--rule); }
+  .win-stats:has(> :nth-child(4):last-child) > div { border-left: 0; }
+  .win-stats:has(> :nth-child(4):last-child) > div:nth-child(even) { border-left: 1px solid var(--rule); }
+  .win-stats:has(> :nth-child(4):last-child) > div:nth-child(n + 3) { border-top: 1px solid var(--rule); }
+  .win-stats span { letter-spacing: 0.04em; }
+}
