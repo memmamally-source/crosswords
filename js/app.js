@@ -855,7 +855,7 @@
     const was = me.uid;
     me = e.detail;
     if (was !== me.uid) wallet = null;
-    if (me.account) syncWallet();
+    if (me.account) syncWallet().then(sendPendingClaims);
     renderWallet();
     if (!$('#stats-view').hidden) renderStats();
   });
@@ -1076,20 +1076,78 @@
   }
 
   // A first No-Hint solve of a published puzzle: the server checks the grid
-  // and pays 1 (Mini) or 3 (Daily, Brutal) credits, once.
-  async function claimReward(spec, entries) {
+  // and pays 1 (Mini) or 3 (Daily, Brutal) credits, once. The solve waits in
+  // store.pendingClaims (on this device) until the server has answered, so
+  // a solve while signed out is paid after signing in, and one cut off by the
+  // connection (or a server waking up) is tried again later. The win screen
+  // says what happened either way.
+  const CLAIM_DAYS = 7; // solves older than this aren't claimed later
+  const REWARD_WHY = {
+    already: 'Credits for this puzzle were already paid to your account.',
+    assisted: 'No credits this time: a hint was bought on this puzzle.',
+    'not-eligible': 'Only today’s or an earlier Daily, the Mini and the Brutal Challenge earn credits.',
+    incorrect: '',
+  };
+  function rewardNote(text) {
     const el = $('#win-reward');
-    el.hidden = true;
+    el.textContent = text;
+    el.hidden = !text;
+  }
+  function queueClaim(spec, entries) {
+    store.pendingClaims = Object.assign({}, store.pendingClaims, { [spec.key]: { grid: entries.map((row) => row.slice()), at: Date.now() } });
+    saveStore();
+  }
+  async function claimReward(spec, entries) {
+    queueClaim(spec, entries);
+    const amount = spec.kind === 'mini' ? Econ.ECONOMY.reward.mini : Econ.ECONOMY.reward.full;
+    if (!me.account) {
+      rewardNote(`Sign in to collect ${plural(amount, 'Hint Credit')} for this No-Hint solve: it’s kept for you for a week.`);
+      return;
+    }
+    rewardNote('Checking your No-Hint reward…');
+    const res = await sendClaim(spec.key);
+    if (!res) rewardNote(`Your ${plural(amount, 'Hint Credit')} will be added when the connection’s back.`);
+    else if (res.ok) rewardNote(res.kind === 'mini' ? `Brilliant! Mini solved without hints. +${plural(res.amount, 'credit')}.` : `Perfect solve! +${res.amount} Hint Credits.`);
+    else rewardNote(REWARD_WHY[res.reason] || '');
+  }
+  // Sends one waiting claim. Returns the server's answer, or null if it
+  // couldn't be reached (the claim then stays for next time).
+  async function sendClaim(key) {
+    const claim = (store.pendingClaims || {})[key];
+    if (!claim || !me.account || !creditsOn()) return null;
     try {
-      const res = await online.call('claimSolve', { puzzle: spec.key, grid: entries });
-      if (!res.ok) return;
-      setWallet(res.wallet);
-      el.textContent = res.kind === 'mini' ? `Brilliant! Mini solved without hints. +${plural(res.amount, 'credit')}.` : `Perfect solve! +${res.amount} Hint Credits.`;
-      el.hidden = false;
+      const res = await online.call('claimSolve', { puzzle: key, grid: claim.grid });
+      delete store.pendingClaims[key];
+      saveStore();
+      if (res.wallet) setWallet(res.wallet);
+      return res;
     } catch (e) {
-      /* offline: the reward can't be claimed later, but nothing is lost */
+      return null;
     }
   }
+  // Claims kept from earlier (signed out, or offline), once signed in.
+  let claiming = false;
+  async function sendPendingClaims() {
+    if (claiming || !me.account || !creditsOn()) return;
+    claiming = true;
+    let paid = 0;
+    try {
+      for (const [key, claim] of Object.entries(store.pendingClaims || {})) {
+        if (Date.now() - claim.at > CLAIM_DAYS * 86400000) {
+          delete store.pendingClaims[key];
+          saveStore();
+          continue;
+        }
+        const res = await sendClaim(key);
+        if (res && res.ok) paid += res.amount;
+        if (!res) break; // offline: try again later
+      }
+    } finally {
+      claiming = false;
+    }
+    if (paid) toast(`+${plural(paid, 'Hint Credit')} for your No-Hint solves`);
+  }
+  window.addEventListener('online', sendPendingClaims);
 
   // ---------- Statistics page (#/stats) ----------
   const tile = ([v, l]) => `<div><b>${v}</b><span>${esc(l)}</span></div>`;
@@ -2090,7 +2148,7 @@
     delete store.saves[spec.key];
     saveStore();
     $('#win-reward').hidden = true;
-    if (creditsOn() && me.account && noHint && !prev && ['daily', 'mini', 'brutal'].includes(spec.kind)) claimReward(spec, game.entries);
+    if (creditsOn() && noHint && !prev && ['daily', 'mini', 'brutal'].includes(spec.kind)) claimReward(spec, game.entries);
 
     $('#board').classList.add('solved');
     celebrate(clean);
