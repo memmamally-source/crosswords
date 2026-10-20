@@ -5,36 +5,45 @@
  * solving desk puts the grid left and two clue columns right, newspaper style.
  */
 :root {
-  --paper: #f7f4ec;
-  --card: #fffdf8;
-  --gold: #d4a12a;
-  --navy: #1b2540;
-  --midnight: #121a2e;
-  --primary: #1b2540;
-  --on-primary: #fffdf8;
-  --ink: #161a22;
-  --ink-soft: #5b6070;
-  --rule: #e3ddcf;
-  --wash: #efeadd;
-  --accent: #9b2915;
-  --cell: #fffdf8;
-  --block: #1b2540;
-  --board: #1b2540; /* the dark board behind the grid: every non-letter square */
-  --grid-line: #1b2540;
-  --thumb-bg: #1b2540;
-  --thumb-cell: #fffdf8;
-  --hl-word: #b9dafc;
-  --hl-cell: #f4c430;
-  --hl-cross: #e8f2fd;
-  --on-hl-cell: #10141f;
-  --wrong: #d0021b;
-  --revealed: #1f62c4;
-  --pencil: #8b8b86;
-  --good: #217346;
-  --assist: #b97a0b;
-  --on-ink: #fffdf8;
-  --shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
-  --font-display: 'Newsreader', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  /* The 1913 newspaper meets a vintage board game: parchment, printer's ink,
+     forest green, mustard for rewards and coral for the Arcade. */
+  --paper: #efe5cc;
+  --card: #f7efdc;
+  --gold: #e3b64c;
+  --navy: #2a241c;
+  --midnight: #2a241c;
+  --primary: #2f5a43;
+  --on-primary: #f7efdc;
+  --ink: #2a241c;
+  --ink-soft: #5c5141;
+  --rule: #d3c4a0;
+  --wash: #e7dcc2;
+  --accent: #a84a35;
+  --cell: #fbf5e6;
+  --block: #2a241c;
+  --board: #2a241c; /* the dark board behind the grid: every non-letter square */
+  --grid-line: #2a241c;
+  --thumb-bg: #2a241c;
+  --thumb-cell: #fbf5e6;
+  --hl-word: #c6dce6;
+  --hl-cell: #edc65c;
+  --hl-cross: #e6ebe2;
+  --on-hl-cell: #2a241c;
+  --wrong: #a83224;
+  --revealed: #2b5c8a;
+  --pencil: #8a8170;
+  --good: #2f5a43;
+  --assist: #8a6512;
+  --on-ink: #f7efdc;
+  --forest-deep: #1f3f2f;
+  --mustard: #e3b64c;
+  --mustard-deep: #b98a22;
+  --coral: #da6a4f;
+  --coral-deep: #a84a35;
+  --grain-opacity: 1;
+  --shadow: 0 10px 40px rgba(42, 36, 28, 0.22);
+  --font-display: 'Instrument Serif', 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-head: 'Newsreader', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
   --font-ui: 'Public Sans', 'Helvetica Neue', Arial, system-ui, sans-serif;
   --radius: 4px;
   --max: 1240px;
@@ -43,68 +52,80 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --paper: #0e1320;
-    --card: #161d2d;
-    --gold: #e0b13d;
-    --navy: #25314f;
-    --midnight: #1b2540;
-    --primary: #e0b13d;
-    --on-primary: #121a2e;
-    --ink: #eef0f4;
-    --ink-soft: #a3abbd;
-    --rule: #2a3348;
-    --wash: #1d2537;
-    --accent: #f0a08a;
-    --cell: #2a3347;
-    --block: #05070d;
-    --board: #05070d;
-    --grid-line: #7884a3; /* light outlines so squares stand out from the board */
-    --thumb-bg: #05070d;
-    --thumb-cell: #8b96b1;
-    --hl-word: #3d6aa8;
-    --hl-cell: #e2b33a;
-    --hl-cross: #36425c;
-    --on-hl-cell: #10141f;
-    --wrong: #ff6b6b;
-    --revealed: #7fb2ff;
-    --pencil: #8f8e89;
-    --good: #5fcf8e;
+    --paper: #1c1915;
+    --card: #26221c;
+    --gold: #e2b54e;
+    --navy: #2e2921;
+    --midnight: #12100c;
+    --primary: #8cc0a1;
+    --on-primary: #142019;
+    --ink: #efe6d3;
+    --ink-soft: #b8ad98;
+    --rule: #3d362c;
+    --wash: #2e2921;
+    --accent: #e8846b;
+    --cell: #2e2921;
+    --block: #0b0a08;
+    --board: #0b0a08;
+    --grid-line: #9c9078; /* light outlines so squares stand out from the board */
+    --thumb-bg: #0b0a08;
+    --thumb-cell: #9c9078;
+    --hl-word: #3e5c6b;
+    --hl-cell: #c9a23a;
+    --hl-cross: #353029;
+    --on-hl-cell: #14110d;
+    --wrong: #ff7a66;
+    --revealed: #8fb8e0;
+    --pencil: #9a917f;
+    --good: #8cc0a1;
     --assist: #e6b04a;
-    --on-ink: #121a2e;
+    --on-ink: #1c1915;
+    --forest-deep: #5f947a;
+    --mustard: #e2b54e;
+    --mustard-deep: #a8801f;
+    --coral: #e8846b;
+    --coral-deep: #b9573f;
+    --grain-opacity: 0.35;
     --shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
     color-scheme: dark;
   }
 }
 
 :root[data-theme='dark'] {
-  --paper: #0e1320;
-  --card: #161d2d;
-  --gold: #e0b13d;
-  --navy: #25314f;
-  --midnight: #1b2540;
-  --primary: #e0b13d;
-  --on-primary: #121a2e;
-  --ink: #eef0f4;
-  --ink-soft: #a3abbd;
-  --rule: #2a3348;
-  --wash: #1d2537;
-  --accent: #f0a08a;
-  --cell: #2a3347;
-  --block: #05070d;
-  --board: #05070d;
-  --grid-line: #7884a3; /* light outlines so squares stand out from the board */
-  --thumb-bg: #05070d;
-  --thumb-cell: #8b96b1;
-  --hl-word: #3d6aa8;
-  --hl-cell: #e2b33a;
-  --hl-cross: #36425c;
-  --on-hl-cell: #10141f;
-  --wrong: #ff6b6b;
-  --revealed: #7fb2ff;
-  --pencil: #8f8e89;
-  --good: #5fcf8e;
+  --paper: #1c1915;
+  --card: #26221c;
+  --gold: #e2b54e;
+  --navy: #2e2921;
+  --midnight: #12100c;
+  --primary: #8cc0a1;
+  --on-primary: #142019;
+  --ink: #efe6d3;
+  --ink-soft: #b8ad98;
+  --rule: #3d362c;
+  --wash: #2e2921;
+  --accent: #e8846b;
+  --cell: #2e2921;
+  --block: #0b0a08;
+  --board: #0b0a08;
+  --grid-line: #9c9078; /* light outlines so squares stand out from the board */
+  --thumb-bg: #0b0a08;
+  --thumb-cell: #9c9078;
+  --hl-word: #3e5c6b;
+  --hl-cell: #c9a23a;
+  --hl-cross: #353029;
+  --on-hl-cell: #14110d;
+  --wrong: #ff7a66;
+  --revealed: #8fb8e0;
+  --pencil: #9a917f;
+  --good: #8cc0a1;
   --assist: #e6b04a;
-  --on-ink: #121a2e;
+  --on-ink: #1c1915;
+  --forest-deep: #5f947a;
+  --mustard: #e2b54e;
+  --mustard-deep: #a8801f;
+  --coral: #e8846b;
+  --coral-deep: #b9573f;
+  --grain-opacity: 0.35;
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
   color-scheme: dark;
 }
@@ -1504,4 +1525,160 @@ dialog.sheet { width: 100%; max-width: 560px; max-height: 78vh; margin: auto aut
   .arcade-controls .btn { padding-block: 9px; }
   .arcade-keys { gap: 5px; }
   .arcade-keys .keys-row button { height: 42px; }
+}
+
+/* =====================================================================
+   Visual refresh: the 1913 newspaper meets a vintage board game.
+   Parchment with a faint paper grain, printer's-ink rules, an Instrument
+   Serif masthead and headlines, Newsreader for clues and section heads,
+   forest green for actions, mustard for rewards, coral for the Arcade.
+   ===================================================================== */
+html { font-synthesis: none; } /* Instrument Serif has one weight: never fake bold */
+
+/* Paper grain: a tiny tiled noise image, drawn once (no fixed layers). */
+body {
+  background-color: var(--paper);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.32 0 0 0 0 0.16 0 0 0 0.11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+:root[data-theme='dark'] body { background-image: none; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) body { background-image: none; } }
+
+/* Masthead */
+.masthead { background: transparent; border-bottom: 4px double var(--ink); }
+.wordmark { gap: 12px; }
+.logo-mark { width: 40px; height: 40px; border-radius: 9px; }
+.wordmark-text { display: flex; flex-direction: column; align-items: flex-start; }
+.wordmark-name { font-family: var(--font-display); font-weight: 400; font-size: 2.15rem; line-height: 0.95; letter-spacing: -0.005em; }
+.wordmark-tag { margin-top: 3px; font-family: var(--font-ui); font-size: 0.56rem; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; }
+.masthead-nav button[aria-current='page'] { background: var(--primary); color: var(--on-primary); }
+
+/* Type: Instrument Serif for big titles; Newsreader for smaller heads. */
+.hero-title, .page-title, .feature h2, .brutal h2, .gift-head, .arcade-mode-name,
+.arcade-start h1, .arcade-results h1, .gift-result h2, .gift-soon h2, .win h2, .stats h2, .privacy h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+.hero-title { font-size: clamp(2.6rem, 6.4vw, 4.2rem); line-height: 0.98; letter-spacing: -0.01em; }
+.page-title { font-size: clamp(2.5rem, 6vw, 3.6rem); line-height: 1; }
+.feature h2 { font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1; }
+.feature-mini h2 { font-size: 2.1rem; }
+.brutal h2 { font-size: clamp(2rem, 3.6vw, 2.8rem); line-height: 1.02; }
+.win h2, .stats h2, .privacy h2 { font-size: 2.5rem; line-height: 1; }
+.genre-card h3, .trend-title, .week-strip .level, .month-nav h2, .site-footer .footer-brand, .gift-step, .name-form h2, .room-invite h2 {
+  font-family: var(--font-head);
+}
+/* Section heads in bold italic, ruled, as on the 1913 page. */
+.section-title { font-family: var(--font-head); font-style: italic; font-weight: 700; font-size: 1.7rem; }
+.home-section > .section-title, .section-head { padding-bottom: 6px; border-bottom: 1px solid var(--ink); margin-bottom: 14px; }
+.home-section > .section-title { margin-bottom: 14px; }
+.section-head .section-title { border: 0; padding: 0; }
+.dateline { color: #7a5a12; } /* mustard, darkened to read on parchment */
+:root[data-theme='dark'] .dateline { color: var(--gold); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .dateline { color: var(--gold); } }
+.page-head { border-bottom: 4px double var(--ink); }
+
+/* Buttons: typeset labels with a little press-down depth. */
+.btn { border-radius: 8px; border-color: var(--ink); }
+.btn-primary { border-color: var(--primary); box-shadow: 0 3px 0 var(--forest-deep); }
+.btn-primary:hover { opacity: 1; filter: brightness(1.06); }
+.btn-primary:active { box-shadow: 0 1px 0 var(--forest-deep); transform: translateY(2px); }
+.btn-gold { background: var(--mustard); border-color: var(--ink); color: #2a241c; box-shadow: 0 3px 0 var(--mustard-deep); }
+.btn-gold:hover { background: var(--mustard); filter: brightness(1.05); border-color: var(--ink); }
+.segmented button[aria-checked='true'] { background: var(--primary); color: var(--on-primary); }
+
+/* Cards and panels: newsprint with ink borders. */
+.feature { border-radius: 12px; border-color: var(--ink); }
+.feature-daily { box-shadow: 4px 4px 0 var(--ink); }
+.chips li { background: transparent; border: 1px solid var(--ink); }
+.thumb { border-radius: 4px; }
+.streak-pill { background: var(--mustard); border-color: var(--ink); color: #2a241c; }
+.streak-pill span { color: #3b3122; }
+.streak-pill .flame { color: #2a241c; }
+.brutal { border-radius: 12px; background: var(--midnight); color: #f7efdc; box-shadow: 4px 4px 0 var(--mustard-deep); }
+.brutal-kicker, .brutal-copy .brutal-status { color: var(--mustard); }
+.brutal-copy p:not(.brutal-kicker) { color: #d8ccb2; }
+.continue-card, .week-strip button, .home-stats { border-radius: 10px; border-color: var(--ink); }
+.continue-card .bar i { background: var(--primary); }
+.trend-card { border-radius: 12px; border: 1px solid var(--ink); color: #f7efdc; }
+.trend-card .icon, .trend-kicker { color: var(--mustard); }
+.gift-card, .arcade-mode { border-color: var(--ink); border-radius: 12px; }
+
+/* Collections: a card catalogue. The level tabs are a drawer front with
+   brass label holders; each genre is an index card with a filing tab and a
+   rubber-stamped level. */
+.category-tabs { gap: 6px; padding: 8px; border-radius: 8px; background: #6e4528; border: 1px solid var(--ink); box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.25); }
+.category-tabs button { border: 1.5px solid transparent; background: transparent; color: #f7efdc; border-radius: 4px; font-family: var(--font-head); font-weight: 700; }
+.category-tabs button[aria-selected='true'] { background: #f7efdc; color: #2a241c; border-color: #c9a25a; box-shadow: 0 0 0 2px #2a241c; }
+.genre-grid { gap: 22px 16px; padding-top: 10px; }
+.genre-card {
+  position: relative;
+  padding: 22px 16px 16px;
+  border: 1px solid var(--ink);
+  border-radius: 3px;
+  background: var(--cell);
+  box-shadow: 0 3px 0 var(--rule);
+}
+.genre-card:hover { box-shadow: 0 5px 0 var(--rule); transform: translateY(-1px); }
+.card-tab {
+  position: absolute;
+  top: -11px;
+  left: 14px;
+  padding: 1px 10px;
+  border: 1px solid var(--ink);
+  border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+  background: var(--wash);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.genre-card:nth-child(3n + 2) .card-tab { left: 38%; }
+.genre-card:nth-child(3n) .card-tab { left: auto; right: 14px; }
+.card-stamp {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 2px 7px;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  transform: rotate(-8deg);
+  opacity: 0.85;
+}
+.genre-card:nth-child(even) .card-stamp { transform: rotate(6deg); }
+.stamp-easy, .stamp-casual { color: var(--good); }
+.stamp-medium, .stamp-fan { color: #8a6512; }
+:root[data-theme='dark'] .stamp-medium, :root[data-theme='dark'] .stamp-fan { color: var(--gold); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .stamp-medium, :root:not([data-theme='light']) .stamp-fan { color: var(--gold); } }
+.stamp-hard, .stamp-expert, .stamp-superfan { color: var(--accent); }
+.stamp-brutal { color: var(--wrong); }
+.genre-card .meta { padding-right: 76px; }
+.genre-icon { border-radius: 8px; border: 1px solid var(--ink); }
+
+/* Footer */
+.site-footer { background: var(--midnight); color: #d8ccb2; border-top: 4px double var(--mustard-deep); }
+.site-footer .footer-brand { font-family: var(--font-display); font-weight: 400; font-size: 1.8rem; color: #f7efdc; }
+
+/* Search pages (play/) */
+.landing-bar { background: transparent; border-bottom: 4px double var(--ink); }
+.landing-brand { font-family: var(--font-display); font-weight: 400; font-size: 1.9rem; }
+.landing-brand img { border-radius: 8px; }
+.landing-links a { border-radius: 6px; border-color: var(--ink); }
+
+/* Phones: the masthead is centred, newspaper style (the menu is the tab bar). */
+@media (max-width: 640px) {
+  .masthead-bar { grid-template-columns: 1fr auto 1fr; }
+  .wordmark { grid-column: 2; justify-self: center; }
+  .masthead-tools { grid-column: 3; }
+  .logo-mark { display: none; }
+  .wordmark-text { align-items: center; }
+  .wordmark-name { font-size: 2.1rem; }
+  .wordmark-tag { font-size: 0.5rem; }
+  .hero-title { font-size: 2.6rem; }
+  .genre-card .meta { padding-right: 70px; }
 }

@@ -23,7 +23,7 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const withLength = (w) => (/\([\d,\- ]+\)$/.test(w.clue) ? w.clue : `${w.clue} (${w.answer.length})`);
 const categoryOf = (g) => CATEGORIES.find((c) => c.id === g.category);
 
-const ICON = '<svg viewBox="0 0 64 64" aria-hidden="true" width="34" height="34"><rect width="64" height="64" rx="12" fill="#1b2540"/><rect x="6" y="19" width="13" height="13" fill="#fffdf8"/><rect x="19" y="19" width="13" height="13" fill="#fffdf8"/><rect x="33" y="19" width="13" height="13" fill="#d4a12a"/><rect x="46" y="19" width="12" height="13" fill="#fffdf8"/><rect x="33" y="6" width="13" height="13" fill="#fffdf8"/><rect x="33" y="32" width="13" height="13" fill="#fffdf8"/><rect x="33" y="45" width="13" height="13" fill="#fffdf8"/></svg>';
+const ICON = (up) => `<img src="${up}icons/logo.svg" alt="" width="36" height="36" />`;
 
 function page({ title, description, url, up, body }) {
   return `<!doctype html>
@@ -41,14 +41,14 @@ function page({ title, description, url, up, body }) {
   <meta property="og:url" content="${url}" />
   <meta property="og:image" content="${OG_IMAGE}" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="${up}icons/icon-192.png" />
+  <link rel="icon" href="${up}icons/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,700&family=Public+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Newsreader:opsz,wght@6..72,700&family=Public+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="${up}css/styles.css?v=${VERSION}" />
 </head>
 <body class="landing">
-  <header class="landing-bar"><a class="landing-brand" href="${up}">${ICON}<span>Crossword Hub</span></a></header>
+  <header class="landing-bar"><a class="landing-brand" href="${up}">${ICON(up)}<span>Crossword Hub</span></a></header>
   <main class="landing-main">
 ${body}
   </main>

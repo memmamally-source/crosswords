@@ -502,8 +502,8 @@
   };
   // One chip colour per genre group.
   const CATEGORY_COLOURS = {
-    mixed: '#1b2540', classic: '#2b4a3f', fun: '#5a2f4f', academic: '#24456b',
-    tv: '#5a2f4f', movies: '#7a2e2e', anime: '#3b2f5c', gaming: '#24456b', sport: '#2b4a3f', music: '#6b3a24',
+    mixed: '#2a241c', classic: '#2f5a43', fun: '#a84a35', academic: '#3e5c6b',
+    tv: '#6b3a4a', movies: '#8a3b2b', anime: '#4b3f6b', gaming: '#3e5c6b', sport: '#2f5a43', music: '#6b4a2b',
   };
 
   // ---------- Home ----------
@@ -670,7 +670,7 @@
     const list = (typeof FEATURED !== 'undefined' ? FEATURED : []).filter((f) => (f.genre ? genreById(f.genre) : f.link));
     $('#trending-row').closest('section').hidden = !list.length;
     $('#trending-row').innerHTML = list.map((f) => `
-      <button class="trend-card" style="background:${esc(f.colour || '#1b2540')}" ${f.genre ? `data-genre="${esc(f.genre)}"` : `data-open="${esc(f.link)}"`}>
+      <button class="trend-card" style="background:${esc(f.colour || '#2a241c')}" ${f.genre ? `data-genre="${esc(f.genre)}"` : `data-open="${esc(f.link)}"`}>
         ${icon(f.icon || 'star')}
         <span><span class="trend-kicker">${esc(f.kicker || '')}</span><span class="trend-title">${esc(f.title)}</span></span>
       </button>`).join('');
@@ -714,7 +714,9 @@
   function renderGenreGrid() {
     const grid = $('#genre-grid');
     grid.innerHTML = '';
-    for (const g of GENRES.filter((x) => x.category === store.category)) {
+    // Laid out like a card catalogue: each card has a filing tab and a
+    // rubber-stamped level.
+    GENRES.filter((x) => x.category === store.category).forEach((g, i) => {
       const level = levelFor(g);
       const cfg = levelsFor(g)[level];
       const best = store.best[`${g.id}:${level}`];
@@ -722,7 +724,9 @@
       card.className = 'genre-card';
       card.dataset.genre = g.id;
       card.innerHTML = `
-        <span class="genre-icon" style="background:${CATEGORY_COLOURS[g.category] || '#1b2540'}">${icon(GENRE_ICONS[g.id] || g.icon)}</span>
+        <span class="card-tab" aria-hidden="true">No. ${i + 1}</span>
+        <span class="card-stamp stamp-${level}" aria-hidden="true">${esc(cfg.label)}</span>
+        <span class="genre-icon" style="background:${CATEGORY_COLOURS[g.category] || '#2a241c'}">${icon(GENRE_ICONS[g.id] || g.icon)}</span>
         <span>
           <h3>${esc(g.name)}</h3>
           <p>${esc(g.blurb)}</p>
@@ -730,7 +734,7 @@
         </span>`;
       card.setAttribute('aria-label', `${g.name}. ${g.blurb} ${cfg.label}, ${cfg.count} clues.`);
       grid.appendChild(card);
-    }
+    });
   }
 
   // ---------- Archive ----------

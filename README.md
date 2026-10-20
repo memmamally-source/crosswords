@@ -311,6 +311,23 @@ advertising features are off. `tests/analytics.test.js` checks the fixed
 list. A **Privacy** note, linked from Settings and the prompt, explains all
 this to players.
 
+## Look and feel
+
+Nostalgic newspaper crossword meets playful vintage board game: parchment with
+a faint paper grain (`body` background in `css/styles.css`), printer's-ink
+rules, forest green for actions, mustard for rewards and coral for the
+Arcade. Colours are CSS variables at the top of `css/styles.css`, with a warm
+"night edition" for dark mode.
+
+- **Type:** Instrument Serif for the masthead and big titles, Newsreader for
+  clues and the bold italic section heads, Public Sans for buttons and numbers.
+- **Icon:** the CH "Corner" monogram, drawn by `tools/make-icons.py` (PNG
+  icons, `icons/logo.svg` and `icons/favicon.svg`) from
+  `tools/fonts/InstrumentSerif-Regular.ttf` (SIL Open Font License, in
+  `tools/fonts/`).
+- **Collections** are laid out as a card catalogue: a drawer-front level tab
+  bar and index cards with a filing tab and a rubber-stamped level.
+
 ## Arcade: Clue Blitz and Survival
 
 Two single-clue games at `#/arcade`, drawing on every genre and collection
