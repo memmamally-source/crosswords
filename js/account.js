@@ -6,7 +6,7 @@
  * stored as one document, users/{uid}, holding a JSON copy of the syncable
  * part of their saved progress (see js/sync.js).
  */
-const { SDK, getApp, getAuth, isRealUser } = window.CrosswordFirebase;
+const { getAuth, getDb, isRealUser } = window.CrosswordFirebase;
 const config = window.FIREBASE_CONFIG;
 const hub = window.CrosswordHub;
 const { mergeStores, syncable, differs } = window.CrosswordSync;
@@ -16,12 +16,7 @@ const $ = (sel) => document.querySelector(sel);
 if (config && hub) start().catch(() => { /* sign-in unavailable (e.g. offline): the site works as before */ });
 
 async function start() {
-  const [app, { lib: authLib, auth }, db] = await Promise.all([
-    getApp(),
-    getAuth(),
-    import(`${SDK}/firebase-firestore.js`),
-  ]);
-  const firestore = db.getFirestore(app);
+  const [{ lib: authLib, auth }, { lib: db, db: firestore }] = await Promise.all([getAuth(), getDb()]);
 
   let user = null;
   let mode = 'signin'; // or 'create'

@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600;1,6..72,700&family=Public+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=36" />
+  <link rel="stylesheet" href="css/styles.css?v=37" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -38,7 +38,7 @@
         <button data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 12h16M12 4v16" /></svg><span>Today</span></button>
         <button data-nav="archive"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M4 10h16M9 3v4M15 3v4" /></svg><span>Archive</span></button>
         <button data-nav="genres"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5" /><rect x="13" y="4" width="7" height="7" rx="1.5" /><rect x="4" y="13" width="7" height="7" rx="1.5" /><rect x="13" y="13" width="7" height="7" rx="1.5" /></svg><span>Collections</span></button>
-        <button data-nav="arcade"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></svg><span>Arcade</span></button>
+        <button data-nav="arcade"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></svg><span>Play</span></button>
         <button data-nav="stats" class="nav-stats"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V4M19 20v-6" /></svg><span>Stats</span></button>
       </nav>
       <div class="masthead-tools">
@@ -46,6 +46,7 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" /></svg>
           <span class="avatar" id="account-avatar" hidden></span>
         </button>
+        <button class="wallet-btn" id="wallet-btn" data-action="wallet" aria-label="Hint credits" title="Hint credits" hidden><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.6 10.8c.8.6 1.1 1.4 1.1 2.2v.5h5v-.5c0-.8.4-1.6 1.1-2.2A6 6 0 0012 3z"/><path d="M12 7.5v3l1.6 1.4"/></svg><span id="wallet-total"></span></button>
         <button class="icon-btn" data-nav="stats" aria-label="Statistics" title="Statistics">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V4M19 20v-6" /></svg>
         </button>
@@ -105,10 +106,11 @@
 
       <section class="home-section arcade-promo" aria-labelledby="arcade-home-title">
         <div class="section-head">
-          <h2 class="section-title" id="arcade-home-title">Arcade</h2>
-          <button class="link-btn" data-nav="arcade">How it works →</button>
+          <h2 class="section-title" id="arcade-home-title">Play</h2>
+          <button class="link-btn" data-nav="arcade">All games →</button>
         </div>
-        <p class="section-deck">Quick-fire clue games and Word Ladder: no grid, just you, the words and the clock.</p>
+        <p class="section-deck">Race a friend to finish the same crossword, or try a quick-fire Arcade game.</p>
+        <div class="duel-cards" id="duel-home-cards"></div>
         <div class="arcade-cards" id="arcade-home-cards"></div>
       </section>
 
@@ -166,11 +168,19 @@
     <div id="arcade-view" class="view" hidden>
       <section id="arcade-hub" aria-labelledby="arcade-hub-title">
         <div class="page-head">
-          <p class="kicker">Crossword Hub Arcade</p>
-          <h1 class="page-title" id="arcade-hub-title">Arcade games</h1>
-          <p class="section-deck">Quick-fire clue games and a daily word puzzle. All free while we’re testing.</p>
+          <p class="kicker">Duels and the Arcade</p>
+          <h1 class="page-title" id="arcade-hub-title">Play</h1>
+          <p class="section-deck">Race a friend to the finish, or try a quick-fire game. All free while we’re testing.</p>
         </div>
-        <div class="arcade-cards arcade-cards-hub" id="arcade-hub-cards"></div>
+        <section class="play-section" aria-labelledby="duels-title">
+          <h2 class="section-title" id="duels-title">Crossword Duels</h2>
+          <p class="section-deck">The same crossword for both of you, live. First to finish it correctly wins. No hints, no checks.</p>
+          <div class="duel-cards" id="duel-hub-cards"></div>
+        </section>
+        <section class="play-section" aria-labelledby="arcade-games-title">
+          <h2 class="section-title" id="arcade-games-title">Arcade</h2>
+          <div class="arcade-cards arcade-cards-hub" id="arcade-hub-cards"></div>
+        </section>
       </section>
 
       <section class="arcade-start" id="arcade-start" aria-labelledby="arcade-start-title" hidden>
@@ -358,6 +368,14 @@
         <button class="link-btn" data-action="room-leave">Leave</button>
       </div>
 
+      <div class="duel-bar" id="duel-bar" hidden>
+        <div class="duel-side duel-me"><span class="duel-who" id="duel-me-name">You</span><span class="duel-meter" aria-hidden="true"><i id="duel-me-bar"></i></span><b id="duel-me-pct">0%</b></div>
+        <div class="duel-clock"><span id="duel-clock" aria-label="Time left">0:00</span><small id="duel-lead"></small></div>
+        <div class="duel-side duel-opp"><span class="duel-who" id="duel-opp-name"></span><span class="duel-meter" aria-hidden="true"><i id="duel-opp-bar"></i></span><b id="duel-opp-pct">0%</b></div>
+        <p class="duel-note" id="duel-note" role="status"></p>
+        <button class="link-btn duel-resign" data-action="duel-resign">Resign</button>
+      </div>
+
       <div class="toolbar" role="toolbar" aria-label="Puzzle tools">
         <button class="timer" id="timer" data-action="pause" aria-label="Pause puzzle">
           <span id="timer-text">0:00</span>
@@ -383,9 +401,10 @@
           <div class="menu">
             <button class="tool" data-menu="reveal">Reveal</button>
             <div class="menu-list" data-menu-list="reveal" hidden>
-              <button data-action="reveal-cell">Square</button>
-              <button data-action="reveal-word">Word</button>
-              <button data-action="reveal-all">Puzzle</button>
+              <p class="menu-note" id="reveal-note" hidden></p>
+              <button data-action="reveal-cell" id="reveal-cell-btn">Square</button>
+              <button data-action="reveal-word" id="reveal-word-btn">Word</button>
+              <button data-action="reveal-all" id="reveal-all-btn">Puzzle</button>
             </div>
           </div>
           <div class="menu menu-right">
@@ -440,6 +459,11 @@
         </aside>
       </div>
     </div>
+    <!-- ================= Crossword Duels ================= -->
+    <div id="duel-view" class="view" hidden>
+      <section class="duel-panel" id="duel-panel" aria-live="polite"></section>
+    </div>
+
     <!-- ================= Statistics ================= -->
     <div id="stats-view" class="view" hidden>
       <div class="page-head">
@@ -480,6 +504,16 @@
         <div class="panel-body arcade-records" id="arcade-records"></div>
       </details>
 
+      <details class="stats-panel" id="panel-credits" hidden>
+        <summary><span class="panel-title">Hint credits</span><span class="panel-sum" id="credits-sum"></span></summary>
+        <div class="panel-body" id="credits-body"></div>
+      </details>
+
+      <details class="stats-panel" id="panel-duels" hidden>
+        <summary><span class="panel-title">Crossword Duels</span><span class="panel-sum" id="duels-sum"></span></summary>
+        <div class="panel-body" id="duels-body"></div>
+      </details>
+
       <details class="stats-panel" id="panel-badges">
         <summary><span class="panel-title">Achievements</span><span class="panel-sum" id="badges-sum"></span></summary>
         <div class="panel-body">
@@ -502,6 +536,7 @@
       <h2 id="win-title"></h2>
       <p class="win-time" id="win-time"></p>
       <p class="win-text" id="win-text"></p>
+      <p class="win-reward" id="win-reward" role="status" hidden></p>
       <div class="win-stats" id="win-stats"></div>
       <p class="win-next" id="win-next" hidden></p>
       <blockquote class="gift-note" id="win-gift" hidden></blockquote>
@@ -610,6 +645,43 @@
   </dialog>
 
 
+  <dialog id="wallet-dialog" class="sheet-dialog" aria-labelledby="wallet-title">
+    <div class="wallet">
+      <div class="wallet-head">
+        <svg class="wallet-art" viewBox="0 0 64 80" aria-hidden="true"><g stroke="#2a241c" stroke-width="2.4" stroke-linejoin="round"><path d="M32 6C19 6 10 15 10 27c0 8 4 13 8 17 2 2 3 5 3 8v4h22v-4c0-3 1-6 3-8 4-4 8-9 8-17C54 15 45 6 32 6z" fill="#f3d98c"/><path d="M21 56h22v6H21zM22 62h20v6H22z" fill="#c9b993"/><path d="M26 68h12l-2 6h-8z" fill="#2a241c"/></g><path d="M25 44c0-8 3-12 7-17 4 5 7 9 7 17" fill="none" stroke="#b98a22" stroke-width="2"/><path d="M20 22c2-6 7-9 12-9" fill="none" stroke="#fbf5e6" stroke-width="3" stroke-linecap="round"/><g stroke="#e3b64c" stroke-width="2.4" stroke-linecap="round"><path d="M4 26H1M63 26h-3M9 9L7 7M55 9l2-2M32 1v2"/></g></svg>
+        <div>
+          <p class="kicker">Hint credits</p>
+          <h2 id="wallet-title"><span id="wallet-big">0</span> <small>to spend</small></h2>
+        </div>
+      </div>
+      <div id="wallet-account">
+        <div class="wallet-pots">
+          <div><b id="wallet-daily">0</b><span>Daily credits</span><small id="wallet-reset"></small></div>
+          <div><b id="wallet-earned">0</b><span>Earned credits</span><small>Never expire</small></div>
+        </div>
+        <p class="wallet-note">Hints use your daily credits first.</p>
+      </div>
+      <div id="wallet-guest" hidden>
+        <p class="wallet-lede">Sign in to get <b>5 free hint credits every day</b>, earn more by solving without hints and winning duels, and keep them on all your devices. You can keep playing without an account.</p>
+        <button class="btn btn-primary" data-action="wallet-signin">Sign in or create an account</button>
+      </div>
+      <h3>Costs</h3>
+      <ul class="wallet-list"><li><span>Reveal a letter</span><b>1 credit</b></li><li><span>Reveal a word</span><b>3 credits</b></li></ul>
+      <h3>Ways to earn</h3>
+      <ul class="wallet-list">
+        <li><span>Every day you sign in</span><b>5 daily</b></li>
+        <li><span>Solve a Mini without hints</span><b>+1</b></li>
+        <li><span>Solve a Daily or the Brutal Challenge without hints</span><b>+3</b></li>
+        <li><span>Win a crossword duel (3 rewarded wins a day)</span><b>+3</b></li>
+      </ul>
+      <p class="wallet-note">No-Hint rewards are paid once per puzzle, the first time you solve it. Checking, auto-check or any reveal means no reward.</p>
+      <div id="wallet-history-wrap" hidden>
+        <h3>Recent</h3>
+        <ul class="wallet-list wallet-history" id="wallet-history"></ul>
+      </div>
+    </div>
+    <button class="dialog-close" data-action="close-dialog" aria-label="Close">✕</button>
+  </dialog>
   <dialog id="account-dialog" aria-labelledby="account-title">
     <div class="account">
       <p class="kicker">Your account</p>
@@ -644,25 +716,27 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=36"></script>
-  <script src="js/words.js?v=36"></script>
-  <script src="js/collections.js?v=36"></script>
-  <script src="js/genres.js?v=36"></script>
-  <script src="js/ladder.js?v=36"></script>
-  <script src="js/sync.js?v=36"></script>
-  <script src="js/featured.js?v=36"></script>
-  <script src="js/hints.js?v=36"></script>
-  <script src="js/stats.js?v=36"></script>
-  <script src="js/access.js?v=36"></script>
-  <script src="js/share.js?v=36"></script>
-  <script src="js/gifts.js?v=36"></script>
-  <script src="js/arcade.js?v=36"></script>
-  <script src="js/rooms.js?v=36"></script>
-  <script src="js/firebase-config.js?v=36"></script>
-  <script src="js/analytics.js?v=36"></script>
-  <script src="js/app.js?v=36"></script>
-  <script type="module" src="js/firebase.js?v=36"></script>
-  <script type="module" src="js/account.js?v=36"></script>
-  <script type="module" src="js/room.js?v=36"></script>
+  <script src="js/generator.js?v=37"></script>
+  <script src="js/words.js?v=37"></script>
+  <script src="js/collections.js?v=37"></script>
+  <script src="js/genres.js?v=37"></script>
+  <script src="js/ladder.js?v=37"></script>
+  <script src="js/economy.js?v=37"></script>
+  <script src="js/sync.js?v=37"></script>
+  <script src="js/featured.js?v=37"></script>
+  <script src="js/hints.js?v=37"></script>
+  <script src="js/stats.js?v=37"></script>
+  <script src="js/access.js?v=37"></script>
+  <script src="js/share.js?v=37"></script>
+  <script src="js/gifts.js?v=37"></script>
+  <script src="js/arcade.js?v=37"></script>
+  <script src="js/rooms.js?v=37"></script>
+  <script src="js/firebase-config.js?v=37"></script>
+  <script src="js/analytics.js?v=37"></script>
+  <script src="js/app.js?v=37"></script>
+  <script type="module" src="js/firebase.js?v=37"></script>
+  <script type="module" src="js/account.js?v=37"></script>
+  <script type="module" src="js/room.js?v=37"></script>
+  <script type="module" src="js/online.js?v=37"></script>
 </body>
 </html>
