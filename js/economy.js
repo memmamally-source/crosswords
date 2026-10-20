@@ -191,13 +191,26 @@
   const CODE_ALPHABET = 'abcdefghjkmnpqrstuvwxyz23456789';
   const validCode = (code) => typeof code === 'string' && new RegExp(`^[${CODE_ALPHABET}]{12}$`).test(code);
   // Player names shown to an opponent.
-  const validName = (name) => typeof name === 'string' && /^[A-Za-z0-9 .'-]{1,20}$/.test(name) && name.trim().length > 0;
+  // Names other players see (duels, Quick Match with strangers): no
+  // obviously offensive words. Letters are compared with look-alike digits
+  // undone (sh1t, b1tch); short words that hide inside ordinary names only
+  // count on their own, so Essex, Hancock and Dickens stay allowed.
+  const OFFENSIVE_PARTS = ['fuck', 'shit', 'cunt', 'nigg', 'bitch', 'whore', 'pussy', 'porn', 'nazi', 'hitler', 'faggot', 'retard', 'wank', 'twat', 'kike', 'dildo', 'penis', 'vagina', 'bastard', 'motherf', 'slut', 'rapist', 'pedo', 'paedo', 'jizz', 'boner', 'tranny', 'kkk'];
+  const OFFENSIVE_WORDS = ['rape', 'dick', 'cock', 'sex', 'spic', 'chink', 'fag', 'anal', 'anus', 'cum', 'tits', 'arse', 'ass', 'piss', 'coon', 'gook', 'homo', 'nonce', 'prick', 'puta', 'kill'];
+  function politeName(name) {
+    const plain = String(name).toLowerCase().replace(/[0134578@$]/g, (c) => ({ 0: 'o', 1: 'i', 3: 'e', 4: 'a', 5: 's', 7: 't', 8: 'b', '@': 'a', $: 's' }[c]));
+    const squashed = plain.replace(/[^a-z]/g, '');
+    if (OFFENSIVE_PARTS.some((w) => squashed.includes(w))) return false;
+    const words = plain.split(/[^a-z]+/).filter(Boolean);
+    return !words.some((w) => OFFENSIVE_WORDS.includes(w) || OFFENSIVE_WORDS.includes(w.replace(/s$/, '')));
+  }
+  const validName = (name) => typeof name === 'string' && /^[A-Za-z0-9 .'-]{1,20}$/.test(name) && name.trim().length > 0 && politeName(name);
 
   const api = {
     ECONOMY, DUELS, sastDay, sastDate, dayToDate, msUntilReset,
     blankWallet, wallet, refreshDaily, available, spend, earn,
     puzzleReward, progress, validGrid, winReward, recordWinReward,
-    blankDuelStats, duelStats, applyOutcome, winRate, CODE_ALPHABET, validCode, validName,
+    blankDuelStats, duelStats, applyOutcome, winRate, CODE_ALPHABET, validCode, validName, politeName,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CrosswordEconomy = api;

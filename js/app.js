@@ -2444,7 +2444,11 @@
     d.showModal();
     return new Promise((resolve) => d.addEventListener('close', () => {
       if (d.returnValue !== 'ok') return resolve(null);
-      const name = Rooms.cleanName($('#name-input').value) || Rooms.randomName();
+      let name = Rooms.cleanName($('#name-input').value) || Rooms.randomName();
+      if (!Econ.politeName(name)) {
+        toast('Please choose a different name: we’ve picked one for now.');
+        name = Rooms.randomName();
+      }
       store.settings.playerName = name;
       saveStore();
       resolve(name);
@@ -4553,6 +4557,7 @@
         <button class="btn" data-action="duel-result-share">Share result</button>
         <button class="btn" data-nav="arcade">Back to Play</button>
       </div>
+      <a class="duel-report" href="mailto:crosswordhub@gmail.com?subject=${encodeURIComponent('Report a player name')}&body=${encodeURIComponent(`Duel ${duel.id}: the name “${oppName}” is offensive.`)}">Report this player’s name</a>
     </div>`);
     if (won) $('.duel-trophy').innerHTML = $('#win-dialog .win-art').innerHTML;
     if (!duel.reported) {
@@ -4639,6 +4644,8 @@
   let giftBuilt = null; // { attempt, code, puzzle, count }
   function renderGiftCard() {
     $('#gift-soon-badge').hidden = giftsOpen();
+    // The app stores don't allow features that aren't ready yet.
+    $('#gift-card').closest('section').style.display = inApp && !giftsOpen() ? 'none' : '';
   }
   function openGifts() {
     if (giftsOpen()) navigate('#/gift/new');

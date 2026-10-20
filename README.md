@@ -725,6 +725,16 @@ and Minis. They check that every grid is valid, connected and repeatable, and
 that no clue gives away another answer in the same puzzle. They also check
 that `js/words.js` is up to date.
 
+## Android and iOS apps
+
+The site is also packaged as an app for Google Play and the App Store, in
+`mobile/` (Capacitor). The same page runs in it, with email sign-in only and
+no service worker, install card or analytics. The Android app builds on
+GitHub (`.github/workflows/android.yml`) and the iOS app in Xcode on a Mac.
+The steps to publish, the store listing and the screenshots are in
+[mobile/README.md](mobile/README.md) and [mobile/store/](mobile/store/).
+Players can delete their account in the app or on the site (`accountDelete`).
+
 ## Project layout
 
 | File | Purpose |
