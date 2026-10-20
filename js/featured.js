@@ -15,12 +15,12 @@
  * generated automatically.
  */
 const FEATURED = [
-  { genre: 'friends', kicker: 'TV · Fan crossword', title: 'Could this BE any more Friends?', colour: '#5a2f4f', icon: 'tv' },
-  { genre: 'formula-1', kicker: 'Sport', title: 'Think you know Formula 1?', colour: '#2b4a3f', icon: 'flame' },
-  { genre: 'harry-potter', kicker: 'Movies · Fan crossword', title: 'Harry Potter: are you a true wizard?', colour: '#3b2f5c', icon: 'film' },
-  { genre: 'pokemon', kicker: 'Gaming · Fan crossword', title: 'Pokémon: gotta solve them all', colour: '#24456b', icon: 'gamepad' },
-  { genre: 'game-of-thrones', kicker: 'TV · Fan crossword', title: 'The Game of Thrones Superfan test', colour: '#4a4235', icon: 'tv' },
-  { genre: 'rugby', kicker: 'Sport', title: 'Springboks, scrums and World Cup glory', colour: '#2b4a3f', icon: 'ball' },
+  { genre: 'friends', kicker: 'TV · Fan crossword', title: 'Could this BE any more Friends?', colour: '#6b3a4a', icon: 'tv' },
+  { genre: 'formula-1', kicker: 'Sport', title: 'Think you know Formula 1?', colour: '#2f5a43', icon: 'flame' },
+  { genre: 'harry-potter', kicker: 'Movies · Fan crossword', title: 'Harry Potter: are you a true wizard?', colour: '#4b3f6b', icon: 'film' },
+  { genre: 'pokemon', kicker: 'Gaming · Fan crossword', title: 'Pokémon: gotta solve them all', colour: '#3e5c6b', icon: 'gamepad' },
+  { genre: 'game-of-thrones', kicker: 'TV · Fan crossword', title: 'The Game of Thrones Superfan test', colour: '#4a3f30', icon: 'tv' },
+  { genre: 'rugby', kicker: 'Sport', title: 'Springboks, scrums and World Cup glory', colour: '#2f5a43', icon: 'ball' },
 ];
 
 if (typeof module !== 'undefined' && module.exports) module.exports = { FEATURED };
