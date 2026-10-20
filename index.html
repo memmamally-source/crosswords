@@ -67,6 +67,7 @@
             <label class="switch"><input type="checkbox" id="set-tags" /><span>Show subject labels on clues</span></label>
             <label class="switch"><input type="checkbox" id="set-timer" /><span>Show timer</span></label>
             <label class="switch"><input type="checkbox" id="set-vibrate" /><span>Vibrate on taps and wins</span></label>
+            <label class="switch" id="set-appkeys-row" hidden><input type="checkbox" id="set-appkeys" /><span>Use Crossword Hub’s letter keys instead of your phone’s keyboard</span></label>
             <label class="switch" id="set-analytics-row" hidden><input type="checkbox" id="set-analytics" /><span>Share anonymous usage statistics</span></label>
             <button class="link-btn panel-link" data-action="privacy">Privacy</button>
           </div>
@@ -207,6 +208,7 @@
           <button class="btn btn-primary" data-action="arcade-submit" id="arcade-submit">Submit</button>
         </div>
         <div class="arcade-keys" id="arcade-keys" role="group" aria-label="Letter keys"></div>
+        <input class="type-input" id="arcade-type" type="text" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" enterkeyhint="send" aria-label="Type your answer" />
       </section>
 
       <section class="arcade-results" id="arcade-results" aria-labelledby="arcade-results-title" hidden>
@@ -258,6 +260,7 @@
         </div>
         <button class="link-btn ladder-restart" data-action="ladder-restart">Start again from the top</button>
         <div class="arcade-keys" id="ladder-keys" role="group" aria-label="Letter keys"></div>
+        <input class="type-input" id="ladder-type" type="text" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" enterkeyhint="send" aria-label="Type your next word" />
       </section>
 
       <section class="ladder-done" id="ladder-done" aria-labelledby="ladder-done-title" hidden>

@@ -111,8 +111,10 @@ and the clue bar.
 
 - Type to fill. Arrow keys move, Space or Enter switches direction, Tab jumps
   to the next clue, Backspace erases. On phones and tablets, tap a square to
-  type with the device's own keyboard; tap the square again to switch
-  direction.
+  type with the device's own keyboard (in every game, including Word Ladder,
+  Clue Blitz and Survival); tap the square again to switch direction.
+  Settings → "Use Crossword Hub's letter keys" brings back the site's own
+  on-screen keys instead.
 - **On phones held upright** the clue bar is docked at the bottom, just
   above the keyboard:
   - Its big ‹ › buttons and a swipe left or right move between clues.

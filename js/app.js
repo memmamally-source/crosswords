@@ -402,6 +402,8 @@
     $('#set-timer').checked = store.settings.showTimer;
     $('#set-vibrate').checked = store.settings.vibrate;
     $('#set-vibrate').closest('.switch').hidden = !canVibrate;
+    $('#set-appkeys').checked = store.settings.appKeys === true;
+    $('#set-appkeys-row').hidden = !touchDevice();
     $('#set-analytics-row').hidden = !analytics.available;
     $('#set-analytics').checked = store.settings.analytics === true;
     $('#timer').classList.toggle('hidden-time', !store.settings.showTimer);
@@ -1412,6 +1414,10 @@
   const sideBySide = window.matchMedia('(min-width: 901px), (min-width: 700px) and (orientation: landscape)');
   // Phones held upright: the clue bar docks to the bottom, above the keyboard.
   const docked = window.matchMedia('(pointer: coarse) and (max-width: 900px) and (orientation: portrait)');
+  // Phones and tablets type with their own keyboard, unless the player has
+  // chosen Crossword Hub's letter keys in Settings.
+  const touchDevice = () => touchScreen.matches || navigator.maxTouchPoints > 0;
+  const appKeys = () => touchDevice() && store.settings.appKeys === true;
   const phoneKeys = $('#phone-keys');
   function sizeBoard() {
     if (!game) return;
@@ -2127,11 +2133,11 @@
   }
 
   // ---------- Phone layout: docked clue bar and the clue panel ----------
-  // On phones held upright the clue bar sits at the bottom, above the game's
-  // own letter keys (the device keyboard isn't used: it covers the grid in
-  // ways a page can't reliably work around), with big previous and next
-  // buttons; swiping it changes clue, and tapping the clue opens every clue
-  // in a panel. The grid scrolls to keep the square being typed in visible.
+  // On phones held upright the clue bar sits at the bottom, above the
+  // phone's keyboard (or Crossword Hub's own letter keys, if chosen in
+  // Settings), with big previous and next buttons; swiping it changes clue,
+  // and tapping the clue opens every clue in a panel. The grid scrolls to
+  // keep the square being typed in visible above the keyboard.
   function placeDock() {
     let gap = 0;
     if (docked.matches && !phoneKeys.hidden) gap = phoneKeys.getBoundingClientRect().height;
@@ -2139,7 +2145,7 @@
     document.documentElement.style.setProperty('--dock-bottom', `${Math.round(gap)}px`);
   }
   function updateKeys() {
-    const show = !!game && !game.solved && !game.paused;
+    const show = !!game && !game.solved && !game.paused && appKeys();
     if (phoneKeys.hidden === !show) return;
     phoneKeys.hidden = !show;
     placeDock();
@@ -2634,7 +2640,7 @@
   }
   function focusTyping() {
     if (!touchScreen.matches || !game || game.solved || game.paused) return;
-    if (docked.matches) return; // phones held upright use the letter keys
+    if (docked.matches && appKeys()) return; // the player chose the letter keys
     placeTyping();
     resetTyping();
     typeInput.focus();
@@ -2882,6 +2888,18 @@
     saveStore();
     buzz(20);
   });
+  $('#set-appkeys').addEventListener('change', (e) => {
+    store.settings.appKeys = e.target.checked;
+    saveStore();
+    // Takes effect in the game on screen too.
+    if (game && !$('#game-view').hidden) {
+      updateKeys();
+      if (store.settings.appKeys) typeInput.blur();
+      else focusTyping();
+    }
+    if (arcadePlaying()) $('#arcade-keys').hidden = !appKeys();
+    if (ladderPlaying()) $('#ladder-keys').hidden = !appKeys();
+  });
   $('#set-timer').addEventListener('change', (e) => {
     store.settings.showTimer = e.target.checked;
     saveStore();
@@ -2930,6 +2948,8 @@
     if (navBtn) navBtn.setAttribute('aria-current', 'page');
     if (name !== 'game') document.title = { gift: 'Gift a crossword · Crossword Hub', arcade: 'Arcade · Crossword Hub', stats: 'Statistics · Crossword Hub', duel: 'Crossword Duel · Crossword Hub' }[name] || 'Crossword Hub';
     if (name !== 'arcade') {
+      arcadeTyping.blur();
+      ladderTyping.blur();
       leaveArcade();
       leaveLadder();
     }
@@ -3162,6 +3182,8 @@
   }
 
   function arcadeScreen(which) {
+    if (which !== 'play') arcadeTyping.blur();
+    if (which !== 'ladder-play') ladderTyping.blur();
     for (const id of ['hub', 'start', 'play', 'results']) $(`#arcade-${id}`).hidden = id !== which;
     for (const id of ['home', 'play', 'done']) $(`#ladder-${id}`).hidden = `ladder-${id}` !== which;
     document.body.classList.toggle('arcade-playing', which === 'play' || which === 'ladder-play');
@@ -3246,12 +3268,13 @@
     leaveArcadeTimer();
     arcade = { mode, run, guess: '', busy: false, timer: null };
     $('#arcade-play').className = `arcade-play arcade-${mode}`;
-    $('#arcade-keys').hidden = !touchScreen.matches;
+    $('#arcade-keys').hidden = !appKeys();
     $('#arcade-skip').textContent = mode === 'survival' ? 'Skip (−1 life)' : 'Skip';
     arcadeScreen('play');
     window.scrollTo(0, 0);
     renderArcadeClue();
     renderArcadeHud();
+    arcadeTyping.focus($('#arcade-boxes'));
     if (resumed) arcadeFeedback(mode === 'survival' ? `Welcome back: round ${run.round}.` : 'Welcome back: the clock kept running.', 'info');
     if (mode === 'blitz') arcade.timer = setInterval(arcadeTick, 200);
   }
@@ -3479,7 +3502,64 @@
     copyText(url ? `${text} ${url}` : text, 'Result copied to your clipboard');
   }
 
-  // On-screen letter keys (phones and tablets) and the keyboard.
+  // Typing on phones and tablets: the device's own keyboard, through a
+  // hidden text box (as for the crosswords). It always holds one placeholder
+  // character, so deleting it means Backspace. Returns { focus, blur }.
+  function deviceTyping(input, { active, type, back, enter }) {
+    let held = PLACEHOLDER;
+    const reset = () => {
+      input.value = held = PLACEHOLDER;
+      try { input.setSelectionRange(1, 1); } catch (e) { /* not focused */ }
+    };
+    input.addEventListener('input', (e) => {
+      const value = input.value;
+      const before = held;
+      held = value;
+      if (!active()) return reset();
+      if (value.length < before.length && before.startsWith(value)) {
+        for (let i = value.length; i < before.length; i++) back();
+      } else {
+        const added = value.startsWith(before) ? value.slice(before.length) : (e.data || '');
+        for (const ch of added.toUpperCase().replace(/[^A-Z]/g, '')) type(ch);
+      }
+      if (!e.isComposing) reset();
+    });
+    input.addEventListener('compositionend', () => setTimeout(reset));
+    input.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter') return;
+      e.preventDefault();
+      enter();
+    });
+    // The buttons beside the answer shouldn't close the keyboard.
+    input.closest('section').addEventListener('pointerdown', (e) => {
+      if (document.activeElement === input && e.target.closest('button:not([data-open])')) e.preventDefault();
+    });
+    return {
+      // Opens the keyboard, with the text box over `anchor` so the page
+      // keeps it in view.
+      focus(anchor) {
+        if (!touchDevice() || appKeys()) return;
+        if (anchor) input.style.top = `${anchor.getBoundingClientRect().top - input.offsetParent.getBoundingClientRect().top}px`;
+        reset();
+        input.focus();
+      },
+      blur() {
+        if (document.activeElement === input) input.blur();
+      },
+      // Keeps the text box over `anchor` while typing (so it stays in view).
+      follow(anchor) {
+        if (anchor && document.activeElement === input) input.style.top = `${anchor.getBoundingClientRect().top - input.offsetParent.getBoundingClientRect().top}px`;
+      },
+    };
+  }
+  const arcadeTyping = deviceTyping($('#arcade-type'), {
+    active: () => arcadePlaying(), type: (ch) => arcadeType(ch), back: () => arcadeBack(), enter: () => arcadeSubmit(),
+  });
+  $('#arcade-play').addEventListener('click', (e) => {
+    if (e.target.closest('#arcade-boxes, .arcade-card')) arcadeTyping.focus($('#arcade-boxes'));
+  });
+
+  // On-screen letter keys (if chosen in Settings) and the keyboard.
   const KEY_ROWS = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM'];
   $('#arcade-keys').innerHTML = KEY_ROWS.map((row, i) => `<div class="keys-row">${
     row.split('').map((k) => `<button type="button" data-arcade-key="${k}">${k}</button>`).join('')
@@ -3611,12 +3691,13 @@
     ladder = { game, guess: '', busy: false, timer: setInterval(ladderTick, 500) };
     saveStore();
     if (!resumed) analytics.track('arcade_start', { mode: `ladder_${game.mode}` });
-    $('#ladder-keys').hidden = !(touchScreen.matches || navigator.maxTouchPoints > 0);
+    $('#ladder-keys').hidden = !appKeys();
     $('#ladder-play-title').textContent = game.mode === 'daily' ? (game.replay ? 'Daily Ladder (replay)' : 'Daily Ladder') : 'Practice ladder';
     arcadeScreen('ladder-play');
     window.scrollTo(0, 0);
     ladderFeedback(resumed ? 'Welcome back: carry on from where you were.' : `Change one letter at a time to turn ${game.from.toUpperCase()} into ${game.to.toUpperCase()}.`, 'info');
     renderLadder();
+    ladderTyping.focus($('#ladder-rungs .entry'));
   }
   // Leaving the ladder screen: the game stays saved, and its clock stops.
   function leaveLadder() {
@@ -3662,6 +3743,7 @@
     $('#ladder-undo').textContent = guess ? 'Clear' : 'Step back';
     ladderTick();
     fitLadderTiles();
+    ladderTyping.follow($('#ladder-rungs .entry'));
   }
   function fitLadderTiles() {
     const el = $('#ladder-rungs');
@@ -3813,6 +3895,10 @@
     copyText(url ? `${text} ${url}` : text, 'Result copied to your clipboard');
   }
 
+  const ladderTyping = deviceTyping($('#ladder-type'), {
+    active: () => ladderPlaying(), type: (ch) => ladderType(ch), back: () => ladderBack(), enter: () => ladderSubmit(),
+  });
+  $('#ladder-rungs').addEventListener('click', () => ladderTyping.focus($('#ladder-rungs .entry')));
   $('#ladder-keys').innerHTML = KEY_ROWS.map((row, i) => `<div class="keys-row">${
     row.split('').map((k) => `<button type="button" data-ladder-key="${k}">${k}</button>`).join('')
   }${i === 2 ? '<button type="button" class="key-wide" data-ladder-key="back" aria-label="Delete">⌫</button>' : ''}</div>`).join('');

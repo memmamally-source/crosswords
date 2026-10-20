@@ -1431,7 +1431,7 @@ dialog.sheet { width: 100%; max-width: 560px; max-height: 78vh; margin: auto aut
 .arcade-go { min-width: 200px; justify-content: center; font-size: 1.1rem; padding-block: 14px; }
 .arcade-back { margin-bottom: 4px; }
 
-.arcade-play { display: flex; flex-direction: column; gap: 14px; max-width: 620px; margin: 0 auto; padding-top: 8px; }
+.arcade-play { position: relative; display: flex; flex-direction: column; gap: 14px; max-width: 620px; margin: 0 auto; padding-top: 8px; }
 .arcade-hud { position: relative; display: flex; align-items: stretch; justify-content: space-between; gap: 10px; padding-bottom: 10px; }
 .hud-item { display: grid; justify-items: center; flex: 1; padding: 8px 4px; border-radius: 12px; background: var(--card); border: 1px solid var(--rule); }
 .hud-item b { font-size: 1.6rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
@@ -1824,6 +1824,9 @@ body {
 
 /* ---------- Word Ladder ---------- */
 .ladder-home, .ladder-play, .ladder-done { display: grid; gap: 12px; max-width: 620px; margin: 0 auto; padding: 12px 0 24px; }
+.ladder-play { position: relative; }
+/* Tapping the answer brings up the phone's keyboard. */
+.arcade-boxes, .ladder-rungs { cursor: text; }
 .ladder-home { justify-items: start; }
 .ladder-home[hidden], .ladder-play[hidden], .ladder-done[hidden] { display: none; }
 .ladder-home h1, .ladder-done h1 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: clamp(2.4rem, 7vw, 3.2rem); line-height: 1.05; }
