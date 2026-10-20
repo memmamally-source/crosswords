@@ -142,6 +142,11 @@ assert.ok(res.over);
 assert.ok(run.finished);
 assert.strictEqual(run.lives, 0);
 assert.strictEqual(A.roundReached(run), roundBefore, 'the round it ended on');
+// The score sheet: a line per round, with no answers in it.
+assert.strictEqual(run.sheet.length, 48);
+assert.deepStrictEqual(run.sheet[0], { round: 1, level: 'easy', ok: true, points: 100 });
+assert.deepStrictEqual(run.sheet.slice(-3).map((l) => [l.round, l.ok, l.points]), [[46, false, 0], [47, false, 0], [48, false, 0]]);
+assert.ok(run.sheet.every((l) => Object.keys(l).join() === 'round,level,ok,points'), 'no answers on the sheet');
 assert.strictEqual(A.submit(run, pool, 'ANYTHING', T0, DAY).result, 'over');
 
 // Refreshing never brings lives back, resets difficulty or rerolls the clue.

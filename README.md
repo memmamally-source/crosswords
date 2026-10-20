@@ -327,6 +327,19 @@ Arcade. Colours are CSS variables at the top of `css/styles.css`, with a warm
   `tools/fonts/`).
 - **Collections** are laid out as a card catalogue: a drawer-front level tab
   bar and index cards with a filing tab and a rubber-stamped level.
+- **Crossword:** an inked board, a parchment clue bar and keys set as
+  typeset tiles.
+- **Completion:** a trophy and laurel, a ruled score line, and sharing with
+  WhatsApp and Copy link first; the phone's own share sheet where it has one;
+  Facebook, X and Save image under "More sharing options". The share image
+  (`drawCard` in `js/share.js`) is a newspaper page with a rubber stamp for the
+  time.
+- **Arcade:** ink-drawn mode cards (a stopwatch for Clue Blitz, a heart and
+  trophy for Survival) on a sunburst; Clue Blitz has a stopwatch scoreboard
+  and Survival an "official score sheet" of the last few rounds (round, level,
+  ✓/✗ and points, never the answers: `run.sheet` in `js/arcade.js`). Caveat,
+  a pencil-mark font, is used only here, for scores and ticks; clues,
+  answers, buttons and navigation stay in the reading fonts.
 
 ## Arcade: Clue Blitz and Survival
 

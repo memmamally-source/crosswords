@@ -101,7 +101,9 @@ What is built and live today, what's unfinished, and how it compares with the
   - **Share** uses the phone's share sheet with a spoiler-free result image
     (1080 × 1350: time, hint points or No-Hint badge, streak, and the grid's
     shape with no letters).
-  - **WhatsApp**, **Copy challenge link** and **Save image** sit alongside.
+  - **WhatsApp** and **Copy link** come first, with the phone's own
+    **Share…** sheet where it has one; **Facebook**, **X** and **Save image**
+    sit under "More sharing options" (visual refresh, part 2).
 - **Challenge links** (`?c=` on any puzzle link) show the friend's time and
   hint points above the puzzle, and say on finishing whether you beat it.
   No sign-up needed.
