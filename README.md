@@ -251,7 +251,8 @@ Firebase and stays switched off, with no account button, until it's set up:
 2. **Build → Authentication → Get started.** Under **Sign-in method**, turn on
    **Google** and **Email/Password**.
 3. **Authentication → Settings → Authorized domains → Add domain:** the site's
-   address, such as `memmamally-source.github.io`.
+   address: `crosswordhub.app` and `www.crosswordhub.app` (and
+   `memmamally-source.github.io`, the old address, which redirects).
 4. **Build → Firestore Database → Create database** (production mode, a
    location near your players).
 5. **Firestore → Rules:** replace the rules with the contents of

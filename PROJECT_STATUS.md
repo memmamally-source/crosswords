@@ -5,7 +5,7 @@ What is built and live today, what's unfinished, and how it compares with the
 
 - **Snapshot:** 19 October 2026 (updated for the Arcade and Free-versus-Premium
   decisions).
-- **Live site:** https://memmamally-source.github.io/crosswords/ (GitHub
+- **Live site:** https://crosswordhub.app/ (custom domain on GitHub
   Pages, deployed from `main` when a PR is merged).
 - **Code checked:** `main` at `25f819c` (everything up to #26 merged).
 
