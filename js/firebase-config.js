@@ -20,4 +20,9 @@ window.FIREBASE_CONFIG = {
   // console → Build → Realtime Database. While this is empty, the "Help me
   // solve" button stays hidden.
   databaseURL: 'https://crossword-hub-default-rtdb.europe-west1.firebasedatabase.app',
+  // Hint credits and Crossword Duels: the region the server in functions/ is
+  // deployed to (it uses 'europe-west1'). While this is empty, hints stay
+  // free as before and duels show "Coming soon". Set it only after deploying
+  // the server: README → Hint credits and duels.
+  functionsRegion: '',
 };

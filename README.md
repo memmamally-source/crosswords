@@ -39,8 +39,13 @@ draws the app icons.
 - **The Brutal Challenge:** one Brutal puzzle a week, the same for everyone:
   34 clues from every genre and no easy answers. A new one starts each Monday
   (South African time), at `#/brutal`.
-- **Arcade:** quick-fire clue games at `#/arcade`, one clue at a time from
-  the existing clue bank (see [Arcade](#arcade-clue-blitz-and-survival)).
+- **Play** (`#/arcade`, the Play tab): Crossword Duels against a friend or a
+  Quick Match opponent (see [Hint credits and Crossword Duels](#hint-credits-and-crossword-duels)),
+  and the Arcade's quick-fire clue games, one clue at a time from the
+  existing clue bank (see [Arcade](#arcade-clue-blitz-and-survival)).
+- **Hint credits:** signed-in players get 5 free credits a day and earn more
+  by solving without hints and winning duels; Reveal Letter costs 1 and
+  Reveal Word 3. Off until the game server is deployed (below).
 - **Gift crosswords (built, shown as "Coming soon"):** make a crossword from
   your own answers and clues (4 to 24), with an optional To, From, title and
   a message shown once it's solved, and send it as a link. The whole gift
@@ -77,7 +82,8 @@ draws the app icons.
 - **Statistics** (`#/stats`, the Stats tab): a full page, not a pop-up. At the
   top: puzzles solved, the day streak, the average time and the last seven
   days of Dailies and Minis (from saved solves only). Below, in panels that
-  open and close: Crossword records, the No-Hint Club, Arcade records and
+  open and close: Crossword records, the No-Hint Club, Arcade records, Hint
+  credits and Crossword Duels (once the game server is on) and
   Achievements (earned and locked, with progress). It covers:
   - totals: puzzles solved and Dailies finished
   - streaks: the daily streak and the longest streak
@@ -424,6 +430,92 @@ screens in the Word Ladder section of `js/app.js`.
 - Analytics receive only the mode (`ladder_daily` or `ladder_practice`) and
   the score.
 
+## Hint credits and Crossword Duels
+
+Both run on a small trusted server, `functions/` (Cloud Functions for
+Firebase), so balances and results can't be faked from the page. **They stay
+switched off until that server is deployed** and `functionsRegion` is set in
+`js/firebase-config.js`; until then hints work as before (free) and the duel
+cards say "Coming soon". The rules live in `js/economy.js` (pure functions,
+`tests/economy.test.js`), used by the server to decide and by the page to
+display.
+
+**Hint credits**
+
+| | |
+|---|---|
+| Daily credits | 5 a day for every signed-in account, given once per day however often you sign in or refresh, on any device. Unused ones expire at midnight South African time. |
+| Earned credits | Never expire, no cap. First No-Hint solve of a published Mini: +1; of a Daily (or archive Daily) or Brutal Challenge: +3; winning a duel: +3. Genre and collection puzzles, gifts and shared puzzles earn nothing. |
+| Spending | Reveal Letter 1, Reveal Word 3; daily credits first. A square or word already bought is never charged again; a word that's already fully revealed isn't charged. Reveal Puzzle is gone while credits are on. Checking stays free but, as before, rules out the No-Hint reward. |
+| Guests | Play everything as before but can't reveal with credits or earn them; they're invited to sign in. Progress on the device is merged into the account on sign-in, as before. |
+
+Every change goes through a Firestore transaction on the server, with a
+ledger entry: the daily grant can't run twice, spends can't overdraw (even
+many at once), a puzzle pays its reward once and never after a hint was bought
+on it, and the server checks the finished grid against the published answers
+before paying. The wallet (lightbulb in the masthead) shows the balance, the
+time to the next allowance, ways to earn and recent transactions.
+
+**Crossword Duels**
+
+- **Mini Duel** (a 7×7-size grid, up to 5 minutes) and **Classic Duel** (a
+  17×17-size grid of about 22 answers, up to 20 minutes). Each duel gets a
+  new puzzle made by the server from the existing word lists, so neither
+  player can have seen it.
+- **Challenge a friend** makes a private link (`#/duel/j/<code>`, a random
+  12-character code that expires after 24 hours) to send by WhatsApp, Copy
+  link or the phone's Share sheet. **Quick Match** pairs you with someone
+  else looking for the same kind of duel, or keeps looking (never a pretend
+  opponent), with Cancel and "Challenge a friend instead".
+- **Lobby:** both names and Ready buttons. When both are ready the server
+  sets a start time 5 seconds ahead, and both grids appear at that moment.
+  The clues aren't sent to anyone before then.
+- **Playing:** the page gets the layout and clues only, never the answers.
+  It sends the grid as you type; the server works out how much is right and
+  shares only that percentage with your opponent (never letters). No hints,
+  no checks, no pausing. The first all-correct grid wins: the server decides,
+  in a transaction, so two near-simultaneous finishes still give one winner.
+- **Endings:** out of time is a draw; Resign gives your opponent the win; a
+  player gone for more than a minute loses (a shorter drop-out is forgiven;
+  letters are kept in the tab, so a reload carries on).
+- **Rewards and records:** a solved win earns the winner 3 permanent
+  credits, at most 3 rewarded wins a day and 2 against the same opponent
+  (later wins still count in the record); forfeits, draws and impossibly fast
+  wins earn nothing. Signed-in players' records (played, won, lost, drawn,
+  win rate, streaks, best times, credits won) are kept on the server and shown
+  in Statistics. Guests can duel (with an anonymous sign-in, as for Help me
+  solve) but earn nothing and keep no record.
+- **Results:** Victory, Good game or A draw, both players' final progress,
+  the time, credits, Rematch (the other player is offered Accept rematch),
+  Challenge another friend, Share result (no answers) and Back to Play.
+
+**Data (Firestore), all written only by the server** (`firestore.rules`):
+`wallets/{uid}` and its `ledger`, `spent` and `claims`; `players/{uid}` (duel
+record); `duels/{id}` (readable by its two players only), its
+`secret/solution` (readable by nobody) and `presence/{uid}` (each player's
+"still here" heartbeat, the only thing a player writes); `duelCodes` and
+`quick` (server only). Existing `users/{uid}` progress is unchanged.
+
+**Switching it on** (needs the project owner):
+
+1. Upgrade the Firebase project to the **Blaze** (pay-as-you-go) plan. Cloud
+   Functions require it; at testing scale use stays within the free monthly
+   allowances, but set a **budget alert** in Google Cloud Billing first.
+2. Firebase console → Authentication → Sign-in method: keep **Anonymous** on
+   (guests in duels and Help me solve use it).
+3. Install the Firebase CLI, then from the repository: `firebase login`,
+   `firebase use crossword-hub`, `cd functions && npm install && cd ..`,
+   `firebase deploy --only firestore:rules,functions`. The deploy copies the
+   puzzles and shared code into the server first (`functions/prepare.js`).
+   The server runs in `europe-west1`, with at most 10 instances.
+4. Set `functionsRegion: 'europe-west1'` in `js/firebase-config.js` (and bump
+   the version), then publish the site.
+
+**Testing locally:** `cd functions && npm install && node prepare.js`, then
+`npx firebase emulators:exec --only auth,firestore,functions --project demo-crossword "npm test"`
+runs `functions/test/emulator.test.js` (wallets, rewards, security rules and
+duels with real sign-ins against the emulators).
+
 ## Multiplayer: Help me solve
 
 Any puzzle can become a shared puzzle that up to five people fill in together,
@@ -622,6 +714,7 @@ that `js/words.js` is up to date.
 | `js/hints.js` | Hint credits and competitive hint points |
 | `js/stats.js` | Streaks, hints used, average time and favourites, from saved solves |
 | `js/arcade.js`, `js/ladder.js` | Arcade rules: Clue Blitz and Survival; Word Ladder |
+| `js/economy.js`, `js/online.js`, `functions/`, `firebase.json` | Hint credits and Crossword Duels: the rules, the page's link to the server, the server itself and its deploy settings |
 | `puzzles/ladder.json`, `tools/build-ladders.py` | Word Ladder words and puzzles, and how they're made |
 | `js/access.js` | `canAccess`: who may play what (everything is free) |
 | `js/share.js` | Challenge links and the shareable result image |

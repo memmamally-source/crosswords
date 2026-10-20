@@ -1,7 +1,7 @@
 /*
- * Starts Firebase once for the whole site, so sign-in (js/account.js) and
- * multiplayer rooms (js/room.js) share one connection and one signed-in
- * player. Each part loads only the Firebase libraries it needs.
+ * Starts Firebase once for the whole site, so sign-in (js/account.js),
+ * multiplayer rooms (js/room.js) and credits and duels (js/online.js) share
+ * one connection and one signed-in player. Each part loads only the Firebase libraries it needs.
  *
  * Loaded as its own (versioned) script before them and shared as
  * window.CrosswordFirebase, so updates reach installed apps.
@@ -32,8 +32,22 @@ function getAuth() {
   return authPromise;
 }
 
+// The database (Firestore): synced progress, hint-credit wallets and duels.
+let dbPromise = null;
+function getDb() {
+  if (!dbPromise) {
+    dbPromise = Promise.all([getApp(), import(`${SDK}/firebase-firestore.js`)]).then(([app, lib]) => {
+      const db = lib.getFirestore(app);
+      const emu = window.FIREBASE_EMULATORS;
+      if (emu && emu.firestore) lib.connectFirestoreEmulator(db, emu.firestore.host, emu.firestore.port);
+      return { lib, db };
+    });
+  }
+  return dbPromise;
+}
+
 // Anonymous players (guests in a multiplayer room) aren't signed in as far
 // as the rest of the site is concerned: no account, no synced progress.
 const isRealUser = (user) => !!user && !user.isAnonymous;
 
-window.CrosswordFirebase = { SDK, getApp, getAuth, isRealUser };
+window.CrosswordFirebase = { SDK, getApp, getAuth, getDb, isRealUser };

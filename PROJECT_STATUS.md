@@ -232,6 +232,7 @@ What is built and live today, what's unfinished, and how it compares with the
 | Arcade allowance (1 Blitz + 1 Survival a day) | ✅ On for everyone since 20 October 2026 | `LIMITS_ACTIVE` in `js/arcade.js`; counted in the browser and in a signed-in account. Clearing browser data resets it for guests; server enforcement comes with Premium (10B) |
 | Arcade: Word Ladder | ✅ Built 20 Oct (awaiting approval) | `js/ladder.js`, `puzzles/ladder.json` (915 checked ladders), Daily Ladder and unlimited Practice; records synced |
 | Statistics as a full page | ✅ Built 20 Oct (awaiting approval) | `#/stats`: at-a-glance figures, last seven days, Crossword, No-Hint Club, Arcade and Achievements panels |
+| Hint credits and Crossword Duels | ✅ Built 20 Oct (awaiting approval); off until deployed | `functions/` (Cloud Functions) decides every balance and result in Firestore transactions; `firestore.rules` makes them read-only to players. Needs the Blaze plan and a deploy (README → Hint credits and Crossword Duels) |
 | Server-side entitlements and Arcade runs | ❌ Not built | Stage 10B with Stage 8; needs the Blaze plan and payments |
 
 ## 5. Risks and housekeeping

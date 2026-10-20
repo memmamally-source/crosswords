@@ -38,6 +38,8 @@
     gift_create: ['words'], // how many answers only: never the gift itself
     arcade_start: ['mode'],
     arcade_end: ['mode', 'score', 'correct', 'round'],
+    duel_create: ['mode'],
+    duel_end: ['mode', 'outcome', 'reason'], // win, loss or draw; never names or letters
   };
   const EMAIL = /[^\s@]+@[^\s@]+\.[^\s@]+/;
 

@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, hintTotal, CrosswordStats, canAccess, CrosswordShare, HubAnalytics, CrosswordRooms, CrosswordGifts, CrosswordArcade, CrosswordLadder */
+/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, hintTotal, CrosswordStats, canAccess, CrosswordShare, HubAnalytics, CrosswordRooms, CrosswordGifts, CrosswordArcade, CrosswordLadder, CrosswordEconomy */
 (function () {
   'use strict';
 
@@ -246,6 +246,7 @@
 
   const puzzleCache = new Map();
   function puzzleFor(spec) {
+    if (spec.kind === 'duel') return CrosswordGenerator.thaw(spec.frozen); // answers hidden ("?")
     if (puzzleCache.has(spec.key)) return puzzleCache.get(spec.key);
     let puzzle;
     let keep = true;
@@ -519,6 +520,7 @@
   function renderHome() {
     renderGiftCard();
     renderArcadeCards($('#arcade-home-cards'));
+    renderDuelCards($('#duel-home-cards'));
     const today = todayKey();
     const daily = dailySpec(today);
     const mini = miniSpec(today);
@@ -821,6 +823,155 @@
   ];
   const earnedBadges = (r) => BADGES.filter((b) => b.value(r) >= b.goal).map((b) => b.name);
 
+  // ---------- Hint credits ----------
+  // Live once the trusted server is deployed (js/online.js; rules in
+  // js/economy.js). Signed-in players get 5 daily credits and earn more;
+  // Reveal Letter costs 1 and Reveal Word 3, charged by the server before
+  // anything is revealed. Until then, and for duels, hints work as before.
+  const Econ = window.CrosswordEconomy;
+  let online = window.CrosswordOnline || null;
+  let me = { uid: null, account: false };
+  let wallet = null; // the server's view: { daily, earned, total, totals, resetIn, at, recent }
+  let walletLoading = null;
+  const creditsOn = () => !!online;
+  document.addEventListener('online:ready', () => {
+    online = window.CrosswordOnline;
+    renderWallet();
+    renderDuelCards($('#duel-hub-cards'));
+    renderDuelCards($('#duel-home-cards'));
+    // An invitation opened before the connection was ready.
+    if (/^#\/duel\//.test(currentRoute)) route();
+  });
+  document.addEventListener('online:user', (e) => {
+    const was = me.uid;
+    me = e.detail;
+    if (was !== me.uid) wallet = null;
+    if (me.account) syncWallet();
+    renderWallet();
+    if (!$('#stats-view').hidden) renderStats();
+  });
+  async function syncWallet() {
+    if (!creditsOn() || !me.account) return null;
+    if (!walletLoading) {
+      walletLoading = online.call('walletSync').then((res) => {
+        setWallet(res.wallet, res.recent);
+        if (res.granted) toast(`Your ${res.granted} Daily Credits are ready!`);
+        return wallet;
+      }).catch(() => wallet).finally(() => { walletLoading = null; });
+    }
+    return walletLoading;
+  }
+  function setWallet(view, recent) {
+    wallet = { ...view, at: Date.now(), recent: recent || (wallet && wallet.recent) || [] };
+    renderWallet();
+  }
+  // A fresh day while the page was open: sync again for the new allowance.
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden || !wallet) return;
+    if (Date.now() - wallet.at > wallet.resetIn || Date.now() - wallet.at > 15 * 60000) syncWallet();
+  });
+  const walletLeft = () => (wallet ? Math.max(0, wallet.resetIn - (Date.now() - wallet.at)) : Econ.msUntilReset(now()));
+  const hoursMins = (ms) => {
+    const mins = Math.max(1, Math.ceil(ms / 60000));
+    return mins >= 60 ? `${Math.floor(mins / 60)}h ${mins % 60}m` : `${mins}m`;
+  };
+  function renderWallet() {
+    const btn = $('#wallet-btn');
+    btn.hidden = !creditsOn();
+    if (!creditsOn()) return;
+    const total = wallet ? wallet.total : null;
+    $('#wallet-total').textContent = me.account ? (total == null ? '…' : total) : '';
+    btn.setAttribute('aria-label', me.account && total != null ? `Hint credits: ${total}` : 'Hint credits');
+    $('#wallet-account').hidden = !me.account;
+    $('#wallet-guest').hidden = me.account;
+    $('#wallet-big').textContent = me.account && wallet ? wallet.total : me.account ? '…' : '5 a day';
+    $('#wallet-title small').textContent = me.account ? 'to spend' : 'free';
+    if (wallet) {
+      $('#wallet-daily').textContent = wallet.daily;
+      $('#wallet-earned').textContent = wallet.earned;
+      $('#wallet-reset').textContent = `New 5 in ${hoursMins(walletLeft())}`;
+    }
+    const recent = (wallet && wallet.recent) || [];
+    $('#wallet-history-wrap').hidden = !me.account || !recent.length;
+    $('#wallet-history').innerHTML = recent.slice(0, 12).map((x) => `<li><span>${esc(x.note)}<small>${esc(new Date(x.at).toLocaleString([], { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }))}</small></span><b class="${x.amount < 0 ? 'minus' : 'plus'}">${x.amount > 0 ? '+' : '−'}${Math.abs(x.amount)}</b></li>`).join('');
+    renderRevealMenu();
+  }
+  function openWallet() {
+    renderWallet();
+    $('#wallet-dialog').showModal();
+    if (me.account) syncWallet();
+  }
+  // The Reveal menu shows what each hint costs.
+  function renderRevealMenu() {
+    const on = creditsOn();
+    const duel = !!(game && game.duel);
+    $('#reveal-cell-btn').textContent = on ? 'Letter · 1 credit' : 'Square';
+    $('#reveal-word-btn').textContent = on ? 'Word · 3 credits' : 'Word';
+    $('#reveal-all-btn').hidden = on || duel;
+    $('#reveal-note').hidden = !on;
+    $('#reveal-note').textContent = !on ? '' : me.account
+      ? (wallet ? `You have ${plural(wallet.total, 'credit')}` : 'Checking your credits…')
+      : 'Sign in for 5 free credits a day';
+  }
+  function noCredits() {
+    toast(`Not enough hint credits. Solve without hints or win a duel to earn more${wallet && wallet.daily === 0 ? `; 5 more arrive in ${hoursMins(walletLeft())}` : ''}.`);
+    openWallet();
+  }
+  // What a hint would reveal: the square, or the current word.
+  function hintTarget(scope) {
+    if (scope === 'cell') {
+      const { r, c } = game.sel;
+      return { kind: 'letter', target: `${r}_${c}`, cells: [[r, c]] };
+    }
+    const w = game.puzzle.words[currentWordIndex()];
+    return { kind: 'word', target: `${w.dir[0]}${w.row}_${w.col}`, cells: w.cells };
+  }
+  let spending = false;
+  async function creditReveal(scope) {
+    if (scope === 'all') return;
+    if (!me.account) {
+      openWallet();
+      return;
+    }
+    const t = hintTarget(scope);
+    if (t.cells.every(([r, c]) => game.revealed[r][c])) {
+      toast(scope === 'cell' ? 'That letter is already revealed' : 'That word is already revealed');
+      return;
+    }
+    const cost = Econ.ECONOMY.cost[t.kind];
+    if (wallet && wallet.total < cost) return noCredits();
+    if (spending) return;
+    spending = true;
+    const g = game;
+    try {
+      const res = await online.call('spendHint', { puzzle: g.spec.key, kind: t.kind, target: t.target });
+      setWallet(res.wallet);
+      if (!res.ok) return noCredits();
+      if (game !== g || game.solved) return;
+      applyReveal(scope);
+      if (res.charged) toast(`${plural(res.charged, 'credit')} used · ${res.wallet.total} left`);
+    } catch (e) {
+      toast(`${e.message} No credits were used.`);
+    } finally {
+      spending = false;
+    }
+  }
+  // A first No-Hint solve of a published puzzle: the server checks the grid
+  // and pays 1 (Mini) or 3 (Daily, Brutal) credits, once.
+  async function claimReward(spec, entries) {
+    const el = $('#win-reward');
+    el.hidden = true;
+    try {
+      const res = await online.call('claimSolve', { puzzle: spec.key, grid: entries });
+      if (!res.ok) return;
+      setWallet(res.wallet);
+      el.textContent = res.kind === 'mini' ? `Brilliant! Mini solved without hints. +${plural(res.amount, 'credit')}.` : `Perfect solve! +${res.amount} Hint Credits.`;
+      el.hidden = false;
+    } catch (e) {
+      /* offline: the reward can't be claimed later, but nothing is lost */
+    }
+  }
+
   // ---------- Statistics page (#/stats) ----------
   const tile = ([v, l]) => `<div><b>${v}</b><span>${esc(l)}</span></div>`;
   function renderStats() {
@@ -899,6 +1050,7 @@
     $('#club-sum').textContent = plural(club.total, 'No-Hint solve');
 
     renderArcadeRecords();
+    renderOnlineRecords();
 
     const earned = BADGES.filter((b) => b.value(club) >= b.goal).length;
     $('#badges-sum').textContent = `${earned} of ${BADGES.length} earned`;
@@ -942,6 +1094,56 @@
     ].join('');
     const parts = [best.blitz && `Blitz ${best.blitz.score.toLocaleString()}`, best.survival && `Survival round ${best.survival.round}`, lad.completed && plural(lad.completed, 'ladder')].filter(Boolean);
     $('#arcade-sum').textContent = parts.join(' · ') || 'No games yet';
+  }
+
+  // Hint credits and duel records (once the server is live). Read from the
+  // server; this page never keeps its own copy of a balance.
+  function renderOnlineRecords() {
+    const on = creditsOn();
+    $('#panel-credits').hidden = !on;
+    $('#panel-duels').hidden = !on;
+    if (!on) return;
+    if (!me.account) {
+      const invite = '<p class="panel-note">Sign in to collect 5 free hint credits a day, earn more, and keep your duel record on every device.</p><button class="btn btn-primary" data-action="wallet-signin">Sign in or create an account</button>';
+      $('#credits-body').innerHTML = invite;
+      $('#duels-body').innerHTML = '<p class="panel-note">Guests can duel too; sign in to keep a record of your results and earn credits for wins.</p>';
+      $('#credits-sum').textContent = 'Sign in to collect';
+      $('#duels-sum').textContent = '';
+      return;
+    }
+    if (!wallet) syncWallet().then(() => { if (!$('#stats-view').hidden) renderOnlineRecords(); });
+    if (!duelRecord) loadDuelRecord().then(() => { if (!$('#stats-view').hidden && duelRecord) renderOnlineRecords(); });
+    const w = wallet;
+    const t = (w && w.totals) || {};
+    const v = (n) => (w ? n || 0 : '…');
+    $('#credits-sum').textContent = w ? `${plural(w.total, 'credit')} to spend` : '';
+    $('#credits-body').innerHTML = `<div class="stat-tiles">${[
+      [v(w && w.total), 'Available now'],
+      [v(w && w.daily), 'Daily credits'],
+      [v(w && w.earned), 'Earned credits'],
+      [v(t.earned), 'Earned in all'],
+      [v(t.spent), 'Spent in all'],
+      [v(t.solves), 'From No-Hint solves'],
+      [v(t.wins), 'From duel wins'],
+    ].map(tile).join('')}</div>
+      <button class="link-btn" data-action="wallet">Open your wallet →</button>`;
+    const d = duelRecord || Econ.blankDuelStats();
+    $('#duels-sum').textContent = d.played ? `${plural(d.won, 'win')} in ${plural(d.played, 'duel')}` : 'No duels yet';
+    $('#duels-body').innerHTML = `<div class="stat-tiles">${[
+      [d.played, 'Duels played'],
+      [d.won, 'Won'],
+      [d.lost, 'Lost'],
+      [d.draws, 'Drawn'],
+      [`${Econ.winRate(d)}%`, 'Win rate'],
+      [d.streak, 'Winning streak'],
+      [d.longest, 'Longest streak'],
+      [d.miniWins, 'Mini Duel wins'],
+      [d.classicWins, 'Classic Duel wins'],
+      [d.best.mini ? formatTime(d.best.mini) : '—', 'Best Mini Duel'],
+      [d.best.classic ? formatTime(d.best.classic) : '—', 'Best Classic Duel'],
+      [d.credits, 'Credits from wins'],
+    ].map(tile).join('')}</div>
+      <button class="link-btn" data-nav="arcade">Start a duel →</button>`;
   }
 
   function openStatsPage() {
@@ -992,8 +1194,8 @@
 
     game.challenge = routeChallenge;
     showChallenge();
-    $('#room-start').hidden = !multiplayer || !!store.solves[spec.key] || spec.kind === 'gift'; // gifts stay off our servers
-    if (!store.solves[spec.key]) analytics.track('puzzle_start', { ...puzzleParams(spec), resumed: !!store.saves[spec.key] });
+    $('#room-start').hidden = !multiplayer || !!store.solves[spec.key] || spec.kind === 'gift' || spec.kind === 'duel'; // gifts stay off our servers
+    if (!store.solves[spec.key] && spec.kind !== 'duel') analytics.track('puzzle_start', { ...puzzleParams(spec), resumed: !!store.saves[spec.key] });
     const save = store.saves[spec.key];
     const solve = store.solves[spec.key];
     if (save && fitsPuzzle(save, puzzle)) {
@@ -1012,7 +1214,7 @@
       game.elapsed = solve.time;
       game.reveals = solve.clean ? 0 : 1;
     }
-    if (store.settings.autocheck) {
+    if (store.settings.autocheck && spec.kind !== 'duel') {
       if (!solve) game.autochecked = true;
       puzzle.solution.forEach((row, r) => row.forEach((ch, c) => {
         game.wrong[r][c] = !!ch && !!game.entries[r][c] && !game.pencil[r][c] && game.entries[r][c] !== ch;
@@ -1050,7 +1252,7 @@
   }
 
   function persist() {
-    if (!game) return;
+    if (!game || game.duel) return; // duels keep their letters in the tab (sessionStorage)
     if (game.solved) {
       delete store.saves[game.spec.key];
     } else if (game.entries.some((row) => row.some(Boolean)) || store.saves[game.spec.key]
@@ -1087,6 +1289,7 @@
   function currentElapsed() {
     if (!game) return 0;
     // A shared puzzle runs on the room's clock, the same for everyone.
+    if (game.duel && duel && duel.data && duel.data.startAt) return Math.max(0, Math.floor((now() - duel.data.startAt) / 1000));
     const room = game.room;
     if (room && room.meta && typeof room.meta.createdAt === 'number' && !game.solved) {
       return CrosswordRooms.roomElapsed(room.meta.base, room.meta.createdAt, Date.now() + room.offset);
@@ -1114,6 +1317,7 @@
   function setPaused(paused) {
     if (!game || game.solved) return;
     if (game.room) return toast('The clock keeps running in a shared puzzle');
+    if (game.duel) return toast('The clock keeps running in a duel');
     game.paused = paused;
     updateKeys();
     if (paused) {
@@ -1149,7 +1353,7 @@
     $('#pause-overlay').hidden = true;
     $('.game-layout').classList.remove('paused');
     $('#pencil-btn').setAttribute('aria-pressed', 'false');
-    document.title = `${spec.kind === 'genre' ? spec.title : spec.kind === 'gift' ? 'Gift crossword' : spec.kicker.split(' · ')[0] + ', ' + shortDate(spec.date)} · Crossword Hub`;
+    document.title = `${spec.kind === 'genre' ? spec.title : spec.kind === 'gift' ? 'Gift crossword' : spec.kind === 'duel' ? spec.kicker : spec.kicker.split(' · ')[0] + ', ' + shortDate(spec.date)} · Crossword Hub`;
 
     const board = $('#board');
     board.classList.remove('solved');
@@ -1378,7 +1582,7 @@
     if (game.revealed[r][c]) return;
     game.entries[r][c] = ch;
     game.pencil[r][c] = !!ch && game.pencilMode;
-    game.wrong[r][c] = !!ch && !game.pencilMode && store.settings.autocheck && ch !== game.puzzle.solution[r][c];
+    game.wrong[r][c] = !!ch && !game.pencilMode && store.settings.autocheck && !game.duel && ch !== game.puzzle.solution[r][c];
   }
 
   function typeLetter(ch) {
@@ -1437,7 +1641,7 @@
   }
 
   function check(scope) {
-    if (game.solved) return;
+    if (game.solved || game.duel) return; // no checking in a duel
     game.checks++;
     analytics.track('check_used', { scope, puzzle_kind: game.spec.kind });
     syncRoomHints();
@@ -1465,6 +1669,14 @@
 
   let revealArmed = 0;
   function reveal(scope) {
+    if (game.solved || game.duel) return;
+    if (creditsOn()) {
+      creditReveal(scope);
+      return;
+    }
+    applyReveal(scope);
+  }
+  function applyReveal(scope) {
     if (game.solved) return;
     if (scope === 'all' && Date.now() - revealArmed > 4000) {
       revealArmed = Date.now();
@@ -1617,6 +1829,12 @@
   }
 
   function afterChange() {
+    if (game.duel) {
+      // A duel: the server checks the grid and decides the winner.
+      queueDuelGrid();
+      refresh();
+      return;
+    }
     syncRoomCells();
     if (!game.solved && isSolved()) {
       win();
@@ -1691,6 +1909,8 @@
     }
     delete store.saves[spec.key];
     saveStore();
+    $('#win-reward').hidden = true;
+    if (creditsOn() && me.account && noHint && !prev && ['daily', 'mini', 'brutal'].includes(spec.kind)) claimReward(spec, game.entries);
 
     $('#board').classList.add('solved');
     celebrate(clean);
@@ -2550,6 +2770,11 @@
       case 'consent-yes': setAnalytics(true); return;
       case 'consent-no': setAnalytics(false); return;
       case 'stats': navigate('#/stats'); return;
+      case 'wallet': openWallet(); return;
+      case 'duel-ready': case 'duel-leave': case 'duel-resign': case 'duel-rematch': case 'duel-accept':
+      case 'duel-copy': case 'duel-whatsapp': case 'duel-share': case 'duel-result-share': case 'duel-quick-cancel':
+        duelAction(action); return;
+      case 'wallet-signin': closeDialogs(); $('#account-btn').click(); return;
       case 'install': promptInstall(); return;
       case 'install-dismiss': dismissInstall(); return;
       case 'month-prev':
@@ -2684,7 +2909,7 @@
 
   function showView(name) {
     if (name !== 'game') typeInput.blur();
-    for (const v of ['home', 'archive', 'game', 'gift', 'arcade', 'stats']) {
+    for (const v of ['home', 'archive', 'game', 'gift', 'arcade', 'stats', 'duel']) {
       const el = $(`#${v}-view`);
       const showing = v === name;
       if (showing && el.hidden && !reduceMotion.matches) {
@@ -2700,10 +2925,10 @@
       setTimeout(keepActiveInView, 400); // once the view has settled
     }
     $$('.masthead-nav button').forEach((b) => b.removeAttribute('aria-current'));
-    const navName = name === 'game' ? null : name;
+    const navName = name === 'game' ? (game && game.duel ? 'arcade' : null) : name === 'duel' ? 'arcade' : name;
     const navBtn = navName && $(`.masthead-nav [data-nav="${navName}"]`);
     if (navBtn) navBtn.setAttribute('aria-current', 'page');
-    if (name !== 'game') document.title = { gift: 'Gift a crossword · Crossword Hub', arcade: 'Arcade · Crossword Hub', stats: 'Statistics · Crossword Hub' }[name] || 'Crossword Hub';
+    if (name !== 'game') document.title = { gift: 'Gift a crossword · Crossword Hub', arcade: 'Arcade · Crossword Hub', stats: 'Statistics · Crossword Hub', duel: 'Crossword Duel · Crossword Hub' }[name] || 'Crossword Hub';
     if (name !== 'arcade') {
       leaveArcade();
       leaveLadder();
@@ -2758,11 +2983,16 @@
     if (challenge) analytics.track('challenge_open', { page: CrosswordShare.pagePath(currentRoute) });
     const parts = path.replace(/^#\/?/, '').split('/');
     leaveGame();
+    if (parts[0] !== 'duel') leaveDuel();
     const today = todayKey();
     $('#dateline').textContent = `${longDate(today)} · Today's Daily: ${scheduleFor(today).level}`;
 
     if (parts[0] === 'gift') {
       await openGiftRoute(parts[1] || 'new', routeNow);
+      return;
+    }
+    if (parts[0] === 'duel') {
+      await openDuelRoute(parts, routeNow);
       return;
     }
     if (parts[0] === 'arcade') {
@@ -2950,6 +3180,7 @@
     if (!ARCADE_MODES[mode]) {
       if (mode) replaceRoute('#/arcade');
       renderArcadeCards($('#arcade-hub-cards'));
+      renderDuelCards($('#duel-hub-cards'));
       arcadeScreen('hub');
       return;
     }
@@ -3601,6 +3832,484 @@
     else return;
     e.preventDefault();
   });
+
+  // ---------- Crossword Duels ----------
+  // Two players race to finish the same crossword (#/duel/...). The server
+  // (functions/index.js) makes the puzzle and keeps its answers: the board
+  // here gets the layout and clues only, sends the grid as you type, and
+  // hears back how much of it is right. The server decides the winner.
+  //   #/duel/new/<mode>    a private challenge (shares a link)
+  //   #/duel/quick/<mode>  Quick Match
+  //   #/duel/j/<code>      an invitation link
+  //   #/duel/<id>          a duel: lobby, countdown, board, result
+  const DUELS = Econ.DUELS;
+  const DUEL_CARDS = {
+    mini: {
+      tagline: 'A small grid, head to head. Usually over in one to three minutes.',
+      art: '<svg viewBox="0 0 64 64" aria-hidden="true"><g stroke="#2a241c" stroke-width="2.2"><rect x="8" y="12" width="40" height="40" rx="2" fill="#fbf5e6"/><path d="M21.3 12v40M34.6 12v40M8 25.3h40M8 38.6h40" stroke-width="1.6"/><rect x="21.3" y="25.3" width="13.3" height="13.3" fill="#2a241c"/></g><g stroke="#2a241c" stroke-width="2" stroke-linejoin="round"><path d="M44 4l14 14-26 26-9 3 3-9z" fill="#e3b64c"/><path d="M52 4l8 8" stroke-width="2.4"/></g></svg>',
+    },
+    classic: {
+      tagline: 'A full-size crossword for serious solvers. Up to 20 minutes.',
+      art: '<svg viewBox="0 0 64 64" aria-hidden="true"><g stroke="#2a241c"><rect x="6" y="6" width="44" height="52" rx="2" fill="#fbf5e6" stroke-width="2.2"/><path d="M6 17h44M6 28h44M6 39h44M17 6v52M28 6v52M39 6v52" stroke-width="1.2"/><path d="M17 17h11v11H17zM39 28h11v11H39zM6 39h11v11H6z" fill="#2a241c" stroke-width="1"/></g><g stroke="#2a241c" stroke-width="2" stroke-linejoin="round"><path d="M40 30l18 18-6 6-18-18-2-8z" fill="#da6a4f"/><path d="M44 30l-10-2 2 10" fill="none"/></g></svg>',
+    },
+  };
+  let duel = null; // the duel on screen: { id, data, unsub, timers, entries, myPct, sending, again, rematchMine }
+  let quick = null; // a Quick Match search: { mode, started, renew, unsub }
+  let duelRecord = null; // your duel record (players/{uid}.duel), for the cards and Statistics
+
+  async function loadDuelRecord() {
+    if (!creditsOn() || !me.account) return null;
+    try {
+      const p = await online.read(`players/${me.uid}`);
+      duelRecord = (p && p.duel) || Econ.blankDuelStats();
+    } catch (e) { /* offline */ }
+    return duelRecord;
+  }
+  document.addEventListener('online:user', () => {
+    duelRecord = null;
+    if (me.account) loadDuelRecord().then(() => {
+      renderDuelCards($('#duel-hub-cards'));
+      renderDuelCards($('#duel-home-cards'));
+    });
+  });
+
+  function renderDuelCards(el) {
+    if (!el) return;
+    const on = creditsOn();
+    el.innerHTML = Object.entries(DUELS).filter(([k]) => DUEL_CARDS[k]).map(([mode, m]) => {
+      const rec = duelRecord && duelRecord.played
+        ? `Your record: ${plural(duelRecord[`${mode}Wins`], 'win')} of ${duelRecord.played} duels${duelRecord.best[mode] ? ` · best ${formatTime(duelRecord.best[mode])}` : ''}`
+        : on ? 'Winner earns 3 Hint Credits' : '';
+      return `<div class="duel-card duel-${mode}">
+        <span class="duel-art">${DUEL_CARDS[mode].art}</span>
+        <span class="duel-copy">
+          <span class="duel-name">${esc(m.label)}${on ? '' : ' <span class="soon-badge">Coming soon</span>'}</span>
+          <span class="duel-tag">${esc(DUEL_CARDS[mode].tagline)}</span>
+          ${rec ? `<span class="duel-rec">${esc(rec)}</span>` : ''}
+        </span>
+        ${on ? `<span class="duel-actions">
+          <button class="btn btn-primary" data-open="#/duel/new/${mode}">Challenge a friend</button>
+          <button class="btn" data-open="#/duel/quick/${mode}">Quick Match</button>
+        </span>` : '<span class="duel-actions"><span class="duel-soon">Duels open once the game server is switched on.</span></span>'}
+      </div>`;
+    }).join('');
+  }
+
+  const duelPanel = (html) => {
+    $('#duel-panel').innerHTML = html;
+  };
+  const duelLoading = (text) => duelPanel(`<p class="duel-loading">${esc(text)}</p>`);
+  function duelProblem(title, text) {
+    duelPanel(`<p class="kicker">Crossword Duels</p><h1>${esc(title)}</h1><p class="duel-lede">${esc(text)}</p>
+      <div class="duel-buttons"><button class="btn btn-primary" data-nav="arcade">Back to Play</button></div>`);
+  }
+  async function duelName() {
+    if (store.settings.playerName) return store.settings.playerName;
+    if (me.account && me.name && Econ.validName(me.name.split(' ')[0])) return me.name.split(' ')[0];
+    return askName('Your name for duels', 'Your opponent will see it. No account needed to play.', 'Continue');
+  }
+
+  async function openDuelRoute(parts, routeNow) {
+    showView('duel');
+    window.scrollTo(0, 0);
+    if (!creditsOn()) return duelProblem('Crossword Duels are coming soon', 'Duels open once the game server is switched on. In the meantime, try the Arcade.');
+    const [, a, b] = parts;
+    if (!a) {
+      replaceRoute('#/arcade');
+      return route();
+    }
+    if (duel && duel.id === a) {
+      if (game && game.duel && game.duel.id === a && duel.data && duel.data.status === 'live') {
+        showView('game');
+        game.solved = false;
+        startTimer();
+      }
+      return renderDuel();
+    }
+    leaveDuel();
+    duelLoading('Connecting…');
+    try {
+      await online.signInForDuel();
+      if (currentRoute !== routeNow) return;
+      if ((a === 'new' || a === 'quick') && !DUELS[b]) return duelProblem('That duel doesn’t exist', 'Choose Mini Duel or Classic Duel.');
+      if (a === 'new' || a === 'quick' || a === 'j') {
+        const name = await duelName();
+        if (currentRoute !== routeNow) return;
+        if (!name) return navigate('#/arcade');
+        if (a === 'quick') return startQuick(b, name, routeNow);
+        duelLoading(a === 'new' ? 'Setting up your challenge…' : 'Joining…');
+        const res = a === 'new' ? await online.call('duelCreate', { mode: b, name }) : await online.call('duelJoin', { code: b, name });
+        if (currentRoute !== routeNow) return;
+        if (a === 'new') analytics.track('duel_create', { mode: b });
+        replaceRoute(`#/duel/${res.id}`);
+        return watchDuel(res.id);
+      }
+      return watchDuel(a);
+    } catch (e) {
+      if (currentRoute !== routeNow) return;
+      duelProblem(e.code === 'offline' ? 'No connection' : 'That didn’t work', e.message);
+    }
+  }
+
+  // ---------- Quick Match ----------
+  async function startQuick(mode, name, routeNow) {
+    stopQuick();
+    quick = { mode, name, started: Date.now(), renew: null, tick: null, unsub: null };
+    const q = quick;
+    renderQuick();
+    const ask = async () => {
+      try {
+        const res = await online.call('duelQuick', { mode, name });
+        if (quick !== q) return;
+        if (res.id) return quickFound(res.id);
+      } catch (e) {
+        if (quick === q) duelProblem('No connection', e.message);
+      }
+    };
+    online.watch(`players/${online.who().uid}`, (p) => {
+      if (quick === q && p && p.found && p.found.at > q.started - 5000) quickFound(p.found.duel);
+    }).then((u) => { if (quick === q) q.unsub = u; else u(); }).catch(() => {});
+    q.renew = setInterval(ask, 20000);
+    q.tick = setInterval(renderQuick, 1000);
+    await ask();
+  }
+  function renderQuick() {
+    if (!quick) return;
+    const secs = Math.floor((Date.now() - quick.started) / 1000);
+    const long = secs >= 60;
+    duelPanel(`<p class="kicker">Quick Match · ${esc(DUELS[quick.mode].label)}</p>
+      <h1>${long ? 'Nobody’s free just yet' : 'Looking for an opponent…'}</h1>
+      <div class="duel-search" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p class="duel-lede">${long ? `Nobody else is looking for a ${esc(DUELS[quick.mode].label)} right now. Keep looking, or challenge a friend with a link.` : `Waiting ${formatTime(secs)}. We’ll start as soon as someone else is looking for a ${esc(DUELS[quick.mode].label)}.`}</p>
+      <div class="duel-buttons">
+        ${long ? `<button class="btn btn-primary" data-open="#/duel/new/${quick.mode}">Challenge a friend instead</button>` : ''}
+        <button class="btn" data-action="duel-quick-cancel">Cancel</button>
+      </div>`);
+  }
+  function quickFound(id) {
+    stopQuick(true);
+    navigate(`#/duel/${id}`);
+  }
+  // Stops searching; unless a match was found, leaves the line on the server.
+  function stopQuick(found) {
+    if (!quick) return;
+    const q = quick;
+    quick = null;
+    clearInterval(q.renew);
+    clearInterval(q.tick);
+    if (q.unsub) q.unsub();
+    if (!found) online.call('duelQuickCancel', { mode: q.mode }).catch(() => {});
+  }
+
+  // ---------- A duel ----------
+  const duelOpp = (d) => d.uids.find((u) => u !== online.who().uid);
+  const duelMe = () => online.who().uid;
+  const duelStore = (id) => `crosswordhub:duel:${id}`;
+  function watchDuel(id) {
+    duel = { id, data: null, unsub: null, timers: [], entries: null, myPct: 0, sending: false, again: false, rematchMine: false, settling: false };
+    const dd = duel;
+    try {
+      dd.entries = JSON.parse(sessionStorage.getItem(duelStore(id)) || 'null');
+    } catch (e) { /* private mode */ }
+    duelLoading('Loading the duel…');
+    online.watch(`duels/${id}`, (data) => {
+      if (duel !== dd) return;
+      if (!data) return duelProblem('Duel not found', 'This duel doesn’t exist, or it isn’t one of yours.');
+      dd.data = data;
+      renderDuel();
+    }, () => {
+      if (duel === dd) duelProblem('Duel not found', 'This duel doesn’t exist, or it isn’t one of yours.');
+    }).then((u) => { if (duel === dd) dd.unsub = u; else u(); });
+    const beat = () => online.heartbeat(id).catch(() => {});
+    beat();
+    dd.timers.push(setInterval(beat, 15000));
+    dd.timers.push(setInterval(duelTick, 500));
+    dd.timers.push(setInterval(() => duelSettle(false), 25000));
+  }
+  function leaveDuel() {
+    stopQuick();
+    if (!duel) return;
+    duel.timers.forEach(clearInterval);
+    if (duel.unsub) duel.unsub();
+    if (game && game.duel) {
+      game.solved = true; // lock the board; the duel carries on without it
+      stopTimer();
+    }
+    duel = null;
+    $('#duel-bar').hidden = true;
+    $('#game-view').classList.remove('duel-mode');
+  }
+
+  function renderDuel() {
+    const d = duel && duel.data;
+    if (!d) return;
+    if (d.status === 'open' || d.status === 'lobby') return renderLobby(d);
+    if (d.status === 'cancelled') return duelProblem('This duel was called off', 'The challenge was cancelled or ran out of time before it started.');
+    if (d.status === 'live') {
+      if (now() < d.startAt || !d.puzzle) return renderCountdown(d);
+      if (!(game && game.duel && game.duel.id === duel.id)) startDuelBoard(d);
+      return renderDuelBar();
+    }
+    if (d.status === 'done') return renderDuelResult(d);
+  }
+
+  function duelShareLink(d) {
+    return `${siteUrl()}#/duel/j/${d.code}`;
+  }
+  function renderLobby(d) {
+    if (!$('#game-view').hidden) showView('duel');
+    const mine = duelMe();
+    const opp = duelOpp(d);
+    const p = d.players;
+    const label = DUELS[d.mode].label;
+    const title = d.rematchOf ? 'Rematch' : d.code ? 'Challenge a friend' : 'Quick Match';
+    const row = (uid) => `<li class="${p[uid].ready ? 'ready' : ''}"><span class="duel-avatar" aria-hidden="true">${esc(p[uid].name[0].toUpperCase())}</span><span>${esc(p[uid].name)}${uid === mine ? ' <small>(you)</small>' : ''}</span><b>${p[uid].ready ? 'Ready' : 'Not ready'}</b></li>`;
+    const waiting = d.invited ? 'Waiting for your opponent to accept…' : 'Waiting for your friend to join…';
+    const link = d.code ? duelShareLink(d) : '';
+    duelPanel(`<p class="kicker">${esc(label)} · ${esc(title)}</p>
+      <h1>${opp ? `You vs ${esc(p[opp].name)}` : esc(title)}</h1>
+      <ol class="duel-players">${row(mine)}${opp ? row(opp) : `<li class="empty"><span class="duel-avatar" aria-hidden="true">?</span><span>${waiting}</span></li>`}</ol>
+      ${!opp && link ? `<div class="duel-invite">
+        <p class="duel-invite-title">Send your friend this link</p>
+        <p class="duel-link"><input id="duel-link" readonly value="${esc(link)}" aria-label="Challenge link" /></p>
+        <div class="duel-share">
+          <button class="btn btn-whatsapp" data-action="duel-whatsapp">WhatsApp</button>
+          <button class="btn btn-primary" data-action="duel-copy">Copy link</button>
+          ${typeof navigator.share === 'function' ? '<button class="btn" data-action="duel-share">Share…</button>' : ''}
+        </div>
+        <p class="duel-small">Only someone with this link can join. It expires in ${DUELS.lobbyHours} hours.</p>
+      </div>` : ''}
+      <div class="duel-buttons">
+        ${opp ? `<button class="btn ${p[mine].ready ? '' : 'btn-primary'} duel-ready" data-action="duel-ready">${p[mine].ready ? 'Not ready yet' : 'I’m ready'}</button>` : ''}
+        <button class="btn" data-action="duel-leave">${d.host === mine && !opp ? 'Cancel challenge' : 'Leave'}</button>
+      </div>
+      ${opp ? `<p class="duel-small">${p[mine].ready && !p[opp].ready ? `Waiting for ${esc(p[opp].name)}…` : `The duel starts ${DUELS.countdownMs / 1000} seconds after you’re both ready.`}</p>` : ''}
+      <ul class="duel-rules"><li>The same crossword for both of you; first to fill it in correctly wins.</li><li>No hints and no checking. You see each other’s progress, never the letters.</li><li>${esc(label)}s last up to ${DUELS[d.mode].minutes} minutes; if time runs out, it’s a draw.</li><li>The winner earns 3 Hint Credits (signed-in players, up to 3 rewarded wins a day).</li></ul>`);
+  }
+  function renderCountdown(d) {
+    if (!$('#game-view').hidden) showView('duel');
+    const left = Math.max(0, Math.ceil((d.startAt - now()) / 1000));
+    const opp = duelOpp(d);
+    duelPanel(`<p class="kicker">${esc(DUELS[d.mode].label)}</p><h1>You vs ${esc(d.players[opp].name)}</h1>
+      <p class="duel-count" aria-live="assertive">${left || 'Go!'}</p>
+      <p class="duel-lede">Get ready: the grid appears for both of you at the same moment.</p>`);
+  }
+
+  function startDuelBoard(d) {
+    const opp = duelOpp(d);
+    const spec = {
+      kind: 'duel', key: `duel:${duel.id}`, url: `#/duel/${duel.id}`,
+      kicker: DUELS[d.mode].label, title: `You vs ${d.players[opp].name}`, meta: 'First to fill it in correctly wins. No hints or checks.', frozen: JSON.parse(d.puzzle),
+    };
+    showView('game');
+    window.scrollTo(0, 0);
+    startGame(spec);
+    game.duel = { id: duel.id };
+    if (duel.entries && duel.entries.length === game.puzzle.rows) {
+      game.entries = duel.entries.map((row, r) => row.map((v, c) => (game.puzzle.solution[r][c] && /^[A-Z]$/.test(v) ? v : '')));
+      refresh();
+    }
+    $('#game-view').classList.add('duel-mode');
+    $('#duel-bar').hidden = false;
+    $('#duel-opp-name').textContent = d.players[opp].name;
+    renderRevealMenu();
+    if (game.entries.some((row) => row.some(Boolean))) sendDuelGrid();
+    renderDuelBar();
+  }
+
+  function renderDuelBar() {
+    const d = duel && duel.data;
+    if (!d || $('#duel-bar').hidden) return;
+    const mine = d.players[duelMe()].progress || 0;
+    const my = Math.max(mine, duel.myPct || 0);
+    const opp = d.players[duelOpp(d)];
+    const theirs = opp.progress || 0;
+    $('#duel-me-pct').textContent = `${my}%`;
+    $('#duel-me-bar').style.width = `${my}%`;
+    $('#duel-opp-pct').textContent = `${theirs}%`;
+    $('#duel-opp-bar').style.width = `${theirs}%`;
+    $('#duel-lead').textContent = my > theirs ? 'You’re ahead' : theirs > my ? `${opp.name} is ahead` : 'Level';
+    $('#duel-bar').classList.toggle('ahead', my > theirs);
+    $('#duel-bar').classList.toggle('behind', theirs > my);
+  }
+  function duelTick() {
+    const d = duel && duel.data;
+    if (!d) return;
+    if (d.status === 'live' && (now() < d.startAt || !d.puzzle) && $('#game-view').hidden) return renderCountdown(d);
+    if (d.status === 'live' && !(game && game.duel && game.duel.id === duel.id) && d.puzzle && now() >= d.startAt) return renderDuel();
+    if (d.status !== 'live' || $('#duel-bar').hidden) return;
+    const left = Math.max(0, d.endsAt - now());
+    $('#duel-clock').textContent = formatTime(left / 1000);
+    $('#duel-clock').classList.toggle('low', left < 30000);
+    if (left === 0 && !duel.settling) duelSettle(true);
+  }
+  // Asks the server to settle a stalled duel (time up, or an opponent gone
+  // too long); it says how long an absent opponent has left to come back.
+  async function duelSettle(force) {
+    const dd = duel;
+    if (!dd || !dd.data || dd.data.status !== 'live' || (!force && now() < dd.data.startAt)) return;
+    dd.settling = true;
+    try {
+      const res = await online.call('duelSettle', { id: dd.id });
+      if (duel !== dd) return;
+      const opp = dd.data.players[duelOpp(dd.data)];
+      $('#duel-note').textContent = res.status === 'live' && res.waitMs < 40000
+        ? `${opp.name} has lost connection. If they’re not back within ${Math.ceil(res.waitMs / 1000)} seconds, you win.` : '';
+    } catch (e) { /* try again on the next tick */ }
+    setTimeout(() => { if (duel === dd) dd.settling = false; }, 4000);
+  }
+
+  // Sends your grid as you type (a moment after you pause, at once when it's
+  // full). Only the server can say how much of it is right.
+  let duelTimer = null;
+  function queueDuelGrid() {
+    clearTimeout(duelTimer);
+    const full = game.puzzle.solution.every((row, r) => row.every((ch, c) => !ch || game.entries[r][c]));
+    duelTimer = setTimeout(sendDuelGrid, full ? 0 : 900);
+    try {
+      sessionStorage.setItem(duelStore(game.duel.id), JSON.stringify(game.entries));
+    } catch (e) { /* private mode */ }
+  }
+  async function sendDuelGrid() {
+    const dd = duel;
+    if (!dd || !game || !game.duel || game.duel.id !== dd.id || game.solved) return;
+    if (dd.sending) {
+      dd.again = true;
+      return;
+    }
+    dd.sending = true;
+    try {
+      const res = await online.call('duelProgress', { id: dd.id, grid: game.entries });
+      if (duel !== dd) return;
+      dd.myPct = res.percent;
+      renderDuelBar();
+      if (res.full && !res.won && res.status === 'live') toast('The grid is full, but something isn’t right yet');
+    } catch (e) {
+      if (duel === dd) $('#duel-note').textContent = 'Reconnecting… keep solving: your letters are saved.';
+      setTimeout(() => { if (duel === dd) sendDuelGrid(); }, 3000);
+    } finally {
+      dd.sending = false;
+      if (dd.again) {
+        dd.again = false;
+        sendDuelGrid();
+      }
+    }
+  }
+
+  function renderDuelResult(d) {
+    if (game && game.duel && game.duel.id === duel.id) {
+      game.solved = true;
+      stopTimer();
+      typeInput.blur();
+    }
+    $('#duel-bar').hidden = true;
+    $('#game-view').classList.remove('duel-mode');
+    if ($('#duel-view').hidden) showView('duel');
+    try {
+      sessionStorage.removeItem(duelStore(duel.id));
+    } catch (e) { /* private mode */ }
+    const mine = duelMe();
+    const opp = duelOpp(d);
+    const r = d.result || {};
+    const won = d.winner === mine;
+    const lost = d.winner && !won;
+    const oppName = d.players[opp].name;
+    const prog = r.progress || {};
+    const why = {
+      'daily-limit': 'No credits this time: that’s today’s 3 rewarded wins. Every win still counts in your record.',
+      'opponent-limit': `No credits this time: you’ve had today’s 2 rewarded wins against ${oppName}.`,
+      'too-fast': 'No credits: that was quicker than a real solve.',
+      forfeit: `${oppName} left the duel, so it’s yours, without credits.`,
+      disconnect: `${oppName} lost connection, so it’s yours, without credits.`,
+    };
+    const creditLine = won
+      ? r.credits ? `+${r.credits} Hint Credits earned.` : d.players[mine].account ? (why[r.why] || why[r.reason] || '') : 'Sign in to earn 3 Hint Credits for every win.'
+      : '';
+    const head = won ? 'Victory!' : lost ? 'Good game!' : 'A draw';
+    const lede = won
+      ? (r.reason === 'solved' ? 'You’ve won the crossword duel!' : 'You win the duel.')
+      : lost ? (r.reason === 'forfeit' && d.players[mine].left ? 'You left the duel, so the win goes to your opponent.' : r.reason === 'disconnect' ? 'You were away too long, so the win goes to your opponent.' : 'Your opponent finished first. Ready for a rematch?')
+      : 'Time ran out before either of you finished.';
+    const rematchOffer = d.rematch && !duel.rematchMine;
+    duelPanel(`<div class="duel-result ${won ? 'won' : lost ? 'lost' : 'draw'}">
+      ${won ? '<div class="win-art duel-trophy" aria-hidden="true"></div>' : ''}
+      <p class="kicker">${esc(DUELS[d.mode].label)}</p>
+      <h1>${head}</h1>
+      <p class="duel-lede">${esc(lede)}</p>
+      ${creditLine ? `<p class="win-reward">${esc(creditLine)}</p>` : ''}
+      <div class="win-stats duel-final">
+        <div><b>${prog[mine] || 0}%</b><span>You</span></div>
+        <div><b>${prog[opp] || 0}%</b><span>${esc(oppName)}</span></div>
+        <div><b>${r.seconds ? formatTime(r.seconds) : '—'}</b><span>${r.reason === 'solved' ? 'Winning time' : 'Time'}</span></div>
+      </div>
+      ${rematchOffer ? `<p class="duel-offer">${esc(oppName)} wants a rematch.</p>` : ''}
+      <div class="duel-buttons">
+        ${rematchOffer ? '<button class="btn btn-primary" data-action="duel-accept">Accept rematch</button>' : `<button class="btn btn-primary" data-action="duel-rematch">Rematch</button>`}
+        <button class="btn" data-open="#/duel/new/${d.mode}">Challenge another friend</button>
+        <button class="btn" data-action="duel-result-share">Share result</button>
+        <button class="btn" data-nav="arcade">Back to Play</button>
+      </div>
+    </div>`);
+    if (won) $('.duel-trophy').innerHTML = $('#win-dialog .win-art').innerHTML;
+    if (!duel.reported) {
+      duel.reported = true;
+      analytics.track('duel_end', { mode: d.mode, outcome: won ? 'win' : lost ? 'loss' : 'draw', reason: r.reason || '' });
+      if (me.account) {
+        loadDuelRecord();
+        if (won && r.credits) syncWallet(); // show the new credits
+      }
+    }
+  }
+
+  async function duelAction(action) {
+    const dd = duel;
+    const d = dd && dd.data;
+    try {
+      if (action === 'duel-quick-cancel') {
+        stopQuick();
+        return navigate('#/arcade');
+      }
+      if (!d) return;
+      if (action === 'duel-ready') {
+        const ready = !d.players[duelMe()].ready;
+        await online.call('duelReady', { id: dd.id, ready });
+      } else if (action === 'duel-leave') {
+        await online.call('duelLeave', { id: dd.id });
+        navigate('#/arcade');
+      } else if (action === 'duel-resign') {
+        if (!window.confirm('Resign this duel? Your opponent wins.')) return;
+        await online.call('duelLeave', { id: dd.id });
+      } else if (action === 'duel-rematch') {
+        dd.rematchMine = true;
+        const name = await duelName();
+        const res = await online.call('duelCreate', { rematchOf: dd.id, name: name || undefined });
+        navigate(`#/duel/${res.id}`);
+      } else if (action === 'duel-accept') {
+        const name = await duelName();
+        const res = await online.call('duelJoin', { id: d.rematch, name: name || undefined });
+        navigate(`#/duel/${res.id}`);
+      } else if (action === 'duel-copy') {
+        copyText(duelShareLink(d), 'Link copied: send it to a friend');
+      } else if (action === 'duel-whatsapp' || action === 'duel-share') {
+        const text = `I challenge you to a ${DUELS[d.mode].label} on Crossword Hub: the same crossword, live, and the first to finish wins.`;
+        analytics.track('share', { method: action === 'duel-share' ? 'native' : 'whatsapp', content_type: 'duel_invite' });
+        if (action === 'duel-share') navigator.share({ text, url: duelShareLink(d) }).catch(() => {});
+        else window.open(`https://wa.me/?text=${encodeURIComponent(`${text} ${duelShareLink(d)}`)}`, '_blank', 'noopener');
+      } else if (action === 'duel-result-share') {
+        const won = d.winner === duelMe();
+        const r = d.result || {};
+        const text = won
+          ? `I won a ${DUELS[d.mode].label} on Crossword Hub${r.seconds ? ` in ${formatTime(r.seconds)}` : ''}. Fancy a game?`
+          : d.winner ? `I just played a ${DUELS[d.mode].label} on Crossword Hub. Fancy a game?` : `A ${DUELS[d.mode].label} on Crossword Hub ended in a draw. Fancy a game?`;
+        const url = canLink() ? `${siteUrl()}#/arcade` : '';
+        analytics.track('share', { method: navigator.share ? 'native' : 'copy_link', content_type: 'duel_result' });
+        if (navigator.share) navigator.share({ text, url: url || undefined }).catch(() => {});
+        else copyText(url ? `${text} ${url}` : text, 'Result copied to your clipboard');
+      }
+    } catch (e) {
+      toast(e.message);
+    }
+  }
 
   // ---------- Gift crosswords ----------
   // Made here from the player's own answers and clues and sent as a link

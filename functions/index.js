@@ -19,7 +19,7 @@
  *   wallets/{uid}/claims/{puzzle} No-Hint rewards paid (once per puzzle)
  *   players/{uid}                 duel records and a Quick Match that was found
  *   duels/{id}                    a duel: players, hidden-answer puzzle, progress, result
- *   duels/{id}/secret/solution    its answers (never readable by players)
+ *   duels/{id}/secret/solution    its answers, and its clues until the start (never readable by players)
  *   duels/{id}/presence/{uid}     "still here" heartbeats (the one thing players write)
  *   duelCodes/{code}              private challenge codes
  *   quick/{mode}                  the player waiting for a Quick Match
@@ -201,11 +201,11 @@ function newDuel(t, { mode, players, uids, host, code, invited = null, rematchOf
   const ref = db.collection('duels').doc();
   t.create(ref, {
     mode, status, host, uids, players, code: code || null, invited, rematchOf,
-    puzzle: JSON.stringify(built.hidden),
+    puzzle: null, // released when the duel starts, so nobody sees the clues early
     createdAt: ms, expiresAt: ms + E.DUELS.lobbyHours * 3600000,
     startAt: null, endsAt: null, winner: null, result: null, rematch: null,
   });
-  t.create(secretRef(ref.id), { rows: P.pack(built.solution) });
+  t.create(secretRef(ref.id), { rows: P.pack(built.solution), puzzle: JSON.stringify(built.hidden) });
   return ref;
 }
 const isParticipant = (d, uid) => Array.isArray(d.uids) && d.uids.includes(uid);
@@ -318,7 +318,7 @@ exports.duelReady = onCall(async (req) => {
   const { id, ready } = req.data || {};
   const ms = now();
   return db.runTransaction(async (t) => {
-    const snap = await t.get(duelRef(String(id)));
+    const [snap, secret] = await Promise.all([t.get(duelRef(String(id))), t.get(secretRef(String(id)))]);
     if (!snap.exists || !isParticipant(snap.data(), uid)) fail('not-found', 'That duel isn’t yours.');
     const d = snap.data();
     if (d.status !== 'lobby') return { status: d.status };
@@ -331,7 +331,7 @@ exports.duelReady = onCall(async (req) => {
     const update = { [`players.${uid}.ready`]: ready !== false };
     if (both) {
       const startAt = ms + E.DUELS.countdownMs;
-      Object.assign(update, { status: 'live', startAt, endsAt: startAt + E.DUELS[d.mode].minutes * 60000 });
+      Object.assign(update, { status: 'live', startAt, endsAt: startAt + E.DUELS[d.mode].minutes * 60000, puzzle: secret.data().puzzle });
     }
     t.update(snap.ref, update);
     return { status: both ? 'live' : 'lobby' };
