@@ -99,4 +99,16 @@ assert.deepStrictEqual(mergeArcadeAttempts({ day: '2026-10-19', blitz: 1 }, { da
 assert.strictEqual(mergeArcadeAttempts(null, undefined), null);
 assert.deepStrictEqual(syncable(tried).arcadeAttempts, { day: '2026-10-20', blitz: 1, survival: 1 });
 
+// Word Ladder: results and practice records travel; a game in progress doesn't.
+const ladderPhone = { ladder: { daily: { '2026-10-20': { id: '4:1', moves: 5, par: 4, time: 30000, hints: 0, score: 90, at: 5 } }, practice: { done: 2, bestTime: 20000, fewest: 3, perfect: 1, recent: ['4:2'] }, games: { practice: { id: '4:9' } } } };
+const ladderAccount = { ladder: { daily: { '2026-10-19': { id: '4:3', moves: 3, par: 3, time: 9000, hints: 0, score: 100, at: 1 } }, practice: { done: 5, bestTime: 25000, fewest: 4, perfect: 0, recent: [] } } };
+const lm = mergeStores(ladderPhone, ladderAccount).ladder;
+assert.deepStrictEqual(Object.keys(lm.daily).sort(), ['2026-10-19', '2026-10-20']);
+assert.deepStrictEqual([lm.practice.done, lm.practice.bestTime, lm.practice.fewest, lm.practice.perfect], [5, 20000, 3, 1]);
+assert.deepStrictEqual(lm.games, { practice: { id: '4:9' } }, 'this device keeps its game in progress');
+assert.ok(!('games' in syncable(ladderPhone).ladder));
+assert.ok(!differs({}, { ladder: undefined }), 'no Word Ladder record either side is no change');
+const oldStore = mergeStores({ solves: {} }, {}).ladder;
+assert.deepStrictEqual([Object.keys(oldStore.daily).length, oldStore.practice.done], [0, 0], 'stores from before Word Ladder');
+
 console.log('OK: sync merge tests passed');

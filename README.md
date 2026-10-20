@@ -74,7 +74,11 @@ draws the app icons.
     Biology, Psychology, Computer Science, Law & Government, World Religions,
     Language & Linguistics, Earth Science, Latin & the Ancient World, Medicine &
     Health.
-- **Statistics:**
+- **Statistics** (`#/stats`, the Stats tab): a full page, not a pop-up. At the
+  top: puzzles solved, the day streak, the average time and the last seven
+  days of Dailies and Minis (from saved solves only). Below, in panels that
+  open and close: Crossword records, the No-Hint Club, Arcade records and
+  Achievements (earned and locked, with progress). It covers:
   - totals: puzzles solved and Dailies finished
   - streaks: the daily streak and the longest streak
   - times: the average across all puzzles, the average Daily, and the Daily
@@ -82,7 +86,9 @@ draws the app icons.
   - hints: total hints used, Dailies with no help, and letters and words
     revealed in Dailies
   - your favourite genres and collections
-  - the No-Hint Club
+  - the No-Hint Club and its achievements
+  - Arcade records: Clue Blitz best score, most correct and best combo;
+    Survival highest round and best score; Word Ladder records
 - **The daily streak:** finishing the Daily or the Mini, with or without
   hints or checks, keeps the streak going. Finishing both on the same day
   counts once. The No-Hint streak is separate and counts only Dailies
@@ -343,7 +349,7 @@ Arcade. Colours are CSS variables at the top of `css/styles.css`, with a warm
 
 ## Arcade: Clue Blitz and Survival
 
-Two single-clue games at `#/arcade`, drawing on every genre and collection
+Two single-clue games at `#/arcade` (alongside Word Ladder, below), drawing on every genre and collection
 (20,432 unique answers; no new content or AI during play). The rules and
 scoring are in `js/arcade.js` (pure logic, tested by `tests/arcade.test.js`);
 the screens are the Arcade section of `js/app.js`.
@@ -380,6 +386,43 @@ first clue is on screen. The count is kept in the browser and synced to a
 signed-in account, so a second device doesn't give extra games; a guest who
 clears their browser data could play again. Unlimited Premium play and
 server-side enforcement come later (MASTER_PLAN.md §3.6).
+
+## Arcade: Word Ladder
+
+Change one letter at a time, making a real word at each step, to turn the
+start word into the target (COLD → CORD → CARD → WARD → WARM). At
+`#/arcade/ladder`; rules in `js/ladder.js` (tested by `tests/ladder.test.js`),
+screens in the Word Ladder section of `js/app.js`.
+
+- **Daily Ladder** (`#/arcade/ladder/daily`): the same 4-letter ladder for
+  everyone, chosen from the date (Monday and Tuesday easier, Friday and
+  Saturday longer). The first finish is the day's result; playing it again is
+  allowed and never changes that result.
+- **Practice** (`#/arcade/ladder/practice`): unlimited ladders that get harder
+  as you go, bringing in 5-letter ladders after 15. Recent ones aren't
+  repeated.
+- **Moves and checks:** a step must keep the length, change exactly one
+  letter, be an accepted word and not repeat a word already on the ladder.
+  Rejected words get a friendly message and don't count. Step back, start
+  again or take a hint (the next word on a shortest ladder).
+- **Scoring:** par is the shortest possible ladder. 100 points for matching
+  it, less 10 for each extra move and 20 for each hint, never below 10. Time
+  is recorded but isn't part of the score, and it only runs while the game is
+  on screen.
+- **Records:** Daily results by date (with the Daily Ladder streak), and
+  separate practice records (ladders done, best time, fewest moves, perfect
+  climbs). Kept in `store.ladder`, synced for signed-in players; a game in
+  progress stays on its device.
+- **Words and puzzles:** `puzzles/ladder.json`, made by
+  `tools/build-ladders.py` from the public-domain ENABLE word list, filtered
+  by everyday frequency with the `wordfreq` package. 3,361 four-letter and
+  5,984 five-letter words are accepted as moves. Puzzles, hints and par only
+  use the most common ones (no names, places, brands or offensive words). All
+  915 ladders are checked by breadth-first search. The Daily Ladder for a
+  date depends on the order and number of ladders in the file, so rebuilding
+  it changes past and future Daily Ladders (saved results keep their words).
+- Analytics receive only the mode (`ladder_daily` or `ladder_practice`) and
+  the score.
 
 ## Multiplayer: Help me solve
 
@@ -578,6 +621,8 @@ that `js/words.js` is up to date.
 | `js/featured.js` | The Trending now cards on the home page (edit by hand) |
 | `js/hints.js` | Hint credits and competitive hint points |
 | `js/stats.js` | Streaks, hints used, average time and favourites, from saved solves |
+| `js/arcade.js`, `js/ladder.js` | Arcade rules: Clue Blitz and Survival; Word Ladder |
+| `puzzles/ladder.json`, `tools/build-ladders.py` | Word Ladder words and puzzles, and how they're made |
 | `js/access.js` | `canAccess`: who may play what (everything is free) |
 | `js/share.js` | Challenge links and the shareable result image |
 | `js/analytics.js` | Optional Google Analytics, only with the player's consent |

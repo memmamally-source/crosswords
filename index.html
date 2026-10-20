@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600;1,6..72,700&family=Public+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=35" />
+  <link rel="stylesheet" href="css/styles.css?v=36" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -39,14 +39,14 @@
         <button data-nav="archive"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M4 10h16M9 3v4M15 3v4" /></svg><span>Archive</span></button>
         <button data-nav="genres"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5" /><rect x="13" y="4" width="7" height="7" rx="1.5" /><rect x="4" y="13" width="7" height="7" rx="1.5" /><rect x="13" y="13" width="7" height="7" rx="1.5" /></svg><span>Collections</span></button>
         <button data-nav="arcade"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></svg><span>Arcade</span></button>
-        <button data-action="stats" class="nav-stats"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V4M19 20v-6" /></svg><span>Stats</span></button>
+        <button data-nav="stats" class="nav-stats"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V4M19 20v-6" /></svg><span>Stats</span></button>
       </nav>
       <div class="masthead-tools">
         <button class="icon-btn account-btn" id="account-btn" data-action="account" aria-label="Sign in" title="Sign in" hidden>
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" /></svg>
           <span class="avatar" id="account-avatar" hidden></span>
         </button>
-        <button class="icon-btn" data-action="stats" aria-label="Statistics" title="Statistics">
+        <button class="icon-btn" data-nav="stats" aria-label="Statistics" title="Statistics">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V4M19 20v-6" /></svg>
         </button>
         <div class="menu menu-right">
@@ -108,7 +108,7 @@
           <h2 class="section-title" id="arcade-home-title">Arcade</h2>
           <button class="link-btn" data-nav="arcade">How it works →</button>
         </div>
-        <p class="section-deck">Quick-fire clue games: no grid, just you, the clues and the clock.</p>
+        <p class="section-deck">Quick-fire clue games and Word Ladder: no grid, just you, the words and the clock.</p>
         <div class="arcade-cards" id="arcade-home-cards"></div>
       </section>
 
@@ -156,7 +156,7 @@
       <section class="home-section" aria-labelledby="home-stats-title">
         <div class="section-head">
           <h2 class="section-title" id="home-stats-title">Your stats</h2>
-          <button class="link-btn" data-action="stats">All statistics →</button>
+          <button class="link-btn" data-nav="stats">All statistics →</button>
         </div>
         <div class="home-stats" id="home-stats"></div>
       </section>
@@ -167,8 +167,8 @@
       <section id="arcade-hub" aria-labelledby="arcade-hub-title">
         <div class="page-head">
           <p class="kicker">Crossword Hub Arcade</p>
-          <h1 class="page-title" id="arcade-hub-title">Quick-fire clue games</h1>
-          <p class="section-deck">One clue at a time from our fact-checked clue bank. Free to play: one game of each a day.</p>
+          <h1 class="page-title" id="arcade-hub-title">Arcade games</h1>
+          <p class="section-deck">Quick-fire clue games and a daily word puzzle. All free while we’re testing.</p>
         </div>
         <div class="arcade-cards arcade-cards-hub" id="arcade-hub-cards"></div>
       </section>
@@ -216,6 +216,49 @@
           <summary>Your correct answers</summary>
           <ol id="arcade-recap-list"></ol>
         </details>
+      </section>
+
+      <section class="ladder-home" id="ladder-home" aria-labelledby="ladder-home-title" hidden>
+        <button class="link-btn arcade-back" data-nav="arcade">← Arcade</button>
+        <span class="arcade-badge" id="ladder-home-badge" aria-hidden="true"></span>
+        <h1 id="ladder-home-title">Word Ladder</h1>
+        <p class="arcade-tagline">Change one letter at a time to climb from the first word to the last.</p>
+        <div class="ladder-modes" id="ladder-modes"></div>
+        <ul class="arcade-rules">
+          <li>Each step changes exactly one letter and makes a real English word.</li>
+          <li>Par is the shortest ladder there is. Match it for full marks: 100 points, less 10 for each extra step and 20 for each hint.</li>
+          <li>Stuck? A hint suggests a good next word. You can also step back or start again.</li>
+          <li>The Daily Ladder is the same for everyone and changes at midnight South African time. Practice as much as you like.</li>
+        </ul>
+      </section>
+
+      <section class="ladder-play" id="ladder-play" aria-labelledby="ladder-play-title" hidden>
+        <div class="ladder-top">
+          <button class="link-btn" data-open="#/arcade/ladder">← Word Ladder</button>
+          <span class="ladder-clock" id="ladder-clock" aria-label="Time">0:00</span>
+        </div>
+        <h1 class="ladder-title" id="ladder-play-title"></h1>
+        <p class="ladder-meta" id="ladder-meta"></p>
+        <ol class="ladder-rungs" id="ladder-rungs" aria-label="Your ladder"></ol>
+        <p class="arcade-feedback" id="ladder-feedback" role="status" aria-live="assertive"></p>
+        <div class="ladder-controls">
+          <button class="btn" data-action="ladder-undo" id="ladder-undo">Step back</button>
+          <button class="btn" data-action="ladder-hint" id="ladder-hint">Hint</button>
+          <button class="btn btn-primary" data-action="ladder-submit" id="ladder-submit">Submit</button>
+        </div>
+        <button class="link-btn ladder-restart" data-action="ladder-restart">Start again from the top</button>
+        <div class="arcade-keys" id="ladder-keys" role="group" aria-label="Letter keys"></div>
+      </section>
+
+      <section class="ladder-done" id="ladder-done" aria-labelledby="ladder-done-title" hidden>
+        <div class="ladder-cheer" aria-hidden="true"></div>
+        <p class="kicker" id="ladder-done-kicker"></p>
+        <h1 id="ladder-done-title"></h1>
+        <p class="arcade-score" id="ladder-done-score"></p>
+        <p class="ladder-done-note" id="ladder-done-note"></p>
+        <div class="win-stats" id="ladder-done-stats"></div>
+        <div class="arcade-result-actions" id="ladder-done-actions"></div>
+        <ol class="ladder-rungs ladder-final" id="ladder-done-rungs" aria-label="Your finished ladder"></ol>
       </section>
     </div>
 
@@ -397,6 +440,53 @@
         </aside>
       </div>
     </div>
+    <!-- ================= Statistics ================= -->
+    <div id="stats-view" class="view" hidden>
+      <div class="page-head">
+        <p class="kicker">Your crossword record</p>
+        <h1 class="page-title">Statistics</h1>
+      </div>
+      <section class="stats-glance" aria-label="At a glance">
+        <div class="stats-primary" id="stats-primary"></div>
+        <div class="week-track">
+          <h2 class="week-track-title" id="week-track-title">The last seven days</h2>
+          <ol class="week-days" id="week-days" aria-labelledby="week-track-title"></ol>
+          <p class="week-note" id="week-note"></p>
+        </div>
+      </section>
+
+      <details class="stats-panel" id="panel-records" open>
+        <summary><span class="panel-title">Crossword records</span><span class="panel-sum" id="records-sum"></span></summary>
+        <div class="panel-body">
+          <div class="stat-tiles" id="stat-tiles"></div>
+          <h3>The Daily by day of the week</h3>
+          <p class="panel-note">Average time for Dailies finished with no help.</p>
+          <div class="weekday-table" id="weekday-table"></div>
+          <h3>Your favourites</h3>
+          <ol class="fav-list" id="fav-list"></ol>
+        </div>
+      </details>
+
+      <details class="stats-panel" id="panel-club">
+        <summary><span class="panel-title">The No-Hint Club</span><span class="panel-sum" id="club-sum"></span></summary>
+        <div class="panel-body">
+          <p class="club-lede">Finish without revealing or checking anything to count. Fewer hint points is better.</p>
+          <div class="stat-tiles" id="club-tiles"></div>
+        </div>
+      </details>
+
+      <details class="stats-panel" id="panel-arcade">
+        <summary><span class="panel-title">Arcade records</span><span class="panel-sum" id="arcade-sum"></span></summary>
+        <div class="panel-body arcade-records" id="arcade-records"></div>
+      </details>
+
+      <details class="stats-panel" id="panel-badges">
+        <summary><span class="panel-title">Achievements</span><span class="panel-sum" id="badges-sum"></span></summary>
+        <div class="panel-body">
+          <ul class="badges" id="club-badges"></ul>
+        </div>
+      </details>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -519,22 +609,6 @@
     <button class="dialog-close" data-action="close-dialog" aria-label="Close">✕</button>
   </dialog>
 
-  <dialog id="stats-dialog" aria-labelledby="stats-title">
-    <div class="stats">
-      <p class="kicker">Your record</p>
-      <h2 id="stats-title">Statistics</h2>
-      <div class="stat-tiles" id="stat-tiles"></div>
-      <h3>The No-Hint Club</h3>
-      <p class="club-lede">Finish without revealing or checking anything to count. Fewer hint points is better.</p>
-      <div class="stat-tiles" id="club-tiles"></div>
-      <ul class="badges" id="club-badges"></ul>
-      <h3>Your favourites</h3>
-      <ol class="fav-list" id="fav-list"></ol>
-      <h3>The Daily by day of the week</h3>
-      <div class="weekday-table" id="weekday-table"></div>
-    </div>
-    <button class="dialog-close" data-action="close-dialog" aria-label="Close">✕</button>
-  </dialog>
 
   <dialog id="account-dialog" aria-labelledby="account-title">
     <div class="account">
@@ -570,24 +644,25 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=35"></script>
-  <script src="js/words.js?v=35"></script>
-  <script src="js/collections.js?v=35"></script>
-  <script src="js/genres.js?v=35"></script>
-  <script src="js/sync.js?v=35"></script>
-  <script src="js/featured.js?v=35"></script>
-  <script src="js/hints.js?v=35"></script>
-  <script src="js/stats.js?v=35"></script>
-  <script src="js/access.js?v=35"></script>
-  <script src="js/share.js?v=35"></script>
-  <script src="js/gifts.js?v=35"></script>
-  <script src="js/arcade.js?v=35"></script>
-  <script src="js/rooms.js?v=35"></script>
-  <script src="js/firebase-config.js?v=35"></script>
-  <script src="js/analytics.js?v=35"></script>
-  <script src="js/app.js?v=35"></script>
-  <script type="module" src="js/firebase.js?v=35"></script>
-  <script type="module" src="js/account.js?v=35"></script>
-  <script type="module" src="js/room.js?v=35"></script>
+  <script src="js/generator.js?v=36"></script>
+  <script src="js/words.js?v=36"></script>
+  <script src="js/collections.js?v=36"></script>
+  <script src="js/genres.js?v=36"></script>
+  <script src="js/ladder.js?v=36"></script>
+  <script src="js/sync.js?v=36"></script>
+  <script src="js/featured.js?v=36"></script>
+  <script src="js/hints.js?v=36"></script>
+  <script src="js/stats.js?v=36"></script>
+  <script src="js/access.js?v=36"></script>
+  <script src="js/share.js?v=36"></script>
+  <script src="js/gifts.js?v=36"></script>
+  <script src="js/arcade.js?v=36"></script>
+  <script src="js/rooms.js?v=36"></script>
+  <script src="js/firebase-config.js?v=36"></script>
+  <script src="js/analytics.js?v=36"></script>
+  <script src="js/app.js?v=36"></script>
+  <script type="module" src="js/firebase.js?v=36"></script>
+  <script type="module" src="js/account.js?v=36"></script>
+  <script type="module" src="js/room.js?v=36"></script>
 </body>
 </html>

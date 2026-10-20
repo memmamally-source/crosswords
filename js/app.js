@@ -1,4 +1,4 @@
-/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, hintTotal, CrosswordStats, canAccess, CrosswordShare, HubAnalytics, CrosswordRooms, CrosswordGifts, CrosswordArcade */
+/* global CrosswordGenerator, CrosswordSync, GENRES, CATEGORIES, DIFFICULTIES, THEMED_LEVELS, themedBank, levelsFor, bankFor, weekOf, brutalBuild, DAILY_BANK, DAILY_SCHEDULE, scheduleFor, MINI_BANK, MINI_CONFIG, dailyBuild, miniBuild, FEATURED, hintTotal, CrosswordStats, canAccess, CrosswordShare, HubAnalytics, CrosswordRooms, CrosswordGifts, CrosswordArcade, CrosswordLadder */
 (function () {
   'use strict';
 
@@ -821,15 +821,44 @@
   ];
   const earnedBadges = (r) => BADGES.filter((b) => b.value(r) >= b.goal).map((b) => b.name);
 
-  // ---------- Stats ----------
-  function openStats() {
+  // ---------- Statistics page (#/stats) ----------
+  const tile = ([v, l]) => `<div><b>${v}</b><span>${esc(l)}</span></div>`;
+  function renderStats() {
+    const today = todayKey();
     const dailies = Object.entries(store.solves).filter(([k]) => k.startsWith('daily:'));
     const clean = dailies.filter(([, s]) => s.clean);
     const { current, longest } = dailyStreaks();
     const avg = clean.length ? clean.reduce((t, [, s]) => t + s.time, 0) / clean.length : 0;
     const all = CrosswordStats.totals(store.solves);
+    const solved = store.solvedCount || 0;
+
+    // At a glance: the three that matter most.
+    $('#stats-primary').innerHTML = [
+      [solved.toLocaleString(), 'Puzzles solved', ''],
+      [current, 'Day streak', current ? `Longest: ${longest}` : 'Finish today’s Daily or Mini'],
+      [all.averageTime == null ? '—' : formatTime(all.averageTime), 'Average time', all.averageTime == null ? 'No timed solves yet' : 'All puzzles'],
+    ].map(([v, l, note]) => `<div class="stat-card"><b>${v}</b><span>${esc(l)}</span>${note ? `<small>${esc(note)}</small>` : ''}</div>`).join('');
+
+    // The last seven days of Dailies and Minis, from saved solves only.
+    const days = Array.from({ length: 7 }, (_, i) => addDays(today, i - 6));
+    const anySolve = Object.keys(store.solves).some((k) => k.startsWith('daily:') || k.startsWith('mini:'));
+    $('#week-days').innerHTML = days.map((d) => {
+      const daily = !!store.solves[`daily:${d}`];
+      const mini = !!store.solves[`mini:${d}`];
+      const date = parseKey(d);
+      const label = `${longDate(d)}: ${daily && mini ? 'Daily and Mini finished' : daily ? 'Daily finished' : mini ? 'Mini finished' : d < LAUNCH ? 'before launch' : 'not finished'}`;
+      return `<li class="week-day${daily || mini ? ' done' : ''}${d === today ? ' today' : ''}" aria-label="${esc(label)}">
+        <span class="wd" aria-hidden="true">${date.toLocaleDateString('en-US', { weekday: 'short' }).slice(0, 2)}</span>
+        <span class="dd" aria-hidden="true">${date.getDate()}</span>
+        <span class="marks" aria-hidden="true"><i class="m-daily${daily ? ' on' : ''}" title="Daily"></i><i class="m-mini${mini ? ' on' : ''}" title="Mini"></i></span>
+      </li>`;
+    }).join('');
+    $('#week-note').textContent = anySolve
+      ? 'Large square: the Daily. Small square: the Mini. Days end at midnight South African time.'
+      : 'Nothing here yet: finish a Daily or Mini and it will show up.';
+
     $('#stat-tiles').innerHTML = [
-      [store.solvedCount || 0, 'Puzzles solved'],
+      [solved, 'Puzzles solved'],
       [dailies.length, 'Dailies finished'],
       [current, 'Current streak'],
       [longest, 'Longest streak'],
@@ -839,26 +868,8 @@
       [clean.length, 'Dailies with no help'],
       [dailies.reduce((t, [, s]) => t + (s.letters || 0), 0), 'Letters revealed in Dailies'],
       [dailies.reduce((t, [, s]) => t + (s.words || 0), 0), 'Words revealed in Dailies'],
-    ].map(([v, l]) => `<div><b>${v}</b><span>${l}</span></div>`).join('');
-
-    const club = noHintRecord();
-    $('#club-tiles').innerHTML = [
-      [club.total, 'No-Hint solves'],
-      [club.current, 'No-Hint Daily streak'],
-      [club.longest, 'Longest No-Hint streak'],
-      [club.avgPoints == null ? '—' : club.avgPoints.toFixed(1), 'Average hint points'],
-      [club.credits, 'Hint credits used'],
-    ].map(([v, l]) => `<div><b>${v}</b><span>${l}</span></div>`).join('');
-    $('#club-badges').innerHTML = BADGES.map((b) => {
-      const got = b.value(club) >= b.goal;
-      return `<li class="badge${got ? ' earned' : ''}">${icon(got ? 'star' : 'lock')}<span><b>${esc(b.name)}</b>
-        <small>${got ? 'Earned' : `${b.value(club)} of ${b.goal} · ${esc(b.need)}`}</small></span></li>`;
-    }).join('');
-
-    const favs = CrosswordStats.favourites(store.solves).filter((f) => genreById(f.id));
-    $('#fav-list').innerHTML = favs.length
-      ? favs.map((f) => `<li><button class="link-btn" data-genre="${esc(f.id)}">${esc(genreById(f.id).name)}</button><span>${plural(f.count, 'puzzle')}</span></li>`).join('')
-      : '<li class="empty">Finish a few genre or collection puzzles to see your favourites here.</li>';
+    ].map(tile).join('');
+    $('#records-sum').textContent = `${dailies.length} ${dailies.length === 1 ? 'Daily' : 'Dailies'} · best streak ${longest}`;
 
     const order = [1, 2, 3, 4, 5, 6, 0];
     const byDay = order.map((d) => {
@@ -872,7 +883,71 @@
         <span class="bar"><i style="width:${(x.avg / max) * 100}%"></i></span>
         <span class="t">${x.n ? formatTime(x.avg) : '—'}</span>
       </div>`).join('');
-    $('#stats-dialog').showModal();
+    const favs = CrosswordStats.favourites(store.solves).filter((f) => genreById(f.id));
+    $('#fav-list').innerHTML = favs.length
+      ? favs.map((f) => `<li><button class="link-btn" data-genre="${esc(f.id)}">${esc(genreById(f.id).name)}</button><span>${plural(f.count, 'puzzle')}</span></li>`).join('')
+      : '<li class="empty">Finish a few genre or collection puzzles to see your favourites here.</li>';
+
+    const club = noHintRecord();
+    $('#club-tiles').innerHTML = [
+      [club.total, 'No-Hint solves'],
+      [club.current, 'No-Hint Daily streak'],
+      [club.longest, 'Longest No-Hint streak'],
+      [club.avgPoints == null ? '—' : club.avgPoints.toFixed(1), 'Average hint points'],
+      [club.credits, 'Hint credits used'],
+    ].map(tile).join('');
+    $('#club-sum').textContent = plural(club.total, 'No-Hint solve');
+
+    renderArcadeRecords();
+
+    const earned = BADGES.filter((b) => b.value(club) >= b.goal).length;
+    $('#badges-sum').textContent = `${earned} of ${BADGES.length} earned`;
+    $('#club-badges').innerHTML = BADGES.map((b) => {
+      const got = b.value(club) >= b.goal;
+      const have = Math.min(b.value(club), b.goal);
+      return `<li class="badge${got ? ' earned' : ''}">${icon(got ? 'star' : 'lock')}<span><b>${esc(b.name)}</b>
+        <small>${got ? `Earned · ${esc(b.need)}` : `${have} of ${b.goal} · ${esc(b.need)}`}</small>
+        ${got ? '' : `<span class="badge-bar" aria-hidden="true"><i style="width:${(100 * have) / b.goal}%"></i></span>`}</span></li>`;
+    }).join('');
+  }
+
+  // Arcade records: only what each game keeps.
+  function renderArcadeRecords() {
+    const best = arcadeData().best;
+    const lad = CrosswordLadder.summary(ladderData(), todayKey());
+    const ms = (t) => (t == null ? '—' : formatTime(t / 1000));
+    const group = (name, cls, tiles) => `<div class="arcade-record ${cls}"><h3>${esc(name)}</h3><div class="stat-tiles">${tiles.map(tile).join('')}</div></div>`;
+    $('#arcade-records').innerHTML = [
+      group('Clue Blitz', 'rec-blitz', [
+        [best.blitz ? best.blitz.score.toLocaleString() : '—', 'Best score'],
+        [best.blitz ? best.blitz.correct : '—', 'Most correct'],
+        [best.blitz && best.blitz.bestCombo != null ? `×${best.blitz.bestCombo}` : '—', 'Best combo'],
+      ]),
+      group('Survival', 'rec-survival', [
+        [best.survival ? best.survival.round : '—', 'Highest round'],
+        [best.survival ? best.survival.score.toLocaleString() : '—', 'Best score'],
+      ]),
+      group('Word Ladder', 'rec-ladder', [
+        [lad.completed, 'Ladders completed'],
+        [lad.dailyDone, 'Daily Ladders'],
+        [lad.streak, 'Daily Ladder streak'],
+        [lad.longest, 'Longest Daily streak'],
+        [ms(lad.dailyBestTime), 'Best Daily time'],
+        [lad.dailyFewest == null ? '—' : lad.dailyFewest, 'Fewest moves, Daily'],
+        [lad.practiceDone, 'Practice ladders'],
+        [ms(lad.practiceBestTime), 'Best practice time'],
+        [lad.practiceFewest == null ? '—' : lad.practiceFewest, 'Fewest moves, practice'],
+        [lad.dailyPar + lad.practicePerfect, 'Solved in par, no hints'],
+      ]),
+    ].join('');
+    const parts = [best.blitz && `Blitz ${best.blitz.score.toLocaleString()}`, best.survival && `Survival round ${best.survival.round}`, lad.completed && plural(lad.completed, 'ladder')].filter(Boolean);
+    $('#arcade-sum').textContent = parts.join(' · ') || 'No games yet';
+  }
+
+  function openStatsPage() {
+    showView('stats');
+    renderStats();
+    window.scrollTo(0, 0);
   }
 
   // ---------- Game state ----------
@@ -2303,7 +2378,7 @@
   // ---------- Keyboard input ----------
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeMenus();
-    if (!game || $('#game-view').hidden || $('#win-dialog').open || $('#stats-dialog').open) return;
+    if (!game || $('#game-view').hidden || $('#win-dialog').open) return;
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     const fromTyping = e.target === typeInput;
     if (!fromTyping && e.target.matches && e.target.matches('input, textarea')) return;
@@ -2409,7 +2484,7 @@
     if (nav) {
       e.preventDefault();
       closeDialogs();
-      navigate({ home: '#/', archive: '#/archive', genres: '#/genres', arcade: '#/arcade' }[nav.dataset.nav]);
+      navigate({ home: '#/', archive: '#/archive', genres: '#/genres', arcade: '#/arcade', stats: '#/stats' }[nav.dataset.nav]);
       return;
     }
     const genreCard = e.target.closest('[data-genre]');
@@ -2455,6 +2530,13 @@
       case 'arcade-submit': arcadeSubmit(); return;
       case 'arcade-skip': arcadeSkip(); return;
       case 'arcade-share': shareArcade(); return;
+      case 'ladder-submit': ladderSubmit(); return;
+      case 'ladder-undo': ladderUndo(); return;
+      case 'ladder-hint': ladderHint(); return;
+      case 'ladder-restart': ladderRestart(); return;
+      case 'ladder-replay': ladderAgain('replay'); return;
+      case 'ladder-next': ladderAgain('practice'); return;
+      case 'ladder-share': shareLadder(); return;
       case 'gift-add': addGiftRow(); return;
       case 'gift-remove': removeGiftRow(actionEl.closest('.gift-row')); return;
       case 'gift-clear': clearGift(); return;
@@ -2467,7 +2549,7 @@
       case 'privacy': closeMenus(); $('#privacy-dialog').showModal(); return;
       case 'consent-yes': setAnalytics(true); return;
       case 'consent-no': setAnalytics(false); return;
-      case 'stats': openStats(); return;
+      case 'stats': navigate('#/stats'); return;
       case 'install': promptInstall(); return;
       case 'install-dismiss': dismissInstall(); return;
       case 'month-prev':
@@ -2602,7 +2684,7 @@
 
   function showView(name) {
     if (name !== 'game') typeInput.blur();
-    for (const v of ['home', 'archive', 'game', 'gift', 'arcade']) {
+    for (const v of ['home', 'archive', 'game', 'gift', 'arcade', 'stats']) {
       const el = $(`#${v}-view`);
       const showing = v === name;
       if (showing && el.hidden && !reduceMotion.matches) {
@@ -2621,8 +2703,11 @@
     const navName = name === 'game' ? null : name;
     const navBtn = navName && $(`.masthead-nav [data-nav="${navName}"]`);
     if (navBtn) navBtn.setAttribute('aria-current', 'page');
-    if (name !== 'game') document.title = { gift: 'Gift a crossword · Crossword Hub', arcade: 'Arcade · Crossword Hub' }[name] || 'Crossword Hub';
-    if (name !== 'arcade') leaveArcade();
+    if (name !== 'game') document.title = { gift: 'Gift a crossword · Crossword Hub', arcade: 'Arcade · Crossword Hub', stats: 'Statistics · Crossword Hub' }[name] || 'Crossword Hub';
+    if (name !== 'arcade') {
+      leaveArcade();
+      leaveLadder();
+    }
     offerConsent(name);
   }
 
@@ -2682,7 +2767,7 @@
     }
     if (parts[0] === 'arcade') {
       game = null;
-      openArcade(parts[1]);
+      openArcade(parts[1], parts[2]);
       return;
     }
     if (parts[0] === 'room') {
@@ -2716,6 +2801,10 @@
       }
     }
     game = null;
+    if (parts[0] === 'stats') {
+      openStatsPage();
+      return;
+    }
     if (parts[0] === 'archive') {
       if (parts[1] === 'daily' || parts[1] === 'mini') archive.kind = parts[1];
       showView('archive');
@@ -2798,39 +2887,66 @@
       ? `Personal best: ${best.score.toLocaleString()} points (${plural(best.correct, 'correct answer')}).`
       : `Personal best: round ${best.round}, ${best.score.toLocaleString()} points.`;
   }
+  // The Arcade cards: Clue Blitz, Survival and Word Ladder, each with the
+  // player's progress.
+  function arcadeCardStatus(mode) {
+    if (mode === 'ladder') {
+      const rec = ladderData();
+      const done = rec.daily[todayKey()];
+      const sum = CrosswordLadder.summary(rec, todayKey());
+      const live = rec.games.daily && rec.games.daily.day === todayKey() && !rec.games.daily.done;
+      return {
+        line: done ? `Today’s ladder done in ${plural(done.moves, 'move')}${sum.streak > 1 ? ` · ${sum.streak}-day streak` : ''}`
+          : live ? `Today’s ladder in progress · ${plural(rec.games.daily.steps.length - 1, 'move')}`
+          : sum.completed ? `Today’s ladder is ready · ${plural(sum.completed, 'ladder')} climbed` : 'A new Daily Ladder every day · practise as much as you like',
+        live, go: done ? 'Practise' : live ? 'Resume' : 'Play', done: false,
+      };
+    }
+    const runs = arcadeData().runs;
+    const live = runs[mode] && !runs[mode].finished;
+    const played = !live && !arcadeAllowed(mode);
+    const best = arcadeData().best[mode];
+    const bestLine = best ? (mode === 'blitz' ? `Best: ${best.score.toLocaleString()} points` : `Best: round ${best.round}`) : 'No personal best yet';
+    return {
+      line: live ? (mode === 'survival' ? `Run in progress: round ${runs.survival.round}` : 'Run in progress')
+        : played ? `Played today · next game in ${untilNextGame()}`
+        : `${bestLine} · one game a day`,
+      live, go: live ? 'Resume' : played ? 'Done' : 'Play', done: played,
+    };
+  }
   function renderArcadeCards(el) {
     if (!el) return;
-    const runs = arcadeData().runs;
-    el.innerHTML = Object.entries(ARCADE_MODES).map(([mode, m]) => {
-      const live = runs[mode] && !runs[mode].finished;
-      const played = !live && !arcadeAllowed(mode);
-      const status = live
-        ? (mode === 'survival' ? `Run in progress: round ${runs.survival.round}` : 'Run in progress')
-        : played
-          ? `Played today · next game in ${untilNextGame()}`
-          : arcadeBestLine(mode).replace('Personal best: ', 'Best: ').replace('No personal best yet.', 'Free to play: one game a day');
+    el.innerHTML = ['blitz', 'survival', 'ladder'].map((mode) => {
+      const m = mode === 'ladder' ? LADDER_CARD : ARCADE_MODES[mode];
+      const st = arcadeCardStatus(mode);
       return `<button class="arcade-mode arcade-${mode}" data-open="#/arcade/${mode}">
         <span class="arcade-art">${m.art}</span>
         <span class="arcade-mode-copy">
           <span class="arcade-mode-name">${esc(m.name)}</span>
           <span class="arcade-mode-tag">${esc(m.tagline)}</span>
-          <span class="arcade-mode-best${live ? ' live' : ''}">${esc(status)}</span>
+          <span class="arcade-mode-best${st.live ? ' live' : ''}">${esc(st.line)}</span>
         </span>
-        <span class="arcade-mode-go${played ? ' done' : ''}" aria-hidden="true">${live ? 'Resume' : played ? 'Done' : 'Play'}</span>
+        <span class="arcade-mode-go${st.done ? ' done' : ''}" aria-hidden="true">${st.go}</span>
       </button>`;
     }).join('');
   }
 
   function arcadeScreen(which) {
     for (const id of ['hub', 'start', 'play', 'results']) $(`#arcade-${id}`).hidden = id !== which;
-    document.body.classList.toggle('arcade-playing', which === 'play');
+    for (const id of ['home', 'play', 'done']) $(`#ladder-${id}`).hidden = `ladder-${id}` !== which;
+    document.body.classList.toggle('arcade-playing', which === 'play' || which === 'ladder-play');
+    if (which !== 'ladder-play') leaveLadder();
   }
 
   // #/arcade, #/arcade/blitz and #/arcade/survival. A run in progress is
   // picked up where it was; one that ended while away shows its result.
-  function openArcade(mode) {
+  function openArcade(mode, sub) {
     showView('arcade');
     window.scrollTo(0, 0);
+    if (mode === 'ladder') {
+      openLadder(sub);
+      return;
+    }
     if (!ARCADE_MODES[mode]) {
       if (mode) replaceRoute('#/arcade');
       renderArcadeCards($('#arcade-hub-cards'));
@@ -3154,6 +3270,338 @@
     e.preventDefault();
   });
 
+  // ---------- Arcade: Word Ladder ----------
+  // Change one letter at a time from the start word to the target (rules in
+  // js/ladder.js). #/arcade/ladder, #/arcade/ladder/daily and
+  // #/arcade/ladder/practice. Games are saved after every move; the clock
+  // only runs while the game is on screen.
+  const Ladder = window.CrosswordLadder;
+  const LADDER_CARD = {
+    name: 'Word Ladder',
+    tagline: 'Change one letter at a time to reach the target word.',
+    // Ink drawing: a ladder of letter tiles.
+    art: '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 4v56M50 4v56" stroke="#2a241c" stroke-width="3" stroke-linecap="round"/><g stroke="#2a241c" stroke-width="2.2"><rect x="9" y="7" width="15" height="15" rx="2" fill="#fbf5e6"/><rect x="25" y="7" width="15" height="15" rx="2" fill="#fbf5e6"/><rect x="25" y="25" width="15" height="15" rx="2" fill="#e3b64c"/><rect x="41" y="25" width="15" height="15" rx="2" fill="#fbf5e6"/><rect x="9" y="43" width="15" height="15" rx="2" fill="#fbf5e6"/><rect x="25" y="43" width="15" height="15" rx="2" fill="#7fa98a"/></g><g fill="#2a241c" font-family="Georgia,serif" font-weight="700" font-size="11" text-anchor="middle"><text x="16.5" y="18.5">C</text><text x="32.5" y="18.5">O</text><text x="32.5" y="36.5">A</text><text x="48.5" y="36.5">R</text><text x="16.5" y="54.5">W</text><text x="32.5" y="54.5">A</text></g></svg>',
+  };
+  const LADDER_REASON = {
+    empty: 'Type a word first.',
+    length: 'Use every box: the word length stays the same.',
+    same: 'That’s the word you’re on: change one letter.',
+    letters: 'Change just one letter at a time.',
+    word: 'We don’t know that word. Try another.',
+    used: 'You’ve used that word already on this ladder.',
+  };
+  let ladderLib = null;
+  let ladderLoad = null;
+  function loadLadder() {
+    if (ladderLib) return Promise.resolve(ladderLib);
+    if (!ladderLoad) {
+      ladderLoad = fetch('puzzles/ladder.json')
+        .then((res) => (res.ok ? res.json() : Promise.reject(new Error('missing'))))
+        .then((data) => (ladderLib = Ladder.parse(data)))
+        .catch((e) => {
+          ladderLoad = null; // try again next time (e.g. offline)
+          throw e;
+        });
+    }
+    return ladderLoad;
+  }
+  const ladderData = () => (store.ladder = Ladder.record(store.ladder));
+  let ladder = null; // the game on screen: { game, guess, timer, busy }
+  const ladderPlaying = () => !!(ladder && ladder.game && !$('#ladder-play').hidden);
+  let ladderLast = null; // the last finished game, for the done screen
+
+  async function openLadder(sub) {
+    if (!ladderLib) {
+      $('#ladder-modes').innerHTML = '<p class="ladder-loading">Setting out the letter tiles…</p>';
+      $('#ladder-home-badge').innerHTML = LADDER_CARD.art;
+      arcadeScreen('ladder-home');
+    }
+    try {
+      await loadLadder();
+    } catch (e) {
+      arcadeScreen('ladder-home');
+      $('#ladder-modes').innerHTML = '<p class="arcade-next">Word Ladder couldn’t load. Check your connection and try again.</p>';
+      return;
+    }
+    if (!currentRoute.startsWith('#/arcade/ladder')) return; // navigated away meanwhile
+    const rec = ladderData();
+    const today = todayKey();
+    if (sub === 'daily' || sub === 'practice') {
+      let saved = rec.games[sub];
+      if (saved && (saved.done || (sub === 'daily' && saved.day !== today) || !Ladder.ladderById(ladderLib, saved.id))) {
+        delete rec.games[sub];
+        saved = null;
+      }
+      if (saved) return playLadder(saved, true);
+      if (sub === 'daily') {
+        const replay = !!rec.daily[today];
+        return playLadder(Ladder.newGame(Ladder.dailyLadder(ladderLib, today), 'daily', { day: today, now: now(), replay }), false);
+      }
+      return playLadder(Ladder.newGame(Ladder.practiceLadder(ladderLib, rec.practice.done, rec.practice.recent), 'practice', { day: today, now: now() }), false);
+    }
+    if (sub) replaceRoute('#/arcade/ladder');
+    showLadderHome();
+  }
+
+  function showLadderHome() {
+    const rec = ladderData();
+    const today = todayKey();
+    const daily = Ladder.dailyLadder(ladderLib, today);
+    const done = rec.daily[today];
+    const sum = Ladder.summary(rec, today);
+    const live = (mode) => rec.games[mode] && !rec.games[mode].done && (mode !== 'daily' || rec.games.daily.day === today);
+    const nextLevel = Ladder.LEVEL_LABEL[Ladder.practiceLevel(rec.practice.done)];
+    $('#ladder-home-badge').innerHTML = LADDER_CARD.art;
+    $('#ladder-modes').innerHTML = `
+      <button class="ladder-mode ladder-daily" data-open="#/arcade/ladder/daily">
+        <span class="kicker">Daily Ladder · ${esc(shortDate(today).replace(/, \d{4}$/, ''))}</span>
+        <span class="ladder-mode-words">${esc(daily.from.toUpperCase())} <span aria-hidden="true">→</span><span class="visually-hidden">to</span> ${esc(daily.to.toUpperCase())}</span>
+        <span class="ladder-mode-line">${done
+          ? `Done in ${plural(done.moves, 'move')} (par ${done.par}), ${formatTime(done.time / 1000)} · ${done.score} points`
+          : live('daily') ? `In progress · ${plural(rec.games.daily.steps.length - 1, 'move')} so far` : `${Ladder.LEVEL_LABEL[daily.level]} · par ${daily.par} · same for everyone today`}</span>
+        <span class="ladder-mode-line">${sum.streak ? `Daily Ladder streak: ${sum.streak}` : 'Start a Daily Ladder streak today'}</span>
+        <span class="arcade-mode-go" aria-hidden="true">${done ? 'Play again' : live('daily') ? 'Resume' : 'Play'}</span>
+      </button>
+      <button class="ladder-mode ladder-practice" data-open="#/arcade/ladder/practice">
+        <span class="kicker">Practice</span>
+        <span class="ladder-mode-words">Unlimited ladders</span>
+        <span class="ladder-mode-line">${live('practice') ? 'A ladder in progress' : `Next up: ${esc(nextLevel)}`} · ${plural(rec.practice.done, 'ladder')} climbed</span>
+        <span class="ladder-mode-line">${rec.practice.bestTime != null ? `Best time ${formatTime(rec.practice.bestTime / 1000)} · fewest moves ${rec.practice.fewest}` : 'Gets harder as you go'}</span>
+        <span class="arcade-mode-go" aria-hidden="true">${live('practice') ? 'Resume' : 'Play'}</span>
+      </button>`;
+    arcadeScreen('ladder-home');
+  }
+
+  function playLadder(game, resumed) {
+    leaveLadder();
+    const rec = ladderData();
+    rec.games[game.mode] = game;
+    Ladder.resume(game, now());
+    ladder = { game, guess: '', busy: false, timer: setInterval(ladderTick, 500) };
+    saveStore();
+    if (!resumed) analytics.track('arcade_start', { mode: `ladder_${game.mode}` });
+    $('#ladder-keys').hidden = !(touchScreen.matches || navigator.maxTouchPoints > 0);
+    $('#ladder-play-title').textContent = game.mode === 'daily' ? (game.replay ? 'Daily Ladder (replay)' : 'Daily Ladder') : 'Practice ladder';
+    arcadeScreen('ladder-play');
+    window.scrollTo(0, 0);
+    ladderFeedback(resumed ? 'Welcome back: carry on from where you were.' : `Change one letter at a time to turn ${game.from.toUpperCase()} into ${game.to.toUpperCase()}.`, 'info');
+    renderLadder();
+  }
+  // Leaving the ladder screen: the game stays saved, and its clock stops.
+  function leaveLadder() {
+    if (!ladder) return;
+    clearInterval(ladder.timer);
+    if (ladder.game && !ladder.game.done) {
+      Ladder.pause(ladder.game, now());
+      saveStore();
+    }
+    ladder = null;
+  }
+  document.addEventListener('visibilitychange', () => {
+    if (!ladderPlaying()) return;
+    if (document.hidden) Ladder.pause(ladder.game, now());
+    else Ladder.resume(ladder.game, now());
+    saveStore();
+  });
+  function ladderTick() {
+    if (!ladderPlaying()) return;
+    $('#ladder-clock').textContent = formatTime(Ladder.timeOf(ladder.game, now()) / 1000);
+  }
+
+  // The ladder: every word so far (the changed letter marked), the row being
+  // typed, then the target at the foot.
+  const rung = (word, prev, cls = '') => `<li class="rung ${cls}"><span class="rung-word">${word.split('').map((ch, i) =>
+    `<span class="tile${prev && prev[i] !== ch ? ' changed' : ''}">${esc(ch.toUpperCase())}</span>`).join('')}</span></li>`;
+  function renderLadder() {
+    const { game, guess } = ladder;
+    if (game.done) {
+      $('#ladder-rungs').innerHTML = game.steps.map((w, i) => rung(w, game.steps[i - 1], i === 0 ? 'start' : i === game.steps.length - 1 ? 'target' : '')).join('');
+      return;
+    }
+    const cur = Ladder.current(game);
+    const steps = game.steps.map((w, i) => rung(w, game.steps[i - 1], i === 0 ? 'start' : '')).join('');
+    const entry = `<li class="rung entry" aria-label="Your next word: ${esc(guess.toUpperCase() || 'empty')}"><span class="rung-word">${cur.split('').map((ch, i) =>
+      `<span class="tile entry-tile${i === guess.length ? ' current' : ''}${guess[i] ? ' typed' : ''}">${esc((guess[i] || ch).toUpperCase())}</span>`).join('')}</span></li>`;
+    const gap = Math.max(0, game.par - Ladder.moves(game) - 1);
+    $('#ladder-rungs').innerHTML = steps + entry
+      + (gap ? `<li class="rung gap" aria-hidden="true"><span>${'· '.repeat(Math.min(gap, 5)).trim()}</span></li>` : '')
+      + rung(game.to, null, 'target').replace('class="rung target"', 'class="rung target" aria-label="Target"');
+    $('#ladder-meta').innerHTML = `<span>${esc(Ladder.LEVEL_LABEL[game.level])}</span><span>Moves <b>${Ladder.moves(game)}</b></span><span>Par <b>${game.par}</b></span>${game.hints ? `<span>Hints <b>${game.hints}</b></span>` : ''}`;
+    $('#ladder-undo').disabled = game.steps.length < 2 && !guess;
+    $('#ladder-undo').textContent = guess ? 'Clear' : 'Step back';
+    ladderTick();
+    fitLadderTiles();
+  }
+  function fitLadderTiles() {
+    const el = $('#ladder-rungs');
+    if (!el || !ladder) return;
+    const n = ladder.game.from.length;
+    const size = Math.max(34, Math.min(52, Math.floor(((el.clientWidth || 320) - 6 * (n - 1)) / n)));
+    el.style.setProperty('--tile', `${size}px`);
+  }
+  window.addEventListener('resize', fitLadderTiles);
+
+  function ladderFeedback(text, kind) {
+    const el = $('#ladder-feedback');
+    el.textContent = text;
+    el.className = `arcade-feedback ${kind || ''}`;
+  }
+  function ladderType(ch) {
+    if (!ladderPlaying() || ladder.busy) return;
+    if (ladder.guess.length >= ladder.game.from.length) return;
+    ladder.guess += ch.toLowerCase();
+    ladderFeedback('');
+    renderLadder();
+  }
+  function ladderBack() {
+    if (!ladderPlaying() || ladder.busy || !ladder.guess) return;
+    ladder.guess = ladder.guess.slice(0, -1);
+    renderLadder();
+  }
+  function ladderSubmit() {
+    if (!ladderPlaying() || ladder.busy) return;
+    const { game } = ladder;
+    const res = Ladder.play(ladderLib, game, ladder.guess, now());
+    if (res.result === 'bad') {
+      ladderFeedback(LADDER_REASON[res.reason] || 'Try another word.', res.reason === 'empty' ? 'info' : 'bad');
+      if (res.reason !== 'empty') shake($('#ladder-rungs .entry'));
+      return;
+    }
+    ladder.guess = '';
+    ladderData().games[game.mode] = game; // (a sync may have replaced the saved copy)
+    saveStore();
+    if (res.result === 'done') return finishLadder(game);
+    buzz(12);
+    const left = Ladder.shortestPath(Ladder.current(game), game.to, ladderLib.words[game.to.length]);
+    ladderFeedback(left && left.length === 2 ? 'Nice! One more step to go.' : 'Nice step.', 'good');
+    renderLadder();
+  }
+  function ladderUndo() {
+    if (!ladderPlaying() || ladder.busy) return;
+    if (ladder.guess) {
+      ladder.guess = '';
+    } else if (Ladder.undo(ladder.game)) {
+      saveStore();
+      ladderFeedback('Stepped back.', 'info');
+    }
+    renderLadder();
+  }
+  function ladderHint() {
+    if (!ladderPlaying() || ladder.busy) return;
+    const word = Ladder.useHint(ladderLib, ladder.game);
+    if (!word) {
+      ladderFeedback('No way through from here: try stepping back.', 'info');
+      return;
+    }
+    saveStore();
+    ladder.guess = '';
+    ladderFeedback(`Hint: try ${word.toUpperCase()}.`, 'info');
+    renderLadder();
+  }
+  function ladderRestart() {
+    if (!ladderPlaying() || ladder.busy) return;
+    const { game } = ladder;
+    if (game.steps.length < 2 && !ladder.guess) return;
+    game.steps = [game.from];
+    ladder.guess = '';
+    saveStore();
+    ladderFeedback('Back to the start. Your time and hints carry on.', 'info');
+    renderLadder();
+  }
+
+  function finishLadder(game) {
+    const rec = ladderData();
+    const { record, isNew } = Ladder.finishGame(rec, game, Date.now());
+    delete record.games[game.mode];
+    store.ladder = record;
+    saveStore();
+    analytics.track('arcade_end', { mode: `ladder_${game.mode}`, score: game.score });
+    ladderLast = { game, isNew };
+    buzz([20, 40, 20]);
+    // A moment on the finished ladder, then the result.
+    ladder.busy = true;
+    renderLadder();
+    $('#ladder-rungs').classList.add('climbed');
+    ladderFeedback('You made it!', 'good');
+    setTimeout(() => {
+      $('#ladder-rungs').classList.remove('climbed');
+      if (ladder && ladder.game === game) showLadderDone();
+    }, reduceMotion.matches ? 300 : 1200);
+  }
+
+  function showLadderDone() {
+    const { game, isNew } = ladderLast;
+    const rec = ladderData();
+    const moveCount = Ladder.moves(game);
+    const daily = game.mode === 'daily';
+    const first = daily && rec.daily[game.day];
+    $('#ladder-done-kicker').textContent = daily ? 'Daily Ladder' : 'Practice ladder';
+    $('#ladder-done-title').textContent = moveCount <= game.par && !game.hints ? 'Perfect climb!' : 'Ladder climbed!';
+    $('#ladder-done-score').textContent = `${game.score} points`;
+    $('#ladder-done-note').textContent = daily && game.replay && first
+      ? `A replay: your first result stands (${plural(first.moves, 'move')}, ${formatTime(first.time / 1000)}).`
+      : daily ? `Today’s ladder is done. A new one arrives at midnight South African time.`
+      : isNew ? 'A new personal best!' : '';
+    const stat = (n, label) => `<div><b>${n}</b><span>${esc(label)}</span></div>`;
+    const sum = Ladder.summary(rec, todayKey());
+    $('#ladder-done-stats').innerHTML = stat(moveCount, 'Moves') + stat(game.par, 'Par') + stat(formatTime(game.time / 1000), 'Time') + stat(game.hints, 'Hints')
+      + (daily ? stat(sum.streak, 'Daily streak') : stat(rec.practice.done, 'Practice ladders'));
+    $('#ladder-done-rungs').innerHTML = game.steps.map((w, i) => rung(w, game.steps[i - 1], i === 0 ? 'start' : i === game.steps.length - 1 ? 'target' : '')).join('');
+    $('#ladder-done-actions').innerHTML = daily
+      ? '<button class="btn btn-primary" data-open="#/arcade/ladder/practice">Practise another</button><button class="btn" data-action="ladder-replay">Play today’s again</button><button class="btn" data-action="ladder-share">Share</button><button class="btn" data-open="#/arcade/ladder">Word Ladder</button>'
+      : '<button class="btn btn-primary" data-action="ladder-next">Next ladder</button><button class="btn" data-action="ladder-share">Share</button><button class="btn" data-open="#/arcade/ladder">Word Ladder</button>';
+    leaveLadder();
+    arcadeScreen('ladder-done');
+    window.scrollTo(0, 0);
+  }
+
+  function ladderAgain(kind) {
+    if (!ladderLib) return;
+    const rec = ladderData();
+    const today = todayKey();
+    const game = kind === 'replay'
+      ? Ladder.newGame(Ladder.dailyLadder(ladderLib, today), 'daily', { day: today, now: now(), replay: true })
+      : Ladder.newGame(Ladder.practiceLadder(ladderLib, rec.practice.done, rec.practice.recent), 'practice', { day: today, now: now() });
+    replaceRoute(`#/arcade/ladder/${game.mode}`);
+    playLadder(game, false);
+  }
+
+  // Spoiler-free: the number of moves, not the words.
+  function shareLadder() {
+    if (!ladderLast) return;
+    const { game } = ladderLast;
+    const moveCount = Ladder.moves(game);
+    const rows = Array.from({ length: moveCount }, (_, i) => (i === moveCount - 1 ? '🟩' : '🟨')).join('');
+    const text = `Crossword Hub · ${game.mode === 'daily' ? `Daily Ladder ${game.day}` : 'Word Ladder'}: ${plural(moveCount, 'move')} (par ${game.par}), ${formatTime(game.time / 1000)}${game.hints ? `, ${plural(game.hints, 'hint')}` : ''} ${rows}`;
+    const url = canLink() ? `${siteUrl()}#/arcade/ladder${game.mode === 'daily' ? '/daily' : ''}` : '';
+    analytics.track('share', { method: navigator.share ? 'native' : 'copy_link', content_type: 'arcade_ladder' });
+    if (navigator.share) {
+      navigator.share({ text, url: url || undefined }).catch(() => {});
+      return;
+    }
+    copyText(url ? `${text} ${url}` : text, 'Result copied to your clipboard');
+  }
+
+  $('#ladder-keys').innerHTML = KEY_ROWS.map((row, i) => `<div class="keys-row">${
+    row.split('').map((k) => `<button type="button" data-ladder-key="${k}">${k}</button>`).join('')
+  }${i === 2 ? '<button type="button" class="key-wide" data-ladder-key="back" aria-label="Delete">⌫</button>' : ''}</div>`).join('');
+  $('#ladder-keys').addEventListener('pointerdown', (e) => e.preventDefault());
+  $('#ladder-keys').addEventListener('click', (e) => {
+    const key = e.target.closest('[data-ladder-key]');
+    if (!key) return;
+    if (key.dataset.ladderKey === 'back') ladderBack();
+    else ladderType(key.dataset.ladderKey);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!ladderPlaying() || e.ctrlKey || e.metaKey || e.altKey) return;
+    if (e.target.matches && e.target.matches('input, textarea')) return;
+    if (/^[a-z]$/i.test(e.key)) ladderType(e.key);
+    else if (e.key === 'Backspace') ladderBack();
+    else if (e.key === 'Enter') ladderSubmit();
+    else return;
+    e.preventDefault();
+  });
+
   // ---------- Gift crosswords ----------
   // Made here from the player's own answers and clues and sent as a link
   // (see js/gifts.js). The builder shows "Coming soon" until GIFTS_LIVE is
@@ -3422,7 +3870,7 @@
       Object.assign(store, next);
       saveStore();
       // Refresh what's on screen, but leave a puzzle being played alone.
-      if ($('#game-view').hidden && !arcadePlaying()) route();
+      if ($('#game-view').hidden && !arcadePlaying() && !ladderPlaying()) route();
     },
     onSave: (fn) => storeListeners.push(fn),
   };

@@ -13,6 +13,8 @@
   // Gift crosswords stay on the device that opened them: their saved
   // progress and results aren't copied to the account.
   const local = (key) => key.startsWith('gift:');
+  // Word Ladder records (js/ladder.js, loaded first in the page).
+  const Ladder = () => root.CrosswordLadder || require('./ladder.js');
   const withoutGifts = (map) => Object.fromEntries(Object.entries(map || {}).filter(([k]) => !local(k)));
 
   function syncable(store) {
@@ -31,6 +33,8 @@
       arcadeBest: (store.arcade && store.arcade.best) || store.arcadeBest || {},
       // Today's Arcade games, so the daily allowance holds across devices.
       arcadeAttempts: (store.arcade && store.arcade.attempts) || store.arcadeAttempts || null,
+      // Word Ladder results and practice records (not games in progress).
+      ladder: Ladder().syncable(store.ladder),
     };
   }
 
@@ -70,6 +74,7 @@
       best: mergeArcadeBest((local.arcade && local.arcade.best) || local.arcadeBest, remote.arcadeBest || (remote.arcade && remote.arcade.best)),
       attempts: mergeArcadeAttempts((local.arcade && local.arcade.attempts) || local.arcadeAttempts, remote.arcadeAttempts || (remote.arcade && remote.arcade.attempts)),
     });
+    out.ladder = Ladder().merge(local.ladder, remote.ladder);
     out.solvedCount = Math.max(local.solvedCount || 0, remote.solvedCount || 0);
 
     // Puzzles in progress: the most recently played copy wins, and a puzzle
