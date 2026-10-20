@@ -937,6 +937,12 @@
     return { kind: 'word', target: `${w.dir[0]}${w.row}_${w.col}`, cells: w.cells };
   }
   let spending = false;
+  // A hint in a normal puzzle shows at once and is charged in the
+  // background: the page already has the answers, and the server
+  // (spendHint) still keeps the balance. A charge held up by the connection
+  // is tried again. Only before the balance has loaded does the reveal wait
+  // for the server.
+  let charging = 0; // charges on their way to the server
   async function creditReveal(scope) {
     if (scope === 'all') return;
     if (!me.account) {
@@ -950,11 +956,20 @@
     }
     const cost = Econ.ECONOMY.cost[t.kind];
     if (wallet && wallet.total < cost) return noCredits();
+    const request = { puzzle: game.spec.key, kind: t.kind, target: t.target };
+    if (wallet) {
+      const fromDaily = Math.min(wallet.daily, cost);
+      setWallet({ ...wallet, daily: wallet.daily - fromDaily, earned: wallet.earned - (cost - fromDaily), total: wallet.total - cost });
+      applyReveal(scope);
+      toast(`${plural(cost, 'credit')} used · ${wallet.total} left`);
+      charge(request, 0);
+      return;
+    }
     if (spending) return;
     spending = true;
     const g = game;
     try {
-      const res = await online.call('spendHint', { puzzle: g.spec.key, kind: t.kind, target: t.target });
+      const res = await online.call('spendHint', request);
       setWallet(res.wallet);
       if (!res.ok) return noCredits();
       if (game !== g || game.solved) return;
@@ -964,6 +979,19 @@
       toast(`${e.message} No credits were used.`);
     } finally {
       spending = false;
+    }
+  }
+  async function charge(request, tries) {
+    charging++;
+    try {
+      const res = await online.call('spendHint', request);
+      charging--;
+      if (!charging) setWallet(res.wallet); // the server's balance, once every charge is in
+      if (!res.ok) noCredits(); // spent elsewhere meanwhile
+    } catch (e) {
+      charging--;
+      if (tries < 3) setTimeout(() => charge(request, tries + 1), 4000 * (tries + 1));
+      else syncWallet();
     }
   }
   // A hint in a duel: costs credits as usual and freezes your board for a
@@ -987,12 +1015,16 @@
     spending = true;
     const g = game;
     const w = scope === 'cell' ? null : game.puzzle.words[currentWordIndex()];
+    $('#duel-note').textContent = scope === 'cell' ? 'Revealing the letter…' : 'Revealing the word…';
     try {
       const res = await online.call('duelHint', {
         id: dd.id, kind: t.kind, r: w ? w.row : game.sel.r, c: w ? w.col : game.sel.c, dir: w ? w.dir : undefined,
       });
       setWallet(res.wallet);
-      if (!res.ok) return noCredits();
+      if (!res.ok) {
+        $('#duel-note').textContent = '';
+        return noCredits();
+      }
       if (game !== g || game.solved || duel !== dd) return;
       for (const [r, c, ch] of res.cells) {
         game.entries[r][c] = ch;
@@ -1008,6 +1040,7 @@
       if (res.charged) toast(`${plural(res.charged, 'credit')} used · board frozen for ${Math.round((res.frozenUntil - duelNow()) / 1000)} seconds`);
     } catch (e) {
       toast(`${e.message} No credits were used.`);
+      if (duel === dd && !duelFrozen()) $('#duel-note').textContent = '';
     } finally {
       spending = false;
     }
