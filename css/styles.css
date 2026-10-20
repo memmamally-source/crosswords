@@ -1280,11 +1280,10 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   /* Room below the grid for the clue bar and, while it's open, the device
      keyboard, so the bottom rows can always be scrolled up above both. */
   body.in-game #game-view { padding-bottom: calc(96px + var(--dock-bottom, 0px) + env(safe-area-inset-bottom, 0px)); }
-  /* The phone's own keyboard is open (js/app.js setKeyboardOpen): the clue
-     bar sits under the tools instead of above the keyboard, and the header
-     and puzzle title step aside so the grid gets the room. */
-  body.keyboard-open .masthead, body.keyboard-open .puzzle-head, body.keyboard-open .puzzle-progress { display: none; }
-  body.keyboard-open .clue-bar {
+  /* Typing with the phone's own keyboard (js/app.js setPhoneKeyboardLayout): the
+     clue bar sits under the tools instead of above the keyboard. The page
+     doesn't change when the keyboard opens; the grid just scrolls up. */
+  body.phone-keyboard .clue-bar {
     position: sticky;
     top: calc(env(safe-area-inset-top, 0px) + var(--tools-height, 52px));
     bottom: auto;
@@ -1297,9 +1296,9 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
     border-bottom: 1px solid var(--rule);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
   }
-  body.keyboard-open .clue-bar .clue-nav { width: 44px; height: 44px; font-size: 1.6rem; }
-  body.keyboard-open .clue-bar .sheet-hint { display: none; }
-  body.keyboard-open #game-view { padding-bottom: 60vh; }
+  body.phone-keyboard .clue-bar .clue-nav { width: 44px; height: 44px; font-size: 1.6rem; }
+  body.phone-keyboard .clue-bar .sheet-hint { display: none; }
+  body.phone-keyboard #game-view { padding-bottom: 60vh; }
 }
 
 /* The clue panel (phones) */
