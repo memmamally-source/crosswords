@@ -98,4 +98,7 @@ assert.ok(!E.validName('   '));
 assert.ok(!E.validName('<script>'));
 assert.ok(!E.validName('x'.repeat(21)));
 
+// Names other players see.
+for (const n of ['Ann', 'Essex Jo', 'Hancock', 'Dickens', 'Grapefruit', 'Cassandra', 'Peacock', "O'Neil", 'Sam 2']) assert.ok(E.validName(n), `${n} is allowed`);
+for (const n of ['Fuck', 'sh1t head', 'B1TCH', 'big cock', 'ass', 'nazi99', 'Rape', 'dicks', 'n i g g a']) assert.ok(!E.validName(n), `${n} is refused`);
 console.log('OK: hint credits and duel rules');

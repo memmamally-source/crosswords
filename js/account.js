@@ -26,6 +26,13 @@ async function start() {
 
   const button = $('#account-btn');
   button.hidden = false;
+  // The app offers email sign-in only: Google's sign-in window doesn't open
+  // inside an app's web view (and the stores would then require Sign in
+  // with Apple as well).
+  if (window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) {
+    $('[data-account="google"]').style.display = 'none';
+    $('.account-or').style.display = 'none';
+  }
   button.addEventListener('click', () => {
     message('');
     $('#account-dialog').showModal();
@@ -180,7 +187,52 @@ async function start() {
       await authLib.signOut(auth);
       setMode('signin');
     }
+    if (what === 'delete-start') {
+      message('');
+      const usesPassword = !!(user && user.providerData.some((p) => p.providerId === 'password'));
+      $('#account-delete-pw-row').hidden = !usesPassword;
+      $('#account-delete-password').value = '';
+      $('#account-delete').hidden = false;
+      $('#account-delete').scrollIntoView({ block: 'nearest' });
+    }
+    if (what === 'delete-cancel') $('#account-delete').hidden = true;
+    if (what === 'delete-confirm') await deleteAccount();
   });
+
+  // ---------- Deleting the account ----------
+  // Both app stores require it. The player confirms who they are (password,
+  // or Google again), then the server deletes everything kept for them
+  // (accountDelete in functions/index.js). Progress on this device stays.
+  async function deleteAccount() {
+    const online = window.CrosswordOnline;
+    if (!user || !online) return message('Deleting an account needs a connection to Crossword Hub. Try again later.');
+    const button = $('#account-delete-confirm');
+    button.disabled = true;
+    message('');
+    try {
+      if (user.providerData.some((p) => p.providerId === 'password')) {
+        const password = $('#account-delete-password').value;
+        if (!password) return message('Enter your password to confirm.');
+        await authLib.reauthenticateWithCredential(user, authLib.EmailAuthProvider.credential(user.email, password));
+      } else {
+        await authLib.reauthenticateWithPopup(user, new authLib.GoogleAuthProvider());
+      }
+      await user.getIdToken(true);
+      clearTimeout(pushTimer);
+      pushTimer = null;
+      await online.call('accountDelete', {});
+      await authLib.signOut(auth).catch(() => {});
+      $('#account-delete').hidden = true;
+      setMode('signin');
+      message('Your account has been deleted.', true);
+    } catch (err) {
+      message(err && err.code && String(err.code).startsWith('auth/') ? explain(err) : (err && err.message) || 'Something went wrong. Please try again.');
+    } finally {
+      button.disabled = false;
+    }
+  }
+
+  $('#account-dialog').addEventListener('close', () => { $('#account-delete').hidden = true; });
 
   $('#account-form').addEventListener('submit', async (e) => {
     e.preventDefault();

@@ -3,6 +3,11 @@
   'use strict';
 
   const $ = (sel, el = document) => el.querySelector(sel);
+  // Running as the Android or iOS app (mobile/): the same page, without
+  // what only makes sense on the web (installing it, the service worker).
+  const inApp = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+  const SITE = 'https://crosswordhub.app/'; // where links to share point from the app
+  if (inApp) document.documentElement.classList.add('in-app');
   const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -2117,9 +2122,11 @@
     } catch (e) {
       framed = true;
     }
-    return !framed && /^https?:/.test(location.protocol);
+    return inApp || (!framed && /^https?:/.test(location.protocol));
   }
-  const siteUrl = () => `${location.origin}${location.pathname}`;
+  // In the app the page's own address is local to the phone, so shared
+  // links use the website's.
+  const siteUrl = () => (inApp ? SITE : `${location.origin}${location.pathname}`);
   function result() {
     const points = gamePoints();
     return { time: game.elapsed, points, noHint: !game.room && game.reveals === 0 && !points && !game.checks && !game.autochecked };
@@ -2437,7 +2444,11 @@
     d.showModal();
     return new Promise((resolve) => d.addEventListener('close', () => {
       if (d.returnValue !== 'ok') return resolve(null);
-      const name = Rooms.cleanName($('#name-input').value) || Rooms.randomName();
+      let name = Rooms.cleanName($('#name-input').value) || Rooms.randomName();
+      if (!Econ.politeName(name)) {
+        toast('Please choose a different name: we’ve picked one for now.');
+        name = Rooms.randomName();
+      }
       store.settings.playerName = name;
       saveStore();
       resolve(name);
@@ -4546,6 +4557,7 @@
         <button class="btn" data-action="duel-result-share">Share result</button>
         <button class="btn" data-nav="arcade">Back to Play</button>
       </div>
+      <a class="duel-report" href="mailto:crosswordhub@gmail.com?subject=${encodeURIComponent('Report a player name')}&body=${encodeURIComponent(`Duel ${duel.id}: the name “${oppName}” is offensive.`)}">Report this player’s name</a>
     </div>`);
     if (won) $('.duel-trophy').innerHTML = $('#win-dialog .win-art').innerHTML;
     if (!duel.reported) {
@@ -4632,6 +4644,8 @@
   let giftBuilt = null; // { attempt, code, puzzle, count }
   function renderGiftCard() {
     $('#gift-soon-badge').hidden = giftsOpen();
+    // The app stores don't allow features that aren't ready yet.
+    $('#gift-card').closest('section').style.display = inApp && !giftsOpen() ? 'none' : '';
   }
   function openGifts() {
     if (giftsOpen()) navigate('#/gift/new');
@@ -4848,7 +4862,7 @@
   const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   function showInstallCard() {
     const card = $('#install-card');
-    if (standalone() || store.installDismissed) { card.hidden = true; return; }
+    if (inApp || standalone() || store.installDismissed) { card.hidden = true; return; }
     if (installEvent) {
       $('#install-btn').hidden = false;
       card.hidden = false;
@@ -4876,7 +4890,9 @@
     showInstallCard();
   });
   window.addEventListener('appinstalled', () => { $('#install-card').hidden = true; });
-  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+  // In the app the files are already on the phone: no service worker.
+  if (inApp) $$('.privacy-more a[href]').forEach((a) => { if (!a.href.startsWith('mailto:')) a.href = `${SITE}${a.getAttribute('href')}`; });
+  else if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
     window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
   }
 

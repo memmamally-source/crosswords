@@ -22,7 +22,13 @@ function getApp() {
 function getAuth() {
   if (!authPromise) {
     authPromise = Promise.all([getApp(), import(`${SDK}/firebase-auth.js`)]).then(([app, lib]) => {
-      const auth = lib.getAuth(app);
+      // The Android and iOS app (mobile/) signs in by email only, so it leaves
+      // out Google's sign-in window helper, which would load a script from
+      // the web.
+      const inApp = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+      const auth = inApp
+        ? lib.initializeAuth(app, { persistence: [lib.indexedDBLocalPersistence, lib.browserLocalPersistence] })
+        : lib.getAuth(app);
       // Local test servers (set only by the test scripts).
       const emu = window.FIREBASE_EMULATORS;
       if (emu && emu.auth) lib.connectAuthEmulator(auth, emu.auth, { disableWarnings: true });

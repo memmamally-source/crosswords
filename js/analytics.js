@@ -58,7 +58,10 @@
   }
 
   const config = root.FIREBASE_CONFIG || {};
-  const id = /^G-[A-Z0-9]+$/.test(config.measurementId || '') ? config.measurementId : null;
+  // Never in the Android or iOS app (mobile/), which loads no code from the
+  // web and collects no usage statistics.
+  const inApp = !!(root.Capacitor && root.Capacitor.isNativePlatform && root.Capacitor.isNativePlatform());
+  const id = !inApp && /^G-[A-Z0-9]+$/.test(config.measurementId || '') ? config.measurementId : null;
   let started = false;
   const base = () => `${location.origin}${location.pathname.replace(/\/$/, '')}`;
 

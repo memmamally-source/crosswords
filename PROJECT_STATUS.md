@@ -231,6 +231,8 @@ What is built and live today, what's unfinished, and how it compares with the
 | Arcade: Clue Blitz and Survival | ✅ Stage 10A (awaiting approval) | `js/arcade.js` (game logic) and the Arcade screens in `js/app.js`; 20,432 unique answers from the existing clue bank, no new content or AI |
 | Arcade allowance (1 Blitz + 1 Survival a day) | ✅ On for everyone since 20 October 2026 | `LIMITS_ACTIVE` in `js/arcade.js`; counted in the browser and in a signed-in account. Clearing browser data resets it for guests; server enforcement comes with Premium (10B) |
 | Arcade: Word Ladder | ✅ Built 20 Oct (awaiting approval) | `js/ladder.js`, `puzzles/ladder.json` (915 checked ladders), Daily Ladder and unlimited Practice; records synced |
+| Android and iOS apps | 🛠 Prepared 20 Oct: projects, icons, Android build workflow, store listing and screenshots; waiting on the developer accounts | `mobile/`, see mobile/README.md |
+| Account deletion | ✅ Built 20 Oct (needs `firebase deploy --only functions`) | `accountDelete`; Account → Delete account |
 | Statistics as a full page | ✅ Built 20 Oct (awaiting approval) | `#/stats`: at-a-glance figures, last seven days, Crossword, No-Hint Club, Arcade and Achievements panels |
 | Hint credits and Crossword Duels | ✅ Built 20 Oct (awaiting approval); off until deployed | `functions/` (Cloud Functions) decides every balance and result in Firestore transactions; `firestore.rules` makes them read-only to players. Needs the Blaze plan and a deploy (README → Hint credits and Crossword Duels) |
 | Server-side entitlements and Arcade runs | ❌ Not built | Stage 10B with Stage 8; needs the Blaze plan and payments |

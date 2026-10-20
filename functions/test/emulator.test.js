@@ -6,6 +6,7 @@
 //
 // (or start the emulators yourself and run `npm test`).
 process.env.FIRESTORE_EMULATOR_HOST = process.env.FIRESTORE_EMULATOR_HOST || '127.0.0.1:8080';
+process.env.FIREBASE_AUTH_EMULATOR_HOST = process.env.FIREBASE_AUTH_EMULATOR_HOST || '127.0.0.1:9099';
 const assert = require('assert');
 const { initializeApp } = require('firebase/app');
 const { getAuth, connectAuthEmulator, createUserWithEmailAndPassword, signInAnonymously } = require('firebase/auth');
@@ -364,6 +365,29 @@ const ok = (label) => console.log(`  ✓ ${label}`);
   await adb.doc(`duels/${d8.id}`).update({ expiresAt: Date.now() - 1 });
   await rejects(c.call('duelJoin', { code: d8.code, name: 'Cy' }), 'failed-precondition', 'an expired challenge');
   ok('lobbies: leave and rejoin; expired challenges can’t be joined');
+
+  // Deleting an account: everything kept for the player goes; past duels
+  // stay for the other player, with the name replaced.
+  console.log('Accounts');
+  await rejects(guest.call('accountDelete', {}), 'permission-denied', 'guests have no account to delete');
+  const z = await player();
+  await z.call('walletSync', {});
+  await setDoc(doc(z.db, `users/${z.uid}`), { progress: '{}' });
+  const dz = await z.call('duelCreate', { mode: 'mini', name: 'Zed' });
+  await c.call('duelJoin', { code: dz.code, name: 'Cy' });
+  await Promise.all([z.call('duelReady', { id: dz.id }), c.call('duelReady', { id: dz.id })]);
+  await adb.doc(`duels/${dz.id}`).update({ startAt: Date.now() - 1000 });
+  const zOpen = await z.call('duelCreate', { mode: 'classic', name: 'Zed' });
+  assert.ok((await adb.doc(`wallets/${z.uid}`).get()).exists && (await adb.collection(`wallets/${z.uid}/ledger`).get()).size > 0);
+  r = await z.call('accountDelete', {});
+  assert.ok(r.ok);
+  for (const path of [`wallets/${z.uid}`, `users/${z.uid}`, `players/${z.uid}`]) assert.ok(!(await adb.doc(path).get()).exists, `${path} deleted`);
+  assert.strictEqual((await adb.collection(`wallets/${z.uid}/ledger`).get()).size, 0, 'credit history deleted');
+  duel = (await adb.doc(`duels/${dz.id}`).get()).data();
+  assert.deepStrictEqual([duel.status, duel.winner, duel.result.reason, duel.players[z.uid].name], ['done', c.uid, 'forfeit', 'Deleted player'], 'a duel in progress goes to the opponent; the name is removed');
+  assert.strictEqual((await adb.doc(`duels/${zOpen.id}`).get()).data().status, 'cancelled', 'an open challenge is called off');
+  await rejects(admin.app('test-admin').auth().getUser(z.uid), 'auth/user-not-found', 'the sign-in itself is deleted');
+  ok('deleting an account removes progress, credits, records and the sign-in; past duels are anonymised');
 
   console.log('OK: server tests passed');
   process.exit(0);
