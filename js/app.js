@@ -1897,6 +1897,13 @@
   }
 
   function clear(scope) {
+    // Clearing the whole puzzle can't be undone, so check it wasn't a slip.
+    if (scope === 'all' && game.entries.some(row => row.some(Boolean))) {
+      const question = game.solved ? 'Start this puzzle again with an empty grid?'
+        : game.room ? 'Clear every letter in this puzzle? It clears for everyone solving with you.'
+        : 'Clear every letter in this puzzle?';
+      if (!window.confirm(question)) return;
+    }
     if (game.solved) {
       if (scope !== 'all') return;
       // Start a solved puzzle over. The original solve stays in your record.
