@@ -1075,9 +1075,10 @@
     if (duel && on) duel.wasFrozen = true;
   }
 
-  // A first No-Hint solve of a published puzzle: the server checks the grid
-  // and pays 1 (Mini) or 3 (Daily, Brutal) credits, once. The solve waits in
-  // store.pendingClaims (on this device) until the server has answered, so
+  // A first No-Hint solve: the server checks the grid and pays, once, 1 for
+  // a Mini, 3 for a Daily or Brutal, and 1 for a genre or collection puzzle
+  // (up to 3 of those a day). The solve waits in store.pendingClaims (on
+  // this device) until the server has answered, so
   // a solve while signed out is paid after signing in, and one cut off by the
   // connection (or a server waking up) is tried again later. The win screen
   // says what happened either way.
@@ -1086,8 +1087,12 @@
     already: 'Credits for this puzzle were already paid to your account.',
     assisted: 'No credits this time: a hint was bought on this puzzle.',
     'not-eligible': 'Only today’s or an earlier Daily, the Mini and the Brutal Challenge earn credits.',
+    'daily-limit': `You’ve had today’s credits for genre and collection puzzles (${Econ.ECONOMY.collectionRewardsPerDay} a day). More tomorrow!`,
+    'too-small': `Genre and collection puzzles with at least ${Econ.ECONOMY.collectionMinClues} clues earn credits.`,
     incorrect: '',
   };
+  const rewardFor = (spec) => (['daily', 'mini', 'brutal', 'genre'].includes(spec.kind) ? Econ.puzzleReward(spec.key, Econ.sastDate(Date.now())) : null);
+  const earnsCredits = (spec) => !!rewardFor(spec);
   function rewardNote(text) {
     const el = $('#win-reward');
     el.textContent = text;
@@ -1099,7 +1104,8 @@
   }
   async function claimReward(spec, entries) {
     queueClaim(spec, entries);
-    const amount = spec.kind === 'mini' ? Econ.ECONOMY.reward.mini : Econ.ECONOMY.reward.full;
+    const reward = rewardFor(spec);
+    const amount = reward ? reward.amount : Econ.ECONOMY.reward.full;
     if (!me.account) {
       rewardNote(`Sign in to collect ${plural(amount, 'Hint Credit')} for this No-Hint solve: it’s kept for you for a week.`);
       return;
@@ -1107,7 +1113,12 @@
     rewardNote('Checking your No-Hint reward…');
     const res = await sendClaim(spec.key);
     if (!res) rewardNote(`Your ${plural(amount, 'Hint Credit')} will be added when the connection’s back.`);
-    else if (res.ok) rewardNote(res.kind === 'mini' ? `Brilliant! Mini solved without hints. +${plural(res.amount, 'credit')}.` : `Perfect solve! +${res.amount} Hint Credits.`);
+    else if (res.ok) {
+      rewardNote({
+        mini: `Brilliant! Mini solved without hints. +${plural(res.amount, 'credit')}.`,
+        collection: `No hints needed! +${plural(res.amount, 'Hint Credit')}.`,
+      }[res.kind] || `Perfect solve! +${res.amount} Hint Credits.`);
+    }
     else rewardNote(REWARD_WHY[res.reason] || '');
   }
   // Sends one waiting claim. Returns the server's answer, or null if it
@@ -1747,6 +1758,9 @@
     }
   }
 
+  // The clue arrows pass over finished answers (with "Skip filled squares"
+  // on), until every answer has letters in it.
+  const skipToEmpty = () => store.settings.skipFilled && game.puzzle.words.some((w) => w.cells.some(([r, c]) => !game.entries[r][c]));
   function jumpWord(delta, preferEmpty) {
     const words = game.puzzle.words;
     let i = currentWordIndex();
@@ -2156,7 +2170,7 @@
     delete store.saves[spec.key];
     saveStore();
     $('#win-reward').hidden = true;
-    if (creditsOn() && noHint && !prev && ['daily', 'mini', 'brutal'].includes(spec.kind)) claimReward(spec, game.entries);
+    if (creditsOn() && noHint && !prev && earnsCredits(spec)) claimReward(spec, game.entries);
 
     $('#board').classList.add('solved');
     celebrate(clean);
@@ -3132,8 +3146,8 @@
       case 'clear-incorrect': clear('incorrect'); break;
       case 'clear-word': clear('word'); break;
       case 'clear-all': clear('all'); break;
-      case 'next-word': if (!game.paused) { jumpWord(1, false); refresh(); focusTyping(); } break;
-      case 'prev-word': if (!game.paused) { jumpWord(-1, false); refresh(); focusTyping(); } break;
+      case 'next-word': if (!game.paused) { jumpWord(1, skipToEmpty()); refresh(); focusTyping(); } break;
+      case 'prev-word': if (!game.paused) { jumpWord(-1, skipToEmpty()); refresh(); focusTyping(); } break;
       case 'share': share(); break;
       case 'room-start': startRoom(); break;
       case 'zoom': toggleZoom(); break;
@@ -4777,6 +4791,7 @@
       } else if (action === 'duel-resign') {
         if (!window.confirm('Resign this duel? Your opponent wins.')) return;
         await online.call('duelLeave', { id: dd.id });
+        await refreshDuel(dd); // show the result now, even if live updates have stalled
       } else if (action === 'duel-rematch') {
         dd.rematchMine = true;
         const name = await duelName();

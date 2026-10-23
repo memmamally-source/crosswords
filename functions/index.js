@@ -77,6 +77,7 @@ function view(w, ms = now()) {
     totals: w.totals,
     resetIn: E.msUntilReset(ms),
     winsToday: w.winsDay === day ? w.wins : 0,
+    collectionsToday: w.collectionsDay === day ? w.collections : 0,
   };
 }
 function ledgerEntry(t, uid, entry) {
@@ -156,8 +157,9 @@ exports.claimSolve = onCall(async (req) => {
   const ms = now();
   const reward = E.puzzleReward(puzzle, E.sastDate(ms));
   if (!reward) return { ok: false, reason: 'not-eligible' };
-  const answers = P.published(puzzle);
-  if (!answers) return { ok: false, reason: 'not-eligible' };
+  const collection = reward.kind === 'collection';
+  const answers = collection ? P.collection(puzzle, E.ECONOMY.collectionMinClues) : P.published(puzzle);
+  if (!answers) return { ok: false, reason: collection ? 'too-small' : 'not-eligible' };
   if (!E.validGrid(grid, answers.rows, answers.cols) || !E.progress(grid, answers.solution).solved) return { ok: false, reason: 'incorrect' };
   const claimRef = db.doc(`wallets/${uid}/claims/${docId(puzzle)}`);
   const spentRef = db.doc(`wallets/${uid}/spent/${docId(puzzle)}`);
@@ -168,10 +170,17 @@ exports.claimSolve = onCall(async (req) => {
       t.set(walletRef(uid), wallet);
       return { ok: false, reason: cSnap.exists ? 'already' : 'assisted', wallet: view(wallet, ms) };
     }
-    const next = E.earn(wallet, reward.amount, 'solves');
+    // Genre and collection puzzles never run out, so only a few a day earn.
+    if (collection && E.collectionReward(wallet, today(ms)).why === 'daily-limit') {
+      t.set(walletRef(uid), wallet);
+      return { ok: false, reason: 'daily-limit', wallet: view(wallet, ms) };
+    }
+    let next = E.earn(wallet, reward.amount, 'solves');
+    if (collection) next = E.recordCollectionReward(next, today(ms));
     t.set(walletRef(uid), { ...next, updatedAt: FieldValue.serverTimestamp() });
     t.create(claimRef, { amount: reward.amount, at: FieldValue.serverTimestamp() });
-    ledgerEntry(t, uid, { type: 'solve', amount: reward.amount, daily: 0, earned: reward.amount, note: reward.kind === 'mini' ? 'Mini solved without hints' : 'Crossword solved without hints' });
+    const note = { mini: 'Mini solved without hints', collection: 'Collection crossword solved without hints' }[reward.kind] || 'Crossword solved without hints';
+    ledgerEntry(t, uid, { type: 'solve', amount: reward.amount, daily: 0, earned: reward.amount, note });
     return { ok: true, amount: reward.amount, kind: reward.kind, wallet: view(next, ms) };
   });
 });

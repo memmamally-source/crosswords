@@ -454,7 +454,7 @@ display.
 | | |
 |---|---|
 | Daily credits | 5 a day for every signed-in account, given once per day however often you sign in or refresh, on any device. Unused ones expire at midnight South African time. |
-| Earned credits | Never expire, no cap. First No-Hint solve of a published Mini: +1; of a Daily (or archive Daily) or Brutal Challenge: +3; winning a duel: +3. Genre and collection puzzles, gifts and shared puzzles earn nothing. |
+| Earned credits | Never expire, no cap. First No-Hint solve of a published Mini: +1; of a Daily (or archive Daily) or Brutal Challenge: +3; of a genre or collection puzzle with at least 10 clues: +1, for up to 3 a day (they never run out, so the server rebuilds each one from its link and checks the grid); winning a duel: +3. Gifts and shared puzzles earn nothing. |
 | Spending | Reveal Letter 1, Reveal Word 3; daily credits first. A square or word already bought is never charged again; a word that's already fully revealed isn't charged. Reveal Puzzle is gone while credits are on. Checking stays free but, as before, rules out the No-Hint reward. |
 | Guests | Play everything as before but can't reveal with credits or earn them; they're invited to sign in. Progress on the device is merged into the account on sign-in, as before. |
 

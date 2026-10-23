@@ -1298,6 +1298,9 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   }
   body.phone-keyboard .clue-bar .clue-nav { width: 44px; height: 44px; font-size: 1.6rem; }
   body.phone-keyboard .clue-bar .sheet-hint { display: none; }
+  /* Room for two lines of clue whatever the clue, so moving to the next one
+     never nudges the grid up or down. */
+  body.phone-keyboard .clue-bar p { min-height: calc(2.8em + 8px); }
   body.phone-keyboard #game-view { padding-bottom: 60vh; }
 }
 
@@ -2184,7 +2187,9 @@ dialog {
 .duel-bar.ahead .duel-clock small { color: var(--good); }
 .duel-note { grid-column: 1 / -1; margin: 0; font-size: 0.8rem; color: var(--accent); }
 .duel-note:empty { display: none; }
-.duel-resign { grid-column: 1 / -1; justify-self: end; font-size: 0.8rem; }
+/* Resign sits with the tools, which stay on screen while you solve. */
+.tool.duel-only { display: none; }
+#game-view.duel-mode .tool.duel-only { display: inline-flex; color: var(--accent); }
 /* In a duel Reveal is the last tool (Check is hidden), so its menu opens
    leftwards to stay on screen. */
 #game-view.duel-mode [data-menu-list="reveal"] { left: auto; right: 0; min-width: 240px; }
