@@ -16,6 +16,8 @@ const admin = require('firebase-admin');
 const { Timestamp } = require('firebase-admin/firestore');
 const E = require('../site/js/economy.js');
 const P = require('../puzzles.js');
+const G = require('../site/js/genres.js');
+const Gen = require('../site/js/generator.js');
 
 const PROJECT = 'demo-crossword';
 const REGION = 'europe-west1';
@@ -116,14 +118,50 @@ const ok = (label) => console.log(`  ✓ ${label}`);
   wrong[fr][wrong[fr].findIndex(Boolean)] = 'Q';
   r = await b.call('claimSolve', { puzzle: `daily:${today()}`, grid: wrong });
   assert.deepStrictEqual([r.ok, r.reason], [false, 'incorrect'], 'the grid must be right');
-  r = await b.call('claimSolve', { puzzle: 'play:general/medium/5/L1', grid: [] });
-  assert.strictEqual(r.reason, 'not-eligible', 'practice puzzles earn nothing');
+  r = await b.call('claimSolve', { puzzle: 'play:general/medium/5/3.4.5', grid: [] });
+  assert.strictEqual(r.reason, 'not-eligible', 'a genre puzzle without a layout code earns nothing');
   r = await b.call('claimSolve', { puzzle: `daily:${E.sastDate(Date.now() + 2 * 86400000)}`, grid: [] });
   assert.strictEqual(r.reason, 'not-eligible', 'not a future puzzle');
   await b.call('spendHint', { puzzle: `mini:${yesterday()}`, kind: 'letter', target: '0_0' });
   r = await b.call('claimSolve', { puzzle: `mini:${yesterday()}`, grid: solutionOf(`mini:${yesterday()}`) });
   assert.deepStrictEqual([r.ok, r.reason], [false, 'assisted'], 'a hint on the puzzle: no reward');
-  ok('Mini 1, full crossword 3, once each, only correct, never after a hint, never for practice');
+  ok('Mini 1, full crossword 3, once each, only correct, never after a hint');
+
+  // Genre and collection puzzles: 1 each, up to 3 a day, full-size only.
+  const col = await player();
+  await col.call('walletSync');
+  const collectionKeys = [];
+  for (let seed = 1; collectionKeys.length < 5; seed++) {
+    const genre = G.GENRES.find((g) => g.id === (seed % 2 ? 'harry-potter' : 'general')) || G.GENRES[5];
+    const level = genre.themed ? 'fan' : 'medium';
+    const cfg = G.levelsFor(genre)[level];
+    const built = Gen.generate(G.bankFor(genre, genre.words, level), { count: cfg.count, maxSize: cfg.maxSize, hard: cfg.hard, seed });
+    const code = Gen.layoutCode(built);
+    if (code && built.words.length >= E.ECONOMY.collectionMinClues) collectionKeys.push(`play:${genre.id}/${level}/0/${code}`);
+  }
+  const gridOf = (key) => P.collection(key, 0).solution;
+  r = await col.call('claimSolve', { puzzle: collectionKeys[0], grid: gridOf(collectionKeys[0]).map((row) => row.map((ch) => (ch ? 'Q' : ''))) });
+  assert.deepStrictEqual([r.ok, r.reason], [false, 'incorrect'], 'the grid must be right');
+  for (let i = 0; i < 3; i++) {
+    r = await col.call('claimSolve', { puzzle: collectionKeys[i], grid: gridOf(collectionKeys[i]) });
+    assert.deepStrictEqual([r.ok, r.amount, r.kind, r.wallet.collectionsToday], [true, 1, 'collection', i + 1], `collection solve ${i + 1}: 1`);
+  }
+  r = await col.call('claimSolve', { puzzle: collectionKeys[0], grid: gridOf(collectionKeys[0]) });
+  assert.deepStrictEqual([r.ok, r.reason], [false, 'already'], 'once per puzzle');
+  r = await col.call('claimSolve', { puzzle: collectionKeys[3], grid: gridOf(collectionKeys[3]) });
+  assert.deepStrictEqual([r.ok, r.reason, r.wallet.earned], [false, 'daily-limit', 3], 'three a day');
+  await adb.doc(`wallets/${col.uid}`).update({ collectionsDay: E.sastDay(Date.now()) - 1 });
+  r = await col.call('claimSolve', { puzzle: collectionKeys[3], grid: gridOf(collectionKeys[3]) });
+  assert.deepStrictEqual([r.ok, r.wallet.collectionsToday, r.wallet.earned], [true, 1, 4], 'more the next day');
+  const k = collectionKeys[4];
+  const tiny = `${k.slice(0, k.indexOf('/L') + 1)}L${k.slice(k.indexOf('/L') + 2).split('.').slice(0, 3).join('.')}`;
+  r = await col.call('claimSolve', { puzzle: tiny, grid: gridOf(tiny) });
+  assert.deepStrictEqual([r.ok, r.reason], [false, 'too-small'], 'a made-up three-word grid earns nothing');
+  await col.call('spendHint', { puzzle: k, kind: 'letter', target: '0_0' });
+  await adb.doc(`wallets/${col.uid}`).update({ collectionsDay: E.sastDay(Date.now()) - 1 });
+  r = await col.call('claimSolve', { puzzle: k, grid: gridOf(k) });
+  assert.deepStrictEqual([r.ok, r.reason], [false, 'assisted'], 'a hint on the puzzle: no reward');
+  ok('genre and collection puzzles 1, three a day, once each, only correct and full-size, never after a hint');
 
   console.log('Security rules');
   const wa = doc(a.db, `wallets/${a.uid}`);

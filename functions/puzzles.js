@@ -1,5 +1,5 @@
-// The server's puzzles: published ones (to check a claimed solve) and new
-// duel puzzles, whose answers stay here.
+// The server's puzzles: published ones and genre or collection puzzles (to
+// check a claimed solve), and new duel puzzles, whose answers stay here.
 const fs = require('fs');
 const path = require('path');
 
@@ -31,6 +31,19 @@ function published(key) {
   return { rows: puzzle.rows, cols: puzzle.cols, solution: rowsOf(puzzle) };
 }
 
+// A genre or collection puzzle's solution, rebuilt from its link's layout
+// code (play:<genre>/<level>/<seed>/L...), or null. Only puzzles with at
+// least `minClues` answers, all from that genre's word bank, count.
+const genreById = new Map(genres.GENRES.map((g) => [g.id, g]));
+function collection(key, minClues) {
+  const m = /^play:([a-z0-9-]+)\/([a-z]+)\/\d+\/(L[A-Za-z0-9.]+)$/.exec(key);
+  const genre = m && genreById.get(m[1]);
+  if (!genre || !Object.prototype.hasOwnProperty.call(genres.levelsFor(genre), m[2])) return null;
+  const puzzle = G.fromLayoutCode(m[3], genre.words);
+  if (!puzzle || puzzle.words.length < minClues) return null;
+  return { rows: puzzle.rows, cols: puzzle.cols, solution: rowsOf(puzzle) };
+}
+
 // A new duel puzzle from a random seed. The page gets the layout and clues
 // with every answer hidden ("?" for each letter); the answers stay here.
 function duel(mode, seed) {
@@ -47,4 +60,4 @@ function duel(mode, seed) {
 const pack = (rows) => rows.map((row) => row.map((ch) => ch || '.').join(''));
 const unpack = (rows) => rows.map((row) => row.split('').map((ch) => (ch === '.' ? '' : ch)));
 
-module.exports = { published, duel, pack, unpack };
+module.exports = { published, collection, duel, pack, unpack };

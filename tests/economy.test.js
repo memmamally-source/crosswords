@@ -44,7 +44,19 @@ assert.deepStrictEqual(E.puzzleReward('brutal:2026-10-19', '2026-10-20'), { amou
 assert.strictEqual(E.puzzleReward('brutal:2026-10-20', '2026-10-20'), null, 'Brutal weeks start on a Monday');
 assert.strictEqual(E.puzzleReward('daily:2026-10-21', '2026-10-20'), null, 'not tomorrow’s');
 assert.strictEqual(E.puzzleReward('daily:2026-08-31', '2026-10-20'), null, 'not before launch');
-assert.strictEqual(E.puzzleReward('play:general/medium/12/L3', '2026-10-20'), null, 'practice puzzles earn nothing');
+assert.deepStrictEqual(E.puzzleReward('play:general/medium/12/L3', '2026-10-20'), { amount: 1, kind: 'collection' }, 'genre and collection puzzles earn 1');
+assert.strictEqual(E.puzzleReward('play:general/medium/12/3.4.5', '2026-10-20'), null, 'only with a layout code the server can rebuild');
+{
+  let w = E.blankWallet();
+  const day = 20000;
+  for (let i = 0; i < E.ECONOMY.collectionRewardsPerDay; i++) {
+    assert.deepStrictEqual(E.collectionReward(w, day), { amount: 1, why: 'solve' });
+    w = E.recordCollectionReward(w, day);
+  }
+  assert.strictEqual(E.collectionReward(w, day).why, 'daily-limit', 'three a day');
+  assert.strictEqual(E.collectionReward(w, day + 1).why, 'solve', 'more the next day');
+  assert.strictEqual(E.recordCollectionReward(w, day + 1).collections, 1, 'the count starts again');
+}
 assert.strictEqual(E.puzzleReward('gift:abc', '2026-10-20'), null);
 assert.strictEqual(E.puzzleReward('daily:2026-10-20x', '2026-10-20'), null);
 

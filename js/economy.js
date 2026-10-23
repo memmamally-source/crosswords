@@ -15,7 +15,9 @@
   const ECONOMY = {
     dailyAllowance: 5, // complimentary credits a day; unused ones expire at midnight
     cost: { letter: 1, word: 3 },
-    reward: { mini: 1, full: 3, win: 3 },
+    reward: { mini: 1, full: 3, win: 3, collection: 1 },
+    collectionRewardsPerDay: 3, // rewarded genre and collection puzzles a day
+    collectionMinClues: 10, // the smallest of those that earns credits
     winRewardsPerDay: 3, // rewarded duel wins a day (up to 9 credits)
     winRewardsPerOpponentPerDay: 2, // of those, against the same opponent
     launch: '2026-09-01', // the first published Daily
@@ -45,9 +47,9 @@
 
   // ---------- Wallets ----------
   // { daily, dailyDay, earned, totals: { earned, spent, solves, wins, granted },
-  //   winsDay, wins, opponents: { uid: wins } }
+  //   winsDay, wins, opponents: { uid: wins }, collectionsDay, collections }
   function blankWallet() {
-    return { daily: 0, dailyDay: 0, earned: 0, totals: { earned: 0, spent: 0, solves: 0, wins: 0, granted: 0 }, winsDay: 0, wins: 0, opponents: {} };
+    return { daily: 0, dailyDay: 0, earned: 0, totals: { earned: 0, spent: 0, solves: 0, wins: 0, granted: 0 }, winsDay: 0, wins: 0, opponents: {}, collectionsDay: 0, collections: 0 };
   }
   function wallet(w) {
     const b = blankWallet();
@@ -60,6 +62,8 @@
       winsDay: w.winsDay || 0,
       wins: w.wins || 0,
       opponents: Object.assign({}, w.opponents),
+      collectionsDay: w.collectionsDay || 0,
+      collections: w.collections || 0,
     };
   }
   // The day's allowance: unused credits from an earlier day expire and a
@@ -97,17 +101,36 @@
   }
 
   // ---------- Rewards for solving ----------
-  // Published puzzles earn credits on a first No-Hint solve: a Mini 1, a
-  // Daily or Brutal Challenge 3. Genre and collection puzzles (endless,
-  // randomly made) and gifts earn nothing. Returns { amount, kind } or null.
+  // A first No-Hint solve earns credits: a published Mini 1, a Daily or
+  // Brutal Challenge 3, and a genre or collection puzzle 1. Those are
+  // endless, so only a few a day earn (collectionReward) and only full-size
+  // ones (the server checks). Gifts earn nothing. Returns { amount, kind } or null.
   const KEY = /^(daily|mini|brutal):(\d{4}-\d{2}-\d{2})$/;
+  const PLAY_KEY = /^play:[a-z0-9-]{1,40}\/[a-z]{1,12}\/\d{1,12}\/L[A-Za-z0-9.]{1,600}$/; // with its layout code
   function puzzleReward(key, today) {
+    if (PLAY_KEY.test(String(key || ''))) return { amount: ECONOMY.reward.collection, kind: 'collection' };
     const m = KEY.exec(String(key || ''));
     if (!m) return null;
     const date = m[2];
     if (date < ECONOMY.launch || date > today) return null;
     if (m[1] === 'brutal' && new Date(`${date}T00:00:00Z`).getUTCDay() !== 1) return null; // weeks are named by their Monday
     return m[1] === 'mini' ? { amount: ECONOMY.reward.mini, kind: 'mini' } : { amount: ECONOMY.reward.full, kind: 'full' };
+  }
+
+  // Whether a genre or collection solve still earns today. Returns { amount, why }.
+  function collectionReward(w, day) {
+    w = wallet(w);
+    if (w.collectionsDay === day && w.collections >= ECONOMY.collectionRewardsPerDay) return { amount: 0, why: 'daily-limit' };
+    return { amount: ECONOMY.reward.collection, why: 'solve' };
+  }
+  function recordCollectionReward(w, day) {
+    w = wallet(w);
+    if (w.collectionsDay !== day) {
+      w.collectionsDay = day;
+      w.collections = 0;
+    }
+    w.collections++;
+    return w;
   }
 
   // ---------- Grids ----------
@@ -209,7 +232,7 @@
   const api = {
     ECONOMY, DUELS, sastDay, sastDate, dayToDate, msUntilReset,
     blankWallet, wallet, refreshDaily, available, spend, earn,
-    puzzleReward, progress, validGrid, winReward, recordWinReward,
+    puzzleReward, collectionReward, recordCollectionReward, progress, validGrid, winReward, recordWinReward,
     blankDuelStats, duelStats, applyOutcome, winRate, CODE_ALPHABET, validCode, validName, politeName,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;

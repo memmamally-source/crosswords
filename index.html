@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600;1,6..72,700&family=Public+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=47" />
+  <link rel="stylesheet" href="css/styles.css?v=48" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -377,7 +377,6 @@
         <div class="duel-clock"><span id="duel-clock" aria-label="Time left">0:00</span><small id="duel-lead"></small></div>
         <div class="duel-side duel-opp"><span class="duel-who" id="duel-opp-name"></span><span class="duel-meter" aria-hidden="true"><i id="duel-opp-bar"></i></span><b id="duel-opp-pct">0%</b></div>
         <p class="duel-note" id="duel-note" role="status"></p>
-        <button class="link-btn duel-resign" data-action="duel-resign">Resign</button>
       </div>
 
       <div class="toolbar" role="toolbar" aria-label="Puzzle tools">
@@ -411,6 +410,7 @@
               <button data-action="reveal-all" id="reveal-all-btn">Puzzle</button>
             </div>
           </div>
+          <button class="tool duel-only" data-action="duel-resign" id="resign-btn" title="Give up this duel: your opponent wins">Resign</button>
           <div class="menu menu-right">
             <button class="tool" data-menu="check" id="check-btn">Check</button>
             <div class="menu-list" data-menu-list="check" hidden>
@@ -679,6 +679,7 @@
         <li><span>Every day you sign in</span><b>5 daily</b></li>
         <li><span>Solve a Mini without hints</span><b>+1</b></li>
         <li><span>Solve a Daily or the Brutal Challenge without hints</span><b>+3</b></li>
+        <li><span>Solve a genre or collection crossword without hints (3 a day)</span><b>+1</b></li>
         <li><span>Win a crossword duel (3 rewarded wins a day)</span><b>+3</b></li>
       </ul>
       <p class="wallet-note">No-Hint rewards are paid once per puzzle, the first time you solve it. Checking, auto-check or any reveal means no reward.</p>
@@ -732,27 +733,27 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=47"></script>
-  <script src="js/words.js?v=47"></script>
-  <script src="js/collections.js?v=47"></script>
-  <script src="js/genres.js?v=47"></script>
-  <script src="js/ladder.js?v=47"></script>
-  <script src="js/economy.js?v=47"></script>
-  <script src="js/sync.js?v=47"></script>
-  <script src="js/featured.js?v=47"></script>
-  <script src="js/hints.js?v=47"></script>
-  <script src="js/stats.js?v=47"></script>
-  <script src="js/access.js?v=47"></script>
-  <script src="js/share.js?v=47"></script>
-  <script src="js/gifts.js?v=47"></script>
-  <script src="js/arcade.js?v=47"></script>
-  <script src="js/rooms.js?v=47"></script>
-  <script src="js/firebase-config.js?v=47"></script>
-  <script src="js/analytics.js?v=47"></script>
-  <script src="js/app.js?v=47"></script>
-  <script type="module" src="js/firebase.js?v=47"></script>
-  <script type="module" src="js/account.js?v=47"></script>
-  <script type="module" src="js/room.js?v=47"></script>
-  <script type="module" src="js/online.js?v=47"></script>
+  <script src="js/generator.js?v=48"></script>
+  <script src="js/words.js?v=48"></script>
+  <script src="js/collections.js?v=48"></script>
+  <script src="js/genres.js?v=48"></script>
+  <script src="js/ladder.js?v=48"></script>
+  <script src="js/economy.js?v=48"></script>
+  <script src="js/sync.js?v=48"></script>
+  <script src="js/featured.js?v=48"></script>
+  <script src="js/hints.js?v=48"></script>
+  <script src="js/stats.js?v=48"></script>
+  <script src="js/access.js?v=48"></script>
+  <script src="js/share.js?v=48"></script>
+  <script src="js/gifts.js?v=48"></script>
+  <script src="js/arcade.js?v=48"></script>
+  <script src="js/rooms.js?v=48"></script>
+  <script src="js/firebase-config.js?v=48"></script>
+  <script src="js/analytics.js?v=48"></script>
+  <script src="js/app.js?v=48"></script>
+  <script type="module" src="js/firebase.js?v=48"></script>
+  <script type="module" src="js/account.js?v=48"></script>
+  <script type="module" src="js/room.js?v=48"></script>
+  <script type="module" src="js/online.js?v=48"></script>
 </body>
 </html>
