@@ -70,7 +70,7 @@ Answer **Yes**, the app collects user data, and **No**, it doesn't share any wit
 
 - Category: Game (puzzle/word).
 - Violence, fear, sexuality, language, drugs, gambling: **No** to all.
-- Do users interact or exchange content? **Yes.** Players in a duel see each other's chosen display name and progress. There's no chat. Names are filtered for offensive words, and every duel result has a "Report this player's name" link.
+- Do users interact or exchange content? **Yes.** Players in a duel see each other's chosen display name and progress. There's no chat. Names are filtered for offensive words, and the duel lobby and result screens have **Report name** and **Block player** buttons.
 - Shares the user's location: No. Digital purchases: No.
 
 Expected result: Everyone / PEGI 3 (possibly with "Users Interact").
@@ -92,7 +92,7 @@ No Usage Data, Diagnostics, Location or Purchases. Tracking: **No**.
 
 ## Apple: Age rating
 
-Answer **None** to every content question. "Unrestricted web access": No. "User-generated content": the duel display names count, so answer Yes if asked; there's filtering and a report link. Expected rating: 4+ or 9+.
+Answer **None** to every content question. "Unrestricted web access": No. "User-generated content": the duel display names count, so answer Yes if asked; there's filtering, reporting and blocking. Expected rating: 4+ or 9+.
 
 ## Apple: App Review notes
 
@@ -115,3 +115,21 @@ Answer **None** to every content question. "Unrestricted web access": No. "User-
 | ios-1 … ios-6 (1320 × 2868) | App Store: 6.9″ iPhone | Home, a Daily in progress, a live duel, Word Ladder, Play page, Statistics |
 | play-1 … play-6 (1080 × 1920) | Google Play: phone | The same six |
 | play-feature-graphic.png (1024 × 500) | Google Play: feature graphic | Logo and name |
+
+## Apple: reply to "Guideline 2.1 - Information Needed"
+
+Paste into the reply in App Store Connect (App Review messages) and into App Review Information → Notes. Attach the screen recording to the reply.
+
+> 1. Screen recording: attached. Recorded on an iPhone with the latest iOS. It shows launching the app, solving the Daily and the Mini, a word game, creating an account, signing in, a Crossword Duel between two devices with the Report name and Block player buttons, and deleting the account (Account → Delete account…).
+>
+> 2. Purpose and audience: Crossword Hub is a free daily crossword app for adults and teenagers (13+) who enjoy word puzzles. It gives them a new Daily crossword, a quick Mini and a weekly Brutal Challenge, themed crosswords, word games (Word Ladder, Clue Blitz, Survival), and live crossword duels with friends. It is a calm, ad-free way to exercise vocabulary and general knowledge every day.
+>
+> 3. Setup and main features: no account is needed; every puzzle and game can be played straight away from the Today and Play tabs. An optional account (email and password) syncs progress and gives 5 free hint credits a day. Demo account: crosswordhub+review@gmail.com / [password]. Duels need two devices: Play → Mini Duel → Challenge a friend, then open the link on the second device (or tap Quick Match on both at the same time). Account deletion: person icon at the top → Delete account… → enter the password.
+>
+> 4. External services: Google Firebase (Authentication for email sign-in; Cloud Firestore, Cloud Functions and Realtime Database for synced progress, hint credits and duels) and Google Fonts for the typefaces. No payment processors, no AI services, no advertising or analytics in the app. All puzzles are bundled in the app.
+>
+> 5. Regional differences: none. The app works the same in every region; daily puzzles change at midnight South African time.
+>
+> 6. Regulated industry / third-party material: not a regulated industry. The crosswords are original: every clue is written for Crossword Hub. Some themed crosswords ask trivia questions about popular films, shows, games, sport and music; they are labelled "Unofficial fan crossword", use no logos, artwork, images, audio or copyrighted text, and claim no affiliation with any rights holder. There are no in-app purchases or paid content.
+>
+> User-generated content: the only thing players create is a display name for duels. Names are filtered for offensive words; the duel lobby and result screens have Report name (reports are reviewed within 24 hours) and Block player (the two players are never matched again); contact: crosswordhub@gmail.com.

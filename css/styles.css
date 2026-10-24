@@ -2139,7 +2139,8 @@ dialog {
 .duel-share { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; }
 .duel-share .btn { justify-content: center; padding-inline: 8px; }
 .in-app .web-only { display: none; }
-.duel-report { display: inline-block; margin-top: 14px; font-size: 0.8rem; color: var(--ink-soft); }
+.duel-safety { margin: 14px 0 0; font-size: 0.85rem; color: var(--ink-soft); }
+.duel-safety .link-btn { font-size: inherit; }
 .duel-small { margin: 0; font-size: 0.8rem; color: var(--ink-soft); }
 /* Ready switch: flips at once, green when on. */
 .duel-toggle { display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 8px 18px 8px 10px; border: 1.5px solid var(--ink); border-radius: 999px; background: var(--cell); color: var(--ink); font-weight: 800; font-size: 1.05rem; box-shadow: 0 3px 0 var(--ink); cursor: pointer; -webkit-tap-highlight-color: transparent; }
