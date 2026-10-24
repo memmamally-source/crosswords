@@ -8,6 +8,8 @@
   const inApp = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
   const SITE = 'https://crosswordhub.app/'; // where links to share point from the app
   if (inApp) document.documentElement.classList.add('in-app');
+  // The app and an installed web app have no browser Back button: show our own.
+  const appShell = inApp || window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
   const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -3111,6 +3113,7 @@
       case 'consent-yes': setAnalytics(true); return;
       case 'consent-no': setAnalytics(false); return;
       case 'stats': navigate('#/stats'); return;
+      case 'back': if (history.length > 1) history.back(); else navigate('#/'); return;
       case 'wallet': openWallet(); return;
       case 'duel-ready': case 'duel-leave': case 'duel-resign': case 'duel-rematch': case 'duel-accept':
       case 'duel-report': case 'duel-block': case 'duel-unblock':
@@ -3344,6 +3347,8 @@
     analytics.page(CrosswordShare.pagePath(currentRoute));
     if (challenge) analytics.track('challenge_open', { page: CrosswordShare.pagePath(currentRoute) });
     const parts = path.replace(/^#\/?/, '').split('/');
+    const topLevel = ['', 'archive', 'genres', 'stats'].includes(parts[0]) || (parts[0] === 'arcade' && !parts[1]);
+    document.documentElement.classList.toggle('can-back', appShell && !topLevel);
     leaveGame();
     if (parts[0] !== 'duel') leaveDuel();
     const today = todayKey();
