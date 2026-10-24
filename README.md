@@ -449,6 +449,8 @@ cards say "Coming soon". The rules live in `js/economy.js` (pure functions,
 `tests/economy.test.js`), used by the server to decide and by the page to
 display.
 
+**Reports and blocks.** Duel names are the only thing players write that others see. Names pass a filter; in the lobby and on the result screen each player can **Report name** (stored in Firestore `reports/{duel}_{reporter}` with the name, both account IDs and `status: 'open'`) or **Block player** (`blocks/{uid}`; the two are never paired by Quick Match, a challenge link or a rematch, whoever blocked; Undo on the result screen). Only the server reads or writes either. Apple expects reports to be dealt with within 24 hours: check Firebase console → Firestore → `reports`, and for a bad name, edit `players.{uid}.name` in that duel and set the report's `status` to `done`.
+
 **Hint credits**
 
 | | |

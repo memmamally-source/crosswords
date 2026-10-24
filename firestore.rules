@@ -34,6 +34,15 @@ service cloud.firestore {
       }
     }
 
+    // Blocks and reports of duel opponents: written and read only by the
+    // server.
+    match /blocks/{uid} {
+      allow read, write: if false;
+    }
+    match /reports/{report} {
+      allow read, write: if false;
+    }
+
     // Duel records, and a Quick Match the server found for you.
     match /players/{uid} {
       allow read: if isUser(uid);

@@ -9,7 +9,8 @@
  *
  *   Wallets:  walletSync, spendHint, claimSolve
  *   Duels:    duelCreate, duelJoin, duelQuick, duelQuickCancel, duelReady,
- *             duelState, duelHint, duelProgress, duelLeave, duelSettle
+ *             duelState, duelHint, duelProgress, duelLeave, duelSettle,
+ *             duelReport, duelBlock
  *   Account:  accountDelete
  *
  * Collections (all written only by this server):
@@ -24,6 +25,8 @@
  *   duels/{id}/presence/{uid}     "still here" heartbeats (the one thing players write)
  *   duelCodes/{code}              private challenge codes
  *   quick/{mode}                  the player waiting for a Quick Match
+ *   blocks/{uid}                  players this player has blocked (never matched again)
+ *   reports/{duel_reporter}       a duel opponent's name reported as offensive
  */
 const { onCall, HttpsError } = require('firebase-functions/v2/https');
 const { setGlobalOptions } = require('firebase-functions/v2');
@@ -219,6 +222,14 @@ function newDuel(t, { mode, players, uids, host, code, invited = null, rematchOf
   return ref;
 }
 const isParticipant = (d, uid) => Array.isArray(d.uids) && d.uids.includes(uid);
+// Blocked players never meet again: no Quick Match, challenge or rematch
+// between them, whichever of the two did the blocking.
+const blocksRef = (uid) => db.doc(`blocks/${uid}`);
+async function blockedEither(t, a, b) {
+  const [x, y] = await Promise.all([t.get(blocksRef(a)), t.get(blocksRef(b))]);
+  const has = (snap, uid) => snap.exists && Array.isArray(snap.data().uids) && snap.data().uids.includes(uid);
+  return has(x, b) || has(y, a);
+}
 
 // A private challenge: returns its id and a code to share.
 exports.duelCreate = onCall(async (req) => {
@@ -234,6 +245,7 @@ exports.duelCreate = onCall(async (req) => {
       if (d.status !== 'done') fail('failed-precondition', 'That duel hasn’t finished.');
       if (d.rematch) return { id: d.rematch, code: null };
       const other = d.uids.find((u) => u !== uid);
+      if (other && await blockedEither(t, uid, other)) fail('permission-denied', 'You can’t play this player again.');
       const built = puzzleFor(d.mode);
       const ref = newDuel(t, {
         mode: d.mode, status: 'open', host: uid, uids: [uid], invited: other || null, rematchOf: old.id,
@@ -273,6 +285,7 @@ exports.duelJoin = onCall(async (req) => {
     if (isParticipant(d, uid)) return { id: duelId };
     if (d.status !== 'open' || d.expiresAt < ms) fail('failed-precondition', 'That challenge has already started or expired.');
     if (d.invited && d.invited !== uid) fail('permission-denied', 'That rematch is for someone else.');
+    if (await blockedEither(t, d.host, uid)) fail('permission-denied', 'You can’t join this challenge.');
     t.update(snap.ref, { uids: [...d.uids, uid], [`players.${uid}`]: playerEntry(req, name), status: 'lobby' });
     return { id: duelId };
   });
@@ -297,7 +310,11 @@ exports.duelQuick = onCall(async (req) => {
       if (paired.exists && ['lobby', 'live'].includes(paired.data().status)) return { id: found.duel };
     }
     const waiting = line.exists ? line.data() : null;
-    if (waiting && waiting.uid !== uid && waiting.at > ms - E.DUELS.quickWaitMs) {
+    const fresh = waiting && waiting.uid !== uid && waiting.at > ms - E.DUELS.quickWaitMs;
+    // Never pair two players when one has blocked the other: leave the
+    // waiting player in line and try again later.
+    if (fresh && await blockedEither(t, waiting.uid, uid)) return { waiting: true };
+    if (fresh) {
       const ref = newDuel(t, {
         mode, status: 'lobby', host: waiting.uid, uids: [waiting.uid, uid],
         players: { [waiting.uid]: waiting.player, [uid]: playerEntry(req, name) }, built, ms,
@@ -522,6 +539,35 @@ exports.duelLeave = onCall(async (req) => {
   });
 });
 
+// Reporting and blocking a duel opponent (names are the only thing players
+// write that others see). A report is kept for review in Firestore
+// (reports collection); blocking stops the two players ever meeting again.
+function opponentIn(snap, uid) {
+  if (!snap.exists || !isParticipant(snap.data(), uid)) fail('not-found', 'That duel isn’t yours.');
+  const other = snap.data().uids.find((u) => u !== uid);
+  if (!other) fail('failed-precondition', 'There’s no other player in that duel.');
+  return other;
+}
+exports.duelReport = onCall(async (req) => {
+  const uid = caller(req);
+  const { id } = req.data || {};
+  const snap = await duelRef(String(id)).get();
+  const other = opponentIn(snap, uid);
+  await db.doc(`reports/${snap.id}_${uid}`).set({
+    duel: snap.id, reporter: uid, reported: other, name: snap.data().players[other].name,
+    reason: 'offensive-name', status: 'open', at: FieldValue.serverTimestamp(),
+  });
+  return { ok: true };
+});
+exports.duelBlock = onCall(async (req) => {
+  const uid = caller(req);
+  const { id, block = true } = req.data || {};
+  const snap = await duelRef(String(id)).get();
+  const other = opponentIn(snap, uid);
+  await blocksRef(uid).set({ uids: block ? FieldValue.arrayUnion(other) : FieldValue.arrayRemove(other) }, { merge: true });
+  return { blocked: !!block };
+});
+
 // The duel as the server has it, with the server's clock. Pages ask when
 // their live copy may have stalled (phones often pause it, for example after
 // switching apps), and use the clock so both players count down to the same
@@ -607,6 +653,7 @@ exports.accountDelete = onCall(async (req) => {
   await Promise.all([
     db.recursiveDelete(walletRef(uid)),
     db.recursiveDelete(playerRef(uid)),
+    db.recursiveDelete(blocksRef(uid)),
     db.recursiveDelete(db.doc(`users/${uid}`)),
   ]);
   await admin.auth().deleteUser(uid);

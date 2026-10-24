@@ -3113,6 +3113,7 @@
       case 'stats': navigate('#/stats'); return;
       case 'wallet': openWallet(); return;
       case 'duel-ready': case 'duel-leave': case 'duel-resign': case 'duel-rematch': case 'duel-accept':
+      case 'duel-report': case 'duel-block': case 'duel-unblock':
       case 'duel-copy': case 'duel-whatsapp': case 'duel-share': case 'duel-result-share': case 'duel-quick-cancel':
         duelAction(action); return;
       case 'wallet-signin': closeDialogs(); $('#account-btn').click(); return;
@@ -4537,6 +4538,15 @@
   function duelShareLink(d) {
     return `${siteUrl()}#/duel/j/${d.code}`;
   }
+  // Report and block, for the opponent's name (the one thing players write
+  // that others see). Blocking means the two never meet again.
+  function duelSafety(d, opp) {
+    if (!opp) return '';
+    const name = esc(d.players[opp].name);
+    if (duel.blocked) return `<p class="duel-safety">You’ve blocked ${name}: you won’t be matched again. <button class="link-btn" data-action="duel-unblock">Undo</button></p>`;
+    return `<p class="duel-safety">${duel.reportedName ? 'Thanks: we’ll review that name within 24 hours.' : '<button class="link-btn" data-action="duel-report">Report name</button>'}
+      <span aria-hidden="true">·</span> <button class="link-btn" data-action="duel-block">Block player</button></p>`;
+  }
   function renderLobby(d) {
     if (!$('#game-view').hidden) showView('duel');
     const mine = duelMe();
@@ -4568,6 +4578,7 @@
           <span class="duel-toggle-label">${meReady ? 'I’m ready' : 'Ready?'}</span></button>` : ''}
         <button class="btn" data-action="duel-leave">${d.host === mine && !opp ? 'Cancel challenge' : 'Leave'}</button>
       </div>
+      ${duelSafety(d, opp)}
       ${opp ? `<p class="duel-small">${meReady && !p[opp].ready ? `Waiting for ${esc(p[opp].name)} to get ready… Tap the switch again if you need a moment.` : !meReady && p[opp].ready ? `${esc(p[opp].name)} is ready. Flip the switch when you are.` : `Flip the switch when you’re ready. The duel starts ${DUELS.countdownMs / 1000} seconds after you both are.`}</p>` : ''}
       <ul class="duel-rules"><li>The same crossword for both of you; first to fill it in correctly wins.</li><li>No checking. Hints cost credits as usual and freeze your board: ${DUEL_FREEZE.letter / 1000} seconds for a letter, ${DUEL_FREEZE.word / 1000} for a word.</li><li>You see each other’s progress and number of hints, never the letters.</li><li>${esc(label)}s last up to ${DUELS[d.mode].minutes} minutes; if time runs out, it’s a draw.</li><li>The winner earns 3 Hint Credits (signed-in players, up to 3 rewarded wins a day).</li></ul>`);
   }
@@ -4739,14 +4750,14 @@
         <div><b>${prog[opp] || 0}%</b><span>${esc(oppName)}</span></div>
         <div><b>${r.seconds ? formatTime(r.seconds) : '—'}</b><span>${r.reason === 'solved' ? 'Winning time' : 'Time'}</span></div>
       </div>
-      ${rematchOffer ? `<p class="duel-offer">${esc(oppName)} wants a rematch.</p>` : ''}
+      ${rematchOffer && !duel.blocked ? `<p class="duel-offer">${esc(oppName)} wants a rematch.</p>` : ''}
       <div class="duel-buttons">
-        ${rematchOffer ? '<button class="btn btn-primary" data-action="duel-accept">Accept rematch</button>' : `<button class="btn btn-primary" data-action="duel-rematch">Rematch</button>`}
+        ${duel.blocked ? '' : rematchOffer ? '<button class="btn btn-primary" data-action="duel-accept">Accept rematch</button>' : `<button class="btn btn-primary" data-action="duel-rematch">Rematch</button>`}
         <button class="btn" data-open="#/duel/new/${d.mode}">Challenge another friend</button>
         <button class="btn" data-action="duel-result-share">Share result</button>
         <button class="btn" data-nav="arcade">Back to Play</button>
       </div>
-      <a class="duel-report" href="mailto:crosswordhub@gmail.com?subject=${encodeURIComponent('Report a player name')}&body=${encodeURIComponent(`Duel ${duel.id}: the name “${oppName}” is offensive.`)}">Report this player’s name</a>
+      ${duelSafety(d, opp)}
     </div>`);
     if (won) $('.duel-trophy').innerHTML = $('#win-dialog .win-art').innerHTML;
     if (!duel.reported) {
@@ -4792,6 +4803,25 @@
         if (!window.confirm('Resign this duel? Your opponent wins.')) return;
         await online.call('duelLeave', { id: dd.id });
         await refreshDuel(dd); // show the result now, even if live updates have stalled
+      } else if (action === 'duel-report') {
+        const name = d.players[duelOpp(d)].name;
+        if (!window.confirm(`Report “${name}” as an offensive name? We review every report within 24 hours.`)) return;
+        await online.call('duelReport', { id: dd.id });
+        dd.reportedName = true;
+        toast('Reported. Thank you.');
+        renderDuel();
+      } else if (action === 'duel-block' || action === 'duel-unblock') {
+        const block = action === 'duel-block';
+        const name = d.players[duelOpp(d)].name;
+        if (block && !window.confirm(`Block ${name}? You won’t be matched with them again${d.status === 'lobby' || d.status === 'open' ? ', and you’ll leave this duel' : ''}.`)) return;
+        await online.call('duelBlock', { id: dd.id, block });
+        dd.blocked = block;
+        toast(block ? `${name} is blocked.` : `${name} is unblocked.`);
+        if (block && (d.status === 'lobby' || d.status === 'open')) {
+          await online.call('duelLeave', { id: dd.id });
+          return navigate('#/arcade');
+        }
+        renderDuel();
       } else if (action === 'duel-rematch') {
         dd.rematchMine = true;
         const name = await duelName();

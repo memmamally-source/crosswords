@@ -394,6 +394,31 @@ const ok = (label) => console.log(`  ✓ ${label}`);
   await b.call('duelQuickCancel', { mode: 'mini' });
   ok('Quick Match pairs the same kind of duel, once, and never with a stale or absent player');
 
+  // Reporting and blocking an opponent.
+  console.log('Reports and blocks');
+  await b.call('duelReport', { id: q3.id });
+  const report = (await adb.doc(`reports/${q3.id}_${b.uid}`).get()).data();
+  assert.deepStrictEqual([report.reported, report.name, report.status], [a.uid, 'Ann', 'open'], 'the report is kept for review');
+  await rejects(c.call('duelReport', { id: q3.id }), 'not-found', 'outsiders can’t report');
+  await rejects(getDoc(doc(b.db, `reports/${q3.id}_${b.uid}`)), 'permission-denied', 'players can’t read reports');
+  assert.deepStrictEqual((await b.call('duelBlock', { id: q3.id })), { blocked: true });
+  await rejects(getDoc(doc(b.db, `blocks/${b.uid}`)), 'permission-denied', 'players can’t read block lists');
+  await rejects(setDoc(doc(a.db, `blocks/${a.uid}`), { uids: [] }), 'permission-denied', 'or write them');
+  const blockedChallenge = await a.call('duelCreate', { mode: 'mini', name: 'Ann' });
+  await rejects(b.call('duelJoin', { code: blockedChallenge.code, name: 'Bob' }), 'permission-denied', 'no challenges between blocked players');
+  await c.call('duelJoin', { code: blockedChallenge.code, name: 'Cy' });
+  await a.call('duelLeave', { id: blockedChallenge.id });
+  await adb.doc(`players/${a.uid}`).set({ found: null }, { merge: true }); // Ann's earlier match is over
+  assert.ok((await a.call('duelQuick', { mode: 'classic', name: 'Ann' })).waiting);
+  assert.ok((await b.call('duelQuick', { mode: 'classic', name: 'Bob' })).waiting, 'Quick Match never pairs them');
+  assert.strictEqual((await adb.doc('quick/classic').get()).data().uid, a.uid, 'and the waiting player keeps their place');
+  await b.call('duelBlock', { id: q3.id, block: false });
+  await b.call('duelLeave', { id: q3.id });
+  const unblocked = await b.call('duelQuick', { mode: 'classic', name: 'Bob' });
+  assert.ok(unblocked.id, 'unblocking lets them meet again');
+  await a.call('duelLeave', { id: unblocked.id });
+  ok('reports kept for review; blocked players never meet, whoever blocked; lists private');
+
   // Lobby rules.
   const d8 = await a.call('duelCreate', { mode: 'mini', name: 'Ann' });
   await b.call('duelJoin', { code: d8.code, name: 'Bob' });
