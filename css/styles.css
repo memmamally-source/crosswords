@@ -256,7 +256,22 @@ h1, h2, h3 { text-wrap: balance; }
 .segmented button[aria-checked='true'] { background: var(--primary); color: var(--on-primary); }
 
 /* ---------- Masthead ---------- */
+/* The phone's status bar (and the iPhone's Dynamic Island or notch) sits over
+   the top of the page in the app and the installed web app (viewport-fit=cover):
+   keep everything below it, with a solid strip behind it so nothing scrolls
+   underneath. In a browser tab the inset is 0 and nothing changes. */
+:root { --inset-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px)); } /* the Android app's bars plugin sets --safe-area-inset-top */
+body { padding-top: var(--inset-top); padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px); }
+body::before { content: ''; position: fixed; z-index: 60; top: 0; left: 0; right: 0; height: var(--inset-top); background: var(--paper); pointer-events: none; }
 .masthead { background: var(--card); border-bottom: 1px solid var(--rule); padding-inline: 16px; }
+/* Back: the app and the installed web app have no browser Back button. */
+.back-btn { display: none; }
+.can-back .back-btn { display: inline-flex; grid-row: 1; grid-column: 1; justify-self: start; margin-left: -8px; }
+.can-back .back-btn svg { width: 26px; height: 26px; stroke-width: 2.2; }
+@media (min-width: 641px) {
+  .can-back .masthead-bar { grid-template-columns: auto auto minmax(0, 1fr) auto; }
+  .can-back .masthead-bar > :not(.back-btn) { grid-row: 1; }
+}
 .masthead-bar {
   max-width: var(--max);
   margin: 0 auto;
@@ -549,7 +564,7 @@ body.in-game .dateline { display: none; }
 
 .toolbar {
   position: sticky;
-  top: env(safe-area-inset-top, 0px);
+  top: var(--inset-top);
   z-index: 20;
   display: flex;
   flex-wrap: wrap;
@@ -905,7 +920,7 @@ dialog[open]::backdrop { animation: fade-in 0.2s ease; }
 @media (pointer: coarse) {
   .footer-keys { display: none; }
   /* Keep the current clue in view while the keyboard is open. */
-  .clue-bar { position: sticky; top: 0; z-index: 6; }
+  .clue-bar { position: sticky; top: var(--inset-top); z-index: 6; }
 }
 
 /* ---------- Dialogs ---------- */
@@ -1141,7 +1156,7 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   .tool { padding: 0 9px; }
   .tool span { display: none; }
   .tool-primary { margin-left: 0; }
-  .clue-bar { position: sticky; top: 57px; z-index: 15; margin-bottom: 10px; }
+  .clue-bar { position: sticky; top: calc(var(--inset-top) + 57px); z-index: 15; margin-bottom: 10px; }
   .calendar { gap: 4px; }
   .calendar button { aspect-ratio: 1; }
   body.in-game .masthead-nav { display: none; }
@@ -1285,7 +1300,7 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
      doesn't change when the keyboard opens; the grid just scrolls up. */
   body.phone-keyboard .clue-bar {
     position: sticky;
-    top: calc(env(safe-area-inset-top, 0px) + var(--tools-height, 52px));
+    top: calc(var(--inset-top) + var(--tools-height, 52px));
     bottom: auto;
     z-index: 15;
     min-height: 0;
@@ -2029,7 +2044,7 @@ body {
    scrolls inside the dialog. */
 dialog {
   max-height: calc(100vh - 32px);
-  max-height: calc(100dvh - 24px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+  max-height: calc(100dvh - 24px - var(--inset-top) - env(safe-area-inset-bottom, 0px));
   overflow-y: auto;
   overscroll-behavior: contain;
 }
@@ -2209,7 +2224,7 @@ dialog {
 /* Keep focused and scrolled-to controls clear of the phone tab bar. */
 @media (max-width: 640px) { html { scroll-padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); } }
 /* The duel's scores stay in view while you solve. */
-.duel-bar { position: sticky; top: 0; z-index: 7; }
+.duel-bar { position: sticky; top: var(--inset-top); z-index: 7; }
 
 /* Narrower phones: a smaller wordmark, so the account, credits and
    settings buttons all fit beside it (with a three-digit balance too). */
