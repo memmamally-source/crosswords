@@ -5134,8 +5134,10 @@
       $('#install-btn').hidden = false;
       card.hidden = false;
     } else if (isIOS()) {
+      // iPhones and iPads: the real app is on the App Store.
       $('#install-btn').hidden = true;
-      $('#install-text').textContent = 'Tap the Share button, then “Add to Home Screen”. It opens full screen and works offline.';
+      $('#appstore-btn').hidden = false;
+      $('#install-text').textContent = 'Crossword Hub is on the App Store: it opens instantly and works offline.';
       card.hidden = false;
     }
   }
