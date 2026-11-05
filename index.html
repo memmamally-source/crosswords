@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600;1,6..72,700&family=Public+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=50" />
+  <link rel="stylesheet" href="css/styles.css?v=51" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -71,6 +71,8 @@
             <label class="switch"><input type="checkbox" id="set-vibrate" /><span>Vibrate on taps and wins</span></label>
             <label class="switch" id="set-appkeys-row" hidden><input type="checkbox" id="set-appkeys" /><span>Use Crossword Hub’s letter keys instead of your phone’s keyboard</span></label>
             <label class="switch" id="set-analytics-row" hidden><input type="checkbox" id="set-analytics" /><span>Share anonymous usage statistics</span></label>
+            <button class="link-btn panel-link" data-action="welcome">How Crossword Hub works</button>
+            <a class="link-btn panel-link" id="feedback-link" href="mailto:crosswordhub@gmail.com?subject=Crossword%20Hub%20feedback">Send feedback</a>
             <button class="link-btn panel-link" data-action="privacy">Privacy</button>
           </div>
         </div>
@@ -633,6 +635,32 @@
     <button class="dialog-close" data-action="close-dialog" aria-label="Close">✕</button>
   </dialog>
 
+  <dialog id="welcome-dialog" aria-labelledby="welcome-title">
+    <div class="welcome">
+      <p class="kicker" id="welcome-step">1 of 3</p>
+      <div class="welcome-card" data-step="0">
+        <h2 id="welcome-title">Welcome to Crossword Hub</h2>
+        <p>A new <b>Daily</b> crossword every day, getting harder from Monday to Saturday, plus a quick <b>Mini</b> and a weekly <b>Brutal Challenge</b>. Find them on <b>Today</b>, and every earlier puzzle in <b>Archive</b>.</p>
+        <p>Tap a square to start, tap it again to switch between across and down, and use ‹ › on the clue bar to move between clues.</p>
+      </div>
+      <div class="welcome-card" data-step="1" hidden>
+        <h2>Play your way</h2>
+        <p><b>Collections</b> has themed crosswords about TV, film, sport, music, science and more, at three levels.</p>
+        <p><b>Play</b> has word games (Word Ladder, Clue Blitz, Survival) and <b>Crossword Duels</b>: race a friend through the same crossword, live.</p>
+      </div>
+      <div class="welcome-card" data-step="2" hidden>
+        <h2>Stuck? Use a hint</h2>
+        <p><b>Reveal</b> shows a letter or a word. Solve without hints and your streak and No-Hint record grow.</p>
+        <p>No account is needed. Create a free one (the person icon at the top) for 5 hint credits a day and your progress on every device.</p>
+      </div>
+      <div class="welcome-actions">
+        <button class="link-btn" data-action="welcome-skip" id="welcome-skip">Skip</button>
+        <button class="btn btn-primary" data-action="welcome-next" id="welcome-next" autofocus>Next</button>
+      </div>
+    </div>
+    <button class="dialog-close" data-action="welcome-skip" aria-label="Close">✕</button>
+  </dialog>
+
   <dialog id="privacy-dialog" aria-labelledby="privacy-title">
     <div class="privacy">
       <p class="kicker">Your data</p>
@@ -704,7 +732,7 @@
         <p class="account-or"><span>or use your email</span></p>
         <form id="account-form" novalidate>
           <label>Email<input type="email" id="account-email" autocomplete="email" required /></label>
-          <label>Password<input type="password" id="account-password" autocomplete="current-password" minlength="6" required /></label>
+          <label>Password<span class="pw-field"><input type="password" id="account-password" autocomplete="current-password" minlength="6" required /><button type="button" class="pw-toggle" data-action="toggle-password" aria-label="Show password" aria-pressed="false">Show</button></span></label>
           <button class="btn btn-primary" type="submit" id="account-submit">Sign in</button>
         </form>
         <p class="account-links">
@@ -720,7 +748,7 @@
         <button class="link-btn account-delete-link" type="button" data-account="delete-start">Delete account…</button>
         <div class="account-delete" id="account-delete" hidden>
           <p><b>Delete your account?</b> This permanently deletes your synced progress, your hint credits (earned ones too), your duel record and your sign-in. Progress saved on this device stays. This can’t be undone.</p>
-          <label id="account-delete-pw-row">Confirm with your password<input type="password" id="account-delete-password" autocomplete="current-password" /></label>
+          <label id="account-delete-pw-row">Confirm with your password<span class="pw-field"><input type="password" id="account-delete-password" autocomplete="current-password" /><button type="button" class="pw-toggle" data-action="toggle-password" aria-label="Show password" aria-pressed="false">Show</button></span></label>
           <div class="account-delete-actions">
             <button class="btn btn-danger" type="button" data-account="delete-confirm" id="account-delete-confirm">Delete my account</button>
             <button class="btn" type="button" data-account="delete-cancel">Keep it</button>
@@ -734,27 +762,27 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=50"></script>
-  <script src="js/words.js?v=50"></script>
-  <script src="js/collections.js?v=50"></script>
-  <script src="js/genres.js?v=50"></script>
-  <script src="js/ladder.js?v=50"></script>
-  <script src="js/economy.js?v=50"></script>
-  <script src="js/sync.js?v=50"></script>
-  <script src="js/featured.js?v=50"></script>
-  <script src="js/hints.js?v=50"></script>
-  <script src="js/stats.js?v=50"></script>
-  <script src="js/access.js?v=50"></script>
-  <script src="js/share.js?v=50"></script>
-  <script src="js/gifts.js?v=50"></script>
-  <script src="js/arcade.js?v=50"></script>
-  <script src="js/rooms.js?v=50"></script>
-  <script src="js/firebase-config.js?v=50"></script>
-  <script src="js/analytics.js?v=50"></script>
-  <script src="js/app.js?v=50"></script>
-  <script type="module" src="js/firebase.js?v=50"></script>
-  <script type="module" src="js/account.js?v=50"></script>
-  <script type="module" src="js/room.js?v=50"></script>
-  <script type="module" src="js/online.js?v=50"></script>
+  <script src="js/generator.js?v=51"></script>
+  <script src="js/words.js?v=51"></script>
+  <script src="js/collections.js?v=51"></script>
+  <script src="js/genres.js?v=51"></script>
+  <script src="js/ladder.js?v=51"></script>
+  <script src="js/economy.js?v=51"></script>
+  <script src="js/sync.js?v=51"></script>
+  <script src="js/featured.js?v=51"></script>
+  <script src="js/hints.js?v=51"></script>
+  <script src="js/stats.js?v=51"></script>
+  <script src="js/access.js?v=51"></script>
+  <script src="js/share.js?v=51"></script>
+  <script src="js/gifts.js?v=51"></script>
+  <script src="js/arcade.js?v=51"></script>
+  <script src="js/rooms.js?v=51"></script>
+  <script src="js/firebase-config.js?v=51"></script>
+  <script src="js/analytics.js?v=51"></script>
+  <script src="js/app.js?v=51"></script>
+  <script type="module" src="js/firebase.js?v=51"></script>
+  <script type="module" src="js/account.js?v=51"></script>
+  <script type="module" src="js/room.js?v=51"></script>
+  <script type="module" src="js/online.js?v=51"></script>
 </body>
 </html>
