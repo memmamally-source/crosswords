@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600;1,6..72,700&family=Public+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=52" />
+  <link rel="stylesheet" href="css/styles.css?v=53" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -84,6 +84,17 @@
   <main id="main">
     <!-- ================= Home ================= -->
     <div id="home-view" class="view" hidden>
+      <aside class="install-card save-card" id="save-card" hidden>
+        <span class="save-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" /></svg></span>
+        <div>
+          <p class="install-title">Don’t lose your progress</p>
+          <p class="install-text" id="save-text">Your puzzles and streak are only saved on this device. Create a free account to keep them on every device, and get 5 hint credits a day.</p>
+        </div>
+        <div class="install-actions">
+          <button class="btn btn-primary" data-action="save-account">Create free account</button>
+          <button class="link-btn" data-action="save-dismiss">Not now</button>
+        </div>
+      </aside>
       <aside class="install-card" id="install-card" hidden>
         <img src="icons/icon-192.png" alt="" width="48" height="48" />
         <div>
@@ -547,6 +558,7 @@
       <p class="win-time" id="win-time"></p>
       <p class="win-text" id="win-text"></p>
       <p class="win-reward" id="win-reward" role="status" hidden></p>
+      <p class="win-save" id="win-save" hidden>Keep this solve and your streak on every device. <button class="link-btn" data-action="save-account">Create a free account</button></p>
       <div class="win-stats" id="win-stats"></div>
       <p class="win-next" id="win-next" hidden></p>
       <blockquote class="gift-note" id="win-gift" hidden></blockquote>
@@ -765,27 +777,27 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=52"></script>
-  <script src="js/words.js?v=52"></script>
-  <script src="js/collections.js?v=52"></script>
-  <script src="js/genres.js?v=52"></script>
-  <script src="js/ladder.js?v=52"></script>
-  <script src="js/economy.js?v=52"></script>
-  <script src="js/sync.js?v=52"></script>
-  <script src="js/featured.js?v=52"></script>
-  <script src="js/hints.js?v=52"></script>
-  <script src="js/stats.js?v=52"></script>
-  <script src="js/access.js?v=52"></script>
-  <script src="js/share.js?v=52"></script>
-  <script src="js/gifts.js?v=52"></script>
-  <script src="js/arcade.js?v=52"></script>
-  <script src="js/rooms.js?v=52"></script>
-  <script src="js/firebase-config.js?v=52"></script>
-  <script src="js/analytics.js?v=52"></script>
-  <script src="js/app.js?v=52"></script>
-  <script type="module" src="js/firebase.js?v=52"></script>
-  <script type="module" src="js/account.js?v=52"></script>
-  <script type="module" src="js/room.js?v=52"></script>
-  <script type="module" src="js/online.js?v=52"></script>
+  <script src="js/generator.js?v=53"></script>
+  <script src="js/words.js?v=53"></script>
+  <script src="js/collections.js?v=53"></script>
+  <script src="js/genres.js?v=53"></script>
+  <script src="js/ladder.js?v=53"></script>
+  <script src="js/economy.js?v=53"></script>
+  <script src="js/sync.js?v=53"></script>
+  <script src="js/featured.js?v=53"></script>
+  <script src="js/hints.js?v=53"></script>
+  <script src="js/stats.js?v=53"></script>
+  <script src="js/access.js?v=53"></script>
+  <script src="js/share.js?v=53"></script>
+  <script src="js/gifts.js?v=53"></script>
+  <script src="js/arcade.js?v=53"></script>
+  <script src="js/rooms.js?v=53"></script>
+  <script src="js/firebase-config.js?v=53"></script>
+  <script src="js/analytics.js?v=53"></script>
+  <script src="js/app.js?v=53"></script>
+  <script type="module" src="js/firebase.js?v=53"></script>
+  <script type="module" src="js/account.js?v=53"></script>
+  <script type="module" src="js/room.js?v=53"></script>
+  <script type="module" src="js/online.js?v=53"></script>
 </body>
 </html>

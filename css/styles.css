@@ -216,6 +216,11 @@ h1, h2, h3 { text-wrap: balance; }
   background: var(--wash);
 }
 .install-card[hidden] { display: none; }
+/* Signed out with progress: create an account to keep it. */
+.save-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 11px; background: var(--primary); color: var(--on-primary); }
+.save-icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.win-save { margin: 10px 0 0; font-size: 0.92rem; color: var(--ink-soft); }
+.win-save .link-btn { font-size: inherit; }
 .install-card img { border-radius: 11px; }
 .install-title { margin: 0 0 2px; font-weight: 800; }
 .install-text { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
