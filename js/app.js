@@ -2421,6 +2421,12 @@
   // and tapping the clue opens every clue in a panel. The grid scrolls to
   // keep the square being typed in visible above the keyboard.
   function placeDock() {
+    // iPhones slide the visible part of the page down to the square being
+    // typed in when the keyboard is open, leaving anything sticky at the top
+    // of the page above the screen. --vv-top (how far it has slid) keeps the
+    // tools and clue bar at the top of what's visible (css: body.phone-keyboard).
+    const vvTop = window.visualViewport ? Math.max(0, Math.round(visualViewport.offsetTop)) : 0;
+    document.documentElement.style.setProperty('--vv-top', `${vvTop}px`);
     let gap = 0;
     if (docked.matches && !phoneKeys.hidden) gap = phoneKeys.getBoundingClientRect().height;
     else if (window.visualViewport) gap = Math.max(0, document.documentElement.clientHeight - (visualViewport.offsetTop + visualViewport.height));
