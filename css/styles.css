@@ -1375,6 +1375,19 @@ dialog.sheet { width: 100%; max-width: 560px; max-height: 78vh; margin: auto aut
 .gift-go { font-size: 1.4rem; color: var(--ink-soft); }
 .soon-badge { padding: 2px 8px; border-radius: 999px; background: var(--ink); color: var(--card); font-size: 0.66rem; letter-spacing: 0.08em; }
 .soon-badge[hidden] { display: none; }
+/* Show/hide password */
+.pw-field { position: relative; display: block; }
+.pw-field input { width: 100%; padding-right: 64px; }
+.pw-toggle { position: absolute; top: 50%; right: 6px; transform: translateY(-50%); min-width: 48px; min-height: 36px; padding: 0 8px; border: 0; border-radius: 6px; background: none; color: var(--ink-soft); font-size: 0.82rem; font-weight: 700; }
+.pw-toggle:hover, .pw-toggle[aria-pressed="true"] { color: var(--ink); background: var(--wash); }
+/* Welcome tour (first visit, and Settings → How Crossword Hub works) */
+.welcome { display: grid; gap: 10px; padding: 34px 28px 24px; }
+.welcome .kicker { margin: 0; }
+.welcome h2 { margin: 0 0 6px; font-family: var(--font-display); font-size: 1.8rem; line-height: 1.1; }
+.welcome-card p { margin: 0 0 10px; color: var(--ink-soft); }
+.welcome-card b { color: var(--ink); }
+.welcome-actions { display: flex; align-items: center; justify-content: space-between; margin-top: 6px; }
+a.panel-link { display: block; text-decoration: none; }
 .gift-soon { display: grid; justify-items: start; gap: 10px; padding: 34px 28px 26px; }
 .gift-soon .room-badge { background: var(--accent); color: #fffdf8; }
 .gift-soon .kicker { margin: 6px 0 0; }

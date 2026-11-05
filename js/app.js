@@ -3086,6 +3086,18 @@
     const action = actionEl.dataset.action;
     switch (action) {
       case 'close-dialog': closeDialogs(); return;
+      case 'toggle-password': {
+        const input = actionEl.parentElement.querySelector('input');
+        const show = input.type === 'password';
+        input.type = show ? 'text' : 'password';
+        actionEl.textContent = show ? 'Hide' : 'Show';
+        actionEl.setAttribute('aria-pressed', String(show));
+        actionEl.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+        return;
+      }
+      case 'welcome': closeMenus(); openWelcome(); return;
+      case 'welcome-next': welcomeStep(welcomeAt + 1); return;
+      case 'welcome-skip': closeWelcome(); return;
       case 'gift': closeDialogs(); openGifts(); return;
       case 'arcade-start': startArcade(); return;
       case 'arcade-again': startArcade(arcadeLast && arcadeLast.mode); return;
@@ -3177,6 +3189,35 @@
     }
   });
 
+  // A short tour on the first visit (and from Settings): three cards, with Skip.
+  let welcomeAt = 0;
+  const welcomeCards = () => $$('#welcome-dialog .welcome-card');
+  function welcomeStep(i) {
+    const cards = welcomeCards();
+    if (i >= cards.length) return closeWelcome();
+    welcomeAt = i;
+    cards.forEach((c, n) => { c.hidden = n !== i; });
+    $('#welcome-step').textContent = `${i + 1} of ${cards.length}`;
+    $('#welcome-next').textContent = i === cards.length - 1 ? 'Start playing' : 'Next';
+  }
+  function openWelcome() {
+    welcomeStep(0);
+    if (!$('#welcome-dialog').open) $('#welcome-dialog').showModal();
+  }
+  function closeWelcome() {
+    if ($('#welcome-dialog').open) $('#welcome-dialog').close();
+  }
+  $('#welcome-dialog').addEventListener('close', () => {
+    if (!store.welcomed) {
+      store.welcomed = true;
+      saveStore();
+    }
+  });
+  // Only for someone new, arriving on the home page (not on a shared puzzle or duel link).
+  function offerWelcome() {
+    const isNew = !store.welcomed && !(store.solvedCount > 0) && !Object.keys(store.saves || {}).length;
+    if (isNew && !$$('dialog').some((d) => d.open)) openWelcome();
+  }
   function closeDialogs() {
     $$('dialog').forEach((d) => d.open && d.close());
   }
@@ -3411,6 +3452,7 @@
     }
     showView('home');
     renderHome();
+    if (!parts[0]) offerWelcome();
     if (parts[0] === 'genres') {
       $('#genres').scrollIntoView();
       $$('.masthead-nav button').forEach((b) => b.removeAttribute('aria-current'));
