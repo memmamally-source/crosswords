@@ -37,6 +37,11 @@ async function start() {
     message('');
     $('#account-dialog').showModal();
   });
+  // "Create free account" prompts elsewhere on the page.
+  document.addEventListener('account:create', () => {
+    if (!user) setMode('create');
+    if (!$('#account-dialog').open) $('#account-dialog').showModal();
+  });
 
   // ---------- Syncing ----------
   const userDoc = () => db.doc(firestore, 'users', user.uid);

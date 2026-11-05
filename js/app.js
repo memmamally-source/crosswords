@@ -529,6 +529,7 @@
 
   function renderHome() {
     renderGiftCard();
+    renderSaveCard();
     renderArcadeCards($('#arcade-home-cards'));
     renderDuelCards($('#duel-home-cards'));
     const today = todayKey();
@@ -842,6 +843,25 @@
   const DUEL_FREEZE = Econ.DUELS.hintFreezeMs; // a duel hint freezes your board this long
   let online = window.CrosswordOnline || null;
   let me = { uid: null, account: false };
+  let authKnown = false; // whether sign-in has been checked yet (so a signed-in player never sees "create an account")
+  // Signed out, with progress only on this device: suggest a free account.
+  // Only once accounts are set up (the account button shows) and sign-in has
+  // been checked; "Not now" hides it for a week.
+  const accountsReady = () => !$('#account-btn').hidden;
+  const offerAccount = () => accountsReady() && authKnown && !me.account;
+  const SAVE_SNOOZE = 7 * 86400000;
+  function renderSaveCard() {
+    const solved = store.solvedCount || 0;
+    const saves = Object.keys(store.saves || {}).length;
+    const snoozed = Date.now() - (store.saveNudgeAt || 0) < SAVE_SNOOZE;
+    const show = offerAccount() && (solved > 0 || saves > 0) && !snoozed;
+    $('#save-card').hidden = !show;
+    if (!show) return;
+    const { current } = dailyStreaks();
+    const what = [current > 1 ? `your ${current}-day streak` : '', solved ? `${plural(solved, 'solved puzzle')}` : '', saves ? `${plural(saves, 'puzzle')} in progress` : ''].filter(Boolean);
+    const list = what.length > 1 ? `${what.slice(0, -1).join(', ')} and ${what[what.length - 1]}` : what[0];
+    $('#save-text').textContent = `${list[0].toUpperCase()}${list.slice(1)} ${what.length > 1 || solved > 1 || saves > 1 ? 'are' : 'is'} only saved on this device. Create a free account to keep ${what.length > 1 || solved > 1 || saves > 1 ? 'them' : 'it'} on every device, and get 5 hint credits a day.`;
+  }
   let wallet = null; // the server's view: { daily, earned, total, totals, resetIn, at, recent }
   let walletLoading = null;
   const creditsOn = () => !!online;
@@ -856,6 +876,8 @@
   document.addEventListener('online:user', (e) => {
     const was = me.uid;
     me = e.detail;
+    authKnown = true;
+    renderSaveCard();
     if (was !== me.uid) wallet = null;
     if (me.account) syncWallet().then(sendPendingClaims);
     renderWallet();
@@ -2202,6 +2224,8 @@
         $('#win-gift').innerHTML = `<p>${esc(gift.message).replace(/\n/g, '<br>')}</p>${gift.from ? `<cite>${esc(gift.from)}</cite>` : ''}`;
       }
     }
+    // Signed out: suggest an account (unless the reward note already does).
+    $('#win-save').hidden = !(offerAccount() && !gift && $('#win-reward').hidden);
     const next = $('#win-next');
     next.hidden = !((spec.kind === 'daily' || spec.kind === 'mini') && spec.date === todayKey());
     if (!next.hidden) {
@@ -2397,6 +2421,12 @@
   // and tapping the clue opens every clue in a panel. The grid scrolls to
   // keep the square being typed in visible above the keyboard.
   function placeDock() {
+    // iPhones slide the visible part of the page down to the square being
+    // typed in when the keyboard is open, leaving anything sticky at the top
+    // of the page above the screen. --vv-top (how far it has slid) keeps the
+    // tools and clue bar at the top of what's visible (css: body.phone-keyboard).
+    const vvTop = window.visualViewport ? Math.max(0, Math.round(visualViewport.offsetTop)) : 0;
+    document.documentElement.style.setProperty('--vv-top', `${vvTop}px`);
     let gap = 0;
     if (docked.matches && !phoneKeys.hidden) gap = phoneKeys.getBoundingClientRect().height;
     else if (window.visualViewport) gap = Math.max(0, document.documentElement.clientHeight - (visualViewport.offsetTop + visualViewport.height));
@@ -3096,6 +3126,12 @@
         return;
       }
       case 'welcome': closeMenus(); openWelcome(); return;
+      case 'save-account': closeDialogs(); document.dispatchEvent(new Event('account:create')); return;
+      case 'save-dismiss':
+        store.saveNudgeAt = Date.now();
+        saveStore();
+        $('#save-card').hidden = true;
+        return;
       case 'welcome-next': welcomeStep(welcomeAt + 1); return;
       case 'welcome-skip': closeWelcome(); return;
       case 'gift': closeDialogs(); openGifts(); return;
@@ -5134,8 +5170,10 @@
       $('#install-btn').hidden = false;
       card.hidden = false;
     } else if (isIOS()) {
+      // iPhones and iPads: the real app is on the App Store.
       $('#install-btn').hidden = true;
-      $('#install-text').textContent = 'Tap the Share button, then “Add to Home Screen”. It opens full screen and works offline.';
+      $('#appstore-btn').hidden = false;
+      $('#install-text').textContent = 'Crossword Hub is on the App Store: it opens instantly and works offline.';
       card.hidden = false;
     }
   }
