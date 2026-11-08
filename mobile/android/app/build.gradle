@@ -10,7 +10,7 @@ android {
         // Raised for every upload to Google Play (the build workflow passes
         // -PversionCode=<run number>); versionName is what players see.
         versionCode((project.findProperty('versionCode') ?: '1') as Integer)
-        versionName "1.0"
+        versionName "1.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.

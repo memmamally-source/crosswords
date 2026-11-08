@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.crosswordhub",
+      "sha256_cert_fingerprints": ["83:B3:32:0C:DE:25:C9:40:35:AB:9A:95:3F:A1:D6:62:8A:66:F0:1A:16:C7:20:52:23:6D:2D:8A:FE:10:DC:FE"]
+    }
+  }
+]

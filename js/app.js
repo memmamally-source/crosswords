@@ -3346,6 +3346,18 @@
     currentRoute = location.hash || '#/';
     route();
   });
+  // In the app: a crosswordhub.app link (a duel invite, a shared puzzle) can
+  // open the app instead of the browser. Go to the #/route in it, both when
+  // it starts the app and when the app was already open.
+  const appLinks = inApp && window.Capacitor.Plugins && window.Capacitor.Plugins.App;
+  if (appLinks) {
+    const openLink = (url) => {
+      const hash = url && url.indexOf('#') >= 0 ? url.slice(url.indexOf('#')) : '';
+      if (/^#\//.test(hash) && hash !== currentRoute) navigate(hash);
+    };
+    appLinks.addListener('appUrlOpen', (e) => openLink(e && e.url));
+    appLinks.getLaunchUrl().then((r) => openLink(r && r.url)).catch(() => {});
+  }
 
   function showView(name) {
     if (name !== 'game') typeInput.blur();
