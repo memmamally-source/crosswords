@@ -1,0 +1,18 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "GKQNGK57Q9.app.crosswordhub"
+        ],
+        "components": [
+          {
+            "/": "/",
+            "#": "/*",
+            "comment": "Invites, challenges and shared puzzles (crosswordhub.app/#/...)"
+          }
+        ]
+      }
+    ]
+  }
+}

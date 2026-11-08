@@ -1,0 +1,2 @@
+# GitHub Pages: publish .well-known/ (app link files for iPhone and Android).
+include: [".well-known"]
