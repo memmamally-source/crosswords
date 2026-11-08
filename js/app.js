@@ -2463,8 +2463,15 @@
     const on = !!game && docked.matches && !appKeys() && !$('#game-view').hidden;
     if (on === phoneKeyboardLayout()) return;
     document.body.classList.toggle('phone-keyboard', on);
-    if (on) document.documentElement.style.setProperty('--tools-height', `${$('.toolbar').offsetHeight}px`);
+    if (on) measureTools();
   }
+  // The clue bar sits just below the tools, so it follows their real height:
+  // they can wrap onto a second row (a bigger text size, a long timer, a
+  // button changing), and a height measured only once hid the clue behind them.
+  function measureTools() {
+    document.documentElement.style.setProperty('--tools-height', `${$('.toolbar').offsetHeight}px`);
+  }
+  if (window.ResizeObserver) new ResizeObserver(() => { if (phoneKeyboardLayout()) measureTools(); }).observe($('.toolbar'));
 
   function keepActiveInView() {
     if (!game || !docked.matches || $('#game-view').hidden || game.solved || !cellEls.length) return;
