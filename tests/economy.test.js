@@ -58,6 +58,9 @@ assert.strictEqual(E.puzzleReward('play:general/medium/12/3.4.5', '2026-10-20'),
   assert.strictEqual(E.recordCollectionReward(w, day + 1).collections, 1, 'the count starts again');
 }
 assert.strictEqual(E.puzzleReward('gift:abc', '2026-10-20'), null);
+assert.deepStrictEqual(E.checkedReward(E.puzzleReward('daily:2026-10-20', '2026-10-20')), { amount: 1, kind: 'full', checked: true }, 'a Daily solved with Check: 1');
+assert.strictEqual(E.checkedReward(E.puzzleReward('mini:2026-10-20', '2026-10-20')).amount, 1, 'a Mini with Check: still 1');
+assert.strictEqual(E.checkedReward(null), null, 'nothing to earn stays nothing');
 assert.strictEqual(E.puzzleReward('daily:2026-10-20x', '2026-10-20'), null);
 
 // ---------- Grids ----------

@@ -125,7 +125,12 @@ const ok = (label) => console.log(`  ✓ ${label}`);
   await b.call('spendHint', { puzzle: `mini:${yesterday()}`, kind: 'letter', target: '0_0' });
   r = await b.call('claimSolve', { puzzle: `mini:${yesterday()}`, grid: solutionOf(`mini:${yesterday()}`) });
   assert.deepStrictEqual([r.ok, r.reason], [false, 'assisted'], 'a hint on the puzzle: no reward');
-  ok('Mini 1, full crossword 3, once each, only correct, never after a hint');
+  const checkedKey = `daily:${E.sastDate(Date.now() - 2 * 86400000)}`;
+  r = await b.call('claimSolve', { puzzle: checkedKey, grid: solutionOf(checkedKey), checked: true });
+  assert.deepStrictEqual([r.ok, r.amount, r.checked, r.wallet.earned], [true, 1, true, 5], 'a Daily solved with Check: 1');
+  r = await b.call('claimSolve', { puzzle: checkedKey, grid: solutionOf(checkedKey) });
+  assert.deepStrictEqual([r.ok, r.reason], [false, 'already'], 'and only once');
+  ok('Mini 1, full crossword 3, with Check 1, once each, only correct, never after a hint');
 
   // Genre and collection puzzles: 1 each, up to 3 a day, full-size only.
   const col = await player();

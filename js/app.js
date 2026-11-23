@@ -1122,22 +1122,28 @@
     el.textContent = text;
     el.hidden = !text;
   }
-  function queueClaim(spec, entries) {
-    store.pendingClaims = Object.assign({}, store.pendingClaims, { [spec.key]: { grid: entries.map((row) => row.slice()), at: Date.now() } });
+  function queueClaim(spec, entries, checked) {
+    const claim = { grid: entries.map((row) => row.slice()), at: Date.now() };
+    if (checked) claim.checked = true;
+    store.pendingClaims = Object.assign({}, store.pendingClaims, { [spec.key]: claim });
     saveStore();
   }
-  async function claimReward(spec, entries) {
-    queueClaim(spec, entries);
-    const reward = rewardFor(spec);
+  async function claimReward(spec, entries, checked = false) {
+    queueClaim(spec, entries, checked);
+    const base = rewardFor(spec);
+    const reward = checked ? Econ.checkedReward(base) : base;
     const amount = reward ? reward.amount : Econ.ECONOMY.reward.full;
+    const what = checked ? 'solve' : 'No-Hint solve';
     if (!me.account) {
-      rewardNote(`Sign in to collect ${plural(amount, 'Hint Credit')} for this No-Hint solve: it’s kept for you for a week.`);
+      rewardNote(`Sign in to collect ${plural(amount, 'Hint Credit')} for this ${what}: it’s kept for you for a week.`);
       return;
     }
-    rewardNote('Checking your No-Hint reward…');
+    rewardNote(checked ? 'Checking your reward…' : 'Checking your No-Hint reward…');
     const res = await sendClaim(spec.key);
     if (!res) rewardNote(`Your ${plural(amount, 'Hint Credit')} will be added when the connection’s back.`);
-    else if (res.ok) {
+    else if (res.ok && res.checked) {
+      rewardNote(`Solved with Check: +${plural(res.amount, 'Hint Credit')}.${base && base.amount > res.amount ? ` Solve without checking for ${base.amount}.` : ''}`);
+    } else if (res.ok) {
       rewardNote({
         mini: `Brilliant! Mini solved without hints. +${plural(res.amount, 'credit')}.`,
         collection: `No hints needed! +${plural(res.amount, 'Hint Credit')}.`,
@@ -1151,7 +1157,7 @@
     const claim = (store.pendingClaims || {})[key];
     if (!claim || !me.account || !creditsOn()) return null;
     try {
-      const res = await online.call('claimSolve', { puzzle: key, grid: claim.grid });
+      const res = await online.call('claimSolve', { puzzle: key, grid: claim.grid, checked: !!claim.checked });
       delete store.pendingClaims[key];
       saveStore();
       if (res.wallet) setWallet(res.wallet);
@@ -1180,7 +1186,7 @@
     } finally {
       claiming = false;
     }
-    if (paid) toast(`+${plural(paid, 'Hint Credit')} for your No-Hint solves`);
+    if (paid) toast(`+${plural(paid, 'Hint Credit')} for your solves`);
   }
   window.addEventListener('online', sendPendingClaims);
 
@@ -2194,7 +2200,9 @@
     delete store.saves[spec.key];
     saveStore();
     $('#win-reward').hidden = true;
-    if (creditsOn() && noHint && !prev && earnsCredits(spec)) claimReward(spec, game.entries);
+    // Solved with Check (or auto-check) but no reveals: a smaller reward.
+    const checkedSolve = !team && clean && !points && !noHint;
+    if (creditsOn() && (noHint || checkedSolve) && !prev && earnsCredits(spec)) claimReward(spec, game.entries, checkedSolve);
 
     $('#board').classList.add('solved');
     celebrate(clean);

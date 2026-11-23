@@ -156,9 +156,10 @@ exports.spendHint = onCall(async (req) => {
 // each puzzle pays once per account, and never after a hint was bought on it.
 exports.claimSolve = onCall(async (req) => {
   const uid = account(req);
-  const { puzzle, grid } = req.data || {};
+  const { puzzle, grid, checked } = req.data || {};
   const ms = now();
-  const reward = E.puzzleReward(puzzle, E.sastDate(ms));
+  const base = E.puzzleReward(puzzle, E.sastDate(ms));
+  const reward = checked === true ? E.checkedReward(base) : base;
   if (!reward) return { ok: false, reason: 'not-eligible' };
   const collection = reward.kind === 'collection';
   const answers = collection ? P.collection(puzzle, E.ECONOMY.collectionMinClues) : P.published(puzzle);
@@ -182,9 +183,10 @@ exports.claimSolve = onCall(async (req) => {
     if (collection) next = E.recordCollectionReward(next, today(ms));
     t.set(walletRef(uid), { ...next, updatedAt: FieldValue.serverTimestamp() });
     t.create(claimRef, { amount: reward.amount, at: FieldValue.serverTimestamp() });
-    const note = { mini: 'Mini solved without hints', collection: 'Collection crossword solved without hints' }[reward.kind] || 'Crossword solved without hints';
+    const note = reward.checked ? 'Crossword solved with Check'
+      : { mini: 'Mini solved without hints', collection: 'Collection crossword solved without hints' }[reward.kind] || 'Crossword solved without hints';
     ledgerEntry(t, uid, { type: 'solve', amount: reward.amount, daily: 0, earned: reward.amount, note });
-    return { ok: true, amount: reward.amount, kind: reward.kind, wallet: view(next, ms) };
+    return { ok: true, amount: reward.amount, kind: reward.kind, checked: !!reward.checked, wallet: view(next, ms) };
   });
 });
 
