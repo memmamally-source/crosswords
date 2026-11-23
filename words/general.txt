@@ -489,7 +489,7 @@ MANILA | Capital of the Philippines
 EIFFELTOWER | Paris landmark completed in 1889 (6,5)
 COLOSSEUM | Rome's ancient amphitheatre
 TAJMAHAL | Agra mausoleum built by Shah Jahan (3,5)
-STONEHENGE | Prehistoric stone circle on Salisbury Plain
+STONEHENGE | Prehistoric ring of sarsens on Salisbury Plain
 MACHUPICCHU | Inca citadel high in the Andes (5,6)
 PETRA | Rose-red city carved from rock in Jordan
 ANGKORWAT | Vast Cambodian temple complex (6,3)
@@ -497,14 +497,14 @@ BIGBEN | Great bell in London's Elizabeth Tower (3,3)
 STATUEOFLIBERTY | Gift from France standing in New York Harbor (6,2,7)
 GREATWALL | Chinese fortification stretching thousands of kilometres (5,4)
 ACROPOLIS | Athens citadel crowned by the Parthenon
-PARTHENON | Temple of Athena on the Acropolis
+PARTHENON | Doric temple crowning the Acropolis
 ALHAMBRA | Moorish palace complex in Granada
 KREMLIN | Fortified complex at the heart of Moscow
 SPHINX | Lion-bodied statue guarding the pyramids at Giza
 SAGRADAFAMILIA | Gaudí's basilica in Barcelona (7,7)
 MOUNTRUSHMORE | Presidents' faces carved into South Dakota rock (5,8)
-NIAGARAFALLS | Waterfalls on the US-Canada border (7,5)
-VICTORIAFALLS | Waterfall on the Zambezi between Zambia and Zimbabwe (8,5)
+NIAGARAFALLS | Cascades on the US-Canada border (7,5)
+VICTORIAFALLS | Zambezi cascade between Zambia and Zimbabwe (8,5)
 EVEREST | World's highest mountain
 KILIMANJARO | Africa's highest mountain
 MATTERHORN | Pyramid-shaped Alpine peak on the Swiss-Italian border
@@ -519,7 +519,7 @@ SAHARA | World's largest hot desert
 PACIFIC | Largest of the world's oceans
 ATLANTIC | Ocean between the Americas and Europe
 ANTARCTICA | Coldest continent
-GREENLAND | World's largest island
+GREENLAND | Danish territory, the world's biggest isle
 DEADSEA | Very salty lake at the lowest land point on Earth (4,3)
 BAIKAL | Siberian lake, the world's deepest
 TELEPHONE | Invention patented by Alexander Graham Bell in 1876
@@ -531,7 +531,7 @@ DYNAMITE | Explosive invented by Alfred Nobel
 WORLDWIDEWEB | Tim Berners-Lee's 1989 proposal (5,4,3)
 STEAMENGINE | Machine greatly improved by James Watt (5,6)
 TELESCOPE | Instrument Galileo used to spot Jupiter's moons
-WRIGHT | Orville or Wilbur, pioneers of powered flight
+WRIGHT | Orville or Wilbur, pioneers of powered aviation
 GAGARIN | Yuri, first human in space, 1961
 ARMSTRONG | Neil, first person to walk on the Moon
 TENZING | Norgay, who reached Everest's summit with Hillary in 1953
@@ -621,14 +621,14 @@ TIRAMISU | Coffee-soaked Italian dessert
 WIMBLEDON | Grass-court tennis championship in London
 TOURDEFRANCE | Cycling race whose leader wears the yellow jersey (4,2,6)
 MARATHON | Running race of 26.2 miles
-CRICKET | Sport of wickets, overs and bails
+CRICKET | Sport of stumps, overs and bails
 BASEBALL | Sport of innings, a diamond and home runs
 GOLF | Sport usually played over 18 holes
 JUDO | Japanese martial art meaning "gentle way"
 SUMO | Japanese heavyweight wrestling
 CHESS | Board game that ends in checkmate
 ICEHOCKEY | Sport played with sticks and a puck (3,6)
-DECATHLON | Ten-event athletics contest
+DECATHLON | Ten-event track-and-field contest
 BADMINTON | Racket sport played with a shuttlecock
 SNOOKER | Cue sport with fifteen reds
 ESPERANTO | Constructed language created by Zamenhof
@@ -647,7 +647,7 @@ HINOMARU | Japan's flag, a red disc on white
 STAROFDAVID | Symbol on Israel's flag (4,2,5)
 DRAGON | Red creature on the Welsh flag
 WATERLOO | 1815 battle where Napoleon was finally defeated
-HASTINGS | Battle of 1066
+HASTINGS | Battle of 1066 won by William the Conqueror
 MAGNACARTA | Charter sealed by King John in 1215 (5,5)
 BERLINWALL | Barrier that fell in 1989 (6,4)
 POMPEII | Roman town buried by Vesuvius in AD 79
@@ -671,7 +671,7 @@ PLATYPUS | Egg-laying Australian mammal with a duck-like bill
 KANGAROO | Hopping marsupial on Australia's coat of arms
 GIANTPANDA | Black-and-white bear of China (5,5)
 OCTOPUS | Eight-armed sea creature with three hearts
-HUMMINGBIRD | Tiny bird that can fly backwards
+HUMMINGBIRD | Tiny hovering flier that can fly backwards
 CHAMELEON | Colour-changing lizard
 SLOTH | Slow-moving tree-dwelling mammal
 BAT | Only mammal capable of true flight

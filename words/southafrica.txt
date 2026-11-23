@@ -125,11 +125,11 @@ PAARL | Winelands town named after a granite rock that glistens like a pearl
 FRANSCHHOEK | Winelands valley settled by French Huguenots
 UPINGTON | Northern Cape town on the banks of the Orange River
 SUNCITY | Resort beside the Pilanesberg in North West province (3,4)
-EASTLONDON | Eastern Cape port in Buffalo City (4,6)
+EASTLONDON | Port of Buffalo City on the Indian Ocean (4,6)
 GEORGE | Garden Route city named after a Hanoverian king
-SIMONSTOWN | Naval base town on False Bay (6,4)
+SIMONSTOWN | Naval base on False Bay (6,4)
 BOULDERS | ___ Beach, home of a penguin colony near Simon's Town
-ROBBENISLAND | Prison island where Mandela spent 18 years (6,6)
+ROBBENISLAND | Table Bay prison where Mandela spent 18 years (6,6)
 TABLEMOUNTAIN | Flat-topped landmark overlooking Cape Town (5,8)
 LIONSHEAD | Peak between Table Mountain and Signal Hill (5,4)
 DEVILSPEAK | Summit just east of Table Mountain (6,4)
@@ -175,7 +175,7 @@ WILDEBEEST | Gnu that migrates in vast herds
 NGUNI | Cattle breed and language group including Zulu and Xhosa
 XHOSA | Click language that was Mandela's mother tongue
 ZULU | Language of King Shaka's people
-SESOTHO | Language of the Basotho, official in South Africa
+SESOTHO | Language of Maseru and the Free State, official in South Africa
 SETSWANA | Official language spoken in North West province and in Gaborone's country
 AFRIKAANS | Language that grew out of Cape Dutch
 SHAKA | King who founded the Zulu kingdom in the early 1800s
@@ -277,11 +277,11 @@ CHAPMANSPEAK | Winding coastal drive near Hout Bay (8,4)
 CAPEPOINT | Lighthouse headland at the southern end of Table Mountain National Park (4,5)
 WATERFRONT | V&A ___, Cape Town harbour development
 UNIONBUILDINGS | Pretoria seat of government designed by Herbert Baker (5,9)
-APARTHEIDMUSEUM | Johannesburg museum opened in 2001 (9,6)
+APARTHEIDMUSEUM | Johannesburg institution beside Gold Reef City, opened in 2001 (9,6)
 HECTORPIETERSON | Schoolboy killed in the 1976 Soweto uprising (6,9)
 SOBUKWE | Robert, founder of the Pan Africanist Congress
 HANI | Chris, SACP leader assassinated in 1993
-KHOISAN | Collective name for the Khoikhoi and San peoples
+KHOISAN | Collective name for southern Africa's first herder and hunter-gatherer peoples
 SAN | Hunter-gatherer people famed for rock art
 VOC | Dutch company, abbr., that set up the Cape settlement in 1652
 HUGUENOTS | French Protestant refugees who settled at Franschhoek
