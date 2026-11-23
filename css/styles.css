@@ -1321,6 +1321,7 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   }
   body.phone-keyboard .clue-bar .clue-nav { width: 44px; height: 44px; font-size: 1.6rem; align-self: center; }
   body.phone-keyboard .toolbar { margin-bottom: 8px; }
+  body.phone-keyboard .toolbar .type-input { position: absolute; }
   body.phone-keyboard .clue-bar .sheet-hint { display: none; }
   /* Room for two lines of clue whatever the clue, so moving to the next one
      never nudges the grid up or down. */
@@ -2275,8 +2276,7 @@ dialog {
 .app-splash-by { position: absolute; left: 50%; bottom: 13.9vh; transform: translateX(-50%); display: block; line-height: 0; }
 .app-splash-by img { width: 16.1vh; height: auto; }
 @media (prefers-color-scheme: dark) {
+  /* On dark screens the logo's navy "Karoo" is cream (icons/karoo-fox-logo-dark.png). */
   .app-splash { background: #1c1915; }
-  /* The logo's navy lettering needs a cream card on dark screens. */
-  .app-splash-by { padding: 1.6vh; border-radius: 1.75vh; background: #fff6e9; bottom: calc(13.9vh - 1.6vh); }
 }
 @keyframes app-splash-out { to { opacity: 0; visibility: hidden; } } /* a safety net: never stays up */

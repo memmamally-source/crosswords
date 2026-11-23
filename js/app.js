@@ -2496,11 +2496,22 @@
   // With the phone's keyboard the clue bar lives inside the sticky tools, as
   // their last row, so the two always move together: no gap or overlap
   // between them, however the page scrolls or the tools wrap.
+  // The hidden text box the phone's keyboard types into goes there too. Left
+  // on the selected square, the browser scrolled the page to it after every
+  // letter, so typing down an answer made the grid and the clue bounce.
   function pinClueBar(on) {
     const bar = $('#clue-bar');
+    const input = $('#type-input');
     const home = $('#board-wrap').parentElement; // the clue bar's place above the grid
-    if (on && bar.parentElement !== $('.toolbar')) $('.toolbar').appendChild(bar);
-    else if (!on && bar.parentElement !== home) home.insertBefore(bar, $('#board-wrap'));
+    const typing = document.activeElement === input;
+    if (on && bar.parentElement !== $('.toolbar')) {
+      $('.toolbar').appendChild(bar);
+      $('.toolbar').appendChild(input);
+    } else if (!on && bar.parentElement !== home) {
+      home.insertBefore(bar, $('#board-wrap'));
+      $('#board-wrap').insertBefore(input, $('#pause-overlay'));
+    }
+    if (typing && document.activeElement !== input) input.focus({ preventScroll: true });
   }
   // The clue bar sits just below the tools, so it follows their real height:
   // they can wrap onto a second row (a bigger text size, a long timer, a
@@ -2519,16 +2530,30 @@
     // With the phone's keyboard open the clue bar sits under the tools, and
     // the browser may float its own controls (Safari's address bar) just
     // above the keyboard, so keep a margin there.
+    // The tools (with the clue bar in them) as they'll sit once scrolled to
+    // their sticky place: measuring where they happen to be before the page
+    // has scrolled made the view look tiny and the page scroll again.
+    const tools = $('.toolbar');
     const viewTop = phoneKeyboardLayout()
-      ? $('#clue-bar').getBoundingClientRect().bottom + 8
-      : (vv ? vv.offsetTop : 0) + $('.toolbar').getBoundingClientRect().height + 8;
+      ? (parseFloat(getComputedStyle(tools).top) || 0) + tools.offsetHeight + 8
+      : (vv ? vv.offsetTop : 0) + tools.getBoundingClientRect().height + 8;
     const viewBottom = phoneKeyboardLayout()
       ? visibleBottom - 64
       : Math.min(visibleBottom - $('#clue-bar').getBoundingClientRect().height, $('#clue-bar').getBoundingClientRect().top) - 12;
     followHorizontally(el);
     const rect = el.getBoundingClientRect();
-    if (rect.bottom > viewBottom) window.scrollBy({ top: rect.bottom - viewBottom, behavior: 'smooth' });
-    else if (rect.top < viewTop) window.scrollBy({ top: rect.top - viewTop, behavior: 'smooth' });
+    if (rect.top >= viewTop && rect.bottom <= viewBottom) return;
+    // Out of view: scroll once to show the whole answer if it fits, so typing
+    // down it doesn't nudge the page (and the clue) with every letter. A long
+    // answer that doesn't fit shows from this square on.
+    const wi = currentWordIndex();
+    const cells = wi != null ? game.puzzle.words[wi].cells.map(([r, c]) => cellEls[r][c].getBoundingClientRect()) : [rect];
+    const top = Math.min(...cells.map((b) => b.top));
+    const bottom = Math.max(...cells.map((b) => b.bottom));
+    let by;
+    if (bottom - top <= viewBottom - viewTop) by = top < viewTop ? top - viewTop : bottom - viewBottom;
+    else by = rect.top - viewTop;
+    if (Math.abs(by) >= 1) window.scrollBy({ top: by, behavior: 'smooth' });
   }
   // When zoomed in, scroll the grid sideways to keep a square in view.
   function followHorizontally(el) {
@@ -3058,6 +3083,11 @@
   }
   function placeTyping() {
     if (!game || !cellEls.length) return;
+    if (phoneKeyboardLayout()) {
+      typeInput.style.top = '0px'; // in the sticky tools: always on screen
+      typeInput.style.left = '0px';
+      return;
+    }
     const el = cellEls[game.sel.r][game.sel.c];
     typeInput.style.top = el.offsetTop + 'px';
     typeInput.style.left = el.offsetLeft + 'px';
