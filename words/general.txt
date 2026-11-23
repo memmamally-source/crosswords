@@ -447,3 +447,276 @@ DUTCHCOURAGE | Bravery from alcohol (5,7)
 COLDSHOULDER | Deliberate snub (4,8)
 SECONDFIDDLE | Subordinate role, as in "play ___" (6,6)
 BLERIOT | Louis, first to fly an aeroplane across the English Channel, 1909
+# Worldwide (added November 2026)
+CANBERRA | Capital of Australia
+OTTAWA | Capital of Canada
+BRASILIA | Capital of Brazil
+NAIROBI | Capital of Kenya
+CAIRO | Capital of Egypt
+LIMA | Capital of Peru
+BOGOTA | Capital of Colombia
+SANTIAGO | Capital of Chile
+BUENOSAIRES | Capital of Argentina (6,5)
+MADRID | Capital of Spain
+LISBON | Capital of Portugal
+ATHENS | Capital of Greece
+VIENNA | Capital of Austria
+BUDAPEST | Capital of Hungary
+PRAGUE | Capital of the Czech Republic
+WARSAW | Capital of Poland
+OSLO | Capital of Norway
+STOCKHOLM | Capital of Sweden
+HELSINKI | Capital of Finland
+COPENHAGEN | Capital of Denmark
+DUBLIN | Capital of Ireland
+REYKJAVIK | Capital of Iceland
+BERN | Swiss federal city and capital
+ANKARA | Capital of Turkey
+TEHRAN | Capital of Iran
+BANGKOK | Capital of Thailand
+HANOI | Capital of Vietnam
+SEOUL | Capital of South Korea
+TOKYO | Capital of Japan
+BEIJING | Capital of China
+NEWDELHI | Capital of India (3,5)
+WELLINGTON | Capital of New Zealand
+HAVANA | Capital of Cuba
+ACCRA | Capital of Ghana
+ADDISABABA | Capital of Ethiopia (5,5)
+RABAT | Capital of Morocco
+KATHMANDU | Capital of Nepal
+MANILA | Capital of the Philippines
+EIFFELTOWER | Paris landmark completed in 1889 (6,5)
+COLOSSEUM | Rome's ancient amphitheatre
+TAJMAHAL | Agra mausoleum built by Shah Jahan (3,5)
+STONEHENGE | Prehistoric ring of sarsens on Salisbury Plain
+MACHUPICCHU | Inca citadel high in the Andes (5,6)
+PETRA | Rose-red city carved from rock in Jordan
+ANGKORWAT | Vast Cambodian temple complex (6,3)
+BIGBEN | Great bell in London's Elizabeth Tower (3,3)
+STATUEOFLIBERTY | Gift from France standing in New York Harbor (6,2,7)
+GREATWALL | Chinese fortification stretching thousands of kilometres (5,4)
+ACROPOLIS | Athens citadel crowned by the Parthenon
+PARTHENON | Doric temple crowning the Acropolis
+ALHAMBRA | Moorish palace complex in Granada
+KREMLIN | Fortified complex at the heart of Moscow
+SPHINX | Lion-bodied statue guarding the pyramids at Giza
+SAGRADAFAMILIA | Gaudí's basilica in Barcelona (7,7)
+MOUNTRUSHMORE | Presidents' faces carved into South Dakota rock (5,8)
+NIAGARAFALLS | Cascades on the US-Canada border (7,5)
+VICTORIAFALLS | Zambezi cascade between Zambia and Zimbabwe (8,5)
+EVEREST | World's highest mountain
+KILIMANJARO | Africa's highest mountain
+MATTERHORN | Pyramid-shaped Alpine peak on the Swiss-Italian border
+FUJI | Mount ___, Japan's highest peak
+AMAZON | River draining the world's largest rainforest
+NILE | River that flows north through Egypt to the Mediterranean
+DANUBE | River flowing through Vienna and Budapest
+THAMES | River flowing through London
+SEINE | River flowing through Paris
+MISSISSIPPI | Great US river that flows past Memphis and New Orleans
+SAHARA | World's largest hot desert
+PACIFIC | Largest of the world's oceans
+ATLANTIC | Ocean between the Americas and Europe
+ANTARCTICA | Coldest continent
+GREENLAND | Danish territory, the world's biggest isle
+DEADSEA | Very salty lake at the lowest land point on Earth (4,3)
+BAIKAL | Siberian lake, the world's deepest
+TELEPHONE | Invention patented by Alexander Graham Bell in 1876
+LIGHTBULB | Glowing invention developed by Thomas Edison (5,4)
+PRINTINGPRESS | Gutenberg's movable-type invention (8,5)
+PENICILLIN | Antibiotic discovered by Alexander Fleming in 1928
+TELEVISION | Invention John Logie Baird demonstrated in 1926
+DYNAMITE | Explosive invented by Alfred Nobel
+WORLDWIDEWEB | Tim Berners-Lee's 1989 proposal (5,4,3)
+STEAMENGINE | Machine greatly improved by James Watt (5,6)
+TELESCOPE | Instrument Galileo used to spot Jupiter's moons
+WRIGHT | Orville or Wilbur, pioneers of powered aviation
+GAGARIN | Yuri, first human in space, 1961
+ARMSTRONG | Neil, first person to walk on the Moon
+TENZING | Norgay, who reached Everest's summit with Hillary in 1953
+HILLARY | Edmund, New Zealander who first climbed Everest
+AMUNDSEN | Roald, first to reach the South Pole, 1911
+COLUMBUS | Christopher, who sailed to the Americas in 1492
+MAGELLAN | Ferdinand, whose expedition first sailed round the world
+CURIE | Marie, first woman to win a Nobel Prize
+NEWTON | Isaac, who described the laws of motion and gravity
+EINSTEIN | Physicist famous for E = mc²
+DARWIN | Charles, author of "On the Origin of Species"
+COPERNICUS | Astronomer who put the Sun at the centre of the Solar System
+PASTEUR | Louis, French chemist who developed a rabies vaccine
+SHAKESPEARE | Playwright of "Hamlet" and "Macbeth"
+MOZART | Wolfgang Amadeus, composer of "The Magic Flute"
+BEETHOVEN | Composer of the "Moonlight" Sonata who went deaf
+PICASSO | Spanish painter of "Guernica"
+MONALISA | Leonardo's portrait with an enigmatic smile (4,4)
+LASTSUPPER | Leonardo's mural in Milan, "The ___" (4,6)
+NIGHTWATCH | Rembrandt's militia painting, "The ___" (5,5)
+DAVID | Michelangelo's marble statue in Florence
+THINKER | Rodin's pensive bronze, "The ___"
+VENUSDEMILO | Armless ancient Greek statue in the Louvre (5,2,4)
+LOUVRE | Paris museum that houses the Mona Lisa
+MOBYDICK | Herman Melville's white whale (4,4)
+HAMLET | Shakespeare's Prince of Denmark
+ROMEO | Juliet's lover in Verona
+ODYSSEY | Homer's epic of a long voyage home
+ILIAD | Homer's epic of the Trojan War
+FRANKENSTEIN | Mary Shelley's 1818 novel
+DRACULA | Bram Stoker's vampire count
+EMMA | Jane Austen novel about a meddling matchmaker
+ALICE | Lewis Carroll's heroine in Wonderland
+HARRYPOTTER | Boy wizard of Hogwarts (5,6)
+CASABLANCA | 1942 film with Bogart and Bergman, or a Moroccan city
+TITANIC | Liner that sank in 1912 after hitting an iceberg
+JAWS | Spielberg's 1975 shark film
+PSYCHO | Hitchcock's 1960 thriller set at the Bates Motel
+STARWARS | 1977 film introducing Luke Skywalker (4,4)
+OXYGEN | Element with the symbol O
+HYDROGEN | Lightest chemical element
+HELIUM | Gas that makes balloons float and voices squeaky
+GOLD | Element with the symbol Au
+IRON | Element with the symbol Fe
+SODIUM | Element with the symbol Na
+MERCURY | Planet nearest the Sun, or a liquid metal
+JUPITER | Largest planet in the Solar System
+MARS | The Red Planet
+SATURN | Sixth planet from the Sun, famed for its rings
+NEPTUNE | Eighth planet from the Sun
+PHOTOSYNTHESIS | Process by which plants make food using sunlight
+GRAVITY | Force that keeps the planets in orbit
+DNA | Molecule that carries genetic information, abbr.
+ATOM | Smallest unit of a chemical element
+NEUTRON | Uncharged particle in an atomic nucleus
+ELECTRON | Negatively charged particle around a nucleus
+CELSIUS | Temperature scale on which water freezes at zero
+LIGHTYEAR | Astronomical distance of about 9.46 trillion km (5,4)
+FEMUR | Thigh bone, the longest bone in the body
+SKIN | Body's largest organ
+HEART | Organ that pumps blood
+LIVER | Largest internal organ
+LUNGS | Pair of breathing organs
+STAPES | Ear bone, the smallest in the body
+CORNEA | Clear front surface of the eye
+TIBIA | Shinbone
+HUMERUS | Upper arm bone
+PANCREAS | Organ that produces insulin
+KIDNEY | Bean-shaped organ that filters blood
+SUSHI | Japanese dish of vinegared rice
+PAELLA | Spanish rice dish from Valencia
+PIZZA | Italian flatbread, Margherita for one
+CROISSANT | Crescent-shaped French pastry
+GOULASH | Hungarian paprika stew
+HUMMUS | Chickpea dip made with tahini
+KIMCHI | Korean fermented cabbage
+GUACAMOLE | Mexican avocado dip
+TACO | Folded Mexican tortilla with a filling
+BAGEL | Ring-shaped bread that is boiled then baked
+BAKLAVA | Layered filo pastry with nuts and honey
+RISOTTO | Creamy Italian rice dish
+HAGGIS | Scottish dish served on Burns Night
+FONDUE | Swiss dish of melted cheese
+PRETZEL | Knotted German bread
+PAVLOVA | Meringue dessert named after a ballerina
+TIRAMISU | Coffee-soaked Italian dessert
+WIMBLEDON | Grass-court tennis championship in London
+TOURDEFRANCE | Cycling race whose leader wears the yellow jersey (4,2,6)
+MARATHON | Running race of 26.2 miles
+CRICKET | Sport of stumps, overs and bails
+BASEBALL | Sport of innings, a diamond and home runs
+GOLF | Sport usually played over 18 holes
+JUDO | Japanese martial art meaning "gentle way"
+SUMO | Japanese heavyweight wrestling
+CHESS | Board game that ends in checkmate
+ICEHOCKEY | Sport played with sticks and a puck (3,6)
+DECATHLON | Ten-event track-and-field contest
+BADMINTON | Racket sport played with a shuttlecock
+SNOOKER | Cue sport with fifteen reds
+ESPERANTO | Constructed language created by Zamenhof
+MANDARIN | Most widely spoken Chinese language
+SWAHILI | Bantu language widely spoken in East Africa
+LATIN | Language of ancient Rome
+EURO | Currency of France, Germany and Italy
+YEN | Currency of Japan
+PESO | Currency of Mexico
+ROUBLE | Currency of Russia
+RUPEE | Currency of India
+KRONA | Currency of Sweden
+FRANC | Currency of Switzerland
+WON | Currency of South Korea
+HINOMARU | Japan's flag, a red disc on white
+STAROFDAVID | Symbol on Israel's flag (4,2,5)
+DRAGON | Red creature on the Welsh flag
+WATERLOO | 1815 battle where Napoleon was finally defeated
+HASTINGS | Battle of 1066 won by William the Conqueror
+MAGNACARTA | Charter sealed by King John in 1215 (5,5)
+BERLINWALL | Barrier that fell in 1989 (6,4)
+POMPEII | Roman town buried by Vesuvius in AD 79
+CLEOPATRA | Last active ruler of Ptolemaic Egypt
+TUTANKHAMUN | Boy pharaoh whose tomb Howard Carter found in 1922
+NAPOLEON | French emperor exiled to Elba and St Helena
+VIKINGS | Norse seafaring raiders
+RENAISSANCE | Cultural rebirth that began in Italy
+TROJANHORSE | Wooden ruse that ended the siege of Troy (6,5)
+COLDWAR | US-Soviet standoff after the Second World War (4,3)
+CHURCHILL | Winston, Britain's prime minister from 1940
+LINCOLN | US president who gave the Gettysburg Address
+WASHINGTON | George, first US president
+MOONLANDING | Apollo 11 achievement of July 1969 (4,7)
+SPUTNIK | First artificial satellite, launched in 1957
+APOLLO | NASA programme that put people on the Moon
+CHEETAH | Fastest land animal
+BLUEWHALE | Largest animal ever known (4,5)
+GIRAFFE | Tallest living animal
+PLATYPUS | Egg-laying Australian mammal with a duck-like bill
+KANGAROO | Hopping marsupial on Australia's coat of arms
+GIANTPANDA | Black-and-white bear of China (5,5)
+OCTOPUS | Eight-armed sea creature with three hearts
+HUMMINGBIRD | Tiny hovering flier that can fly backwards
+CHAMELEON | Colour-changing lizard
+SLOTH | Slow-moving tree-dwelling mammal
+BAT | Only mammal capable of true flight
+TORTOISE | Aesop's slow racer that beat the hare
+CATERPILLAR | Larva that becomes a butterfly
+TADPOLE | Young frog
+HAIKU | Japanese poem of 5-7-5 syllables
+SONNET | Fourteen-line poem
+PALINDROME | Word that reads the same backwards
+ORIGAMI | Japanese art of paper folding
+SUDOKU | Number puzzle on a nine-by-nine grid
+PIANO | Keyboard instrument with 88 keys
+VIOLIN | Highest-pitched member of the orchestra's string family
+BAGPIPES | Scottish instrument with drones
+ABACUS | Ancient counting frame
+COMPASS | Navigation tool with a magnetised needle
+THERMOMETER | Instrument for measuring temperature
+BAROMETER | Instrument for measuring air pressure
+HEXAGON | Six-sided shape
+OCTAGON | Eight-sided shape
+PENTAGON | Five-sided shape, or the US defence headquarters
+TRIANGLE | Three-sided shape
+DOZEN | Twelve
+GROSS | Twelve dozen
+SCORE | Twenty
+CENTURY | A hundred years
+EQUATOR | Line of zero latitude
+GREENWICH | London district of the prime meridian
+ARCTIC | Polar region around the North Pole
+TSUNAMI | Giant sea wave, from Japanese
+MONSOON | Seasonal rain-bearing wind of South Asia
+TORNADO | Violent funnel-shaped windstorm
+VOLCANO | Mountain that erupts lava
+STALACTITE | Cave formation hanging from the ceiling
+GLACIER | Slow-moving river of ice
+FJORD | Narrow sea inlet between cliffs, as in Norway
+DIWALI | Hindu festival of lights
+HANUKKAH | Jewish eight-day festival of lights
+RAMADAN | Islamic month of fasting
+HALLOWEEN | 31 October festival of costumes and pumpkins
+THANKSGIVING | US holiday on the fourth Thursday of November
+CHINESENEWYEAR | Festival of dragon dances and red envelopes (7,3,4)
+BASTILLEDAY | French national holiday on 14 July (8,3)
+STPATRICKSDAY | Irish holiday on 17 March (2,8,3)
+CINDERELLA | Fairy-tale heroine who loses a glass slipper
+PINOCCHIO | Puppet whose nose grows when he lies
+ROBINHOOD | Outlaw of Sherwood Forest (5,4)
+KINGARTHUR | Legendary owner of Excalibur (4,6)

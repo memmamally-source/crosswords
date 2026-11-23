@@ -19,6 +19,25 @@ function month(file) {
 // Rows of letters ('' for black squares).
 const rowsOf = (puzzle) => puzzle.solution.map((row) => row.map((ch) => ch || ''));
 
+// A Daily's earlier versions, replaced before they were published
+// (puzzles/superseded/, written by tools/freeze-puzzles.js --refreeze-from).
+// Apps built before the change still show them.
+const superseded = new Map();
+function earlierVersions(key) {
+  const m = /^daily:(\d{4}-\d{2})-\d{2}$/.exec(key);
+  if (!m) return [];
+  if (!superseded.has(m[1])) {
+    const p = path.join(site, 'puzzles', 'superseded', `${m[1]}.json`);
+    superseded.set(m[1], fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null);
+  }
+  const data = superseded.get(m[1]);
+  const list = (data && data.daily && data.daily[key.slice(6)]) || [];
+  return list.map((frozen) => {
+    const puzzle = G.thaw(frozen);
+    return { rows: puzzle.rows, cols: puzzle.cols, solution: rowsOf(puzzle) };
+  });
+}
+
 // A published Daily, Mini or Brutal Challenge's solution, or null.
 function published(key) {
   const m = /^(daily|mini|brutal):(\d{4}-\d{2})-\d{2}$/.exec(key);
@@ -60,4 +79,4 @@ function duel(mode, seed) {
 const pack = (rows) => rows.map((row) => row.map((ch) => ch || '.').join(''));
 const unpack = (rows) => rows.map((row) => row.split('').map((ch) => (ch === '.' ? '' : ch)));
 
-module.exports = { published, collection, duel, pack, unpack };
+module.exports = { published, earlierVersions, collection, duel, pack, unpack };

@@ -1,0 +1,193 @@
+# Music World: unofficial music crossword clues
+@title Music World
+@category music
+@blurb Genres, instruments, festivals and the language of music-making.
+@icon note
+AMAPIANO | South African house style that emerged in Gauteng in the 2010s | casual
+AFROBEATS | Modern West African pop style of Burna Boy and Wizkid | casual
+JAZZ | Genre born in New Orleans | casual
+REGGAE | Jamaican genre of Bob Marley | casual
+K-POP | South Korean chart music of BTS and Blackpink (1-3) | casual
+HIP HOP | Genre of rapping, DJing and breakdancing (3,3) | casual
+DISCO | 1970s dance music played under a mirrorball | casual
+GUITAR | Six-string instrument | casual
+PIANO | Keyboard instrument with 88 keys | casual
+DRUMS | Kit played with sticks | casual
+VIOLIN | Smallest member of the orchestra's string family | casual
+TRUMPET | Brass instrument with three valves | casual
+FLUTE | Woodwind instrument held sideways | casual
+CELLO | Large string instrument played seated, between the knees | casual
+HARP | Plucked instrument with many strings in a big frame | casual
+VINYL | Material of LP records | casual
+CASSETTE | Compact audio tape in a plastic shell | casual
+GRAMMY | Golden statuette of US music's biggest awards night | casual
+BRITS | The UK's big annual pop music awards | casual
+CHOIR | Group of singers | casual
+CHORUS | Repeated section of a song | casual
+VERSE | Song section between choruses | casual
+LYRICS | Words of a song | casual
+MELODY | Tune | casual
+RHYTHM | Pattern of beats | casual
+TEMPO | Speed of a piece of music | casual
+ORCHESTRA | Large classical ensemble | casual
+CONDUCTOR | Orchestra leader with a baton | casual
+MOZART | Austrian child prodigy who wrote The Magic Flute | casual
+BEETHOVEN | Composer who lost his hearing, author of Fur Elise | casual
+BACH | Johann Sebastian, Baroque composer | casual
+DUET | Song for two singers | casual
+KARAOKE | Singing along to backing tracks, a Japanese invention | casual
+PLAYLIST | Curated list of tracks | casual
+ALBUM | Collection of tracks released together | casual
+SINGLE | One song released on its own | casual
+EUROVISION | Song contest ABBA won in 1974 | casual
+GLASTONBURY | Somerset festival held on Worthy Farm | casual
+WOODSTOCK | 1969 festival held near Bethel, New York | casual
+ROCK AND ROLL | 1950s genre of Elvis and Chuck Berry (4,3,4) | casual
+COUNTRY | Genre most associated with Nashville | casual
+OPERA | Drama set to music and sung throughout | casual
+MICROPHONE | Singer's device that picks up the voice | casual
+HEADPHONES | Pair of speakers worn over the ears | casual
+ENCORE | Extra song after the crowd calls for more | casual
+GOSPEL | Church music genre | casual
+PUNK | 1970s genre of the Sex Pistols and the Ramones | casual
+HEAVY METAL | Loud genre of Black Sabbath and Iron Maiden (5,5) | casual
+TOP OF THE POPS | BBC chart show that ran from 1964 to 2006 (3,2,3,4) | casual
+NUMBER ONE | Chart-topper (6,3) | casual
+LULLABY | Song to send a baby to sleep | casual
+ANTHEM | National song | casual
+JINGLE | Short tune in an advert | casual
+KWAITO | South African genre that grew up in 1990s townships | fan
+SALSA | Latin dance music with Cuban roots, popularised in New York | casual
+SAMBA | Brazilian carnival rhythm | casual
+BOSSA NOVA | Brazilian style of The Girl from Ipanema (5,4) | fan
+FLAMENCO | Andalusian guitar and dance tradition | fan
+SKA | Upbeat Jamaican forerunner of reggae | fan
+DANCEHALL | Jamaican genre that grew out of reggae | superfan
+GRIME | London-born genre of Stormzy and Skepta | fan
+HIGHLIFE | Ghanaian guitar-and-horns dance music | superfan
+TECHNO | Electronic dance genre born in Detroit | fan
+HOUSE | Dance genre born in Chicago clubs | fan
+SOUL | Genre of Aretha Franklin and Otis Redding | casual
+BLUES | Genre with roots in the Mississippi Delta | casual
+CALYPSO | Trinidadian song style of carnival | fan
+FADO | Portuguese song style of longing | fan
+TANGO | Buenos Aires dance music | casual
+MARIACHI | Mexican ensemble of trumpets, violins and guitars | fan
+WALTZ | Ballroom dance in three-four time | casual
+POLKA | Lively Bohemian dance | fan
+SAXOPHONE | Single-reed jazz instrument invented by Adolphe Sax | casual
+UKULELE | Small four-string instrument linked with Hawaii | casual
+BANJO | Bluegrass instrument with a drum-like body | casual
+HARMONICA | Mouth organ | casual
+ACCORDION | Squeezebox with a keyboard | fan
+CLARINET | Single-reed woodwind of the orchestra | fan
+OBOE | Double-reed woodwind that gives the orchestra its tuning note | fan
+BASSOON | Low double-reed woodwind | fan
+TROMBONE | Brass instrument with a slide | casual
+TUBA | Lowest-pitched member of the brass family | fan
+XYLOPHONE | Percussion with wooden bars | casual
+DJEMBE | West African goblet drum played with the hands | fan
+MBIRA | Zimbabwean thumb piano | fan
+SITAR | Long-necked Indian instrument of Ravi Shankar | fan
+STEELPAN | Trinidadian pitched drum made from an oil barrel | fan
+BAGPIPES | Scottish instrument with drones and a chanter | casual
+TIMPANI | Orchestral kettledrums | fan
+CRESCENDO | Gradual increase in loudness | fan
+FORTE | Loud, in a musical direction | fan
+ALLEGRO | Fast and lively, as a tempo marking | fan
+ADAGIO | Slow, as a tempo marking | fan
+STACCATO | Played short and detached | superfan
+OCTAVE | Interval spanning eight notes of a scale | fan
+SHARP | Raised by a semitone | fan
+CHORD | Several notes sounded together | fan
+TREBLE CLEF | G-shaped symbol at the start of a stave (6,4) | fan
+A CAPPELLA | Sung without instruments (1,8) | fan
+FALSETTO | Voice pitched above the singer's normal range | superfan
+SOPRANO | Highest female singing voice | casual
+BARITONE | Male voice between tenor and bass | fan
+TENOR | Pavarotti's voice type | casual
+CONCERTO | Work for a soloist and orchestra | fan
+SYMPHONY | Large orchestral work, often in four movements | fan
+VIVALDI | Composer of The Four Seasons | fan
+CHOPIN | Polish composer of nocturnes for piano | fan
+TCHAIKOVSKY | Composer of Swan Lake and The Nutcracker | fan
+HANDEL | Composer of Messiah | fan
+DEBUSSY | Composer of Clair de Lune | fan
+PUCCINI | Composer of Madama Butterfly and La Boheme | superfan
+SALZBURG | Austrian city where Mozart was born | fan
+COACHELLA | Festival held in the California desert at Indio | fan
+CARNEGIE HALL | New York concert venue funded by a steel magnate (8,4) | fan
+ROYAL ALBERT HALL | Domed Kensington venue honouring Queen Victoria's consort (5,6,4) | fan
+LA SCALA | Milan's famous opera house (2,5) | fan
+APOLLO | Harlem theater famous for its Amateur Night | superfan
+GRAND OLE OPRY | Long-running Nashville country radio show (5,3,4) | superfan
+MERCURY PRIZE | UK album award first given in 1992 (7,5) | fan
+BILLBOARD | US magazine behind the Hot 100 chart | fan
+COMPACT DISC | Digital format launched in 1982 (7,4) | fan
+WALKMAN | Sony's portable tape player, launched in 1979 | fan
+GRAMOPHONE | Early record player with a horn | fan
+JUKEBOX | Coin-operated record player | casual
+MIXTAPE | Home-made compilation tape | fan
+STREAMING | Listening online without downloading | casual
+PRODUCER | Studio boss who shapes a recording | fan
+SAMPLE | Snippet of an old recording reused in a new track | fan
+REMIX | Reworked version of a track | casual
+DEMO | Rough early recording of a song | fan
+HOOK | Catchiest part of a song | fan
+BRIDGE | Contrasting section before the final chorus | fan
+RIFF | Repeated instrumental phrase on a guitar | fan
+AUTO-TUNE | Pitch-correction software (4-4) | fan
+METRONOME | Ticking device that keeps time | fan
+AMPLIFIER | Box that makes an electric guitar loud | fan
+PLECTRUM | Guitar pick | fan
+FRET | Ridge across a guitar's neck | fan
+BLUE NOTE | Famous jazz record label (4,4) | superfan
+PROMS | BBC summer concert season in London | fan
+GQOM | Dark, minimal electronic genre from Durban | superfan
+MBAQANGA | South African township jive style | superfan
+MARABI | Early South African township jazz style | superfan
+MASKANDI | Zulu guitar-led folk style | superfan
+LOG DRUM | Deep percussive bass sound of South African house music (3,4) | superfan
+JUJU | Nigerian guitar style of King Sunny Ade | superfan
+FUJI | Nigerian Yoruba percussion-led style | superfan
+SOCA | Trinidadian carnival music descended from calypso | superfan
+ZOUK | French Caribbean dance music | superfan
+RAI | Algerian popular music style | superfan
+KORA | West African harp-lute | superfan
+BANDONEON | Squeezebox heard in tango | superfan
+THEREMIN | Electronic instrument played without being touched | superfan
+HARPSICHORD | Plucked keyboard instrument of the Baroque | superfan
+GLOCKENSPIEL | Percussion with tuned metal bars | superfan
+CONTRALTO | Lowest female singing voice | superfan
+LIBRETTO | Text of an opera | superfan
+CODA | Closing passage of a piece | superfan
+OSTINATO | Persistently repeated musical pattern | superfan
+LEGATO | Played smoothly, with notes joined | superfan
+FERMATA | Symbol telling a player to hold a note | superfan
+SYNCOPATION | Accenting the off-beats | superfan
+ARPEGGIO | Chord played one note at a time | superfan
+TIMBRE | Tone colour of a sound | superfan
+DIMINUENDO | Gradual decrease in loudness | superfan
+PIANISSIMO | Very soft, in a musical direction | superfan
+CAPO | Clamp that raises a guitar's pitch | superfan
+STRADIVARIUS | Prized violin from a Cremona workshop | superfan
+LEIPZIG | German city where Bach led the choir of St Thomas Church | superfan
+BONN | German city where Beethoven was born | superfan
+BAYREUTH | Bavarian town with an opera festival on the Green Hill | superfan
+WAGNER | Composer of the Ring cycle | superfan
+VERDI | Composer of Aida and La Traviata | superfan
+GLYNDEBOURNE | Sussex country-house opera festival | superfan
+NEWPORT | Rhode Island city with a famous jazz festival | superfan
+ROSKILDE | Danish town with a big summer rock festival | superfan
+WOMAD | World music festival founded by Peter Gabriel | superfan
+PHONOGRAPH | Edison's sound-recording invention of 1877 | superfan
+MINIDISC | Sony's small recordable 1990s disc format | superfan
+REEL-TO-REEL | Open tape format used in studios (4-2-4) | superfan
+OVERDUB | Extra part recorded on top of an existing take | superfan
+MASTERING | Final polishing stage of audio production | superfan
+B-SIDE | Flip of a single (1-4) | superfan
+MOOG | Bob, pioneer of the synthesiser | superfan
+IVOR NOVELLO | Welsh composer who gives his name to UK songwriting awards (4,7) | superfan
+POLAR MUSIC PRIZE | Swedish award founded by ABBA's manager Stig Anderson (5,5,5) | superfan
+HACIENDA | Manchester club opened by Factory Records in 1982 | superfan
+SUN RECORDS | Memphis label where Elvis began (3,7) | superfan

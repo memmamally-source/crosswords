@@ -1,0 +1,130 @@
+# Bob Marley: unofficial music crossword clues
+@title Bob Marley
+@category music
+@blurb Trenchtown, the Wailers and the songs that took reggae to the world.
+@icon note
+JAMAICA | Caribbean island where he was born | casual
+KINGSTON | Jamaican capital where he made his name | casual
+TRENCHTOWN | Kingston neighbourhood where he grew up | casual
+NINE MILE | Village in Saint Ann where he was born and is buried (4,4) | casual
+REGGAE | Music genre he took around the world | casual
+WAILERS | His band, Bob Marley and the ___ | casual
+RITA | His wife, a member of the I Threes | casual
+ZIGGY | Eldest son, leader of the Melody Makers | casual
+DAMIAN | Youngest son, nicknamed Jr Gong | casual
+STEPHEN | Son, a multiple Grammy winner and producer | casual
+PETER TOSH | Original Wailer who went solo in the 1970s (5,4) | casual
+BUNNY WAILER | Founding bandmate born Neville Livingston (5,6) | casual
+ISLAND | Record label that released Catch a Fire | casual
+CHRIS BLACKWELL | Island Records founder who signed the Wailers (5,9) | casual
+RASTAFARI | Faith he followed | casual
+DREADLOCKS | Famous hairstyle he wore | casual
+LEGEND | 1984 greatest-hits album | casual
+EXODUS | 1977 album recorded in London | casual
+UPRISING | 1980 album, the last released in his lifetime | casual
+SURVIVAL | 1979 album with African flags on its cover | casual
+KAYA | 1978 album featuring Is This Love | casual
+NATTY DREAD | 1974 album featuring No Woman, No Cry (5,5) | casual
+CATCH A FIRE | 1973 album, the Wailers' Island debut (5,1,4) | casual
+NO WOMAN NO CRY | Ballad whose live Lyceum version became a classic (2,5,2,3) | casual
+ONE LOVE | Exodus track joined with People Get Ready (3,4) | casual
+BIRDS | Three Little ___, Exodus favourite | casual
+REDEMPTION SONG | Acoustic solo closing track of Uprising (10,4) | casual
+COULD YOU BE LOVED | 1980 dance hit from Uprising (5,3,2,5) | casual
+JAMMING | Exodus single about playing music together | casual
+IS THIS LOVE | 1978 romantic single from Kaya (2,4,4) | casual
+BUFFALO SOLDIER | Song about Black US cavalry troops, released in 1983 (7,7) | casual
+GET UP STAND UP | 1973 anthem co-written with Peter Tosh (3,2,5,2) | casual
+STIR IT UP | Love song famously covered by Johnny Nash (4,2,2) | casual
+SHERIFF | I Shot the ___, song Eric Clapton turned into a 1974 hit | casual
+ERIC CLAPTON | Guitarist who covered I Shot the Sheriff in 1974 (4,7) | casual
+WAITING IN VAIN | Exodus love song (7,2,4) | casual
+GUITAR | Instrument he played on stage | casual
+FOOTBALL | Sport he loved to play | casual
+MIAMI | Florida city where he died in 1981 | casual
+HAILE SELASSIE | Ethiopian emperor revered in his faith (5,8) | casual
+ROBERT | His first name in full | casual
+PEACE CONCERT | One Love ___, his famous 1978 Kingston show (5,7) | fan
+NESTA | His middle name | fan
+TUFF GONG | His nickname, also the name of his label (4,4) | fan
+HOPE ROAD | Kingston street of his home, now his museum (4,4) | fan
+CEDELLA | Name shared by his mother and one of his daughters | fan
+NORVAL | His father's first name | fan
+KY-MANI | Son who starred in the film Shottas (2-4) | fan
+JULIAN | London-born son, also a reggae singer | fan
+SHARON | Daughter who sang in the Melody Makers | fan
+MELODY MAKERS | Band formed by his children (6,6) | fan
+I THREES | Female vocal trio that backed him (1,6) | fan
+MARCIA GRIFFITHS | I Threes singer famed for Electric Boogie (6,9) | fan
+JUDY MOWATT | I Threes singer with a solo career (4,6) | fan
+FAMILY MAN | Nickname of bassist Aston Barrett (6,3) | fan
+CARLTON | ___ Barrett, the Wailers' drummer | fan
+LEE PERRY | Producer known as Scratch (3,5) | fan
+UPSETTERS | Lee Perry's studio band, home of the Barrett brothers | fan
+STUDIO ONE | Coxsone Dodd's label where the Wailers began (6,3) | fan
+SIMMER DOWN | Early Wailers ska hit for Studio One (6,4) | fan
+BURNIN | 1973 album with Get Up, Stand Up and I Shot the Sheriff | fan
+RASTAMAN | ___ Vibration, 1976 album | fan
+BABYLON BY BUS | 1978 live double album (7,2,3) | fan
+CONFRONTATION | 1983 posthumous album featuring Buffalo Soldier | fan
+LYCEUM | London theatre where the Live! album was recorded in 1975 | fan
+ZIMBABWE | African nation whose 1980 independence celebrations he played | fan
+LONDON | City where he lived while making Exodus | fan
+NATURAL MYSTIC | Opening track of Exodus (7,6) | fan
+LIVELY | ___ Up Yourself, opening track of Natty Dread | fan
+CONCRETE JUNGLE | Opening track of Catch a Fire (8,6) | fan
+SMALL AXE | Lee Perry-era song with a woodcutting title (5,3) | fan
+TRENCHTOWN ROCK | 1971 single named after his old neighbourhood (10,4) | fan
+SUN IS SHINING | Kaya track (3,2,7) | fan
+SATISFY MY SOUL | 1978 single from Kaya (7,2,4) | fan
+IRON LION ZION | Song released posthumously in 1992 (4,4,4) | fan
+AFRICA UNITE | Survival track calling for continental unity (6,5) | fan
+WAR | Rastaman Vibration song based on a Haile Selassie speech | fan
+ROOTS ROCK REGGAE | Rastaman Vibration single (5,4,6) | fan
+JOHNNY NASH | American singer whose label signed him as a songwriter (6,4) | fan
+CURTIS MAYFIELD | Writer of People Get Ready, joined to One Love (6,8) | fan
+KINGSLEY BEN-ADIR | Actor who played him in 2024's One Love (8,3-4) | fan
+LASHANA LYNCH | Actress who played Rita in One Love (2024) (7,5) | fan
+ZIPPO | Lighter brand that inspired the original Catch a Fire sleeve | fan
+ETHIOPIA | African nation central to his faith | fan
+JAH | Rastafarian name for God | fan
+SAINT ANN | Jamaican parish of his birthplace (5,3) | fan
+HALL OF FAME | He entered the Rock and Roll ___ in 1994 (4,2,4) | fan
+ORDER OF MERIT | Jamaican honour he received in 1981 (5,2,5) | fan
+JUDGE NOT | His first single, from 1962 (5,3) | superfan
+JOE HIGGS | Trenchtown singer who mentored the young Wailers (3,5) | superfan
+COXSONE | Nickname of Studio One boss Clement Dodd | superfan
+BEVERLEY KELSO | Original female singer in the Wailers (8,5) | superfan
+WAILING WAILERS | The ___, 1965 Studio One album (7,7) | superfan
+SOUL REBELS | 1970 album produced by Lee Perry (4,6) | superfan
+AFRICAN HERBSMAN | 1973 compilation of Lee Perry-era recordings (7,8) | superfan
+SONGS OF FREEDOM | 1992 box set that introduced Iron Lion Zion (5,2,7) | superfan
+DUPPY CONQUEROR | Lee Perry-era song about a ghost-vanquisher (5,9) | superfan
+SLAVE DRIVER | Second track on Catch a Fire, after Concrete Jungle (5,6) | superfan
+KINKY REGGAE | Catch a Fire song with an offbeat adjective before the genre's name (5,6) | superfan
+STOP THAT TRAIN | Catch a Fire song written by Peter Tosh (4,4,5) | superfan
+BURNIN AND LOOTIN | Track on the second 1973 Island album (6,3,6) | superfan
+THEM BELLY FULL | Natty Dread song (4,5,4) | superfan
+REBEL MUSIC | Natty Dread track subtitled 3 O'Clock Roadblock (5,5) | superfan
+TALKIN BLUES | Natty Dread track that names a later live album (6,5) | superfan
+CRAZY BALDHEAD | Rastaman Vibration track (5,8) | superfan
+RAT RACE | Rastaman Vibration song about the daily grind (3,4) | superfan
+THE HEATHEN | Exodus track (3,7) | superfan
+GUILTINESS | Exodus track | superfan
+TURN YOUR LIGHTS | ___ Down Low, Exodus love song (4,4,6) | superfan
+EASY SKANKING | Opening track of Kaya (4,8) | superfan
+RUNNING AWAY | Kaya track (7,4) | superfan
+PUNKY | ___ Reggae Party, 1977 single produced with Lee Perry | superfan
+ZION TRAIN | Uprising track (4,5) | superfan
+COMING IN FROM | ___ the Cold, opening track of Uprising (6,2,4) | superfan
+SO MUCH TROUBLE | ___ in the World, opening track of Survival (2,4,7) | superfan
+AMBUSH | ___ in the Night, Survival track | superfan
+SMILE JAMAICA | Free 1976 Kingston concert he headlined (5,7) | superfan
+DELAWARE | US state where he worked for a time in the 1960s | superfan
+WILMINGTON | Delaware city where his mother lived | superfan
+PITTSBURGH | US city of his final concert, in 1980 | superfan
+STANLEY THEATRE | Pittsburgh venue of his final concert (7,7) | superfan
+TYRONE DOWNIE | Wailers keyboard player (6,6) | superfan
+JUNIOR MARVIN | Guitarist who joined the Wailers for Exodus (6,6) | superfan
+AL ANDERSON | American guitarist in the Wailers (2,8) | superfan
+KEVIN MACDONALD | Director of the 2012 documentary Marley (5,9) | superfan

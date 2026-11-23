@@ -27,9 +27,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,600;1,6..72,700&family=Public+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=56" />
+  <link rel="stylesheet" href="css/styles.css?v=57" />
 </head>
 <body>
+  <!-- The app's loading screen (shown only in the app: mobile/copy-web.js
+       un-hides it). It matches the native launch screen in mobile/assets. -->
+  <div class="app-splash" id="app-splash" hidden aria-hidden="true">
+    <img class="app-splash-logo" src="icons/logo.svg" alt="" />
+    <picture class="app-splash-by"><source srcset="icons/karoo-fox-logo-dark.png" media="(prefers-color-scheme: dark)" /><img src="icons/karoo-fox-logo.png" alt="" /></picture>
+  </div>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="masthead">
@@ -724,9 +730,10 @@
         <li><span>Solve a Mini without hints</span><b>+1</b></li>
         <li><span>Solve a Daily or the Brutal Challenge without hints</span><b>+3</b></li>
         <li><span>Solve a genre or collection crossword without hints (3 a day)</span><b>+1</b></li>
+        <li><span>Solve any of these using Check, with no reveals</span><b>+1</b></li>
         <li><span>Win a crossword duel (3 rewarded wins a day)</span><b>+3</b></li>
       </ul>
-      <p class="wallet-note">No-Hint rewards are paid once per puzzle, the first time you solve it. Checking, auto-check or any reveal means no reward.</p>
+      <p class="wallet-note">Rewards are paid once per puzzle, the first time you solve it. Using Check or auto-check earns 1 credit instead; any reveal means no reward.</p>
       <div id="wallet-history-wrap" hidden>
         <h3>Recent</h3>
         <ul class="wallet-list wallet-history" id="wallet-history"></ul>
@@ -777,27 +784,27 @@
 
   <div class="toast" id="toast" role="status" hidden></div>
 
-  <script src="js/generator.js?v=56"></script>
-  <script src="js/words.js?v=56"></script>
-  <script src="js/collections.js?v=56"></script>
-  <script src="js/genres.js?v=56"></script>
-  <script src="js/ladder.js?v=56"></script>
-  <script src="js/economy.js?v=56"></script>
-  <script src="js/sync.js?v=56"></script>
-  <script src="js/featured.js?v=56"></script>
-  <script src="js/hints.js?v=56"></script>
-  <script src="js/stats.js?v=56"></script>
-  <script src="js/access.js?v=56"></script>
-  <script src="js/share.js?v=56"></script>
-  <script src="js/gifts.js?v=56"></script>
-  <script src="js/arcade.js?v=56"></script>
-  <script src="js/rooms.js?v=56"></script>
-  <script src="js/firebase-config.js?v=56"></script>
-  <script src="js/analytics.js?v=56"></script>
-  <script src="js/app.js?v=56"></script>
-  <script type="module" src="js/firebase.js?v=56"></script>
-  <script type="module" src="js/account.js?v=56"></script>
-  <script type="module" src="js/room.js?v=56"></script>
-  <script type="module" src="js/online.js?v=56"></script>
+  <script src="js/generator.js?v=57"></script>
+  <script src="js/words.js?v=57"></script>
+  <script src="js/collections.js?v=57"></script>
+  <script src="js/genres.js?v=57"></script>
+  <script src="js/ladder.js?v=57"></script>
+  <script src="js/economy.js?v=57"></script>
+  <script src="js/sync.js?v=57"></script>
+  <script src="js/featured.js?v=57"></script>
+  <script src="js/hints.js?v=57"></script>
+  <script src="js/stats.js?v=57"></script>
+  <script src="js/access.js?v=57"></script>
+  <script src="js/share.js?v=57"></script>
+  <script src="js/gifts.js?v=57"></script>
+  <script src="js/arcade.js?v=57"></script>
+  <script src="js/rooms.js?v=57"></script>
+  <script src="js/firebase-config.js?v=57"></script>
+  <script src="js/analytics.js?v=57"></script>
+  <script src="js/app.js?v=57"></script>
+  <script type="module" src="js/firebase.js?v=57"></script>
+  <script type="module" src="js/account.js?v=57"></script>
+  <script type="module" src="js/room.js?v=57"></script>
+  <script type="module" src="js/online.js?v=57"></script>
 </body>
 </html>

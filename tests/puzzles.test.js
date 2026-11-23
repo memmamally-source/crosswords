@@ -35,6 +35,21 @@ function checkMonths(list, onDisk, launch, fingerprints, file) {
 checkMonths(months, files, LAUNCH_MONTH, index.months, (m) => `${m}.json`);
 checkMonths(brutalMonths, brutalFiles, BRUTAL_LAUNCH_MONTH, index.brutal, (m) => `brutal-${m}.json`);
 
+// Earlier versions of rebuilt Dailies (kept so older apps' solves still
+// count) are valid grids, for dates in frozen months.
+const { supersededDir } = require('../tools/freeze-puzzles.js');
+if (fs.existsSync(supersededDir)) {
+  for (const f of fs.readdirSync(supersededDir)) {
+    assert.ok(/^\d{4}-\d{2}\.json$/.test(f), `unexpected file puzzles/superseded/${f}`);
+    const data = JSON.parse(fs.readFileSync(path.join(supersededDir, f), 'utf8'));
+    assert.ok(months.includes(data.month) && f.startsWith(data.month), `puzzles/superseded/${f}: month ${data.month}`);
+    for (const [date, list] of Object.entries(data.daily)) {
+      assert.ok(date.startsWith(data.month) && Array.isArray(list) && list.length, `puzzles/superseded/${f}: ${date}`);
+      list.forEach((frozen) => thaw(frozen));
+    }
+  }
+}
+
 // Every frozen puzzle is a valid, connected grid with a full set of days.
 let total = 0;
 for (const m of months) {

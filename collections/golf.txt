@@ -1,0 +1,146 @@
+# Golf: unofficial sport crossword clues
+@title Golf
+@category sport
+@blurb Majors, legends, famous links and the language of the fairway.
+@icon ball
+TIGER WOODS | American who won the 1997 Masters by 12 strokes (5,5) | casual
+NICKLAUS | Jack, the Golden Bear, winner of 18 majors | casual
+ARNOLD PALMER | The King, whose fans were known as Arnie's Army (6,6) | casual
+GARY PLAYER | South African Black Knight who won nine majors (4,6) | casual
+ERNIE ELS | South African known as the Big Easy (5,3) | casual
+SEVE | ___ Ballesteros, Spanish winner of five majors | casual
+FALDO | Nick, England's six-time major champion | casual
+MCILROY | Rory, Northern Irishman who won the 2011 US Open | casual
+MASTERS | Major whose winner receives a green jacket | casual
+AUGUSTA | Georgia home of the Masters | casual
+ST ANDREWS | Fife town known as the home of golf (2,7) | casual
+RYDER CUP | Biennial team match between Europe and the USA (5,3) | casual
+GREEN JACKET | Garment presented to the Masters champion (5,6) | casual
+CLARET JUG | Trophy for winning the Open (6,3) | casual
+OPEN | The oldest major, first played in 1860 | casual
+BIRDIE | One under par on a hole | casual
+EAGLE | Two under par on a hole | casual
+BOGEY | One over par on a hole | casual
+PAR | Standard score for a hole | casual
+ALBATROSS | Three under par on a hole | casual
+HOLE IN ONE | Tee shot that drops straight into the cup (4,2,3) | casual
+FORE | Warning shout on the course | casual
+TEE | Peg the ball sits on for a drive | casual
+CADDIE | Player's bag carrier | casual
+PUTTER | Club used on the green | casual
+DRIVER | Longest club in the bag | casual
+WEDGE | Lofted club for short approach shots | casual
+IRON | Club with a metal head, often numbered 3 to 9 | casual
+BUNKER | Sand trap | casual
+FAIRWAY | Closely mown strip between tee and green | casual
+ROUGH | Longer grass beside the short stuff | casual
+GREEN | Putting surface | casual
+DIVOT | Piece of turf removed by a shot | casual
+HANDICAP | Allowance that levels players of different ability | casual
+MULLIGAN | Informal do-over shot among friends | casual
+FLAGSTICK | Pin marking the hole | casual
+GOLF CART | Electric buggy for getting round the course (4,4) | casual
+CLUBHOUSE | Building with the bar and changing rooms | casual
+SLICE | Shot curving sharply right for a right-hander | casual
+HOOK | Shot curving sharply left for a right-hander | casual
+CHIP | Short, low shot onto the green | casual
+PUTT | Stroke played on the green | casual
+DRIVING RANGE | Practice area for long shots (7,5) | casual
+LINKS | Seaside course | casual
+DOGLEG | Hole that bends to the left or right | casual
+BACK NINE | Holes ten to eighteen (4,4) | casual
+SCORECARD | Tally signed at the end of a round | casual
+HOGAN | Ben, winner of three majors in 1953 | fan
+SNEAD | Slammin' Sammy | fan
+TREVINO | Lee, nicknamed Supermex | fan
+WATSON | Tom, five-time Open champion | fan
+NORMAN | Greg, the Great White Shark | fan
+LANGER | Bernhard, German who won the Masters in 1985 and 1993 | fan
+LYLE | Sandy, Scot who won the 1988 Masters | fan
+WOOSNAM | Ian, Welsh winner of the 1991 Masters | fan
+OLAZABAL | Jose Maria, Masters champion in 1994 and 1999 | fan
+GARCIA | Sergio, 2017 Masters champion | fan
+SPIETH | Jordan, winner of the 2015 Masters and US Open | fan
+SCHEFFLER | Scottie, 2022 Masters champion | fan
+RAHM | Jon, Spaniard who won the 2021 US Open | fan
+KOEPKA | Brooks, US Open winner in 2017 and 2018 | fan
+MICKELSON | Phil, PGA champion at the age of 50 in 2021 | fan
+HARRINGTON | Padraig, Open champion in 2007 and 2008 | fan
+DALY | John, 1991 PGA champion who got in as ninth alternate | fan
+STENSON | Henrik, Swede who won the 2016 Open at Troon | fan
+LOWRY | Shane, Irish winner of the 2019 Open at Portrush | fan
+JACKLIN | Tony, English winner of the 1969 Open | fan
+MONTGOMERIE | Colin, Scot who captained Europe to Ryder Cup victory in 2010 | fan
+SORENSTAM | Annika, Swede who shot 59 on the LPGA Tour in 2001 | fan
+GOOSEN | Retief, US Open champion in 2001 and 2004 | fan
+OOSTHUIZEN | Louis, South African who won the 2010 Open at St Andrews | fan
+SCHWARTZEL | Charl, South African who won the 2011 Masters | fan
+IMMELMAN | Trevor, South African who won the 2008 Masters | fan
+GOLDEN BEAR | Jack Nicklaus's nickname (6,4) | fan
+AMEN CORNER | Augusta stretch around holes 11 to 13 (4,6) | fan
+RAE'S CREEK | Water guarding Augusta's 12th green (4,5) | fan
+MAGNOLIA LANE | Tree-lined driveway into Augusta National (8,4) | fan
+SWILCAN BRIDGE | Old stone crossing on the 18th at St Andrews (7,6) | fan
+ROAD HOLE | Famous 17th on the Old Course (4,4) | fan
+CARNOUSTIE | Angus links on the Open rota | fan
+MUIRFIELD | East Lothian home of the Honourable Company of Edinburgh Golfers | fan
+PEBBLE BEACH | Californian links on the Monterey Peninsula (6,5) | fan
+SAWGRASS | TPC course famed for its island green 17th | fan
+SOLHEIM CUP | Women's team match between Europe and the USA (7,3) | fan
+WALKER CUP | Amateur match between the USA and Great Britain and Ireland (6,3) | fan
+STABLEFORD | Points-based scoring system | fan
+MATCH PLAY | Format decided hole by hole (5,4) | fan
+STROKE PLAY | Format that counts every shot (6,4) | fan
+FOURSOMES | Pairs format with alternate shots | fan
+FOURBALL | Pairs format in which the better score counts | fan
+GIMME | Short putt conceded by an opponent | fan
+YIPS | Nervous twitch that ruins putting | fan
+SHANK | Wild shot struck off the hosel | fan
+DOUBLE BOGEY | Two over par on a hole (6,5) | fan
+CUT | Halfway elimination in a strokeplay event | fan
+PITCH | High, short shot onto the green | fan
+LIE | Position in which the ball comes to rest | fan
+DIMPLES | Small hollows covering a ball | fan
+ADDRESS | Set-up position over the ball before a swing | fan
+VARDON | Harry, six-time Open champion who gave his name to a grip | superfan
+MORRIS | Old Tom ___, four-time Open champion of the 1860s | superfan
+JONES | Bobby, amateur who won the 1930 Grand Slam | superfan
+SARAZEN | Gene, whose 1935 Masters albatross was the shot heard round the world | superfan
+HAGEN | Walter, flamboyant American star of the 1920s | superfan
+LOCKE | Bobby, South African four-time Open champion | superfan
+ZAHARIAS | Babe ___, Olympic athlete who became a golf champion | superfan
+LOPEZ | Nancy, LPGA Rookie of the Year in 1978 | superfan
+OCHOA | Lorena, Mexican former women's world number one | superfan
+PAK | Se Ri ___, 1998 US Women's Open champion | superfan
+KAYMER | Martin, German who won the 2014 US Open | superfan
+MOLINARI | Francesco, 2018 Open champion at Carnoustie | superfan
+FITZPATRICK | Matt, Englishman who won the 2022 US Open | superfan
+ROSE | Justin, 2013 US Open winner at Merion | superfan
+STEWART | Payne, 1999 US Open winner at Pinehurst | superfan
+BRASSIE | Old name for a 2-wood | superfan
+NIBLICK | Old name for a lofted iron, roughly a 9-iron | superfan
+MASHIE | Old name for a club roughly equal to a 5-iron | superfan
+SPOON | Old name for a 3-wood | superfan
+HICKORY | Wood once used for club shafts | superfan
+FEATHERY | Early ball of stitched hide stuffed with plumage | superfan
+GUTTY | 19th-century ball made from dried tree sap | superfan
+CONDOR | Four under par on a hole | superfan
+CHAMPIONS DINNER | Masters Tuesday meal hosted by last year's victor (9,6) | superfan
+BUTLER CABIN | Augusta building where the televised jacket ceremony takes place (6,5) | superfan
+PAR THREE CONTEST | Masters Wednesday curtain-raiser on a short course (3,5,7) | superfan
+WANAMAKER | Trophy for the PGA Championship | superfan
+POSTAGE STAMP | Royal Troon's tiny 8th hole (7,5) | superfan
+HOYLAKE | Home of Royal Liverpool | superfan
+PORTRUSH | County Antrim links that first hosted the Open in 1951 | superfan
+OAKMONT | Pennsylvania US Open venue with Church Pews bunkers | superfan
+PINEHURST | North Carolina resort whose No. 2 course hosts US Opens | superfan
+VALDERRAMA | Spanish venue of the 1997 Ryder Cup | superfan
+BELFRY | Warwickshire Ryder Cup venue, The ___ | superfan
+MEDINAH | Illinois scene of Europe's 2012 Ryder Cup comeback | superfan
+BROOKLINE | Massachusetts venue of the 1999 Ryder Cup | superfan
+GLENEAGLES | Perthshire venue of the 2014 Ryder Cup | superfan
+SUN CITY | South African resort, long-time home of the Nedbank Golf Challenge (3,4) | superfan
+PRESTWICK | Ayrshire club that hosted the first Open | superfan
+SAMUEL RYDER | St Albans seed merchant who gave his name to a famous trophy (6,5) | superfan
+BLACK KNIGHT | Gary Player's nickname (5,6) | superfan
+EL NINO | Sergio Garcia's nickname (2,4) | superfan

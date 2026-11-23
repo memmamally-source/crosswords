@@ -15,7 +15,7 @@
   const ECONOMY = {
     dailyAllowance: 5, // complimentary credits a day; unused ones expire at midnight
     cost: { letter: 1, word: 3 },
-    reward: { mini: 1, full: 3, win: 3, collection: 1 },
+    reward: { mini: 1, full: 3, win: 3, collection: 1, checked: 1 }, // checked: solved using Check, with no reveals
     collectionRewardsPerDay: 3, // rewarded genre and collection puzzles a day
     collectionMinClues: 10, // the smallest of those that earns credits
     winRewardsPerDay: 3, // rewarded duel wins a day (up to 9 credits)
@@ -117,6 +117,12 @@
     return m[1] === 'mini' ? { amount: ECONOMY.reward.mini, kind: 'mini' } : { amount: ECONOMY.reward.full, kind: 'full' };
   }
 
+  // A solve that used Check (or auto-check) but no reveals earns less: at most
+  // reward.checked. The page reports checking; reveals bought with credits
+  // are known to the server.
+  function checkedReward(reward) {
+    return reward && { ...reward, amount: Math.min(reward.amount, ECONOMY.reward.checked), checked: true };
+  }
   // Whether a genre or collection solve still earns today. Returns { amount, why }.
   function collectionReward(w, day) {
     w = wallet(w);
@@ -232,7 +238,7 @@
   const api = {
     ECONOMY, DUELS, sastDay, sastDate, dayToDate, msUntilReset,
     blankWallet, wallet, refreshDaily, available, spend, earn,
-    puzzleReward, collectionReward, recordCollectionReward, progress, validGrid, winReward, recordWinReward,
+    puzzleReward, checkedReward, collectionReward, recordCollectionReward, progress, validGrid, winReward, recordWinReward,
     blankDuelStats, duelStats, applyOutcome, winRate, CODE_ALPHABET, validCode, validName, politeName,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;

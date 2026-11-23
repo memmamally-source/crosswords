@@ -156,14 +156,18 @@ exports.spendHint = onCall(async (req) => {
 // each puzzle pays once per account, and never after a hint was bought on it.
 exports.claimSolve = onCall(async (req) => {
   const uid = account(req);
-  const { puzzle, grid } = req.data || {};
+  const { puzzle, grid, checked } = req.data || {};
   const ms = now();
-  const reward = E.puzzleReward(puzzle, E.sastDate(ms));
+  const base = E.puzzleReward(puzzle, E.sastDate(ms));
+  const reward = checked === true ? E.checkedReward(base) : base;
   if (!reward) return { ok: false, reason: 'not-eligible' };
   const collection = reward.kind === 'collection';
   const answers = collection ? P.collection(puzzle, E.ECONOMY.collectionMinClues) : P.published(puzzle);
   if (!answers) return { ok: false, reason: collection ? 'too-small' : 'not-eligible' };
-  if (!E.validGrid(grid, answers.rows, answers.cols) || !E.progress(grid, answers.solution).solved) return { ok: false, reason: 'incorrect' };
+  // A Daily may have been rebuilt before it was published; apps built
+  // earlier still show the old version, so its solution counts too.
+  const versions = collection ? [answers] : [answers, ...P.earlierVersions(puzzle)];
+  if (!versions.some((a) => E.validGrid(grid, a.rows, a.cols) && E.progress(grid, a.solution).solved)) return { ok: false, reason: 'incorrect' };
   const claimRef = db.doc(`wallets/${uid}/claims/${docId(puzzle)}`);
   const spentRef = db.doc(`wallets/${uid}/spent/${docId(puzzle)}`);
   return db.runTransaction(async (t) => {
@@ -182,9 +186,10 @@ exports.claimSolve = onCall(async (req) => {
     if (collection) next = E.recordCollectionReward(next, today(ms));
     t.set(walletRef(uid), { ...next, updatedAt: FieldValue.serverTimestamp() });
     t.create(claimRef, { amount: reward.amount, at: FieldValue.serverTimestamp() });
-    const note = { mini: 'Mini solved without hints', collection: 'Collection crossword solved without hints' }[reward.kind] || 'Crossword solved without hints';
+    const note = reward.checked ? 'Crossword solved with Check'
+      : { mini: 'Mini solved without hints', collection: 'Collection crossword solved without hints' }[reward.kind] || 'Crossword solved without hints';
     ledgerEntry(t, uid, { type: 'solve', amount: reward.amount, daily: 0, earned: reward.amount, note });
-    return { ok: true, amount: reward.amount, kind: reward.kind, wallet: view(next, ms) };
+    return { ok: true, amount: reward.amount, kind: reward.kind, checked: !!reward.checked, wallet: view(next, ms) };
   });
 });
 

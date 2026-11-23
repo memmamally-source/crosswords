@@ -1,0 +1,123 @@
+# Adele: unofficial music crossword clues
+@title Adele
+@category music
+@blurb From Tottenham teenager to global voice, the albums 19 to 30 in clues.
+@icon note
+TOTTENHAM | North London district where she was born | casual
+LONDON | Capital city of her birth | casual
+ENGLAND | Country of her birth | casual
+ADKINS | Her surname at birth | casual
+ANGELO | Her son, born in 2012 | casual
+BRIT SCHOOL | Croydon performing-arts academy she attended (4,6) | casual
+XL RECORDINGS | Independent British label that signed her (2,10) | casual
+MYSPACE | Social network where her early demos were noticed | casual
+HOMETOWN GLORY | Her 2007 debut single, a tribute to London (8,5) | casual
+PAVEMENTS | Chasing ___, 2008 single from 19 | casual
+DEEP | Rolling in the ___, 2010 smash that opens 21 | casual
+SOMEONE LIKE YOU | Piano ballad that closes 21 (7,4,3) | casual
+RAIN | Set Fire to the ___, 2011 single from 21 | casual
+RUMOUR HAS IT | Single from 21 about gossip (6,3,2) | casual
+TURNING TABLES | Ballad from 21 co-written with Ryan Tedder (7,6) | casual
+HEARTBREAK | Emotion at the core of the ballads on 21 | casual
+HELLO | 2015 comeback single that opens 25 | casual
+SEND MY LOVE | Upbeat 2016 single from 25 (4,2,4) | casual
+WHEN WE WERE YOUNG | Nostalgic 2016 single from 25 (4,2,4,5) | casual
+BRIDGE | Water Under the ___, single from 25 | casual
+EASY ON ME | 2021 lead single from 30 (4,2,2) | casual
+SKYFALL | 2012 James Bond theme she sang | casual
+JAMES BOND | Spy whose 2012 film she sang the theme for (5,4) | casual
+DANIEL CRAIG | Star of the 2012 film her Bond theme accompanies (6,5) | casual
+OSCAR | Academy Award she won for her Bond theme | casual
+GOLDEN GLOBE | Award her Bond theme won in 2013 (6,5) | casual
+GRAMMY | Gramophone-shaped US music award she first won in 2009 | casual
+BRITS | UK awards show where she sang Someone Like You in 2011 | casual
+DYLAN | Bob ___, writer of Make You Feel My Love, which she covered | casual
+GLASTONBURY | Festival she headlined in 2016 | casual
+LAS VEGAS | City of her Weekends with Adele residency (3,5) | casual
+HYDE PARK | London green space where she headlined in 2022 (4,4) | casual
+WEMBLEY | London stadium she played in 2017 | casual
+PIANO | Instrument at the heart of Someone Like You | casual
+JAMES CORDEN | Talk-show host who drove her around for Carpool Karaoke (5,6) | casual
+CARPOOL KARAOKE | Late Late Show segment she joined in 2016 (7,7) | casual
+OPRAH | Talk-show legend who interviewed her for a 2021 TV special | casual
+COLD SHOULDER | 2008 single from 19 (4,8) | fan
+ALBUM OF THE YEAR | Grammy won by both 21 and 25 (5,2,3,4) | casual
+OH MY GOD | Second single from 30 (2,2,3) | casual
+WEEKENDS | ___ with Adele, her Las Vegas residency | fan
+COLOSSEUM | Caesars Palace venue that hosted her residency | fan
+CAESARS PALACE | Las Vegas resort where she held a residency from 2022 (7,6) | fan
+MUNICH | German city where she played a run of shows in 2024 | fan
+BLUE | One of her middle names, also a colour | fan
+LAURIE | Her first middle name | fan
+CROYDON | South London borough home to her old performing-arts school | fan
+COLUMBIA | Label that released her albums in the US | fan
+BEST NEW ARTIST | Grammy she won in 2009 (4,3,6) | fan
+CRITICS CHOICE | BRIT Award she was the first to win, in 2008 (7,6) | fan
+MBE | Royal honour she received in 2013 | fan
+ROYAL ALBERT HALL | London venue of her 2011 live album (5,6,4) | fan
+PAUL EPWORTH | Producer who co-wrote Skyfall with her (4,7) | fan
+GREG KURSTIN | Producer of Hello and Easy on Me (4,7) | fan
+DAN WILSON | Co-writer of Someone Like You (3,6) | fan
+RYAN TEDDER | OneRepublic frontman who co-wrote Rumour Has It (4,6) | fan
+MAX MARTIN | Swedish hitmaker who co-wrote Send My Love (3,6) | fan
+BRUNO MARS | Pop star who co-wrote All I Ask (5,4) | fan
+THE CURE | Band whose Lovesong she covered on 21 (3,4) | fan
+LOVESONG | Cure ballad she covered on 21 | fan
+SPICE GIRLS | 1990s girl group she adored as a child (5,5) | fan
+DAYDREAMER | Opening track of 19 | fan
+ALL I ASK | Piano ballad from 25 co-written with Bruno Mars (3,1,3) | fan
+RIVER LEA | Track on 25 named after a waterway near her childhood home (5,3) | fan
+REMEDY | Comforting ballad on 25 | fan
+I DRINK WINE | Ballad from 30 named after a glass of red or white (1,5,4) | fan
+MY LITTLE LOVE | Song on 30 featuring voice notes with her son (2,6,4) | fan
+LOVE IS A GAME | Closing track of 30 (4,2,1,4) | fan
+ONE NIGHT ONLY | Adele ___, 2021 CBS special (3,5,4) | fan
+AUDIENCE | An ___ with Adele, 2021 ITV special | fan
+SNL | US sketch show she hosted in 2020 | fan
+TOBIAS JESSO | ___ Jr, co-writer of When We Were Young (6,5) | superfan
+XAVIER DOLAN | Canadian director of the Hello video (6,5) | fan
+FLIP PHONE | Old-fashioned handset seen in the Hello video (4,5) | fan
+HOLD ON | Gospel-tinged song from 30 (4,2) | fan
+TO BE LOVED | Powerhouse piano ballad from 30 (2,2,5) | fan
+FRASER T SMITH | Co-writer of Set Fire to the Rain (6,1,5) | superfan
+CRY YOUR HEART OUT | Upbeat track on 30 (3,4,5,3) | fan
+WOMAN LIKE ME | Mid-tempo track on 30 (5,4,2) | fan
+CAN I GET IT | Whistle-driven track from 30 (3,1,3,2) | fan
+STRANGERS | ___ by Nature, opening track of 30 | superfan
+JIM ABBISS | Producer of most of her debut album, 19 (3,6) | superfan
+RICK RUBIN | Bearded producer who worked on several tracks of 21 (4,5) | superfan
+SHELLBACK | Swedish co-producer of Send My Love | superfan
+DANGER MOUSE | Producer of River Lea (6,5) | superfan
+INFLO | British producer who worked on 30 | superfan
+ERROLL GARNER | Jazz pianist sampled on the 30 interlude All Night Parking (6,6) | superfan
+JONATHAN DICKINS | Her long-time manager (8,7) | superfan
+RICHARD RUSSELL | Head of XL Recordings when the label signed her (7,7) | superfan
+BEST FOR LAST | Second track on 19, after Daydreamer (4,3,4) | superfan
+MELT | ___ My Heart to Stone, track on 19 | superfan
+FIRST LOVE | Seventh track on 19 (5,4) | superfan
+RIGHT AS RAIN | Upbeat track on 19 with a proverbial title (5,2,4) | superfan
+TIRED | One-word track on 19 | superfan
+CRAZY FOR YOU | Track on 19 (5,3,3) | superfan
+MY SAME | Jazzy track on 19 (2,4) | superfan
+ONE AND ONLY | Soulful track on 21 (3,3,4) | superfan
+HE WON'T GO | Track on 21 (2,4,2) | superfan
+TAKE IT ALL | Piano ballad on 21 (4,2,3) | superfan
+DON'T YOU REMEMBER | Country-tinged ballad on 21 (4,3,8) | superfan
+I'LL BE WAITING | Upbeat track on 21 (3,2,7) | superfan
+MILLION YEARS AGO | Guitar ballad on 25 (7,5,3) | superfan
+LOVE IN THE DARK | String-backed ballad on 25 (4,2,3,4) | superfan
+I MISS YOU | Brooding track on 25 (1,4,3) | superfan
+SWEETEST | ___ Devotion, closing track of 25 | superfan
+ALL NIGHT PARKING | Jazz-sampling interlude on 30 (3,5,7) | superfan
+SHUFFLE | Spotify button made less prominent on albums at her 2021 request | fan
+CBS | US network that aired her 2021 special One Night Only | fan
+ITV | UK network that aired An Audience with Adele in 2021 | fan
+SAM MENDES | Director of the Bond film her 2012 theme was written for (3,6) | fan
+MARK RONSON | Producer of Cold Shoulder (4,6) | superfan
+EG WHITE | Co-writer and producer of Chasing Pavements (2,5) | superfan
+RECORD OF THE YEAR | Grammy won by both Rolling in the Deep and Hello (6,2,3,4) | superfan
+SONG OF THE YEAR | Grammy won by Rolling in the Deep in 2012 (4,2,3,4) | superfan
+JOOLS HOLLAND | Host of the BBC music show on which she made her TV debut in 2007 (5,7) | superfan
+SELHURST | Croydon area home to the performing-arts school she attended | superfan
+TIME OUT OF MIND | 1997 Bob Dylan album holding the original of a song she covered on 19 (4,3,2,4) | superfan
+DISINTEGRATION | 1989 album by the Cure holding the original of a song she covered on 21 | superfan

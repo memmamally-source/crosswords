@@ -8,6 +8,24 @@
   const inApp = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
   const SITE = 'https://crosswordhub.app/'; // where links to share point from the app
   if (inApp) document.documentElement.classList.add('in-app');
+  // The app's loading screen: fades out once the page is ready, after at
+  // least a moment, so it never just flickers.
+  const appSplash = document.getElementById('app-splash');
+  let splashGone = () => {}; // resolves splashDone
+  const splashDone = new Promise((resolve) => { splashGone = resolve; });
+  if (!appSplash || appSplash.hidden) splashGone();
+  else {
+    const shownAt = performance.now();
+    const hide = () => setTimeout(() => {
+      appSplash.classList.add('gone');
+      setTimeout(() => {
+        appSplash.remove();
+        splashGone();
+      }, 400);
+    }, Math.max(0, 900 - (performance.now() - shownAt)));
+    if (document.readyState === 'complete') hide();
+    else window.addEventListener('load', hide, { once: true });
+  }
   // The app and an installed web app have no browser Back button: show our own.
   const appShell = inApp || window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
   const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
@@ -275,7 +293,7 @@
       puzzle = CrosswordGenerator.fromLayoutCode(spec.layout, spec.genre.words);
       if (!puzzle) return null; // a word in the link is no longer in the bank
     } else {
-      puzzle = CrosswordGenerator.generate(spec.bank, { count: spec.count, maxSize: spec.maxSize, hard: spec.hard, seed: spec.seed });
+      puzzle = CrosswordGenerator.generate(spec.bank, { count: spec.count, maxSize: spec.maxSize, hard: spec.hard, seed: spec.seed, ...(spec.dense ? { dense: true } : {}) });
     }
     if (keep) puzzleCache.set(spec.key, puzzle);
     return puzzle;
@@ -313,6 +331,7 @@
     let best = null;
     for (let attempt = 0; attempt < 8; attempt++) {
       const spec = genreSpec(genre, difficulty, Math.floor(Math.random() * 1e9), encodePool(pool));
+      spec.dense = true; // new puzzles pack tighter; links to older ones rebuild as they were
       const placed = puzzleFor(spec).words.length;
       if (!best || placed > best.placed) best = { spec, placed };
       if (placed >= cfg.count) break;
@@ -1122,22 +1141,28 @@
     el.textContent = text;
     el.hidden = !text;
   }
-  function queueClaim(spec, entries) {
-    store.pendingClaims = Object.assign({}, store.pendingClaims, { [spec.key]: { grid: entries.map((row) => row.slice()), at: Date.now() } });
+  function queueClaim(spec, entries, checked) {
+    const claim = { grid: entries.map((row) => row.slice()), at: Date.now() };
+    if (checked) claim.checked = true;
+    store.pendingClaims = Object.assign({}, store.pendingClaims, { [spec.key]: claim });
     saveStore();
   }
-  async function claimReward(spec, entries) {
-    queueClaim(spec, entries);
-    const reward = rewardFor(spec);
+  async function claimReward(spec, entries, checked = false) {
+    queueClaim(spec, entries, checked);
+    const base = rewardFor(spec);
+    const reward = checked ? Econ.checkedReward(base) : base;
     const amount = reward ? reward.amount : Econ.ECONOMY.reward.full;
+    const what = checked ? 'solve' : 'No-Hint solve';
     if (!me.account) {
-      rewardNote(`Sign in to collect ${plural(amount, 'Hint Credit')} for this No-Hint solve: it’s kept for you for a week.`);
+      rewardNote(`Sign in to collect ${plural(amount, 'Hint Credit')} for this ${what}: it’s kept for you for a week.`);
       return;
     }
-    rewardNote('Checking your No-Hint reward…');
+    rewardNote(checked ? 'Checking your reward…' : 'Checking your No-Hint reward…');
     const res = await sendClaim(spec.key);
     if (!res) rewardNote(`Your ${plural(amount, 'Hint Credit')} will be added when the connection’s back.`);
-    else if (res.ok) {
+    else if (res.ok && res.checked) {
+      rewardNote(`Solved with Check: +${plural(res.amount, 'Hint Credit')}.${base && base.amount > res.amount ? ` Solve without checking for ${base.amount}.` : ''}`);
+    } else if (res.ok) {
       rewardNote({
         mini: `Brilliant! Mini solved without hints. +${plural(res.amount, 'credit')}.`,
         collection: `No hints needed! +${plural(res.amount, 'Hint Credit')}.`,
@@ -1151,7 +1176,7 @@
     const claim = (store.pendingClaims || {})[key];
     if (!claim || !me.account || !creditsOn()) return null;
     try {
-      const res = await online.call('claimSolve', { puzzle: key, grid: claim.grid });
+      const res = await online.call('claimSolve', { puzzle: key, grid: claim.grid, checked: !!claim.checked });
       delete store.pendingClaims[key];
       saveStore();
       if (res.wallet) setWallet(res.wallet);
@@ -1180,7 +1205,7 @@
     } finally {
       claiming = false;
     }
-    if (paid) toast(`+${plural(paid, 'Hint Credit')} for your No-Hint solves`);
+    if (paid) toast(`+${plural(paid, 'Hint Credit')} for your solves`);
   }
   window.addEventListener('online', sendPendingClaims);
 
@@ -2194,7 +2219,9 @@
     delete store.saves[spec.key];
     saveStore();
     $('#win-reward').hidden = true;
-    if (creditsOn() && noHint && !prev && earnsCredits(spec)) claimReward(spec, game.entries);
+    // Solved with Check (or auto-check) but no reveals: a smaller reward.
+    const checkedSolve = !team && clean && !points && !noHint;
+    if (creditsOn() && (noHint || checkedSolve) && !prev && earnsCredits(spec)) claimReward(spec, game.entries, checkedSolve);
 
     $('#board').classList.add('solved');
     celebrate(clean);
@@ -2463,7 +2490,28 @@
     const on = !!game && docked.matches && !appKeys() && !$('#game-view').hidden;
     if (on === phoneKeyboardLayout()) return;
     document.body.classList.toggle('phone-keyboard', on);
+    pinClueBar(on);
     if (on) measureTools();
+  }
+  // With the phone's keyboard the clue bar lives inside the sticky tools, as
+  // their last row, so the two always move together: no gap or overlap
+  // between them, however the page scrolls or the tools wrap.
+  // The hidden text box the phone's keyboard types into goes there too. Left
+  // on the selected square, the browser scrolled the page to it after every
+  // letter, so typing down an answer made the grid and the clue bounce.
+  function pinClueBar(on) {
+    const bar = $('#clue-bar');
+    const input = $('#type-input');
+    const home = $('#board-wrap').parentElement; // the clue bar's place above the grid
+    const typing = document.activeElement === input;
+    if (on && bar.parentElement !== $('.toolbar')) {
+      $('.toolbar').appendChild(bar);
+      $('.toolbar').appendChild(input);
+    } else if (!on && bar.parentElement !== home) {
+      home.insertBefore(bar, $('#board-wrap'));
+      $('#board-wrap').insertBefore(input, $('#pause-overlay'));
+    }
+    if (typing && document.activeElement !== input) input.focus({ preventScroll: true });
   }
   // The clue bar sits just below the tools, so it follows their real height:
   // they can wrap onto a second row (a bigger text size, a long timer, a
@@ -2482,16 +2530,30 @@
     // With the phone's keyboard open the clue bar sits under the tools, and
     // the browser may float its own controls (Safari's address bar) just
     // above the keyboard, so keep a margin there.
+    // The tools (with the clue bar in them) as they'll sit once scrolled to
+    // their sticky place: measuring where they happen to be before the page
+    // has scrolled made the view look tiny and the page scroll again.
+    const tools = $('.toolbar');
     const viewTop = phoneKeyboardLayout()
-      ? $('#clue-bar').getBoundingClientRect().bottom + 8
-      : (vv ? vv.offsetTop : 0) + $('.toolbar').getBoundingClientRect().height + 8;
+      ? (parseFloat(getComputedStyle(tools).top) || 0) + tools.offsetHeight + 8
+      : (vv ? vv.offsetTop : 0) + tools.getBoundingClientRect().height + 8;
     const viewBottom = phoneKeyboardLayout()
       ? visibleBottom - 64
       : Math.min(visibleBottom - $('#clue-bar').getBoundingClientRect().height, $('#clue-bar').getBoundingClientRect().top) - 12;
     followHorizontally(el);
     const rect = el.getBoundingClientRect();
-    if (rect.bottom > viewBottom) window.scrollBy({ top: rect.bottom - viewBottom, behavior: 'smooth' });
-    else if (rect.top < viewTop) window.scrollBy({ top: rect.top - viewTop, behavior: 'smooth' });
+    if (rect.top >= viewTop && rect.bottom <= viewBottom) return;
+    // Out of view: scroll once to show the whole answer if it fits, so typing
+    // down it doesn't nudge the page (and the clue) with every letter. A long
+    // answer that doesn't fit shows from this square on.
+    const wi = currentWordIndex();
+    const cells = wi != null ? game.puzzle.words[wi].cells.map(([r, c]) => cellEls[r][c].getBoundingClientRect()) : [rect];
+    const top = Math.min(...cells.map((b) => b.top));
+    const bottom = Math.max(...cells.map((b) => b.bottom));
+    let by;
+    if (bottom - top <= viewBottom - viewTop) by = top < viewTop ? top - viewTop : bottom - viewBottom;
+    else by = rect.top - viewTop;
+    if (Math.abs(by) >= 1) window.scrollBy({ top: by, behavior: 'smooth' });
   }
   // When zoomed in, scroll the grid sideways to keep a square in view.
   function followHorizontally(el) {
@@ -3021,6 +3083,11 @@
   }
   function placeTyping() {
     if (!game || !cellEls.length) return;
+    if (phoneKeyboardLayout()) {
+      typeInput.style.top = '0px'; // in the sticky tools: always on screen
+      typeInput.style.left = '0px';
+      return;
+    }
     const el = cellEls[game.sel.r][game.sel.c];
     typeInput.style.top = el.offsetTop + 'px';
     typeInput.style.left = el.offsetLeft + 'px';
@@ -3259,7 +3326,11 @@
   // Only for someone new, arriving on the home page (not on a shared puzzle or duel link).
   function offerWelcome() {
     const isNew = !store.welcomed && !(store.solvedCount > 0) && !Object.keys(store.saves || {}).length;
-    if (isNew && !$$('dialog').some((d) => d.open)) openWelcome();
+    if (!isNew) return;
+    // Not over the app's loading screen (dialogs always sit on top).
+    splashDone.then(() => {
+      if (!store.welcomed && !$('#home-view').hidden && !$$('dialog').some((d) => d.open)) openWelcome();
+    });
   }
   function closeDialogs() {
     $$('dialog').forEach((d) => d.open && d.close());
