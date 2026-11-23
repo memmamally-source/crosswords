@@ -5,13 +5,13 @@
 @icon ball
 WRESTLEMANIA | WWE's biggest annual show | casual
 ROYAL RUMBLE | Over-the-top-rope event, usually with 30 entrants (5,6) | casual
-SUMMERSLAM | Major summer event | casual
+SUMMERSLAM | Major WWE event held each August | casual
 SURVIVOR SERIES | November event known for elimination tag matches (8,6) | casual
 UNDERTAKER | The Deadman | casual
 THE ROCK | The People's Champion (3,4) | casual
 STONE COLD | Steve Austin's nickname (5,4) | casual
 HULK HOGAN | Star who headlined the first WrestleMania with Mr. T (4,5) | casual
-CENA | John, whose catchphrase is You Can't See Me | casual
+CENA | John, known for the catchphrase You Can't See Me | casual
 TRIPLE H | The Game (6,1) | casual
 SHAWN MICHAELS | The Heartbreak Kid (5,8) | casual
 BRET HART | The Hitman (4,4) | casual
@@ -36,7 +36,7 @@ LADDER MATCH | Contest won by grabbing a hanging prize (6,5) | casual
 STEEL CAGE | Enclosure for a grudge match (5,4) | casual
 BODY SLAM | Lift and throw to the mat (4,4) | casual
 SUPLEX | Throw lifting the opponent overhead and backwards | casual
-DROPKICK | Two-footed flying kick | casual
+DROPKICK | Two-footed flying strike | casual
 CLOTHESLINE | Arm across the neck of a running opponent | casual
 PILEDRIVER | Move that drops the opponent head-first | casual
 SPEAR | Running shoulder tackle used by Edge and Roman Reigns | casual
@@ -50,7 +50,7 @@ PEDIGREE | Triple H's finisher | fan
 TOMBSTONE | Undertaker's piledriver | fan
 SHARPSHOOTER | Bret Hart's leglock submission | fan
 SWEET CHIN MUSIC | Shawn Michaels' superkick (5,4,5) | fan
-CHOKESLAM | Throat-grab slam used by Kane and Undertaker | fan
+CHOKESLAM | Throat-grab move used by Kane and Undertaker | fan
 ROCK BOTTOM | Finishing slam of the People's Champion (4,6) | fan
 FIGURE FOUR | Ric Flair's leglock (6,4) | fan
 LEG DROP | Hulk Hogan's finisher (3,4) | fan
@@ -83,7 +83,7 @@ SHIELD | Faction of Reigns, Rollins and Ambrose, The ___ | fan
 NEW DAY | Pancake-loving trio (3,3) | fan
 HARDY BOYZ | Tag team of brothers Matt and Jeff (5,4) | fan
 LEGION OF DOOM | Tag team of Hawk and Animal (6,2,4) | fan
-D-GENERATION X | Faction founded by Triple H and Shawn Michaels (1-10,1) | fan
+D-GENERATION X | Group founded by Triple H and Shawn Michaels (1-10,1) | fan
 NWO | WCW faction formed in 1996, briefly | fan
 MONDAY NIGHT WARS | 1990s ratings battle with WCW (6,5,4) | fan
 NITRO | WCW's Monday show | fan
@@ -110,7 +110,7 @@ HEENAN | Bobby, the Brain | superfan
 MONSOON | Gorilla, commentator after whom a backstage position is named | superfan
 ROSS | Jim, commentator known as JR | superfan
 LAWLER | Jerry, the King of Memphis | superfan
-HEYMAN | Paul, Brock Lesnar's advocate | superfan
+HEYMAN | Paul, long-time advocate for Brock Lesnar | superfan
 JIMMY HART | The Mouth of the South (5,4) | superfan
 MISS ELIZABETH | Macho Man's manager (4,9) | superfan
 KOFI KINGSTON | New Day member who won the WWE title at WrestleMania 35 (4,8) | superfan

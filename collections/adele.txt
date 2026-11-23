@@ -1,7 +1,7 @@
 # Adele: unofficial music crossword clues
 @title Adele
 @category music
-@blurb From Tottenham teenager to record-breaking voice, the albums 19 to 30 in clues.
+@blurb From Tottenham teenager to global voice, the albums 19 to 30 in clues.
 @icon note
 TOTTENHAM | North London district where she was born | casual
 LONDON | Capital city of her birth | casual
@@ -18,8 +18,8 @@ SOMEONE LIKE YOU | Piano ballad that closes 21 (7,4,3) | casual
 RAIN | Set Fire to the ___, 2011 single from 21 | casual
 RUMOUR HAS IT | Single from 21 about gossip (6,3,2) | casual
 TURNING TABLES | Ballad from 21 co-written with Ryan Tedder (7,6) | casual
-HEARTBREAK | Theme of 21, often called her break-up album | casual
-HELLO | 2015 comeback single whose video features a flip phone | casual
+HEARTBREAK | Emotion at the core of the ballads on 21 | casual
+HELLO | 2015 comeback single that opens 25 | casual
 SEND MY LOVE | Upbeat 2016 single from 25 (4,2,4) | casual
 WHEN WE WERE YOUNG | Nostalgic 2016 single from 25 (4,2,4,5) | casual
 BRIDGE | Water Under the ___, single from 25 | casual
@@ -29,7 +29,7 @@ JAMES BOND | Spy whose 2012 film she sang the theme for (5,4) | casual
 DANIEL CRAIG | Star of the 2012 film her Bond theme accompanies (6,5) | casual
 OSCAR | Academy Award she won for her Bond theme | casual
 GOLDEN GLOBE | Award her Bond theme won in 2013 (6,5) | casual
-GRAMMY | Award she won as Best New Artist in 2009 | casual
+GRAMMY | Gramophone-shaped US music award she first won in 2009 | casual
 BRITS | UK awards show where she sang Someone Like You in 2011 | casual
 DYLAN | Bob ___, writer of Make You Feel My Love, which she covered | casual
 GLASTONBURY | Festival she headlined in 2016 | casual
@@ -40,7 +40,7 @@ PIANO | Instrument at the heart of Someone Like You | casual
 JAMES CORDEN | Talk-show host who drove her around for Carpool Karaoke (5,6) | casual
 CARPOOL KARAOKE | Late Late Show segment she joined in 2016 (7,7) | casual
 OPRAH | Talk-show legend who interviewed her for a 2021 TV special | casual
-COLD SHOULDER | 2008 single from 19 (4,8) | casual
+COLD SHOULDER | 2008 single from 19 (4,8) | fan
 ALBUM OF THE YEAR | Grammy won by both 21 and 25 (5,2,3,4) | casual
 OH MY GOD | Second single from 30 (2,2,3) | casual
 WEEKENDS | ___ with Adele, her Las Vegas residency | fan
@@ -91,10 +91,10 @@ DANGER MOUSE | Producer of River Lea (6,5) | superfan
 INFLO | British producer who worked on 30 | superfan
 ERROLL GARNER | Jazz pianist sampled on the 30 interlude All Night Parking (6,6) | superfan
 JONATHAN DICKINS | Her long-time manager (8,7) | superfan
-RICHARD RUSSELL | Co-founder and boss of XL Recordings (7,7) | superfan
-BEST FOR LAST | Track on 19 about saving something good (4,3,4) | superfan
+RICHARD RUSSELL | Head of XL Recordings when the label signed her (7,7) | superfan
+BEST FOR LAST | Second track on 19, after Daydreamer (4,3,4) | superfan
 MELT | ___ My Heart to Stone, track on 19 | superfan
-FIRST LOVE | Short track on 19 (5,4) | superfan
+FIRST LOVE | Seventh track on 19 (5,4) | superfan
 RIGHT AS RAIN | Upbeat track on 19 with a proverbial title (5,2,4) | superfan
 TIRED | One-word track on 19 | superfan
 CRAZY FOR YOU | Track on 19 (5,3,3) | superfan

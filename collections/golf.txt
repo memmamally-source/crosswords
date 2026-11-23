@@ -49,7 +49,7 @@ DRIVING RANGE | Practice area for long shots (7,5) | casual
 LINKS | Seaside course | casual
 DOGLEG | Hole that bends to the left or right | casual
 BACK NINE | Holes ten to eighteen (4,4) | casual
-SCORECARD | Card signed at the end of a round | casual
+SCORECARD | Tally signed at the end of a round | casual
 HOGAN | Ben, winner of three majors in 1953 | fan
 SNEAD | Slammin' Sammy | fan
 TREVINO | Lee, nicknamed Supermex | fan
@@ -70,7 +70,7 @@ DALY | John, 1991 PGA champion who got in as ninth alternate | fan
 STENSON | Henrik, Swede who won the 2016 Open at Troon | fan
 LOWRY | Shane, Irish winner of the 2019 Open at Portrush | fan
 JACKLIN | Tony, English winner of the 1969 Open | fan
-MONTGOMERIE | Colin, Scot nicknamed Monty | fan
+MONTGOMERIE | Colin, Scot who captained Europe to Ryder Cup victory in 2010 | fan
 SORENSTAM | Annika, Swede who shot 59 on the LPGA Tour in 2001 | fan
 GOOSEN | Retief, US Open champion in 2001 and 2004 | fan
 OOSTHUIZEN | Louis, South African who won the 2010 Open at St Andrews | fan
@@ -122,16 +122,16 @@ NIBLICK | Old name for a lofted iron, roughly a 9-iron | superfan
 MASHIE | Old name for a club roughly equal to a 5-iron | superfan
 SPOON | Old name for a 3-wood | superfan
 HICKORY | Wood once used for club shafts | superfan
-FEATHERY | Early ball of leather stuffed with feathers | superfan
-GUTTY | Gutta-percha ball of the 19th century | superfan
+FEATHERY | Early ball of stitched hide stuffed with plumage | superfan
+GUTTY | 19th-century ball made from dried tree sap | superfan
 CONDOR | Four under par on a hole | superfan
-CHAMPIONS DINNER | Masters Tuesday meal hosted by the defending winner (9,6) | superfan
+CHAMPIONS DINNER | Masters Tuesday meal hosted by last year's victor (9,6) | superfan
 BUTLER CABIN | Augusta building where the televised jacket ceremony takes place (6,5) | superfan
 PAR THREE CONTEST | Masters Wednesday curtain-raiser on a short course (3,5,7) | superfan
 WANAMAKER | Trophy for the PGA Championship | superfan
 POSTAGE STAMP | Royal Troon's tiny 8th hole (7,5) | superfan
 HOYLAKE | Home of Royal Liverpool | superfan
-PORTRUSH | County Antrim Open venue of 1951 and 2019 | superfan
+PORTRUSH | County Antrim links that first hosted the Open in 1951 | superfan
 OAKMONT | Pennsylvania US Open venue with Church Pews bunkers | superfan
 PINEHURST | North Carolina resort whose No. 2 course hosts US Opens | superfan
 VALDERRAMA | Spanish venue of the 1997 Ryder Cup | superfan
@@ -139,7 +139,7 @@ BELFRY | Warwickshire Ryder Cup venue, The ___ | superfan
 MEDINAH | Illinois scene of Europe's 2012 Ryder Cup comeback | superfan
 BROOKLINE | Massachusetts venue of the 1999 Ryder Cup | superfan
 GLENEAGLES | Perthshire venue of the 2014 Ryder Cup | superfan
-SUN CITY | South African resort that hosts the Nedbank Golf Challenge (3,4) | superfan
+SUN CITY | South African resort, long-time home of the Nedbank Golf Challenge (3,4) | superfan
 PRESTWICK | Ayrshire club that hosted the first Open | superfan
 SAMUEL RYDER | St Albans seed merchant who gave his name to a famous trophy (6,5) | superfan
 BLACK KNIGHT | Gary Player's nickname (5,6) | superfan

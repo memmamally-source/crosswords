@@ -15,7 +15,7 @@ MULTIPLY | 2014 album named after a symbol | casual
 DIVIDE | 2017 album named after a symbol | casual
 EQUALS | 2021 album named after a symbol | casual
 SUBTRACT | 2023 album named after a symbol | casual
-MATHEMATICS | Tour of 2022-24 named after his symbol albums | casual
+MATHEMATICS | Tour launched in 2022, named after his symbol albums | casual
 THE A TEAM | 2011 debut single about homelessness (3,1,4) | casual
 LEGO HOUSE | 2011 single named after a toy-brick building (4,5) | casual
 SING | 2014 track made with Pharrell Williams | casual
@@ -35,7 +35,7 @@ TAYLOR SWIFT | Pop star he duetted with on Everything Has Changed (6,5) | casual
 BEYONCE | Star of the Perfect Duet | casual
 ELTON JOHN | Rocket Man star on a festive 2021 duet (5,4) | casual
 MERRY CHRISTMAS | Festive 2021 duet with Elton John (5,9) | casual
-ONE DIRECTION | Boy band he wrote Little Things for (3,9) | casual
+ONE DIRECTION | Boy band he co-wrote Little Things for (3,9) | casual
 YESTERDAY | 2019 Danny Boyle film in which he played himself | casual
 GAME OF THRONES | Fantasy series in which he cameoed as a Lannister soldier (4,2,7) | casual
 GRAMMY | Award his Thinking Out Loud won as Song of the Year | casual
