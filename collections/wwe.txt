@@ -1,0 +1,137 @@
+# WWE: unofficial sport crossword clues
+@title WWE
+@category sport
+@blurb Superstars, signature moves and the biggest shows in wrestling.
+@icon ball
+WRESTLEMANIA | WWE's biggest annual show | casual
+ROYAL RUMBLE | Over-the-top-rope event, usually with 30 entrants (5,6) | casual
+SUMMERSLAM | Major summer event | casual
+SURVIVOR SERIES | November event known for elimination tag matches (8,6) | casual
+UNDERTAKER | The Deadman | casual
+THE ROCK | The People's Champion (3,4) | casual
+STONE COLD | Steve Austin's nickname (5,4) | casual
+HULK HOGAN | Star who headlined the first WrestleMania with Mr. T (4,5) | casual
+CENA | John, whose catchphrase is You Can't See Me | casual
+TRIPLE H | The Game (6,1) | casual
+SHAWN MICHAELS | The Heartbreak Kid (5,8) | casual
+BRET HART | The Hitman (4,4) | casual
+MACHO MAN | Randy Savage's nickname (5,3) | casual
+ANDRE THE GIANT | The Eighth Wonder of the World (5,3,5) | casual
+KANE | The Big Red Machine | casual
+BATISTA | The Animal, later Drax on the big screen | casual
+REY MYSTERIO | Masked high-flyer famed for the 619 (3,8) | casual
+ROMAN REIGNS | The Tribal Chief (5,6) | casual
+LESNAR | Brock, the Beast Incarnate | casual
+RANDY ORTON | The Viper (5,5) | casual
+RIC FLAIR | The Nature Boy (3,5) | casual
+RAW | Monday night flagship show since 1993 | casual
+SMACKDOWN | Weekly show launched in 1999 | casual
+HEEL | Villain | casual
+FACE | Fan favourite | casual
+TAG TEAM | Pair who wrestle in turn (3,4) | casual
+PINFALL | Win by a three-count | casual
+SUBMISSION | Win by making the opponent tap out | casual
+TURNBUCKLE | Padded corner fitting | casual
+LADDER MATCH | Contest won by grabbing a hanging prize (6,5) | casual
+STEEL CAGE | Enclosure for a grudge match (5,4) | casual
+BODY SLAM | Lift and throw to the mat (4,4) | casual
+SUPLEX | Throw lifting the opponent overhead and backwards | casual
+DROPKICK | Two-footed flying kick | casual
+CLOTHESLINE | Arm across the neck of a running opponent | casual
+PILEDRIVER | Move that drops the opponent head-first | casual
+SPEAR | Running shoulder tackle used by Edge and Roman Reigns | casual
+BELT | Title prize worn round the waist | casual
+MAIN EVENT | Top match on the card (4,5) | casual
+HALL OF FAME | Honour for retired greats (4,2,4) | casual
+RKO | Randy Orton's finisher | casual
+PEOPLES ELBOW | The Rock's showboating finisher (7,5) | casual
+STUNNER | Stone Cold's finishing move | fan
+PEDIGREE | Triple H's finisher | fan
+TOMBSTONE | Undertaker's piledriver | fan
+SHARPSHOOTER | Bret Hart's leglock submission | fan
+SWEET CHIN MUSIC | Shawn Michaels' superkick (5,4,5) | fan
+CHOKESLAM | Throat-grab slam used by Kane and Undertaker | fan
+ROCK BOTTOM | Finishing slam of the People's Champion (4,6) | fan
+FIGURE FOUR | Ric Flair's leglock (6,4) | fan
+LEG DROP | Hulk Hogan's finisher (3,4) | fan
+ANKLE LOCK | Kurt Angle's submission hold (5,4) | fan
+FROG SPLASH | Eddie Guerrero's top-rope finisher (4,6) | fan
+DDT | Jake Roberts's trademark move, briefly | fan
+WALLS OF JERICHO | Y2J's Boston crab variant (5,2,7) | fan
+JERICHO | Chris, Y2J, the first Undisputed Champion in 2001 | fan
+ANGLE | Kurt, 1996 Olympic freestyle wrestling champion | fan
+EDGE | Rated-R Superstar who won the first Money in the Bank | fan
+MANKIND | Mick Foley's masked persona with Mr. Socko | fan
+CACTUS JACK | Mick Foley's hardcore persona (6,4) | fan
+DUDE LOVE | Mick Foley's hippie persona (4,4) | fan
+GOLDBERG | Bill, WCW star who asked Who's next? | fan
+STING | Face-painted WCW icon | fan
+GUERRERO | Eddie, Latino Heat | fan
+CM PUNK | Best in the World (2,4) | fan
+DANIEL BRYAN | Star of the Yes! Movement (6,5) | fan
+BIG SHOW | Giant once billed as the World's Largest Athlete (3,4) | fan
+PIPER | Rowdy Roddy, kilted host of a famous interview segment | fan
+ULTIMATE WARRIOR | Face-painted star who beat Hogan at WrestleMania VI (8,7) | fan
+JAKE THE SNAKE | Nickname of Roberts, who carried a python to the ring (4,3,5) | fan
+DIBIASE | Ted, the Million Dollar Man | fan
+DUSTY RHODES | The American Dream (5,6) | fan
+TRISH STRATUS | Canadian women's star of the Attitude Era (5,7) | fan
+LITA | Red-haired high-flyer of Team Xtreme | fan
+BECKY LYNCH | The Man (5,5) | fan
+CHARLOTTE FLAIR | Ric's daughter, a multi-time women's champion (9,5) | fan
+SHIELD | Faction of Reigns, Rollins and Ambrose, The ___ | fan
+NEW DAY | Pancake-loving trio (3,3) | fan
+HARDY BOYZ | Tag team of brothers Matt and Jeff (5,4) | fan
+LEGION OF DOOM | Tag team of Hawk and Animal (6,2,4) | fan
+D-GENERATION X | Faction founded by Triple H and Shawn Michaels (1-10,1) | fan
+NWO | WCW faction formed in 1996, briefly | fan
+MONDAY NIGHT WARS | 1990s ratings battle with WCW (6,5,4) | fan
+NITRO | WCW's Monday show | fan
+WCW | Rival promotion bought in 2001 | fan
+ECW | Extreme promotion led by Paul Heyman | fan
+HELL IN A CELL | Match inside a roofed steel structure (4,2,1,4) | fan
+MONEY IN THE BANK | Briefcase ladder match event (5,2,3,4) | fan
+KING OF THE RING | Tournament where Austin 3:16 was born in 1996 (4,2,3,4) | fan
+KAYFABE | Presenting staged events as real | fan
+PROMO | Microphone speech | fan
+TITANTRON | Big entrance video screen | fan
+FINISHER | Signature match-ending move | fan
+PAUL BEARER | Undertaker's urn-carrying manager (4,6) | superfan
+MAIVIA | Rocky ___, The Rock's 1996 debut name | superfan
+HELMSLEY | Hunter Hearst ___, Triple H's full ring name | superfan
+RATTLESNAKE | Texas ___, Stone Cold's nickname | superfan
+JANNETTY | Marty, Shawn Michaels' partner in the Rockers | superfan
+SILVERDOME | Pontiac stadium that hosted WrestleMania III | superfan
+WEMBLEY | London stadium that hosted SummerSlam 1992 | superfan
+BRITISH BULLDOG | Davey Boy Smith's ring name (7,7) | superfan
+DUGGAN | Hacksaw Jim, winner of the first Royal Rumble in 1988 | superfan
+OKERLUND | Mean Gene, famous backstage interviewer | superfan
+HEENAN | Bobby, the Brain | superfan
+MONSOON | Gorilla, commentator after whom a backstage position is named | superfan
+ROSS | Jim, commentator known as JR | superfan
+LAWLER | Jerry, the King of Memphis | superfan
+HEYMAN | Paul, Brock Lesnar's advocate | superfan
+JIMMY HART | The Mouth of the South (5,4) | superfan
+MISS ELIZABETH | Macho Man's manager (4,9) | superfan
+KOFI KINGSTON | New Day member who won the WWE title at WrestleMania 35 (4,8) | superfan
+ROLLINS | Seth, who cashed in during the WrestleMania 31 main event | superfan
+AMBROSE | Dean, Shield member | superfan
+ASUKA | Japanese star: Nobody is ready for her | superfan
+BAYLEY | Women's star known as a hugger | superfan
+BOOKER T | Performer of the Spinaroonie (6,1) | superfan
+MOONSAULT | Backflip splash from the top rope | superfan
+HURRICANRANA | Flipping head-scissors throw | superfan
+SPINEBUSTER | Lift and slam made famous by Arn Anderson | superfan
+CAMEL CLUTCH | Seated chinlock submission (5,6) | superfan
+BOSTON CRAB | Leg-hold submission that bends the back (6,4) | superfan
+GERMAN SUPLEX | Bridging release throw (6,6) | superfan
+WWF | Company's initials until 2002 | superfan
+ATTITUDE ERA | Edgy late-1990s period (8,3) | superfan
+GIMMICK | Wrestler's character | superfan
+JOBBER | Wrestler who regularly loses to make others look good | superfan
+BABYFACE | Hero, in full | superfan
+SQUASH | One-sided match | superfan
+TAP OUT | Submit by slapping the mat (3,3) | superfan
+COUNT-OUT | Loss for staying outside the ring too long (5-3) | superfan
+BATTLE ROYAL | Multi-wrestler over-the-top elimination match (6,5) | superfan
+TLC | Tables, Ladders and Chairs, briefly | superfan

@@ -1,0 +1,195 @@
+# Music Legends: unofficial music crossword clues
+@title Music Legends
+@category music
+@blurb Pop queens, rock gods and soul, hip hop and Afrobeat legends from every era.
+@icon note
+WHITNEY | Houston, singer of I Will Always Love You | casual
+MADONNA | Queen of Pop behind Like a Prayer | casual
+ELTON JOHN | Piano man behind Your Song and Tiny Dancer (5,4) | casual
+ABBA | Swedish group of Agnetha, Bjorn, Benny and Anni-Frid | casual
+DYLAN | Bob, singer of Blowin' in the Wind | casual
+STEVIE WONDER | Motown legend of Sir Duke and Isn't She Lovely (6,6) | casual
+PRINCE | Purple-clad star from Minneapolis | casual
+ARETHA | Franklin, the Queen of Soul | casual
+SINATRA | Frank, the crooner known as Ol' Blue Eyes | casual
+DOLLY PARTON | Country star who wrote I Will Always Love You (5,6) | casual
+TUPAC | Rapper of Dear Mama and Changes | casual
+BRUNO MARS | Hawaii-born singer of Just the Way You Are (5,4) | casual
+ROLLING STONES | Band of Jumpin' Jack Flash and Start Me Up (7,6) | casual
+NIRVANA | Smells Like Teen Spirit grunge band | casual
+ELVIS | The King of Rock and Roll | casual
+BOB MARLEY | Reggae legend from Jamaica (3,6) | casual
+RIHANNA | Singer of Umbrella and Diamonds | casual
+ADELE | London singer of Hello and Someone Like You | casual
+ED SHEERAN | Shape of You singer with a loop pedal (2,7) | casual
+LADY GAGA | Poker Face singer (4,4) | casual
+DRAKE | Canadian rapper of Hotline Bling and God's Plan | casual
+EMINEM | Detroit rapper of Lose Yourself | casual
+SHAKIRA | Colombian singer of Hips Don't Lie | casual
+CELINE DION | Canadian singer of My Heart Will Go On (6,4) | casual
+DAVID BOWIE | Starman and Heroes singer (5,5) | casual
+OASIS | Gallagher brothers' Manchester band | casual
+COLDPLAY | Band behind Yellow and Viva la Vida | casual
+SPICE GIRLS | Five-piece 1990s group behind Wannabe (5,5) | casual
+BEE GEES | Brothers who sang Stayin' Alive (3,4) | casual
+DIANA ROSS | Motown diva of Chain Reaction (5,4) | casual
+MARIAH CAREY | All I Want for Christmas Is You singer (6,5) | casual
+BRITNEY | Spears, singer of ...Baby One More Time | casual
+CHER | One-named star who sang with Sonny in the 1960s | casual
+KYLIE | Australian pop princess, Minogue | casual
+BURNA BOY | Nigerian star of Last Last and Ye (5,3) | casual
+WIZKID | Nigerian Afrobeats star nicknamed Starboy | casual
+FELA KUTI | Nigerian pioneer of Afrobeat (4,4) | casual
+MIRIAM MAKEBA | South African singer of Pata Pata (6,6) | casual
+HUGH MASEKELA | South African trumpeter of Grazing in the Grass (4,8) | casual
+JAMES BROWN | The Godfather of Soul (5,5) | casual
+RAY CHARLES | Georgia on My Mind singer (3,7) | casual
+LOUIS ARMSTRONG | Jazz trumpeter of What a Wonderful World (5,9) | casual
+JOHNNY CASH | Country legend of Ring of Fire and I Walk the Line (6,4) | casual
+METALLICA | Enter Sandman heavy metal band | casual
+LED ZEPPELIN | Stairway to Heaven band (3,8) | casual
+PINK FLOYD | The Dark Side of the Moon band (4,5) | casual
+BON JOVI | Livin' on a Prayer band (3,4) | casual
+GLORIA GAYNOR | Disco singer of I Will Survive (6,6) | casual
+DONNA SUMMER | The Queen of Disco (5,6) | casual
+HARRY STYLES | Singer of As It Was and Watermelon Sugar (5,6) | casual
+BILLIE EILISH | Bad Guy singer (6,6) | casual
+DUA LIPA | Levitating singer (3,4) | casual
+THE WEEKND | Blinding Lights singer (3,6) | casual
+PURPLE RAIN | Prince's 1984 film and album (6,4) | casual
+VOGUE | Madonna's 1990 dance hit | fan
+CICCONE | Madonna's surname | superfan
+MATERIAL GIRL | Madonna hit from the Like a Virgin album (8,4) | fan
+ROCKET MAN | Elton John's 1972 spaceman song (6,3) | fan
+YELLOW BRICK ROAD | Goodbye ___, Elton John's 1973 double album (6,5,4) | fan
+MAMMA MIA | ABBA hit that became a stage musical (5,3) | casual
+SUPERSTITION | Stevie Wonder's 1972 funk hit | fan
+RESPECT | Aretha Franklin's 1967 signature hit, written by Otis Redding | fan
+MY WAY | Sinatra signature song with English lyrics by Paul Anka (2,3) | fan
+RAT PACK | Sinatra's 1960s Las Vegas set with Dean Martin (3,4) | fan
+JOLENE | Dolly Parton's 1973 country hit | fan
+SHAKUR | Tupac's surname | superfan
+CALIFORNIA LOVE | Tupac and Dr Dre's West Coast anthem (10,4) | fan
+UPTOWN FUNK | Mark Ronson hit with Bruno Mars (6,4) | casual
+MICK JAGGER | Rolling Stones frontman (4,6) | casual
+KEITH RICHARDS | Rolling Stones guitarist (5,8) | fan
+KURT COBAIN | Nirvana frontman (4,6) | casual
+NEVERMIND | Nirvana's 1991 album with a baby on the cover | fan
+DAVE GROHL | Nirvana drummer who founded Foo Fighters (4,5) | fan
+GRACELAND | Elvis's Memphis mansion | casual
+HOUND DOG | Elvis's 1956 hit (5,3) | fan
+SUPREMES | Diana Ross's Motown trio | fan
+MOTOWN | Detroit record label of the Supremes | fan
+ZIGGY | Bowie's Stardust alter ego | fan
+SLIM SHADY | Eminem's alter ego (4,5) | casual
+MARSHALL MATHERS | Eminem's real name (8,7) | fan
+BARBADOS | Rihanna's home island | fan
+FENTY | Rihanna's beauty brand | superfan
+TOTTENHAM | North London district where Adele was born | superfan
+LITTLE MONSTERS | Lady Gaga's name for her fans (6,8) | fan
+WONDERWALL | Oasis's 1995 hit | fan
+CHRIS MARTIN | Coldplay frontman (5,6) | fan
+POSH SPICE | Victoria Beckham's nickname in her 1990s girl group (4,5) | casual
+BARRY GIBB | Eldest of the Bee Gees brothers (5,4) | fan
+BELIEVE | Cher's 1998 hit famous for its Auto-Tune effect | fan
+NEIGHBOURS | Australian soap that made Kylie Minogue famous | fan
+ONE DIRECTION | X Factor boy band of Harry Styles (3,9) | casual
+FINNEAS | Billie Eilish's brother and producer | superfan
+MAMA AFRICA | Nickname of Miriam Makeba (4,6) | fan
+LAGOS | Nigerian city home of Fela's Afrika Shrine | fan
+AFRICAN GIANT | Burna Boy's 2019 album (7,5) | fan
+MADE IN LAGOS | Wizkid's 2020 album (4,2,5) | fan
+ESSENCE | Wizkid's 2020 hit featuring Tems | fan
+SATCHMO | Louis Armstrong's nickname | fan
+DUKE ELLINGTON | Jazz bandleader of Mood Indigo (4,9) | fan
+ELLA FITZGERALD | The First Lady of Song (4,10) | fan
+MILES DAVIS | Trumpeter behind Kind of Blue (5,5) | fan
+BILLIE HOLIDAY | Jazz singer known as Lady Day (6,7) | fan
+NINA SIMONE | The High Priestess of Soul (4,6) | fan
+JOHN COLTRANE | Saxophonist behind A Love Supreme (4,8) | fan
+RING OF FIRE | Johnny Cash hit co-written by June Carter (4,2,4) | fan
+MAN IN BLACK | Johnny Cash's nickname (3,2,5) | fan
+WAILERS | Bob Marley's band | fan
+ONE LOVE | Bob Marley song of unity (3,4) | fan
+NO WOMAN NO CRY | Bob Marley and the Wailers song from Natty Dread (2,5,2,3) | fan
+EXODUS | Bob Marley's 1977 album | fan
+ROBERT PLANT | Led Zeppelin singer (6,5) | fan
+JIMMY PAGE | Led Zeppelin guitarist (5,4) | fan
+THE WALL | Pink Floyd's 1979 double album (3,4) | fan
+MARVIN GAYE | Motown singer of What's Going On (6,4) | fan
+SMOKEY ROBINSON | Motown star who fronted the Miracles (6,8) | superfan
+CHUCK BERRY | Rock and roll pioneer of Johnny B Goode (5,5) | fan
+LITTLE RICHARD | Tutti Frutti singer (6,7) | fan
+JIMI HENDRIX | Guitar hero of Purple Haze (4,7) | fan
+BUDDY HOLLY | Bespectacled rock and roll star of Peggy Sue (5,5) | superfan
+AMY WINEHOUSE | London singer of Back to Black (3,9) | fan
+OUTKAST | Atlanta hip hop duo of Hey Ya | fan
+RUN-DMC | Hip hop trio who remade Walk This Way with Aerosmith (3-3) | fan
+BIGGIE | Nickname of Brooklyn rapper Christopher Wallace | fan
+DR DRE | Producer of The Chronic who co-founded Beats (2,3) | fan
+SNOOP DOGG | Long Beach rapper born Calvin Broadus (5,4) | fan
+LAURYN HILL | Singer of Doo Wop (That Thing) (6,4) | fan
+GARTH BROOKS | Country star of Friends in Low Places (5,6) | fan
+SHANIA TWAIN | Canadian country-pop star of the album Come On Over (6,5) | fan
+WILLIE NELSON | Country outlaw of On the Road Again (6,6) | fan
+VILLAGE PEOPLE | Disco group behind YMCA (7,6) | fan
+BTS | Korean boy band of Dynamite | fan
+BLACKPINK | Korean girl group of Jisoo, Jennie, Rose and Lisa | fan
+PSY | Korean singer of Gangnam Style | fan
+SANTANA | Carlos, guitarist of Smooth | fan
+DAVIDO | Nigerian star of the 2017 hit Fall | fan
+ZIMMERMAN | Bob Dylan's birth surname | superfan
+DULUTH | Minnesota city where Bob Dylan was born | superfan
+NOBEL | Prize for Literature awarded to Bob Dylan in 2016 | superfan
+TUPELO | Mississippi town where Elvis was born | superfan
+COLONEL PARKER | Elvis's long-time manager (7,6) | superfan
+BLUE SUEDE SHOES | Carl Perkins rockabilly song covered by Elvis (4,5,5) | superfan
+BERNIE TAUPIN | Elton John's long-time lyricist (6,6) | superfan
+DWIGHT | Elton John's birth surname | superfan
+PINNER | Middlesex town where Elton John was born | superfan
+CISSY | Whitney Houston's singer mother | superfan
+NEWARK | New Jersey city where Whitney Houston was born | superfan
+THE BODYGUARD | 1992 film starring Whitney Houston and Kevin Costner (3,9) | superfan
+BAY CITY | Michigan birthplace of Madonna (3,4) | superfan
+GERMANOTTA | Lady Gaga's real surname | superfan
+BARRANQUILLA | Colombian city where Shakira was born | superfan
+NINE MILE | Jamaican village where Bob Marley was born (4,4) | superfan
+PETER TOSH | Founding Wailer who went solo (5,4) | superfan
+JIMMY CLIFF | Reggae star of the film The Harder They Come (5,5) | superfan
+FOLSOM | California prison where Johnny Cash recorded a 1968 live album | superfan
+JUNE CARTER | Johnny Cash's wife and duet partner (4,6) | superfan
+SILK SONIC | Bruno Mars's duo with Anderson .Paak (4,5) | superfan
+HERNANDEZ | Bruno Mars's birth surname | superfan
+AMARU | Tupac's middle name | superfan
+REVOLUTION | Prince's backing band on Purple Rain | superfan
+PAISLEY PARK | Prince's Minnesota studio complex (7,4) | superfan
+NINE TO FIVE | Dolly Parton's 1980 film and theme song (4,2,4) | superfan
+DOLLYWOOD | Tennessee theme park named after a country queen | superfan
+SAGINAW | Michigan city where Stevie Wonder was born | superfan
+HOTTER THAN JULY | Stevie Wonder's 1980 album (6,4,4) | superfan
+MEMPHIS | Tennessee city where Aretha Franklin was born | superfan
+OTIS REDDING | Soul singer of (Sittin' On) The Dock of the Bay (4,7) | superfan
+HOBOKEN | New Jersey city where Frank Sinatra was born | superfan
+AGNETHA | ABBA's Ms Faltskog | superfan
+I FEEL LOVE | Donna Summer's 1977 electronic disco hit (1,4,4) | superfan
+MORODER | Giorgio, Donna Summer's synth-disco producer | superfan
+BERRY GORDY | Founder of Motown Records (5,5) | superfan
+KENNY ROGERS | The Gambler singer (5,6) | superfan
+CHIC | Nile Rodgers' disco band of Le Freak | superfan
+CHARLIE WATTS | Long-time Rolling Stones drummer (7,5) | superfan
+ABERDEEN | Washington town where Kurt Cobain grew up | superfan
+KRIST NOVOSELIC | Nirvana's bass player (5,9) | superfan
+BONHAM | John, Led Zeppelin's drummer | superfan
+SYD BARRETT | Pink Floyd's founding frontman (3,7) | superfan
+CHARLIE PARKER | Bebop saxophonist nicknamed Bird (7,6) | superfan
+THELONIOUS MONK | Jazz pianist who wrote 'Round Midnight (10,4) | superfan
+DIZZY GILLESPIE | Bebop trumpeter with puffed cheeks and a bent horn (5,9) | superfan
+QUEEN LATIFAH | Rapper and actress born Dana Owens (5,7) | superfan
+FUGEES | Group of Lauryn Hill, Wyclef Jean and Pras | superfan
+ABEOKUTA | Nigerian city where Fela Kuti was born | superfan
+ANIKULAPO | Name Fela Kuti adopted in place of Ransome | superfan
+PORT HARCOURT | Nigerian city where Burna Boy was born (4,8) | superfan
+SURULERE | Lagos district where Wizkid grew up | superfan
+ANGELIQUE KIDJO | Benin-born singer of Agolo (9,5) | superfan
+YOUSSOU N'DOUR | Senegalese singer of 7 Seconds with Neneh Cherry (7,5) | superfan
+BRENDA FASSIE | South African pop star of Weekend Special (6,6) | superfan

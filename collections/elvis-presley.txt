@@ -1,0 +1,146 @@
+# Elvis Presley: unofficial music crossword clues
+@title Elvis Presley
+@category music
+@blurb Tupelo, Sun Records, Graceland and the King of Rock and Roll in clues.
+@icon note
+GRACELAND | His Memphis mansion, now a museum | casual
+MEMPHIS | Tennessee city he called home | casual
+TUPELO | Mississippi town where he was born | casual
+MISSISSIPPI | State of his birth | casual
+THE KING | His regal nickname (3,4) | casual
+PRISCILLA | His wife, married in 1967 | casual
+LISA MARIE | His only child, born in 1968 (4,5) | casual
+VERNON | His father | casual
+GLADYS | His mother | casual
+AARON | His middle name | casual
+COLONEL | His manager's honorary title, as in ___ Tom Parker | casual
+SUN RECORDS | Sam Phillips' label that released his first single (3,7) | casual
+SAM PHILLIPS | Sun Records founder who first recorded him (3,8) | casual
+RCA | Label that bought his contract in 1955 | casual
+HOUND DOG | 1956 hit first recorded by Big Mama Thornton (5,3) | casual
+JAILHOUSE ROCK | 1957 film and title song (9,4) | casual
+HEARTBREAK HOTEL | 1956 breakthrough single, his first for RCA (10,5) | casual
+DON'T BE CRUEL | 1956 hit written by Otis Blackwell (4,2,5) | casual
+ALL SHOOK UP | 1957 hit written by Otis Blackwell (3,5,2) | casual
+LOVE ME TENDER | 1956 ballad and his first film (4,2,6) | casual
+BLUE SUEDE SHOES | Carl Perkins rocker he covered in 1956 (4,5,5) | casual
+SUSPICIOUS MINDS | 1969 single recorded in Memphis (10,5) | casual
+IN THE GHETTO | 1969 socially conscious single (2,3,6) | casual
+BURNING LOVE | 1972 rock single (7,4) | casual
+RETURN TO SENDER | 1962 hit about a letter sent back (6,2,6) | casual
+VIVA LAS VEGAS | 1964 film with Ann-Margret (4,3,5) | casual
+BLUE HAWAII | 1961 film set in the Aloha State (4,6) | casual
+KING CREOLE | 1958 film set in New Orleans (4,6) | casual
+GI BLUES | 1960 film about a soldier in Germany (2,5) | casual
+ED SULLIVAN | TV host on whose show he famously appeared in 1956-57 (2,8) | casual
+GERMANY | Country where he served in the US Army | casual
+ARMY | Service branch he was drafted into in 1958 | casual
+LAS VEGAS | City of his long-running 1970s hotel shows (3,5) | casual
+JUMPSUIT | Rhinestone-studded stage outfit of his 1970s shows | casual
+SIDEBURNS | Facial-hair feature of his famous look | casual
+QUIFF | Swept-up hairstyle he made famous | casual
+PINK CADILLAC | Car he famously bought for his mother (4,8) | casual
+ALOHA FROM HAWAII | 1973 concert broadcast by satellite (5,4,6) | casual
+AUSTIN BUTLER | Actor who played him in the 2022 biopic (6,6) | casual
+TOM HANKS | Actor who played his manager in the 2022 biopic (3,5) | casual
+BAZ LUHRMANN | Director of the 2022 biopic named after him (3,8) | casual
+JESSE | ___ Garon, his twin brother who died at birth | casual
+PELVIS | Elvis the ___, his 1950s nickname | casual
+THATS ALL RIGHT | His first Sun single, from 1954 (5,3,5) | fan
+SCOTTY MOORE | Guitarist on his early Sun records (6,5) | fan
+BILL BLACK | Bassist on his early Sun records (4,5) | fan
+DJ FONTANA | Drummer who backed him from the mid-1950s (2,7) | fan
+JORDANAIRES | Vocal group who backed him from 1956 | fan
+TOM PARKER | His manager, known as the Colonel (3,6) | fan
+LEIBER | Jerry ___, co-writer of Hound Dog and Jailhouse Rock | fan
+STOLLER | Mike ___, co-writer of Hound Dog and Jailhouse Rock | fan
+OTIS BLACKWELL | Writer of Don't Be Cruel and All Shook Up (4,9) | fan
+MAC DAVIS | Writer of In the Ghetto (3,5) | fan
+MARK JAMES | Writer of Suspicious Minds (4,5) | fan
+CARL PERKINS | Writer of Blue Suede Shoes (4,7) | fan
+BIG MAMA THORNTON | Blues singer who first recorded Hound Dog (3,4,8) | fan
+ANN-MARGRET | Co-star of Viva Las Vegas (3-7) | fan
+NANCY SINATRA | Co-star of the 1968 film Speedway (5,7) | fan
+MARY TYLER MOORE | Co-star of Change of Habit, his last acting role (4,5,5) | fan
+ROUSTABOUT | 1964 film in which he works at a carnival | fan
+CLAMBAKE | 1967 film named after a seaside feast | fan
+SPEEDWAY | 1968 film about a racing driver | fan
+LOVING YOU | 1957 film, his first in colour (6,3) | fan
+FLAMING STAR | 1960 western (7,4) | fan
+COMEBACK SPECIAL | His famous 1968 NBC TV show (8,7) | fan
+NBC | Network that aired his 1968 TV special | fan
+BLACK LEATHER | Material of the suit he wore for the 1968 special (5,7) | fan
+IF I CAN DREAM | Closing song of the 1968 special (2,1,3,5) | fan
+HONOLULU | Hawaiian city where Aloha from Hawaii was staged | fan
+NIXON | US president he met at the White House in 1970 | fan
+JUNGLE ROOM | Den at Graceland with exotic decor (6,4) | fan
+MEDITATION | ___ Garden, the Graceland plot where he is buried | fan
+HUMES HIGH | Memphis school he graduated from in 1953 (5,4) | fan
+CANT HELP FALLING | ___ in Love, ballad from Blue Hawaii (4,4,7) | fan
+ITS NOW OR NEVER | 1960 hit based on O Sole Mio (3,3,2,5) | fan
+ARE YOU LONESOME | ___ Tonight?, 1960 ballad (3,3,8) | fan
+WOODEN HEART | Song from GI Blues sung partly in German (6,5) | fan
+A LITTLE LESS | ___ Conversation, remixed by JXL in 2002 (1,6,4) | fan
+JXL | Dutch DJ whose 2002 remix gave him a posthumous hit | fan
+TEDDY BEAR | 1957 hit from the film Loving You (5,4) | fan
+ALWAYS ON MY MIND | 1972 ballad later covered by Willie Nelson (6,2,2,4) | fan
+MILLION DOLLAR | ___ Quartet, his 1956 Sun jam with Cash, Perkins and Lewis (7,6) | fan
+JOHNNY CASH | Million Dollar Quartet member in black (6,4) | fan
+JERRY LEE LEWIS | Piano-pounding Million Dollar Quartet member (5,3,5) | fan
+HOW GREAT THOU ART | Gospel album that won him a Grammy (3,5,4,3) | fan
+GOSPEL | Genre of all his Grammy-winning recordings | fan
+KARATE | Martial art he practised to black-belt level | fan
+TCB | Initials of his lightning-bolt motto, Taking Care of Business | fan
+HAYRIDE | Louisiana ___, Shreveport radio show where he became a regular | fan
+GRAND OLE OPRY | Nashville radio show where he performed once in 1954 (5,3,4) | fan
+PEANUT BUTTER | Spread in his favourite banana sandwich (6,6) | fan
+RILEY KEOUGH | Actress granddaughter, daughter of Lisa Marie (5,6) | fan
+SOFIA COPPOLA | Director of the 2023 film Priscilla (5,7) | fan
+JACOB ELORDI | Actor who played him in 2023's Priscilla (5,6) | fan
+JAMES BURTON | Lead guitarist of his 1970s TCB Band (5,6) | fan
+MOODY BLUE | 1977 album, the last released in his lifetime (5,4) | fan
+WAY DOWN | 1977 single from his final album (3,4) | fan
+FORT HOOD | Texas base where he did his army training (4,4) | superfan
+SERGEANT | Rank he had reached by his 1960 discharge | superfan
+BEAULIEU | Priscilla's maiden name | superfan
+ALADDIN | Las Vegas hotel where he married in 1967 | superfan
+MARION KEISKER | Sun Records secretary who first noted his talent (6,7) | superfan
+UNION AVENUE | Memphis street of the Sun studio (5,6) | superfan
+BLUE MOON | ___ of Kentucky, Bill Monroe song on his first single's B-side (4,4) | superfan
+BILL MONROE | Bluegrass father who wrote Blue Moon of Kentucky (4,6) | superfan
+ARTHUR CRUDUP | Blues singer who wrote That's All Right (6,6) | superfan
+MYSTERY TRAIN | 1955 Sun single (7,5) | superfan
+GOOD ROCKIN | ___ Tonight, 1954 Sun single (4,6) | superfan
+BABY LETS PLAY | ___ House, 1955 Sun single (4,4,4) | superfan
+OLD SHEP | Red Foley song he sang at a fair as a boy (3,4) | superfan
+TUPELO HARDWARE | Store where his first guitar was bought (6,8) | superfan
+STEVE ALLEN | TV host for whom he sang to a basset hound (5,5) | superfan
+MILTON BERLE | TV comic on whose 1956 show he performed Hound Dog (6,5) | superfan
+STEVE BINDER | Director of the 1968 TV special (5,6) | superfan
+SINGER | Sewing-machine firm that sponsored the 1968 special | superfan
+CHIPS MOMAN | Producer of Suspicious Minds (5,5) | superfan
+AMERICAN SOUND | ___ Studio, Memphis site of his 1969 sessions (8,5) | superfan
+FROM ELVIS IN | ___ Memphis, his acclaimed 1969 album (4,5,2) | superfan
+BILL BELEW | Designer of his famous jumpsuits (4,5) | superfan
+DOC POMUS | Co-writer of Viva Las Vegas and Little Sister (3,5) | superfan
+MORT SHUMAN | Co-writer of Viva Las Vegas and Little Sister (4,6) | superfan
+LITTLE SISTER | 1961 single written by Pomus and Shuman (6,6) | superfan
+HIS LATEST FLAME | Marie's the Name ___, 1961 single (3,6,5) | superfan
+O SOLE MIO | Neapolitan song behind It's Now or Never (1,4,3) | superfan
+PLAISIR D'AMOUR | French melody behind Can't Help Falling in Love (7,6) | superfan
+AURA LEA | Civil War-era song whose melody became Love Me Tender (4,3) | superfan
+MAE BOREN AXTON | Co-writer of Heartbreak Hotel (3,5,5) | superfan
+WALTER MATTHAU | Co-star who played a villain in King Creole (6,7) | superfan
+MICHAEL CURTIZ | Casablanca director who made King Creole (7,6) | superfan
+JULIET PROWSE | Dancer who co-starred in GI Blues (6,6) | superfan
+SHELLEY FABARES | Actress in Girl Happy, Spinout and Clambake (7,7) | superfan
+URSULA ANDRESS | Co-star of Fun in Acapulco (6,7) | superfan
+BARBARA STANWYCK | Hollywood star who co-starred in Roustabout (7,8) | superfan
+CHANGE OF HABIT | 1969 film, his last as an actor (6,2,5) | superfan
+FUN IN ACAPULCO | 1963 film set in Mexico (3,2,8) | superfan
+KID GALAHAD | 1962 boxing film (3,7) | superfan
+FOLLOW THAT DREAM | 1962 comedy set in Florida (6,4,5) | superfan
+HARUM SCARUM | 1965 film set in the Middle East (5,6) | superfan
+SPINOUT | 1966 film about a racing singer | superfan
+MARKET SQUARE | ___ Arena, Indianapolis venue of his last concert in 1977 (6,6) | superfan
+HILLBILLY CAT | Early nickname from his Sun days (9,3) | superfan

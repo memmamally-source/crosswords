@@ -1,0 +1,141 @@
+# Boxing: unofficial sport crossword clues
+@title Boxing
+@category sport
+@blurb Legendary fighters, famous bouts and the language of the ring.
+@icon ball
+MUHAMMAD ALI | The Greatest (8,3) | casual
+TYSON | Iron Mike | casual
+FOREMAN | George, Ali's opponent in the Rumble in the Jungle | casual
+FRAZIER | Smokin' Joe | casual
+MARCIANO | Rocky, heavyweight champion who retired unbeaten | casual
+LENNOX LEWIS | British heavyweight who won 1988 Olympic gold for Canada (6,5) | casual
+HOLYFIELD | Evander, the Real Deal | casual
+MAYWEATHER | Floyd, nicknamed Money | casual
+PACQUIAO | Filipino southpaw nicknamed Pac-Man | casual
+JOSHUA | Anthony, 2012 Olympic super-heavyweight champion | casual
+FURY | Tyson, the Gypsy King | casual
+CANELO | Nickname of Mexican star Saul Alvarez | casual
+ROCKY | 1976 film about a Philadelphia underdog fighter | casual
+SUGAR RAY LEONARD | 1976 Olympic champion who beat Marvin Hagler in 1987 (5,3,7) | casual
+CASSIUS CLAY | Ali's birth name (7,4) | casual
+ROPE-A-DOPE | Ali's tactic against Foreman in 1974 (4-1-4) | casual
+KNOCKOUT | Win when a fighter cannot beat the count | casual
+JAB | Quick straight lead punch | casual
+HOOK | Curving punch thrown with a bent arm | casual
+UPPERCUT | Upward punch to the chin | casual
+ROUND | Period of a bout, usually three minutes | casual
+RING | Roped square | casual
+CORNER | Where a fighter rests between rounds | casual
+REFEREE | Official in the ring | casual
+GLOVES | Padded hand coverings | casual
+GUMSHIELD | Mouth protector | casual
+BELT | Championship prize worn round the waist | casual
+SOUTHPAW | Left-handed fighter | casual
+CANVAS | Floor of the ring | casual
+ROPES | A fighter may lean on these | casual
+BELL | Sound that starts and ends each round | casual
+SPARRING | Practice fighting | casual
+HEAVYWEIGHT | Top division, with no upper limit | casual
+FLYWEIGHT | Division named after a small insect | casual
+LIGHTWEIGHT | Division between featherweight and welterweight | casual
+WELTERWEIGHT | Division of Sugar Ray Leonard's first world title | casual
+MIDDLEWEIGHT | Division Marvin Hagler ruled in the 1980s | casual
+PUNCHBAG | Heavy training sack | casual
+WEIGH-IN | Pre-fight check on the scales (5-2) | casual
+TKO | Stoppage by the referee, briefly | casual
+COUNT | Referee's tally to ten | casual
+CLINCH | Hold that smothers an opponent's punches | casual
+TOWEL | Item thrown in to signal surrender | casual
+SPLIT DECISION | Verdict on which the judges disagree (5,8) | casual
+JUDGES | Ringside scorers | casual
+TRAINER | Coach in the corner | casual
+LISTON | Sonny, beaten by Cassius Clay in 1964 | fan
+JOE LOUIS | The Brown Bomber (3,5) | fan
+DEMPSEY | Jack, the Manassa Mauler | fan
+JACK JOHNSON | First Black world heavyweight champion, in 1908 (4,7) | fan
+ROBINSON | Sugar Ray, who won the middleweight title in 1951 | fan
+HAGLER | Marvelous Marvin | fan
+HEARNS | Tommy, Detroit's Hitman | fan
+DURAN | Roberto, Hands of Stone | fan
+DE LA HOYA | Oscar, the Golden Boy (2,2,4) | fan
+CHAVEZ | Julio Cesar, Mexican great | fan
+CALZAGHE | Joe, Welshman who retired unbeaten in 46 fights | fan
+HAMED | Prince Naseem of Sheffield | fan
+EUBANK | Chris, Brighton's monocle-wearing showman | fan
+BENN | Nigel, the Dark Destroyer | fan
+BRUNO | Frank, WBC heavyweight champion in 1995 | fan
+COOPER | Henry, who floored Cassius Clay at Wembley in 1963 | fan
+HATTON | Ricky, Manchester's Hitman | fan
+KHAN | Amir, Olympic silver medallist at 17 in 2004 | fan
+FROCH | Carl, the Cobra | fan
+KLITSCHKO | Surname of Ukrainian heavyweight brothers Vitali and Wladimir | fan
+LOMACHENKO | Vasiliy, Ukrainian Olympic champion in 2008 and 2012 | fan
+GOLOVKIN | Gennady, Kazakh known as GGG | fan
+USYK | Oleksandr, 2012 Olympic heavyweight champion | fan
+SPINKS | Leon, who beat Ali in 1978 | fan
+NORTON | Ken, who broke Ali's jaw in 1973 | fan
+HOLMES | Larry, the Easton Assassin | fan
+DOUGLAS | Buster, who beat Mike Tyson in Tokyo in 1990 | fan
+KINSHASA | City that staged the Rumble in the Jungle | fan
+THRILLA IN MANILA | Third Ali-Frazier fight, in 1975 (7,2,6) | fan
+DON KING | Promoter of the Rumble in the Jungle (3,4) | fan
+RAGING BULL | 1980 film about Jake LaMotta (6,4) | fan
+CREED | Apollo, Rocky Balboa's rival | fan
+ADAMS | Nicola, British flyweight Olympic champion in 2012 and 2016 | fan
+TAYLOR | Katie, Irish Olympic lightweight champion in 2012 | fan
+QUEENSBERRY | Marquess whose name is on the sport's rules | fan
+PUGILIST | Boxer, formally | fan
+HAYMAKER | Wild swinging punch | fan
+ORTHODOX | Right-handed stance | fan
+BOB AND WEAVE | Ducking, side-to-side head movement (3,3,5) | fan
+LOW BLOW | Foul punch beneath the beltline (3,4) | fan
+CUTMAN | Corner specialist who treats wounds | fan
+STANDING COUNT | Referee's tally for a dazed fighter still upright (8,5) | fan
+LONSDALE BELT | Prize for a British champion (8,4) | fan
+TALE OF THE TAPE | Side-by-side comparison of fighters' vital statistics (4,2,3,4) | fan
+SAVED BY THE BELL | Rescued as the round ends (5,2,3,4) | fan
+STING LIKE A BEE | Second half of Ali's butterfly boast (5,4,1,3) | fan
+RINGSIDE | Seats nearest the action | fan
+UNDISPUTED | Holding all the major belts in a division | fan
+BANTAMWEIGHT | Division between flyweight and featherweight | fan
+FEATHERWEIGHT | Prince Naseem Hamed's world title division | fan
+CRUISERWEIGHT | Division between light heavyweight and heavyweight | fan
+MATLALA | Baby Jake, diminutive South African world champion | superfan
+THOBELA | Dingaan, South African world champion known as the Rose of Soweto | superfan
+COETZEE | Gerrie, first South African world heavyweight champion | superfan
+SANDERS | Corrie, South African who beat Wladimir Klitschko in 2003 | superfan
+MITCHELL | Brian, South African world super featherweight champion of the late 1980s | superfan
+SCHMELING | Max, German beaten by Joe Louis in 1938 | superfan
+TUNNEY | Gene, who twice beat Jack Dempsey | superfan
+LONG COUNT | Famous moment of the 1927 Tunney-Dempsey rematch (4,5) | superfan
+SULLIVAN | John L, last bare-knuckle heavyweight champion | superfan
+CORBETT | Gentleman Jim, who beat John L Sullivan in 1892 | superfan
+FITZSIMMONS | Bob, Cornish-born champion in three divisions | superfan
+PATTERSON | Floyd, heavyweight champion at 21 in 1956 | superfan
+ARMSTRONG | Henry, who held three world titles at once in 1938 | superfan
+LAMOTTA | Jake, the Bronx Bull | superfan
+BRADDOCK | James, the Cinderella Man | superfan
+BAER | Max, beaten by James Braddock in 1935 | superfan
+WALCOTT | Jersey Joe, heavyweight champion at 37 in 1951 | superfan
+MOORE | Archie, the Old Mongoose | superfan
+PEP | Willie, featherweight known as Will o' the Wisp | superfan
+DUNDEE | Angelo, Ali's long-time trainer | superfan
+D'AMATO | Cus, Mike Tyson's early mentor | superfan
+PEEKABOO | Hands-high defensive style taught to Tyson | superfan
+KRONK | Detroit gym associated with Tommy Hearns | superfan
+STEWARD | Emanuel, trainer behind a famous Detroit gym | superfan
+CHAMBERS | John Graham, who drafted the Queensberry rules | superfan
+SHIELDS | Claressa, US Olympic middleweight champion in 2012 and 2016 | superfan
+LAILA | ___ Ali, daughter of the Greatest who also boxed | superfan
+ZAIRE | Country that hosted the Rumble in the Jungle | superfan
+CAESARS PALACE | Las Vegas venue of Hagler v Hearns in 1985 (7,6) | superfan
+GOLDEN GLOVES | Famous US amateur tournament (6,6) | superfan
+BARE-KNUCKLE | Fought without gloves (4-7) | superfan
+PRIZEFIGHTER | Professional fighter of old | superfan
+SECONDS | Corner assistants | superfan
+JOURNEYMAN | Reliable opponent with a modest record | superfan
+MINIMUMWEIGHT | Lightest division, also called strawweight | superfan
+WBC | World Boxing Council, briefly | superfan
+WBA | World Boxing Association, briefly | superfan
+IBF | International Boxing Federation, briefly | superfan
+WBO | World Boxing Organization, briefly | superfan
