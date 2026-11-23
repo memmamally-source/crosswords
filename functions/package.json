@@ -4,7 +4,7 @@
   "description": "Trusted server for Crossword Hub: hint credits and crossword duels",
   "main": "index.js",
   "engines": {
-    "node": "20"
+    "node": "22"
   },
   "scripts": {
     "prepare-site": "node prepare.js",
