@@ -2264,3 +2264,19 @@ dialog {
   .masthead-tools .icon-btn { width: 34px; min-width: 34px; }
   .masthead-tools .wallet-btn { padding-inline: 4px 7px; }
 }
+
+/* The app's loading screen (index.html #app-splash): the same layout as the
+   native launch screen (mobile/assets/splash.png, a square image filling the
+   screen's height), so one hands over to the other without a jump. */
+.app-splash { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; background: #efe5cc; transition: opacity 0.35s ease; animation: app-splash-out 0.35s ease 6s forwards; }
+.app-splash[hidden] { display: none; }
+.app-splash.gone { opacity: 0; pointer-events: none; }
+.app-splash-logo { width: 15.5vh; height: 15.5vh; }
+.app-splash-by { position: absolute; left: 50%; bottom: 13.9vh; transform: translateX(-50%); display: block; line-height: 0; }
+.app-splash-by img { width: 16.1vh; height: auto; }
+@media (prefers-color-scheme: dark) {
+  .app-splash { background: #1c1915; }
+  /* The logo's navy lettering needs a cream card on dark screens. */
+  .app-splash-by { padding: 1.6vh; border-radius: 1.75vh; background: #fff6e9; bottom: calc(13.9vh - 1.6vh); }
+}
+@keyframes app-splash-out { to { opacity: 0; visibility: hidden; } } /* a safety net: never stays up */

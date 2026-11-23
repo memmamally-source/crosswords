@@ -8,6 +8,7 @@
  *    the app never runs code downloaded at run time.
  *  - The service worker isn't included: the app's files are already on the
  *    phone.
+ *  - The loading screen (#app-splash, with the Karoo Fox logo) is shown.
  *
  * The page itself notices it's in the app (window.Capacitor) and hides what
  * doesn't belong there: Google sign-in, the "install the app" card and
@@ -49,6 +50,13 @@ const fbFile = path.join(OUT, 'js', 'firebase.js');
 const fb = fs.readFileSync(fbFile, 'utf8');
 if (!fb.includes(`'${CDN}'`)) throw new Error('js/firebase.js no longer names the CDN address this script replaces');
 fs.writeFileSync(fbFile, fb.replace(`'${CDN}'`, "new URL('../vendor/firebase', import.meta.url).href"));
+
+// The app's loading screen: hidden on the website, shown in the app.
+const indexFile = path.join(OUT, 'index.html');
+const indexHtml = fs.readFileSync(indexFile, 'utf8');
+const splashTag = '<div class="app-splash" id="app-splash" hidden aria-hidden="true">';
+if (!indexHtml.includes(splashTag)) throw new Error('index.html no longer has the loading screen this script shows');
+fs.writeFileSync(indexFile, indexHtml.replace(splashTag, '<div class="app-splash" id="app-splash" aria-hidden="true">'));
 
 // No remote code at all: check nothing in the copy still loads scripts from
 // Google's CDN.

@@ -8,6 +8,24 @@
   const inApp = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
   const SITE = 'https://crosswordhub.app/'; // where links to share point from the app
   if (inApp) document.documentElement.classList.add('in-app');
+  // The app's loading screen: fades out once the page is ready, after at
+  // least a moment, so it never just flickers.
+  const appSplash = document.getElementById('app-splash');
+  let splashGone = () => {}; // resolves splashDone
+  const splashDone = new Promise((resolve) => { splashGone = resolve; });
+  if (!appSplash || appSplash.hidden) splashGone();
+  else {
+    const shownAt = performance.now();
+    const hide = () => setTimeout(() => {
+      appSplash.classList.add('gone');
+      setTimeout(() => {
+        appSplash.remove();
+        splashGone();
+      }, 400);
+    }, Math.max(0, 900 - (performance.now() - shownAt)));
+    if (document.readyState === 'complete') hide();
+    else window.addEventListener('load', hide, { once: true });
+  }
   // The app and an installed web app have no browser Back button: show our own.
   const appShell = inApp || window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
   const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
@@ -3277,7 +3295,11 @@
   // Only for someone new, arriving on the home page (not on a shared puzzle or duel link).
   function offerWelcome() {
     const isNew = !store.welcomed && !(store.solvedCount > 0) && !Object.keys(store.saves || {}).length;
-    if (isNew && !$$('dialog').some((d) => d.open)) openWelcome();
+    if (!isNew) return;
+    // Not over the app's loading screen (dialogs always sit on top).
+    splashDone.then(() => {
+      if (!store.welcomed && !$('#home-view').hidden && !$$('dialog').some((d) => d.open)) openWelcome();
+    });
   }
   function closeDialogs() {
     $$('dialog').forEach((d) => d.open && d.close());
