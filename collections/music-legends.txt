@@ -32,7 +32,7 @@ OASIS | Gallagher brothers' Manchester band | casual
 COLDPLAY | Band behind Yellow and Viva la Vida | casual
 SPICE GIRLS | Five-piece 1990s group behind Wannabe (5,5) | casual
 BEE GEES | Brothers who sang Stayin' Alive (3,4) | casual
-DIANA ROSS | Motown diva of Chain Reaction (5,4) | casual
+DIANA ROSS | Diva of Upside Down and Chain Reaction (5,4) | casual
 MARIAH CAREY | All I Want for Christmas Is You singer (6,5) | casual
 BRITNEY | Spears, singer of ...Baby One More Time | casual
 CHER | One-named star who sang with Sonny in the 1960s | casual
@@ -84,7 +84,7 @@ ZIGGY | Bowie's Stardust alter ego | fan
 SLIM SHADY | Eminem's alter ego (4,5) | casual
 MARSHALL MATHERS | Eminem's real name (8,7) | fan
 BARBADOS | Rihanna's home island | fan
-FENTY | Rihanna's beauty brand | superfan
+FENTY | Rihanna's beauty brand | fan
 TOTTENHAM | North London district where Adele was born | superfan
 LITTLE MONSTERS | Lady Gaga's name for her fans (6,8) | fan
 WONDERWALL | Oasis's 1995 hit | fan
@@ -99,7 +99,7 @@ MAMA AFRICA | Nickname of Miriam Makeba (4,6) | fan
 LAGOS | Nigerian city home of Fela's Afrika Shrine | fan
 AFRICAN GIANT | Burna Boy's 2019 album (7,5) | fan
 MADE IN LAGOS | Wizkid's 2020 album (4,2,5) | fan
-ESSENCE | Wizkid's 2020 hit featuring Tems | fan
+ESSENCE | Wizkid hit featuring Tems, later remixed with Justin Bieber | fan
 SATCHMO | Louis Armstrong's nickname | fan
 DUKE ELLINGTON | Jazz bandleader of Mood Indigo (4,9) | fan
 ELLA FITZGERALD | The First Lady of Song (4,10) | fan

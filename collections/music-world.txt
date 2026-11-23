@@ -3,7 +3,7 @@
 @category music
 @blurb Genres, instruments, festivals and the language of music-making.
 @icon note
-AMAPIANO | South African house style known for its log drum bass | casual
+AMAPIANO | South African house style that emerged in Gauteng in the 2010s | casual
 AFROBEATS | Modern West African pop style of Burna Boy and Wizkid | casual
 JAZZ | Genre born in New Orleans | casual
 REGGAE | Jamaican genre of Bob Marley | casual
@@ -19,8 +19,8 @@ FLUTE | Woodwind instrument held sideways | casual
 CELLO | Large string instrument played seated, between the knees | casual
 HARP | Plucked instrument with many strings in a big frame | casual
 VINYL | Material of LP records | casual
-CASSETTE | Tape format played on a Walkman | casual
-GRAMMY | Gramophone-shaped US music award | casual
+CASSETTE | Compact audio tape in a plastic shell | casual
+GRAMMY | Golden statuette of US music's biggest awards night | casual
 BRITS | The UK's big annual pop music awards | casual
 CHOIR | Group of singers | casual
 CHORUS | Repeated section of a song | casual
@@ -45,7 +45,7 @@ WOODSTOCK | 1969 festival held near Bethel, New York | casual
 ROCK AND ROLL | 1950s genre of Elvis and Chuck Berry (4,3,4) | casual
 COUNTRY | Genre most associated with Nashville | casual
 OPERA | Drama set to music and sung throughout | casual
-MICROPHONE | Singer's device for amplifying a voice | casual
+MICROPHONE | Singer's device that picks up the voice | casual
 HEADPHONES | Pair of speakers worn over the ears | casual
 ENCORE | Extra song after the crowd calls for more | casual
 GOSPEL | Church music genre | casual
@@ -111,23 +111,23 @@ SYMPHONY | Large orchestral work, often in four movements | fan
 VIVALDI | Composer of The Four Seasons | fan
 CHOPIN | Polish composer of nocturnes for piano | fan
 TCHAIKOVSKY | Composer of Swan Lake and The Nutcracker | fan
-HANDEL | Composer of Messiah | superfan
+HANDEL | Composer of Messiah | fan
 DEBUSSY | Composer of Clair de Lune | fan
 PUCCINI | Composer of Madama Butterfly and La Boheme | superfan
 SALZBURG | Austrian city where Mozart was born | fan
 COACHELLA | Festival held in the California desert at Indio | fan
 CARNEGIE HALL | New York concert venue funded by a steel magnate (8,4) | fan
-ROYAL ALBERT HALL | Domed London venue that hosts the Proms (5,6,4) | fan
+ROYAL ALBERT HALL | Domed Kensington venue honouring Queen Victoria's consort (5,6,4) | fan
 LA SCALA | Milan's famous opera house (2,5) | fan
 APOLLO | Harlem theater famous for its Amateur Night | superfan
 GRAND OLE OPRY | Long-running Nashville country radio show (5,3,4) | superfan
 MERCURY PRIZE | UK album award first given in 1992 (7,5) | fan
 BILLBOARD | US magazine behind the Hot 100 chart | fan
 COMPACT DISC | Digital format launched in 1982 (7,4) | fan
-WALKMAN | Sony's portable cassette player | fan
+WALKMAN | Sony's portable tape player, launched in 1979 | fan
 GRAMOPHONE | Early record player with a horn | fan
 JUKEBOX | Coin-operated record player | casual
-MIXTAPE | Home-made compilation on cassette | fan
+MIXTAPE | Home-made compilation tape | fan
 STREAMING | Listening online without downloading | casual
 PRODUCER | Studio boss who shapes a recording | fan
 SAMPLE | Snippet of an old recording reused in a new track | fan
@@ -147,7 +147,7 @@ GQOM | Dark, minimal electronic genre from Durban | superfan
 MBAQANGA | South African township jive style | superfan
 MARABI | Early South African township jazz style | superfan
 MASKANDI | Zulu guitar-led folk style | superfan
-LOG DRUM | Amapiano's signature bass sound (3,4) | superfan
+LOG DRUM | Deep percussive bass sound of South African house music (3,4) | superfan
 JUJU | Nigerian guitar style of King Sunny Ade | superfan
 FUJI | Nigerian Yoruba percussion-led style | superfan
 SOCA | Trinidadian carnival music descended from calypso | superfan
@@ -173,7 +173,7 @@ CAPO | Clamp that raises a guitar's pitch | superfan
 STRADIVARIUS | Prized violin from a Cremona workshop | superfan
 LEIPZIG | German city where Bach led the choir of St Thomas Church | superfan
 BONN | German city where Beethoven was born | superfan
-BAYREUTH | Bavarian town of the Wagner festival | superfan
+BAYREUTH | Bavarian town with an opera festival on the Green Hill | superfan
 WAGNER | Composer of the Ring cycle | superfan
 VERDI | Composer of Aida and La Traviata | superfan
 GLYNDEBOURNE | Sussex country-house opera festival | superfan

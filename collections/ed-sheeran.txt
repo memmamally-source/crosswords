@@ -1,0 +1,130 @@
+# Ed Sheeran: unofficial music crossword clues
+@title Ed Sheeran
+@category music
+@blurb A Suffolk singer-songwriter, a loop pedal and a run of maths-symbol albums.
+@icon note
+EDWARD | His full first name | casual
+SHEERAN | His surname | casual
+SUFFOLK | English county where he grew up | casual
+GINGER | His trademark hair colour | casual
+GUITAR | Instrument he carries on stage | casual
+LOOP PEDAL | Device he uses to layer sounds live on stage (4,5) | casual
+BUSKING | Street performing he did early in his career | casual
+PLUS | 2011 debut album named after a symbol | casual
+MULTIPLY | 2014 album named after a symbol | casual
+DIVIDE | 2017 album named after a symbol | casual
+EQUALS | 2021 album named after a symbol | casual
+SUBTRACT | 2023 album named after a symbol | casual
+MATHEMATICS | Tour of 2022-24 named after his symbol albums | casual
+THE A TEAM | 2011 debut single about homelessness (3,1,4) | casual
+LEGO HOUSE | 2011 single named after a toy-brick building (4,5) | casual
+SING | 2014 track made with Pharrell Williams | casual
+THINKING OUT LOUD | 2014 wedding favourite and Grammy Song of the Year (8,3,4) | casual
+PHOTOGRAPH | 2015 single from Multiply | casual
+SHAPE OF YOU | Huge 2017 single from Divide (5,2,3) | casual
+CASTLE ON THE HILL | 2017 single about his Suffolk hometown (6,2,3,4) | casual
+PERFECT | 2017 love ballad later redone with Beyonce | casual
+GALWAY GIRL | 2017 Irish-flavoured single (6,4) | casual
+BAD HABITS | 2021 single whose video casts him as a vampire (3,6) | casual
+SHIVERS | 2021 single from Equals | casual
+EYES CLOSED | 2023 single from Subtract (4,6) | casual
+I SEE FIRE | 2013 song for The Hobbit (1,3,4) | casual
+I DON'T CARE | 2019 duet with Justin Bieber (1,4,4) | casual
+JUSTIN BIEBER | Canadian star on I Don't Care (6,6) | casual
+TAYLOR SWIFT | Pop star he duetted with on Everything Has Changed (6,5) | casual
+BEYONCE | Star of the Perfect Duet | casual
+ELTON JOHN | Rocket Man star on a festive 2021 duet (5,4) | casual
+MERRY CHRISTMAS | Festive 2021 duet with Elton John (5,9) | casual
+ONE DIRECTION | Boy band he wrote Little Things for (3,9) | casual
+YESTERDAY | 2019 Danny Boyle film in which he played himself | casual
+GAME OF THRONES | Fantasy series in which he cameoed as a Lannister soldier (4,2,7) | casual
+GRAMMY | Award his Thinking Out Loud won as Song of the Year | casual
+GLASTONBURY | Festival he headlined in 2017 | casual
+WEMBLEY | London stadium where his 2015 Jumpers for Goalposts shows were filmed | casual
+IPSWICH | ___ Town, the Suffolk football club he supports | casual
+MBE | Honour he was appointed in 2017 | casual
+CHERRY | ___ Seaborn, his wife since 2019 | casual
+FRAMLINGHAM | Suffolk market town where he was raised | fan
+HALIFAX | West Yorkshire town where he was born | fan
+LONDON | City he moved to as a teenager to pursue music | fan
+IRISH | Family heritage celebrated on Galway Girl | fan
+ASYLUM | ___ Records, his UK label | fan
+ATLANTIC | ___ Records, his US label | fan
+GINGERBREAD MAN | His own record label (11,3) | fan
+PHARRELL | Producer who co-wrote Sing | fan
+DON'T | 2014 single from Multiply | fan
+BLOODSTREAM | Multiply single later remixed with Rudimental | fan
+RUDIMENTAL | Drum and bass group he sang with on Lay It All on Me | fan
+LAY IT ALL ON ME | 2015 Rudimental single featuring him (3,2,3,2,2) | fan
+GIVE ME LOVE | 2012 single from Plus (4,2,4) | fan
+KISS ME | Love song from Plus (4,2) | fan
+RUPERT GRINT | Harry Potter actor in the Lego House video (6,5) | fan
+THE HOBBIT | Film series that featured I See Fire (3,6) | fan
+HAPPIER | Divide ballad released as a 2018 single | fan
+DIVE | Soulful ballad from Divide | fan
+BARCELONA | Divide track named after a Spanish city | fan
+NANCY MULLIGAN | Divide track about his grandparents' romance (5,8) | fan
+ANDREA BOCELLI | Tenor on Perfect Symphony (6,7) | fan
+LITTLE THINGS | 2012 One Direction hit he co-wrote (6,6) | fan
+LOVE YOURSELF | 2015 Justin Bieber hit he co-wrote (4,8) | fan
+RED | Taylor Swift album whose 2013 tour he supported | fan
+END GAME | 2017 Taylor Swift single with him and Future (3,4) | fan
+FUTURE | Atlanta rapper also on End Game | fan
+COLLABORATIONS | No.6 ___ Project, his 2019 album | fan
+STORMZY | Grime star on Take Me Back to London | fan
+BEAUTIFUL PEOPLE | 2019 duet with Khalid (9,6) | fan
+CAMILA CABELLO | Singer on South of the Border (6,7) | fan
+CARDI B | Rapper also on South of the Border (5,1) | fan
+BRUNO MARS | Singer on Blow, with Chris Stapleton (5,4) | fan
+EMINEM | Rapper on Remember the Name, with 50 Cent | fan
+AFTERGLOW | Standalone single released in December 2020 | fan
+VISITING HOURS | Equals track mourning an Australian music promoter (8,5) | fan
+CELESTIAL | 2022 song made with Pokemon | fan
+AUTUMN | ___ Variations, his 2023 album | fan
+AARON DESSNER | Member of the National who produced Subtract (5,7) | fan
+SNOW PATROL | Band of his frequent co-writer Johnny McDaid (4,6) | fan
+BRIDGET JONES | ___'s Baby, 2016 comedy with his cameo (7,5) | fan
+DANNY BOYLE | Director of Yesterday (5,5) | fan
+LYRA | His elder daughter, born in 2020 | fan
+JUPITER | His younger daughter, born in 2022 | fan
+HIMESH PATEL | Star of Yesterday (6,5) | superfan
+RICHARD CURTIS | Screenwriter of Yesterday (7,6) | superfan
+JAMIE FOXX | Hollywood star who let him stay at his LA home early on (5,4) | superfan
+WAKE ME UP | Track from Plus (4,2,2) | superfan
+THE CITY | Track from Plus (3,4) | superfan
+SMALL BUMP | Track from Plus (5,4) | superfan
+JAKE GOSLING | Producer of Plus (4,7) | superfan
+IVOR | ___ Novello Award won by The A Team | superfan
+AFIRE LOVE | Multiply track about his late grandfather (5,4) | superfan
+TENERIFE SEA | Multiply love song named after a Canary Island (8,3) | superfan
+AMY WADGE | Welsh co-writer of Thinking Out Loud (3,5) | superfan
+JOHNNY MCDAID | Snow Patrol member who co-wrote Photograph (6,6) | superfan
+STEVE MAC | Producer and co-writer of Shape of You (5,3) | superfan
+TLC | Group added to the writing credits of Shape of You | superfan
+NO SCRUBS | TLC hit echoed in Shape of You (2,6) | superfan
+RIHANNA | Star he had in mind when first writing Shape of You | superfan
+ERASER | Opening track of Divide | superfan
+NEW MAN | Track from Divide (3,3) | superfan
+HOW WOULD YOU FEEL | Divide track subtitled Paean (3,5,3,4) | superfan
+SAVE MYSELF | Track from the deluxe edition of Divide (4,6) | superfan
+BIBIA BE YE YE | Divide deluxe track inspired by Ghanaian highlife (5,2,2,2) | superfan
+BEOGA | Irish folk band on Galway Girl | superfan
+TIDES | Opening track of Equals | superfan
+FIRST TIMES | Track from Equals (5,5) | superfan
+STOP THE RAIN | Track from Equals (4,3,4) | superfan
+GUDINSKI | Michael ___, promoter mourned on Visiting Hours | superfan
+BOAT | Opening track of Subtract | superfan
+SALT WATER | Track from Subtract (4,5) | superfan
+LIFE GOES ON | Track from Subtract (4,4,2) | superfan
+COLOURBLIND | Track from Subtract | superfan
+CURTAINS | Track from Subtract | superfan
+ABERFELDY | Scottish town named in the closing track of Subtract | superfan
+CHRIS STAPLETON | Country star on Blow (5,9) | superfan
+CHANCE | ___ the Rapper, guest on Cross Me | superfan
+YEBBA | Singer on Best Part of Me | superfan
+ELLA MAI | Singer on Put It All on Me (4,3) | superfan
+TRAVIS SCOTT | Rapper on Antisocial (6,5) | superfan
+MARTIN | Guitar maker behind his signature small acoustics | superfan
+SONGWRITER | 2018 documentary made by his cousin | superfan
+THE SUM OF IT ALL | 2023 Disney+ docuseries about him (3,3,2,2,3) | superfan
+MATTHEW | His brother, a classical composer | superfan
