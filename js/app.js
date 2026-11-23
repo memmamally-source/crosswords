@@ -2463,7 +2463,17 @@
     const on = !!game && docked.matches && !appKeys() && !$('#game-view').hidden;
     if (on === phoneKeyboardLayout()) return;
     document.body.classList.toggle('phone-keyboard', on);
+    pinClueBar(on);
     if (on) measureTools();
+  }
+  // With the phone's keyboard the clue bar lives inside the sticky tools, as
+  // their last row, so the two always move together: no gap or overlap
+  // between them, however the page scrolls or the tools wrap.
+  function pinClueBar(on) {
+    const bar = $('#clue-bar');
+    const home = $('#board-wrap').parentElement; // the clue bar's place above the grid
+    if (on && bar.parentElement !== $('.toolbar')) $('.toolbar').appendChild(bar);
+    else if (!on && bar.parentElement !== home) home.insertBefore(bar, $('#board-wrap'));
   }
   // The clue bar sits just below the tools, so it follows their real height:
   // they can wrap onto a second row (a bigger text size, a long timer, a

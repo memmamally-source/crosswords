@@ -1307,19 +1307,20 @@ dialog::backdrop { background: rgba(10, 10, 10, 0.5); }
   body.phone-keyboard .duel-bar { top: calc(var(--inset-top) + var(--vv-top, 0px)); }
   body.phone-keyboard::before { top: var(--vv-top, 0px); }
   body.phone-keyboard .clue-bar {
-    position: sticky;
-    top: calc(var(--inset-top) + var(--vv-top, 0px) + var(--tools-height, 52px));
-    bottom: auto;
-    z-index: 15;
+    position: static;
+    flex: 1 0 100%;
+    order: 9;
+    align-items: center;
     min-height: 0;
-    margin: 0 -16px 8px;
-    padding: 4px 6px;
+    margin: 0 0 -8px;
+    padding: 4px 0;
     grid-template-columns: 44px minmax(0, 1fr) 44px;
     border-top: 0;
     border-bottom: 1px solid var(--rule);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
   }
-  body.phone-keyboard .clue-bar .clue-nav { width: 44px; height: 44px; font-size: 1.6rem; }
+  body.phone-keyboard .clue-bar .clue-nav { width: 44px; height: 44px; font-size: 1.6rem; align-self: center; }
+  body.phone-keyboard .toolbar { margin-bottom: 8px; }
   body.phone-keyboard .clue-bar .sheet-hint { display: none; }
   /* Room for two lines of clue whatever the clue, so moving to the next one
      never nudges the grid up or down. */
