@@ -33,7 +33,8 @@ fs.mkdirSync(OUT, { recursive: true });
 for (const item of COPY) {
   const from = path.join(SITE, item);
   if (!fs.existsSync(from)) throw new Error(`missing from the site: ${item}`);
-  fs.cpSync(from, path.join(OUT, item), { recursive: true });
+  // Earlier versions of rebuilt Dailies are for the server only.
+  fs.cpSync(from, path.join(OUT, item), { recursive: true, filter: (src) => !src.startsWith(path.join(SITE, 'puzzles', 'superseded')) });
 }
 
 // The Firebase SDK, from the npm package, pointing at its own copies.

@@ -271,10 +271,27 @@ const BASE_GENRES = [
     category: 'classic',
     name: 'General Knowledge',
     icon: '💡',
-    blurb: 'A pub-quiz mix of everything, with plenty from Mzansi.',
+    blurb: 'A pub-quiz mix of everything from around the world.',
+  },
+  {
+    id: 'southafrica',
+    subject: 'South Africa',
+    category: 'classic',
+    name: 'Mzansi',
+    icon: '🇿🇦',
+    blurb: 'South African places, people, food, slang and history.',
   },
 ]
   .map((g) => ({ ...g, words: parseList(WORD_LISTS[g.id]) }));
+
+// General Knowledge is worldwide: its South African answers now have their
+// own section, so new General Knowledge puzzles leave them out. They stay in
+// its list (retired) so puzzles shared before still open exactly as they were.
+{
+  const local = new Set(BASE_GENRES.find((g) => g.id === 'southafrica').words.map((w) => w.answer));
+  BASE_GENRES.find((g) => g.id === 'general').words.forEach((w) => { if (local.has(w.answer)) w.retired = true; });
+}
+const current = (words) => words.filter((w) => !w.retired);
 
 // Mixed puzzles draw from several genres at once. Answers that appear in
 // more than one genre are kept once, with the first genre's clue.
@@ -329,9 +346,10 @@ function themedBank(words, level) {
 }
 const levelsFor = (genre) => (genre && genre.themed ? THEMED_LEVELS : DIFFICULTIES);
 // The clues a puzzle at this level draws from. Brutal leaves out easy answers.
+// Retired answers (see above) are never chosen for new puzzles.
 function bankFor(genre, words, level) {
   if (genre.themed) return themedBank(words, level);
-  return level === 'brutal' ? words.filter((w) => w.level !== 'easy') : words;
+  return current(level === 'brutal' ? words.filter((w) => w.level !== 'easy') : words);
 }
 
 const GENRES = [
@@ -375,6 +393,16 @@ const DAILY_SOURCES = BASE_GENRES.filter(
 );
 const DAILY_BANK = mixGenre('daily', 'The Daily', '', '', DAILY_SOURCES).words;
 
+// From 1 December 2026 the Daily is a general-knowledge puzzle for everyone
+// rather than an academic one: everyday subjects, mostly easier answers, and
+// smaller grids packed tighter, so more letters cross.
+const EASIEST_DAILY_FROM = '2026-12-01';
+const DAILY_SOURCES_V3 = BASE_GENRES.filter((g) => [
+  'general', 'geography', 'science', 'animals', 'food', 'sports', 'music', 'movies',
+  'popculture', 'history', 'literature', 'technology', 'space', 'travel',
+].includes(g.id));
+const DAILY_BANK_V3 = current(mixGenre('daily', 'The Daily', '', '', DAILY_SOURCES_V3).words);
+
 // Indexed by Date.getDay(): 0 = Sunday.
 // From 19 October 2026 the Daily is smaller and gentler. Earlier Dailies keep
 // the original sizes (DAILY_SCHEDULE_ORIGINAL) so their frozen grids and
@@ -399,6 +427,16 @@ const DAILY_SCHEDULE = [
   { day: 'Saturday', level: 'Challenging', count: 28, maxSize: 19, maxLen: 15, hard: 5 },
 ];
 
+const DAILY_SCHEDULE_V3 = [
+  { day: 'Sunday', level: 'Grand', count: 30, maxSize: 17, maxLen: 13, hard: 2 },
+  { day: 'Monday', level: 'Gentle', count: 18, maxSize: 13, maxLen: 8, hard: 0 },
+  { day: 'Tuesday', level: 'Gentle', count: 19, maxSize: 13, maxLen: 9, hard: 0 },
+  { day: 'Wednesday', level: 'Moderate', count: 20, maxSize: 14, maxLen: 10, hard: 1 },
+  { day: 'Thursday', level: 'Moderate', count: 22, maxSize: 15, maxLen: 11, hard: 1 },
+  { day: 'Friday', level: 'Tricky', count: 24, maxSize: 15, maxLen: 12, hard: 2 },
+  { day: 'Saturday', level: 'Challenging', count: 25, maxSize: 16, maxLen: 13, hard: 3 },
+];
+
 // The Mini is a quick warm-up of short everyday and pop-culture answers.
 const MINI_BANK = mixGenre(
   'mini', 'The Mini', '', '',
@@ -419,15 +457,17 @@ function dayNumberOf(date) {
 }
 function scheduleFor(date) {
   const [y, m, d] = date.split('-').map(Number);
-  return (date < EASIER_DAILY_FROM ? DAILY_SCHEDULE_ORIGINAL : DAILY_SCHEDULE)[new Date(Date.UTC(y, m - 1, d)).getUTCDay()];
+  const schedule = date < EASIER_DAILY_FROM ? DAILY_SCHEDULE_ORIGINAL : date < EASIEST_DAILY_FROM ? DAILY_SCHEDULE : DAILY_SCHEDULE_V3;
+  return schedule[new Date(Date.UTC(y, m - 1, d)).getUTCDay()];
 }
 function dailyBuild(date) {
   const day = dayNumberOf(date);
   const sched = scheduleFor(date);
   const rotate = (typeof CrosswordGenerator !== 'undefined' ? CrosswordGenerator : require('./generator.js')).rotatingPool;
+  const v3 = date >= EASIEST_DAILY_FROM;
   return {
-    bank: rotate(DAILY_BANK, day, DAILY_WINDOW, 1).filter((w) => w.answer.length <= sched.maxLen),
-    options: { count: sched.count, maxSize: sched.maxSize, hard: sched.hard, seed: day * 31 + 7 },
+    bank: rotate(v3 ? DAILY_BANK_V3 : DAILY_BANK, day, DAILY_WINDOW, 1).filter((w) => w.answer.length <= sched.maxLen),
+    options: { count: sched.count, maxSize: sched.maxSize, hard: sched.hard, seed: day * 31 + 7, ...(v3 ? { dense: true } : {}) },
   };
 }
 function miniBuild(date) {
@@ -460,7 +500,7 @@ function brutalBuild(week) {
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
-    GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_SCHEDULE, EASIER_DAILY_FROM, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW,
+    GENRES, CATEGORIES, DIFFICULTIES, DAILY_BANK, DAILY_BANK_V3, DAILY_SCHEDULE, EASIER_DAILY_FROM, EASIEST_DAILY_FROM, MINI_BANK, MINI_CONFIG, DAILY_WINDOW, MINI_WINDOW,
     scheduleFor, dailyBuild, miniBuild, COLLECTIONS, THEMED_LEVELS, themedBank, levelsFor, bankFor,
     weekOf, brutalBuild,
   };

@@ -19,4 +19,11 @@ for (const f of fs.readdirSync(path.join(root, 'puzzles'))) {
     n++;
   }
 }
+const old = path.join(root, 'puzzles', 'superseded');
+if (fs.existsSync(old)) {
+  fs.mkdirSync(path.join(out, 'puzzles', 'superseded'), { recursive: true });
+  for (const f of fs.readdirSync(old).filter((f) => /^\d{4}-\d{2}\.json$/.test(f))) {
+    fs.copyFileSync(path.join(old, f), path.join(out, 'puzzles', 'superseded', f));
+  }
+}
 console.log(`functions/site: shared code and ${n} puzzle files`);

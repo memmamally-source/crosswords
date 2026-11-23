@@ -164,7 +164,10 @@ exports.claimSolve = onCall(async (req) => {
   const collection = reward.kind === 'collection';
   const answers = collection ? P.collection(puzzle, E.ECONOMY.collectionMinClues) : P.published(puzzle);
   if (!answers) return { ok: false, reason: collection ? 'too-small' : 'not-eligible' };
-  if (!E.validGrid(grid, answers.rows, answers.cols) || !E.progress(grid, answers.solution).solved) return { ok: false, reason: 'incorrect' };
+  // A Daily may have been rebuilt before it was published; apps built
+  // earlier still show the old version, so its solution counts too.
+  const versions = collection ? [answers] : [answers, ...P.earlierVersions(puzzle)];
+  if (!versions.some((a) => E.validGrid(grid, a.rows, a.cols) && E.progress(grid, a.solution).solved)) return { ok: false, reason: 'incorrect' };
   const claimRef = db.doc(`wallets/${uid}/claims/${docId(puzzle)}`);
   const spentRef = db.doc(`wallets/${uid}/spent/${docId(puzzle)}`);
   return db.runTransaction(async (t) => {

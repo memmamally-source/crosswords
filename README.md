@@ -25,14 +25,19 @@ Newsreader; everything else uses Public Sans. The logo is an across word and a
 down word crossing at one gold square (the "hub"). `tools/make-icons.py`
 draws the app icons.
 
-- **The Daily:** an academic crossword drawn from 23 subjects and about
-  10,000 answers. Like a newspaper crossword it gets harder through the week:
-  Monday is gentle, with 18 clues, shorter answers and one tough answer;
-  Saturday is the toughest, with 28 clues and 5 tough answers; Sunday has the
-  largest grid, with 34 clues. (Until 18 October 2026 the Daily was bigger and
-  harder: 22 to 40 clues with 3 to 8 tough answers. Those Dailies keep their
-  original sizes.) Each clue shows its subject (this can be switched off in
-  settings).
+- **The Daily:** a general-knowledge crossword for everyone, drawn from 14
+  everyday subjects (general knowledge, geography, science, animals, food,
+  sport, music, film and TV, pop culture, history, books, technology, space,
+  travel). Like a newspaper crossword it gets harder through the week: Monday
+  and Tuesday are gentle 13×13 grids with 18–19 clues and no tough answers;
+  Saturday has 25 clues and 3 tough answers; Sunday is the largest, with 30
+  clues. Grids are packed tight (the generator's `dense` option), so more
+  letters cross, and answers lean easy. Each clue shows its subject (this can
+  be switched off in settings). Earlier Dailies keep the grids they were
+  published with: until 18 October 2026 an academic crossword of 22 to 40
+  clues, then a smaller academic one until 30 November 2026
+  (`DAILY_SCHEDULE_ORIGINAL`, `DAILY_SCHEDULE`, `DAILY_SCHEDULE_V3` in
+  js/genres.js).
 - **The Mini:** six quick clues of everyday and pop-culture answers.
 - **Archive:** a calendar of every Daily and Mini since launch
   (1 September 2026), with solved, in-progress and finished-with-help marks.
@@ -71,7 +76,10 @@ draws the app icons.
   - *Mixed:* Mixed Bag, Pop & Fun Mix, Academic Mix.
   - *Everyday:* Animal Kingdom, Food & Drink, World Geography, Science Lab,
     Sports Arena, Music Hall, Outer Space, Myths & Legends, Travel & Landmarks,
-    General Knowledge.
+    General Knowledge (worldwide), Mzansi (South Africa). General Knowledge's
+    South African answers moved to Mzansi in November 2026; they stay in
+    words/general.txt, marked retired in js/genres.js, so older shared
+    General Knowledge puzzles still open, but new ones leave them out.
   - *Pop culture & fun:* Pop Culture, Movies & TV, Video Games, Holidays &
     Festivals, Technology & Gadgets.
   - *Academic:* Philosophy, Literature, Mathematics, Advanced Vocabulary, World
@@ -223,7 +231,11 @@ the site for offline use. The icons in `icons/` are drawn by
   months and never rewrites existing ones. After a change to the Daily's
   schedule, `node tools/freeze-puzzles.js --refreeze-from YYYY-MM-DD`
   rebuilds the Dailies from that date on. It refuses any date up to today
-  (South African time), so nothing already published changes.
+  (South African time), so nothing already published changes. The versions
+  it replaces go to `puzzles/superseded/YYYY-MM.json`: the phone apps carry
+  the puzzles inside them, so an app built before the change still shows the
+  old versions until it's updated, and the server accepts solves of either
+  (deploy the functions after refreezing). The app copy leaves that folder out.
 - **⏰ Next freeze due by 1 March 2027.** Everything is frozen through April
   2027, and the tests fail once fewer than 60 days ahead are frozen. Before
   1 March 2027, run `node tools/freeze-puzzles.js`, run the tests and merge

@@ -160,7 +160,7 @@
     return [...found];
   }
 
-  function buildAttempt(bank, answers, count, maxSize, rng, hardTarget) {
+  function buildAttempt(bank, answers, count, maxSize, rng, hardTarget, dense) {
     // Favour longer words first (they give later words more to hook onto),
     // with some randomness so each puzzle feels different.
     // Large banks (the mixed genres) are sampled so each attempt stays fast.
@@ -171,7 +171,7 @@
       ? shuffle(bank.filter((e) => e.level === 'hard'), rng).slice(0, Math.max(hardTarget * 4, 8))
           .concat(shuffle(bank.filter((e) => e.level !== 'hard'), rng).slice(0, Math.max(count * 4, 48)))
       : shuffle(bank, rng).slice(0, Math.max(count * 4, 48));
-    const boost = (e) => (!mixed ? 0 : e.level === 'hard' ? 3 : e.level === 'easy' ? 2 : 0);
+    const boost = (e) => (!mixed ? 0 : e.level === 'hard' ? 3 : e.level === 'easy' ? (dense ? 5 : 2) : 0);
     const pool = sample
       .map((e) => ({ e, w: Math.min(e.answer.length, 8) + rng() * 4 + boost(e) }))
       .sort((a, b) => b.w - a.w)
@@ -222,7 +222,9 @@
           const w = Math.max(board.maxC, o.c + dc * (len - 1)) - Math.min(board.minC, o.c) + 1;
           const growth = h * w - area;
           const squareness = -Math.abs(h - w);
-          const score = o.crossings * 12 - growth * 0.35 + squareness + rng() * 6;
+          const score = dense
+            ? o.crossings * 30 - growth * 0.6 + squareness + rng() * 6
+            : o.crossings * 12 - growth * 0.35 + squareness + rng() * 6;
           if (score > bestScore) {
             bestScore = score;
             best = o;
@@ -307,10 +309,12 @@
    * generate(bank, { count, maxSize, seed, attempts, hard })
  * hard: how many answers marked level 'hard' to include; the rest favour
  * 'easy' ones. Leave it out to ignore levels.
+ * dense: pack the grid tighter (more crossing letters, a smaller area) and
+ * lean further towards easy answers. Used for the Daily from December 2026.
    * Returns { rows, cols, solution, numbers, words, seed }.
    */
   function generate(bank, options) {
-    const opts = Object.assign({ count: 10, maxSize: 13, attempts: 60 }, options);
+    const opts = Object.assign({ count: 10, maxSize: 13, attempts: options && options.dense ? 150 : 60 }, options);
     const seed = opts.seed != null ? opts.seed : Math.floor(Math.random() * 2 ** 31);
     const rng = mulberry32(seed);
     const clean = bank
@@ -327,10 +331,10 @@
     let best = null;
     let bestScore = -Infinity;
     for (let i = 0; i < opts.attempts; i++) {
-      const board = buildAttempt(clean, answers, opts.count, opts.maxSize, rng, opts.hard);
+      const board = buildAttempt(clean, answers, opts.count, opts.maxSize, rng, opts.hard, opts.dense);
       const crossings = [...board.cells.values()].filter((c) => c.across && c.down).length;
       const hardMiss = opts.hard != null ? Math.abs(opts.hard - board.hardPlaced) : 0;
-      const score = board.placed.length * 1000 - hardMiss * 300 + crossings * 10 - board.area();
+      const score = board.placed.length * 1000 - hardMiss * 300 + crossings * (opts.dense ? 40 : 10) - board.area() * (opts.dense ? 3 : 1);
       if (score > bestScore) {
         bestScore = score;
         best = board;

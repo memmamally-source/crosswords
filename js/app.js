@@ -293,7 +293,7 @@
       puzzle = CrosswordGenerator.fromLayoutCode(spec.layout, spec.genre.words);
       if (!puzzle) return null; // a word in the link is no longer in the bank
     } else {
-      puzzle = CrosswordGenerator.generate(spec.bank, { count: spec.count, maxSize: spec.maxSize, hard: spec.hard, seed: spec.seed });
+      puzzle = CrosswordGenerator.generate(spec.bank, { count: spec.count, maxSize: spec.maxSize, hard: spec.hard, seed: spec.seed, ...(spec.dense ? { dense: true } : {}) });
     }
     if (keep) puzzleCache.set(spec.key, puzzle);
     return puzzle;
@@ -331,6 +331,7 @@
     let best = null;
     for (let attempt = 0; attempt < 8; attempt++) {
       const spec = genreSpec(genre, difficulty, Math.floor(Math.random() * 1e9), encodePool(pool));
+      spec.dense = true; // new puzzles pack tighter; links to older ones rebuild as they were
       const placed = puzzleFor(spec).words.length;
       if (!best || placed > best.placed) best = { spec, placed };
       if (placed >= cfg.count) break;

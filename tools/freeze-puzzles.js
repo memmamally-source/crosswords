@@ -9,7 +9,9 @@
 //
 // --refreeze-from rebuilds the Dailies from that date on, after a change to
 // the Daily's schedule. It refuses any date up to today (South African
-// time), so a puzzle that has been published is never changed.
+// time), so a puzzle that has been published is never changed. The versions
+// it replaces are kept in puzzles/superseded/YYYY-MM.json: apps built before
+// the change still carry them, so the server accepts their solves too.
 //
 // Writes one file per month, puzzles/YYYY-MM.json (Dailies and Minis) and
 // puzzles/brutal-YYYY-MM.json (the Brutal Challenges of weeks starting that
@@ -25,6 +27,7 @@ const { dailyBuild, miniBuild, brutalBuild } = require('../js/genres.js');
 const LAUNCH_MONTH = '2026-09';
 const BRUTAL_LAUNCH_MONTH = '2026-10';
 const dir = path.join(__dirname, '..', 'puzzles');
+const supersededDir = path.join(dir, 'superseded');
 const indexFile = path.join(dir, 'index.json');
 
 const pad = (n) => String(n).padStart(2, '0');
@@ -90,11 +93,21 @@ function refreeze(from, index) {
     const data = JSON.parse(text);
     if (render(month, data.daily, data.mini) !== text) throw new Error(`${month}.json doesn't round-trip; not touching it`);
     let changed = 0;
+    const oldFile = path.join(supersededDir, `${month}.json`);
+    const old = fs.existsSync(oldFile) ? JSON.parse(fs.readFileSync(oldFile, 'utf8')) : { version: 1, month, daily: {} };
     for (const date of Object.keys(data.daily)) {
       if (date < from) continue;
       const db = dailyBuild(date);
-      data.daily[date] = freeze(generate(db.bank, db.options));
+      const next = freeze(generate(db.bank, db.options));
+      if (JSON.stringify(next) === JSON.stringify(data.daily[date])) continue;
+      old.daily[date] = (old.daily[date] || []).concat([data.daily[date]]);
+      data.daily[date] = next;
       changed++;
+    }
+    if (changed) {
+      fs.mkdirSync(supersededDir, { recursive: true });
+      const block = Object.entries(old.daily).sort().map(([date, list]) => `    ${JSON.stringify(date)}: ${JSON.stringify(list)}`).join(',\n');
+      fs.writeFileSync(oldFile, `{\n  "version": 1,\n  "month": ${JSON.stringify(month)},\n  "daily": {\n${block}\n  }\n}\n`);
     }
     const next = render(month, data.daily, data.mini);
     fs.writeFileSync(file, next);
@@ -142,4 +155,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { fingerprint, dir, indexFile, LAUNCH_MONTH, BRUTAL_LAUNCH_MONTH };
+module.exports = { fingerprint, dir, supersededDir, indexFile, LAUNCH_MONTH, BRUTAL_LAUNCH_MONTH };
